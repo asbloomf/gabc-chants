@@ -1,0 +1,138 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\newcommand{\heading}{4th Sunday of Advent at Vespers.}
+
+\newcommand{\predeusinadjutorium}{%
+\smallskip
+\large
+\setgrefactor{15}
+}
+\def\deusinadjutoriumsolemn{F}
+
+\newcommand{\preantone}{\setgrefactor{17}
+\large
+%\greblockcustos
+}
+\newcommand{\antoneinitialsize}{40}
+\newcommand{\antonetex}{Ant1-CaniteTuba}
+\newcommand{\antoneinitial}{C}
+\newcommand{\antonetranslation}{Blow ye the trumpet in Sion, for the day of the Lord is near: behold He shall come to save us, alleluia, alleluia.}
+\definepsalm{1}{109}{1}{g}
+\newcommand{\prepsalmone}{%
+%\vspace{-1.5ex}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preanttwo}{\setgrefactor{17}
+%\greblockcustos
+\large
+}
+\newcommand{\anttwoinitialsize}{40}
+\newcommand{\anttwotex}{Ant2-EcceVeniet}
+\newcommand{\anttwoinitial}{E}
+\newcommand{\anttwotranslation}{Behold the Desired of all nations shall come: and the house of the Lord shall be filled with glory, alleluia.}
+\definepsalm{2}{110}{1}{f}
+\newcommand{\prepsalmtwo}{%
+\normalsize
+\greblockcustos
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantthree}{\setgrefactor{17}
+\large
+%\greblockcustos
+}
+\newcommand{\antthreeinitialsize}{40}
+\newcommand{\antthreetex}{Ant3-EruntPrava}
+\newcommand{\antthreeinitial}{E}
+\newcommand{\antthreetranslation}{The crooked shall become straight, and the rough ways plain: come, O Lord, and tarry not, alleluia.}
+\definepsalm{3}{111}{1}{g}
+\newcommand{\prepsalmthree}{%
+\normalsize
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantfour}{%
+\grespacelinestext = 1402500 sp plus 0 sp minus 0 sp%
+\setgrefactor{17}
+\large
+}
+\newcommand{\antfourinitialsize}{38}
+\newcommand{\antfourtex}{Ant4-DominusVeniet}
+\newcommand{\antfourinitial}{D}
+\newcommand{\antfourtranslation}{The Lord shall come, go forth to meet Him, saying: Great is His sovereignty, and of His kingdom there shall be no end: God the mighty, the Lord, the Prince of peace, alleluia, alleluia.}
+\definepsalm{4}{112}{1}{f}
+\newcommand{\prepsalmfour}{%
+%reset spacing to normal
+\grespacelinestext = 1300500 sp plus 0 sp minus 0 sp%
+%\vspace{-1ex}
+\setgrefactor{17}
+\normalsize
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantfive}{\setgrefactor{17}
+\large
+\greblockcustos
+%\normalsize
+}
+\newcommand{\preantfivetwo}{\preantfive}
+\newcommand{\antfivefontsizetwo}{40}
+
+\newcommand{\antfiveinitialsize}{40}
+\newcommand{\antfivetex}{Ant5-Omnipotens}
+\newcommand{\antfiveinitial}{O}
+\newcommand{\antfivetranslation}{Thine almighty Word, O Lord, shall come forth from Thy royal throne, alleluia.}
+\definepsalm{5}{113}{2}{D}
+\newcommand{\antfiveNoEuouae}{T}
+\newcommand{\prepsalmfive}{%
+\vspace{-1ex}
+\setgrefactor{17}%
+\large
+%\normalsize%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\chapter}{\dropcap{latin}{Fratres~: Sic nos exístimet homo ut minístros} \textbf{Chrí}\-sti,~\gredagger{} et dispensatóres mys\-te\-ri\-\emph{ó\-rum} \textbf{Dé}\-i.~* Hic jam quaéritur inter dispensatóres, ut fidélis quis in\-ve\-ni\-\textbf{á}\-tur.}
+\newcommand{\chaptertranslation}{Brethren, let a man so account of us as of the ministers of Christ and the dispensers of the mysteries of God.  Here now it is required among the dispensers that a man be found faithful.}
+
+\newcommand{\hymn}{Créator alme síderum}
+\newcommand{\vr}{Roráte}
+
+%\newcommand{\premag}{
+%\large
+%\setgrefactor{17}
+%}
+
+\newcommand{\magant}{O Antiphon, according to the day}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+%\newcommand{\magfontsize}{38}
+%\newcommand{\maganttranslation}{Blessed art thou, Mary, that hast believed: those things shall be accomplished in thee, which were spoken to thee by the Lord, alleluia.}
+%\newcommand{\magtone}{8}
+%\newcommand{\magend}{G}
+%\def\magsolemn{F}
+%\newcommand{\premagverses}{\greblockcustos\setgrefactor{16}
+%\normalsize
+%%\pagebreak
+%}
+%\definemag{}{}
+
+\newcommand{\collect}{Excita, quaésumus Dómine, poténtiam tuam, et veni, et magna nobis virtúte succúrre~:~† ut per auxílium grátiæ tuæ, quod nostra peccáta præpédiunt,~* indulgéntia tuæ propitiatiónis accéleret.  Qui vivis et regnas cum Deo Patre.}
+\newcommand{\collecttranslation}{O Lord, we beseech Thee, stir up Thy power, and come, and with great might succour us: that by the help of Thy grace that which is hindered by our sins may be hastened by Thy merciful forgiveness: who livest and reignest.}
+
+\definebenedicamusdomino{advent}{2}
+%\newcommand{\benedicamusdominotex}{../BenedicamusDomino/BenedicamusDomino_SundaysOfAdventAndLent}
+%\newcommand{\benedicamusdominotexalt}{../BenedicamusDomino/BenedicamusDomino_1class2ndvespersAlt}
+
+\input{../FullVespers}

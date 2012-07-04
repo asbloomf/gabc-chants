@@ -1,0 +1,27 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+\newcommand{\oantiphondate}{20}
+
+\newcommand{\premag}{
+\large
+\setgrefactor{17}
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+\newcommand{\magfontsize}{38}
+\newcommand{\maganttranslation}{O Key of David, and Sceptre of the house of Israël, that openest and no man shutteth, and shuttest and no man openeth: come and bring the prisoner forth from the prison-house, and him that sitteth in darkness and in the shadow of death.}
+\def\magsolemn{T}
+\definemag{2}{D}
+
+\newcommand{\premagverses}{\greblockcustos\setgrefactor{17}
+\normalsize
+}
+
+\input{../Advent/OAntiphon}
+\end{document}

@@ -1,0 +1,13 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+name:Alma;
+%tone 5
+%%
+% this first dot should really be a horizontal episema, but I couldn't get gregorio to work correctly
+(c4)AL(c.!ef/gh)ma(g.) <v>\greheightstar</v>() Red(g)em(g')ptó(h)ris(i') Má(j)ter,(g.) (;) quæ(e) pér(e')vi(e)a(f') caé(e)li(d') pór(e)ta(f') má(h)nes,(g.) (;)
+
+Et(h) stél(j)la(i') má(h)ris,(g.) (;) suc(e)cúr(f')re(e) ca(d')dén(e)ti(g.) (;) súr(e)ge(f)re(g') qui(h) cú(j')rat(i) pó(k')pu(j)lo :(j.) (:)
+
+Tu(j) quæ(i') ge(j)nu(j')í(k)sti,(g'_) (;) na(j)tú(i')ra(h) mi(g')rán(f)te,(e.) (;) tú(e)um(e) sán(h')ctum(g) Ge(f')ni(e)tó(de)rem :(fe..) (:)
+
+Vír(j)go(i') pri(h)us(g'_) ac(h) post(g)é(e)ri(f)us,(g.) (;) Ga(h)bri(h)é(j')lis(h) ab(g') ó(f)re(e'_) (;) sú(f)mens(e') íl(g)lud(g') A(h)ve,(g.) (;) pec(j)ca(i')tó(j)rum(hg) mi(h)se(f)ré(ed)re.(c.) (::)

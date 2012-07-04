@@ -1,0 +1,23 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: O admirabile commercium!;
+office-part: 1 Antiphon;
+mode: 6F;
+occasion: Octave of Christmas (Circumcision);
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: 1. Ant.;
+annotation: 6. F;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+(c4)O(f/fd/dc) ad(f')mi(f)rá(fg)bi(g)le(g') com(f)mér(gh)ci(gf)um!(f.) <v>\greheightstar</v>(;) Cre(f)á(g')tor(f) gé(g')ne(f)ris(g) hu(gh)má(f)ni,(f.) (;) a(f)ni(f)má(ixfh'_!iv_H'G)tum(g') cór(ixi)pus(h') sú(g)mens,(f.) (;) de(f) Vír(g')gi(f)ne(f') ná(g)sci(f') di(f)gná(ixfh'_!iv_H'G)tus(hg) est :(g.) (:) et(g) pro(g)cé(h')dens(g) hó(fg)mo(f) si(fe)ne(d!ewf) sé(f_g)mi(f)ne,(c.) (;) lar(c_d)gí(f')tus(f) est(f) nó(g_h)bis(g') sú(h)am(hj) de(hg)i(h)tá(f.)tem.(f.) (::)
+
+%E(h) u(h) o(f) u(gh) a(g) e.(f.) (::)

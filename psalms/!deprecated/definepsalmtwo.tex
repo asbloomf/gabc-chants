@@ -1,0 +1,32 @@
+﻿% the point of this is to replace all the instances of master with the number like two
+
+\usepackage{xstring}
+\newcommand{\psalmtwo}{Psalm \psalmtwonum.}
+\ifx\psalmtwoend\undefined% must be T. Per.
+\newcommand{\anttwolinetwo}{T. Per.}
+\def\psalmtwotone{per}
+\def\psalmtwoend{}
+\else
+\newcommand{\anttwolinetwo}{\psalmtwotone. \psalmtwoend}
+\fi
+
+\ifx\psalmtwoclef\undefined%
+\def\altclef{}%
+\else%
+\def\altclef{-clef\psalmtwoclef}%
+\fi
+
+\StrSubstitute{\psalmtwoend}{*}{star}[\expandedendtwo]
+\StrSubstitute{\psalmtwoend}{*}{}[\nostarendtwo]
+\newcommand{\psalmtwotexbeg}{../psalms/Psalm\psalmtwonum-\psalmtwotone}
+\newcommand{\psalmtwotex}{\psalmtwotexbeg\expandedendtwo\ifx\psalmtwobeginversetwo\undefined\else\if\psalmtwobeginversetwo T-verse2\fi\fi\altclef}
+\newcommand{\psalmtwoverses}{%
+\input{\psalmtwotexbeg\nostarendtwo-verses\ifx\psalmtwobeginversetwo\undefined\else\if\psalmtwobeginversetwo T2\fi\fi}
+}
+\newcommand{\psalmtwotranslation}{%
+\input{../psalms/psalm\psalmtwonum-verses-en}
+}
+
+\def\psalmnum{\psalmtwonum}
+\input{../psalms/definepsalmparcolumnsoptions}
+\expandafter\newenvironment{psalmtwocols}{\expandafter\begin{parcolumns}\parcolumnsoptions}{\end{parcolumns}}

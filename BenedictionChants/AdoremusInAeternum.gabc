@@ -1,0 +1,22 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Adoremus in æternum;
+office-part: after benediction;
+occasion: benediction;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+AD(c3f)o(e)ré(f)mus(e_d) in(h) æ(i)tér(h_g)num(f.) (,) san(f)ctís(e')si(f)mum(ed) Sa(ef)cra(e)mén(d.)tum.(d.) (::Z)
+<i>Ps</i>. <i>Lau</i>(d)<i>dá</i>(f)<i>te</i>(h) Dó(h)mi(h)num(h) óm(h)nes(h) <b>gén</b>(i)(hr)tes :(h.) <v>\greheightstar</v>(:) lau(h)dá(h)te(h) é(h)um(h) <b>óm</b>(i)(gr)nes(g) <b>pó</b>(h)pu(fr)li.(f.) (::) E(h) u(h) o(i) u(g) a(h) e.(f.) (::)%
+%Lau(d)dá(f)te(h) Dó(h)mi(h)num(h) óm(h)nes(h) gén(i)tes : <v>\greheightstar</v>(h.) (:) lau(h)dá(h)te(h) é(h)um(h) óm(i')nes(g) pó(h')pu(f)li.(f.) (::) Quó(d)ni(f)am(h) con(h)fir(h)má(h)ta(h) est(h) su(h)per(h) nos(h) mi(h)se(h)ri(h)cór(h)di(h)a(h) é(i)jus : <v>\greheightstar</v>(h.) (:) et(h) vé(h)ri(h)tas(h) Dó(h)mi(h)ni(h) má(h)net(h) in(i) æ(g')tér(h)num.(f.) (::) A(f)do(e')ré(f)mus.(e_d) (::) Gló(d)ri(f)a(h) Pá(h)tri,(h) et(h) Fí(i')li(h)o,(h.) (:) et(h) Spi(h)rí(i')tu(g)i(g') Sán(h)cto.(f.) (::) Si(d)cut(f) é(h)rat(h) in(h) prin(h)cí(h)pi(h)o,(h) et(h) nunc,(h) et(h) se(i)mper : <v>\greheightstar</v>(h.) (:) et(h) in(h) saé(h)cu(h)la(h) sæ(h)cu(h)ló(i)rum.(g') A(h)men.(f.) (::) A(f)do(e')ré(f)mus.(e_d) (::)

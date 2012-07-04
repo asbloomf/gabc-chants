@@ -1,0 +1,32 @@
+﻿% the point of this is to replace all the instances of master with the number like two
+
+\usepackage{xstring}
+\newcommand{\psalmone}{Psalm \psalmonenum.}
+\ifx\psalmoneend\undefined% must be T. Per.
+\newcommand{\antonelinetwo}{T. Per.}
+\def\psalmonetone{per}
+\def\psalmoneend{}
+\else
+\newcommand{\antonelinetwo}{\psalmonetone. \psalmoneend}
+\fi
+
+\ifx\psalmoneclef\undefined%
+\def\altclef{}%
+\else%
+\def\altclef{-clef\psalmoneclef}%
+\fi
+
+\StrSubstitute{\psalmoneend}{*}{star}[\expandedendone]
+\StrSubstitute{\psalmoneend}{*}{}[\nostarendone]
+\newcommand{\psalmonetexbeg}{../psalms/Psalm\psalmonenum-\psalmonetone}
+\newcommand{\psalmonetex}{\psalmonetexbeg\expandedendone\ifx\psalmonebeginversetwo\undefined\else\if\psalmonebeginversetwo T-verse2\fi\fi\altclef}
+\newcommand{\psalmoneverses}{%
+\input{\psalmonetexbeg\nostarendone-verses\ifx\psalmonebeginversetwo\undefined\else\if\psalmonebeginversetwo T2\fi\fi}
+}
+\newcommand{\psalmonetranslation}{%
+\input{../psalms/psalm\psalmonenum-verses-en}
+}
+
+\def\psalmnum{\psalmonenum}
+\input{../psalms/definepsalmparcolumnsoptions}
+\expandafter\newenvironment{psalmonecols}{\expandafter\begin{parcolumns}\parcolumnsoptions}{\end{parcolumns}}

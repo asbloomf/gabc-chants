@@ -1,0 +1,48 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Pangámus Nério;
+office-part: Hymn for St Philip Neri;
+mode: 3;
+occasion: St Philip Neri;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: Hymn.;
+annotation: 3;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)PAn(d)gá(e')mus(f) Né(g')ri(h)o(g_h) dé(j)bi(j')ta(k) cán(j')ti(i)ca,(h.) (;)
+Quem(j) su(i')pra(g) ní(h)ti(gh)di(e'_) (,) sí(h)de(h')ra(i) vér(g')ti(f)cis,(gh..) (:)
+Vír(gf)tus,(g') et(h) mé(j')ri(i)tum(h'_) (,) sús(j)tu(i')lit(g) ín(h)cly(gh)tum(e.) (;)
+Car(h_j)ptú(g)rum(fvED') pí(f)a(ghg) gáu(fe)di(d)a.(e.) (::)
+
+2. Sic(d) ú(e')ri(f) súb(g')i(h)tis(g_h) dum(j) ví(j')det(k) í(j')gni(i)bus(h.) (;)
+Aé(j)des,(i') quas(g) há(h)bi(gh)tat,(e'_) (,) flé(h)ti(h')bus(i) ábs(g')ti(f)net,(gh..) (:)
+Flám(gf)mas(g') cum(h) pé(j')ni(i)tus(h'_) (,) quí(j)ve(i')rit(g) hór(h)ri(gh)das(e.) (;)
+Páu(h_j)cis(g) vín(fvED')ce(f)re(ghg) lá(fe)cry(d)mis.(e.) (::)
+
+3. O(d)blá(e')tum(f) pá(g')tru(h)i(g_h) mú(j)nus,(j') et(k) áu(j')re(i)os(h.) (;)
+Núm(j)mos(i') ma(g)gná(h)ni(gh)mus(e'_) (,) cál(h)cat,(h') et(i) ím(g')pi(f)ger(gh..) (:)
+Ró(gf)mam(g') di(h)gré(j')di(i)tur,(h'_) (,) quam(j) ma(i')gis(g) óm(h)ni(gh)bus(e.) (;)
+Il(h_j)lú(g)strem(fvED') fá(f)cit(ghg) úr(fe)bi(d)bus.(e.) (::)
+
+4. Nó(d)ctes(e') sub(f) spé(g')cu(h)bus,(g_h) cór(j)po(j')ra(k) már(j')ty(i)rum(h.) (;)
+Quas(j) ím(i')plent,(g) ví(h)gi(gh)lat(e'_) (,) sé(h)du(h')lus(i) ín(g')te(f)gras ;(gh..) (:)
+Ex(gf) í(g')psis(h) sá(j')ta(i)gens(h'_) (,) dí(j)sce(i')re(g) mór(h)tu(gh)is(e.) (;)
+Nór(h_j)mam,(g) qua(fvED') be(f)ne(ghg) ví(fe)ve(d)ret.(e.) (::)
+
+5. Al(d)mæ(e') sit(f) Trí(g')a(h)di(g_h) gló(j)ri(j')a(k) pér(j')pe(i)tim,(h.) (;)
+Quam(j) caé(i')lum,(g) bá(h)ra(gh)thrum,(e'_) (,) tér(h)ra(h')que(i) sús(g')ci(f)pit ;(gh..) (:)
+Quæ(gf) nó(g')bis(h) Né(j')ri(i)i(h'_) (,) det(j) pré(i')ce(g) jú(h)gi(gh)a(e.) (;)
+Dúl(h_j)cis(g) gáu(fvED')di(f)a(ghg) pá(fe)tri(d)æ.(e.) (::)
+
+A(efe)men.(de..) (::)

@@ -1,0 +1,104 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+
+% usual packages loading:
+%\usepackage{luatextra}
+%\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper} % or letterpaper (US) or a5paper or....
+\usepackage{gregoriotex} % for gregorio score inclusion
+
+\usepackage[garamond]{../mypackage}
+% to change the font to something better, you can install the kpfonts package (if not already installed). To do so
+% go open the "TeX Live Manager" in the Menu Start->All Programs->TeX Live 2010
+\setgrefactor{17}
+\input{../gsp-spaces}
+%\def\greinitialformat#1{{\fontsize{37}{37}\selectfont #1}}
+%small > footnotesize > scriptsize > tiny
+
+\marginsize{35pt}{35pt}{30pt}{0pt}
+\pagestyle{fancy} % no header or footers
+
+% here we begin the document
+\begin{document}
+\chead{Pange Lingua.}
+
+% Here we set the space around the initial.
+% Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
+\setspaceafterinitial{2.7mm plus 0em minus 0em}
+\setspacebeforeinitial{2.7mm plus 0em minus 0em}
+
+% Here we set the initial font. Change 43 if you want a bigger initial.
+\def\greinitialformat#1{%
+{\fontsize{34}{34}\selectfont #1}%
+}
+
+% We set red lines here, comment it if you want black ones.
+%\redlines
+
+% We set VII above the initial.
+{\gresetfirstlineaboveinitial{\small Hymn.}{\small Hymn.}
+\setsecondannotation{\small 3.}
+%\setgrefactor{14}
+
+%\vspace*{-5ex}
+\large%
+\includescore{hymn-PangeLingua.tex}}
+%\vspace{-4ex}
+\selectlanguage{american}
+\begin{multicols}{2}
+\begin{psalmverses}
+{\item Sing, my tongue, the Saviour's glory
+Of His Flesh the mystery sing;
+Of His Blood all price exceeding,
+Shed by our immortal King,
+Destined for the world's redemption
+From a noble womb to spring.
+\item Of a pure and spotless Virgin,
+Born for us on earth below,
+He, as Man with man conversing,
+Stayed the seeds of truth to sow.
+Then He closed in solemn order
+Wondrously His life of woe.
+\item On the night of that last supper,
+Seated with His chosen band,
+He, the paschal victim eating,
+First fulfils the Law's command;
+Then as food to all His brethren
+Gives Himself with His own Hand.
+\item Word made Flesh the bread of nature
+By His word to Flesh He turns;
+Wine into His Blood He changes:
+What though sense no change discerns,
+Only be the heart in earnest,
+Faith her lesson quickly learns.
+\item Down in adoration falling,
+Lo, the sacred Host we hail,
+Lo, o'er ancient forms departing
+Newer rites of grace prevail:
+Faith for all defects supplying,
+Where the feeble senses fail.
+\item To the everlasting Father
+And the Son who reigns on high
+With the Holy Ghost proceeding
+Forth from each eternally,
+Be salvation, honour, blessing,
+Might and endless majesty.
+Amen.}
+\end{psalmverses}
+\end{multicols}
+\selectlanguage{latin}
+%\medskip
+\setgrefactor{15}
+{ \includescore{hymn-PangeLinguavrCibavitIllos.tex}}
+%\medskip
+\translation[]{
+\Vbar{}. He fed them with the fat of wheat, alleluia.\\
+\Rbar{}. And filled them with honey out of the rock, alleluia.
+}
+
+\end{document}

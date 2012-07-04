@@ -1,0 +1,151 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\newcommand{\heading}{Vesper hymn for Christmas.}
+\def\hymninitialsize{34}
+\def\hymnlinetwo{\oldstylenums{1.}}
+\def\hymntex{hymn-JesuRedemptorOmnium}
+\def\hymninitial{J}
+\def\hymntranslation{\item Jesus, Redeemer of the world,
+Begotten ere the dawn of light,
+Wast of the Father's glory born,
+Immense in glory as in might.
+
+\item Thou art the Father's splendid light,
+Thou art th'eternal hope of all
+Throughout the world to Thee we pray,
+O, hear Thy servants as they call.
+
+\item Remember, O creator Lord!
+That from the Virgin's sacred womb
+Thou didst come forth, and of her flesh
+Thou didst our mortal form assume.
+
+\item This day, recurring, year by year,
+Bears witness true that all alone
+To save the world Thou camest forth,
+Proceeding from the Father's throne.
+
+\item This day, the stars, the earth, and sea,
+And all creation welcome sing.
+This day which brought our liberty.
+When came our Lord, our Saviour, King.
+
+\item And we, too, Lord, who have been washed
+In Thine own font of Blood divine,
+Offer the tribute of our praise
+On this blest natal day of Thine.
+
+\item O Jesu, of the Virgin born,
+Unceasing glory be to Thee;
+And to the Father infinite,
+And Holy Ghost eternally.  Amen.
+}
+
+\def\prehymn{\large\setgrefactor{15}\vspace*{-20pt plus 20pt}}
+
+\input{../hymn-template}
+
+\usepackage{comment}
+\begin{comment}
+
+% usual packages loading:
+%\usepackage{luatextra}
+%\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper} % or letterpaper (US) or a5paper or....
+\usepackage{gregoriotex} % for gregorio score inclusion
+
+\usepackage[garamond]{../mypackage}
+% to change the font to something better, you can install the kpfonts package (if not already installed). To do so
+% go open the "TeX Live Manager" in the Menu Start->All Programs->TeX Live 2010
+\input{../gsp-spaces}
+\setgrefactor{15}
+%\def\greinitialformat#1{{\fontsize{37}{37}\selectfont #1}}
+%small > footnotesize > scriptsize > tiny
+
+\marginsize{25pt}{25pt}{25pt}{0pt}
+\pagestyle{fancy} % no header or footers
+
+% here we begin the document
+\begin{document}
+\chead{Vesper hymn for Christmas.}
+
+% Here we set the initial font. Change 43 if you want a bigger initial.
+\def\greinitialformat#1{%
+{\fontsize{34}{34}\selectfont #1}%
+}
+
+% We set red lines here, comment it if you want black ones.
+%\redlines
+
+% We set VII above the initial.
+{\def\annot{\small \textbf{Hymn.}}
+\def\annottwo{\small\oldstylenums{\textbf{1.}}}
+\setinitialspacing{J}
+
+% We type a text in the top right corner of the score:
+%\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
+
+% and finally we include the score. The file must be in the same directory as this one.
+\large \includescore{hymn-JesuRedemptorOmnium}}
+\vspace{-10pt}
+\selectlanguage{american}
+\begin{multicols}{2}
+\begin{psalmverses}
+{\item Jesus, Redeemer of the world,
+Begotten ere the dawn of light,
+Wast of the Father's glory born,
+Immense in glory as in might.
+
+\item Thou art the Father's splendid light,
+Thou art th'eternal hope of all
+Throughout the world to Thee we pray,
+O, hear Thy servants as they call.
+
+\item Remember, O creator Lord!
+That from the Virgin's sacred womb
+Thou didst come forth, and of her flesh
+Thou didst our mortal form assume.
+
+\item This day, recurring, year by year,
+Bears witness true that all alone
+To save the world Thou camest forth,
+Proceeding from the Father's throne.
+
+\item This day, the stars, the earth, and sea,
+And all creation welcome sing.
+This day which brought our liberty.
+When came our Lord, our Saviour, King.
+
+\item And we, too, Lord, who have been washed
+In Thine own font of Blood divine,
+Offer the tribute of our praise
+On this blest natal day of Thine.
+
+\item O Jesu, of the Virgin born,
+Unceasing glory be to Thee;
+And to the Father infinite,
+And Holy Ghost eternally.  Amen.
+}
+\end{psalmverses}
+\end{multicols}
+
+
+%\selectlanguage{latin}
+%\smallskip
+%\setgrefactor{15}
+%{ \includescore{vr.tex}}
+%\vspace{-3ex}
+%\translation[]{
+%\Vbar{}. Ye heavens, drop down dew from above, and let the clouds rain down the Just One.\\
+%\Rbar{}. Let the earth open and bud forth the Saviour.
+%}
+
+\end{document}
+\end{comment}

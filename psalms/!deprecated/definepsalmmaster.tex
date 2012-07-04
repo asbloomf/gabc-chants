@@ -1,0 +1,89 @@
+﻿\usepackage{xstring}
+
+\newcommand{\definepsalm}[5]{
+% 1 - antiphon number, 1-5
+% 2 - psalm number, e.g., 109
+% 3 - psalm tone, e.g., 8
+% 4 - psalm tone variation, e.g., G
+% \psalmclef can be used to append -clef{\psalmclef}
+% \psalmbeginversetwo can be defined as T to append -verse2
+
+% defines psalmONE, psalmONEtone, psalmONEend, antONElinetwo, psalmONEtexbeg, psalmONEtex, psalmONEverses, psalmONEtranslation, psalmONEcoloptions
+% sets up environment psalmONEcols
+
+%maybe instead of setting up different environments, just define the options and have it expand them!
+
+% define macro names
+%\def\psalmMASTERend{\psalmoneend} % this is #4, but how will we deal with peregrinus?
+\def\psalmMASTERcols{psalmonecols}
+\edef\antnum{%
+\ifnum#1=1%
+one%
+\fi%
+\ifnum#1=2%
+two%
+\fi%
+\ifnum#1=3%
+three%
+\fi%
+\ifnum#1=4%
+four%
+\fi%
+\ifnum#1=5%
+five%
+\fi%
+}
+
+\expandafter\edef\csname psalm{\antnum}\endcsname{Psalm #2.}
+\expandafter\edef\csname psalm{\antnum}tone\endscsname{#3}
+\expandafter\edef\csname psalm{\antnum}end\endcsname{#4}
+\def\emptypsalmend{}
+\ifx\csname psalm{\antnum}end\endcsname\emptypsalmend % must be T. Per.
+\expandafter\def\csname ant{\antnum}linetwo\endcsname{T. Per.}
+\expandafter\def\csname psalm{\antnum}tone\endcsname{per}
+\else
+\expandafter\edef\csname ant{\antnum}linetwo\endcsname{\csname psalm{\antnum}tone\endcsname. #4}
+\fi
+
+\ifx\psalmclef\undefined%
+\def\altclef{}%
+\else%
+\def\altclef{-clef\psalmclef}%
+\fi
+
+\StrSubstitute{#4}{*}{star}[\expandedend]
+\StrSubstitute{#4}{*}{}[\nostarend]
+\expandafter\edef\csname psalm{\antnum}texbeg\endcsname{../psalms/Psalm#2-\csname psalm{\antnum}tone\endcsname}
+\expandafter\edef\csname psalm{\antnum}tex\endcsname{\csname psalm{\antnum}texbeg\endcsname\expandedend\ifx\psalmbeginversetwo\undefined\else\if\psalmbeginversetwo T-verse2\fi\fi\altclef}
+\expandafter\edef\csname psalm{\antnum}verses\endcsname{%
+\input{\csname psalm{\antnum}texbeg\endcsname\nostarend-verses\ifx\psalmbeginversetwo\undefined\else\if\psalmbeginversetwo T2\fi\fi}
+}
+\expandafter\edef\csname psalm{\antnum}translation\endcsname{%
+\input{../psalms/psalm#2-verses-en}
+}
+
+% define the parcolumn options
+\expandafter\def\csname psalm{\antnum}coloptions\endcsname{rulebetween}
+%109 & 110 are just rulebetween
+\ifnum#2=111
+\expandafter\def\csname psalm{\antnum}coloptions\endcsname{rulebetween,colwidths={1=252pt}}
+\fi
+\ifnum#2=112
+\expandafter\def\csname psalm{\antnum}coloptions\endcsname{rulebetween,colwidths={1=290pt}} %278 or 285
+\fi
+\ifnum#2=113
+\expandafter\def\csname psalm{\antnum}coloptions\endcsname{rulebetween,colwidths={1=266pt}}
+\fi
+%116 is just rulebetween
+%121 is just rulebetween
+%129 & 131 ????
+\ifnum#2=126
+\expandafter\def\csname psalm{\antnum}coloptions\endcsname{rulebetween,colwidths={1=260pt}}
+\fi
+\ifnum#2=147
+\expandafter\def\csname psalm{\antnum}coloptions\endcsname{rulebetween,colwidths={1=285pt}}
+\fi
+
+% change the standard vespers file to use \psalmXXXcoloptions
+%\newenvironment\expandafter{\psalmMASTERcols}{\begin{parcolumns}\parcolumnsoptions}{\end{parcolumns}}
+}

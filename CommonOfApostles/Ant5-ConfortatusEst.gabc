@@ -1,0 +1,28 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Confortatus est;
+office-part: 5 Antiphon;
+mode: 7c2;
+occasion: Common of Apostles and Evangelists at II Vespers;
+date: 2012;
+transcriber: Albert Bloomfield;
+transcription-date: 2012;
+style: modern;
+annotation: 5 Ant.;
+annotation: 7. c2;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+(c3)COn(hg)for(h)tá(ih/i_j)tus(i) est(ij/ji'_) <v>\greheightstar</v>(,) prin(i)ci(i)pá(iv_HG)tus(f) e(h)ó(g_hf/fe)rum,(e.) (;)
+et(f) ho(e')no(d)rá(e')ti(e) sunt(f'_) (,) a(f)mí(f')ci(i) tú(h')i(g) Dé(e.)us.(e.) (::z)
+
+E(i) u(i) o(j) u(i) a(h) e.(ih..) (::)
+
+% replace this with
+%\grehepisemusbottom{h}{0}{0}%
+%\grehepisemus{k}{0}{0}{k}%

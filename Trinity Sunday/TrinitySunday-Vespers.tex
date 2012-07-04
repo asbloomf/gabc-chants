@@ -1,0 +1,173 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+\sloppy
+
+\newcommand{\heading}{Trinity Sunday at Vespers.}
+
+\newcommand{\predeusinadjutorium}{%
+%\smallskip
+\large
+\setgrefactor{15}
+}
+\def\deusinadjutoriumsolemn{T}
+
+\newcommand{\preantone}{\setgrefactor{17}
+\large
+%\greblockcustos
+}
+
+
+\newcommand{\antoneinitialsize}{40}
+\newcommand{\antonetex}{Ant1-GloriaTibiTrinitas}
+\newcommand{\antoneinitial}{G}
+\newcommand{\antonetranslation}{Glory to thee, O equal Trinity, one Godhead, before all ages, and now, and for ever.\vspace{0ex plus 0ex minus 3ex}}
+\definepsalm{1}{109}{1}{f}
+\newcommand{\prepsalmone}{%
+%\vspace{-1.5ex}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preanttwo}{\setgrefactor{17}
+%\greblockcustos
+\large
+}
+\newcommand{\anttwoinitialsize}{40}
+\newcommand{\anttwotex}{Ant2-LausEtPerennisGloria}
+\newcommand{\anttwoinitial}{L}
+\newcommand{\anttwotranslation}{Praise and eternal glory to God the Father, and the Son, together with the Holy Ghost, for ever and ever.}
+\definepsalm{2}{110}{2}{D}
+\newcommand{\prepsalmtwo}{%
+\normalsize
+%\greblockcustos
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantthree}{\setgrefactor{17}
+\large
+%\greblockcustos
+}
+\newcommand{\antthreeinitialsize}{40}
+\newcommand{\antthreetex}{Ant3-GloriaLaudis}
+\newcommand{\antthreeinitial}{G}
+\newcommand{\antthreetranslation}{May glory and praise re-echo on the lips of all, to the Father, to the Son he has begotten; and likewise to the Holy Ghost may everlasting praise resound.}
+\definepsalm{3}{111}{3}{a2}
+\newcommand{\prepsalmthree}{%
+\normalsize
+}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantfour}{\setgrefactor{17}
+%\greblockcustos
+\large
+%\normalsize
+}
+\newcommand{\antfourinitialsize}{40}
+\newcommand{\antfourtex}{Ant4-LausDeoPatri}
+\newcommand{\antfourinitial}{L}
+\newcommand{\antfourtranslation}{\vspace{0ex minus 3.5ex}To God the Father, to His co-equal Son, and to Thee, O Holy Ghost unfailingly, may praise resound from our lips through every age.\vspace{0ex minus 3.5ex}}
+\definepsalm{4}{112}{4}{E}
+\newcommand{\prepsalmfour}{%
+%\vspace{-1ex}
+%\setgrefactor{15}
+\normalsize
+}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\def\nopagebreakbeforepsalmfive{T}
+%\def\pagebreakafterpsalmfive{T}
+\newcommand{\preantfive}{\setgrefactor{17}
+%\greblockcustos
+\large
+}
+\newcommand{\preantfivetwo}{\preantfive}
+\newcommand{\antfivefontsizetwo}{40}
+
+\newcommand{\antfiveinitialsize}{40}
+\newcommand{\antfivetex}{Ant5-ExQuoOmnia}
+\newcommand{\antfiveinitial}{E}
+\newcommand{\antfivetranslation}{\vspace{0pt minus 1ex}To Him from whom are all things, through whom are all things, in whom are all things, be glory for ever.}
+\definepsalm{5}{113}{5}{a}
+\newcommand{\prepsalmfive}{%
+%\vspace{-1ex}
+%\setgrefactor{15}%
+%\normalsize%
+}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\chapter}{\dropcap{latin}{O Altitúdo divitiárum sapiéntiæ et sciéntiæ} \textbf{De}i~:~\gredagger{} quam incomprehensibília sunt ju\-dí\-\emph{ci\-a} \textbf{é}\-jus,~* et investigábiles viæ \textbf{é}jus!}
+\newcommand{\chaptertranslation}{O The depth of the riches of the wisdom and of the knowledge of God!  How incomprehensible are His judgments, and how unsearchable His ways!}
+
+\def\pagebreakbeforehymn{T}
+
+\newcommand{\prehymn}{\large
+\setgrefactor{16}
+}
+\newcommand{\hymnlinetwo}{8.}
+\newcommand{\hymntex}{Hymn-JamSolReceditIgneus.tex}
+\newcommand{\hymninitial}{J}
+\newcommand{\hymntranslation}{
+\item Now the fiery sun declines:
+Thou, the everlasting Light,
+God, Triune, for ever blest,
+drive away our inward night.
+
+\item Thee in morning hymns we praise,
+humbly Thee at eve implore;
+Thee may we among the Saints
+thank and praise for evermore.
+
+\item Father, Son, and Holy Ghost,
+Triune God, all praise to Thee;
+as it has been, be it now,
+and through all eternity.
+Amen.%\setgrefactor{15}
+}
+
+\newcommand{\vrtex}{vrBenedictusEsDomino}
+\newcommand{\vtranslation}{Blessed art Thou, O Lord, in the firmament of heaven.}
+\newcommand{\rtranslation}{And worthy of praise and glorious for ever.}
+
+\newcommand{\premag}{
+\normalsize
+\setgrefactor{14}
+%\greblockcustos
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+\newcommand{\magfontsize}{30}
+\def\pagebreakbeforemagnificat{T}
+\newcommand{\maganttex}{MagnificatAntiphon}
+\newcommand{\magantinitial}{T}
+\newcommand{\maganttranslation}{\vspace{-4pt plus 4pt}Thee, God, the Father unbegotten, Thee the Son, the only-begotten, Thee the Holy Ghost the Paraclete, holy and undivided Trinity, with our whole heart and lips we acknowledge, we praise and bless; to Thee be glory for ever.\vspace{-4pt plus 4pt}}
+\def\magsolemn{T}
+\def\magoneline{T}
+\definemag{4}{E}
+%\newcommand{\magtone}{8}
+%\newcommand{\magend}{G}
+\newcommand{\premagverses}{%
+%\greblockcustos
+\normalsize
+\setgrefactor{15}
+%\pagebreak
+}
+
+\newcommand{\collect}{Omnípotens sempitérne Deus, qui dedísti fámulis tuis in confessióne veræ fídei, ætérnæ Trinitátis glóriam agnóscere, et in poténtia majestátis adoráre Unitátem~:~\dag{} quaésumus; ut ejúsdem fídei firmitáte,~* ab ómnibus semper muniámur advérsis. Per Dóminum nostrum.}
+\newcommand{\collecttranslation}{Almighty and everlasting God, who hast given to Thy servants, in their confessing the true faith, to bear witness to the glory of the eternal Trinity, and to adore the Unity in the power of the majesty: vouchsafe, we beseech Thee, that our steadfast holding to that same faith, may be our defence in all adversity. Through our Lord.}
+
+\def\benedicamusdominogrefactor{14}
+\definebenedicamusdomino{1}{2}
+
+%\def\includefideliumanimae{T}
+
+\input{../FullVespers}

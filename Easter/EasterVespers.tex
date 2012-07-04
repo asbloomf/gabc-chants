@@ -1,0 +1,153 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\newcommand{\heading}{Easter Sunday at Vespers}
+\sloppy
+
+\newcommand{\predeusinadjutorium}{%
+%\smallskip
+\large
+\setgrefactor{15}
+}
+\def\deusinadjutoriumsolemn{T}
+\def\includelaustibi{F}
+
+\newcommand{\preantone}{\setgrefactor{17}
+\large
+%\greblockcustos
+}
+
+\newcommand{\antoneinitialsize}{40}
+\newcommand{\antonetex}{Ant1-AngelusAutemDomini}
+\newcommand{\antoneinitial}{A}
+\newcommand{\antonetranslation}{For an angel of the Lord descended from heaven; and coming, rolled back the stone, and sat upon it, alleluia, alleluia.\vspace{0ex plus 0ex minus 3ex}}
+\definepsalm{1}{109}{8}{G}
+\newcommand{\prepsalmone}{%
+%\vspace{-1.5ex}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preanttwo}{\setgrefactor{17}
+%\greblockcustos
+\large
+}
+\newcommand{\anttwoinitialsize}{40}
+\newcommand{\anttwotex}{Ant2-EtEcceTerraemotus}
+\newcommand{\anttwoinitial}{E}
+\newcommand{\anttwotranslation}{And behold there was a great earthquake; for an angel of the Lord descended from heaven, alleluia.}
+\definepsalm{2}{110}{7}{c}
+\newcommand{\prepsalmtwo}{%
+\normalsize
+\greblockcustos
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantthree}{\setgrefactor{17}
+\large
+%\greblockcustos
+}
+\newcommand{\antthreeinitialsize}{40}
+\newcommand{\antthreetex}{Ant3-EratAutem}
+\newcommand{\antthreeinitial}{E}
+\newcommand{\antthreetranslation}{And his countenance was as lightning, and his raiment as snow, alleluia, alleluia.}
+\def\psalmclef{2}
+\definepsalm{3}{111}{8}{c}
+\let\psalmclef=\undefined
+\newcommand{\prepsalmthree}{%
+\normalsize
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantfour}{\setgrefactor{17}
+%\greblockcustos
+\large
+%\normalsize
+}
+\newcommand{\antfourinitialsize}{40}
+\newcommand{\antfourtex}{Ant4-PraeTimoreAutemEjus}
+\newcommand{\antfourinitial}{P}
+\newcommand{\antfourtranslation}{\vspace{0ex minus 3.5ex}And for fear of him the guards were struck with terror, and became as dead men, alleluia.\vspace{0ex minus 3.5ex}}
+\definepsalm{4}{112}{7}{a}
+\newcommand{\prepsalmfour}{%
+%\vspace{-1ex}
+%\setgrefactor{15}
+\normalsize
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\def\nopagebreakbeforepsalmfive{T}
+%\def\pagebreakafterpsalmfive{T}
+\newcommand{\preantfive}{\setgrefactor{17}
+%\greblockcustos
+%\normalsize
+\large
+}
+\newcommand{\preantfivetwo}{\preantfive}
+\newcommand{\antfivefontsizetwo}{40}
+
+\newcommand{\antfiveinitialsize}{40}
+\newcommand{\antfivetex}{Ant5-RespondensAutemAngelus}
+\newcommand{\antfiveinitial}{R}
+%\newcommand{\psalmfivetranslationsmall}{T}
+\newcommand{\antfivetranslation}{\medskip\vspace{0pt minus 3ex}And the angel answering, said to the women, Fear not you, for I know that you seek Jesus, alleluia.}
+\def\psalmclef{2}
+\definepsalm{5}{113}{8}{G}
+\let\psalmclef=\undefined
+\newcommand{\prepsalmfive}{%
+%\vspace{-1ex}
+%\setgrefactor{15}%
+\normalsize%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\prechapterhymnversicleantiphon}{\large}
+\newcommand{\chapterhymnversicleantiphontex}{Ant-HaecDies}
+\newcommand{\chapterhymnversicleantiphoninitial}{H}
+\newcommand{\chapterhymnversicleantiphonmode}{2}
+\newcommand{\prechapterhymnversicleantiphontranslation}{\normalsize}
+\newcommand{\chapterhymnversicleantiphontranslation}{This is the day which the Lord hath made: let us be glad and rejoice therein.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\premag}{
+\large
+\setgrefactor{17}
+%\greblockcustos
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+\def\pagebreakbeforemagnificat{T}
+\newcommand{\magfontsize}{40}
+\newcommand{\magantinitial}{E}
+\newcommand{\maganttranslation}{And looking, they saw the stone rolled back: for it was very great, alleluia.}
+\def\magsolemn{T}
+\def\magoneline{T}
+\def\psalmclef{c3}
+\definemag{3}{a}
+\let\psalmclef=\undefined
+%\newcommand{\magtone}{8}
+%\newcommand{\magend}{G}
+\newcommand{\premagverses}{\setgrefactor{15}
+\normalsize
+%\pagebreak
+}
+
+\newcommand{\collect}{Deus, qui hodiérna die per Unigénitum tuum, æternitátis nobis áditum devícta morte reserásti~:~\dag{} vota nostra, quæ præveniéndo aspíras,~* étiam adjuvándo proséquere. Per eúmdem Dóminum.}
+\newcommand{\collecttranslation}{O God, who, on this day, through Thine only-begotten Son, hast conquered death, and thrown open to us the gate of everlasting life, give effect by Thine aid to our desires, which Thou dost anticipate and inspire. Through the same our Lord.}
+
+\definebenedicamusdomino{easterday}{}
+
+\def\includefideliumanimae{T}
+
+\input{../FullVespers}

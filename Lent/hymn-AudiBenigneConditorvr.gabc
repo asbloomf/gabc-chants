@@ -1,0 +1,25 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Angelis suis Deus mandavit de te;
+office-part: versicle and response after Vesper hymn Audi, benigne conditor;
+occasion: Lent;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+initial-style:0;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+%Angelis súis Déus mandávit de te.
+%Ut custódiant te in ómnibus víis túis.
+
+(c3) () <v>\Vbar</v>. {A}n(h)ge(h)lis(h) sú(h)is(h) Dé(h)us(h) man(h)dá(h)vit(h) de(h) te.(g'_hvGF'Efgf.) (::)
+<v>\Rbar</v>. Ut(h) cu(h)stó(h)di(h)ant(h) te(h) in(h) óm(h)ni(h)bus(h) ví(h)is(h) tú(h)is.(g'_hvGF'Efgf.) (::)

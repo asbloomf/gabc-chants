@@ -1,0 +1,27 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Sacerdótes Déi;
+office-part: 4 Antiphon;
+mode: 7c;
+occasion: Common of a Confessor Bishop at Vespers;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: 4 Ant.;
+annotation: 7. c;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+(c3)SA(i)cer(i)dó(i_g)tes(i') Dé(j)i,(i'_) <v>\greheightstar</v>(,) be(i)ne(i)dí(i_g)ci(h)te(f') Dó(g)mi(f)num :(e.) (;) sér(e')vi(g) Dó(e')mi(f)ni,(f.) (,) hým(g')num(h) dí(ij)ci(i)te(h) Dé(hg)o,(fz) <v>\dag{}</v>() al(g')le(f)lú(e.)ia.(e.) (::)
+
+<i>After Septuag.</i> <v>\dag{}</v>()
+
+in(g') æ(f)tér(e.)num.(e.) (::)
+
+E(i) u(i) o(j) u(i) a(h) e.(gh..) (::)

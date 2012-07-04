@@ -1,0 +1,25 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Quid fáciam;
+office-part: Magnificat Antiphon;
+mode: 4E;
+occasion: 8th Sunday after Pentecost;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: At Magn.;
+annotation: Ant. 4. E;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)QU{i}d(f) fá(fe)ci(de)am,(e.) <v>\greheightstar</v>(,) qui(e')a(f) dó(g')mi(g)nus(g) mé(fv_ED)us(d'_) (,) áu(f)fert(f_e) a(d_e) me(ee) vil(d')li(c)ca(d')ti(f)ó(e.)nem?(e.) (:) fó(ixdh'!iv)de(h')re(h) non(gf~) vá(g_h)le(gv_FE)o,(e.) (;) men(e)di(f)cá(g_h)re(g_f) e(g)ru(ghg)bés(e.)co :(e.) (:) scí(ixdh'!iv///)o(h) quid(gf~) fá(g_h)ci(gv_FE)am,(e.) (;) ut(f) cum(e') a(f)mó(g')tus(g) fú(g_h)e(g)ro(g') (,) a(g) vil(g)li(fd)ca(e)ti(fg)ó(e.)ne,(e.) (;) re(fe)cí(f_g)pi(fe)ant(dd) me(c.) (,) in(gf~) dó(g_h)mos(gf) sú(e.)as.(e.) (::)
+
+E(h) u(g) o(h) u(ih) a(gf) e.(e.) (::)

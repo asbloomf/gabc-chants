@@ -1,0 +1,22 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Cibavit illos;
+office-part: versicle and response after Pange Lingua hymn on Sunday following Corpus Christi;
+occasion: Sunday after Corpus Christi (2nd Sunday after Pentecost);
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+initial-style:0;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)()() <v>\Vbar</v>. Ci(h)bá(h)vit(h) íl(h)los(h) ex(h) á(h)di(h)pe(h) fru(h)mén(h)ti,(h) al(h)le(h)lú(h)ia.(g_hvGFEfgf.) (::)
+<v>\Rbar</v>. Et(h) de(h) pé(h)tra,(h) mél(h)le(h) sa(h)tu(h)rá(h)vit(h) é(h)os,(h) al(h)le(h)lú(h)ia.(g_hvGFEfgf.) (::)

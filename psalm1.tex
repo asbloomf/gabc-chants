@@ -1,0 +1,54 @@
+﻿\def\psalmtwoafterant{T}
+\ifx\psalmtwobeforeant\undefined\else\if\psalmtwobeforeant T%
+\vspace{0pt minus 8pt}
+\begin{center}{\Large \psalmtwo}\end{center}
+\vspace{0pt minus 12pt}
+\def\psalmtwoafterant{F}
+\else
+\fi\fi
+\bigskip
+{\def\greinitialformat#1{%
+{\fontsize{\anttwoinitialsize}{\anttwoinitialsize}\selectfont #1}%
+}
+\preanttwo
+\def\annot{\small{1 Ant.}}
+\def\annottwo{\small{\anttwolinetwo}}
+\setinitialspacing{\anttwoinitial}
+
+\includescore{\anttwotex}
+}
+%\vspace{-1ex}
+\if\psalmtwoafterant T%
+\translation[]{\normalsize \anttwotranslation}
+\vspace{-1ex}
+\begin{center}{\Large \psalmtwo}\end{center}
+\fi
+{\prepsalmtwo
+\includescore{\psalmtwotex}
+}
+\medskip
+
+\normalsize
+%\vspace{-20pt}
+\setlength{\columnsep}{18pt}
+\setlength{\columnseprule}{.4pt}
+\beginpsalmtwocols
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}[\ifx\psalmtwobeginversetwo\undefined 1\else\if\psalmtwobeginversetwo T2\else 1\fi\fi]
+\input{\psalmtwoversestex}
+\end{psalmverses}
+}
+
+\selectlanguage{american}
+%\columnbreak
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}
+\input{\psalmtwotranslationtex}
+\end{psalmverses}
+}
+\selectlanguage{latin}
+\endpsalmtwocols
+\medskip
+{\noindent\emph{Repeat antiphon.}\\}
+
+\pagebreak

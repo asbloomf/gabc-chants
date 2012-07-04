@@ -1,0 +1,23 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Magnificat Antiphon 2 Epiphany;
+office-part: Magnificat Antiphon;
+occasion: 2nd Sunday after Epiphany;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+% 1f
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)DE(d)fi(d)ci(dc)én(f)te(g) ví(f_h)no,(h'_) <v>\greheightstar</v>(,) jús(h)sit(h) Jé(hj)sus(h') im(g)plé(h')ri(g) hý(e_f)dri(g)as(fe) á(d)qua,(d.) (;)
+quæ(h!iw!jv_IH') in(g) ví(fe)num(g) con(fe~)vér(d)sa(fe) est,(c) al(d)le(fe)lú(d.)ia.(d.) (::)
+
+E(h) u(h) o(g) u(f) a(gh) e.(gf..) (::)

@@ -1,0 +1,38 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Jam sol recédit ígneus;
+office-part: Hymn for Trinity Sunday;
+mode: 8;
+occasion: Trinity Sunday;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: Hymn.;
+annotation: 8.;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)JAM(h) sol(gf) re(d)cé(e')dit(f) í(gh)gne(h)us :(g.) (;)
+Tu(gh) lux(fe) per(d)én(e')nis(f) U(gh)ni(h)tas,(g.) (:)
+Nó(h)stris,(j) be(ij)á(h)ta(gf) Trí(gh)ni(gf)tas,(e'_) (;)
+In(g)fún(fef)d<i>e</i>(d) a(d)mó(e')rem(f) cór(gh)di(h)bus.(g.) (::) 
+
+2. Te(h) ma(gf)ne(d) láu(e')dum(f) cár(gh)mi(h)ne,(g.) (;)
+Te(gh) de(fe)pre(d)cá(e')mur(f) vé(gh)spe(h)re :(g.) (:)
+Di(h)gné(j)ris(ij) ut(h) te(gf) súp(gh)pli(gf)ces(e'_) (;)
+Lau(g)dé(fef)mus(d) in(e')ter(f) caé(gh)li(h)tes.(g.) (::) 
+
+3. Pá(h)tri(gf) si(d)múl(e')que(f) Fí(gh)li(h)o,(g.) (;)
+Ti(gh)bí(fe)que(d) Sán(e')cte(f) Spí(gh)ri(h)tus,(g.) (:)
+Si(h)cut(j) fú(ij)it,(h) sit(gf) jú(gh)gi(gf)ter(e'_) (;)
+Saé(g)clum(fef) per(d) óm(e')ne(f) gló(gh)ri(h)a.(g.) (::) 
+
+A(ghg)men.(fg..) (::)

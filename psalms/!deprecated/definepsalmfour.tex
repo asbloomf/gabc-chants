@@ -1,0 +1,32 @@
+﻿% the point of this is to replace all the instances of master with the number like two
+
+\usepackage{xstring}
+\newcommand{\psalmfour}{Psalm \psalmfournum.}
+\ifx\psalmfourend\undefined% must be T. Per.
+\newcommand{\antfourlinetwo}{T. Per.}
+\def\psalmfourtone{per}
+\def\psalmfourend{}
+\else
+\newcommand{\antfourlinetwo}{\psalmfourtone. \psalmfourend}
+\fi
+
+\ifx\psalmfourclef\undefined%
+\def\altclef{}%
+\else%
+\def\altclef{-clef\psalmfourclef}%
+\fi
+
+\StrSubstitute{\psalmfourend}{*}{star}[\expandedendfour]
+\StrSubstitute{\psalmfourend}{*}{}[\nostarendfour]
+\newcommand{\psalmfourtexbeg}{../psalms/Psalm\psalmfournum-\psalmfourtone}
+\newcommand{\psalmfourtex}{\psalmfourtexbeg\expandedendfour\ifx\psalmfourbeginversetwo\undefined\else\if\psalmfourbeginversetwo T-verse2\fi\fi\altclef}
+\newcommand{\psalmfourverses}{%
+\input{\psalmfourtexbeg\nostarendfour-verses\ifx\psalmfourbeginversetwo\undefined\else\if\psalmfourbeginversetwo T2\fi\fi}
+}
+\newcommand{\psalmfourtranslation}{%
+\input{../psalms/psalm\psalmfournum-verses-en}
+}
+
+\def\psalmnum{\psalmfournum}
+\input{../psalms/definepsalmparcolumnsoptions}
+\expandafter\newenvironment{psalmfourcols}{\expandafter\begin{parcolumns}\parcolumnsoptions}{\end{parcolumns}}

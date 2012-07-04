@@ -1,0 +1,27 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\input{AscensionVespers}
+
+\newcommand{\heading}{Ascension I Vespers.}
+
+\newcommand{\maganttex}{MagnificatAntiphon1}
+\newcommand{\magantinitial}{P}
+\def\magoneline{T}
+\definemag{6}{F}
+\newcommand{\premagverses}{%
+%\greblockcustos
+\normalsize
+\setgrefactor{14}
+%\pagebreak
+}
+\newcommand{\maganttranslation}{Father, I have manifested Thy Name unto the men whom Thou gavest Me; and now I pray for them, not for the world, because I come to Thee, alleluia.}
+
+\definebenedicamusdomino{1}{1}
+
+\input{../FullVespers}

@@ -1,0 +1,163 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+
+\newcommand{\heading}{The Circumcision of Our Lord at 2nd Vespers.}
+\sloppy
+
+\newcommand{\predeusinadjutorium}{%
+%\smallskip
+\large
+\setgrefactor{15}
+}
+\def\deusinadjutoriumsolemn{F}
+
+\newcommand{\preantone}{\setgrefactor{15}
+\normalsize
+%\greblockcustos
+}
+\newcommand{\antoneinitialsize}{33}
+\newcommand{\antonetex}{Ant1-OAdmirabileCommercium}
+\newcommand{\antoneinitial}{O}
+\newcommand{\antonetranslation}{\vspace{-18pt}O wondrous interchange: the Creator of the human race, taking unto Himself a living body, deigns to be born of a Virgin: and becoming man from no human seed, hath bestowed upon us His Divinity.\vspace{0ex plus 0ex minus 3ex}}
+\newcommand{\psalmonenum}{109}
+\newcommand{\psalmonetone}{6}
+\newcommand{\psalmoneend}{F}
+\newcommand{\prepsalmone}{%
+%\vspace{-1.5ex}
+}
+\newenvironment{psalmonecols}{\begin{parcolumns}[rulebetween]{2}}{\end{parcolumns}}
+\input{../psalms/definepsalmone}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preanttwo}{\setgrefactor{15}
+%\greblockcustos
+\normalsize
+}
+\newcommand{\anttwoinitialsize}{33}
+\newcommand{\anttwotex}{Ant2-QuandoNatusEs}
+\newcommand{\anttwoinitial}{Q}
+\newcommand{\anttwotranslation}{When Thou wast born in an ineffable manner of a Virgin, then were the Scriptures fulfilled: Thou camest down like rain upon the fleece to save the human race: we praise Thee, O our God.}
+\newcommand{\psalmtwonum}{110}
+\newcommand{\psalmtwotone}{3}
+\newcommand{\psalmtwoend}{a2}
+\newcommand{\prepsalmtwo}{%
+\normalsize
+\greblockcustos
+}
+\newenvironment{psalmtwocols}{\begin{parcolumns}[rulebetween]{2}}{\end{parcolumns}}
+\input{../psalms/definepsalmtwo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantthree}{\setgrefactor{17}
+\large
+%\greblockcustos
+}
+\newcommand{\antthreeinitialsize}{40}
+\newcommand{\antthreetex}{Ant3-RubumQuemViderat}
+\newcommand{\antthreeinitial}{R}
+\newcommand{\antthreetranslation}{In the bush which Moses saw was not burnt, we acknowledge the figure of thy glorious virginity: Mother of God, intercede for us.}
+\newcommand{\psalmthreenum}{121}
+\newcommand{\psalmthreetone}{4}
+\newcommand{\psalmthreeend}{E}
+\newcommand{\prepsalmthree}{%
+\normalsize
+}
+\newenvironment{psalmthreecols}{\begin{parcolumns}[rulebetween,colwidths={1=252pt}]{2}}{\end{parcolumns}}
+\input{../psalms/definepsalmthree}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantfour}{\setgrefactor{15}
+%\greblockcustos
+%\large
+\normalsize
+}
+\newcommand{\antfourinitialsize}{34}
+\newcommand{\antfourtex}{Ant4-Germinavit}
+\newcommand{\antfourinitial}{G}
+\newcommand{\antfourtranslation}{\vspace{0ex minus 3.5ex}The root of Jesse hath budded: the Star is risen out of Jacob: the Virgin hath brought forth the Saviour: We praise Thee, O our God.\vspace{0ex minus 3.5ex}}
+\newcommand{\psalmfournum}{126}
+\newcommand{\psalmfourtone}{1}
+\newcommand{\psalmfourend}{f}
+\newcommand{\prepsalmfour}{%
+%\vspace{-1ex}
+%\setgrefactor{15}
+\normalsize
+}
+\newenvironment{psalmfourcols}{\begin{parcolumns}[rulebetween,colwidths={1=290pt}]{2}}{\end{parcolumns}}
+\input{../psalms/definepsalmfour}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\def\nopagebreakbeforepsalmfive{T}
+%\def\pagebreakafterpsalmfive{T}
+\newcommand{\preantfive}{\setgrefactor{15}
+%\greblockcustos
+\normalsize
+}
+%\newcommand{\preantfivetwo}{\preantfive}
+\newcommand{\antfivefontsizetwo}{34}
+
+\newcommand{\antfiveinitialsize}{34}
+\newcommand{\antfivetex}{Ant5-EcceMaria}
+\newcommand{\antfiveinitial}{E}
+\newcommand{\antfivetranslation}{\vspace{0pt minus 1ex}Behold Mary hath brought forth unto us the Saviour, whom when John saw, he cried out: Behold the Lamb of God, behold Him who takes away the sins of the world, alleluia.}
+\newcommand{\psalmfivenum}{147}
+\newcommand{\psalmfivetone}{2}
+\newcommand{\psalmfiveend}{D}
+\newcommand{\prepsalmfive}{%
+%\vspace{-1ex}
+%\setgrefactor{15}%
+\normalsize%
+}
+\newenvironment{psalmfivecols}{\begin{parcolumns}[rulebetween%,colwidths={1=266pt}
+]{2}}{\end{parcolumns}}
+\input{../psalms/definepsalmfive}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\chapter}{\dropcap{latin}{Appáruit grátia Dei Salvatóris nóstri ómnibus}{ho\-\textbf{mí}\-ni\-bus,~\dag{} erúdiens nos, ut abnegántes impietátem et sæculária \emph{de\-si}\-\textbf{dé}\-ri\-a,~* sóbrie, et juste, et pie vivámus in hoc \textbf{saé}\-cu\-lo.}}
+\newcommand{\chaptertranslation}{The grace of God our Saviour hath appeared to all men, instructing us, that denying ungodliness and worldly desires, we should live soberly and justly and godly in this world.}
+
+\newcommand{\hymn}{Jesu Redémptor ómnium}
+%\newcommand{\vr}{Notum fecit Dóminus}
+\newcommand{\vrtex}{vrNotumFecitDominus}
+\newcommand{\vtranslation}{The Lord hath made known, alleluia.}
+\newcommand{\rtranslation}{His salvation, alleluia.}
+\def\vrnospace{T}
+
+\newcommand{\premag}{
+\large
+\setgrefactor{15}
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+\newcommand{\magfontsize}{33}
+\newcommand{\magantinitial}{M}
+\newcommand{\maganttranslation}{O mighty mystery of generation: the womb of her who knew not man is become the temple of God: He who takes flesh from her is not defiled: all nations shall come, and say: Glory be to Thee, O Lord.}
+\newcommand{\magtone}{2}
+\newcommand{\magend}{A}
+\def\magsolemn{T}
+\def\magoneline{F}
+\newcommand{\premagverses}{\greblockcustos\setgrefactor{15}
+\normalsize
+%\pagebreak
+}
+\input{../psalms/definemag}
+
+\newcommand{\collect}{Deus, qui salútis ætérnæ, beátæ Maríæ virginitáte fecúnda, humáno géneri praémia præstitísti~:~\dag{} tríbue quaésumus; ut ipsam pro nobis intercédere sentiámus,~* per quam merúimus auctórem vitæ suscípere, Dóminum nostrum Jesum Christum Fílium tuum.  Qui tecum vivit.}
+\newcommand{\collecttranslation}{O God, who by the fruitful virginity of blessed Mary hast bestowed upon mankind the rewards of eternal salvation: grant, we beseech Thee, that we may experience her intercession for us, through whom we have been made worthy to receive the Author of Life, Jesus Christ Thy Son, our Lord.}
+
+\newcommand{\benedicamusdominotone}{8.}
+\newcommand{\benedicamusdominotex}{../BenedicamusDomino/BenedicamusDomino_2class2ndVespers}
+%\newcommand{\benedicamusdominotonealt}{5.}
+%\newcommand{\benedicamusdominotexalt}{../BenedicamusDomino/BenedicamusDomino_1class2ndvespersAlt}
+
+\input{../FullVespers}

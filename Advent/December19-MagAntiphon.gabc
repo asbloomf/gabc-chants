@@ -1,0 +1,30 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: O Radix Jesse;
+office-part: Magnificat Antiphon;
+mode: 2D;
+occasion: December 19;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: At Magn.;
+annotation: 2. D;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(f3)O(eh/hg) Rá(hf)dix(gf) Jés(ef)se,(f'_) <v>\greheightstar</v>(,)
+qui(f) stas(fg) in(f) sí(g)gnum(f) po(g_h)pu(fg)ló(f)rum,(e.) (;)
+su(f)per(cf~) quem(f) con(f)ti(f)né(fg)bunt(f) ré(g')ges(f) os(g_h) sú(kxiji)um,(jkj.) (;)
+quem(j_i~) gén(j)tes(i) de(h)pre(hg)ca(f!gwh)bún(h)tur :(e.) (:)
+vé(eh)ni(g'_) (,) ad(h) li(hg)be(f)rán(gf~)dum(ef~) nos,(fv_EC.) (;)
+jam(e_f) nó(h_g)li(e) tar(gh)dá(f.)re.(f.) (::)
+
+E(h) u(h) o(h) u(g) a(e) e.(f.) (::)

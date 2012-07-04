@@ -1,0 +1,23 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Maria autem;
+office-part: Magnificat Antiphon;
+mode: 8G;
+occasion: Holy Family;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: At Magn.;
+annotation: Ant. 8. G;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+(c4)MA(g)rí(i')a(h) au(j_i~)tem(g_h) <v>\greheightstar</v>(,) con(f)ser(h)vá(j')bat(k) óm(i')ni(j)a(h') vér(h)ba(g) hæc,(h.) (;) cón(h')fe(g)rens(e) in(f) cór(gh)de(h) sú(g.)o.(g.) (::z)
+
+E(j) u(j) o(i) u(j) a(h) e.(g.) (::)

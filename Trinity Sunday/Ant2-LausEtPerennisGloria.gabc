@@ -1,0 +1,25 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Laus et perennis gloria;
+office-part: 2 Antiphon;
+mode: 2D;
+occasion: Trinity Sunday;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: 2 Ant.;
+annotation: 2. D;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(f3)LAus(ff) et(e) per(f')én(h)nis(hih') gló(f)ri(ef)a(f.) <v>\greheightstar</v>(,) Dé(fh)o(f) Pá(fe)tri,(f') et(h) Fí(h)li(fe)o,(e.) (;) sán(ef~)cto(f) si(fe)mul(f') Pa(h)rá(i')cli(h)to,(h'_) (,) in(h) saé(i)cu(hg)la(h') sæ(i)cu(hg)ló(f.)rum.(f.) (::) 
+
+E(h) u(h) o(h) u(g) a(e) e.(f.) (::)

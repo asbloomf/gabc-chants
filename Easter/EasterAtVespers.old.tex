@@ -1,0 +1,438 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+
+% usual packages loading:
+%\usepackage{luatextra}
+%\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper} % or letterpaper (US) or a5paper or....
+\usepackage{gregoriotex} % for gregorio score inclusion
+
+% If you use usual TeX fonts, here is a starting point:
+%\usepackage{palatino}
+%\input{glyphtounicode} \pdfglyphtounicode{f_f}{FB00} \pdfglyphtounicode{f_f_i}{FB03} \pdfglyphtounicode{f_f_l}{FB04}
+%\pdfglyphtounicode{Q_u}{E048} \pdfglyphtounicode{O_e}{0152} \pdfglyphtounicode{o_e}{0153}
+%\pdfgentounicode=1
+% to change the font to something better, you can install the kpfonts package (if not already installed). To do so
+% go open the "TeX Live Manager" in the Menu Start->All Programs->TeX Live 2010
+\input{../gsp-spaces}
+%\def\greinitialformat#1{{\fontsize{37}{37}\selectfont #1}}
+%small > footnotesize > scriptsize > tiny
+
+
+% my stuff
+\usepackage[garamond]{../mypackage}
+% end my stuff
+
+\setgrefactor{17}
+
+
+\marginsize{25pt}{25pt}{25pt}{30pt}
+\pagestyle{fancy} % no header or footers
+\let\oldheadrulewidth\headrulewidth
+\renewcommand\headrulewidth{0pt}
+\cfoot{\thepage}
+
+% here we begin the document
+\begin{document}
+%\chead{Sunday At Vespers}
+
+% The title:
+\vspace*{-11ex}
+\begin{center}{\huge Easter Sunday at Vespers.}\end{center}
+\vspace{-2ex}
+
+% Here we set the space around the initial.
+% Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
+\setspaceafterinitial{1.5mm plus 0em minus 0em}
+\setspacebeforeinitial{1.5mm plus 0em minus 0em}
+
+% Here we set the initial font. Change 43 if you want a bigger initial.
+\def\greinitialformat#1{%
+{\fontsize{40}{40}\selectfont #1}%
+}
+
+% We set red lines here, comment it if you want black ones.
+%\redlines
+
+% We set VII above the initial.
+{\gresetfirstlineaboveinitial{\small \Vbar .}{\small \Vbar .}
+
+% We type a text in the top right corner of the score:
+%\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
+
+% and finally we include the score. The file must be in the same directory as this one.
+{\bfseries Solemn Tone.}
+
+\smallskip
+\large
+\includescore{DeusInAdjutorium_solemn.tex}}%
+\translation[]{\Vbar . O God, come to my assistance. \Rbar . O Lord, make haste to help me. Glory be \ldots}
+%{\itshape From Septuagesima to Wednesday in Holy Week, the following is said instead of} Allelúia :
+
+%\includescore{LausTibiDomine}
+%\smallskip
+\hrule
+\medskip
+\gresetfirstlineaboveinitial{\small{1 Ant.}}{\small{1 Ant.}}
+\setsecondannotation{\small{8. G}}
+\large
+\includescore{Ant1-AngelusAutemDomini.tex}
+\vspace{-1ex}
+\translation[]{\normalsize For an angel of the Lord descended from heaven; and coming, rolled back the stone, and sat upon it, alleluia, alleluia.}
+\vspace{-3ex}
+\begin{center}{\Large Psalm 109.}\end{center}
+\vspace{-1.5ex}
+\includescore{Psalm109-8G.tex}
+\medskip
+
+\normalsize
+%\vspace{-20pt}
+\setlength{\columnsep}{18pt}
+\setlength{\columnseprule}{.4pt}
+\begin{parcolumns}[rulebetween]{2}
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}[1]
+\item Donec ponam inimícos \textbf{tu}os,~* scabéllum pe\emph{dum} \emph{tu}\-\textbf{ó}\-rum.
+\item Virgam virtútis tuæ emíttet Dóminus ex \textbf{Si}on~:~* domináre in médio inimicó\emph{rum} \emph{tu}\textbf{ó}rum.
+\item Tecum princípium in die virtútis tuæ in splendóribus san\textbf{ctó}rum~:~* ex útero ante lucíferum \emph{gé}\emph{nu}\textbf{i} te.
+\item Jurávit Dóminus, et non pœnitébit \textbf{e}um~:~* Tu es sacérdos in ætérnum secúndum órdi\emph{nem} \emph{Mel}\textbf{chí}sedech.
+\item Dóminus a dextris \textbf{tu}is,~* confrégit in die iræ \emph{su}\emph{æ} \textbf{re}ges.
+\item Judicábit in natiónibus, implébit ru\textbf{í}nas~:~* conquassábit cápita in ter\emph{ra} \emph{mul}\textbf{tó}rum.
+\item De torrénte in via \textbf{bi}bet~:~* proptérea exal\emph{tá}\emph{bit} \textbf{ca}put.
+\item Glória Pátri, et \textbf{Fí}lio,~* et Spirí\emph{tu}\emph{i} \textbf{Sán}cto.
+\item Sicut érat in princípio, et núnc, et \textbf{sém}per,~* et in saécula sæcu\emph{ló}\emph{rum}. \textbf{A}men.\end{psalmverses}
+}
+\selectlanguage{american}
+%\columnbreak
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}
+\item The Lord said to my Lord: Sit thou at my right hand: 
+\item Until I make thy enemies thy footstool.
+\item The Lord will send forth the sceptre of thy power out of Sion: rule thou in the midst of thy enemies.
+\item With thee is the principality in the day of thy strength: in the brightness of the saints: from the womb before the day star I begot thee.
+\item The Lord hath sworn, and he will not repent: Thou art a priest for ever according to the order of Melchisedech.
+\item The Lord at thy right hand hath broken kings in the day of his wrath.
+\item He shall judge among nations, he shall fill ruins: he shall crush the heads in the land of the many.
+\item He shall drink of the torrent in the way: therefore shall he lift up the head.
+\end{psalmverses}
+}
+\selectlanguage{latin}
+\end{parcolumns}
+\pagebreak
+
+\renewcommand\headrulewidth{\oldheadrulewidth}
+\chead{Easter Sunday At Vespers}
+\gresetfirstlineaboveinitial{\small {2 Ant.}}{\small {2 Ant.}}
+\setsecondannotation{\small {7. c}}
+\large
+\includescore{Ant2-EtEcceTerraemotus.tex}
+\translation[]{\normalsize And behold there was a great earthquake; for an angel of the Lord descended from heaven, alleluia.}
+\begin{center}{\Large Psalm 110.}\end{center}
+\includescore{Psalm110-7c.tex}
+\normalsize\medskip
+
+\begin{parcolumns}[rulebetween]{2}
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}[1]
+\item Magna \textbf{ó}pera \textbf{Dó}mini~:~* exquisíta in omnes volun\textbf{tá}tes \textbf{e}jus.
+\item Conféssio et magnificéntia \textbf{o}pus \textbf{e}jus~:~* et justítia ejus manet in \textbf{sæ}culum \textbf{sæ}culi.
+\item Memóriam fecit mirabílium suórum,~† miséricors et mise\textbf{rá}tor \textbf{Dó}minus~:~* escam dedit ti\textbf{mén}ti\textbf{bus} se.
+\item Memor erit in sæculum testa\textbf{mén}ti \textbf{su}i~:~* virtútem óperum suórum annuntiábit \textbf{pó}pulo \textbf{su}o~:
+\item Ut det illis heredi\textbf{tá}tem \textbf{gén}tium~:~* ópera mánuum ejus véritas, \textbf{et} ju\textbf{dí}cium.
+\item Fidélia ómnia mandáta ejus~:~† confirmáta in \textbf{sæ}culum \textbf{sæ}culi,~* facta in veritáte et \textbf{æ}qui\textbf{tá}te.
+\item Redemptiónem misit \textbf{pó}pulo \textbf{su}o~:~* mandávit in ætérnum testa\textbf{mén}tum \textbf{su}um.
+\item Sanctum, et terríbile \textbf{no}men \textbf{e}jus~:~* inítium sapiéntiæ \textbf{ti}mor \textbf{Dó}mini.
+\item Intelléctus bonus ómnibus faci\textbf{én}tibus \textbf{e}um~:~* laudátio ejus manet in \textbf{sæ}culum \textbf{sæ}culi.
+\item Glória \textbf{Pá}tri, et \textbf{Fí}lio,~* et Spi\textbf{rí}tui \textbf{Sán}cto.
+\item Sicut érat in princípio, et \textbf{núnc}, et \textbf{sém}per,~* et in saécula sæcu\textbf{ló}rum. \textbf{A}men.\end{psalmverses}
+}
+%\columnbreak
+\selectlanguage{american}
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}[0]
+\item I will praise thee, O Lord, with my whole heart; in the council of the just: and in the congregation.
+\item Great are the works of the Lord: sought out according to all his wills
+\item His work is praise and magnificence: and his justice continueth for ever and ever.
+\item He hath made a remembrance of his wonderful works, being a merciful and gracious Lord: he hath given food to them that fear him.
+\item He will be mindful for ever of his covenant: he will shew forth to his people the power of his works.
+\item That he may give them the inheritance of the Gentiles: the works of his hands are truth and judgment.
+\item All his commandments are faithful: confirmed for ever and ever, made in truth and equity.
+\item He hath sent redemption to his people: he hath commanded his covenant for ever.
+\item Holy and terrible is his name: the fear of the Lord is the beginning of wisdom.
+\item A good understanding to all that do it: his praise continueth for ever and ever.
+\end{psalmverses}
+}
+\selectlanguage{latin}
+\end{parcolumns}
+\pagebreak
+
+\gresetfirstlineaboveinitial{\small{3 Ant.}}{\small{3 Ant.}}
+\setsecondannotation{\small{8. c}}
+\large
+\includescore{Ant3-EratAutem.tex}
+%\vspace{-2ex}
+\translation[]{\normalsize And his countenance was as lightning, and his raiment as snow, alleluia, alleluia.}
+\begin{center}{\Large Psalm 111.}\end{center}
+\normalsize
+\includescore{Psalm111-8c.tex}
+\normalsize
+
+%\medskip
+\begin{parcolumns}[rulebetween]{2}
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}[1]
+\item Potens in terra erit semen \textbf{e}jus~:~* generátio rectórum be\emph{ne}\emph{di}\textbf{cé}tur.
+\item Glória, et divítiæ in domo \textbf{e}jus~:~* et justítia ejus manet in sæ\emph{cu}\emph{lum} \textbf{sæ}culi.
+\item Exórtum est in ténebris lumen \textbf{re}ctis~:~* miséricors, et miserá\emph{tor}, \emph{et} \textbf{ju}stus.
+\item Jucúndus homo qui miserétur et cómmodat,~† dispónet sermónes suos in ju\textbf{dí}cio~:~* quia in ætérnum non \emph{com}\-\emph{mo}\-\textbf{vé}\-bi\-tur.
+\item In memória ætérna erit \textbf{ju}stus~:~* ab auditióne mala \emph{non} \emph{ti}\textbf{mé}bit.
+\item Parátum cor ejus speráre in Dómino,~† confirmátum est cor \textbf{e}jus~:~* non commovébitur donec despíciat ini\emph{mí}\emph{cos} \textbf{su}os.
+\item Dispérsit, dedit paupéribus~:~† justítia ejus manet in sæculum \textbf{sæ}culi,~* cornu ejus exaltábi\emph{tur} \emph{in} \textbf{gló}ria.
+\item Peccátor vidébit, et irascétur,~† déntibus suis fremet et ta\textbf{bé}scet~:~* desidérium peccató\emph{rum} \emph{per}\textbf{í}bit.
+\item Glória Pátri, et \textbf{Fí}lio,~* et Spirí\emph{tu}\emph{i} \textbf{Sán}cto.
+\item Sicut érat in princípio, et núnc, et \textbf{sém}per,~* et in saécula sæcu\emph{ló}\emph{rum}. \textbf{A}men.\end{psalmverses}
+}
+%\columnbreak
+\selectlanguage{american}
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}[0]
+\item Blessed is the man that feareth the Lord: he shall delight exceedingly in his commandments.
+\item His seed shall be mighty upon earth: the generation of the righteous shall be blessed.
+\item Glory and wealth shall be in his house: and his justice remaineth for ever and ever.
+\item To the righteous a light is risen up in darkness: he is merciful, and compassionate and just.
+\item Acceptable is the man that showeth mercy and lendeth: he shall order his words with judgment: because he shall not be moved for ever.
+\item The just shall be in everlasting remembrance: he shall not hear the evil hearing.
+\item His heart is ready to hope in the Lord: his heart is strengthened, he shall not be moved until he look over his enemies.
+\item He hath distributed, he hath given to the poor: his justice remaineth for ever and ever: his horn shall be exalted in glory.
+\item The wicked shall see, and shall be angry, he shall gnash with his teeth and pine away: the desire of the wicked shall perish.
+\end{psalmverses}
+}
+\selectlanguage{latin}
+\end{parcolumns}
+\pagebreak
+
+\gresetfirstlineaboveinitial{\footnotesize{4 Ant.}}{\small{4 Ant.}}
+\setsecondannotation{\small{7. a}}
+\large
+\includescore{Ant4-PraeTimoreAutemEjus.tex}
+\translation[]{\normalsize And for fear of him the guards were struck with terror, and became as dead men, alleluia.}
+%\vspace{-3.5ex}
+\begin{center}{\Large Psalm 112.}\end{center}
+%\vspace{-1ex}
+%\setgrefactor{15}
+\normalsize
+\includescore{Psalm112-7a.tex}
+\medskip
+\begin{parcolumns}[rulebetween,colwidths={1=289pt}]{2}
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}[1]
+\item Sit nomen Dómini \textbf{be}ne\textbf{dí}ctum,~* ex hoc nunc, et \textbf{us}que in \textbf{sæ}culum.
+\item A solis ortu usque \textbf{ad} oc\textbf{cá}sum,~* laudábile \textbf{no}men \textbf{Dó}mini.
+\item Excélsus super omnes \textbf{gen}tes \textbf{Dó}minus,~* et super cælos \textbf{gló}ria \textbf{e}jus.
+\item Quis sicut Dóminus, Deus noster, qui in \textbf{al}tis \textbf{há}bitat,~* et humília réspicit in cælo \textbf{et} in \textbf{ter}ra?
+\item Súscitans a \textbf{ter}ra \textbf{ín}opem,~* et de stércore \textbf{é}rigens \textbf{páu}\-pe\-rem~:
+\item Ut cóllocet eum \textbf{cum} prin\textbf{cí}pibus,~* cum princípibus \textbf{pó}\-pu\-li \textbf{su}i.
+\item Qui habitáre facit stéri\textbf{lem} in \textbf{do}mo,~* matrem fili\textbf{ó}rum læ\textbf{tán}tem.
+\item Glória \textbf{Pá}tri, et \textbf{Fí}lio,~* et Spi\textbf{rí}tui \textbf{Sán}cto.
+\item Sicut érat in princípio, et \textbf{núnc}, et \textbf{sém}per,~* et in saécula sæcu\textbf{ló}rum. \textbf{A}men.\end{psalmverses}
+}
+\selectlanguage{american}
+\colchunk{\vspace{-12pt}\small%
+\begin{psalmverses}[0]
+\item Praise the Lord, ye children: praise ye the name of the Lord.
+\item Blessed be the name of the Lord, from henceforth now and for ever.
+\item From the rising of the sun unto the going down of the same, the name of the Lord is worthy of praise.
+\item The Lord is high above all nations; and his glory above the heavens.
+\item Who is as the Lord our God, who dwelleth on high: and looketh down on the low things in heaven and in earth?
+\item Raising up the needy from the earth, and lifting up the poor out of the dunghill:
+\item That he may place him with princes, with the princes of his people.
+\item Who maketh a barren woman to dwell in a house, the joyful mother of children.
+\end{psalmverses}
+}
+\selectlanguage{latin}
+\end{parcolumns}
+\medskip
+\pagebreak
+%\hrule
+\medskip
+
+\setgrefactor{17}
+\gresetfirstlineaboveinitial{\small{5 Ant.}}{\footnotesize{5 Ant.}}
+\setsecondannotation{\small{8. G}}
+\large
+\includescore{Ant5-RespondensAutemAngelus.tex}
+%\vspace{-4ex}
+\translation[]{\normalsize And the angel answering, said to the women, Fear not you, for I know that you seek Jesus, alleluia.}
+\vspace{-2ex}
+\begin{center}{\Large Psalm 113.}\end{center}
+\vspace{-1ex}
+%\setgrefactor{15}%
+\normalsize%
+\includescore{Psalm113-8G.tex}
+%\begin{multicols}{2}
+\vspace{-1ex}
+%\begin{Parallel}[v]{}{}
+% default colwidth is 265pt
+%colwidths={1=262pt},rulebetween
+\begin{parcolumns}[colwidths={1=268pt},rulebetween]{2}
+%\ParallelLText
+\colchunk{%
+\vspace{-12pt}
+\begin{psalmverses}[1]
+\item Facta est Judæa sanctificátio \textbf{e}jus,~* Israël po\emph{té}\emph{stas} \textbf{e}jus.
+\item Mare vidit, et \textbf{fu}git~:~* Jordánis convérsus \emph{est} \emph{re}\-\textbf{trór}\-sum.
+\item Montes exsultavérunt ut a\textbf{rí}etes,~* et colles sicut \emph{a}\emph{gni} \textbf{ó}vium.
+\item Quid est tibi, mare, quod fu\textbf{gí}sti~:~* et tu, Jordánis, quia convérsus \emph{es} \emph{re}\textbf{trór}sum?
+\item Montes, exsultástis sicut a\textbf{rí}etes,~* et colles, sicut \emph{a}\emph{gni} \textbf{ó}vium.
+\item A fácie Dómini mota est \textbf{ter}ra,~* a fácie \emph{De}\emph{i} \textbf{Ja}cob.
+\item Qui convértit petram in stagna a\textbf{quá}rum,~* et rupem in fon\emph{tes} \emph{a}\textbf{quá}rum.
+\item Non nobis, Dómine, non \textbf{no}bis~:~* sed nómini tu\emph{o} \emph{da} \textbf{gló}riam.
+\item Super misericórdia tua, et veritáte \textbf{tu}a~:~* nequándo dicant gentes~: Ubi est De\emph{us} \emph{e}\textbf{ó}rum?
+\item Deus autem noster in \textbf{cæ}lo~:~* ómnia quæcúmque vó\-\emph{lu}\-\emph{it}, \textbf{fe}\-cit.
+\item Simulácra géntium argéntum, et \textbf{au}rum,~* ópera má\-\emph{nu}\-\emph{um} \textbf{hó}\-mi\-num.
+\item Os habent, et non lo\textbf{quén}tur~:~* óculos habent, et \emph{non} \emph{vi}\textbf{dé}bunt.
+\item Aures habent, et non \textbf{áu}dient~:~* nares habent, et non \emph{o}\emph{do}\textbf{rá}bunt.
+\item Manus habent, et non palpábunt~:~† pedes habent, et non ambu\textbf{lá}bunt~:~* non clamábunt in gút\emph{tu}\emph{re} \textbf{su}o.
+\item Símiles illis fiant qui fáciunt \textbf{e}a~:~* et omnes qui confí\emph{dunt} \emph{in} \textbf{e}is.
+\item Domus Israël sperávit in \textbf{Dó}mino~:~* adjútor eórum et proté\emph{ctor} \emph{e}\textbf{ó}rum est,
+\item Domus Aaron sperávit in \textbf{Dó}mino~:~* adjútor eórum et proté\emph{ctor} \emph{e}\textbf{ó}rum est,
+\item Qui timent Dóminum, speravérunt in \textbf{Dó}mino~:~* adjútor eórum et proté\emph{ctor} \emph{e}\textbf{ó}rum est.
+\item Dóminus memor fuit \textbf{no}stri~:~* et bene\emph{dí}\emph{xit} \textbf{no}bis~:
+\item Benedíxit dómui \textbf{Is}raël~:~* benedíxit dó\emph{mu}\emph{i} \textbf{A}aron.
+\item Benedíxit ómnibus, qui timent \textbf{Dó}minum,~* pusíllis \emph{cum} \emph{ma}\textbf{jó}ribus.
+\item Adjíciat Dóminus \textbf{su}per vos~:~* super vos, et super fí\emph{li}\emph{os} \textbf{ve}stros.
+\item Benedícti vos a \textbf{Dó}mino,~* qui fecit cæ\emph{lum}, \emph{et} \textbf{ter}ram.
+\item Cælum cæli \textbf{Dó}mino~:~* terram autem dedit fí\emph{li}\emph{is} \textbf{hó}\-mi\-num.
+\item Non mórtui laudábunt te, \textbf{Dó}mine~:~* neque omnes, qui descéndunt \emph{in} \emph{in}\textbf{fér}num.
+\item Sed nos qui vívimus, benedícimus \textbf{Dó}mino,~* ex hoc nunc et us\emph{que} \emph{in} \textbf{sæ}culum.
+\item Glória Pátri, et \textbf{Fí}lio,~* et Spirí\emph{tu}\emph{i} \textbf{Sán}cto.
+\item Sicut érat in princípio, et núnc, et \textbf{sém}per,~* et in saécula sæcu\emph{ló}\emph{rum}. \textbf{A}men.\end{psalmverses}
+}
+\selectlanguage{american}
+%\ParallelRText{%
+\colchunk{%
+\vspace{-12pt}
+%\small
+\sloppy
+\begin{psalmverses}[0]
+\item When Israel went out of Egypt, the house of Jacob from a barbarous people:
+\item Judea made his sanctuary, Israel his dominion.
+\item The sea saw and fled: Jordan was turned back.
+\item The mountains skipped like rams, and the hills like the lambs of the flock.
+\item What ailed thee, O thou sea, that thou didst flee: and thou, O Jordan, that thou wast turned back?
+\item Ye mountains, that ye skipped like rams, and ye hills, like lambs of the flock?
+\item At the presence of the Lord the earth was moved, at the presence of the God of Jacob:
+\item Who turned the rock into pools of water, and the stony hill into fountains of waters.
+\item Not to us, O Lord, not to us; but to thy name give glory.
+\item For thy mercy, and for thy truth's sake: lest the gentiles should say: Where is their God?
+\item But our God is in heaven: he hath done all things whatsoever he would.
+\item The idols of the gentiles are silver and gold, the works of the hands of men.
+\item They have mouths and speak not: they have eyes and see not.
+\item They have ears and hear not: they have noses and smell not.
+\item They have hands and feel not: they have feet and walk not: neither shall they cry out through their throat.
+\item Let them that make them become like unto them: and all such as trust in them.
+\item The house of Israel hath hoped in the Lord: he is their helper and their protector.
+\item The house of Aaron hath hoped in the Lord: he is their helper and their protector.
+\item They that fear the Lord hath hoped in the Lord: he is their helper and their protector.
+\item The Lord hath been mindful of us, and hath blessed us.
+\item He hath blessed the house of Israel: he hath blessed the house of Aaron.
+\item He hath blessed all that fear the Lord, both little and great.
+\item May the Lord add blessings upon you: upon you, and upon your children.
+\item Blessed be you of the Lord, who made heaven and earth.
+\item The heaven of heaven is the Lord's: but the earth he has given to the children of men.
+\item The dead shall not praise thee, O Lord: nor any of them that go down to hell.
+\item But we that live bless the Lord: from this time now and for ever.
+\end{psalmverses}}
+\selectlanguage{latin}
+\end{parcolumns}
+\bigskip
+\setgrefactor{17}%
+\gresetfirstlineaboveinitial{\small{5 Ant.}}{\footnotesize{5 Ant.}}
+\setsecondannotation{\small{8. G}}
+\large
+\includescore{Ant5-RespondensAutemAngelus.tex}
+%\vspace*{-20pt}
+\bigskip
+\hrule
+\bigskip
+
+\normalsize
+\emph{Chapter, Hymn, and Versicle are all omitted, but the following Antiphon is said :}\\
+\gresetfirstlineaboveinitial{\small{Ant.}}{\small{Ant.}}
+\setsecondannotation{\small{2.}}
+\large
+\includescore{Ant-HaecDies.tex}
+\normalsize
+\translation[]{This is the day which the Lord hath made: let us be glad and rejoice therein.}
+\pagebreak
+\begin{center}{\large Magnificat.}\end{center}
+\vspace{-1ex}
+
+\setspaceafterinitial{4.3mm plus 0em minus 0em}
+\setspacebeforeinitial{4.3mm plus 0em minus 0em}
+% We set VII above the initial.
+{\gresetfirstlineaboveinitial{\small At Magn.}{\small At Magn.}
+\setsecondannotation{\small \oldstylenums{Ant. 3. a}}
+
+% We type a text in the top right corner of the score:
+%\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
+
+% and finally we include the score. The file must be in the same directory as this one.
+\large
+\includescore{MagnificatAntiphon.tex}}%
+%\vspace{-2ex}
+\translation[]{And looking, they saw the stone reolled back: for it was very great, alleluia.}
+\smallskip
+%\hrule
+
+\normalsize
+
+{\greblockcustos\setgrefactor{15}
+\begin{magnificat}{MagnificatSolemn3a}
+\normalsize
+\item \vspace{-3ex}Quia respéxit humilitátem an\textbf{cíl}lae \textbf{sú}æ~:~* ecce enim ex hoc beátam me dícent ómnes genera\emph{ti}\textbf{ó}nes.
+\item Quia fécit míhi \textbf{má}gna qui \textbf{pó}\textbf{tens} est~:~* et sánctum nó\emph{men} \textbf{é}jus.
+\item Et misericórdia éjus a progénie \textbf{in} pro\textbf{gé}\textbf{ni}es~* timénti\emph{bus} \textbf{é}um.
+\item Fécit poténtiam in \textbf{brá}chio \textbf{sú}o~:~* dispérsit supérbos ménte cór\emph{dis} \textbf{sú}i.
+\item Depósuit po\textbf{tén}tes de \textbf{sé}de,~* et exaltá\emph{vit} \textbf{hú}miles.
+\item Esuriéntes im\textbf{plé}vit \textbf{bó}nis~:~* et dívites dimísit \emph{in}\textbf{á}nes.
+\item Suscépit Israel \textbf{pú}erum \textbf{sú}um,~* recordátus misericórdi\emph{æ} \textbf{sú}æ.
+\item Sicut locútus est ad \textbf{pá}tres \textbf{nó}stros,~* Abraham et sémini éjus \emph{in} \textbf{saé}cula.
+\item Glória \textbf{Pá}tri, et \textbf{Fí}\textbf{li}o,~* et Spirítu\emph{i} \textbf{Sán}cto.
+\item Sicut érat in princípio, et \textbf{núnc}, et \textbf{sém}per,~* et in saécula sæculó\emph{rum}. \textbf{A}men.\end{magnificat}
+}
+\hrule
+\smallskip
+\begin{center}{\large Collect.}\end{center}
+% default width is 265pt
+%\sloppy
+%,colwidths={1=220pt}
+\begin{parcolumns}[rulebetween]{2}
+\sloppy
+\prayer{Deus, qui hodiérna die per Unigénitum tuum, æternitátis nobis áditum devícta morte reserásti~:~\gredagger{} vota nostra, quæ præveniéndo aspíras,~* étiam adjuvándo proséquere. Per eúmdem Dóminum.}
+{O God, who, on this day, through Thine only-begotten Son, hast conquered death, and thrown open to us the gate of everlasting life, give effect by Thine aid to our desires, which Thou dost anticipate and inspire. Through the same our Lord.}
+\end{parcolumns}
+\bigskip
+
+\setspaceafterinitial{0.3mm plus 0em minus 0em}
+\setspacebeforeinitial{0.3mm plus 0em minus 0em}
+\gresetfirstlineaboveinitial{\small \Vbar{}.}{\small \Vbar{}.}
+\includescore{BenedicamusDomino.tex}
+
+\bigskip
+\begin{parcolumns}[rulebetween]{2}
+\selectlanguage{latin}%
+\colchunk{\Vbar{}. Fidélium ánimæ per misericórdiam Déi requiéscant in páce.}
+\selectlanguage{american}%
+\colchunk{\Vbar{}. May the souls of the faithful departed through the mercy of God rest in peace.}
+\selectlanguage{latin}%
+\colplacechunks{}
+\colchunk{\Rbar{}. Amen.}
+\colchunk{\Rbar{}. Amen.}
+\end{parcolumns}
+\end{document}

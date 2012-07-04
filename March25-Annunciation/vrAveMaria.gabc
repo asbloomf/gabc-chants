@@ -1,0 +1,22 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Ave Maria;
+office-part: versicle and response;
+occasion: Annunciation;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+initial-style:0;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)()() <v>\Vbar</v>. A(h)ve(h) Ma(h)rí(h)a(h) grá(h)ti(h)a(h) plé(h)na.(g_'/hvGF'Efgf.) (::)
+<v>\Rbar</v>. Dó(h)mi(h)nus(h) té(h)cum.(g_'/hvGF'Efgf.) (::)

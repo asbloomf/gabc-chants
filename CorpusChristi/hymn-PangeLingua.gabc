@@ -1,0 +1,64 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Pange lingua;
+office-part: Vesper hymn;
+occasion: Corpus Christi;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: Hymn.;
+annotation: 3.;
+%initial-style:0;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)PAn(e)ge(e') lín(f)gua(ed) glo(g')ri(g)ó(hj)si(j.) (,)
+Cór(jk)po(j)ris(j') my(i)sté(h')ri(j)um,(ivHG.) (:)
+San(g)gui(h')nís(j)que(i') pre(h)ti(g')ó(h)si,(g.) (,)
+Quem(h') in(i) mún(g')di(g) pré(e')ti(h)um(h.d.) (:)
+Frú(e)ctus(g') vén(g)tris(e') ge(g)ne(h')ró(h)si(g.) (,)
+Re(h)x ef(i')fú(g)dit(hg) gén(fe)ti(d)um.(e.) (::) 
+
+2. Nó(e)bis(e') dá(f)tus,(ed) nó(g')bis(g) ná(hj)tus(j.) (,)
+Ex(jk) in(j)tá(j')cta(i) Vír(h')gi(j)ne,(ivHG.) (:)
+Et(g) in(h') mún(j)do(i') con(h)ver(g')sá(h)tus,(g.) (,)
+Spár(h')so(i) vér(g')bi(g) sé(e')mi(h)ne,(h.d.) (:)
+Sú(e)i(g') mó(g)ras(e') in(g)co(h')lá(h)tus(g.) (,)
+Mí(h)ro(i') cláu(g)sit(hg) ór(fe)di(d)ne.(e.) (::) 
+
+3. In(e) su(e')pré(f)mæ(ed) nó(g')cte(g) coé(hj)næ(j.) (,)
+Re(jk)cúm(j)bens(j') cum(i) frá(h')tri(j)bus,(ivHG.) (:)
+Obs(g)er(h')vá(j)ta(i') lé(h)ge(g') ple(h)ne(g.) (,)
+Cí(h')bis(i) in(g') le(g)gá(e')li(h)bus,(h.d.) (:)
+Cí(e)bum(g') túr(g)bæ(e') du(g)o(h')dé(h)næ(g.) (,)
+Se(h)dat(i') sú(g)is(hg) má(fe)ni(d)bus.(e.) (::) 
+
+4. Vér(e)bum(e') cá(f)ro,(ed) pá(g')nem(g) vé(hj)rum(j.) (,)
+Vér(jk)bo(j) cár(j')nem(i) éf(h')fi(j)cit :(ivHG.) (:)
+Fít(g)que(h') sán(j)guis(i') Chrí(h)sti(g') mé(h)rum,(g.) (,)
+Et(h') si(i) sén(g')sus(g) dé(e')fi(h)cit,(h.d.) (:)
+Ad(e) fir(g')mán(g)dum(e') cor(g) sin(h')cé(h)rum(g.) (,)
+Só(h)la(i') fí(g)des(hg) súf(fe)fi(d)cit.(e.) (::) 
+
+5. Tán(e)tum(e') er(f)go(ed) Sa(g')cra(g)mén(hj)tum(j.) (,) Ve(jk)ne(j)ré(j')mur(i) cér(h')nu(j)i :(ivHG.) (:)
+Et(g) an(h')tí(j)quum(i') do(h)cu(g')mén(h)tum(g.) (,)
+Nó(h')vo(i) cé(g')dat(g) rí(e')tu(h)i :(h.d.) (:)
+Praé(e)stet(g') fí(g)des(e') sup(g)ple(h')mén(h)tum(g.) (,)
+Sén(h)su(i')um(g) de(hg)fé(fe)ctu(d)i.(e.) (::) 
+
+6. Ge(e)ni(e')tó(f)ri,(ed) Ge(g')ni(g)tó(hj)que(j.) (,)
+Laus(jk) et(j) ju(j')bi(i)lá(h')ti(j)o,(ivHG.) (:)
+Sá(g)lus,(h') hó(j)nor,(i') vír(h)tus(g') quo(h)que(g.) (,)
+Sit(h') et(i) be(g')ne(g)dí(e')cti(h)o :(h.d.) (:)
+Pro(e)ce(g')dén(g)ti(e') ab(g) u(h')tró(h)que(g.) (,)
+Cóm(h)par(i') sit(g) lau(hg)dá(fe)ti(d)o.(e.) (::)
+
+A(efe)men(d.e.) (::)

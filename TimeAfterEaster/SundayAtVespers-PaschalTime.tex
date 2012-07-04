@@ -1,0 +1,81 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\newcommand{\heading}{Sunday at Vespers in Paschal Time.}
+
+\newcommand{\predeusinadjutorium}{%
+\smallskip%
+\large%
+\setgrefactor{15}%
+}%
+\def\printsolemnorfestaltone{T}
+\def\deusinadjutoriumsolemn{F}
+\def\includelaustibi{F}
+\def\psalmonebeforeant{F} % this just means the title Psalm 109.
+
+\newcommand{\antonetex}{Ant-Alleluia}
+\newcommand{\antoneinitial}{A}
+%\newcommand{\antonetranslation}{}
+%\def\psalmbeginversetwo{T}
+\newcommand{\antoneinitialsize}{40}
+\def\onlyoneant{T}
+\definepsalm{1}{109}{7}{c2}
+\newcommand{\prepsalmtwo}{\setgrefactor{15}\greblockcustos}
+\definepsalm{2}{110}{7}{c2}
+\newcommand{\prepsalmthree}{\setgrefactor{17}}
+\definepsalm{3}{111}{7}{c2}
+\let\oldbeginpsalmthreecols=\beginpsalmthreecols
+\def\beginpsalmthreecols{\vspace{-12pt plus 12pt}\oldbeginpsalmthreecols}
+\def\psalmfourtranslationsmall{T}
+\definepsalm{4}{112}{7}{c2}
+%\def\psalmfivetranslationsmall{T}
+\definepsalm{5}{113}{7}{c2}
+\let\oldbeginpsalmfivecols=\beginpsalmfivecols
+\def\beginpsalmfivecols{\vspace{-12pt plus 12pt}\oldbeginpsalmfivecols}
+\newcommand{\preantone}{\setgrefactor{17}
+\large
+\greblockcustos
+}
+\newcommand{\prepsalmone}{%
+\vspace{-3ex}
+}
+
+%\let\psalmbeginversetwo\undefined
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\onlypsalms{T}
+
+%\newcommand{\hymn}{Ad régias Agni dápes}
+%\newcommand{\vr}{Máne nobíscum Dómine}
+
+%\newcommand{\chapter}{\dropcap{latin}{Benedíctus Déus, et Páter Dómini nóstri Jésu} \textbf{Chrí}\-sti.~\gredagger{} Páter misericordiárum, et Déus totíus con\-so\-\emph{la}\-\emph{ti}\-\textbf{ó}\-nis,~* qui consolátur nos in ómni tribulatióne \textbf{nó}\-stra.}
+%\newcommand{\chaptertranslation}{Blessed be the God and Father of our Lord Jesus Christ, the Father of mercies and the God of all comfort, who comforteth us in all our tribulation.}
+
+%\newcommand{\hymnlinetwo}{8.}
+%\newcommand{\hymntex}{hymn-LucisCreatorOptime.tex}
+%\newcommand{\hymninitial}{L}
+%\newcommand{\hymninitialsize}{30}
+%\newcommand{\prehymn}{\normalsize
+%\setgrefactor{14}
+%}
+
+%\newcommand{\vrtex}{Dirigaturvr.tex}
+%\newcommand{\vtranslation}{Let my prayer be directed, O Lord.}
+%\newcommand{\rtranslation}{As incense in Thy sight.}
+%\newcommand{\vrnospace}{T}
+
+%\newcommand{\benedicamusdominointro}{During the year and Septuagesima, Sexagesima, and Quinquagesima}
+%\definebenedicamusdomino{}{}
+%\newcommand{\benedicamusdominotone}{1.}
+%\newcommand{\benedicamusdominotex}{../BenedicamusDomino/BenedicamusDomino_Sundays}
+%\newcommand{\benedicamusdominoaltintro}{In Advent and Lent}
+%\newcommand{\benedicamusdominotonealt}{6.}
+%\newcommand{\benedicamusdominotexalt}{../BenedicamusDomino/BenedicamusDomino_SundaysOfAdventAndLent}
+
+\input{../FullVespers}

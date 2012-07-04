@@ -1,0 +1,57 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\newcommand{\heading}{Vesper Hymn for Paschal Time.}
+\def\hymninitialsize{32}
+\def\hymnlinetwo{\oldstylenums{8.}}
+\def\hymntex{hymn-AdRegiasAgniDapes}
+\def\hymninitial{A}
+\def\hymntranslation{\item At the Lamb's high feast we sing
+praise to our victorious King,
+Who hath washed us in the tide
+flowing from His pierced side.
+\item Praise we Him Whose love divine
+gives the guests His Blood for wine,
+gives His Body for the feast,
+Love the victim, Love the priest.
+\item Where the Paschal blood is poured,
+Death's dark Angel sheathes his sword;
+Israel's hosts triumphant go
+through the wave that drowns the foe.
+\item Christ, the Lamb Whose Blood was shed,
+Paschal victim, Paschal bread;
+with sincerity and love
+eat we manna from above.
+\item Mighty Victim from the sky,
+powers of hell beneath Thee lie;
+Death is conquered in the fight;
+Thou hast brought us life and light.
+\item Now Thy banner Thou dost wave;
+vanquished Satan and the grave;
+see the prince of darkness quelled;
+heaven's bright gates are open held.
+\item Paschal triumph, Paschal joy,
+only sin can this destroy;
+from sin's death do Thou set free
+souls re-born, dear Lord, in Thee.
+\item Hymns of glory, songs of praise,
+Father, unto Thee we raise;
+risen Lord, all praise to Thee,
+ever with the Spirit be.
+Amen.}
+\def\prehymn{\normalsize\setgrefactor{14}\vspace*{-5ex plus 5ex}}
+\def\posthymn{%\vspace{-0.5ex plus 0.5ex}
+}
+
+\def\vrtex{hymn-AdRegiasAgniDapesvr}
+%\def\vrnospace{T}
+\def\vtranslation{Stay with us O Lord, alleluia.}
+\def\rtranslation{Because it is towards evening, alleluia.}
+
+%\definebenedicamusdomino{lent}{2}
+\input{../hymn-template}

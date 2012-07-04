@@ -1,0 +1,102 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+\documentclass[letterpaper,12pt]{book} % use larger type; default would be 10pt
+
+\usepackage[dvips]{geometry}
+\geometry{papersize={6in,9in},top=0.25in,bottom=0.25in,inner=0.5in,outer=0.25in,twoside=true}
+% usual packages loading:
+%\usepackage{luatextra}
+\usepackage{graphicx} % support the \includegraphics command and options
+%\usepackage[latin,american]{babel}
+%\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
+%\geometry{letterpaper} % or letterpaper (US) or a5paper or....
+%\usepackage{gregoriotex} % for gregorio score inclusion
+
+% If you use usual TeX fonts, here is a starting point:
+%\usepackage{palatino}
+%\input{glyphtounicode} \pdfglyphtounicode{f_f}{FB00} \pdfglyphtounicode{f_f_i}{FB03} \pdfglyphtounicode{f_f_l}{FB04}
+%\pdfglyphtounicode{Q_u}{E048} \pdfglyphtounicode{O_e}{0152} \pdfglyphtounicode{o_e}{0153}
+%\pdfgentounicode=1
+% to change the font to something better, you can install the kpfonts package (if not already installed). To do so
+% go open the "TeX Live Manager" in the Menu Start->All Programs->TeX Live 2010
+%\input{../gsp-spaces}
+%\def\greinitialformat#1{{\fontsize{37}{37}\selectfont #1}}
+%small > footnotesize > scriptsize > tiny
+
+
+% my stuff
+\usepackage[garamond]{../mypackage}
+% end my stuff
+
+%\setgrefactor{17}
+
+%\marginsize{.5in}{.25in}{0in}{.25in}
+%\pagestyle{fancy} % no header or footers
+\addfontfeature{Numbers=OldStyle}
+%\chead{\addfontfeature{Numbers=Lining}Magnificat Simple Tone 8. G.}
+%\let\oldheadrulewidth\headrulewidth
+%\renewcommand\headrulewidth{0pt}
+%\cfoot{\thepage}
+
+% here we begin the document
+\begin{document}
+\sloppy
+%\the\textwidth
+\vspace*{0pt}
+\vfill
+\begin{center}
+\fontsize{36}{36}\selectfont
+\textsc{A Collection}\\
+{\fontsize{31.5}{31.5}\selectfont
+\emph{of}\\
+}
+\textsc{Christmas Carols}
+\vfill
+\fontsize{24}{24}\selectfont
+\textsc{selected, transcribed, and edited}\\
+{\fontsize{21}{21}\selectfont
+\emph{by}\\
+}
+\textsc{benjamin bloomfield}
+\end{center}
+\vfill
+\fontsize{10}{10}\selectfont
+4th edition, \textbf{\textsc{June 2012}}\\
+\\
+This work is free of known copyright restrictions.\\
+\\
+Cover artwork, \emph{Song of the Angels}, painted in 1881 by William-Andolphe Bouguereau; downloaded from \emph{wikipaintings.org}\\
+\\
+Inside cover artwork illustrated by Arthur Hughes, as found in \emph{Christmas Carols, New and Old}; downloaded from \emph{http://www.ccel.org/b/bramley/carols/jpg-hires/0001=i.jpg}
+
+
+\pagebreak
+\vspace*{0pt}
+\vfill
+\noindent
+\includegraphics[width=\textwidth]{title3.png}%
+\vfill
+\pagebreak
+\begin{center}
+\fontsize{19}{19}\selectfont
+\textsc{preface}
+\end{center}
+Several years ago, I found an old collection of Christmas carols on the Internet, originally published in the late 1800s, called \emph{Christmas Carols, New and Old}, the music edited by Sir John Stainer and the words by Henrey Ramsden Bramley.  Just before Christmas 2010, I had this collection printed as a book through Lulu.com, and I enjoyed some of its more obscure carols enough that I thought I might combine them into a volume also containing more familiar Christmas carols.  So in early 2011, I set about creating a new collection, which was simply pages taken from various old collections of Christmas music combined into a single volume, including most of the songs from \emph{Christmas Carols, New and Old}.  I thought briefly of taking the trouble of making new engravings of all the music, but it seemed an enormous task: though I had used a program called Lilypond to engrave music in the past, the amount of music I wanted to include would take many days of transcribing and proofreading, and I did not feel up to it at the time.\\
+\\
+I had this original collection ready (and in its third edition, the first edition having been merely a draft, and the second edition lacking \emph{Gaudete}) in time for Christmas 2011, but in giving a few away as Christmas gifts, I decided that the book in its current form was not ideal, and worthwhile improvements could be made by making new engravings of all the music.  Thus, I have spent a great deal of time transcribing everything into Lilypond and proofreading it for this new edition.  In this way, I have also been able to add nearly 60 new songs to the collection, including a handful of Advent hymns and two songs, \emph{Ring Out Wild Bells} and \emph{Auld Lang Syne}, to celebrate the new year.  Also, I decided to use CreateSpace.com instead of Lulu so that the book would be less expensive, and to make it available on Amazon.com in hopes that others may also find it useful\\
+\\
+In selecting the songs, I have tried to include all the public domain carols that are well-known, as well as those which I have found appealing.  Some songs I sought out specifically, and others I had never heard before finding them in older collections, having looked through several such books, including \emph{The Cowley Carol Book} (1919), \emph{The Cambridge Carol Book} (1924), the aforementioned \emph{Christmas Carols, New and Old} (1871), as well as the several Christmas carols found in \emph{Favorite Songs and Hymns for School and Home} (1899).  In a few cases I have slightly edited the music from the source arrangement, and in rarer cases I have slightly modified the text.  In perhaps the rarest of cases, I have anonymously arranged the song into parts myself.\\
+\\
+In ordering the songs, I have attempted to interleave the more well-known songs with those tending further toward obscurity.  However, the obscure carols seemed to outnumber those I expect to be well-known, which led to a section beginning not long after the middle of the book consisting entirely of carols of relative obscurity.  This is followed by a handful of carols of foreign origin, which are followed by a few more carols and part songs.  However, these sections are rather nebulous and songs may occasionally seem out of place within the book.\\
+\\
+In laying out the music, I have tried to avoid setting lyrics for additional verses far below the music itself, because of the difficulty involved in continually glancing back and forth between the music at the top of the page and the words at the bottom.  Thus, some songs have the exact same music printed several times, sometimes with a chorus also doubled, sometimes not.\\
+\\
+In a few cases I have included the original foreign language words as well as an English translation, but in other cases this was impossible, for Bramley and Stainer, while noting which texts were translations, were not so thoughtful as to include the names of the original texts, and I have only been able to find the source texts for a few of them.  There are also a few foreign-language carols for which I have not included any English translation.\\
+
+\begin{flushright}
+Benjamin Bloomfield\\
+Cincinnati, 2012
+\end{flushright}
+\end{document}

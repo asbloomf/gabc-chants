@@ -1,0 +1,22 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Ascendit Deus;
+office-part: versicle and response for 1st Vespers Ascension;
+occasion: Ascension;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+initial-style:0;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)<v>\Vbar</v>. {A}(h)scén(h)dit(h) Dé(h)us(h) in(h) ju(h)bi(h)la(h)ti(h)ó(hi)ne,(h'_) (,) al(h)le(fe)lú(f_h)ia.(hiH'G/hih.ghG'FE'fg/gf.) (::Z)
+<v>\Rbar</v>. Et(h) Dó(h)mi(h)nus(h) in(h) vó(h)ce(h) tú(hi)bæ,(h'_) (,) al(h)le(fe)lú(f_h)ia.(hiH'G/hih./ghG'FE'fg/gf.) (::)

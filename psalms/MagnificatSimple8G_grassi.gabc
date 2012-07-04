@@ -1,0 +1,27 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Magnificat Simple 8G;
+office-part: Magnificat;
+occasion: Vespers;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)MA(g)gní(hg)fi(gj)cat(j.) <v>\greheightstar</v>(:) á(j)ni(j)ma(j) <i>mé</i>(i)<i>a</i>(j) <b>Dó</b>(h)mi(gr)num.(g.) (::) ({gr}{ir}krZ)
+2. Et(g) ex(h)sul(j)tá(j)vit |(j) spí(j)ri(j)tus |(j) <b>mé</b>(k jr)us(j.) <v>\greheightstar</v>(:)
+in(j) Dé(j)o(j) sa(j)lu|(j)<i>tá</i>(i)<i>ri</i> |(j) <b>mé</b>|(h gr)o.(g.) (::)
+
+%E(j) u(j) o(i) u(j) a(h) e.(gh..)
+
+%Mediant of 1 accent 
+%Termination of 1 accent with 2 preperatory syllables

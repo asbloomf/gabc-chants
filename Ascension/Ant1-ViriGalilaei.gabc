@@ -1,0 +1,26 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Viri Galilaei;
+office-part: 1 Antiphon;
+mode: 3a2;
+occasion: Ascension;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: 1 Ant.;
+annotation: 7. a;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)VI(e')ri(e) Ga(g)li(h)laé(ih/ji)i,(i'_) <v>\greheightstar</v>(,) quid(i) asp(i)í(i)ci(g)tis(ij) in(i) caé(h_g)lum?(ee) (;)
+Hic(d) Jé(f_h)sus,(h'_) (,) qui(i) as(g')súm(h)ptus(i) est(f') a(e) vó(f')bis(e) in(f') caé(d)lum,(d.) (;) sic(h) vé(hg)ni(f)et,(g_h) al(i'_)le(f)lú(e.)ia.(e.) (::)
+
+E(i) u(i) o(j) u(i) a(h) e.(gf..) (::)

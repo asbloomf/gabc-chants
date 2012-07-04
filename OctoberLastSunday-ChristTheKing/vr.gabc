@@ -1,0 +1,22 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Multiplicábitur éjus impérium;
+office-part: versicle and response;
+occasion: Christ the King;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+initial-style:0;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)()() <v>\Vbar</v>. Mul(h)ti(h)pli(h)cá(hi)bi(h)tur(h'_) (,) é(h)jus(f) im(e)pé(f_h)ri(h)um.(hiH'Ghih.ghG'FE'fggf.) (::)
+<v>\Rbar</v>. Et(h) pá(hi)cis(h'_) (,) non(h) é(f)rit(e) fí(f_h)nis.(hiH'Ghih.ghG'FE'fggf.) (::)

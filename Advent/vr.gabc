@@ -1,0 +1,22 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Rorate caeli;
+office-part: versicle and response in Advent;
+occasion: Advent;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+initial-style:0;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)<v>\Vbar</v>. R{o}(h)rá(h)te(h) caé(h)li(h) dé(h)su(h)per,(h) et(h) nú(h)bes(h) plú(h)ant(h) jú(h)stum.(g'_/hvGF'Efgf.) (::)
+<v>\Rbar</v>. A(h)pe(h)ri(h)á(h)tur(h) tér(h)ra,(h) et(h) gér(h)mi(h)net(h) Sal(h)va(h)tó(h)rem.(g'_/hvGF'Efgf.) (::)

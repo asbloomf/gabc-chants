@@ -1,0 +1,177 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+\usepackage{../definepsalms}
+
+\sloppy
+
+\newcommand{\predeusinadjutorium}{%
+%\smallskip
+\large
+\setgrefactor{15}
+}
+\def\deusinadjutoriumsolemn{T}
+
+\newcommand{\preantone}{\setgrefactor{17}
+\large
+%\greblockcustos
+}
+
+\newcommand{\antoneinitialsize}{40}
+\newcommand{\antonetex}{Ant1-ViriGalilaei}
+\newcommand{\antoneinitial}{V}
+\newcommand{\antonetranslation}{Ye men of Galilee, why look you up to heaven?  This Jesus, who is taken up from you into heaven, shall so come, alleluia.\vspace{0ex plus 0ex minus 3ex}}
+\definepsalm{1}{109}{7}{a}
+\newcommand{\prepsalmone}{%
+%\vspace{-1.5ex}
+}
+%\newenvironment{psalmonecols}{\begin{parcolumns}[rulebetween]{2}}{\end{parcolumns}}
+%\input{../psalms/definepsalmone}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preanttwo}{\setgrefactor{17}
+\greblockcustos
+\large
+}
+\newcommand{\anttwoinitialsize}{40}
+\newcommand{\anttwotex}{Ant2-Cumque}
+\newcommand{\anttwoinitial}{C}
+\newcommand{\anttwotranslation}{While they were beholding Him going up to heaven, they said: Alleluia.}
+\definepsalm{2}{110}{8}{G*}
+\newcommand{\prepsalmtwo}{%
+\normalsize
+\greblockcustos
+}
+%\newenvironment{psalmtwocols}{\begin{parcolumns}[rulebetween]{2}}{\end{parcolumns}}
+%\input{../psalms/definepsalmtwo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantthree}{\setgrefactor{17}
+\large
+\greblockcustos
+}
+\newcommand{\antthreeinitialsize}{40}
+\newcommand{\antthreetex}{Ant3-ElevatisManibus}
+\newcommand{\antthreeinitial}{E}
+\newcommand{\antthreetranslation}{Lifting up His hands, He blessed them and was carried up into heaven, alleluia.}
+\definepsalm{3}{111}{4}{A*}
+\newcommand{\prepsalmthree}{%
+\normalsize
+}
+%\newenvironment{psalmthreecols}{\begin{parcolumns}[rulebetween,colwidths={1=252pt}]{2}}{\end{parcolumns}}
+%\input{../psalms/definepsalmthree}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantfour}{\setgrefactor{17}
+\greblockcustos
+\large
+%\normalsize
+}
+\newcommand{\antfourinitialsize}{40}
+\newcommand{\antfourtex}{Ant4-Exaltate}
+\newcommand{\antfourinitial}{E}
+\newcommand{\antfourtranslation}{\vspace{0ex minus 3.5ex}Glorify the King of kings, and sing a hymn to God, alleluia.\vspace{0ex minus 3.5ex}}
+\definepsalm{4}{112}{8}{G*}
+\newcommand{\prepsalmfour}{%
+%\vspace{-1ex}
+%\setgrefactor{15}
+\normalsize
+}
+%\newenvironment{psalmfourcols}{\begin{parcolumns}[rulebetween,colwidths={1=290pt}]{2}}{\end{parcolumns}}
+%\input{../psalms/definepsalmfour}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\def\nopagebreakbeforepsalmfive{T}
+%\def\pagebreakafterpsalmfive{T}
+\newcommand{\preantfive}{\setgrefactor{17}
+\greblockcustos
+\large
+}
+%\newcommand{\preantfivetwo}{\preantfive}
+\newcommand{\antfivefontsizetwo}{40}
+
+\newcommand{\antfiveinitialsize}{40}
+\newcommand{\antfivetex}{Ant5-Videntibus}
+\newcommand{\antfiveinitial}{V}
+\newcommand{\antfivetranslation}{\vspace{0pt minus 1ex}While they looked on, He was raised up: and a cloud received Him into heaven, alleluia.}
+\definepsalm{5}{116}{8}{G}
+\newcommand{\prepsalmfive}{%
+\vspace{-12pt plus 12pt}
+%\setgrefactor{15}%
+%\normalsize%
+}
+%\newenvironment{psalmfivecols}{\begin{parcolumns}[rulebetween%,colwidths={1=266pt}]{2}}{\end{parcolumns}}
+%\input{../psalms/definepsalmfive}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\chapter}{\dropcap{latin}{Primum quidem sermónem feci de ómnibus, o} The\-\textbf{ó}\-phi\-le,~\dag{} quæ cœpit Jesus fácere et docére, usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, \emph{quos e}\-\textbf{lé}\-git,~* as\textbf{súm}ptus est.}
+\newcommand{\chaptertranslation}{The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, until the day on which, giving commandments by the Holy Ghost to the Apostles whom He had chosen, He was taken up.}
+
+\def\pagebreakbeforehymn{T}
+\newcommand{\prehymn}{\large
+\setgrefactor{16}
+}
+\def\hymnlinetwo{\oldstylenums{4.}}
+\def\hymntex{hymn-SalutisHumanaeSator}
+\def\hymninitial{S}
+\def\hymntranslation{\item O Thou pure Light of souls that love!
+True joy of every human breast!
+Sower of life's immortal seed!
+Our Maker, and Redeemer blest!
+\item What wond'rous pity Thee o'ercame
+To make our guilty load Thine own,
+And, sinless, suffer death and shame,
+For our transgressions to atone!
+\item Thou, bursting Hades open wide,
+Didst all the captive souls unchain;
+And thence to Thy dread Father's side
+With glorious pomp ascend again.
+\item O still may pity Thee compel
+To heal the wounds of which we die;
+And take us in Thy light to dwell,
+Who for Thy blissful Presence sigh.
+\item Be Thou our Guide: be Thou our Goal:
+Be Thou our Pathway to the skies;
+Our Joy when sorrow fills the soul;
+In death our everlasting Prize.
+Amen.}
+
+%\newcommand{\hymn}{O lux beata caelitum}
+%mode 2
+%\newcommand{\vr}{Notum fecit Dóminus}
+\newcommand{\vrtex}{vrAscenditDeus}
+\newcommand{\vtranslation}{God is ascended with jubilee, alleluia.}
+\newcommand{\rtranslation}{And the Lord with the sound of a trumpet, alleluia.}
+\def\vrnospace{T}
+
+\newcommand{\premag}{
+%\normalsize
+\large
+\setgrefactor{17}
+%\setgrefactor{14}
+%\greblockcustos
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+%\newcommand{\maganttex}{MagnificatAntiphon2}
+\newcommand{\magfontsize}{30}
+\def\pagebreakbeforemagnificat{T}
+%\newcommand{\magantinitial}{H}
+%\newcommand{\maganttranslation}{Today the days of Pentecost are complete, alleluia; today the Holy Ghost appeared in fire to the disciples, gave them gifts and graces, sent them into all the world to preach and to bear witness; whoever believes and is baptised shall be saved, alleluia.}
+\def\magsolemn{T}
+
+\newcommand{\collect}{Concéde, quaésumus omnípotens Deus~:~\dag{} ut qui hodiérna die Unigénitum tuum Redemptórem nostrum ad cælos ascendísse crédimus,~* ipsi quoque mente in cæléstibus habitémus.  Per eúmdem Dóminum nostrum.}
+\newcommand{\collecttranslation}{Grant, we beseech Thee, almighty God: that we, who believe Thine Only-Begotten Son, our Redeemer, to have ascended this day into heaven, may also ourselves dwell in mind among heavenly things.  Through the same our Lord.}
+
+%\definebenedicamusdomino{1}{2}
+
+\def\includefideliumanimae{T}
+
+%\input{../FullVespers}

@@ -1,0 +1,277 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+% usual packages loading:
+%\usepackage{luatextra}
+%\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper} % or letterpaper (US) or a5paper or....
+\usepackage{gregoriotex} % for gregorio score inclusion
+
+% If you use usual TeX fonts, here is a starting point:
+%\usepackage{palatino}
+%\input{glyphtounicode} \pdfglyphtounicode{f_f}{FB00} \pdfglyphtounicode{f_f_i}{FB03} \pdfglyphtounicode{f_f_l}{FB04}
+%\pdfglyphtounicode{Q_u}{E048} \pdfglyphtounicode{O_e}{0152} \pdfglyphtounicode{o_e}{0153}
+%\pdfgentounicode=1
+% to change the font to something better, you can install the kpfonts package (if not already installed). To do so
+% go open the "TeX Live Manager" in the Menu Start->All Programs->TeX Live 2010
+\input{../gsp-spaces}
+%\def\greinitialformat#1{{\fontsize{37}{37}\selectfont #1}}
+%small > footnotesize > scriptsize > tiny
+
+
+% my stuff
+\usepackage[garamond]{../mypackage}
+% end my stuff
+
+\setgrefactor{17}
+
+
+\marginsize{25pt}{25pt}{25pt}{30pt}
+\pagestyle{fancy} % no header or footers
+\let\oldheadrulewidth\headrulewidth
+\renewcommand\headrulewidth{0pt}
+%\cfoot{\thepage}
+
+% here we begin the document
+\begin{document}
+%\chead{Sunday At Vespers}
+
+% The title:
+\vspace*{0pt minus 60pt}
+\begin{center}{\addfontfeature{Numbers=Lining}%
+\huge \heading}\end{center}
+%\vspace{-2ex}
+\bigskip
+
+% Here we set the space around the initial.
+% Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
+
+% Here we set the initial font. Change 43 if you want a bigger initial.
+\def\greinitialformat#1{%
+{\fontsize{40}{40}\selectfont #1}%
+}
+
+% We set red lines here, comment it if you want black ones.
+%\redlines
+
+% We set VII above the initial.
+{\def\annot{\small \Vbar{}.}
+\setinitialspacing{D}
+
+% We type a text in the top right corner of the score:
+%\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
+
+% and finally we include the score. The file must be in the same directory as this one.
+\ifx\printsolemnorfestaltone\undefined\else\if\printsolemnorfestaltone T%
+{\bfseries %
+\if\deusinadjutoriumsolemn T%
+Solemn %
+\else%
+Festal %
+\fi%
+Tone.
+
+}%
+\fi\fi%
+\vspace{0pt plus 4pt minus 12pt}%
+\ifx\predeusinadjutorium\undefined\else%
+\predeusinadjutorium%
+\fi%
+\includescore{../DeusInAdjutorium\if\deusinadjutoriumsolemn T%
+_solemn\fi}}%
+\translation[]{\Vbar . O God, come to my assistance. \Rbar . O Lord, make haste to help me. Glory be \ldots}
+\ifx\includelaustibi\undefined\else\if\includelaustibi T%
+{\itshape From Septuagesima to Wednesday in Holy Week, the following is said instead of} Allelúia :
+
+\includescore{LausTibiDomine}
+\fi\fi
+\smallskip%
+\hrule%
+%
+\dopsalm{1}
+
+%
+\cfoot{\thepage}
+\renewcommand\headrulewidth{\oldheadrulewidth}
+\chead{\addfontfeature{Numbers=Lining}%
+\heading}
+%
+%
+\dopsalm{2}
+
+\dopsalm{3}
+
+\dopsalm{4}
+
+\dopsalm{5}
+
+\normalsize
+\begin{center}{\large\textbf Chapter.}\end{center}
+% default width is 265pt
+% ,colwidths={1=253pt}
+\begin{parcolumns}[rulebetween]{2}
+\colchunk{\sloppy\chapter}
+\colchunk{\sloppy \dropcap{american}{\chaptertranslation}}
+\end{parcolumns}
+\bigskip
+%\pagebreak
+
+\ifx\hymntex\undefined
+{\emph{Hymn.} \hymn{}.%
+\ifx\vrtex\undefined\else
+\vfill
+\fi}
+\else{
+{\hrule
+\bigskip
+\ifx\hymninitialsize\undefined\else%
+\def\greinitialformat#1{%
+{\fontsize{\hymninitialsize}{\hymninitialsize}\selectfont #1}%
+}
+\fi
+\def\annot{\small{Hymn.}}
+\def\annottwo{\small{\hymnlinetwo}}
+\setinitialspacing{\hymninitial}
+%
+\prehymn
+\includescore{\hymntex}
+}
+\normalsize\vspace{0pt minus 20pt}
+\selectlanguage{american}
+\begin{multicols}{2}
+\begin{psalmverses}
+{\hymntranslation}
+\end{psalmverses}
+\end{multicols}
+\medskip
+\selectlanguage{latin}
+}\fi
+%
+\ifx\vrtex\undefined%
+{\Vbar{}. \vr{}.\\}
+\else{
+{\greblockcustos\includescore{\vrtex}}\vspace{0pt minus 20pt}
+\translation[]{
+\Vbar{}. \vtranslation{}%
+\ifx\vrnospace\undefined
+\\%
+\else\if\vrnospace T%
+\hspace{7ex minus 3ex}%
+\fi\fi%
+\Rbar{}. \rtranslation{}%
+}%
+}%
+\fi%
+%
+\ifx\magant\undefined%
+\emph{Magnificat}. %
+\else%
+\ifx\magtex\undefined
+{\emph{Antiphon for the Magnificat.} \magant{}.%
+\bigskip%
+}\else{
+\pagebreak
+\begin{center}{\large Magnificat.}\end{center}
+\vspace{-1ex}
+
+{\premag
+\def\greinitialformat#1{%
+{\fontsize{\magfontsize}{\magfontsize}\selectfont #1}%
+}
+\def\annot{\small{At Magn.}}
+\def\annottwo{\small{\magantlinetwo}}
+\setinitialspacing{\magantinitial}
+
+% We type a text in the top right corner of the score:
+%\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
+
+% and finally we include the score. The file must be in the same directory as this one.
+\includescore{MagnificatAntiphon}}%
+%\vspace{-1ex}
+\translation[]{\maganttranslation}
+\medskip
+\hrule
+\bigskip
+{\premagverses
+\begin{magnificat}{\magtex}
+%\vspace{-1ex}
+\magverses
+\end{magnificat}
+}
+\ifx\premagtwo\undefined
+{%\vspace{-1ex}
+\noindent\emph{Repeat antiphon.}\\}
+\else
+{\premagtwo
+\def\greinitialformat#1{%
+{\fontsize{\magfontsizetwo}{\magfontsizetwo}\selectfont #1}%
+}
+\def\annot{\small{At Magn.}}
+\def\annottwo{\small{\magantlinetwo}}
+\setinitialspacing{\magantinitial}
+
+\includescore{MagnificatAntiphon}}%
+\fi
+}%
+\fi%
+\fi%
+\ifx\collect\undefined%
+\emph{Collect}.
+
+\vfill
+\else%
+\hrule
+\smallskip
+\begin{center}{\large Collect.}\end{center}
+% default width is 265pt
+%\sloppy
+%,colwidths={1=220pt}
+\begin{parcolumns}[rulebetween]{2}
+\sloppy
+\prayer{\collect}{\collecttranslation}
+\end{parcolumns}
+\bigskip
+\fi
+%
+\ifx\benedicamusdominotex\undefined\else
+\def\annot{\small{\benedicamusdominotone}}
+%\def\annottwo{}
+\setinitialspacing{B}
+\gresetfirstlineaboveinitial{\annot}{\annot}
+\setsecondannotation{}
+\setspaceafterinitial{0mm}
+\setspacebeforeinitial{0mm}
+\ifx\benedicamusdominointro\undefined\else
+\hspace{3ex}\emph{\benedicamusdominointro:}\\
+\fi
+\includescore{\benedicamusdominotex}
+\ifx\benedicamusdominotexalt\undefined\else
+{%
+\vfill
+\ifx\benedicamusdominoaltintro\undefined
+\def\benedicamusdominoaltintro{or}\fi
+\hspace{3ex}\emph{\benedicamusdominoaltintro:}\\
+\def\annot{\small{\benedicamusdominotonealt}}
+%\def\annottwo{}
+\setinitialspacing{B}
+\gresetfirstlineaboveinitial{\annot}{\annot}
+\setsecondannotation{}
+\setspaceafterinitial{0mm}
+\setspacebeforeinitial{0mm}
+\includescore{\benedicamusdominotexalt}
+}
+\fi
+\fi
+
+%\bigskip
+%\begin{parcolumns}[rulebetween]{2}
+%\selectlanguage{latin}%
+%\colchunk{\Vbar{}. Fidélium ánimæ per misericórdiam Déi requiéscant in páce.}
+%\selectlanguage{american}%
+%\colchunk{\Vbar{}. May the souls of the faithful departed through the mercy of God rest in peace.}
+%\selectlanguage{latin}%
+%\colplacechunks{}
+%\colchunk{\Rbar{}. Amen.}
+%\colchunk{\Rbar{}. Amen.}
+%\end{parcolumns}
+\end{document}

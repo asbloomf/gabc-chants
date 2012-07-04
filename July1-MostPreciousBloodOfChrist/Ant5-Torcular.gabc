@@ -1,0 +1,26 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Torcular;
+office-part: 5 Antiphon;
+mode: 2D;
+occasion: Most Precious Blood of Christ;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: 5 Ant.;
+annotation: 2. D;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(f3)TOr(f)cu(e)lar(fh) <v>\greheightstar</v>() cal(h')cá(i)vi(g') só(h)lus,(f.) (;)
+et(fe~) de(h) gén(ij)ti(i)bus(hh) (,) non(hi) est(gf) vir(hg) mé(f.)cum.(f.) (::)
+
+E(h) u(h) o(h) u(g) a(e) e.(f.) (::)

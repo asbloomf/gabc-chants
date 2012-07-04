@@ -1,0 +1,23 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Post triduum;
+office-part: 1 Antiphon;
+mode: 8G;
+occasion: Feast of the Holy Family;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: 1. Ant.;
+annotation: 8. G;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+(c4)POst(h') trí(f)du(fg)um,(g') <v>\greheightstar</v>(,) in(g)ve(g')né(h)runt(gf) Jé(h!iwj)sum(ji) in(hg~) tém(h)plo,(g.) (;) se(i_j)dén(k)tem(ji) in(h) mé(j')di(i)o(g) do(f)ctó(gh)rum,(h.) (;) au(g)di(h)én(gf~)tem(gh) íl(f)los(f'_) (,) et(h) in(j)ter(ji)ro(hg)gán(hi)tem(h) é(g.)os.(g.) (::)
+
+E(j) u(j) o(i) u(j) a(h) e.(g.) (::)

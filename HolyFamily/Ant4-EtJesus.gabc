@@ -1,0 +1,23 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Et Jesus;
+office-part: 4 Antiphon;
+mode: 2D;
+occasion: Feast of the Holy Family;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: 4 Ant.;
+annotation: 2. D;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+(f3)ET(e) Jé(f)sus(hg) <v>\greheightstar</v>() pro(ij)fi(h)ci(i)é(hv_GF)bat(f_hf/fe.) (,) sa(h)pi(ij)én(kxjk)ti(ih)a,(h'_) (,) et(j) æ(i')tá(i)te,(g') et(i) grá(ij)ti(hg)a(f.) (;) a(f)pud(e') Dé(f)um(h) et(g) hó(e')mi(g)nes.(f.) (::)
+
+E(h) u(h) o(h) u(g) a(e) e.(f.) (::)

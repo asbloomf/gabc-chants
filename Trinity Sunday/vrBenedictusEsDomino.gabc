@@ -1,0 +1,22 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Benedíctus es, Dómine;
+office-part: versicle and response after Vesper hymn Jam sol recédit ígneus;
+occasion: Trinity Sunday;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+initial-style:0;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)()() <v>\Vbar</v>. Be(h)ne(h)dí(h)ctus(h) es,(h) Dó(h)mi(h)ne,(h) in(h) fir(h)ma(h)mén(h)to(h) caé(h)li.(g'_hvGF'Efgf.) (::Z)
+<v>\Rbar</v>. Et(h) lau(h)dá(h)bi(h)lis(h) et(h) glo(h)ri(h)ó(h)sus(h) in(h) saé(h)cu(h)la.(g'_hvGF'Efgf.) (::)

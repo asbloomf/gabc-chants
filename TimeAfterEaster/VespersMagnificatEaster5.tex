@@ -1,0 +1,51 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\newcommand{\chapter}{\dropcap{latin}{Caríssimi~: Estóte factóres verbi, et non auditóres tantum, falléntes} vos\-me\-\textbf{típ}\-sos.~\dag{} Quia si quis audítor est verbi, et non factor~: hic comparábitur viro consideránti vultum nativitátis su\-\emph{æ} \emph{in} \textbf{spé}\-cu\-lo~:~* considerávit enim se, et ábiit, et statim oblítus est qualis \textbf{fú}\-er\-it.}
+\newcommand{\chaptertranslation}{Dearly beloved, be ye doers of the word and not hearers only, deceiving your own selves.  For if a man be a hearer of the word, and not a doer, he shall be compared to a man beholding his own countenance in a glass: for he beheld himself and went his way, and presently forgot what manner of man he was.}
+
+\newcommand{\hymn}{Ad régias Agni dápes}
+\newcommand{\vr}{Máne nobíscum Dómine}
+
+\newcommand{\headingtext}{5th Sunday after Easter.}
+\newcommand{\maganttex}{MagnificatAntiphonEaster5}
+
+\newcommand{\latincollect}{Deus, a quo bona cuncta procédunt, largíre supplícibus tuis~:~\dag{} ut cogitémus, te inspiránte, quæ recta sunt~;~* et te gubernánte, éadem faciámus. Per Dóminum nostrum.}
+\newcommand{\englishcollect}{O God, from whom all good things do come, grant to us Thy suppliants, that by Thine inspiration we may think what is right, and under Thy guidance perform it. Through our Lord.}
+
+\newcommand{\englishmagantiphon}{%
+%do this negative vspace if the last line on the antiphon gabc extends to the end
+\vspace{-3ex}%
+Ask, and you shall receive, that your joy may be full, for the Father Himself loveth you, because you have loved me, and have believed, alleluia.}
+
+\def\magsolemn{F}
+\def\magoneline{T}
+\newcommand{\magantinitial}{P}
+\definemag{8}{G*}
+
+%\newcommand{\magmedianttermination}{\medianttermination{Mediant of 1 accent.}{Termination of 1 accent with 2 preperatory syllables.}}
+
+\newcommand{\premagant}{%
+%\normalsize
+\large%\greblockcustos
+}
+
+\newcommand{\magantinitialsize}{38}
+
+\newcommand{\pretranslation}{%
+%\bigskip
+%\vspace{-4ex}
+}
+
+\newcommand{\premagverses}{\normalsize
+%\greblockcustos
+\setgrefactor{15}}
+
+\definebenedicamusdomino{easter}{}
+
+\input{../vespersmagnificat}

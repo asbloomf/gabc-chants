@@ -1,0 +1,24 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Juravit Dominus;
+office-part: 1 Antiphon;
+mode: 8G;
+occasion: Common of Apostles and Evangelists at II Vespers;
+date: 2012;
+transcriber: Albert Bloomfield;
+transcription-date: 2012;
+style: modern;
+annotation: 1. Ant.;
+annotation: 8. G;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+(c4)JU(g_i)rá(k)vit(k) Dó(jk)mi(j)nus,(j'_) <v>\greheightstar</v>(,) et(j) non(j) pæ(ji)ni(h)té(j_h)bit(i) é(g)um :(g.) (;)
+Tu(g_e) es(g) sa(g)cér(fe~)dos(d'_) in(f) æ(gh)tér(g.)num.(g.) (::)
+
+E(j) u(j) o(i) u(j) a(h) e.(g.) (::)

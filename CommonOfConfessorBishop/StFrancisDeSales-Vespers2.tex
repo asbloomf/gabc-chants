@@ -1,0 +1,23 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\include{CommonOfConfessorBishop-Vespers2}
+\include{CommonOfDoctors}
+\def\deusinadjutoriumsolemn{T}
+\def\heading{St Francis de Sales. II Vespers.}
+
+%\let\nopagebreakbeforepsalmfive\undefined
+
+\newcommand{\collect}{Deus, qui ad animárum salútem beátum Francíscum Confessórem tuum atque Pontíficem ómnibus ómnia factum esse voluísti~:~\dag{} concéde propítius~: ut caritátis tuæ dulcédine perfúsi,~* ejus dirigéntibus mónitis ac suffragántibus méritis, ætérna gáudia consequámur.  Per Dóminum nostrum.}
+\newcommand{\collecttranslation}{O God, who, in order to save souls, didst will that blessed Francis should become all things to all men: graciously fill us with the sweetness of Thy love, and grant that by the light of his counsel and with the help of his merits we may attain eternal joy.  Through our Lord.}
+
+\def\commemorationtex{CommemorationEpiphany4}
+
+\definebenedicamusdomino{1}{2}
+
+\input{../FullVespers}

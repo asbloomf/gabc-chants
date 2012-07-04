@@ -1,0 +1,42 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\newcommand{\hymn}{Lúcis Creátor}
+\newcommand{\vr}{Dirigátur}
+
+\newcommand{\headingtext}{22nd Sunday after Pentecost.}
+\newcommand{\maganttex}{MagnificatAntiphonPentecost22.tex}
+
+\newcommand{\latincollect}{Deus, refúgium nostrum et virtus~:~\gredagger{} adésto piis Ecclésiæ tuæ précibus, auctor ipse pietátis, et præsta~:~* ut quod fidéliter pétimus, efficáciter consequámur. Per Dóminum nostrum.}
+\newcommand{\englishcollect}{O God, our refuge and strength, Author of all devotedness, give ear to the devoted prayers of Thy Church, and grant: that we may obtain in deed what we ask with faith. Through our Lord.}
+
+\newcommand{\englishmagantiphon}{Render therefore to Cæsar the things that are Cæsar's, and to God the things that are God's, alleluia.}
+
+\def\magsolemn{F}
+\def\magoneline{F}
+\definemag{1}{g}
+
+\newcommand{\magmedianttermination}{\medianttermination{Mediant of 2 accents.}{Termination of 1 accent with 2 preperatory syllables.}}
+
+\newcommand{\magantinitial}{R}
+
+\newcommand{\premagant}{%
+%\normalsize
+\large%\greblockcustos
+}
+
+\newcommand{\magantinitialsize}{35}
+
+\newcommand{\pretranslation}{%
+%\bigskip
+%\vspace{-4ex}
+}
+
+\newcommand{\premagverses}{\greblockcustos\setgrefactor{17}}
+
+\input{../vespersmagnificat}

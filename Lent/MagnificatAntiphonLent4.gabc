@@ -1,0 +1,25 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Subiit ergo;
+office-part: Magnificat Antiphon;
+mode: 1G;
+occasion: 4th Sunday of Lent;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: At Magn.;
+annotation: 1. G;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+SU(c4f)bi(c')it(d) er(ixdh'!iv)go(h'_) <v>\greheightstar</v>(,) in(h) món(hj)tem(h') Jé(h)sus,(ixhg/hiHG'g) (;) et(f') i(g)bi(h) se(gf)dé(g)bat(d!ewf_) (,) cum(f) di(f)scí(e_f)pu(g)lis(fe) sú(d.)is.(d.  ::)
+%in sedébat there should be a vertical episema as well as horizontal like (d!ewf'_), but gregorio would require me to fix it by hand so...
+E(h) u(h) o(g) u(f) a(gh) e.(g.  ::)

@@ -1,0 +1,205 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+%this is just the chapter (if it is proper), mag antiphon and verses, and collect with just a line that says which hymn and versicle
+
+% usual packages loading:
+%\usepackage{luatextra}
+%\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper} % or letterpaper (US) or a5paper or....
+\usepackage{gregoriotex} % for gregorio score inclusion
+
+% If you use usual TeX fonts, here is a starting point:
+%\usepackage{palatino}
+% to change the font to something better, you can install the kpfonts package (if not already installed). To do so
+% go open the "TeX Live Manager" in the Menu Start->All Programs->TeX Live 2010
+%\def\greinitialformat#1{{\fontsize{37}{37}\selectfont #1}}
+%small > footnotesize > scriptsize > tiny
+\input{../gsp-spaces}
+
+% my stuff
+\usepackage[garamond]{../mypackage}
+% end my stuff
+
+\setgrefactor{17}
+
+\marginsize{25pt}{25pt}{30pt}{15pt}
+\pagestyle{fancy} % no header or footers
+%\renewcommand\headrulewidth{0pt}
+\ifx\usepagenumbers\undefined\else\if\usepagenumbers T\cfoot{\thepage}\fi\fi
+
+% here we begin the document
+\begin{document}
+\chead{\addfontfeature{Numbers=Lining}%
+\headingtext}
+%
+%
+\ifx\chaptertranslation\undefined\else{%
+\normalsize
+\begin{center}\vspace*{-5ex}{\large\textbf Chapter.}\end{center}
+%\begin{center}{\large\textbf Chapter.}\end{center}
+% default width is 265pt
+% ,colwidths={1=253pt}
+\begin{parcolumns}[rulebetween]{2}
+%\chapter defines the dropcap part itself so it can have formatting inside
+\colchunk{\sloppy\chapter}
+\colchunk{\sloppy\dropcap{american}{\chaptertranslation}}
+\end{parcolumns}
+\medskip
+%\bigskip
+}\fi
+
+%hymn and versicle
+\ifx\hymntex\undefined%
+%no hymn tex, is there just a line and vr?
+\ifx\hymn\undefined\else{%
+\emph{Hymn.} \hymn{}. \Vbar{}. \vr{}.}%
+% only do the hrul if there was a chapter
+\ifx\chaptertranslation\undefined%
+\bigskip%
+\else{%
+\smallskip
+\hrule
+\smallskip
+}\fi
+\fi
+\else
+\def\greinitialformat#1{%
+{\fontsize{\hymninitialsize}{\hymninitialsize}\selectfont #1}%
+}
+
+% We set red lines here, comment it if you want black ones.
+%\redlines
+
+% We set VII above the initial.
+{\def\annot{\small{Hymn.}}
+\def\annottwo{\small{\hymnlinetwo}}
+\setinitialspacing{\hymninitial}
+
+% We type a text in the top right corner of the score:
+%\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
+
+% and finally we include the score. The file must be in the same directory as this one.
+\prehymn
+\includescore{\hymntex}
+\ifx\posthymn\undefined\else\posthymn\fi
+}
+\normalsize\vspace{0pt minus 20pt}
+\selectlanguage{american}
+\begin{multicols}{2}
+\begin{psalmverses}
+{\hymntranslation}
+\end{psalmverses}
+\end{multicols}
+\selectlanguage{latin}
+\medskip
+\ifx\vrtex\undefined%
+{\Vbar{}. \vr{}.
+
+}
+\else{
+{\greblockcustos\includescore{\vrtex}}%
+\vspace{0pt plus 20pt}
+\ifx\prevrtranslation\undefined\else\prevrtranslation\fi
+\translation[]{
+\Vbar{}. \vtranslation{}%
+\ifx\vrnospace\undefined%
+\\%
+\else\if\vrnospace T%
+\hspace{7ex minus 3ex}%
+\else%
+\\%
+\fi\fi%
+\Rbar{}. \rtranslation{}%
+}%
+}%
+\fi\fi%
+%end hymn and versicle
+%
+%\pagebreak
+\selectlanguage{latin}
+% The title:
+\begin{center}{\large Magnificat.}\end{center}
+\vspace{-1ex}
+% We set red lines here, comment it if you want black ones.
+%\redlines
+
+% Here we set the initial font. Change 43 if you want a bigger initial.
+\def\greinitialformat#1{%
+{\fontsize{\magantinitialsize}{\magantinitialsize}\selectfont #1}%
+}
+
+{\def\annot{\small At Magn.}
+\def\annottwo{\small\oldstylenums{\magantlinetwo}}
+\setinitialspacing{\magantinitial}
+\premagant{}
+%
+%
+% We type a text in the top right corner of the score:
+%\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
+%
+% and finally we include the score. The file must be in the same directory as this one.
+\includescore{\maganttex}}%
+\normalsize
+\pretranslation{}
+\translation[]{\englishmagantiphon}
+\smallskip
+\ifx\magmedianttermination\undefined\else%
+\hrule
+\magmedianttermination
+
+\fi\normalsize
+
+\premagverses
+\begin{magnificat}{\magtex}
+\magverses
+\end{magnificat}
+
+\smallskip
+{\noindent\emph{Repeat antiphon.}\\}
+
+\hrule
+\smallskip
+\begin{center}{\large Collect.}\end{center}
+% default width is 265pt
+%\sloppy
+%,colwidths={1=220pt}
+\begin{parcolumns}[rulebetween]{2}
+\sloppy
+\prayer{\latincollect}{\englishcollect}
+\end{parcolumns}
+
+\ifx\benedicamusdominotex\undefined\else
+\vspace{12pt minus 12pt}
+\def\annot{\small{\benedicamusdominotone}}
+%\def\annottwo{}
+\setinitialspacing{B}
+\gresetfirstlineaboveinitial{\annot}{\annot}
+\setsecondannotation{}
+\setspaceafterinitial{0mm}
+\setspacebeforeinitial{0mm}
+\ifx\benedicamusdominointro\undefined\else
+\hspace{3ex}\emph{\benedicamusdominointro:}\\
+\fi
+\includescore{\benedicamusdominotex}
+\ifx\benedicamusdominotexalt\undefined\else
+{%
+\vspace{0pt plus 12pt}
+\ifx\benedicamusdominoaltintro\undefined
+\def\benedicamusdominoaltintro{or}\fi
+\hspace{3ex}\emph{\benedicamusdominoaltintro:}\\
+\def\annot{\small{\benedicamusdominotonealt}}
+%\def\annottwo{}
+\setinitialspacing{B}
+\gresetfirstlineaboveinitial{\annot}{\annot}
+\setsecondannotation{}
+\setspaceafterinitial{0mm}
+\setspacebeforeinitial{0mm}
+\greblockcustos%
+\includescore{\benedicamusdominotexalt}
+}
+\fi
+\fi
+
+\end{document}

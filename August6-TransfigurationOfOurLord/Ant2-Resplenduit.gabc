@@ -1,0 +1,25 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Resplenduit;
+office-part: 2 Antiphon;
+mode: 8G;
+occasion: Transfiguration;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: 2 Ant.;
+annotation: 8. G;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)REs(g)plén(gj)du(hg)it(g') <v>\greheightstar</v>(,) fá(h)ci(g)es(g') é(h)jus(gf) si(g)cut(gh) sol,(f.) (;) ve(g)sti(g')mén(h)ta(gf) au(gh~)tem(h) é(j_k)jus(ji/jkj.) (,) fá(j')cta(k) sunt(i') ál(j)ba(hg) si(h)cut(g) nix,(e_f) al(gh)le(h)lú(g.)ia.(g.) (::)
+
+E(j) u(j) o(i) u(j) a(h) e.(g.) (::) 

@@ -1,0 +1,51 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\newcommand{\chapter}{\dropcap{latin}{Caríssimi~: Christus passus est pro} \textbf{no}\-bis~:~\dag{} vobis relínquens exémplum, ut sequámini ve\-stí\-\emph{gi\-a} \textbf{e}\-jus.~* Qui peccátum non fecit, nec invéntus est dolus in ore \textbf{e}\-jus.}
+\newcommand{\chaptertranslation}{Dearly beloved, Christ suffered for us, leaving you an example that you should follow His steps.  He did no sin, neither was guile found in His mouth.}
+
+\newcommand{\hymn}{Ad régias Agni dápes}
+\newcommand{\vr}{Máne nobíscum Dómine}
+
+\newcommand{\headingtext}{2nd Sunday after Easter.}
+\newcommand{\maganttex}{MagnificatAntiphonEaster2.tex}
+
+\newcommand{\latincollect}{Deus, qui in Fílii tui humilitáte, jacéntem mundum erexísti~:~\dag{} fidélibus tuis perpétuam concéde lætítiam~;~* ut quos perpétuæ mortis eripuísti cásibus, gáudiis fácias pérfrui sempitérnis. Per eúmdem Dóminum nostrum.}
+\newcommand{\englishcollect}{O God, who by the humility of Thy Son, didst lift up a fallen world, grant unending happiness to Thy faithful: that those whom Thou hast snatched from the perils of endless death, Thou mayest cause to rejoice in everlasting joys. Through the same our Lord.}
+
+\newcommand{\englishmagantiphon}{%
+%do this negative vspace if the last line on the antiphon gabc extends to the end
+%\vspace{-3ex}%
+I am the good shepherd, who feed My sheep; and for My sheep I lay down My life, alleluia.}
+
+\def\magsolemn{F}
+\def\magoneline{T}
+\newcommand{\magantinitial}{E}
+\definemag{3}{a}
+
+\newcommand{\magmedianttermination}{\medianttermination{Mediant of 2 accents.}{Termination of 1 accent with 1 preperatory syllable.}}
+
+\newcommand{\premagant}{%
+%\normalsize
+\large%\greblockcustos
+}
+
+\newcommand{\magantinitialsize}{38}
+
+\newcommand{\pretranslation}{%
+%\bigskip
+%\vspace{-4ex}
+}
+
+\newcommand{\premagverses}{\normalsize
+%\greblockcustos
+\setgrefactor{15}}
+
+\definebenedicamusdomino{easter}{}
+
+\input{../vespersmagnificat}

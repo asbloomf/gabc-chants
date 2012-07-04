@@ -1,0 +1,32 @@
+﻿% the point of this is to replace all the instances of master with the number like two
+
+\usepackage{xstring}
+\newcommand{\psalmthree}{Psalm \psalmthreenum.}
+\ifx\psalmthreeend\undefined% must be T. Per.
+\newcommand{\antthreelinetwo}{T. Per.}
+\def\psalmthreetone{per}
+\def\psalmthreeend{}
+\else
+\newcommand{\antthreelinetwo}{\psalmthreetone. \psalmthreeend}
+\fi
+
+\ifx\psalmthreeclef\undefined%
+\def\altclef{}%
+\else%
+\def\altclef{-clef\psalmthreeclef}%
+\fi
+
+\StrSubstitute{\psalmthreeend}{*}{star}[\expandedendthree]
+\StrSubstitute{\psalmthreeend}{*}{}[\nostarendthree]
+\newcommand{\psalmthreetexbeg}{../psalms/Psalm\psalmthreenum-\psalmthreetone}
+\newcommand{\psalmthreetex}{\psalmthreetexbeg\expandedendthree\ifx\psalmthreebeginversetwo\undefined\else\if\psalmthreebeginversetwo T-verse2\fi\fi\altclef}
+\newcommand{\psalmthreeverses}{%
+\input{\psalmthreetexbeg\nostarendthree-verses\ifx\psalmthreebeginversetwo\undefined\else\if\psalmthreebeginversetwo T2\fi\fi}
+}
+\newcommand{\psalmthreetranslation}{%
+\input{../psalms/psalm\psalmthreenum-verses-en}
+}
+
+\def\psalmnum{\psalmthreenum}
+\input{../psalms/definepsalmparcolumnsoptions}
+\expandafter\newenvironment{psalmthreecols}{\expandafter\begin{parcolumns}\parcolumnsoptions}{\end{parcolumns}}

@@ -1,0 +1,27 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Psalm 111;
+office-part: 3rd psalm;
+occasion: Easter Vespers;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+initial-style:0;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)1. B{e}(e)á(f)tus(h) vir,(h) qui(h) ti(h)met(h) <b>Dó</b>(i)mi(hr)num :(h.) <v>\greheightstar</v>(:) in(h) man(h)dá(h)tis(h) e(h)jus(h) <i>vo</i>(f)<i>let</i>(h) <b>ni</b>(i hr)mis.(h.) (::)
+<i>Flex :</i>()  cóm(h)mo(f)dat,(f.) †(h h h  ::)
+
+%E(h) u(h) o(f) u(h) a(i) e.(h.) (::)
+
+%Mediant of 1 accent
+%Termination of 1 accent with 2 preperatory syllables

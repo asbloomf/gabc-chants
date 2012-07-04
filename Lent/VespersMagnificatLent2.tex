@@ -1,0 +1,49 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\newcommand{\chapter}{\dropcap{latin}{Fratres~: Rogámus vos, et obsecrámus in Dómino} \textbf{Je}\-su~:~\dag{} ut quemádmodum accepístis a nobis quómodo vos opórteat ambuláre, et pla\emph{cére} \textbf{De}\-o~:~* sic et ambulétis, ut abundétis \textbf{ma}gis.}
+\newcommand{\chaptertranslation}{Brethren: We pray and beseech you in the Lord Jesus that, as you have received from us how you ought to walk and to please God, so also you would walk, that you may abound the more.}
+
+\newcommand{\hymn}{Audi, benígne Cónditor}
+\newcommand{\vr}{Angelis súis}
+
+\newcommand{\headingtext}{2nd Sunday of Lent.}
+\newcommand{\maganttex}{MagnificatAntiphonLent2.tex}
+
+\newcommand{\latincollect}{Deus, qui cónspicis omni nos virtúte destítui~: intérius exteriúsque custódi~;~\dag{} ut ab ómnibus adversitátibus muniámur in córpore,~* et a pravis cogitatiónibus mundémur in mente. Per Dóminum nostrum.}
+\newcommand{\englishcollect}{O God, who seest that we are wholly destitue of strength, keep us within and without: that we may be defended in body from all adversity: and cleansed in mind from evil thoughts. Through our Lord.}
+
+\newcommand{\englishmagantiphon}{%
+%do this negative vspace if the last line on the antiphon gabc extends to the end
+%\vspace{-3ex}%
+Tell the vision which you have seen to no man, till the Son of man be risen from the dead.}
+
+\def\magsolemn{F}
+\def\magoneline{T}
+\newcommand{\magantinitial}{V}
+\definemag{1}{f}
+
+\newcommand{\magmedianttermination}{\medianttermination{Mediant of 2 accents.}{Termination of 1 accent with 2 preperatory syllables.}}
+
+\newcommand{\premagant}{%
+%\normalsize
+\large%\greblockcustos
+}
+
+\newcommand{\magantinitialsize}{35}
+
+\newcommand{\pretranslation}{%
+%\bigskip
+%\vspace{-4ex}
+}
+
+\newcommand{\premagverses}{\normalsize
+%\greblockcustos
+\setgrefactor{15}}
+
+\input{../vespersmagnificat}

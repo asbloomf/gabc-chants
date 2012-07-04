@@ -1,0 +1,138 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+
+% usual packages loading:
+%\usepackage{luatextra}
+%\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper} % or letterpaper (US) or a5paper or....
+\usepackage{gregoriotex} % for gregorio score inclusion
+\usepackage{fullpage} % to reduce the margins
+\usepackage{anysize} % for marginsize
+\usepackage{multicol} % for columns
+\usepackage{lettrine} % for drop caps
+%\usepackage{wrapfig} % for wrapping figures -- can't get it to work with gregorio
+\usepackage{fancyhdr}
+
+% choose the language of the document here
+\usepackage[latin,american]{babel}
+
+% If you use usual TeX fonts, here is a starting point:
+%\usepackage{palatino}
+
+\usepackage[garamond]{../mypackage}
+%\usepackage{fontspec}
+% to change the font to something better, you can install the kpfonts package (if not already installed). To do so
+% go open the "TeX Live Manager" in the Menu Start->All Programs->TeX Live 2010
+%\fontspec[Numbers=OldStyle]{Linux Libertine O}
+\input{../gsp-spaces}
+\predocument
+%\def\greinitialformat#1{{\fontsize{37}{37}\selectfont #1}}
+%small > footnotesize > scriptsize > tiny
+
+\pagestyle{empty} % no header or footers
+\marginsize{35pt}{35pt}{40pt}{20pt}
+
+\newcommand{\afterant}{
+\ifx\note\undefined\else%
+\textit{\note}
+
+\medskip
+\fi
+\sloppy
+\begin{columns}
+\versicle{\vlatin}{\venglish}
+\response{\rlatin}{\renglish}
+\colchunk{}
+\colplacechunks{}
+\colchunk{\hspace*{3em}Orémus.}\colchunk{\hspace*{3em}Let us pray,}
+\colplacechunks{}
+\prayer{\prayerlatin}{\prayerenglish}
+\end{columns}
+\ifx\notetwo\undefined\else%
+\bigskip
+
+\textit{\notetwo}
+
+\medskip
+\begin{columns}
+\versicle{\vlatintwo}{\venglishtwo}
+\response{\rlatintwo}{\renglishtwo}
+\colchunk{}
+\colplacechunks{}
+\colchunk{\hspace*{3em}Orémus.}\colchunk{\hspace*{3em}Let us pray,}
+\colplacechunks{}
+\prayer{\prayerlatintwo}{\prayerenglishtwo}
+\end{columns}
+\fi
+}
+
+% here we begin the document
+\begin{document}
+\setlength{\columnsep}{18pt}
+\setlength{\columnseprule}{1pt}
+% The title:
+\begin{center}{\huge \textsc{\heading.}}\end{center}
+
+\selectlanguage{american}
+\textit{\timenote}
+\if\usetwopages F
+\begin{quote}
+{\anttranslation}
+\end{quote}
+\fi
+\begin{center}\textbf{Solemn Tone.}\end{center}
+\selectlanguage{latin}
+
+% Here we set the space around the initial.
+% Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
+\presolemn
+
+% Here we set the initial font. Change 43 if you want a bigger initial.
+\def\greinitialformat#1{%
+{\fontsize{\solemninitialsize}{\solemninitialsize}\selectfont #1}%
+}
+
+% We set VII above the initial.
+{\def\annot{\small{Ant.}}
+\def\annottwo{\small\oldstylenums{{\secondlinesolemn}}}
+\setinitialspacing{\firstinitial}
+
+% We type a text in the top right corner of the score:
+%\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
+
+% and finally we include the score. The file must be in the same directory as this one.
+\large \includescore{\antfilename Solemn}}
+\if\usetwopages T
+\bigskip
+\afterant
+\pagebreak
+\begin{center}{\huge \textsc{\heading.}}\end{center}
+\fi
+
+\selectlanguage{american}
+\if\usetwopages T
+\begin{quote}
+\anttranslation
+\end{quote}
+\fi
+\begin{center}\textbf{Simple Tone.}\end{center}
+\selectlanguage{latin}
+
+\setsecondannotation
+\presimple
+\def\greinitialformat#1{%
+{\fontsize{\simpleinitialsize}{\simpleinitialsize}\selectfont #1}%
+}
+\def\annot{\small\oldstylenums{{\annotationsimple}}}
+\setinitialspacing{\firstinitial}
+
+{\large \includescore{\antfilename Simple}}
+\bigskip
+\afterant
+
+\end{document}

@@ -1,0 +1,58 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: O Príma, Vírgo, pródita;
+office-part: Hymn for 1st vespers of the Assumption;
+mode: 2;
+occasion: Assumption;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: Hymn.;
+annotation: 2.;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)O(h) Prí(h_g)ma,(ed) Vír(g)go,(hj) pró(ji)di(h)ta(i.) (;)
+E(hk) Con(k)di(i)tó(ji)ris(h) spí(ih)ri(g)tu,(h.) (:)
+Præ(k)de(k')sti(i)ná(k)t<i>a</i>() Al(klk)tís(ji)si(hi)mi(ivHG.) (;)
+Ge(ji)stá(jk)r<i>e</i>() in(i) ál(ji)vo(h) Fí(ih)li(g)um.(h.) (::)
+
+2. Tu(h) pér(h_g)pes(ed) hó(g)stis(hj) fé(ji)mi(h)na(i.) (;)
+Præ(hk)nun(k)ti(i)á(ji)ta(h) daé(ih)mo(g)nis,(h.) (:)
+Op(k)plé(k')ris(i) ú(k)na(klk) grá(ji)ti(hi)a(ivHG.) (;)
+In(ji)ta(jk)mi(i)ná(ji)t<i>a</i>() o(h)rí(ih)gi(g)ne.(h.) (::)
+
+3. Tu(h) vén(h_g)tre(ed) Ví(g)tam(hj) cón(ji)ci(h)pis,(i.) (;)
+Vi(hk)tám(k)qu<i>e</i>() ab(i) A(ji)dam(h) pér(ih)di(g)tam,(h.) (:)
+Dí(k)æ(k') li(i)tán(k)dæ(klk) Ví(ji)cti(hi)mæ(ivHG.) (;)
+Cár(ji)nem(jk) mi(i)ní(ji)strans(h) ín(ih)te(g)gras.(h.) (::)
+
+4. Mér(h)ces(h_g) pi(ed)á(g)clo(hj) dé(ji)bi(h)ta,(i.) (;)
+De(hk)ví(k)cta(i) mors(ji) Te(h) dé(ih)se(g)rit,(h.) (:)
+Al(k)mí(k')que(i) cón(k)sors(klk) Fí(ji)li(hi)i(ivHG.) (;)
+Ad(ji) á(jk)stra(i) fér(ji)ris(h) cór(ih)po(g)re.(h.) (::)
+
+5. Tán(h)ta(h_g) co(ed)rús(g)cans(hj) gló(ji)ri(h)a,(i.) (;)
+Na(hk)tú(k)ra(i) cun(ji)ct<i>a</i>() ex(h)tól(ih)li(g)tur ;(h.) (:)
+In(k) Te(k') vo(i)cá(k)ta(klk) vér(ji)ti(hi)cem(ivHG.) (;)
+De(ji)có(jk)ris(i) óm(ji)nis(h) tán(ih)ge(g)re.(h.) (::)
+
+6. Ad(h) nos,(h_g) tri(ed)úm(g)phans,(hj) éx(ji)su(h)les,(i.) (;)
+Re(hk)gí(k)na,(i) vér(ji)te(h) lú(ih)mi(g)na,(h.) (:)
+Caé(k)l<i>i</i>() ut(k') be(i)á(k)tam(klk) pá(ji)tri(hi)am,(ivHG.) (;)
+Te,(ji) con(jk)se(i)quá(ji)mur,(h) áu(ih)spi(g)ce.(h.) (::)
+
+7. Jé(h)su,(h_g) tí(ed)bi(g) sit(hj) gló(ji)ri(h)a,(i.) (;)
+Qui(hk) ná(k)tus(i) es(ji) de(h) Vír(ih)gi(g)ne,(h.) (:)
+Cum(k) Pá(k')tr<i>e</i>() et(i) ál(k)mo(klk) Spí(ji)ri(hi)tu,(ivHG.) (;)
+In(ji) sem(jk)pi(i)tér(ji)na(h) saé(ih)cu(g)la.(h.) (::)
+
+A(hih)men.(gh..) (::)

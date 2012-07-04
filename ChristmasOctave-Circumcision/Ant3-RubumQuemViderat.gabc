@@ -1,0 +1,23 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Rubum quem viderat;
+office-part: 3 Antiphon;
+mode: 4E;
+occasion: Octave of Christmas (Circumcision);
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: 3 Ant.;
+annotation: 4. E;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+(c4)RU(d)bum(e') quem(f) ví(g')de(g)rat(g) <v>\greheightstar</v>() Mó(gvFDef)y(e)ses(e') in(e)com(f)bú(g)stum,(g.) (;) con(g)ser(g)vá(g')tam(f) a(gh)gnó(h)vi(gh)mus(e.) (;) tú(dh)am(h) lau(h)dá(ixhi)bi(h)lem(g') vir(f)gi(g)ni(gf)tá(e)tem :(e.) (:) Dé(h)i(g_f) Gé(g)ni(fe)trix,(d'_) (,) in(f)ter(g)cé(h')de(g) pro(f') nó(g)bis.(e.) (::)
+
+E(h) u(g) o(h) u(ih) a(gf) e.(e.) (::)

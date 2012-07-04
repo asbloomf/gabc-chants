@@ -1,0 +1,27 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+\newcommand{\oantiphondate}{19}
+
+\newcommand{\premag}{
+\large
+\setgrefactor{17}
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+\newcommand{\magfontsize}{38}
+\newcommand{\maganttranslation}{O Root of Jesse, which standest for an ensign of the people, before whom kings shall keep silence, whom the Gentiles shall beseech: come and deliver us, and tarry not.}
+\def\magsolemn{T}
+\definemag{2}{D}
+
+\newcommand{\premagverses}{\greblockcustos\setgrefactor{17}
+\normalsize
+}
+
+\input{../Advent/OAntiphon}
+\end{document}

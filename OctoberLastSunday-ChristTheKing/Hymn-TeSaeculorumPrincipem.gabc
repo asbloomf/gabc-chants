@@ -1,0 +1,62 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Te Sæculorum Principem;
+office-part: Hymn for Christ the King;
+mode: 1;
+occasion: Christ the King;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: Hymn.;
+annotation: 1.;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)TE(cd) sæ(ixdh'!iv)cu(h')ló(h)rum(hg) Prín(gh)ci(g)pem,(g_f) (,)
+Te(h) Chrí(h')ste,(g) Ré(fe)gem(d) Gén(ef)ti(dc)um,(cd..) (;)
+Te(a) mén(cd)ti(d)um,(df) Te(fd) cór(e')di(d)um(c'_) (,)
+U(g)num(g') fa(f)té(ghg)mur(ed) ár(ef)bi(dc)trum(cd..) (::)
+
+2. Sce(cd)lé(ixdh'!iv)sta(h') túr(h)ba(hg) clá(gh)mi(g)tat :(g_f) (,)
+Re(h)gná(h')re(g) Chrí(fe)stum(d) nó(ef)lu(dc)mus :(cd..) (;)
+Te(a) nos(cd) o(d)ván(df)tes(fd) óm(e')ni(d)um(c'_) (,)
+Ré(g)gem(g') su(f)pré(ghg)mum(ed) dí(ef)ci(dc)mus.(cd..) (::)
+
+3. O(cd) Chrí(ixdh'!iv)ste,(h') Prín(h)ceps(hg) Pá(gh)ci(g)fer,(g_f) (,)
+Mén(h)tes(h') re(g)bél(fe)les(d) súb(ef)ji(dc)ce :(cd..) (;)
+Tu(a)ó(cd)qu<i>e</i>() a(d)mó(df)re(fd) dé(e')vi(d)os,(c'_) (,)
+O(g)ví(g')l<i>e</i>() in(f) ú(ghg)num(ed) cón(ef)gre(dc)ga.(cd..) (::)
+
+4. Ad(cd) hoc(ixdh'!iv) cru(h')én(h)t<i>a</i>() ab(hg) ár(gh)bo(g)re,(g_f) (,)
+Pén(h)des(h') a(g)pér(fe)tis(d) brá(ef)chi(dc)is :(cd..) (;)
+Dir(a)á(cd)que(d) fós(df)sum(fd) cú(e')spi(d)de(c'_) (,)
+Cor(g) í(g')gne(f) flá(ghg)grans(ed) éx(ef)hi(dc)bes.(cd..) (::)
+
+5. Ad(cd) hoc(ixdh'!iv) in(h') á(h)ris(hg) áb(gh)de(g)ris(g_f) (,)
+Ví(h)ni(h') da(g)pís(fe)qu<i>e</i>() i(d)má(ef)gi(dc)ne,(cd..) (;)
+Fún(a)dens(cd) sa(d)lú(df)tem(fd) fí(e')li(d)is(c'_) (,)
+Trans(g)ver(g')be(f)rá(ghg)to(ed) pé(ef)cto(dc)re.(cd..) (::)
+
+6. Te(cd) na(ixdh'!iv)ti(h')ó(h)num(hg) Praé(gh)si(g)des(g_f) (,) Ho(h)nó(h')re(g) tól(fe)lant(d) pú(ef)bli(dc)co,(cd..) (;)
+Có(a)lant(cd) ma(d)gí(df)stri,(fd) jú(e')di(d)ces,(c'_) (,)
+Lé(g)ges(g') et(f) ár(ghg)tes(ed) éx(ef)pri(dc)mant.(cd..) (::)
+
+7. Sub(cd)mís(ixdh'!iv)sa(h') ré(h)gum(hg) fúl(gh)ge(g)ant(g_f) (,)
+Tí(h)bi(h') di(g)cá(fe)t<i>a</i>() in(d)sí(ef)gni(dc)a :(cd..) (;)
+Mi(a)tí(cd)que(d) scép(df)tro(fd) pá(e')tri(d)am(c'_) (,)
+Do(g)mós(g')que(f) súb(ghg)de(ed) cí(ef)vi(dc)um.(cd..) (::)
+
+8. Jé(cd)su,(ixdh'!iv) tí(h')bi(h) sit(hg) gló(gh)ri(g)a,(g_f) (,)
+Qui(h) scép(h')tra(g) mún(fe)di(d) tém(ef)pe(dc)ras,(cd..) (;)
+Cum(a) Pá(cd)tr<i>e</i>,() et(d) ál(df)mo(fd) Spí(e')ri(d)tu,(c'_) (,)
+In(g) sem(g')pi(f)tér(ghg)na(ed) saé(ef)cu(dc)la.(cd..) (::)
+
+A(ded)men.(cd..) (::)

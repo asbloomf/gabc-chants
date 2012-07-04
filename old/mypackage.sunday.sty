@@ -1,0 +1,149 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mypackage}
+\usepackage{ifthen}
+
+\newboolean{libertine}
+\DeclareOption{libertine}{
+\setboolean{libertine}{true}
+}
+\DeclareOption{garamond}{
+\setboolean{libertine}{false}
+}
+\ExecuteOptions{garamond}
+\ProcessOptions\relax
+
+%\usepackage{fullpage} % to reduce the margins
+\usepackage{anysize} % for marginsize
+\usepackage{multicol} % for columns
+\usepackage{lettrine} % for drop caps
+\usepackage{fancyhdr} % for headers and footers
+\usepackage{xstring}
+%\usepackage{pdfcolparallel} % for parallel columns
+\usepackage{parcolumns}
+%\usepackage{wrapfig} % for wrapping figures -- can't get it to work with gregorio
+
+% choose the language of the document here
+\usepackage[latin,american]{babel}
+
+\ifthenelse{\boolean{libertine}}
+{
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{luainputenc}
+\usepackage{libertine}
+\renewcommand*\oldstylenums[1]{{\fontfamily{fxlj}\selectfont #1}}
+}{
+\usepackage{fontspec}
+\renewcommand*\oldstylenums[1]{#1}
+\AtBeginDocument{\fontspec[Numbers=OldStyle]{Garamond Premier Pro}}
+\let\oldchead\chead
+\renewcommand\chead[1]{\oldchead{\fontspec[Numbers=OldStyle]{Garamond Premier Pro}#1}}
+}
+
+\lhead{}\rhead{}
+\lfoot{}\cfoot{}\rfoot{}
+
+\renewcommand*\bf{\bfseries}
+\renewcommand*\it{\itshape}
+
+\newcommand{\translation}[2][\em]{\selectlanguage{american}%
+% 1 - set size and style - defaults to italics
+% 2 - english text
+% 
+{
+%\vspace{-10pt}
+\medskip
+\begin{list}{}{\setlength\leftmargin{18pt}\setlength\rightmargin{\leftmargin}\setlength\topsep{0pt}}
+\item #1#2\medskip
+\end{list}
+}
+\selectlanguage{latin}
+}
+
+\newcommand{\medianttermination}[2]{
+% 1 - Mediant of 2 accents
+% 2 - Termination of 1 accent with 2 preperatory syllables
+\selectlanguage{american}
+\begin{multicols}{2}
+\oldstylenums{#1}\columnbreak
+\oldstylenums{\begin{flushright}#2\end{flushright}}%
+\end{multicols}
+\selectlanguage{latin}
+}
+
+\newcommand{\dropcap}[2]{%
+% 1 - language
+% 2 - text
+\noindent%
+\StrPosition{#2}{ }[\mypos]%
+\lettrine{\StrLeft{#2}{1}}
+   {\StrMid{#2}{2}{\mypos}}
+\foreignlanguage{#1}{\StrGobbleLeft{#2}{\mypos}}
+}
+
+\newcommand{\oldprayer}[2]{
+% 1 - latin
+% 2 - english
+{\setlength{\columnsep}{18pt}
+\setlength{\columnseprule}{.4pt}
+\begin{multicols}{2}
+\selectlanguage{latin}
+\dropcap{latin}{#1}%
+\columnbreak
+\selectlanguage{american}
+\dropcap{american}{#2}
+\selectlanguage{latin}
+\end{multicols}
+}
+}
+
+\newcommand{\prayer}[2]{
+% 1 - latin
+% 2 - english
+% requires columns environment
+\noindent%\selectlanguage{latin}
+\dropcap{latin}{#1} &% \selectlanguage{american}
+\dropcap{american}{#2} \selectlanguage{latin}
+}
+
+\newenvironment{columns}{
+	\newlength{\mycolwidth}%
+	\setlength\mycolwidth{.5\linewidth}%
+	%\setlength\arraystretch{0pt}%
+	\addtolength\mycolwidth{-\tabcolsep}%
+	\noindent\begin{tabular}{@{}p{\mycolwidth}|p{\mycolwidth} @{}}%
+}{
+	\end{tabular}
+}
+
+\newcommand{\versicle}[2]{
+% 1 - latin
+% 2 - english
+\foreignlanguage{latin}{\Vbar{}. #1} & \foreignlanguage{american}{\Vbar{}. #2}\\
+}
+
+\newcommand{\response}[2]{
+% 1 - latin
+% 2 - english
+\foreignlanguage{latin}{\Rbar{}. #1} & \foreignlanguage{american}{\Rbar{}. #2}\\
+}
+
+\newenvironment{psalmverses}[1][1]{
+% 1 - number to start on
+\newcounter{vcounter}
+\begin{list}{\arabic{vcounter}.}{
+\setlength\baselineskip{0pt}
+\setlength\itemsep{1pt}
+\usecounter{vcounter}
+\setlength\parsep{0pt}
+\setlength\labelwidth{50pt}\setlength\leftmargin{0pt}\setlength\itemindent{6ex}}
+\setcounter{vcounter}{#1}
+}{\end{list}}
+
+\newenvironment{magnificat}[2][1]{
+% 1 - number to start on
+% 2 - name of magnificat to include
+\large
+\includescore{#2}
+\normalsize
+\begin{psalmverses}[#1]
+}{\end{psalmverses}}

@@ -1,0 +1,686 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+
+\newcommand{\heading}{Feast of Our Lord Jesus Christ, King at 2nd Vespers.}
+
+\newcommand{\predeusinadjutorium}{\smallskip
+\large
+\setgrefactor{15}
+}
+
+\newcommand{\antonelinetwo}{8. G}
+\newcommand{\preantone}{\setgrefactor{15}
+\large
+\setspaceafterinitial{2.5mm plus 0em minus 0em}
+\setspacebeforeinitial{2.5mm plus 0em minus 0em}
+}
+\newcommand{\antoneinitialsize}{33}
+\newcommand{\antonetex}{Ant1-Pacificus.tex}
+\newcommand{\antonetranslation}{He shall be called the Peaceful One, and His throne shall be established for ever.}
+\newcommand{\psalmone}{Psalm 109.}
+\newcommand{\prepsalmone}{%
+\vspace{-1.5ex}
+}
+\newcommand{\psalmonetex}{Psalm109-8G.tex}
+\newenvironment{psalmonecols}{\begin{parcolumns}[rulebetween]{2}}{\end{parcolumns}}
+\newcommand{\psalmoneverses}{\item Donec ponam inimícos \textbf{tu}os,~* scabéllum pe\emph{dum} \emph{tu}\-\textbf{ó}\-rum.
+\item Virgam virtútis tuæ emíttet Dóminus ex \textbf{Si}on~:~* domináre in médio inimicó\emph{rum} \emph{tu}\textbf{ó}rum.
+\item Tecum princípium in die virtútis tuæ in splendóribus san\textbf{ctó}rum~:~* ex útero ante lucíferum \emph{gé}\emph{nu}\textbf{i} te.
+\item Jurávit Dóminus, et non pœnitébit \textbf{e}um~:~* Tu es sacérdos in ætérnum secúndum órdi\emph{nem} \emph{Mel}\textbf{chí}sedech.
+\item Dóminus a dextris \textbf{tu}is,~* confrégit in die iræ \emph{su}\emph{æ} \textbf{re}\-ges.
+\item Judicábit in natiónibus, implébit ru\textbf{í}nas~:~* conquassábit cápita in ter\emph{ra} \emph{mul}\textbf{tó}rum.
+\item De torrénte in via \textbf{bi}bet~:~* proptérea exal\emph{tá}\emph{bit} \textbf{ca}\-put.
+\item Glória Pátri, et \textbf{Fí}lio,~* et Spirí\emph{tu}\emph{i} \textbf{Sán}cto.
+\item Sicut érat in princípio, et núnc, et \textbf{sém}per,~* et in saécula sæcu\emph{ló}\emph{rum}. \textbf{A}men.
+}
+\newcommand{\psalmonetranslation}{\item The Lord said to my Lord: Sit thou at my right hand: 
+\item Until I make thy enemies thy footstool.
+\item The Lord will send forth the sceptre of thy power out of Sion: rule thou in the midst of thy enemies.
+\item With thee is the principality in the day of thy strength: in the brightness of the saints: from the womb before the day star I begot thee.
+\item The Lord hath sworn, and he will not repent: Thou art a priest for ever according to the order of Melchisedech.
+\item The Lord at thy right hand hath broken kings in the day of his wrath.
+\item He shall judge among nations, he shall fill ruins: he shall crush the heads in the land of the many.
+\item He shall drink of the torrent in the way: therefore shall he lift up the head.
+}
+
+\newcommand{\anttwolinetwo}{8. c}
+\newcommand{\preanttwo}{\setgrefactor{17}
+\large
+\setspaceafterinitial{2.5mm plus 0em minus 0em}
+\setspacebeforeinitial{2.5mm plus 0em minus 0em}
+}
+\newcommand{\anttwoinitialsize}{40}
+\newcommand{\anttwotex}{Ant2-RegnumEjus.tex}
+\newcommand{\anttwotranslation}{His kingdom is a kingdom of all ages, and all kings shall serve and obey him.}
+\newcommand{\psalmtwo}{Psalm 110.}
+\newcommand{\prepsalmtwo}{%
+\normalsize
+\greblockcustos
+}
+\newcommand{\psalmtwotex}{Psalm110-8c.tex}
+\newenvironment{psalmtwocols}{\begin{parcolumns}[rulebetween]{2}}{\end{parcolumns}}
+\newcommand{\psalmtwoverses}{\item Magna ópera \textbf{Dó}mini~:~* exquisíta in omnes volun\emph{tá}\emph{tes} \textbf{e}jus.
+\item Conféssio et magnificéntia opus \textbf{e}jus~:~* et justítia ejus manet in sæ\emph{cu}\emph{lum} \textbf{sæ}culi.
+\item Memóriam fecit mirabílium suórum,~† miséricors et miserátor \textbf{Dó}minus~:~* escam dedit ti\emph{mén}\emph{ti}\textbf{bus} se.
+\item Memor erit in sæculum testaménti \textbf{su}i~:~* virtútem óperum suórum annuntiábit pó\emph{pu}\emph{lo} \textbf{su}o~:
+\item Ut det illis hereditátem \textbf{gén}tium~:~* ópera mánuum ejus véritas, \emph{et} \emph{ju}\textbf{dí}cium.
+\item Fidélia ómnia mandáta ejus~:~† confirmáta in sæculum \textbf{sæ}culi,~* facta in veritáte et \emph{æ}\emph{qui}\textbf{tá}te.
+\item Redemptiónem misit pópulo \textbf{su}o~:~* mandávit in ætérnum testa\emph{mén}\emph{tum} \textbf{su}um.
+\item Sanctum, et terríbile nomen \textbf{e}jus~:~* inítium sapiéntiæ \emph{ti}\emph{mor} \textbf{Dó}mini.
+\item Intelléctus bonus ómnibus faciéntibus \textbf{e}um~:~* laudátio ejus manet in sæ\emph{cu}\emph{lum} \textbf{sæ}culi.
+\item Glória Pátri, et \textbf{Fí}lio,~* et Spirí\emph{tu}\emph{i} \textbf{Sán}cto.
+\item Sicut érat in princípio, et núnc, et \textbf{sém}per,~* et in saécula sæcu\emph{ló}\emph{rum}. \textbf{A}men.
+}
+\newcommand{\psalmtwotranslation}{
+\item I will praise thee, O Lord, with my whole heart; in the council of the just: and in the congregation.
+\item Great are the works of the Lord: sought out according to all his wills
+\item His work is praise and magnificence: and his justice continueth for ever and ever.
+\item He hath made a remembrance of his wonderful works, being a merciful and gracious Lord: he hath given food to them that fear him.
+\item He will be mindful for ever of his covenant: he will shew forth to his people the power of his works.
+\item That he may give them the inheritance of the Gentiles: the works of his hands are truth and judgment.
+\item All his commandments are faithful: confirmed for ever and ever, made in truth and equity.
+\item He hath sent redemption to his people: he hath commanded his covenant for ever.
+\item Holy and terrible is his name: the fear of the Lord is the beginning of wisdom.
+\item A good understanding to all that do it: his praise continueth for ever and ever.
+}
+
+\newcommand{\antthreelinetwo}{7. a}
+\newcommand{\preantthree}{\setgrefactor{17}
+\large
+\setspaceafterinitial{2.8mm plus 0em minus 0em}
+\setspacebeforeinitial{2.8mm plus 0em minus 0em}
+}
+\newcommand{\antthreeinitialsize}{40}
+\newcommand{\antthreetex}{Ant3-EcceVirOriens.tex}
+\newcommand{\antthreetranslation}{Behold a Man, the Daystar is His name: He shall sit and rule, and shall speak peace unto the Gentiles.}
+\newcommand{\psalmthree}{Paslm 111.}
+\newcommand{\prepsalmthree}{%
+\normalsize
+}
+\newcommand{\psalmthreetex}{Psalm111-7a.tex}
+\newenvironment{psalmthreecols}{\begin{parcolumns}[rulebetween,colwidths={1=252pt}]{2}}{\end{parcolumns}}
+\newcommand{\psalmthreeverses}{\item Potens in terra erit \textbf{se}men \textbf{e}jus~:~* generátio rectórum be\textbf{ne}di\textbf{cé}tur.
+\item Glória, et divítiæ in \textbf{do}mo \textbf{e}jus~:~* et justítia ejus manet in \textbf{sæ}culum \textbf{sæ}culi.
+\item Exórtum est in ténebris \textbf{lu}men \textbf{re}ctis~:~* miséricors, et mise\textbf{rá}tor, et \textbf{ju}stus.
+\item Jucúndus homo qui miserétur et cómmodat,~† dispónet sermónes suos \textbf{in} ju\textbf{dí}cio~:~* quia in ætérnum non \textbf{com}mo\textbf{vé}bitur.
+\item In memória ætérna \textbf{e}rit \textbf{ju}stus~:~* ab auditióne mala \textbf{non} ti\textbf{mé}bit.
+\item Parátum cor ejus speráre in Dómino,~† confirmátum \textbf{est} cor \textbf{e}jus~:~* non commovébitur donec despíciat ini\textbf{mí}cos \textbf{su}os.
+\item Dispérsit, dedit paupéribus~:~† justítia ejus manet in \textbf{sæ}culum \textbf{sæ}culi,~* cornu ejus exaltábi\textbf{tur} in \textbf{gló}ria.
+\item Peccátor vidébit, et irascétur,~† déntibus suis fremet \textbf{et} ta\textbf{bé}scet~:~* desidérium pecca\textbf{tó}rum per\textbf{í}bit.
+\item Glória \textbf{Pá}tri, et \textbf{Fí}lio,~* et Spi\textbf{rí}tui \textbf{Sán}cto.
+\item Sicut érat in princípio, et \textbf{núnc}, et \textbf{sém}per,~* et in saécula sæcu\textbf{ló}rum. \textbf{A}men.
+}
+\newcommand{\psalmthreetranslation}{
+\item Blessed is the man that feareth the Lord: he shall delight exceedingly in his commandments.
+\item His seed shall be mighty upon earth: the generation of the righteous shall be blessed.
+\item Glory and wealth shall be in his house: and his justice remaineth for ever and ever.
+\item To the righteous a light is risen up in darkness: he is merciful, and compassionate and just.
+\item Acceptable is the man that showeth mercy and lendeth: he shall order his words with judgment: because he shall not be moved for ever.
+\item The just shall be in everlasting remembrance: he shall not hear the evil hearing.
+\item His heart is ready to hope in the Lord: his heart is strengthened, he shall not be moved until he look over his enemies.
+\item He hath distributed, he hath given to the poor: his justice remaineth for ever and ever: his horn shall be exalted in glory.
+\item The wicked shall see, and shall be angry, he shall gnash with his teeth and pine away: the desire of the wicked shall perish.
+}
+
+\newcommand{\antfourlinetwo}{3. a}
+\newcommand{\preantfour}{\setgrefactor{17}
+\large
+\setspaceafterinitial{2.2mm plus 0em minus 0em}
+\setspacebeforeinitial{2.2mm plus 0em minus 0em}
+}
+\newcommand{\antfourinitialsize}{40}
+\newcommand{\antfourtex}{Ant4-Dominus.tex}
+\newcommand{\antfourtranslation}{The Lord is our Judge, the Lord is our Lawgiver; the Lord is our King, He will save us.}
+\newcommand{\psalmfour}{Psalm 112.}
+\newcommand{\prepsalmfour}{%
+%\vspace{-1ex}
+%\setgrefactor{15}
+\normalsize
+}
+\newcommand{\psalmfourtex}{Psalm112-3a.tex}
+\newenvironment{psalmfourcols}{\begin{parcolumns}[rulebetween,colwidths={1=285pt}]{2}}{\end{parcolumns}}
+\newcommand{\psalmfourverses}{\item Sit nomen Dómini \textbf{be}ne\textbf{dí}ctum,~* ex hoc nunc, et usque \emph{in} \textbf{sæ}culum.
+\item A solis ortu usque \textbf{ad} oc\textbf{cá}sum,~* laudábile no\emph{men} \textbf{Dó}\-mi\-ni.
+\item Excélsus super omnes \textbf{gen}tes \textbf{Dó}\textbf{mi}nus,~* et super cælos gló\-ri\-\emph{a} \textbf{e}jus.
+\item Quis sicut Dóminus, Deus noster, qui in \textbf{al}tis \textbf{há}\textbf{bi}tat,~* et humília réspicit in cælo et \emph{in} \textbf{ter}ra?
+\item Súscitans a \textbf{ter}ra \textbf{ín}\textbf{o}pem,~* et de stércore éri\emph{gens} \textbf{páu}\-pe\-rem~:
+\item Ut cóllocet eum \textbf{cum} prin\textbf{cí}\textbf{pi}bus,~* cum princípibus pópu\emph{li} \textbf{su}i.
+\item Qui habitáre facit stéri\textbf{lem} in \textbf{do}mo,~* matrem filiórum \emph{læ}\-\textbf{tán}\-tem.
+\item Glória \textbf{Pá}tri, et \textbf{Fí}\textbf{li}o,~* et Spirítu\emph{i} \textbf{Sán}cto.
+\item Sicut érat in princípio, et \textbf{núnc}, et \textbf{sém}per,~* et in saécula sæculó\emph{rum}. \textbf{A}men.
+}
+\newcommand{\psalmfourtranslation}{
+\item Praise the Lord, ye children: praise ye the name of the Lord.
+\item Blessed be the name of the Lord, from henceforth now and for ever.
+\item From the rising of the sun unto the going down of the same, the name of the Lord is worthy of praise.
+\item The Lord is high above all nations; and his glory above the heavens.
+\item Who is as the Lord our God, who dwelleth on high: and looketh down on the low things in heaven and in earth?
+\item Raising up the needy from the earth, and lifting up the poor out of the dunghill:
+\item That he may place him with princes, with the princes of his people.
+\item Who maketh a barren woman to dwell in a house, the joyful mother of children.
+}
+
+\newcommand{\antfivelinetwo}{8. G}
+\newcommand{\preantfive}{\setgrefactor{17}
+\greblockcustos
+\large
+\setspaceafterinitial{2.5mm plus 0em minus 0em}
+\setspacebeforeinitial{2.5mm plus 0em minus 0em}
+}
+\newcommand{\antfiveinitialsize}{40}
+\newcommand{\antfivetex}{Ant5-EcceDediTe.tex}
+\newcommand{\antfivetranslation}{Behold I have given thee for a light of the Gentiles, that thou mayest be my salvation unto the ends of the earth.}
+\newcommand{\psalmfive}{Psalm 116.}
+\newcommand{\prepsalmfive}{%
+\vspace{-1ex}
+%\setgrefactor{15}%
+\normalsize%
+}
+\newcommand{\psalmfivetex}{Psalm116-8G.tex}
+\newenvironment{psalmfivecols}{\begin{parcolumns}[rulebetween]{2}}{\end{parcolumns}}
+\newcommand{\psalmfiveverses}{\item Quóniam confirmáta est super nos misericórdia \textbf{e}jus~:~* et véritas Dómini manet \emph{in} \emph{æ}\textbf{tér}num.
+\item Glória Pátri, et \textbf{Fí}lio,~* et Spirí\emph{tu}\emph{i} \textbf{Sán}cto.
+\item Sicut érat in princípio, et núnc, et \textbf{sém}per,~* et in saécula sæcu\emph{ló}\emph{rum}. \textbf{A}men.
+}
+\newcommand{\psalmfivetranslation}{
+\item O Praise the Lord, all ye heathens; praise him, all ye nations.
+\item For his merciful kindness is ever more and more towards us; and the truth of the Lord endureth for ever.
+}
+
+\newcommand{\chapter}{\dropcap{latin}{Fratres~: Grátias ágimus Deo Patri, qui dignos nos fecit in partem sortis sanctórum in} \textbf{lú}\-mi\-ne~:~\gredagger{} qui erípuit nos de potestáte \emph{te\-ne}\-\textbf{brá}\-rum,~* et tránstulit in regnum Fílii delctiónis \textbf{su}\-æ.}
+\newcommand{\chaptertranslation}{Brethren: We give thanks to God the Father, who hath made us worthy to be partakers of the lot of the saints in light, who hath delivered us from the power of darkness, and hath translated us into the kingdom of the Son of His love.}
+
+\newcommand{\prehymn}{\normalsize
+\setgrefactor{15}
+\setspaceafterinitial{3.1mm plus 0em minus 0em}
+\setspacebeforeinitial{3.1mm plus 0em minus 0em}
+}
+\newcommand{\hymnlinetwo}{1.}
+\newcommand{\hymntex}{Hymn-TeSaeculorumPrincipem.tex}
+\newcommand{\hymntranslation}{
+\item Thee, Christ, the Angels' Lord we sing,
+Thee, Christ, of all the nations King;
+Sole Lord and Judge, whose will doth bind
+The hearts and minds of all mankind.
+
+\item Through evil crowds cry once again
+With frenzied will, ``Christ shall not reign,''
+Yet our exulting voices sing,
+And hail Thee, universal King.
+
+\item O Christ, the Prince of Peace, recall
+All rebel wills to own thy thrall;
+And let Thy love lead back and keep
+Within one fold Thy scattered sheep.
+
+\item For this, upon the bloodstained Tree,
+Thou spreadst Thine arms unweariedly,
+And show'st Thine Heart to our amaze
+With spear transfixed, with love ablaze.
+
+\item For this on Altar Thou dost bide,
+In forms of wine and feast dost hide,
+That from that pierced breast may flow
+Salvation's stream on us below.
+
+\item The rulers of the nations all
+Shall at Thy feet adoring fall,
+All judges magnify Thy name,
+All laws and arts show forth Thy fame.
+
+\item Let kingly crowns more glorious shine
+When consecrated, Lord, as Thine:
+Place Thou our land and homes today
+Beneath Thy mild and gracious sway.
+
+\item O Jesus, praise to Thee we yield,
+Who dost Thy guiding sceptre wield,
+With Father and with Holy Ghost,
+Reigning for aye o'er heaven's host.  Amen.
+}
+
+\newcommand{\vrtex}{vr.tex}
+\newcommand{\vtranslation}{His dominion shall be increased.}
+\newcommand{\rtranslation}{And of peace there shall be no end.}
+
+\newcommand{\magantlinetwo}{Ant. 7. a}
+\newcommand{\premag}{
+\large
+\setspaceafterinitial{4.0mm plus 0em minus 0em}
+\setspacebeforeinitial{4.0mm plus 0em minus 0em}
+\setgrefactor{17}
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+\newcommand{\magfontsize}{38}
+\newcommand{\maganttranslation}{He hath on His garment and on His thigh written: King of kings and Lord of lords.  To Him be glory and empire for ever and ever.}
+\newcommand{\magtex}{MagnificatSolemn7a}
+\newcommand{\premagverses}{\greblockcustos\setgrefactor{14}
+\setspaceafterinitial{2.3mm plus 0em minus 0em}
+\setspacebeforeinitial{2.3mm plus 0em minus 0em}
+\normalsize
+}
+\newcommand{\magverses}{\item Quia respéxit humilitátem an\textbf{cíl}lae \textbf{sú}æ~:~* ecce enim ex hoc beátam me dícent ómnes gene\textbf{ra}ti\textbf{ó}nes.
+\item Quia fécit míhi \textbf{má}gna qui \textbf{pó}\textbf{tens} est~:~* et sánctum \textbf{nó}men \textbf{é}jus.
+\item Et misericórdia éjus a progénie \textbf{in} pro\textbf{gé}\textbf{ni}es~* ti\textbf{mén}tibus \textbf{é}um.
+\item Fécit poténtiam in \textbf{brá}chio \textbf{sú}o~:~* dispérsit supérbos ménte \textbf{cór}dis \textbf{sú}i.
+\item Depósuit po\textbf{tén}tes de \textbf{sé}de,~* et exal\textbf{tá}vit \textbf{hú}miles.
+\item Esuriéntes im\textbf{plé}vit \textbf{bó}nis~:~* et dívites di\textbf{mí}sit in\textbf{á}nes.
+\item Suscépit Israel \textbf{pú}erum \textbf{sú}um,~* recordátus miseri\textbf{cór}diæ \textbf{sú}æ.
+\item Sicut locútus est ad \textbf{pá}tres \textbf{nó}stros,~* Abraham et sémini \textbf{é}jus in \textbf{saé}cula.
+\item Glória \textbf{Pá}tri, et \textbf{Fí}\textbf{li}o,~* et Spi\textbf{rí}tui \textbf{Sán}cto.
+\item Sicut érat in princípio, et \textbf{núnc}, et \textbf{sém}per,~* et in saécula sæcu\textbf{ló}rum. \textbf{A}men.
+}
+
+\newcommand{\collect}{Omnípotens sempitérne Deus, qui in delécto Fílio tuo, universórum Rege, ómnia instauráre voluísti~:~† concéde propítius; ut cunctæ famíliæ Géntium, peccáti vúlnere disgregátæ,~* ejus suavíssimo subdántur império~: Qui tecum vivit et regnat.}
+\newcommand{\collecttranslation}{Almighty and everlasting God, who in Thy beloved Son, the King of the whole world, hast willed to restore all things, mercifully grant that all the families of nations now kept apart by the wound of sin, may be brought under the sweet yoke of His rule: Who liveth liveth and reigneth.}
+
+\newcommand{\benedicamusdominotex}{BenedicamusDomino_1class2ndvespers.tex}
+\newcommand{\benedicamusdominotexalt}{BenedicamusDomino_1class2ndvespersAlt.tex}
+
+% usual packages loading:
+%\usepackage{luatextra}
+%\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper} % or letterpaper (US) or a5paper or....
+\usepackage{gregoriotex} % for gregorio score inclusion
+
+% If you use usual TeX fonts, here is a starting point:
+%\usepackage{palatino}
+%\input{glyphtounicode} \pdfglyphtounicode{f_f}{FB00} \pdfglyphtounicode{f_f_i}{FB03} \pdfglyphtounicode{f_f_l}{FB04}
+%\pdfglyphtounicode{Q_u}{E048} \pdfglyphtounicode{O_e}{0152} \pdfglyphtounicode{o_e}{0153}
+%\pdfgentounicode=1
+% to change the font to something better, you can install the kpfonts package (if not already installed). To do so
+% go open the "TeX Live Manager" in the Menu Start->All Programs->TeX Live 2010
+\input{../gsp-spaces}
+%\def\greinitialformat#1{{\fontsize{37}{37}\selectfont #1}}
+%small > footnotesize > scriptsize > tiny
+
+
+% my stuff
+\usepackage[garamond]{../mypackage}
+% end my stuff
+
+\setgrefactor{17}
+
+
+\marginsize{25pt}{25pt}{25pt}{30pt}
+\pagestyle{fancy} % no header or footers
+\let\oldheadrulewidth\headrulewidth
+\renewcommand\headrulewidth{0pt}
+%\cfoot{\thepage}
+
+% here we begin the document
+\begin{document}
+%\chead{Sunday At Vespers}
+
+% The title:
+\vspace*{-11ex}
+\begin{center}{\huge \heading}\end{center}
+%\vspace{-2ex}
+\medskip
+
+% Here we set the space around the initial.
+% Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
+\setspaceafterinitial{1.2mm plus 0em minus 0em}
+\setspacebeforeinitial{1.2mm plus 0em minus 0em}
+
+% Here we set the initial font. Change 43 if you want a bigger initial.
+\def\greinitialformat#1{%
+{\fontsize{40}{40}\selectfont #1}%
+}
+
+% We set red lines here, comment it if you want black ones.
+%\redlines
+
+% We set VII above the initial.
+{\gresetfirstlineaboveinitial{\small \Vbar .}{\small \Vbar .}
+
+% We type a text in the top right corner of the score:
+%\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
+
+% and finally we include the score. The file must be in the same directory as this one.
+%{\bfseries Solemn Tone.}
+%{\bfseries Festal Tone.}
+
+\smallskip
+\large
+\setgrefactor{15}
+\includescore{deusinadjutorium_solemn.tex}}%
+\translation[]{\Vbar . O God, come to my assistance. \Rbar . O Lord, make haste to help me. Glory be \ldots}
+%{\itshape From Septuagesima to Wednesday in Holy Week, the following is said instead of} Allelúia :
+
+%\includescore{LausTibiDomine}
+%\smallskip
+\hrule
+\medskip
+{\def\greinitialformat#1{%
+{\fontsize{\antoneinitialsize}{\antoneinitialsize}\selectfont #1}%
+}
+\preantone
+\gresetfirstlineaboveinitial{\small{1 Ant.}}{\small{1 Ant.}}
+\setsecondannotation{\small{\antonelinetwo}}
+\includescore{\antonetex}
+}
+\vspace{-3ex}
+\translation[]{\normalsize \antonetranslation}
+\vspace{-1ex}
+\begin{center}{\Large \psalmone}\end{center}
+{\prepsalmone
+\includescore{\psalmonetex}
+}
+\medskip
+
+\normalsize
+%\vspace{-20pt}
+\setlength{\columnsep}{18pt}
+\setlength{\columnseprule}{.4pt}
+\begin{psalmonecols}
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}[1]
+\psalmoneverses
+\end{psalmverses}
+}
+
+\selectlanguage{american}
+%\columnbreak
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}
+\psalmonetranslation
+\end{psalmverses}
+}
+\selectlanguage{latin}
+\end{psalmonecols}
+\medskip
+{\noindent\emph{Repeat antiphon.}\\}
+
+\pagebreak
+\cfoot{\thepage}
+\renewcommand\headrulewidth{\oldheadrulewidth}
+\chead{\heading}
+
+{\def\greinitialformat#1{%
+{\fontsize{\anttwoinitialsize}{\anttwoinitialsize}\selectfont #1}%
+}
+\preanttwo
+\gresetfirstlineaboveinitial{\small {2 Ant.}}{\small {2 Ant.}}
+\setsecondannotation{\small {\anttwolinetwo}}
+\includescore{\anttwotex}
+\translation[]{\normalsize \anttwotranslation}
+\begin{center}{\Large \psalmtwo}\end{center}
+\prepsalmtwo
+\includescore{\psalmtwotex}
+}
+\normalsize\medskip
+
+\begin{psalmtwocols}
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}[1]
+\psalmtwoverses
+\end{psalmverses}
+}
+
+%\columnbreak
+\selectlanguage{american}
+\colchunk{\vspace{-12pt}%
+\sloppy
+\begin{psalmverses}[0]
+\psalmtwotranslation
+\end{psalmverses}
+}
+\selectlanguage{latin}
+\end{psalmtwocols}
+\medskip
+{\noindent\emph{Repeat antiphon.}\\}
+
+\pagebreak
+
+{\def\greinitialformat#1{%
+{\fontsize{\antthreeinitialsize}{\antthreeinitialsize}\selectfont #1}%
+}
+\preantthree
+\gresetfirstlineaboveinitial{\small{3 Ant.}}{\small{3 Ant.}}
+\setsecondannotation{\small{\antthreelinetwo}}
+\includescore{\antthreetex}
+}
+%\vspace{-2ex}
+\translation[]{\normalsize \antthreetranslation}
+\begin{center}{\Large \psalmthree}\end{center}
+{\prepsalmthree
+\includescore{\psalmthreetex}
+}
+\normalsize
+
+%\medskip
+\begin{psalmthreecols}
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}[1]
+\psalmthreeverses
+\end{psalmverses}
+}
+%\columnbreak
+\selectlanguage{american}
+\colchunk{\vspace{-12pt}%
+\sloppy
+\begin{psalmverses}[0]
+\psalmthreetranslation
+\end{psalmverses}
+}
+\selectlanguage{latin}
+\end{psalmthreecols}
+\medskip
+{\noindent\emph{Repeat antiphon.}\\}
+\pagebreak
+
+{\def\greinitialformat#1{%
+{\fontsize{\antfourinitialsize}{\antfourinitialsize}\selectfont #1}%
+}
+\preantfour
+\gresetfirstlineaboveinitial{\footnotesize{4 Ant.}}{\small{4 Ant.}}
+\setsecondannotation{\small{\antfourlinetwo}}
+\includescore{\antfourtex}
+}
+\translation[]{\normalsize \antfourtranslation}
+%\vspace{-3.5ex}
+\begin{center}{\Large \psalmfour}\end{center}
+{\prepsalmfour
+\includescore{\psalmfourtex}
+}
+\medskip
+\begin{psalmfourcols}
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}[1]
+\psalmfourverses
+\end{psalmverses}
+}
+\selectlanguage{american}
+\colchunk{\vspace{-12pt}\small%
+\begin{psalmverses}[0]
+\psalmfourtranslation
+\end{psalmverses}
+}
+\selectlanguage{latin}
+\end{psalmfourcols}
+\medskip
+{\noindent\emph{Repeat antiphon.}\\}
+\medskip
+\pagebreak
+%\hrule
+\medskip
+
+{\def\greinitialformat#1{%
+{\fontsize{\antfiveinitialsize}{\antfiveinitialsize}\selectfont #1}%
+}
+\preantfive
+\gresetfirstlineaboveinitial{\small{5 Ant.}}{\footnotesize{5 Ant.}}
+\setsecondannotation{\small{\antfivelinetwo}}
+\includescore{\antfivetex}
+}
+%\vspace{-4ex}
+\translation[]{\normalsize \antfivetranslation}
+\vspace{-2ex}
+\begin{center}{\Large \psalmfive}\end{center}
+{\prepsalmfive
+\includescore{\psalmfivetex}
+}
+%\begin{multicols}{2}
+%\vspace{-1ex}
+%\begin{Parallel}[v]{}{}
+% default colwidth is 265pt
+%colwidths={1=262pt},rulebetween
+\smallskip
+\begin{psalmfivecols}
+%\ParallelLText
+\colchunk{%
+\vspace{-12pt}
+\begin{psalmverses}[1]
+\psalmfiveverses
+\end{psalmverses}
+}
+\selectlanguage{american}
+%\ParallelRText{%
+\colchunk{%
+\vspace{-12pt}
+%\small
+\sloppy
+\begin{psalmverses}[0]
+\psalmfivetranslation
+\end{psalmverses}}
+\selectlanguage{latin}
+\end{psalmfivecols}
+\medskip
+\ifx\preantfivetwo\undefined
+{\noindent\emph{Repeat antiphon.}\\}
+\else
+{\preantfivetwo
+\gresetfirstlineaboveinitial{\small 5 Ant.}{\small 5 Ant.}
+\setsecondannotation{\small \oldstylenums{\antfivelinetwo}}
+\def\greinitialformat#1{%
+{\fontsize{\antfivefontsizetwo}{\antfivefontsizetwo}\selectfont #1}%
+}
+\includescore{\antfivetex}}%
+\fi
+
+\bigskip
+\hrule
+\bigskip
+
+\normalsize
+\begin{center}{\large\textbf Chapter.}\end{center}
+% default width is 265pt
+% ,colwidths={1=253pt}
+\begin{parcolumns}[rulebetween]{2}
+\colchunk{\sloppy\chapter}
+\colchunk{\sloppy \dropcap{american}{\chaptertranslation}}
+\end{parcolumns}
+\bigskip
+\hrule
+\bigskip
+%\pagebreak
+
+{\gresetfirstlineaboveinitial{\small{Hymn.}}{\small{Hymn.}}
+\setsecondannotation{\small{\hymnlinetwo}}
+\prehymn
+\includescore{\hymntex}
+}
+\normalsize
+\selectlanguage{american}
+\begin{multicols}{2}
+\begin{psalmverses}
+{\hymntranslation}
+\end{psalmverses}
+\end{multicols}
+\medskip
+\selectlanguage{latin}
+
+{\greblockcustos\includescore{\vrtex}}
+\translation[]{
+\Vbar{}. \vtranslation{}\\
+\Rbar{}. \rtranslation{}
+}
+\pagebreak
+\begin{center}{\large Magnificat.}\end{center}
+\vspace{-1ex}
+
+% We set VII above the initial.
+{\premag
+\def\greinitialformat#1{%
+{\fontsize{\magfontsize}{\magfontsize}\selectfont #1}%
+}
+\gresetfirstlineaboveinitial{\small At Magn.}{\small At Magn.}
+\setsecondannotation{\small \oldstylenums{\magantlinetwo}}
+
+% We type a text in the top right corner of the score:
+%\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
+
+% and finally we include the score. The file must be in the same directory as this one.
+\includescore{MagnificatAntiphon.tex}}%
+\vspace{-3ex}
+\translation[]{\maganttranslation}
+%\smallskip
+%\hrule
+
+\normalsize
+%\pagebreak
+{\premagverses
+\begin{magnificat}{\magtex}
+\vspace{-3ex}
+\magverses
+\end{magnificat}
+}
+\ifx\premagtwo\undefined
+{\vspace{-1ex}\noindent\emph{Repeat antiphon.}\\}
+\else
+{\premagtwo
+\gresetfirstlineaboveinitial{\small At Magn.}{\small At Magn.}
+\setsecondannotation{\small \oldstylenums{\magantlinetwo}}
+\def\greinitialformat#1{%
+{\fontsize{\magfontsizetwo}{\magfontsizetwo}\selectfont #1}%
+}
+\includescore{MagnificatAntiphon.tex}}%
+\fi
+
+\hrule
+\smallskip
+\begin{center}{\large Collect.}\end{center}
+% default width is 265pt
+%\sloppy
+%,colwidths={1=220pt}
+\begin{parcolumns}[rulebetween]{2}
+\sloppy
+\prayer{\collect}{\collecttranslation}
+\end{parcolumns}
+\bigskip
+
+\setspaceafterinitial{0.3mm plus 0em minus 0em}
+\setspacebeforeinitial{0.3mm plus 0em minus 0em}
+\gresetfirstlineaboveinitial{\small 6.}{\small 6.}
+\setsecondannotation{}
+\includescore{\benedicamusdominotex}
+\ifx\benedicamusdominotexalt\undefined
+{}
+\else
+{
+\hspace{3ex}\emph{or:}\\
+\gresetfirstlineaboveinitial{\small 5.}{\small 5.}
+\includescore{\benedicamusdominotexalt}
+}
+\fi
+
+%\bigskip
+\begin{parcolumns}[rulebetween]{2}
+\selectlanguage{latin}%
+\colchunk{\Vbar{}. Fidélium ánimæ per misericórdiam Déi requiéscant in páce.}
+\selectlanguage{american}%
+\colchunk{\Vbar{}. May the souls of the faithful departed through the mercy of God rest in peace.}
+\selectlanguage{latin}%
+\colplacechunks{}
+\colchunk{\Rbar{}. Amen.}
+\colchunk{\Rbar{}. Amen.}
+\end{parcolumns}
+\end{document}

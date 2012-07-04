@@ -1,0 +1,22 @@
+% just do one define that takes the psalm num as an argument
+
+\def\parcolumnsoptions{[rulebetween]}
+%109 & 110 are just rulebetween
+\ifnum\psalmnum=111
+\def\parcolumnsoptions{[rulebetween,colwidths={1=252pt}]}
+\fi
+\ifnum\psalmnum=112
+\def\parcolumnsoptions{[rulebetween,colwidths={1=290pt}]} %278 or 285
+\fi
+\ifnum\psalmnum=113
+\def\parcolumnsoptions{[rulebetween,colwidths={1=266pt}]}
+\fi
+%116 is just rulebetween
+%121 is just rulebetween
+%129 & 131 ????
+\ifnum\psalmnum=126
+\def\parcolumnsoptions{[rulebetween,colwidths={1=260pt}]}
+\fi
+\ifnum\psalmnum=147
+\def\parcolumnsoptions{[rulebetween,colwidths={1=285pt}]}
+\fi

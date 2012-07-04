@@ -1,0 +1,36 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{magnificat}
+\usepackage{xkeyval}
+\usepackage{ifthen}
+
+%\define@boolkey+{magnificat}{solemn}[false]{}{\PackageWarning{magnificat}{erroneous solemn input}
+%\define@cmdkey{magnificat}{tone}{}
+
+\newif\ifsolemn
+\DeclareOptionX{solemn}{\solemntrue}
+\DeclareOptionX{tone}[undefined]{\def\tone{#1}}
+%\ExecuteOptionsX{solemn}
+%\ExecuteOptionsX{tone}
+\ProcessOptionsX\relax
+
+\IfBeginWith{\tone}{1}{%
+\newcommand{\maccents}{2}\newcommand{\mprep}{0}%
+\newcommand{\taccents}{1}\newcommand{\tprep}{2}}{
+ \IfBeginWith{\tone}{2}{%
+ \newcommand{\maccents}{1}\newccomand{\mprep}{0}%
+ \newcommand{\taccents}{1}\newcommand{\tprep}{1}}{
+  \IfBeginWith{\tone}{3}{%
+  \newcommand{\maccents}{2}\newcommand{\mprep}{0}%
+  \newcommand{\taccents}{1}\newcommand{\tprep}{1}%
+  % a2 and g have 2 tprep, g2 has 3 tprep
+  }{\IfBeginWith{\tone}{4}{%
+   \
+  }{}
+}}}
+
+\ifsolemn
+{
+%solemn
+}\else{
+%simple
+}\fi

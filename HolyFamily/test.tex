@@ -1,0 +1,84 @@
+﻿% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper} % or letterpaper (US) or a5paper or....
+\usepackage{gregoriotex} % for gregorio score inclusion
+
+\input{../gsp-spaces}
+\def\greinitialformat#1{{\fontsize{37}{37}\selectfont #1}}
+%small > footnotesize > scriptsize > tiny
+
+
+\setgrefactor{17}
+
+\usepackage[libertine]{../mypackage}
+
+
+\marginsize{25pt}{25pt}{25pt}{30pt}
+\pagestyle{fancy} % no header or footers
+\let\oldheadrulewidth\headrulewidth
+\renewcommand\headrulewidth{0pt}
+%\cfoot{\thepage}
+
+\definepsalm{1}{113}{4}{A*}
+\def\psalmoneafterant{F}
+\def\preantone{}
+\def\prepsalmone{}
+\newcommand{\antoneinitialsize}{33}
+\newcommand{\antonetex}{Ant1-PostTriduum}
+\newcommand{\antoneinitial}{P}
+\newcommand{\antonetranslation}{After three days they found Jesus in the temple, sitting in the midst of the doctors, hearing them, and asking them questions.\vspace{0ex plus 0ex minus 3ex}}
+
+
+% here we begin the document
+\begin{document}
+{\def\greinitialformat#1{%
+{\fontsize{\antoneinitialsize}{\antoneinitialsize}\selectfont #1}%
+}
+\preantone
+\def\annot{\small{1 Ant.}}
+\def\annottwo{\small{\antonelinetwo}}
+\setinitialspacing{\antoneinitial}
+
+\includescore{\antonetex}
+}
+%\vspace{-1ex}
+\if\psalmoneafterant T%
+\translation[]{\normalsize \antonetranslation}
+\vspace{-1ex}
+\begin{center}{\Large \psalmone}\end{center}
+\fi
+{\prepsalmone
+\includescore{\psalmonetex}
+}
+\medskip
+
+\normalsize
+%\vspace{-20pt}
+\setlength{\columnsep}{18pt}
+\setlength{\columnseprule}{.4pt}
+\beginpsalmonecols
+\colchunk{%\vspace{-12pt}%
+\begin{psalmverses}[\ifx\psalmonebeginversetwo\undefined 1\else\if\psalmonebeginversetwo T2\else 1\fi\fi]
+\input{\psalmoneversestex}
+\end{psalmverses}
+}
+
+\selectlanguage{american}
+%\columnbreak
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}
+\input{\psalmonetranslationtex}
+\end{psalmverses}
+}
+\selectlanguage{latin}
+\endpsalmonecols
+\medskip
+{\noindent\emph{Repeat antiphon.}\\}
+\end{document}

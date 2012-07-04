@@ -1,0 +1,22 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Sit nomen Domini;
+office-part: Ant 4;
+occasion: Sunday;
+date: 2011;
+transcriber: Benjamin Bloomfield;
+transcription-date: 2011;
+style: modern;
+%initial-style:0;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3) SIT(ii) nó(g')men(h) Dó(ij)mi(i)ni(h.) <v>\greheightstar</v>(,) be(hg)ne(f)díc(g_h)tum(ih) in(f) saé(e')cu(e)la.(e.) (::)
+E(i) u(i) o(j) u(i) a(h) e.(gh..) (::)

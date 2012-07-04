@@ -1,0 +1,257 @@
+﻿\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{definepsalms}
+
+\usepackage{xstring}
+
+\newcommand{\numbertoword}[1]{%
+\ifnum1=#1%
+one%
+\fi%
+\ifnum2=#1%
+two%
+\fi%
+\ifnum3=#1%
+three%
+\fi%
+\ifnum4=#1%
+four%
+\fi%
+\ifnum5=#1%
+five%
+\fi%
+}
+
+\newcommand{\numberplusonetoword}[1]{%
+\ifnum#1=1%
+two%
+\fi%
+\ifnum#1=2%
+three%
+\fi%
+\ifnum#1=3%
+four%
+\fi%
+\ifnum#1=4%
+five%
+\fi%
+}
+
+\newcommand{\definepsalm}[4]{
+% 1 - antiphon number, 1-5
+% 2 - psalm number, e.g., 109
+% 3 - psalm tone, e.g., 8
+% 4 - psalm tone variation, e.g., G
+% \psalmclef can be used to append -clef{\psalmclef}
+% \psalmbeginversetwo can be defined as T to append -verse2
+
+% defines psalmONE, psalmONEtone, psalmONEend, antONElinetwo, psalmONEtexbeg, psalmONEtex, psalmONEverses, psalmONEtranslation, psalmONEcoloptions
+% sets up environment psalmONEcols
+
+%maybe instead of setting up different environments, just define the options and have it expand them!
+
+% define macro names
+%\def\psalmMASTERend{\psalmoneend} % this is #4, but how will we deal with peregrinus?
+%\def\psalmMASTERcols{psalmonecols}
+\edef\antnum{\numbertoword{#1}}
+
+\expandafter\edef\csname psalm\antnum\endcsname{Psalm #2.}
+\expandafter\edef\csname psalm\antnum tone\endcsname{#3}
+\expandafter\edef\csname psalm\antnum end\endcsname{#4}
+%\def\emptypsalmend{per}
+\if\csname psalm\antnum tone\endcsname p % must be T. Per.
+\expandafter\def\csname ant\antnum linetwo\endcsname{T. Per.}
+\expandafter\def\csname psalm\antnum tone\endcsname{per}
+\expandafter\def\csname psalm\antnum end\endcsname{}
+\else
+\expandafter\edef\csname ant\antnum linetwo\endcsname{\csname psalm\antnum tone\endcsname. #4}
+\fi
+
+\ifx\psalmclef\undefined%
+\def\altclef{}%
+\else%
+\edef\altclef{-clef\psalmclef}%
+\fi
+
+\ifx\psalmbeginversetwo\undefined\else\if\psalmbeginversetwo T
+\expandafter\edef\csname psalm\antnum beginversetwo\endcsname{\psalmbeginversetwo}
+\fi\fi
+
+\edef\expandedend{#4}
+\edef\nostarend{#4}
+\edef\mytempa{#4}
+\StrSubstitute{\mytempa}{*}{star}[\expandedend]
+\StrSubstitute{\mytempa}{*}{}[\nostarend]
+\expandafter\edef\csname psalm\antnum texbeg\endcsname{../psalms/Psalm#2-\csname psalm\antnum tone\endcsname}
+\expandafter\edef\csname psalm\antnum tex\endcsname{\csname psalm\antnum texbeg\endcsname\expandedend\ifx\psalmbeginversetwo\undefined\else\if\psalmbeginversetwo T-verse2\fi\fi\altclef}
+\expandafter\edef\csname psalm\antnum versestex\endcsname{%
+\csname psalm\antnum texbeg\endcsname\nostarend-verses\ifx\psalmbeginversetwo\undefined\else\if\psalmbeginversetwo T2\fi\fi
+}
+\expandafter\edef\csname psalm\antnum translationtex\endcsname{%
+../psalms/psalm#2-verses-en
+}
+
+% define the parcolumn options
+\expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween]{2}}
+\expandafter\def\csname endpsalm\antnum cols\endcsname{\end{parcolumns}}
+%\expandafter\def\csname psalm\antnum coloptions\endcsname{rulebetween}
+%109 & 110 are just rulebetween
+\ifnum#2=109
+\expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=272pt}]{2}}%262
+\fi
+\ifnum#2=111
+\expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=252pt}]{2}}
+%\expandafter\def\csname psalm\antnum coloptions\endcsname{rulebetween,colwidths={1=252pt}}
+\fi
+\ifnum#2=112
+\ifx\csname psalm\antnum translationsmall\endcsname\undefined
+\expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=278pt}]{2}}
+\else\if\csname psalm\antnum translationsmall\endcsname T%
+\expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=290pt}]{2}} %290 if small
+\else
+\expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=278pt}]{2}} %same as above
+\fi\fi
+%\expandafter\def\csname psalm\antnum coloptions\endcsname{rulebetween,colwidths={1=278pt}} %278 or 285 or 290
+\fi
+\ifnum#2=113
+\ifx\csname psalm\antnum translationsmall\endcsname\undefined
+\expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=267pt}]{2}} % had been 266
+\else\if\csname psalm\antnum translationsmall\endcsname T%
+\expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=281pt}]{2}} %281 if small
+\else
+\expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=267pt}]{2}} %same as above
+\fi\fi
+%\expandafter\def\csname psalm\antnum coloptions\endcsname{rulebetween,colwidths={1=266pt}}
+\fi
+%116 is just rulebetween
+%121 is just rulebetween
+\ifnum#2=125
+\ifx\csname psalm\antnum translationsmall\endcsname\undefined\else\if\csname psalm\antnum translationsmall\endcsname T%
+\expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=290pt}]{2}}
+\fi\fi
+\fi
+%129 & 131 ???g? % I should at least do something for translation small
+\ifnum#2=126
+\expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=253pt}]{2}}
+%\expandafter\def\csname psalm\antnum coloptions\endcsname{rulebetween,colwidths={1=260pt}}
+\fi
+%129 & 131 ???g? % I should at least do something for translation small
+\ifnum#2=129
+\ifx\csname psalm\antnum translationsmall\endcsname\undefined\else\if\csname psalm\antnum translationsmall\endcsname T%
+\expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=292pt}]{2}} %292 if small
+\fi\fi
+\fi
+\ifnum#2=131
+\ifx\csname psalm\antnum translationsmall\endcsname\undefined\else\if\csname psalm\antnum translationsmall\endcsname T%
+\expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=292pt}]{2}} %292 if small
+\fi\fi
+\fi
+\ifnum#2=138
+\ifx\csname psalm\antnum translationsmall\endcsname\undefined
+\expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=260pt}]{2}}
+\else\if\csname psalm\antnum translationsmall\endcsname T%
+\expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=265pt}]{2}} %292 if small
+\else
+\expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=260pt}]{2}}
+\fi\fi
+\fi
+\ifnum#2=147
+\expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=285pt}]{2}}
+%\expandafter\def\csname psalm\antnum coloptions\endcsname{rulebetween,colwidths={1=285pt}}
+\fi
+
+% change the standard vespers file to use \psalmXXXcoloptions
+%\newenvironment\expandafter{\psalmMASTERcols}{\begin{parcolumns}\parcolumnsoptions}{\end{parcolumns}}
+}
+
+\newcommand{\definemag}[2]{
+%1 - psalm tone, e.g., 8
+%2 - ending, e.g., G
+\edef\magtone{#1}
+\edef\magend{#2}
+\newcommand{\magant}{MagnificatAntiphon}
+\newcommand{\magantlinetwo}{Ant. \magtone. \magend}
+\ifx\maggrassi\undefined\def\maggrassi{F}\fi
+\StrSubstitute{\magend}{*}{star}[\expandedendmag]
+\StrSubstitute{\magend}{*}{}[\nostarendmag]
+\ifx\psalmclef\undefined%
+%psalmclef should be something like c3
+\def\altclef{}%
+\else%
+\edef\altclef{_\psalmclef}%
+\fi
+\def\magpost{}
+\if\maggrassi T\def\magpost{_grassi}\fi
+\newcommand{\magtex}{../psalms/Magnificat\if\magsolemn Tsolemn\else simple\fi\magtone\expandedendmag\altclef\magpost%
+\ifx\magoneline\undefined\else\if\magoneline ToneLine\fi\fi}
+\newcommand{\magverses}{%
+\ifx\magoneline\undefined\else\if\magoneline T\vspace{-15pt}\fi\fi
+\input{../psalms/magnificat-\magtone\nostarendmag\if\magsolemn Tsolemn\else simple\fi\if\maggrassi T-grassi\fi-verses}%
+}
+
+}
+
+\newcommand{\definebenedicamusdomino}[2]{
+% i would like something like [class=1,vespers=2,advent]
+% 1 - class--1,2, or 3,mary,advent,lent,easter
+% 2 - vespers--1 or 2
+
+\edef\mytempa{#1}
+\edef\mytempb{#2}
+% if #1 is number
+\IfInteger{\mytempa}{%
+  \ifnum\mytempa=1%
+    \def\append{1class}
+    \ifnum\mytempb=1
+      \def\benedicamusdominotone{2.}
+      \edef\append{\append 1stvespers}
+    \fi
+    \ifnum\mytempb=2
+      \def\benedicamusdominotone{6.}
+      \edef\append{\append 2ndvespers}
+      \def\benedicamusdominotonealt{5.}
+    \fi
+  \fi
+  \ifnum\mytempa=2
+    \def\append{2class}
+    \ifnum\mytempb=1
+      \def\benedicamusdominotone{2.}
+      \edef\append{\append 1stvespers}
+    \fi
+    \ifnum\mytempb=2
+      \def\benedicamusdominotone{8.}
+      \edef\append{\append 2ndvespers}
+    \fi
+  \fi
+  \ifnum\mytempa=3
+    \def\benedicamusdominotone{2.}
+    \def\append{3class}
+  \fi
+}{%
+  \def\benedicamusdominotone{1.}
+  \def\append{Sundays}
+  \IfBeginWith{\mytempa}{blessedvirgin}{\def\mytempa{mary}}{}
+  \IfBeginWith{\mytempa}{advent}{\def\mytempa{lent}}{}
+  \IfBeginWith{\mytempa}{paschal}{\def\mytempa{easter}}{}
+  \IfBeginWith{\mytempa}{mary}{%
+    \def\benedicamusdominotone{1.}
+    \def\append{blessedVirgin}
+  }{}
+  \IfBeginWith{\mytempa}{lent}{%
+    \def\benedicamusdominotone{6.}
+    \def\append{SundaysOfAdventAndLent}
+  }{}
+  \IfBeginWith{\mytempa}{easterday}{%
+      \def\benedicamusdominotone{\Vbar{}.}
+      \def\append{Easter}
+  }{
+    \IfBeginWith{\mytempa}{easter}{%
+      \def\benedicamusdominotone{7.}
+      \def\append{SundaysOfPaschalTime}
+    }{}
+  }
+}
+\edef\benedicamusdominotex{../BenedicamusDomino/BenedicamusDomino_\append}
+\ifx\benedicamusdominotonealt\undefined\else
+\edef\benedicamusdominotexalt{\benedicamusdominotex Alt}
+\fi
+}

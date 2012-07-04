@@ -1,0 +1,75 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\newcommand{\comheadingtext}{Commemoration for 9th Sunday after Pentecost}
+
+\newcommand{\latincomcollect}{Páteant aures misericórdiæ tuæ Dómine précibus supplicántium~:~\gredagger{} et ut peténtibus desideráta concédas,~* fac eos quæ tibi sunt plácita postuláre. Per Dóminum nostrum.}
+\newcommand{\englishcomcollect}{Let Thy merciful ears, O Lord, be open to the prayers of Thy suppliants: and that Thou mayest grant their desire to those that seek; make them ask such things as please Thee. Through our Lord.}
+
+\newcommand{\englishcommagantiphon}{It is written: My house is the house of prayer for all nations; but you have made it a den of thieves.  And He was teching daily in the temple.}
+
+\newcommand{\commagantlinetwo}{Ant. 8. G}
+\newcommand{\commaganttex}{MagnificatAntiphonPentecost9.tex}
+
+\newcommand{\commvrtex}{Dirigaturvr.tex}
+\newcommand{\commvtranslation}{Let my prayer be directed, O Lord.}
+\newcommand{\commrtranslation}{As incense in Thy sight.}
+
+\setgrefactor{17}
+
+\setspaceafterinitial{5.5mm plus 0em minus 0em}
+\setspacebeforeinitial{5.5mm plus 0em minus 0em}
+
+% Here we set the initial font. Change 43 if you want a bigger initial.
+\def\greinitialformat#1{%
+{\fontsize{35}{35}\selectfont #1}%
+}
+
+%\smallskip
+%\hrule
+%\smallskip
+%\pagebreak
+\selectlanguage{latin}
+% The title:
+\begin{center}{\large \comheadingtext.}\end{center}
+\vspace{-1ex}
+% Here we set the space around the initial.
+% Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
+
+% We set red lines here, comment it if you want black ones.
+%\redlines
+
+% We set VII above the initial.
+{\gresetfirstlineaboveinitial{\small At Magn.}{\small At Magn.}
+\setsecondannotation{\small \oldstylenums{\commagantlinetwo}}
+
+% We type a text in the top right corner of the score:
+%\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
+
+% and finally we include the score. The file must be in the same directory as this one.
+%\normalsize
+%\fontsize{12.35}{12.35}\selectfont
+\large
+\includescore{\commaganttex}}%
+%\bigskip
+%\vspace{-4ex}
+\translation[]{\englishcommagantiphon}
+\bigskip
+{\greblockcustos\includescore{\commvrtex}}
+\vspace{-4ex}
+\translation[]{
+\Vbar{}. \commvtranslation{}\\
+\Rbar{}. \commrtranslation{}%
+}%
+%\smallskip
+\vspace{-2ex}
+\begin{center}{\large Collect.}\end{center}
+% default width is 265pt
+%\sloppy
+%,colwidths={1=220pt}
+\begin{parcolumns}[rulebetween]{2}
+\sloppy
+\prayer{\latincomcollect}{\englishcomcollect}
+\end{parcolumns}

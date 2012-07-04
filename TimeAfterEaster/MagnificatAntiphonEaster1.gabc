@@ -1,0 +1,23 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Post díes octo;
+office-part: Magnificat Antiphon;
+mode: 8c;
+occasion: Low Sunday (Octave of Easter);
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: At Magn.;
+annotation: 8. c;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)POst(h) dí(h)es(h) o(hih)cto,(hgh) <v>\greheightstar</v>(,) já(hg)nu(f)is(h) cláu(g_f)sis,(e.) (;) in(f)grés(d')sus(f) Dó(h)mi(g)nus(e_f) (,) dí(d')xit(f) é(h)is :(h.) (;) Pax(g') vó(h)bis,(f'_) (,) al(f)le(e')lú(f)ia,(g') al(f)le(d)lú(ff)ia.(e.) (::) E(h) u(h) o(f) u(h) a(i) e.(h.) (::)

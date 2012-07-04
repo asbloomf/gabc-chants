@@ -1,0 +1,52 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\newcommand{\chapter}{\dropcap{latin}{Caríssimi~: Omne quod natum est ex Deo, víncit} \textbf{mun}\-dum~:~\dag{} et hæc est victória quæ \emph{vincit} \textbf{mun}\-dum,~* fides \textbf{no}\-stra.}
+\newcommand{\chaptertranslation}{Dearly beloved, Whatsoever is born of God, overcometh the world and this is the victory which overcometh the world, our faith.}
+
+\newcommand{\hymn}{Ad régias Agni dápes}
+\newcommand{\vr}{Máne nobíscum Dómine}
+
+\newcommand{\headingtext}{Low Sunday.}
+\newcommand{\maganttex}{MagnificatAntiphonEaster1.tex}
+
+\newcommand{\latincollect}{Præsta quaésumus, omnípotens Deus~:~\dag{} ut qui paschália festa perégimus,~* hæc, te largiénte, móribus et vita teneámus. Per Dóminum nostrum.}
+\newcommand{\englishcollect}{Grant, we beseech Thee, almighty God, that we who have celebrated the Paschal Feast, may, by Thy bounty, retain its fruits in our daily habits and behaviour. Through our Lord.}
+
+\newcommand{\englishmagantiphon}{%
+%do this negative vspace if the last line on the antiphon gabc extends to the end
+%\vspace{-3ex}%
+After eight days, the doors being shut, the Lord entered and said to them: Peace be to you, alleluia, alleluia.}
+
+\def\magsolemn{F}
+\def\magoneline{T}
+\def\psalmclef{c3}
+\newcommand{\magantinitial}{P}
+\definemag{8}{c}
+
+\newcommand{\magmedianttermination}{\medianttermination{Mediant of 1 accent.}{Termination of 1 accent with 2 preperatory syllables.}}
+
+\newcommand{\premagant}{%
+%\normalsize
+\large%\greblockcustos
+}
+
+\newcommand{\magantinitialsize}{38}
+
+\newcommand{\pretranslation}{%
+%\bigskip
+%\vspace{-4ex}
+}
+
+\newcommand{\premagverses}{\normalsize
+%\greblockcustos
+\setgrefactor{15}}
+
+\definebenedicamusdomino{easter}{}
+
+\input{../vespersmagnificat}

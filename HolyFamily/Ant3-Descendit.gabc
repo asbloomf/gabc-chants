@@ -1,0 +1,23 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Descendit;
+office-part: 3 Antiphon;
+mode: 8G;
+occasion: Feast of the Holy Family;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: 3. Ant.;
+annotation: 8. G;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+(c4)DE(g)scén(gf)dit(d) <v>\greheightstar</v>() Jé(e_f)sus(gh) cum(h') é(g)is,(g'_) (,) et(g) vé(f')nit(h) Ná(j_k)za(j)reth,(ji/jkj.) (;) et(k) é(ji)rat(gh) súb(j_h)di(i)tus(h) íl(g.)lis.(g.) (::z)
+
+E(j) u(j) o(i) u(j) a(h) e.(g.) (::)

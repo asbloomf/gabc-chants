@@ -1,0 +1,23 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Quando natus es;
+office-part: 2 Antiphon;
+mode: 3a2;
+occasion: Octave of Christmas (Circumcision);
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: 2 Ant.;
+annotation: 3. a2;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+(c4)QUan(e)do(ed) ná(g)tus(hj) es(j'_) <v>\greheightstar</v>(,) in(j)ef(i')fa(g)bí(i')li(j)ter(h) ex(gf) Vír(g_h)gi(h)ne,(g.) (;) tunc(g) im(g)plé(i)tæ(j) sunt(h_g_h_) Scrip(gh)tú(e.)ræ :(e.) (:) si(g)cut(h) plú(j')vi(i)a(jkj) in(i') vél(j)lus(h') de(h)scen(g')dí(i)sti,(h.) (;) ut(h) sál(j')vum(i) fá(j')ce(i)res(g) gé(hv_GF)nus(g) hu(gf)má(e.)num :(e.) (:) te(h_i) lau(g)dá(gf)mus(d_e) Dé(g)us(ghg) nó(e.)ster.(e.) (::)
+
+E(j) u(j) o(ji) u(hi) a(h) e.(gh..) (::)

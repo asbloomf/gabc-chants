@@ -1,0 +1,58 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Pangámus Nério;
+office-part: Hymn for St Philip Neri;
+mode: 3;
+occasion: St Philip Neri;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: Hymn.;
+annotation: 3;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)VE(e)ni(f) Cre(ed)á(e)tor(fe) Spí(h')ri(i)tus,(h.) (;)
+Mén(h)tes(e') tu(f)ó(h)rum(ih) ví(i')si(j)ta :(i.) (:)
+Im(h)ple(ij) su(hg)pér(fe)na(hi) grá(e')ti(f)a(h.) (;)
+Quæ(gh) tu(f) cre(ed)á(f)sti(fgf) pé(e')cto(d)ra.(e.) (::)
+
+2. Qui(e) dí(f)ce(ed)ris(e) Pa(fe)rá(h')cli(i)tus,(h.) (;)
+Al(h)tís(e')si(f)mi(h) dó(ih)num(i') Dé(j)i,(i.) (:)
+Fons(h) ví(ij)vus,(hg) í(fe)gnis,(hi) cá(e')ri(f)tas,(h.) (;)
+Et(gh) spi(f)ri(ed)tá(f)lis(fgf) ún(e')cti(d)o.(e.) (::)
+
+3. Tu(e) sep(f)ti(ed)fór(e)mis(fe) mú(h')ne(i)re,(h.) (;)
+Dí(h)g<i>i</i>(h)tus(e') pa(f)tér(h)næ(ih) déx(i')te(j)ræ,(i.) (:)
+Tu(h) ri(ij)te(hg) pro(fe)mís(hi)sum(e') Pá(f)tris,(h.) (;)
+Ser(gh)mó(f)ne(ed) dí(f)tans(fgf) gút(e')tu(d)ra.(e.) (::)
+
+4. Ac(e)cén(f)de(ed) lú(e)men(fe) sén(h')si(i)bus,(h.) (;)
+In(h)fún(e')d<i>e</i>(f) a(f')mó(h)rem(ih) cór(i')di(j)bus,(i.) (:)
+In(h)fír(ij)ma(hg) nó(fe)stri(hi) cór(e')po(f)ris(h.) (;)
+Vir(gh)tú(f)te(ed) fír(f)mans(fgf) pér(e')pe(d)ti.(e.) (::)
+
+5. Hó(e)stem(f) re(ed)pél(e)las(fe) lón(h')gi(i)us,(h.) (;)
+Pa(h)cém(e')que(f) dó(h)nes(ih) pró(i')ti(j)nus :(i.) (:)
+Du(h)ctó(ij)re(hg) sic(fe) te(hi) praé(e')vi(f)o,(h.) (;)
+Vi(gh)té(f)mus(ed) óm(f)ne(fgf) nó(e')xi(d)um.(e.) (::)
+
+6. Per(e) te(f) sci(ed)á(e)mus(fe) da(h') Pá(i)trem,(h.) (;)
+Nos(h)cá(e')mus(f) at(h)que(ih) Fí(i')li(j)um,(i.) (:)
+Té(h)qu<i>e</i>(i') u(j)tri(hg)ús(fe)que(hi) Spí(e')ri(f)tum(h.) (;)
+Cre(gh)dá(f)mus(ed) óm(f)ni(fgf) tém(e')po(d)re.(e.) (::)
+
+7. Dé(e)o(f) Pá(ed)tri(e) sit(fe) gló(h')ri(i)a,(h.) (;)
+Et(h) Fí(e')li(f)o,(h) qu<i>i</i>(i) a(h) mór(i')tu(j)is(i.) (:)
+Sur(h)ré(ij)xit,(hg) ac(fe) Pa(hi)rá(e')cli(f)to,(h.) (;)
+In(gh) sæ(f)cu(ed)ló(f)rum(fgf) saé(e')cu(d)la.(e.) (::)
+
+A(efe)men(de..) (::)

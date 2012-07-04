@@ -1,0 +1,25 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Assúmpta est María in caélum;
+office-part: 1 Antiphon;
+mode: 7a;
+occasion: Assumption;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: 1 Ant.;
+annotation: 7. a;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)AS(e)súm(e')pta(e) est(g') Ma(h)rí(i')a(j) in(h) caé(ii)lum :(g.) <v>\greheightstar</v>(;) gáu(hg)dent(e_f) An(h')ge(h)li,(g.) (;) lau(g_h)dán(i_j)tes(i) be(hg)ne(f)dí(g')cunt(f) Dó(e)mi(e)num.(e.) (::)
+
+E(i) u(i) o(j) u(i) a(h) e.(gf..) (::)

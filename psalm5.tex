@@ -1,0 +1,68 @@
+﻿{\def\greinitialformat#1{%
+{\fontsize{\anttwoinitialsize}{\anttwoinitialsize}\selectfont #1}%
+}
+\preanttwo
+\def\annot{\small{5 Ant.}}
+\def\annottwo{\small{\anttwolinetwo}}
+\setinitialspacing{\anttwoinitial}
+
+\includescore{\anttwotex}
+}
+%\vspace{-4ex}
+\translation[]{\normalsize \anttwotranslation}
+\vspace{-1ex plus 2ex minus 1ex}
+\begin{center}{\Large \psalmtwo}\end{center}
+\vspace{-1ex plus 2ex minus 0pt}
+{\prepsalmtwo
+\includescore{\psalmtwotex}
+}
+%\begin{multicols}{2}
+%\vspace{-1ex}
+%\begin{Parallel}[v]{}{}
+% default colwidth is 265pt
+%colwidths={1=262pt},rulebetween
+\smallskip
+\beginpsalmtwocols
+%\ParallelLText
+\colchunk{%
+\vspace{-12pt}
+\begin{psalmverses}[1]
+\input{\psalmtwoversestex}
+\end{psalmverses}
+}
+\selectlanguage{american}
+%\ParallelRText{%
+\colchunk{%
+\vspace{-12pt}
+%\small
+\sloppy
+\begin{psalmverses}[0]
+\input{\psalmtwotranslationtex}
+\end{psalmverses}}
+\selectlanguage{latin}
+\endpsalmtwocols
+\medskip
+\ifx\preanttwotwo\undefined
+{\noindent\emph{Repeat antiphon.}\\ \vspace{0ex minus 1ex}}
+\else
+{\preanttwotwo
+\def\greinitialformat#1{%
+{\fontsize{\anttwofontsizetwo}{\anttwofontsizetwo}\selectfont #1}%
+}
+\def\annot{\small{5 Ant.}}
+\def\annottwo{\small{\anttwolinetwo}}
+\setinitialspacing{\anttwoinitial}
+
+\includescore{\anttwotex}}%
+\fi
+\def\nopagebreakafterpsalmtwo{T}
+\ifx\pagebreakafterpsalmtwo\undefined\else\if\pagebreakafterpsalmtwo T%
+\vspace*{-20pt}
+\pagebreak
+\def\nopagebreakafterpsalmtwo{F}
+\fi\fi
+\if\nopagebreakafterpsalmtwo T%
+\vspace{1ex plus 1.5ex minus 0.5ex}
+\hrule
+\vspace{0pt plus 1.5ex minus 0ex}
+\fi

@@ -1,0 +1,32 @@
+﻿% the point of this is to replace all the instances of master with the number like two
+
+\usepackage{xstring}
+\newcommand{\psalmfive}{Psalm \psalmfivenum.}
+\ifx\psalmfiveend\undefined% must be T. Per.
+\newcommand{\antfivelinetwo}{T. Per.}
+\def\psalmfivetone{per}
+\def\psalmfiveend{}
+\else
+\newcommand{\antfivelinetwo}{\psalmfivetone. \psalmfiveend}
+\fi
+
+\ifx\psalmfiveclef\undefined%
+\def\altclef{}%
+\else%
+\def\altclef{-clef\psalmfiveclef}%
+\fi
+
+\StrSubstitute{\psalmfiveend}{*}{star}[\expandedendfive]
+\StrSubstitute{\psalmfiveend}{*}{}[\nostarendfive]
+\newcommand{\psalmfivetexbeg}{../psalms/Psalm\psalmfivenum-\psalmfivetone}
+\newcommand{\psalmfivetex}{\psalmfivetexbeg\expandedendfive\ifx\psalmfivebeginversetwo\undefined\else\if\psalmfivebeginversetwo T-verse2\fi\fi\altclef}
+\newcommand{\psalmfiveverses}{%
+\input{\psalmfivetexbeg\nostarendfive-verses\ifx\psalmfivebeginversetwo\undefined\else\if\psalmfivebeginversetwo T2\fi\fi}
+}
+\newcommand{\psalmfivetranslation}{%
+\input{../psalms/psalm\psalmfivenum-verses-en}
+}
+
+\def\psalmnum{\psalmfivenum}
+\input{../psalms/definepsalmparcolumnsoptions}
+\expandafter\newenvironment{psalmfivecols}{\expandafter\begin{parcolumns}\parcolumnsoptions}{\end{parcolumns}}

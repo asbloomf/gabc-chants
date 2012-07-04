@@ -1,0 +1,25 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: O Doctor optime;
+office-part: Magnificat Antiphon;
+mode: 2D;
+occasion: Common of Doctors at Vespers;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: At Magn.;
+annotation: Ant. 2. D;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+(f3)O(ehhg) Dó(h)ctor(f) óp(gf)ti(ef)me,(f'_) <v>\greheightstar</v>(,) Ec(f)clé(fg)si(f)æ(f) sán(g_h)ctæ(fg) lú(ff)men,(e.) (;) be(f)á(cf)te(f) Fran(f)cí(g_h)sce,(kxiji/jkj.) (;) di(j)ví(j')næ(i) lé(h)gis(hg) a(f!gwh)má(h)tor :(e.) (:) de(eh)pre(g')cá(h)re(g') pro(f) nó(g)bis(f.) (,) Fí(e_f)li(h_g)um(e) Dé(gg)i.(f.) (::)
+
+<i>T. P.</i>() Al(e)le(ef)lú(f.)ia.(f.) (::)
+
+E(h) u(h) o(h) u(g) a(e) e.(f.) (::)

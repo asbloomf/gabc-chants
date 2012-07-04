@@ -1,0 +1,84 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+% usual packages loading:
+%\usepackage{luatextra}
+%\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper} % or letterpaper (US) or a5paper or....
+\usepackage{gregoriotex} % for gregorio score inclusion
+
+% If you use usual TeX fonts, here is a starting point:
+%\usepackage{palatino}
+%\input{glyphtounicode} \pdfglyphtounicode{f_f}{FB00} \pdfglyphtounicode{f_f_i}{FB03} \pdfglyphtounicode{f_f_l}{FB04}
+%\pdfglyphtounicode{Q_u}{E048} \pdfglyphtounicode{O_e}{0152} \pdfglyphtounicode{o_e}{0153}
+%\pdfgentounicode=1
+% to change the font to something better, you can install the kpfonts package (if not already installed). To do so
+% go open the "TeX Live Manager" in the Menu Start->All Programs->TeX Live 2010
+\input{../gsp-spaces}
+%\def\greinitialformat#1{{\fontsize{37}{37}\selectfont #1}}
+%small > footnotesize > scriptsize > tiny
+
+
+% my stuff
+\usepackage[garamond]{../mypackage}
+% end my stuff
+
+\setgrefactor{17}
+
+
+\marginsize{25pt}{25pt}{25pt}{30pt}
+\pagestyle{fancy} % no header or footers
+%\cfoot{\thepage}
+\newcommand{\heading}{December \oantiphondate.}
+\newcommand{\magantiphon}{December\oantiphondate-MagAntiphon}
+
+% here we begin the document
+\begin{document}
+\chead{\heading}
+
+% Here we set the space around the initial.
+% Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
+\setspaceafterinitial{1.2mm plus 0em minus 0em}
+\setspacebeforeinitial{1.2mm plus 0em minus 0em}
+
+% Here we set the initial font. Change 43 if you want a bigger initial.
+\def\greinitialformat#1{%
+{\fontsize{40}{40}\selectfont #1}%
+}
+
+% We set red lines here, comment it if you want black ones.
+%\redlines
+
+\begin{center}{\large Magnificat.}\end{center}
+\vspace{-1ex}
+
+{\premag
+\def\greinitialformat#1{%
+{\fontsize{\magfontsize}{\magfontsize}\selectfont #1}%
+}
+
+\def\annot{\small At Magn.}
+\def\annottwo{\small\oldstylenums{\magantlinetwo}}
+\setinitialspacing{O}
+
+% We type a text in the top right corner of the score:
+%\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
+
+% and finally we include the score. The file must be in the same directory as this one.
+\includescore{\magantiphon}}%
+%\vspace{-1ex}
+\translation[]{\maganttranslation}
+\medskip
+\hrule
+\medskip
+\medianttermination{Mediant of 1 accent with 3 preperatory syllables.}{Termination of 1 accent with 1 preperatory syllable.}
+
+\bigskip
+{\premagverses
+\begin{magnificat}{\magtex}
+%\vspace{-1ex}
+\magverses
+\end{magnificat}
+}
+{%\vspace{-1ex}
+\noindent\emph{Repeat antiphon.}\\}

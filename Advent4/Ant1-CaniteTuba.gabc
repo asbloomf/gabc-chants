@@ -1,0 +1,25 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Canite tuba;
+office-part: 1 Antiphon;
+mode: 1g;
+occasion: 4th Sunday of Advent;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: 1 Ant.;
+annotation: 1. g;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)CA(f)ni(c')te(d) tú(ixdh'!iv)ba(h'_) <v>\greheightstar</v>(,) in(h_ggf~) Sí(ixghg/h_i )on,(h_gg) (;) qui(f)a(g) pro(h')pe(g) est(f') dí(g)es(d_g) Dó(gvF'_E_D'_ew!fv_ED)mi(c!ew!fv_ED'e)ni :(ed..) (:z) ec(f)ce(f) vé(f_g)ni(f)et(c') ad(d) sal(f)ván(e)dum(c) nos,(d!ewf.) (;) al(f)le(ed)lú(ffg)ia,(f_e) al(g)le(fe)lú(d.)ia.(d.) (::)
+
+E(h) u(h) o(g) u(f) a(gh) e.(g.) (::)

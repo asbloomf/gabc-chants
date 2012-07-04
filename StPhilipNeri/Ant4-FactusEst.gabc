@@ -1,0 +1,25 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Factus est;
+office-part: 4 Antiphon;
+mode: 5a;
+occasion: St Philip Neri;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: 4 Ant.;
+annotation: 5. a;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)FA(d)ctus(d) est(ee) <v>\greheightstar</v>() in(e) cór(d)de(f) mé(h_i)o(h.) (,) qua(f)si(i) í(h)gnis(gh) ex(f)aé(ef)stu(e)ans,(d.) (;) et(d_e) de(e_f)fé(de)ci(e'_) (,) fér(h)re(ef) non(e) sús(d)ti(d)nens.(d.) (::) <i>T.P.</i> Al(e)le(ef)lú(d.)ia.(d.) (::)
+
+E(h) u(h) o(i) u(g) a(h) e.(f.) (::)

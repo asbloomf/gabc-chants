@@ -1,0 +1,43 @@
+﻿{\def\greinitialformat#1{%
+{\fontsize{\anttwoinitialsize}{\anttwoinitialsize}\selectfont #1}%
+}
+\preanttwo
+\def\annot{\small{4 Ant.}}
+\def\annottwo{\small{\anttwolinetwo}}
+\setinitialspacing{\anttwoinitial}
+
+\includescore{\anttwotex}
+}
+\translation[]{\normalsize \anttwotranslation}
+%\vspace{-3.5ex}
+\vspace{0pt minus 8pt}
+\begin{center}{\Large \psalmtwo}\end{center}
+\vspace{-2ex plus 2ex minus 2ex}
+{\prepsalmtwo
+\includescore{\psalmtwotex}
+}
+\medskip
+\beginpsalmtwocols
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}[1]
+\input{\psalmtwoversestex}
+\end{psalmverses}
+}
+\selectlanguage{american}
+\colchunk{\vspace{-12pt}\small%
+\begin{psalmverses}[0]
+\input{\psalmtwotranslationtex}
+\end{psalmverses}
+}
+\selectlanguage{latin}
+\endpsalmtwocols
+\medskip
+{\noindent\emph{Repeat antiphon.}}
+\ifx\nopagebreakbeforepsalmfive\undefined
+\pagebreak%
+\else\if\nopagebreakbeforepsalmfive T%
+\medskip\hrule%
+\else%
+\pagebreak%
+\fi\fi
+\medskip

@@ -1,0 +1,11 @@
+﻿\usepackage{xstring}
+\newcommand{\magant}{MagnificatAntiphon}
+\newcommand{\magantlinetwo}{Ant. \magtone. \magend}
+\StrSubstitute{\magend}{*}{star}[\expandedendmag]
+\StrSubstitute{\magend}{*}{}[\nostarendmag]
+\newcommand{\magtex}{../psalms/Magnificat\if\magsolemn Tsolemn\else simple\fi\magtone\expandedendmag%
+\ifx\magoneline\undefined\else\if\magoneline ToneLine\fi\fi}
+\newcommand{\magverses}{%
+\ifx\magoneline\undefined\else\if\magoneline T\vspace{-3ex}\fi\fi
+\input{../psalms/magnificat-\magtone\nostarendmag\if\magsolemn Tsolemn\else simple\fi-verses}%
+}

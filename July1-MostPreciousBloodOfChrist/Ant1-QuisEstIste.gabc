@@ -1,0 +1,27 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Quis est iste;
+office-part: 1 Antiphon;
+mode: 7a;
+occasion: Most Precious Blood of Christ;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: 1 Ant.;
+annotation: 7. a;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)QU{i}s(e') est(g) í(i)ste(h_g) <v>\greheightstar</v>(,) qui(f') vé(e)nit(f') de(h) E(f)dom,(g.) (;)
+tín(e')ctis(g) vé(i')sti(i)bus(h) de(i_j) Bós(i)ra?(g.) (:)
+I(i')ste(h) for(f')mó(g)sus(fe) in(f) stó(f_h)la(g) sú(e.)a.(e.) (::)
+
+E(i) u(i) o(j) u(i) a(h) e.(gf..) (::)

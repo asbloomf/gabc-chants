@@ -1,0 +1,24 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: EuntesIbant;
+office-part: 4 Antiphon;
+mode: 8c;
+occasion: Common of Apostles and Evangelists at II Vespers;
+date: 2012;
+transcriber: Albert Bloomfield;
+transcription-date: 2012;
+style: modern;
+annotation: 4 Ant.;
+annotation: 8. c;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+(c4)E(j)ún(j')tes(j) í(jkj)bant(jij) <v>\greheightstar</v>() et(h') flé(j)bant,(i.) (;)
+mit(g')tén(i)tes(g') sé(h)mi(f')na(h) sú(g.)a.(g.) () (::) ()
+
+E(j) u(j) o(h) u(j) a(k) e.(j.) (::)

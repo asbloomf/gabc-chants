@@ -1,0 +1,25 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Redditee ergo quæ sunt Caésaris Caésari;
+office-part: Magnificat Antiphon;
+mode: 1g;
+occasion: 22nd Sunday after Pentecost;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: At Magn.;
+annotation: Ant. 1. g;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)REd(f)di(c')te(d) er(dh)go(ixh_i) <v>\greheightstar</v>(,) quæ(h) sunt(g') Caé(h)sa(gf)ris(gh) Caé(f)sa(fv_ED)ri,(ed..) (;) et(d) quæ(fe) sunt(d) Dé(e')i(f) Dé(gh)o,(ghG'F) (,) al(e_f)le(gv_FE)lú(d.)ia.(d.) (::)
+
+E(h) u(h) o(g) u(f) a(gh) e.(g.) (::)

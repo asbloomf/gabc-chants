@@ -1,0 +1,27 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Estote fortes in bello;
+office-part: Magnificat Antiphon;
+mode: 1g2;
+occasion: Common of Apostles and Evangelists at II Vespers;
+date: 2012;
+transcriber: Albert Bloomfield;
+transcription-date: 2012;
+style: modern;
+annotation: At Magn.;
+annotation: Ant. 1. g2;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+(c4)E(f)stó(h)te(g') fór(h)tes(g') in(f) bél(gf~)lo,(d.) <v>\greheightstar</v>(;)
+et(h_i_h_) pu(g_h)gná(jk)te(jkj) cum(j) an(ji)tí(g)quo(ij) ser(ih~)pén(i)te :(h.) (:)
+et(h) ac(ghg)ci(e)pi(f)é(gh)tis(g) ré(hf~)gnum(g) æ(f)tér(fe)num,(dc)
+<v>\dag{}</v>(,) al(d)le(fe)lú(d.)ia.(d.) (::)
+<i>After Septuag</i>. <v>\dag{}</v>() dí(d)cit(fe) Dó(d)mi(d)nus.(d.) () (::) ()
+
+E(h) u(h) o(g) u(f) a(g) e.(ghg.) (::)

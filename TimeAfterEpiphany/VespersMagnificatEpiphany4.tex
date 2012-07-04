@@ -1,0 +1,44 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+%\newcommand{\chapter}{\dropcap{latin}{}}
+%\newcommand{\chaptertranslation}{}
+
+\newcommand{\hymn}{Lúcis Creátor}
+\newcommand{\vr}{Dirigátur}
+
+\newcommand{\headingtext}{4th Sunday after Epiphany.}
+\newcommand{\maganttex}{MagnificatAntiphonEpiphany4.tex}
+
+\newcommand{\latincollect}{Deus, qui nos in tantis perículis constitútos, pro humána scis fragilitáte non posse subsístere~:~\dag{} da nobis salútem mentis et córporis;~* ut ea quæ pro peccátis nostris pátimur, te adjuvánte vincámus.  Per Dóminum nostrum.}
+\newcommand{\englishcollect}{O God, who knowest us to be set in the midst of so great dangers, that by reason of the frailty of our nature, we cannot stand fast: grant us health of mind and body, that what we suffer for our sins, we may overcome by Thy help.  Through our Lord.}
+
+\newcommand{\englishmagantiphon}{Lord, save us, we perish; command, O God, and make a calm.}
+
+\def\magsolemn{F}
+\def\magoneline{F}
+\newcommand{\magantinitial}{D}
+\definemag{1}{g2}
+
+\newcommand{\magmedianttermination}{\medianttermination{Mediant of 2 accents.}{Termination of 1 accent with 2 preperatory syllables.}}
+
+\newcommand{\premagant}{%
+%\normalsize
+\large\greblockcustos
+}
+
+\newcommand{\magantinitialsize}{35}
+
+\newcommand{\pretranslation}{%
+%\bigskip
+%\vspace{-4ex}
+}
+
+\newcommand{\premagverses}{\greblockcustos\setgrefactor{17}}
+
+\input{../vespersmagnificat}

@@ -1,0 +1,25 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Unus autem ex illis;
+office-part: Magnificat Antiphon;
+mode: 1D2;
+occasion: 13th Sunday after Pentecost;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: At Magn.;
+annotation: Ant. 1. D2;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)U-(c)nus(d') au(f)tem(fe) ex(c) íl(ce)lis,(d.) <v>\greheightstar</v>(;) ut(dc~) ví(f_h)dit(ixhg/hih.) (,) qui(fg)a(h) mun(gf)dá(g)tus(fe) est,(d'_) (;) re(g)grés(f)sus(f_e) est,(c.) (;) cum(d') má(c)gna(df) vó(f/fg)ce(f'_) (,) ma(f)gní(gh)fi(g)cans(f) Dé(fe)um,(dc) al(d)le(fe)lú(d.)ia.(d.) (::)
+
+E(h) u(h) o(g) u(f) a(gf) e.(d.) (::)

@@ -1,0 +1,76 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+
+% usual packages loading:
+%\usepackage{luatextra}
+%\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper} % or letterpaper (US) or a5paper or....
+\usepackage{gregoriotex} % for gregorio score inclusion
+\usepackage{fullpage} % to reduce the margins
+\usepackage{anysize} % for marginsize
+\usepackage{multicol} % for columns
+\usepackage{lettrine} % for drop caps
+%\usepackage{wrapfig} % for wrapping figures -- can't get it to work with gregorio
+\usepackage{fancyhdr}
+
+% choose the language of the document here
+\usepackage[latin,american]{babel}
+
+% If you use usual TeX fonts, here is a starting point:
+%\usepackage{palatino}
+
+\input{../gsp-spaces}
+\setgrefactor{17}
+
+\usepackage[garamond]{../mypackage}
+%\usepackage{fontspec}
+% to change the font to something better, you can install the kpfonts package (if not already installed). To do so
+% go open the "TeX Live Manager" in the Menu Start->All Programs->TeX Live 2010
+%\fontspec[Numbers=OldStyle]{Linux Libertine O}
+%\def\greinitialformat#1{{\fontsize{37}{37}\selectfont #1}}
+%small > footnotesize > scriptsize > tiny
+
+\pagestyle{empty} % no header or footers
+\marginsize{40pt}{40pt}{40pt}{40pt}
+
+% here we begin the document
+\begin{document}
+\setlength{\columnsep}{18pt}
+\setlength{\columnseprule}{1pt}
+% The title:
+\selectlanguage{latin}
+
+% Here we set the initial font. Change 43 if you want a bigger initial.
+\def\greinitialformat#1{%
+{\fontsize{36}{36}\selectfont #1}%
+}
+
+\def\annot{Grad.}
+\def\annottwo{4. E}
+{\setinitialspacing{B}
+
+% We type a text in the top right corner of the score:
+%\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
+
+% and finally we include the score. The file must be in the same directory as this one.
+%{\centering\Large Mysterium Fídei.\\}
+%\bigskip
+\large \includescore{grad-BenedictaEtVenerabilisRepeatIntonation}}
+\bigskip
+{\def\annot{Tract.}
+\def\annottwo{2. D}
+\setinitialspacing{G}
+\large\includescore{tract-GaudeMariaRepeatIntonation}}
+\bigskip
+\hrule
+\bigskip
+{\def\annot{Offert.}
+\def\annottwo{1. f}
+\setinitialspacing{F}
+\large\includescore{offert-FelixNamqueEs}}
+\end{document}

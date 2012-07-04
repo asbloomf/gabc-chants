@@ -1,0 +1,161 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[12pt]{article} % use larger type; default would be 10pt
+
+% usual packages loading:
+%\usepackage{luatextra}
+%\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
+%\geometry{letterpaper} % or letterpaper (US) or a5paper or....
+\usepackage{gregoriotex} % for gregorio score inclusion
+%\usepackage{fullpage} % to reduce the margins
+%\usepackage{anysize} % for marginsize
+\usepackage{multicol} % for columns
+\usepackage{lettrine} % for drop caps
+%\usepackage{wrapfig} % for wrapping figures -- can't get it to work with gregorio
+\usepackage{fancyhdr}
+
+% choose the language of the document here
+\usepackage[latin,american]{babel}
+
+% If you use usual TeX fonts, here is a starting point:
+%\usepackage{palatino}
+
+\input{../gsp-spaces}
+
+\usepackage[libertine]{../mypackage}
+
+\setgrefactor{17}
+%\usepackage{fontspec}
+% to change the font to something better, you can install the kpfonts package (if not already installed). To do so
+% go open the "TeX Live Manager" in the Menu Start->All Programs->TeX Live 2010
+%\fontspec[Numbers=OldStyle]{Linux Libertine O}
+%\def\greinitialformat#1{{\fontsize{37}{37}\selectfont #1}}
+%small > footnotesize > scriptsize > tiny
+
+%\marginsize{40pt}{40pt}{25pt}{35pt}
+\pagestyle{fancy} % no header or footers
+%\setlength\headheight{15pt}
+\setlength{\columnsep}{18pt}
+\setlength{\columnseprule}{.4pt}
+
+\let\oldheadrulewidth\headrulewidth
+\renewcommand\headrulewidth{0pt}
+\setgrefactor{15}
+
+\def\heading{Te Deum}
+\def\antfilename{te-deum-solemn}
+\def\firstinitial{T}
+\def\anttranslation{%
+We praise thee, O God; we acknowledge thee to be the Lord.
+
+All the earth doth worship thee: the Father everlasting.
+
+To thee all Angels cry aloud : the Heavens, and all the Powers therein:
+
+To thee Cherubim and Seraphim continually do cry:
+
+Holy, Holy, Holy, Lord God of hosts.
+
+Heaven and earth are full of the Majesty of thy glory.
+
+The glorious choir of the Apostles,
+
+The admirable company of the Prophets,
+
+The white-robed army of Martyrs praise thee.
+
+The Holy Church throughout all the world doth acknowledge thee,
+
+The Father of an infinite Majesty,
+
+Thine adorable, true and only Son:
+
+The Holy Ghost also, the Comforter,
+
+Thou art the King of Glory, O Christ.
+
+Thou art the everlasting Son of the Father.
+
+When thou didst take upon thee to deliver man, thou didst not abhor the Virgin's womb.
+
+When thou hadst overcome the sting of death, thou didst open the kingdom of heaven to all believers,
+
+Thou sittest at the right hand of God in the glory of the Father.
+
+We believe that thou shalt come to be our judge,
+
+We therefore pray thee, help thy servants, whom thou hast redeemed with thy precious blood.
+
+Make them to be numbered with thy Saints in glory everlasting.
+
+O Lord, save thy people, and bless thine inheritance.
+
+Govern them, and lift them up for ever.
+
+Day by day we bless thee.
+
+And we praise thy name for ever; yea, for ever and ever.
+
+Deign, O Lord, this day, to keep us without sin.
+
+Have mercy on us, O Lord; have mercy on us.
+
+O Lord, let thy mercy be shown to us; as we have hoped in thee.
+
+In thee have I hoped, O Lord; let me not be confounded for ever.}
+\def\afterant{}
+
+\geometry{
+   paperwidth=216mm, paperheight=303mm,
+   left=23mm,  %% or inner=23mm
+   right=18mm, %% or outer=18mm
+   top=23mm, bottom=23mm,
+   headheight=\baselineskip,
+   headsep=7mm,
+   footskip=7mm
+}
+
+% here we begin the document
+\begin{document}
+% The title:
+\medskip
+\begin{center}{\huge \heading.}\end{center}
+\smallskip
+\begin{center}\textbf{Solemn Tone.}\end{center}
+\selectlanguage{latin}
+
+% Here we set the initial font. Change 43 if you want a bigger initial.
+\def\greinitialformat#1{%
+{\fontsize{40}{40}\selectfont #1}%
+}
+
+% We set VII above the initial.
+{\def\annot{\small{III}}
+\def\annottwo{}
+\setinitialspacing{\firstinitial}
+
+% We type a text in the top right corner of the score:
+%\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
+
+% and finally we include the score. The file must be in the same directory as this one.
+\large \includescore{\antfilename}}
+\renewcommand\headrulewidth{\oldheadrulewidth}
+\chead{\addfontfeature{Numbers=Lining}%
+\footnotesize\heading.}
+\afterant
+\medskip
+\selectlanguage{american}
+%\begin{quote}
+\selectlanguage{american}
+\begin{multicols}{2}
+%\begin{psalmverses}
+{\anttranslation}
+%\end{psalmverses}
+\end{multicols}
+%\end{quote}
+
+\end{document}

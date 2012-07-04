@@ -1,0 +1,25 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Tulit ergo paralýticus?;
+office-part: Magnificat Antiphon;
+mode: 4E;
+occasion: 18th Sunday after Pentecost;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: At Magn.;
+annotation: Ant. 4. E;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)TU(c)lit(de) er(ef)go(e') <v>\greheightstar</v>() pa(e)ra(d)lý(e')ti(d)cus(e.) (,) lé(e)ctum(d') sú(e)um(d') in(c) quo(d) ja(de)cé(c)bat,(c.) (;) ma(c_d)gní(e_f)fi(gf)cans(de) Dé(e.)um :(e.) (:) et(e') óm(g)nis(gh) plebs,(h.) ut(gf~) ví(gf)dit,(e_f) (;) dé(gf)dit(d') láu(c)dem(de~) Dé(e.)o.(e.) (::)
+
+E(h) u(g) o(h) u(ih) a(gf) e.(e.) (::)
