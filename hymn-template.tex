@@ -16,7 +16,9 @@
 %\def\greinitialformat#1{{\fontsize{37}{37}\selectfont #1}}
 %small > footnotesize > scriptsize > tiny
 
-\marginsize{35pt}{35pt}{30pt}{0pt}
+%\marginsize{35pt}{35pt}{30pt}{0pt}
+\usepackage{calc}
+\geometry{outer=35pt,inner=35pt,top=30pt+\headsep+\headheight,bottom=\footskip}
 \pagestyle{fancy} % no header or footers
 
 % here we begin the document

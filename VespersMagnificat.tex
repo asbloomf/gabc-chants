@@ -24,7 +24,9 @@
 
 \setgrefactor{17}
 
-\marginsize{25pt}{25pt}{30pt}{15pt}
+\usepackage{calc}
+%\marginsize{25pt}{25pt}{30pt}{15pt}
+\geometry{outer=25pt,inner=25pt,top=30pt+\headsep+\headheight,bottom=15pt+\footskip}
 \pagestyle{fancy} % no header or footers
 %\renewcommand\headrulewidth{0pt}
 \ifx\usepagenumbers\undefined\else\if\usepagenumbers T\cfoot{\thepage}\fi\fi
