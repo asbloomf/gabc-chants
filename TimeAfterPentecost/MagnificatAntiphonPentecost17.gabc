@@ -20,6 +20,9 @@ annotation: Ant. 4. E;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c4)QUid(e_f_e_e) vo(c_!dff.)bis(f) <v>\greheightstar</v>(,) vi(e_f)dé(g)tur(f) de(fe) Chrí(de)sto?(dc..) (;) cú(c)jus(df) fí(fe)li(de)us(e!fwg'!hv) est?(ge..) (:) Dí(ixdh'!iv)cunt(hg~) é(gh)i(gf) óm(g)nes :(ghg.) (,) Dá(e!fwg'!hv)vid.(ge..) (:) Dí(e')cit(f) é(g)is(ghg) Jé(ed/fe)sus :(dce.) (;) Quó(ixdh'!iv)mo(h)do(ghg) Dá(e_f)vid(g) in(hg~) spí(fe)ri(de)tu(e.) (;) vó(e')cat(f) é(g)um(ghg) Dó(ed)mi(f)num,(e) dí(dce)cens :(e.) (;) Dí(f)xit(fv_EC) Dó(d')mi(e)nus(d) Dó(fd)mi(e)no(f) mé(g_h)o :(g.) (;) Sé(g)de(e') a(f) déx(gh)tris(gf) mé(e.)is?(e.) (::)
+(c4)QUid(e_f_e_e) vo(c_!dff)bis(f) <v>\greheightstar</v>(,) vi(e_f)dé(g)tur(f) de(fe) Chrí(de)sto?(dc..) (;) cú(c)jus(df) fí(fe)li(de)us(e!fwg'!hv) est?(ge..) (:) Dí(ixdh'!iv)cunt(hg~) é(gh)i(gf) óm(g)nes :(ghg.) (,) Dá(e!fwg'!hv)vid.(ge..) (:) Dí(e')cit(f) é(g)is(ghg) Jé(ed/fe)sus :(dce.) (;) Quó(ixdh'!iv)mo(h)do(ghg) Dá(e_f)vid(g) in(hg~) spí(fe)ri(de)tu(e.) (;) vó(e')cat(f) é(g)um(ghg) Dó(ed)mi(f)num,(e) dí(dce)cens :(e.) (;) Dí(f)xit(fv_EC) Dó(d')mi(e)nus(d) Dó(fd)mi(e)no(f) mé(g_h)o :(g.) (;) Sé(g)de(e') a(f) déx(gh)tris(gf) mé(e.)is?(e.) (::)
 
 E(h) u(g) o(h) u(ih) a(gf) e.(e.) (::)
+
+% replace \grehepisemus{d}{0}{0}{d}%
+% with    \grehepisemusbottom{b}{0}{-1}%
