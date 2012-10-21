@@ -1,0 +1,26 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Beata es;
+office-part: 1 Antiphon;
+mode: 8c;
+occasion: Maternity of the Blessed Virgin Marhy;
+date: 2012;
+transcriber: Albert Bloomfield;
+transcription-date: 2012;
+style: modern;
+annotation: 1 Ant.;
+annotation: 8. c;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)BE(j)á(ji)ta(hg) es(h') <v>\greheightstar</v>() Vír(g)go(e') Ma(f)rí(g)a,(g.) (;)
+quæ(g) óm(f')ni(h)um(j') por(i)tá(hg)sti(h) Cre(i')a(h)tó(g.)rem.(g.) (::)
+
+E(j) u(j) o(h) u(j) a(k) e.(j.) (::)

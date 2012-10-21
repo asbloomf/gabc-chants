@@ -1,0 +1,246 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+\usepackage{../definepsalms}
+
+\sloppy
+
+\newcommand{\predeusinadjutorium}{%
+%\smallskip
+\large
+\setgrefactor{15}
+}
+\def\deusinadjutoriumsolemn{F}
+
+\newcommand{\preantone}{\setgrefactor{17}
+\large
+%\greblockcustos
+}
+% perhaps even a little less space before the mag antiphon translation
+% get rid of custos on second line of magnificat
+%p1932
+%1. Dixit Dominus   8c  p133 (109)
+%2. Laudate pueri   6F  p151 (112)
+%3. Laetatus sum    1f  p169 (121)
+%4. Nisi Dominus    7c2 p176 (126)
+%5. Lauda Jerusalem 7a  p206 (147)
+
+
+\newcommand{\antoneinitialsize}{40}
+\newcommand{\antonetex}{Ant1-BeataEs}
+\newcommand{\antoneinitial}{B}
+\newcommand{\antonetranslation}{\vspace{0ex plus 0ex minus 3ex}Blessed art thou, O Virgin Mary, who didst bear the Creator of all things.\vspace{0ex plus 0ex minus 3ex}}
+\definepsalm{1}{109}{8}{c}
+\newcommand{\prepsalmone}{%
+%\vspace{-1.5ex}
+}
+%\newenvironment{psalmonecols}{\begin{parcolumns}[rulebetween]{2}}{\end{parcolumns}}
+%\input{../psalms/definepsalmone}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preanttwo}{\setgrefactor{17}
+%\greblockcustos
+\large
+}
+\newcommand{\anttwoinitialsize}{40}
+\newcommand{\anttwotex}{Ant2-Genuisti}
+\newcommand{\anttwoinitial}{G}
+\newcommand{\anttwotranslation}{Thou didst give birth to Him who made thee, and yet remain a Virgin forever.}
+\definepsalm{2}{112}{6}{F}
+\newcommand{\prepsalmtwo}{%
+\normalsize
+%\greblockcustos
+}
+%\newenvironment{psalmtwocols}{\begin{parcolumns}[rulebetween]{2}}{\end{parcolumns}}
+%\input{../psalms/definepsalmtwo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantthree}{\setgrefactor{17}
+\large
+%\greblockcustos
+}
+\newcommand{\antthreeinitialsize}{40}
+\newcommand{\antthreetex}{Ant3-CumEssemParvula}
+\newcommand{\antthreeinitial}{C}
+\newcommand{\antthreetranslation}{When I was little, I pleased the Most High, and from my womb, I have brought forth God and man.}
+\definepsalm{3}{121}{1}{f}
+\newcommand{\prepsalmthree}{%
+\normalsize
+}
+%\newenvironment{psalmthreecols}{\begin{parcolumns}[rulebetween,colwidths={1=252pt}]{2}}{\end{parcolumns}}
+%\input{../psalms/definepsalmthree}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantfour}{\setgrefactor{17}
+\greblockcustos
+\large
+%\normalsize
+}
+\newcommand{\antfourinitialsize}{40}
+\newcommand{\antfourtex}{Ant4-Benedicta}
+\newcommand{\antfourinitial}{B}
+\newcommand{\antfourtranslation}{\vspace{0ex minus 3.5ex}Daughter, thou art blessed of the Lord: for by thee, we have partaken of the fruit of life.\vspace{0ex minus 3.5ex}}
+\definepsalm{4}{126}{7}{c2}
+\newcommand{\prepsalmfour}{%
+%\vspace{-1ex}
+%\setgrefactor{15}
+\normalsize
+}
+%\newenvironment{psalmfourcols}{\begin{parcolumns}[rulebetween,colwidths={1=290pt}]{2}}{\end{parcolumns}}
+%\input{../psalms/definepsalmfour}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\def\nopagebreakbeforepsalmfive{T}
+%\def\pagebreakafterpsalmfive{T}
+\newcommand{\preantfive}{\setgrefactor{17}
+\greblockcustos
+\large
+}
+%\newcommand{\preantfivetwo}{\preantfive}
+\newcommand{\antfivefontsizetwo}{40}
+
+\newcommand{\antfiveinitialsize}{40}
+\newcommand{\antfivetex}{Ant5-VideruntEam}
+\newcommand{\antfiveinitial}{V}
+\newcommand{\antfivetranslation}{\vspace{0pt minus 1ex}The daughters of Sion saw her and called her blessed, and the queens praised her.}
+\definepsalm{5}{147}{7}{a}
+\newcommand{\prepsalmfive}{%
+\vspace{-12pt plus 12pt}
+%\setgrefactor{15}%
+%\normalsize%
+}
+%\newenvironment{psalmfivecols}{\begin{parcolumns}[rulebetween%,colwidths={1=266pt}]{2}}{\end{parcolumns}}
+%\input{../psalms/definepsalmfive}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\chapter}{\dropcap{latin}{Qui creávit me, requiévit in tabernáculo} \textbf{me}\-o~:~\dag{} et dixit mihi~: In Jac\emph{ob} \emph{in}\-\textbf{há}\-bi\-ta,~* et in eléctis meis mitte ra\-\textbf{dí}\-ces.}
+\newcommand{\chaptertranslation}{He that made me rested in my tabernacle and said to me: Let thy dwelling be in Jacob, and take root among mine elect.}
+
+\def\pagebreakbeforehymn{T}
+\newcommand{\prehymn}{\large
+\setgrefactor{16}
+}
+\newcommand{\hymnlinetwo}{1.}
+\newcommand{\hymntex}{Hymn-AveMarisStella}
+\newcommand{\hymninitial}{A}
+\newcommand{\hymntranslation}{
+\item Hail, thou star of ocean,
+Portal of the sky,
+Ever-Virgin Mother,
+Of the Lord most High.
+
+\item Oh! by Gabriel's Ave
+Uttered long ago
+Eva's name reversing
+Peace confirm below.
+
+\item Break the captive's fetters,
+Light on blindness pour
+Chase all evils from us,
+Every bliss implore.
+
+\item Show thyself a Mother,
+Offer Him our sighs,
+Who for us incarnate
+Did not thee despise.
+
+\item Virgin all excelling,
+Passing meek and lowly,
+Freed from guilt, preserve us
+Blameless chaste and holy.
+
+\item Still as on we journey
+Help our weak endeavour
+Till we gaze on Jesus
+And rejoice for ever.
+
+\item Father, Son, and Spirit,
+Three in One confessing.
+Give we equal glory,
+Equal praise and blessing.
+Amen.
+
+%Child divine who barest,
+%Mother, ever-virgin,
+%Heaven's portal fairest.
+%
+%\item Taking that sweet Ave
+%Erst by Gabriel spoken,
+%Eva's name reversed,
+%Be of peace the token.
+%
+%\item Break the sinners' fetters,
+%Light to blind restoring,
+%All our ills dispelling,
+%Every boon imploring.
+%
+%\item Show thyself a mother
+%In thy supplication;
+%He will hear who chose thee
+%At his incarnation.
+%
+%\item Maid all maids excelling,
+%Passing meek and lowly,
+%Win for sinners pardon,
+%Make us chaste and holy.
+%
+%\item As we onward journey
+%Aid our weak endeavour,
+%Till we gaze on Jesus
+%And rejoice forever.
+%
+%\item Father, Son, and Spirit,
+%Three in One confessing,
+%Give we equal glory
+%Equal praise and blessing.
+%Amen.%\setgrefactor{15}
+}
+
+%\newcommand{\hymn}{O lux beata caelitum}
+%mode 2
+%\newcommand{\vr}{Notum fecit Dóminus}
+%\newcommand{\vrtex}{Hymn-VeniCreatorSpiritusvr}
+%\newcommand{\vtranslation}{The apostles spoke in divers tongues.}
+%\newcommand{\rtranslation}{The wonderful works of God.}
+%\def\vrnospace{T}
+
+%\newcommand{\premag}{
+%\large
+%\setgrefactor{17}
+%\greblockcustos
+%}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+%\newcommand{\maganttex}{MagnificatAntiphon2}
+%\newcommand{\magfontsize}{37}
+\def\pagebreakbeforemagnificat{T}
+%\newcommand{\magantinitial}{H}
+%\newcommand{\maganttranslation}{Today the days of Pentecost are complete, alleluia; today the Holy Ghost appeared in fire to the disciples, gave them gifts and graces, sent them into all the world to preach and to bear witness; whoever believes and is baptised shall be saved, alleluia.}
+%\def\magsolemn{T}
+%\def\magoneline{T}
+%\definemag{4}{E}
+%\newcommand{\magtone}{8}
+%\newcommand{\magend}{G}
+%\newcommand{\premagverses}{%
+%\greblockcustos
+%\normalsize
+%\setgrefactor{14}
+%\pagebreak
+%}
+%\input{../psalms/definemag}
+
+\newcommand{\collect}{Deus, qui de beátæ Maríæ Vírginis útero Verbum tuum, Angelo nuntiánte, carnem suscípere voluísti~:~\dag{} præsta supplícibus tuis; ut, qui vere eam Genitrícem Dei crédimus,~* ejus apud te intercessiónibus adjuvémur. Per eúmdem.}
+\newcommand{\collecttranslation}{O God, who didst will that, at the announcement of an Angel, Thy Word should take flesh in the womb of the Blessed Virgin Mary: grant to us Thy suppliants, that we, who believe her to be truly the mother of God, may be helped by her intercessions with Thee.  Through the same.}
+
+%\definebenedicamusdomino{1}{2}
+
+\def\includefideliumanimae{T}
+
+%\input{../FullVespers}

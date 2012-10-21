@@ -1,0 +1,28 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Maternitas tua;
+office-part: Magnificat Antiphon;
+mode: 4E;
+occasion: Maternity of the Blessed Virgin Mary;
+date: 2012;
+transcriber: Albert Bloomfield;
+transcription-date: 2012;
+style: modern;
+annotation: At Magn.;
+annotation: 4. E;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)MA(d)tér(e')ni(f)tas(g) tú(gvFDe_f)a,(e'_) <v>\greheightstar</v>(,) Dé(d)i(e_f) Gé(g)ni(f)trix(gh) Vír(gh)go,(e.) (;)
+gáu(dh~)di(h)um(h) an(h)nun(hg)ti(h)á(ixhi)vit(h) u(h)ni(gf)vér(gh)so(g) mún(e.)do :(e.) (:)
+ex(h) te(gf) e(g)nim(fe) ór(d)tus(c) est(d_f) sol(f) ju(e_f)stí(g_h)ti(h)æ,(g'_) (,)
+Chrí(g)stus(gf) Dé(g)us(ghg) nó(e.)ster.(e.) (::)
+
+E(h) u(g) o(h) u(ih) a(gf) e.(e.) (::)

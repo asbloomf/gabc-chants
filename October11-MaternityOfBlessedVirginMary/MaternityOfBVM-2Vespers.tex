@@ -1,0 +1,44 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\input{MaternityOfBVMVespers}
+
+\newcommand{\heading}{Motherhood of the Blessed Virgin Mary.}
+%\definepsalm{5}{113}{7}{c2}
+%\let\oldbeginpsalmfivecols=\beginpsalmfivecols
+%\def\beginpsalmfivecols{\vspace{-8pt plus 8pt}\oldbeginpsalmfivecols}
+
+\newcommand{\vrtex}{vrBenedictaTuInMulieribus}
+\newcommand{\vtranslation}{Blessed art thou amongst women.}
+\newcommand{\rtranslation}{And blessed is the fruit of thy womb.}
+
+\newcommand{\maganttex}{MagnificatAntiphon2}
+\newcommand{\magantinitial}{M}
+\newcommand{\maganttranslation}{\vspace{-3.5ex}Thy Motherhood, O Virgin Mother of God, heralded joy to the whole world: for out of thee has arisen the sun of justice, Christ our God.}
+\def\magsolemn{T}
+\def\magoneline{F}
+\definemag{4}{E}
+\newcommand{\premag}{
+\large
+\setgrefactor{17}
+%\greblockcustos
+}
+\newcommand{\magfontsize}{37}
+\newcommand{\premagverses}{%
+\greblockcustos
+\normalsize
+\setgrefactor{17}
+%\pagebreak
+}
+
+\def\benedicamusdominogrefactor{17}
+\definebenedicamusdomino{mary}{2}
+
+\let\includefideliumanimae=\undefined
+
+\input{../FullVespers}
