@@ -358,8 +358,17 @@ _solemn\fi}
 \let\antfiveinitial=\antoneinitial%
 \let\antfivetex=\antonetex%
 \fi%
+%
+\def\nopagebreakafterpsalmfive{T}%
+\ifx\pagebreakafterpsalmfive\undefined\else\if\pagebreakafterpsalmfive T%
+\def\nopagebreakafterpsalmfive{F}%
+\fi\fi
+%
 \ifx\preantfivetwo\undefined
-{\noindent\emph{Repeat antiphon.}\\ \vspace{0ex minus 2ex}}
+{\noindent\emph{Repeat antiphon.}%
+\if\nopagebreakafterpsalmfive T%
+\\ \vspace{0ex minus 2ex}}%
+\fi%
 \else
 {\preantfivetwo
 \def\greinitialformat#1{%
@@ -372,28 +381,26 @@ _solemn\fi}
 \fi%
 \def\annottwo{\small{\antfivelinetwo}}
 \setinitialspacing{\antfiveinitial}
-
+%
 \includescore{\antfivetex}
 \medskip}%
-\fi
-\ifx\onlypsalms\undefined\def\onlypsalms{F}\fi
+\fi%
+\ifx\onlypsalms\undefined\def\onlypsalms{F}\fi%
 \if\onlypsalms F% this goes all the way to the end
-\def\nopagebreakafterpsalmfive{T}
-\ifx\pagebreakafterpsalmfive\undefined\else\if\pagebreakafterpsalmfive T%
-\vspace*{-40pt}
-\pagebreak
-\def\nopagebreakafterpsalmfive{F}
-\fi\fi
+\if\nopagebreakafterpsalmfive F%
+\vspace*{-80pt}%
+\pagebreak%
+\fi
 \ifx\chapterhymnversicleantiphontex\undefined%
 \ifx\chaptertranslation\undefined%
-\def\nopagebreakafterpsalmfive{F}
-\fi\fi
+\def\nopagebreakafterpsalmfive{F}%
+\fi\fi%
 \if\nopagebreakafterpsalmfive T%
-\vspace{2ex plus 0.5ex minus 1.5ex}
-\hrule
-\vspace{0pt plus 1.5ex minus 0ex}
+\vspace{2ex plus 0.5ex minus 1.5ex}%
+\hrule%
+\vspace{0pt plus 1.5ex minus 0ex}%
 \fi
-\normalsize
+\normalsize%
 \ifx\chapterhymnversicleantiphontex\undefined%
 \ifx\chaptertranslation\undefined%
 \emph{Chapter. }%
@@ -507,7 +514,7 @@ _solemn\fi}
 \ifx\pagebreakbeforemagnificat\undefined\def\pagebreakbeforemagnificat{F}\fi
 \if\pagebreakbeforemagnificat T%
 \pagebreak
-\vspace*{-16pt plus 16pt}
+\vspace*{-23pt plus 23pt}
 \fi
 \begin{center}{\large Magnificat.}\end{center}
 \vspace{-1ex}
@@ -532,6 +539,7 @@ _solemn\fi}
 \hrule
 \bigskip
 {\premagverses
+\ifx\magoneline\undefined\else\if\magoneline T\greblockcustos\fi\fi
 \begin{magnificat}{\magtex}
 %\vspace{-1ex}
 \magverses

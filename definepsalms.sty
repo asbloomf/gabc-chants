@@ -1,4 +1,4 @@
-﻿\NeedsTeXFormat{LaTeX2e}
+%﻿\NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{definepsalms}
 
 \usepackage{xstring}
@@ -229,6 +229,7 @@ five%
 }{%
   \def\benedicamusdominotone{1.}
   \def\append{Sundays}
+  \IfBeginWith{\mytempa}{bvm}{\def\mytempa{mary}}{}
   \IfBeginWith{\mytempa}{blessedvirgin}{\def\mytempa{mary}}{}
   \IfBeginWith{\mytempa}{advent}{\def\mytempa{lent}}{}
   \IfBeginWith{\mytempa}{paschal}{\def\mytempa{easter}}{}
