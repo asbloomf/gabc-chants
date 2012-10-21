@@ -3,12 +3,12 @@
 
 % The first part of the score is called the header, you can input some useful informations here:
 
-name: Psalm 112;
-office-part: 4th psalm;
+name: Psalm 109;
+office-part: 1st psalm;
 occasion: Vespers;
-date: 2011;
+date: 2012;
 transcriber: Albert Bloomfield;
-transcription-date: 2011;
+transcription-date: 2012;
 style: modern;
 initial-style:0;
 
@@ -18,9 +18,6 @@ initial-style:0;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c4)()() 1. L{au}(g)dá(hj)te,(j) <b>pú</b>(k)e(jr)ri,(j) <b>Dó</b>(jr[ocba:1;6mm])<b>mi</b>(ih)num :(j.) <v>\greheightstar</v>(:) lau(j)dá(j)te(j) no(j)<i>men</i>(h) <b>Dó</b>(j)mi(jr)ni.(ih..) (::)
+(f3)()() 1. D{i}(e)xit(f) Dó(h)mi(h)nus(h) Dó(h)mi(h)no(h) <b>me</b>(i hr)o :(h.) <v>\greheightstar</v>(:) Se(h)de(h) a(h) dex(h)<i>tris</i>(g) <b>me</b>(e fr)is :(f.) (::)
 
-%E(j) u(j) o(j) u(h) a(j) e.(ih..) (::)
-
-%Mediant of 2 accents
-%Termination of 1 accent with 1 preperatory syllable
+%E(h) u(h) o(h) u(g) a(e) e.(f.) (::)

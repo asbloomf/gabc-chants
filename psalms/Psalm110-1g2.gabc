@@ -3,12 +3,12 @@
 
 % The first part of the score is called the header, you can input some useful informations here:
 
-name: Psalm 112;
-office-part: 4th psalm;
+name: Psalm 110;
+office-part: 2nd psalm;
 occasion: Vespers;
-date: 2011;
+date: 2012;
 transcriber: Albert Bloomfield;
-transcription-date: 2011;
+transcription-date: 2012;
 style: modern;
 initial-style:0;
 
@@ -18,9 +18,7 @@ initial-style:0;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c4)()() 1. L{au}(g)dá(hj)te,(j) <b>pú</b>(k)e(jr)ri,(j) <b>Dó</b>(jr[ocba:1;6mm])<b>mi</b>(ih)num :(j.) <v>\greheightstar</v>(:) lau(j)dá(j)te(j) no(j)<i>men</i>(h) <b>Dó</b>(j)mi(jr)ni.(ih..) (::)
+(c4)()() 1. Con(f)fi(gh)té(h)bor(h) ti(h)bi,(h) Dó(h)mi(h)ne,(h) in(h) to(h)to(h) <b>cor</b>(ixi hr)de(h) <b>me</b>(g hr)o :(h.) <v>\greheightstar</v>(:) in(h) con(h)sí(h)li(h)o(h) ju(h)stó(h)rum,(h) et(h) con(h)gre(h)<i>ga</i>(g)<i>ti</i>(f)<b>ó</b>(g gr)ne.(ghg.) (::)
+<i>Flex :</i>()  su(h)ó(h)rum, †(g. h h h  ::)
 
-%E(j) u(j) o(j) u(h) a(j) e.(ih..) (::)
-
-%Mediant of 2 accents
-%Termination of 1 accent with 1 preperatory syllable
+%E(h) u(h) o(g) u(f) a(g) e.(ghg.) (::)
