@@ -1,0 +1,48 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+% 2. Another chant (ad libitum).
+name: Lucis Creator optime;
+office-part: Vesper hymn;
+occasion: Green;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: Hymn.;
+annotation: 8.;
+%initial-style:0;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)LU(d)cis(e') Cre(f)á(g)tor(f) óp(gh)ti(g)me,(fef.) (,)
+Lú(d)cem(e') di(f)é(g)rum(f) pró(gh)fe(h)rens,(g.) (;)
+Pri(hj)mór(jjk)di(j)is(ji) lú(hg)cis(h) nó(g)væ(fef.) (,)
+Mún(d)di(e') pá(f)rans(g) o(f)rí(gh)gi(h)nem :(g.) (::)
+
+2. Qui(d) má(e')ne(f) jún(g)ctum(f) vé(gh)spe(g)ri(fef.) (,)
+dí(d)em(e') vo(f)cá(g)ri(f) praé(gh)ci(h)pis :(g.) (;)
+Il(hj)lá(jjk)bi(j)tur(ji) té(hg)trum(h) chá(g)os,(fef.) (,)
+Au(d)di(e') pré(f)ces(g) cum(f) flé(gh)ti(h)bus.(g.) (::)
+
+3. Ne(d) mens(e') gra(f)vá(g)ta(f) crí(gh)mi(g)ne,(fef.) (,)
+Ví(d)tæ(e') sit(f) éx(g)sul(f) mú(gh)ne(h)re,(g.) (;)
+Dum(hj) nil(jjk) per(j)én(ji)ne(hg) có(h)gi(g)tat,(fef.) (,)
+Se(d)sé(e')que(f) cúl(g)pis(f) íl(gh)li(h)gat.(g.) (::)
+
+4. Cæ(d)lé(e')ste(f) púl(g)set(f) ó(gh)sti(g)um,(fef.) (,)
+Vi(d)tá(e')le(f) tól(g)lat(f) praé(gh)mi(h)um :(g.) (;)
+Vi(hj)té(jjk)mus(j) óm(ji)ne(hg) nó(h)xi(g)um,(fef.) (,)
+Pur(d)gé(e')mus(f) óm(g)ne(f) pés(gh)si(h)mum.(g.) (::)
+
+5. Praé(d)sta,(e') Pá(f)ter(g) pi(f)ís(gh)si(g)me,(fef.) (,)
+Pa(d)trí(e')que(f) cóm(g)par(f) U(gh)ni(h)ce,(g.) (;)
+Cum(hj) Spí(jjk)ri(j)tu(ji) Pa(hg)rá(h)cli(g)to,(fef.) (,)
+Ré(d)gnans(e') per(f) óm(g)ne(f) saé(gh)cu(h)lum.(g.) (::)
+
+A(ghg)men.(fg..) (::)
