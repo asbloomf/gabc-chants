@@ -1,0 +1,32 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Venit lumen tuum;
+office-part: 2 Antiphon;
+mode: 1g2;
+occasion: Epiphany;
+date: 2012;
+transcriber: Albert Bloomfield;
+transcription-date: 2012;
+style: modern;
+annotation: 2 Ant.;
+annotation: 1. g2;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+(c4)VE(f)nit(ghg~) lú(h)men(gf) tú(g)um(f.) <v>\greheightstar</v>(,) Je(fgf)rú(d_c)sa(d!ew!fv_ED'e)lem,(ed..) (;) et(d) gló(dgf/gh)ri(gf)a(f) Dó(ghgh)mi(h)ni(ghg'_) (,) su(f)per(ghg~) te(h_g) ór(g_hG'E)ta(f!gwhgh) est,(hg..) (:) et(g) am(g)bu(gf)lá(g)bunt(fe) gén(d)tes(fgf'_) (,) in(f) lú(f)mi(fe)ne(c') tú(d)o,(c.) (,) al(d!ewf)le(fv_ED)lú(ed~)ia.(d.) (::)
+
+E(h) u(h) o(g) u(f) a(g) e.(ghg.) (::)
+
+%in DomiNI horizontal episemus needs to be above
+% replace \grehepisemusbottom{f}{0}{0}%
+% with    \grehepisemus{i}{0}{0}{i}%
+
+%same in genTES
+% replace \grehepisemusbottom{e}{0}{0}%
+% with    \grehepisemus{i}{0}{0}{i}%

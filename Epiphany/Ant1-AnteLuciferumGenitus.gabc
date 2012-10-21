@@ -1,0 +1,28 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Ante luciferum genitus;
+office-part: 1 Antiphon;
+mode: 2D;
+occasion: Epiphany;
+date: 2012;
+transcriber: Albert Bloomfield;
+transcription-date: 2012;
+style: modern;
+annotation: 1. Ant.;
+annotation: 2. D;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+(f3)AN(f_g)te(e) lu(f)cí(fi'!jv)fe(h)rum(ge~) gé(gh)ni(f)tus,(f.) <v>\greheightstar</v>(;) et(fe) an(h)te(i) saé(j')cu(i)la,(h.) (;) Dó(h)mi(hv_GF)nus(g_f) Sal(f')vá(h)tor(g') nó(h)ster(f'_) (;) hó(g)di(ef)e(f_ge/ec.) (,) mún(e_f)do(h) ap(g)pá(e)ru(g)it.(f.) (::)
+
+E(h) u(h) o(h) u(g) a(e) e.(f.) (::)
+
+%fix vertical episemus -- needs to go above luCIferum instead of in middle space
+%replace \grevepisemus{h}{18}%
+%   with \grevepisemus{k}{18}%

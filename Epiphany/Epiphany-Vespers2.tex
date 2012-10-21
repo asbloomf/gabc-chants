@@ -1,0 +1,45 @@
+﻿% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+
+\newcommand{\heading}{Epiphany at II Vespers.}
+\sloppy
+
+\input{Epiphany-Vespers2-psalms}
+
+\newcommand{\chapter}{\dropcap{latin}{Surge, illumináre Jerúsalem, quia venit} \emph{lumen} \textbf{tú}\-um,~* et glória Dómini super te \textbf{ór}ta est.}
+\newcommand{\chaptertranslation}{Arise, be enlightened, O Jerusalem, for thy light is come, and the glory of God is risen upon thee.}
+
+\newcommand{\vrtex}{vrRegesTharsis}
+\newcommand{\vtranslation}{The kings of Tarshish and of the isles shall bring presents.}
+\newcommand{\rtranslation}{The kings of Arabia and Saba shall offer gifts.}
+\def\vrnospace{T}
+
+\newcommand{\premag}{
+\large
+\setgrefactor{15}
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+\newcommand\pagebreakbeforemagnificat{T}
+\newcommand{\magfontsize}{33}
+\newcommand{\magantinitial}{T}
+\newcommand{\maganttranslation}{\vspace{-3ex}This day we keep a holiday in honour of three wonders: today a star led the wise men to the manger; today water was made wine at the marriage; today Christ was pleased to be baptized in Jordan by John for our salvation, alleluia.}
+\def\magsolemn{T}
+\def\magoneline{T}
+\definemag{1}{D}
+\newcommand{\premagverses}{\greblockcustos\setgrefactor{15}
+\normalsize
+%\pagebreak
+}
+
+\newcommand{\collect}{Deus, qui hodiérna die Unigénitum tuum géntibus stella duce revelásti~:\dag{} concéde propítius; ut qui jam te ex fide cognóvimus,~* usque ad contemplándam spéciem tuæ celsitúdinis perducámur. Per eúmdem Dóminum.}
+\newcommand{\collecttranslation}{O God, Who by the leading of a star didst, as on this day, manifest Thine Only-begotten Son to the Gentiles, mercifully grant that we, who know Thee now by faith, may after this life have the fruition of Thy glorious Godhead.  Through the same Jesus Christ our Lord.}
+
+\definebenedicamusdomino{1}{2}
+
+\input{../FullVespers}
