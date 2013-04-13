@@ -1,0 +1,31 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Dum sacrum mysterium;
+office-part: Magnificat Antiphon;
+mode: 8G;
+occasion: Dedication of St Michael 1 Vespers;
+date: 2013;
+transcriber: Albert Bloomfield;
+transcription-date: 2013;
+style: modern;
+annotation: At Magn.;
+annotation: 8. G;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)DUM(gd~) sá(f!g'h)crum(g) my(g)sté(gh)ri(g)um(g'_) <v>\greheightstar</v>(,)
+cér(g)ne(gh)ret(hv_GF) Jo(gh)án(h)nes,(g.) (;)
+Ar(hj~)chán(j)ge(ji)lus(h) Mích(ji)a(hg)el(g.) (,)
+tú(g_e)ba(g.) cé(f')ci(e)nit :(d.) (;)
+I(g)gnó(g')sce(g) Dó(gh)mi(g)ne(f') Dé(g)us(gh) nó(f)ster,(f.) (;)
+qui(hj) á(j)pe(ji)ris(h') lí(j)brum,(g'_) (,)
+et(g) sól(gh)vis(g) si(g)gná(h')cu(g)la(g) é(fe)jus,(d') al(f)le(gh)lú(g.)ia.(g.) (::)
+
+E(j) u(j) o(i) u(j) a(h) e.(g.) (::)

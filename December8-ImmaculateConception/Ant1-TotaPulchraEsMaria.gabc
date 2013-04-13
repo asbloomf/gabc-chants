@@ -1,0 +1,27 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Tota pulchra es Maria;
+office-part: 1 Antiphon;
+mode: 1g2;
+occasion: Immaculate Conception;
+date: 2013;
+transcriber: Albert Bloomfield;
+transcription-date: 2013;
+style: modern;
+annotation: 1 Ant.;
+annotation: 1. g2;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)TO(f')ta(f) púl(h)chra(h) es(ixi') Ma(g)rí(g)a,(f_h) <v>\greheightstar</v>(;)
+et(hf~) má(g)cu(f)la(d) o(f)ri(e')gi(f)ná(gh)lis(g_h_g_) (,)
+non(fe) est(fg) in(ef~) te.(d.) (::)
+
+E(h) u(h) o(g) u(f) a(g) e.(ghg.) (::)

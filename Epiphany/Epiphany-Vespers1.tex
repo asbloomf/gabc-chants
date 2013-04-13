@@ -1,0 +1,28 @@
+﻿% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+
+\input{Epiphany-Vespers}
+
+\newcommand{\heading}{Epiphany at I Vespers.}
+\sloppy
+
+\definepsalm{5}{116}{7}{c2}
+%\def\nopagebreakbeforepsalmfive{T}
+\def\pagebreakafterpsalmfive{T}
+
+\newcommand{\maganttex}{MagnificatAntiphon1}
+\newcommand{\magantinitial}{M}
+\newcommand{\maganttranslation}{When the Wise Men saw the star, they said one to another: This is the sign of the great King: let us go and search for Him, and offer Him gifts, gold, frankincense, and myrrh, alleuia.}
+\definemag{8}{G}
+\newcommand{\premagverses}{\greblockcustos\setgrefactor{15}
+\normalsize
+%\pagebreak
+}
+
+\definebenedicamusdomino{1}{1}
+
+\input{../FullVespers}

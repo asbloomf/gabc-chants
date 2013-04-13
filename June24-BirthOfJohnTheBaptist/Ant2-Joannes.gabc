@@ -1,0 +1,21 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+% The first part of the score is called the header, you can input some useful informations here:
+name: Joánnes;
+office-part: 2 Antiphon;
+mode: 8G;
+occasion: Birth of St John the Baptist;
+date: 2012;
+transcriber: Albert Bloomfield;
+transcription-date: 2012;
+style: modern;
+annotation: 2 Ant.;
+annotation: 8. G;
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+(c4)JO(h')án(f)nes(fg) <v>\greheightstar</v>() est(g'_) nó(h)men(g) é(ji~)jus :(h.) (;)
+ví(f')num(g) et(h') sí(j)ce(ji)ram(h) non(i) bí(g)bet,(g.) (:)
+et(j) múl(jkjk)ti(h') (,) in(j) na(j')ti(i)vi(h)tá(g_i)te(h') é(g)jus(e) gau(fg~)dé(g.)bunt.(g.) (::)
+
+E(j) u(j) o(i) u(j) a(h) e.(g.) (::)

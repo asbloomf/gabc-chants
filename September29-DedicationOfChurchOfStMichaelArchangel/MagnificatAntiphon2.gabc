@@ -1,0 +1,37 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Princeps gloriosissime;
+office-part: Magnificat Antiphon;
+mode: 1D2;
+occasion: Dedication of St Michael;
+date: 2013;
+transcriber: Albert Bloomfield;
+transcription-date: 2013;
+style: modern;
+annotation: At Magn.;
+annotation: 1. D2;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)PR{í}n(c')ceps(d) glo(f)ri(g)o(fe)sís(d)si(fe)me,(d/dc.) (,)
+Mích(f)a(ghg)el(h) Ar(gf~)chán(gh)ge(fv_ED)le,(d.) (;)
+é(gf)sto(ghg) mé(fe)mor(fgf) nó(d.)stri :(d.) (:)
+hic(h) et(g) u(h!iwj)bí(ji)que(hg) sem(ij)per(i_h) (,) pre(h)cá(ghf'/gf'f)re(d) pro(cd) nó(%dg'!hv
+[ev:%
+\greglyph{\char 1027}{d}{h}{0}{}{%
+\grevepisemus{i}{18}%
+}%
+\greendofglyph{1}%
+\greglyph{\char 22}{h}{g}{0}{}{}%
+])bis(g'_) (,)
+Fí(d)li(f')um(f) Dé(de)i,(dc..) (;)
+al(c_d)le(f_gF'E)lú(g_h_g~)ia,(fv_ED'_C_) al(d_g)le(efe)lú(d.)ia.(d.) (::)
+
+E(h) u(h) o(g) u(f) a(gf) e.(d.) (::)

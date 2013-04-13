@@ -1,0 +1,25 @@
+﻿% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\input{DedicationStMichael-common}
+
+\newcommand{\heading}{Dedication of St Michael I Vespers.}
+\definepsalm{5}{116}{7}{c}
+
+\newcommand{\vrtex}{vrStetitAngelus}
+\newcommand{\vtranslation}{The Angel stood by the altar of the temple.}
+\newcommand{\rtranslation}{Holding in his hand a censer of gold.}
+
+\newcommand{\maganttex}{MagnificatAntiphon1}
+\newcommand{\magantinitial}{D}
+\definemag{8}{G}
+\newcommand{\maganttranslation}{While John was beholding the sacred Mystery, the Archangel Michael sounded a trumpet.  Forgive us, O Lord our God, Thou who openest the book, and loosest the seals thereof.  Alleluia.}
+
+\definebenedicamusdomino{1}{1}
+
+\input{../FullVespers}

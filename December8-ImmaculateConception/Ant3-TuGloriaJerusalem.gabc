@@ -1,0 +1,28 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Tu gloria Jerusalem;
+office-part: 3 Antiphon;
+mode: 8c;
+occasion: Immaculate Conception;
+date: 2013;
+transcriber: Albert Bloomfield;
+transcription-date: 2013;
+style: modern;
+annotation: 3 Ant.;
+annotation: 8. c;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)TU(h) gló(gh)ri(f)a(f) Je(ed)rú(ef)sa(f)lem,(e.) <v>\greheightstar</v>(,)
+tu(e) læ(e)tí(f')ti(e)a(d') Is(e)ra(e)ël,(f.) (;)
+tu(f) ho(d')no(f)ri(h)fi(g)cén(h_i)ti(h)a(hg/hih.) (,)
+pó(f_h)pu(h)li(g) nó(e.)stri.(e.) (::)
+
+E(h) u(h) o(f) u(h) a(i) e.(h.) (::)

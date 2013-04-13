@@ -1,0 +1,25 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\input{ImmaculateConceptionVespers}
+
+\newcommand{\heading}{Immaculate Conception II Vespers.}
+%\let\oldbeginpsalmfivecols=\beginpsalmfivecols
+%\def\beginpsalmfivecols{\vspace{-8pt plus 8pt}\oldbeginpsalmfivecols}
+
+\newcommand{\maganttex}{MagnificatAntiphon2}
+\newcommand{\magantinitial}{H}
+\newcommand{\maganttranslation}{\vspace{-16pt plus 16pt}This day a rod came forth from the root of Jesse: this day Mary was conceived without any stain of sin: this day the head of the old serpent was crushed by her.  Alleluia.}
+\definemag{1}{f}
+
+\def\benedicamusdominogrefactor{14}
+\definebenedicamusdomino{1}{2}
+
+\let\includefideliumanimae=\undefined
+
+\input{../FullVespers}

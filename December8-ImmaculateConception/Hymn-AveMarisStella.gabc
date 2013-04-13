@@ -1,0 +1,58 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Ave Maris Stella;
+office-part: Hymn for Blessed Virgin Mary;
+mode: 1;
+occasion: Blessed Virgin Mary;
+date: 2012;
+transcriber: Albert Bloomfield;
+transcription-date: 2012;
+style: modern;
+annotation: Hymn.;
+annotation: 1;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)A(d)ve(hi) má(g)ris(hi) stél(k)la,(jvIH'Gh.) (,)
+Dé(h')i(h) Má(de)ter(g) ál(fe)ma,(d.) (;)
+At(f)que(e') sem(g)per(h') Vír(h)go,(d!ew!fvEDC'_) (,)
+Fé(e)lix(g') caé(e)li(f') pór(e)ta.(d.) (::)
+
+2. Sú(d)mens(hi) íl(g)lud(hi) A(k)ve(jvIH'Gh.) (,)
+Ga(h')bri(h)é(de)lis(g) ó(fe)re,(d.) (;)
+Fún(f)da(e') nos(g) in(h') pá(h)ce,(d!ew!fvEDC'_) (,)
+Mú(e)tans(g') Hé(e)væ(f') nó(e)men.(d.) (::)
+
+3. Sól(d)ve(hi) vín(g)cla(hi) ré(k)is,(jvIH'Gh.) (,)
+Pró(h')fer(h) lú(de)men(g) caé(fe)cis :(d.) (;)
+Má(f)la(e') nó(g)stra(h') pél(h)le,(d!ew!fvEDC'_) (,)
+Bó(e)na(g') cún(e)cta(f') pó(e)sce.(d.) (::)
+
+4. Món(d)stra(hi) t<i>e</i>() és(g)se(hi) má(k)trem :(jvIH'Gh.) (,)
+Sú(h')mat(h) per(de) te(g) pré(fe)ces,(d.) (;)
+Qui(f) pro(e') nó(g)bis(h') ná(h)tus,(d!ew!fvEDC'_) (,)
+Tú(e)lit(g') és(e)se(f') tú(e)us.(d.) (::)
+
+5. Vír(d)go(hi) sin(g)gu(hi)lá(k)ris,(jvIH'Gh.) (,)
+In(h')ter(h) óm(de)nes(g) mí(fe)tis,(d.) (;)
+Nos(f) cúl(e')pis(g) so(h')lú(h)tos,(d!ew!fvEDC'_) (,)
+Mí(e)tes(g') fac(e) et(f') cá(e)stos.(d.) (::)
+
+6. Ví(d)tam(hi) praé(g)sta(hi) pú(k)ram,(jvIH'Gh.) (,)
+I(h')ter(h) pá(de)ra(g) tú(fe)tum :(d.) (;)
+Ut(f) vi(e')dén(g)tes(h') Jé(h)sum,(d!ew!fvEDC'_) (,)
+Sem(e)per(g') col(e)læ(f')té(e)mur.(d.) (::)
+
+7. Sit(d) laus(hi) Dé(g)o(hi) Pá(k)tri,(jvIH'Gh.) (,)
+Súm(h')mo(h) Chrí(de)sto(g) dé(fe)cus,(d.) (;)
+Spi(f)rí(e')tu(g)i(h') Sán(h)cto,(d!ew!fvEDC'_) (,)
+Trí(e)bus(g') hó(e)nor(f') ú(e)nus.(d.) (::)
+
+A(ded)men.(cd..) (::)

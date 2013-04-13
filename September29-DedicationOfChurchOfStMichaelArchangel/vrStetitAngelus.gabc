@@ -1,0 +1,22 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Stetit Angelus;
+office-part: versicle and response 1st vespers of Dedication of St Michael;
+occasion: Dedication of St Michael;
+date: 2013;
+transcriber: Albert Bloomfield;
+transcription-date: 2013;
+style: modern;
+initial-style:0;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)<v>\Vbar</v>. St{é}(h)tit(h) An(h)ge(h)lus(h) jux(h)ta(h) á(h)ram(h) tém(h)pli.(g_hvGFEfgf.) (::)
+<v>\Rbar</v>. Há(h)bens(h) thu(h)rí(h)bu(h)lum(h) áu(h)re(h)um(h) in(h) má(h)nu(h) sú(h)a.(g_hvGFEfgf.) (::)

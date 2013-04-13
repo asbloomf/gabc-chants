@@ -1,0 +1,22 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Immaculata Conceptio;
+office-part: versicle and response after Vesper hymn Ave Maris Stella on Feast of Immaculate Conception;
+occasion: Immaculate Conception;
+date: 2013;
+transcriber: Albert Bloomfield;
+transcription-date: 2013;
+style: modern;
+initial-style:0;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)<v>\Vbar</v>. {I}m(h)ma(h)cu(h)lá(h)ta(h) Con(h)cép(h)ti(h)o(h) est(h) hó(h)di(h)e(h) san(h)ctæ(h) Ma(h)rí(h)æ(h) Vír(h)gi(h)nis.(g'_/hvGF'Efgf.) (::Z)
+<v>\Rbar</v>. Quæ(h) ser(h)pén(h)tis(h) cá(h)put(h) vir(h)gí(h)ne(h)o(h) pé(h)de(h) con(h)trí(h)vit.(g'_/hvGF'Efgf.) (::)

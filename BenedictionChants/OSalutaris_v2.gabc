@@ -1,0 +1,29 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: O Salutaris;
+office-part: after benediction;
+occasion: benediction;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+%page 1854 (2098) in the liber
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)O(e) Sa(fvED')lu(e)tá(f')ris(e) Hó(f!gwhg)sti(fe)a,(e.) (,)
+Quæ(g) caé(iji')li(h) pán(gf)dis(e) ó(f')sti(d)um :(e.) (;)
+Bél(g)la(i') pré(i)munt(j') ho(i)stí(h')li(g)a,(fge.) (,)
+Da(e) ró(fvED')bur,(e) fer(f') au(e)xí(f!gwhg)li(fe)um.(e.) (::)
+
+2. U(e)ni(fvED') tri(e)nó(f')que(e) Dó(f!gwhg)mi(fe)no(e.) (,)
+Sit(g) sem(iji')pi(h)tér(gf)na(e) gló(f')ri(d)a,(e.) (;)
+Qui(g) ví(i')tam(i) si(j')ne(i) tér(h')mi(g)no(fge.) (,)
+Nó(e)bis(fvED') dó(e)net(f') in(e) pá(f!gwhg)tri(fe)a.(e.) (::)
+A(efe)men.(de..) (::)
