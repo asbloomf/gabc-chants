@@ -324,7 +324,12 @@ _solemn\fi}
 {\ifx\prepsalmfive\undefined\else\prepsalmfive\fi
 \includescore{\psalmfivetex}
 }
-\vspace{0ex plus 1ex minus 1ex}
+%
+%I changed this vspace to the medskip 2013-02-01
+%\vspace{0ex plus 1ex minus 1ex}
+\medskip
+%end change
+%
 %\begin{multicols}{2}
 %\vspace{-1ex}
 %\begin{Parallel}[v]{}{}
@@ -418,7 +423,8 @@ _solemn\fi}
 
 \fi%
 \ifx\hymntex\undefined
-{\emph{Hymn.} \hymn{}.%
+{\vspace{-1ex plus 1ex}
+\emph{Hymn.} \hymn{}.%
 \ifx\vrtex\undefined\else
 \vfill
 \fi}
@@ -443,7 +449,7 @@ _solemn\fi}
 \prehymn
 \includescore{\hymntex}
 }
-\normalsize\vspace{0pt minus 10pt}
+\normalsize\vspace{0pt minus 20pt}
 \selectlanguage{american}
 \begin{multicols}{2}
 \begin{psalmverses}
@@ -472,13 +478,15 @@ _solemn\fi}
 \emph{Per annum:}
 
 \fi %vrpttex
-{\greblockcustos\includescore{\vrtex}}\vspace{0pt minus 20pt}
+{\greblockcustos\includescore{\vrtex}}\vspace{-4pt plus 4pt}
 \translation[]{
 \Vbar{}. \vtranslation{}%
 \ifx\vrnospace\undefined
 
 \else\if\vrnospace T%
 \hspace{7ex minus 3ex}%
+\else
+
 \fi\fi%
 \Rbar{}. \rtranslation{}%
 }%

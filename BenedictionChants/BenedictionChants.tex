@@ -24,17 +24,14 @@
 
 \setgrefactor{14}
 
-\marginsize{25pt}{25pt}{25pt}{0pt}
+%\marginsize{25pt}{25pt}{25pt}{0pt}
+\geometry{outer=25pt,inner=25pt,top=25pt+\headsep+\headheight,bottom=\footskip}
 \pagestyle{fancy} % no header or footers
 %\renewcommand\headrulewidth{0pt}
 
 % here we begin the document
 \begin{document}
 \chead{Chants at Benediction.}
-% The title:
-%\begin{center}{\Large Magnificat.}\end{center}
-% Here we set the space around the initial.
-% Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
 \setspaceafterinitial{0mm plus 0em minus 0em}
 \setspacebeforeinitial{0mm plus 0em minus 0em}
 
@@ -49,18 +46,25 @@
 \setinitialspacing{O}
 \large
 \includescore{OSalutaris.tex}}
-\medskip
+%\medskip
+\def\translationmargin{66pt}
 \translation[]{
 1. O saving Victim of the world,
 Who openest wide the gates on high,
 The foe his bands on us hath hurled,
 O, give us strength; for aid we cry.
-
+%\hspace{65ex}
 2. To thee, one Lord, yet Three in One,
 Let everlasting glory be :
 O grant us life that end hath none,
 In Fatherland to spend with thee. Amen.}
-
+\let\translationmargin=\undefined
+%\medskip
+{\def\annot{\small \textbf{7.}}
+\setinitialspacing{O}
+\large
+\includescore{OSalutaris_v2.tex}}
+\bigskip
 \hrule
 \bigskip
 
@@ -68,8 +72,18 @@ In Fatherland to spend with thee. Amen.}
 \setinitialspacing{T}
 %\large
 \includescore{TantumErgo.tex}}
-\vspace{-2ex}
+\vspace{-3.5ex}
 %\medskip
+{\begin{center}
+2. \emph{Another Chant.}
+\vspace{-0.5ex}
+\end{center}
+}
+{\def\annot{\small \textbf{1.}}
+\setinitialspacing{T}
+%\large
+\includescore{TantumErgo_v2.tex}}
+\def\translationmargin{66pt}
 \translation[]{
 1. Therefore we, before it bending,
 this great sacrament adore;
@@ -85,9 +99,20 @@ and eternal benison;
 Holy Ghost, from both progressing,
 equal laud to thee be done. Amen.
 }
-
+\let\translationmargin=\undefined
+\vspace{-2ex}
 {\begin{center}
-\textbf{Spanish Chant.}
+3. \emph{Modern Chant.}
+\end{center}
+}
+\vspace{-2ex}
+{\def\annot{\small \textbf{5.}}
+\setinitialspacing{T}
+%\large
+\includescore{TantumErgo_v3.tex}}
+\vspace{-2ex}
+{\begin{center}
+4. \emph{Spanish Chant.}
 \vspace{-2ex}
 \end{center}
 }
@@ -97,7 +122,8 @@ equal laud to thee be done. Amen.
 %\large
 \includescore{TantumErgo-Spanish.tex}}
 \bigskip
-% We set VII above the initial.
+\hrule
+\bigskip
 {\def\annot{\small \textbf{5.}}
 \setinitialspacing{A}
 %\setsecondannotation{\small \oldstylenums{ \textbf{Ant. 8. G*}}}
@@ -105,8 +131,14 @@ equal laud to thee be done. Amen.
 % We type a text in the top right corner of the score:
 %\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
 
-% and finally we include the score. The file must be in the same directory as this one.
+%TODO: we could add the
+%Pánem de caélo præstitísti éis. (P. T. allelúia.)
+%Omne delectaméntum in se habéntem. (P. T. allelúia.)
+% Deus, qui nobis sub Sacraménto mirábili passiónis tuæ memóriam reliquísti~:~\dag{} tríbue, quaésumus, ita nos córporis et sánguinis tui sacra mystéria venerári;~* ut redemptiónis tuæ fructum in nobis júgiter sentiámus.  Qui vivis et regnas in saécula sæculórum.  Amen.
+% also Divine Praises might be nice...
+%\medskip
 \large
+\greblockcustos
 \includescore{AdoremusInAeternum.tex}}%
 \vspace{-3ex}
 \begin{psalmverses}[1]

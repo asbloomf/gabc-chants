@@ -51,19 +51,20 @@
 \setlength{\columnsep}{18pt}
 \setlength{\columnseprule}{.4pt}
 
-\newcommand{\translation}[2][\em]{\selectlanguage{american}%
+\newcommand{\translation}[2][\em]{{\selectlanguage{american}%
 % 1 - set size and style - defaults to italics
 % 2 - english text
 % 
 {
 %\vspace{-10pt}
 \medskip
-\begin{list}{}{\setlength\leftmargin{18pt}\setlength\rightmargin{\leftmargin}\setlength\topsep{0pt}}
+\ifx\translationmargin\undef\def\translationmargin{18pt}\fi
+\begin{list}{}{\setlength\leftmargin{\translationmargin}\setlength\rightmargin{\leftmargin}\setlength\topsep{0pt}}
 \item #1#2\medskip
 \end{list}
 }
 \selectlanguage{latin}
-}
+}}
 
 \newcommand{\medianttermination}[2]{
 % 1 - Mediant of 2 accents
