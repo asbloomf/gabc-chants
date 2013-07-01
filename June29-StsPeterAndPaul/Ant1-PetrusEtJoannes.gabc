@@ -1,0 +1,21 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Petrus et Joannes;
+office-part: 1 Antiphon;
+mode: 8G;
+occasion: Sts Peter & Paul;
+book:The Liber Usualis, 1961, p. 1515;
+transcriber:Andrew Hinkley;
+annotation: 1 Ant.;
+annotation: 8. G;
+% liber usualis page 1515
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+(c4)PE(g_j)trus(h) et(hg) Jo(f)án(g_h)nes(g.) <v>\greheightstar</v>(,) a(i)scen(j)dé(k)bant(j) in(hj~) tém(j)plum,(i.) (;) ad(j) hó(jkj)ram(jij) o(j)ra(ji)ti(h)ó(j_h)nis(i) nó(g.)nam.(g.) (::z)
+
+E(j) u(j) o(i) u(j) a(h) e.(g.) (::)

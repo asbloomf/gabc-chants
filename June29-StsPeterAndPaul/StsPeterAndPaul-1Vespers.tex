@@ -1,0 +1,158 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+\sloppy
+
+\input{StsPeterAndPaul-common}
+
+%commemoration for 5th Sunday after Pentecost
+%\def\pagebreakbeforecommemoration{T}
+%\def\commemorationtex{../TimeAfterPentecost/CommemorationPentecost5}
+%end commemoration stuff
+
+
+\newcommand{\heading}{The Holy Apostles Peter and Paul at 1 Vespers.}
+
+\newcommand{\predeusinadjutorium}{%
+%\smallskip
+\large
+\setgrefactor{15}
+}
+\def\deusinadjutoriumsolemn{T}
+
+\newcommand{\preantone}{\setgrefactor{17}
+\large
+\greblockcustos
+}
+
+
+\newcommand{\antoneinitialsize}{40}
+\newcommand{\antonetex}{Ant1-PetrusEtJoannes}
+\newcommand{\antoneinitial}{P}
+\newcommand{\antonetranslation}{Peter and John went up together into the Temple at the hour of prayer, being the ninth hour.}
+\definepsalm{1}{109}{8}{G}
+\newcommand{\prepsalmone}{%
+%\vspace{-1.5ex}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preanttwo}{\setgrefactor{17}
+\greblockcustos
+\large
+}
+\newcommand{\anttwoinitialsize}{40}
+\newcommand{\anttwotex}{Ant2-Argentum}
+\newcommand{\anttwoinitial}{A}
+\newcommand{\anttwotranslation}{Silver and gold have I none, but such as I have, give I thee.}
+\definepsalm{2}{110}{7}{b}
+\newcommand{\prepsalmtwo}{%
+\normalsize
+\greblockcustos
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantthree}{\setgrefactor{17}
+\large
+\greblockcustos
+}
+\newcommand{\antthreeinitialsize}{40}
+\newcommand{\antthreetex}{Ant3-DixitAngelusAdPetrum}
+\newcommand{\antthreeinitial}{D}
+\newcommand{\antthreetranslation}{The Angel said unto Peter: Cast thy garment about thee, and follow me.}
+\def\psalmclef{2}
+\definepsalm{3}{111}{8}{c}
+\newcommand{\prepsalmthree}{%
+%\greblockcustos
+\normalsize
+}
+\let\psalmclef=\undefined
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantfour}{\setgrefactor{17}
+%\greblockcustos
+\large
+%\normalsize
+}
+\newcommand{\antfourinitialsize}{40}
+\newcommand{\antfourtex}{Ant4-MisitDominus}
+\newcommand{\antfourinitial}{M}
+\newcommand{\antfourtranslation}{The Lord hath sent His Angel, and hath delivered me out of the hand of Herod.  Alleluia.}
+\definepsalm{4}{112}{7}{c2}
+\newcommand{\prepsalmfour}{%
+%\vspace{-1ex}
+%\setgrefactor{15}
+\normalsize
+}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\def\nopagebreakbeforepsalmfive{T}
+%\def\pagebreakafterpsalmfive{T}
+\newcommand{\preantfive}{\setgrefactor{17}
+\greblockcustos
+\large
+}
+%\newcommand{\preantfivetwo}{\preantfive}
+%\newcommand{\antfivefontsizetwo}{40}
+
+\newcommand{\antfiveinitialsize}{40}
+\newcommand{\antfivetex}{Ant5-TuEsPetrus}
+\newcommand{\antfiveinitial}{T}
+\newcommand{\antfivetranslation}{Thou art Peter and upon this Rock I will build My Church.}
+\definepsalm{5}{116}{7}{c}
+\newcommand{\prepsalmfive}{%
+%\vspace{-1ex}
+%\setgrefactor{15}%
+%\normalsize%
+}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\pagebreakbeforehymn{T}
+
+\newcommand{\prehymn}{\large
+\setgrefactor{16}
+}
+
+\newcommand{\vrtex}{vrInOmnemTerram}
+\newcommand{\vtranslation}{Their sound hath gone forth into all the earth.}
+\newcommand{\rtranslation}{And their words unto the ends of the world.}
+\newcommand{\vrnospace}{T}
+
+\newcommand{\premag}{
+\large
+\setgrefactor{17}
+%\greblockcustos
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+\newcommand{\magfontsize}{38}
+\def\pagebreakbeforemagnificat{T}
+\newcommand{\maganttex}{MagnificatAntiphon1}
+\newcommand{\magantinitial}{T}
+\newcommand{\maganttranslation}{Thou art the Shepherd of the sheep and the Prince of the Apostles, and unto thee are given the keys of the kingdom of heaven.}
+\def\magsolemn{T}
+\def\magoneline{F}
+%\def\psalmclef{c3}
+\definemag{1}{f}
+\newcommand{\premagverses}{%
+\greblockcustos
+\normalsize
+%\setgrefactor{17}
+%\pagebreak
+}
+
+\def\benedicamusdominogrefactor{14}
+\definebenedicamusdomino{1}{1}
+
+%\def\includefideliumanimae{T}
+
+\input{../FullVespers}

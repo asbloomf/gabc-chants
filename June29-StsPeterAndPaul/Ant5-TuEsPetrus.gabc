@@ -1,0 +1,24 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Tu es Petrus;
+office-part: 5 Antiphon;
+mode: 7c;
+occasion: Sts Peter & Paul;
+book:The Liber Usualis, 1961, p. 1515;
+transcriber:Andrew Hinkley;
+annotation: 5 Ant.;
+annotation: 7. c;
+% liber usualis page 1515
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)TU(i_g) es(i_j) Pe(i.)trus,(i.) <v>\greheightstar</v>(,) et(i) su(i')per(g) hanc(h_g) pé(e.)tram(e.) (;) æ(g)di(ghg)fi(f')cá(h)bo(g'_) (,) Ec(f)clé(e_f)si(g)am(f) me(e.)am.(e.) (::z)
+
+E(i) u(i) o(j) u(i) a(h) e.(gh..) (::)

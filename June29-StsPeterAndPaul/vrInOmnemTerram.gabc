@@ -1,0 +1,17 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: In omnem terram;
+office-part: versicle and response;
+initial-style:0;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)()() <v>\Vbar</v>. {I}n(h) óm(h)nem(h) tér(h)ram(h) ex(h)í(h)vit(h) só(h)nus(h) e(h)ó(h)rum.(g_'/hvGF'Efgf.) (::)
+<v>\Rbar</v>. {E}t(h) in(h) fí(h)nes(h) ór(h)bis(h) tér(h)ræ(h) vér(h)ba(h) e(h)ó(h)rum.(g_'/hvGF'Efgf.) (::)
