@@ -36,6 +36,7 @@ five%
 \fi%
 }
 
+%this is deprecated -- now \printpsalm should be used instead
 \newcommand{\definepsalm}[4]{
 % 1 - antiphon number, 1-5
 % 2 - psalm number, e.g., 109
@@ -55,15 +56,15 @@ five%
 \edef\antnum{\numbertoword{#1}}
 
 \expandafter\edef\csname psalm\antnum\endcsname{Psalm #2.}
-\expandafter\edef\csname psalm\antnum tone\endcsname{#3}
-\expandafter\edef\csname psalm\antnum end\endcsname{#4}
+\expandafter\edef\csname psalm\antnum tone\endcsname{#3} % only used internally
+\expandafter\edef\csname psalm\antnum end\endcsname{#4} % only used internally
 %\def\emptypsalmend{per}
 \if\csname psalm\antnum tone\endcsname p % must be T. Per.
-\expandafter\def\csname ant\antnum linetwo\endcsname{T. Per.}
-\expandafter\def\csname psalm\antnum tone\endcsname{per}
-\expandafter\def\csname psalm\antnum end\endcsname{}
+  \expandafter\def\csname ant\antnum linetwo\endcsname{T. Per.}
+  \expandafter\def\csname psalm\antnum tone\endcsname{per} % only used internally
+  \expandafter\def\csname psalm\antnum end\endcsname{} % only used internally
 \else
-\expandafter\edef\csname ant\antnum linetwo\endcsname{\csname psalm\antnum tone\endcsname. #4}
+  \expandafter\edef\csname ant\antnum linetwo\endcsname{\csname psalm\antnum tone\endcsname. #4}
 \fi
 
 \ifx\psalmclef\undefined%
@@ -162,6 +163,205 @@ five%
 % change the standard vespers file to use \psalmXXXcoloptions
 %\newenvironment\expandafter{\psalmMASTERcols}{\begin{parcolumns}\parcolumnsoptions}{\end{parcolumns}}
 }
+
+
+\newcommand{\printpsalm}[5]{
+% TODO: split this into separate commands for antiphon and psalm
+% top line either (1-5). Ant. or At Bened. or At Magn.
+% second line (1-8). (a-g) with Ant. preceding for Benedictus or Magnificat
+% 1 ant num (displayed above big initial 1 Ant.) (1)
+% 2 psalm num (112)
+% 3 mode with ending (8G)
+% 4 tex filename of antiphon
+% 5 ant initial
+% optional - define anttranslation and antinitialsize
+% \psalmbeginversetwo can be defined as T to append -verse2
+% \psalmclef can be used to append -clef{\psalmclef}
+% preant
+% prepsalm
+%%%%% following are set automatically
+% psalmtitle - set from #2 (Psalm #2.)
+% psalmtex - psalm gabc
+% psalmtitleafterant - set based on psalmbeginversetwo
+% psalmversestex - tex file with Latin psalm verses
+% psalmtranslationtex - tex file with English psalm verses
+%
+%set up variables
+\def\psalmtitleafterant{T}
+\ifx\psalmbeginversetwo\undefined
+  \def\psalmbeginversetwo{F}%
+\else\if\psalmbeginversetwo T%
+  \def\psalmtitleafterant{F}
+\fi\fi
+
+\ifx\onlyoneant\undefined
+  \def\onlyoneant{F}
+\fi
+
+\edef\psalmtitle{Psalm #2.}
+\edef\psalmtone{8}
+\edef\psalmend{G}
+% TODO: split #3 into psalmtone & psalmend with xstring
+\if\psalmtone p % must be T. Per.
+  \def\antlinetwo{T. Per.}
+  \def\psalmtone{per} % only used internally
+  \def\psalmend{} % only used internally
+\else
+  \edef\antlinetwo{\psalmtone. \psalmend}
+\fi
+
+\ifx\psalmclef\undefined%
+\def\altclef{}%
+\else%
+\edef\altclef{-clef\psalmclef}%
+\fi
+
+\edef\expandedend{\psalmend}
+\edef\nostarend{\psalmend}
+\edef\mytempa{\psalmend}
+\StrSubstitute{\mytempa}{*}{star}[\expandedend]
+\StrSubstitute{\mytempa}{*}{}[\nostarend]
+\edef\psalmtexbeg{../psalms/Psalm#2-\psalmtone}
+\edef\psalmtex{\psalmtexbeg\expandedend\if\psalmbeginversetwo T-verse2\fi\altclef}
+\edef\psalmversestex{%
+\psalmtexbeg\nostarend-verses\if\psalmbeginversetwo T2\fi
+}
+\edef\psalmtranslationtex{%
+../psalms/psalm#2-verses-en
+}
+
+% define the parcolumn options
+\ifx\psalmtranslationsmall\undefined
+    \def\psalmtranslationsmall{F}
+\fi
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween]{2}}
+\def\endpsalmcols{\end{parcolumns}}
+%\def\psalmcoloptions{rulebetween}
+%109 & 110 are just rulebetween
+\ifnum#2=109
+  \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=272pt}]{2}}%262
+\fi
+\ifnum#2=111
+  \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=252pt}]{2}}
+  %\def\psalmcoloptions{rulebetween,colwidths={1=252pt}}
+\fi
+\ifnum#2=112
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=290pt}]{2}} %290 if small
+  \else
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=278pt}]{2}}
+  \fi
+  %\def\psalmcoloptions{rulebetween,colwidths={1=278pt}} %278 or 285 or 290
+\fi
+\ifnum#2=113
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=281pt}]{2}} %281 if small
+  \else
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=267pt}]{2}} % had been 266
+  \fi
+  %\def\psalmcoloptions{rulebetween,colwidths={1=266pt}}
+\fi
+%116 is just rulebetween
+%121 is just rulebetween
+\ifnum#2=125
+  \ifx\psalmtranslationsmall\undefined\else\if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=290pt}]{2}}
+  \fi\fi
+\fi
+%129 & 131 ???g? % I should at least do something for translation small
+\ifnum#2=126
+  \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=253pt}]{2}}
+  %\def\psalmcoloptions{rulebetween,colwidths={1=260pt}}
+\fi
+%129 & 131 ???g? % I should at least do something for translation small
+\ifnum#2=129
+  \ifx\psalmtranslationsmall\undefined\else\if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=292pt}]{2}} %292 if small
+  \fi\fi
+\fi
+\ifnum#2=131
+  \ifx\psalmtranslationsmall\undefined\else\if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=292pt}]{2}} %292 if small
+  \fi\fi
+\fi
+\ifnum#2=138
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=265pt}]{2}} %292 if small
+  \else
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=260pt}]{2}}
+  \fi
+\fi
+\ifnum#2=147
+  \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=285pt}]{2}}
+  %\def\psalmcoloptions{rulebetween,colwidths={1=285pt}}
+\fi
+
+
+\if\psalmtitleafterant F%
+    \vspace{0pt minus 14pt}
+    \begin{center}{\Large \psalmtitle}\end{center}
+    \vspace{0pt minus 18pt}
+\fi
+%\bigskip % probably can delete this
+{\edef\greinitialformat##1{%
+%TODO: instead of taking it from initialsize, calculate from grefactor
+{\fontsize{\antinitialsize}{\antinitialsize}\selectfont ##1}%
+}
+\ifx\preant\undefined\else\preant\fi
+%TODO: use xstring If #1 is empty string, Ant. otherwise #1. Ant.
+%\if T%
+%  \def\annot{\small{Ant.}}
+%\else%
+  \def\annot{\small{#1. Ant.}}
+%\fi%
+%TODO: format mode and ending properly into antlinetwo
+\def\annottwo{\small{\antlinetwo}}
+\setinitialspacing{#5}
+
+\includescore{#4}
+}
+%\vspace{-1ex}
+\if\psalmtitleafterant T%
+  \ifx\anttranslation\undefined\else%
+    \translation[]{\normalsize \anttranslation}
+  \fi%
+  \vspace{-1ex plus 1ex}% maybe get rid of this
+  \begin{center}{\Large \psalmtitle}\end{center}
+  %\vspace{0pt minus 12pt} % this line can probably be deleted
+\fi
+{\ifx\prepsalm\undefined\else\prepsalm\fi
+  \includescore{\psalmtex}
+}
+\medskip % do we need this?
+
+\normalsize
+%\vspace{-20pt}
+\setlength{\columnsep}{18pt}
+\setlength{\columnseprule}{.4pt}
+\beginpsalmcols
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}[\if\psalmbeginversetwo T2\else 1\fi]
+\input{\psalmversestex}
+\end{psalmverses}
+}
+
+\selectlanguage{american}
+\colchunk{\vspace{-12pt}%
+\sloppy
+\begin{psalmverses}
+\input{\psalmtranslationtex}
+\end{psalmverses}
+}
+\selectlanguage{latin}
+\endpsalmcols
+\if\onlyoneant T\else% TODO: add optional preanttwo and antfontsizetwo (line 58 on psalm.tex)
+  \medskip
+  {\noindent\emph{Repeat antiphon.}\\}
+\fi%
+% TODO: do we need to do pagebreak stuff?
+}
+
+
 
 \newcommand{\definemag}[2]{
 %1 - psalm tone, e.g., 8

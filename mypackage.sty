@@ -129,6 +129,21 @@
 
 \newlength{\mycolwidth}%
 
+\renewcommand{\emph}[1]{{\em #1}}
+\renewcommand{\textbf}[1]{{\bfseries #1}}
+\def\greitalic#1{%
+  {\itshape #1}%
+  \relax %
+}
+\def\gresmallcaps#1{%
+  {\scshape #1}%
+  \relax %
+}
+\def\greboldfont#1{%
+  {\bfseries #1}%
+  \relax %
+}
+
 \newenvironment{oldcolumns}{
 	\setlength\mycolwidth{.5\linewidth}%
 	%\setlength\arraystretch{0pt}%

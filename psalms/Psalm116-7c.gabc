@@ -3,23 +3,21 @@
 
 % The first part of the score is called the header, you can input some useful informations here:
 
-name: Puer Jesus;
-office-part: Magnificat Antiphon;
-mode: 6F;
-occasion: Sunday within Christmas Ocatve;
+name: Psalm 116;
+office-part: 5th psalm;
+occasion:  Vespers;
 date: 2011;
 transcriber: Albert Bloomfield;
 transcription-date: 2011;
 style: modern;
-annotation: At Magn.;
-annotation: 6. F;
+initial-style:0;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
 %%
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
-(c4)PU(f)er(c) Jé(df)sus(ffg) <v>\greheightstar</v>(,) pro(f)fi(f)ci(f)é(gh)bat(h) æ(h)tá(hj)te(h'_) (,) et(g) sa(hg)pi(f)én(gh)ti(gf)a(f_f_/ggf.) (;)
-co(f)ram(f) Dé(f_g)o(e_f) et(d) ho(cf)mí(f)ni(f)bus.(f.) (::z)
 
-E(h) u(h) o(f) u(gh) a(g) e.(f.) (::)
+(c3)1. L{au}(hg)dá(hi)te(i) Dó(i)mi(i)num,(i) <b>om</b>(k jr)nes(j) <b>Gen</b>(i jr)tes :(j.) <v>\greheightstar</v>(:) lau(i)dá(i)te(i) e(i)um,(i) <b>om</b>(j ir)nes(i) <b>pó</b>(h)pu(hr)li :(gh..) (::)
+
+%E(i) u(i) o(j) u(i) a(h) e.(gh..) (::)

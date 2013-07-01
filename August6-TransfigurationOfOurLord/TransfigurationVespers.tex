@@ -1,0 +1,182 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+\usepackage{../definepsalms}
+
+\sloppy
+
+\newcommand{\predeusinadjutorium}{%
+%\smallskip
+\large
+\setgrefactor{15}
+}
+\def\deusinadjutoriumsolemn{T}
+
+\newcommand{\preantone}{\setgrefactor{17}
+\large
+%\greblockcustos
+}
+
+\newcommand{\antoneinitialsize}{40}
+\newcommand{\antonetex}{Ant1-AssumpsitJesus}
+\newcommand{\antoneinitial}{A}
+\newcommand{\antonetranslation}{Jesus took Peter and James, and John his brother, and led them up unto a high mountain apart, and was transfigured before them.}
+\definepsalm{1}{109}{1}{g}
+\newcommand{\prepsalmone}{%
+%\vspace{-1.5ex}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preanttwo}{\setgrefactor{17}
+%\greblockcustos
+\large
+}
+\newcommand{\anttwoinitialsize}{40}
+\newcommand{\anttwotex}{Ant2-Resplenduit}
+\newcommand{\anttwoinitial}{R}
+\newcommand{\anttwotranslation}{His face did shine as the sun, and His raiment became white as snow, alleluia.}
+\definepsalm{2}{110}{8}{G}
+\newcommand{\prepsalmtwo}{%
+\normalsize
+\greblockcustos
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantthree}{\setgrefactor{17}
+\large
+%\greblockcustos
+}
+\newcommand{\antthreeinitialsize}{40}
+\newcommand{\antthreetex}{Ant3-EtEcce}
+\newcommand{\antthreeinitial}{E}
+\newcommand{\antthreetranslation}{And behold, there appeared unto them Moses and Elias speaking with Jesus.}
+\def\psalmclef{2}
+\definepsalm{3}{111}{4}{E}
+\let\psalmclef\undefined
+\newcommand{\prepsalmthree}{%
+\normalsize
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantfour}{\setgrefactor{17}
+%\greblockcustos
+\large
+%\normalsize
+}
+\newcommand{\antfourinitialsize}{40}
+\newcommand{\antfourtex}{Ant4-RespondensAutemPetrus}
+\newcommand{\antfourinitial}{R}
+\newcommand{\antfourtranslation}{\vspace{0ex minus 3.5ex}And Peter answering, said to Jesus: Lord, it is good for us to be here.\vspace{0ex minus 3.5ex}}
+\definepsalm{4}{112}{6}{F}
+\newcommand{\prepsalmfour}{%
+%\vspace{-1ex}
+%\setgrefactor{15}
+\normalsize
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\def\nopagebreakbeforepsalmfive{T}
+%\def\pagebreakafterpsalmfive{T}
+\newcommand{\preantfive}{\setgrefactor{17}
+%\greblockcustos
+\large
+}
+%\newcommand{\preantfivetwo}{\preantfive}
+\newcommand{\antfivefontsizetwo}{40}
+
+\newcommand{\antfiveinitialsize}{40}
+\newcommand{\antfivetex}{Ant5-AdhucEoLoquente}
+\newcommand{\antfiveinitial}{A}
+\newcommand{\antfivetranslation}{\vspace{0pt minus 1ex}As he was yet speaking, behold a bright cloud overshadowed them.}
+\definepsalm{5}{116}{3}{g}
+\newcommand{\prepsalmfive}{%
+\vspace{-12pt plus 12pt}
+%\setgrefactor{15}%
+%\normalsize%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\chapter}{\dropcap{latin}{Salvatórem exspectámus Dóminum nostrum Jesum} \textbf{Chri}\-stum,~\dag{} qui reformábit corpus humili\-\emph{tá\-tis} \textbf{no}\-stræ,~* configurátum córpori claritátis \textbf{su}\-æ.}
+\newcommand{\chaptertranslation}{We look for the Saviour, our Lord Jesus Christ, who will reform the body of our lowness, made like to the body of His glory.}
+
+\def\pagebreakbeforehymn{T}
+\newcommand{\prehymn}{\large
+\setgrefactor{15}
+%\vspace*{-6ex}
+}
+\newcommand{\hymnlinetwo}{4.}
+\newcommand{\hymntex}{Hymn-QuicumqueChristumQuaeritis}
+\newcommand{\hymninitial}{Q}
+\newcommand{\hymntranslation}{
+\item All ye who seek full longingly
+For Christ, lift up your eyes on high:
+There may ye see the vision bright,
+Th'eternal Son, in glorious light.
+
+\item Behold, His splendour now appears,
+Who knows no change from passing years,
+Exalted, infinite, sublime,
+Before the void or heaven's prime.
+
+\item This is the King of nations all,
+The King of Jewry's race withal,
+Promis'd to Abraham of yore,
+And to his seed for evermore.
+
+\item To Him the prophets testify,
+And set their seal of witness high;
+The Father from His heav'nly throne,
+Now bids us hear His only Son.
+
+\item O Jesu, who Thyself dost show
+To lowly ones, all glory now
+To Thee, with God the Father be,
+And Holy Ghost eternally.  Amen. %\setgrefactor{15}
+}
+
+%mode 2
+\newcommand{\vrtex}{Hymn-QuicumqueChristumQuaeritisvr}
+\newcommand{\vtranslation}{Glorious didst Thou appear in the sight of the Lord.}
+\newcommand{\rtranslation}{Therefore hath the Lord clothed Thee with beauty.}
+%\def\vrnospace{T}
+
+\newcommand{\premag}{
+\normalsize
+\setgrefactor{14}
+%\greblockcustos
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+%\newcommand{\maganttex}{MagnificatAntiphon2}
+\newcommand{\magfontsize}{30}
+%\def\pagebreakbeforemagnificat{T}
+%\newcommand{\magantinitial}{E}
+%\newcommand{\maganttranslation}{And the disciples hearing, fell on their faces, and were sore afraid; and Jesus came, and touched them, and said to them, Arise, and fear not, alleluia.}
+\def\magsolemn{T}
+\def\magoneline{T}
+%\definemag{1}{f}
+%\newcommand{\magtone}{8}
+%\newcommand{\magend}{G}
+\newcommand{\premagverses}{%
+%\greblockcustos
+\normalsize
+\setgrefactor{14}
+%\pagebreak
+}
+%\input{../psalms/definemag}
+
+\newcommand{\collect}{Deus, qui fídei sacraménta in Unigéniti tui gloriósa Transfiguratióne patrum testimónio roborásti, et adoptiónem filiórum perféctam, voce delápsa in nube lúcida, mirabíliter præsignásti~:~† concéde propítius; ut ipsíus Regis glóriæ nos coherédes effícias,~* et ejúsdem glóriæ tríbuas esse consórtes.  Per eúmdem Dóminum nostrum Jesum Christum Fílium tuum, qui tecum.}
+\newcommand{\collecttranslation}{O God, who in the glorious Transfiguration of Thine only-begotten Son didst confirm the Mysteries of the faith by the witness of the fathers, and in the voice which came down from the shining cloud, didst wondrously foreshow the perfect adoption of sons: vouchsafe in Thy loving kindness, to make us coheirs with this King of glory, and to grant that we may be made partakers of that same glory. Through the same.}
+
+%\definebenedicamusdomino{2}{2}
+
+\def\includefideliumanimae{T}
+
+%\input{../FullVespers}
