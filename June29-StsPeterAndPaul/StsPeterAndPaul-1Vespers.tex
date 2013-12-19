@@ -27,6 +27,7 @@
 \newcommand{\preantone}{\setgrefactor{17}
 \large
 \greblockcustos
+\medskip
 }
 
 
@@ -65,13 +66,12 @@
 \newcommand{\antthreetex}{Ant3-DixitAngelusAdPetrum}
 \newcommand{\antthreeinitial}{D}
 \newcommand{\antthreetranslation}{The Angel said unto Peter: Cast thy garment about thee, and follow me.}
-\def\psalmclef{2}
 \definepsalm{3}{111}{8}{c}
 \newcommand{\prepsalmthree}{%
+\gdef\psalmclef{2}
 %\greblockcustos
 \normalsize
 }
-\let\psalmclef=\undefined
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -155,4 +155,5 @@
 
 %\def\includefideliumanimae{T}
 
-\input{../FullVespers}
+\input{../inc_header} %
+\input{../FullVespers-test}

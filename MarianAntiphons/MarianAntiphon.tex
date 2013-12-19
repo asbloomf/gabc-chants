@@ -11,8 +11,8 @@
 \usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
 \geometry{letterpaper} % or letterpaper (US) or a5paper or....
 \usepackage{gregoriotex} % for gregorio score inclusion
-\usepackage{fullpage} % to reduce the margins
-\usepackage{anysize} % for marginsize
+%\usepackage{fullpage} % to reduce the margins
+%\usepackage{anysize} % for marginsize
 \usepackage{multicol} % for columns
 \usepackage{lettrine} % for drop caps
 %\usepackage{wrapfig} % for wrapping figures -- can't get it to work with gregorio
@@ -35,7 +35,10 @@
 %small > footnotesize > scriptsize > tiny
 
 \pagestyle{empty} % no header or footers
-\marginsize{35pt}{35pt}{40pt}{20pt}
+\usepackage{calc}
+%\marginsize{35pt}{35pt}{40pt}{20pt}
+\geometry{outer=35pt,inner=35pt,top=20pt+\headsep+\headheight,bottom=20pt+\footskip}
+
 
 \newcommand{\afterant}{
 \ifx\note\undefined\else%

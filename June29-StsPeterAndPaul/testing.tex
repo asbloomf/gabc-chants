@@ -1,0 +1,36 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+%\usepackage{../newdefinepsalms}
+\sloppy
+
+\newcommand{\test}[1]{
+\def\gxy##1{this is ##1}
+test was #1
+}
+
+\input{../inc_header}
+
+
+
+\begin{document}
+\def\antinitialsize{40}
+%\printpsalm{1}{109}{8G}{Ant1-PetrusEtJoannes}{P}
+%\printpsalm{2}{110}{8G}{Ant2-Argentum}{A}
+\setgrefactor{16}
+\ifnum\grefactor=16
+true
+\else
+false\fi
+% 1 ant num (displayed above big initial 1 Ant.) (1)
+% 2 psalm num (112)
+% 3 mode with ending (8G)
+% 4 tex filename of antiphon
+% 5 ant initial
+
+
+\end{document}

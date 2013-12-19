@@ -11,7 +11,45 @@ Qui(f)a(j'_) quem(jkkj) me(ih)ru(gf)ís(gh)ti(h.) (,z)
 % change h to k in the tex file
 %\grevepisemus{h}{2}%
 %\grevepisemus{k}{2}%
-por(iii'g ijf'/gf.,iii'g ijf'/gf./ghgh)tá(f_g_f_)re,(f.) (,)
+por(%iii'g ijf'/gf.,iii'g ijf'/gf./ghgh
+[ev:%
+{%
+\greglyph{\char 17}{i}{i}{0}{}{}%
+\greendofglyph{0}%
+\greglyph{\char 17}{i}{i}{0}{}{}%
+\greendofglyph{0}%
+\greglyph{\char 5122}{i}{i}{1}{}{%
+\grevepisemus{k}{2}%
+}%
+\greendofelement{2}{0}%
+\greglyph{\char 15381}{i}{g}{0}{}{%
+\grevepisemus{e}{0}%
+}%
+\greendofelement{0}{0}%
+\greglyph{\char 5121}{g}{i}{8}{}{%
+\grepunctummora{f}{0}{0}{0}%
+}%
+\greindivisiominima{}%
+\greglyph{\char 17}{i}{i}{0}{}{}%
+\greendofglyph{0}%
+\greglyph{\char 17}{i}{i}{0}{}{}%
+\greendofglyph{0}%
+\greglyph{\char 5122}{i}{i}{1}{}{%
+\grevepisemus{k}{2}%
+}%
+\greendofelement{2}{0}%
+\greglyph{\char 15381}{i}{g}{0}{}{%
+\grevepisemus{e}{0}%
+}%
+\greendofelement{0}{0}%
+\greglyph{\char 5121}{g}{g}{8}{}{%
+\grepunctummora{f}{0}{0}{0}%
+}%
+\greendofelement{0}{0}%
+\greglyph{\char 17439}{g}{f}{0}{}{}%
+}%
+]
+)tá(f_g_f_)re,(f.) (,)
 al(ih~)le(gf/gh fhG'F)lú(ef)ia :(f.) (::)
 Re(i)sur(j')ré(kj'ji)xit,(j'_) (,)
 sic(j)ut(f') dí(g)xit,(f.) (,)
