@@ -1,0 +1,17 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Responsum accepit Simeon;
+office-part: versicle and response;
+initial-style:0;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)()() <v>\Vbar</v>. R{e}(h)spón(h)sum(h) ac(h)cé(h)pit(h) Sí(h)me(h)on(h) a(h) Spí(h)ri(h)tu(h) Sán(h)cto.(g'_hvGF'Efgf.) (::Z)
+<v>\Rbar</v>. N{o}n(h) vi(h)sú(h)rum(h) se(h) mór(h)tem,(h) ni(h)si(h) vi(h)dé(h)ret(h) Chrí(h)stum(h) Dó(h)mi(h)ni.(g'_hvGF'Efgf.) (::)

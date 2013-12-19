@@ -1,0 +1,78 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+%TODO: attributions (Grassi)
+%      put Solemn & Simple somewhere
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+\usepackage{calc}
+
+% usual packages loading:
+%\usepackage{luatextra}
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
+%\geometry{letterpaper} % or letterpaper (US) or a5paper or....
+\geometry{outer=72pt,inner=72pt,top=36pt,bottom=36pt+\footskip}
+\usepackage{gregoriotex} % for gregorio score inclusion
+
+% If you use usual TeX fonts, here is a starting point:
+%\usepackage{palatino}
+%\input{glyphtounicode} \pdfglyphtounicode{f_f}{FB00} \pdfglyphtounicode{f_f_i}{FB03} \pdfglyphtounicode{f_f_l}{FB04}
+%\pdfglyphtounicode{Q_u}{E048} \pdfglyphtounicode{O_e}{0152} \pdfglyphtounicode{o_e}{0153}
+%\pdfgentounicode=1
+% to change the font to something better, you can install the kpfonts package (if not already installed). To do so
+% go open the "TeX Live Manager" in the Menu Start->All Programs->TeX Live 2010
+\input{../gsp-spaces}
+%\def\greinitialformat#1{{\fontsize{37}{37}\selectfont #1}}
+%small > footnotesize > scriptsize > tiny
+
+
+% my stuff
+\usepackage[garamond]{../mypackage}
+% end my stuff
+
+\setgrefactor{17}
+
+
+\pagestyle{fancy} % no header or footers
+%\chead{\addfontfeature{Numbers=Lining}Magnificat Solemn Tone 7. a.}
+%\let\oldheadrulewidth\headrulewidth
+\renewcommand\headrulewidth{0pt}
+%\cfoot{\thepage}
+
+% here we begin the document
+\begin{document}
+%\marginsize{72pt}{72pt}{36pt}{36pt}
+%\cfoot{}
+
+% The title:
+%\vspace*{-11ex}
+%\begin{center}{\huge Magnificat.}\end{center}
+%\vspace{-2ex}
+
+%
+%
+% We type a text in the top right corner of the score:
+%\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
+%
+% and finally we include the score. The file must be in the same directory as this one.
+\normalsize
+\addfontfeature{Numbers=Lining}
+\def\magsolemn{T}
+\def\magprotodiogenes{T}
+\definemag{7}{a}
+\def\annot{\magtone. \magend}
+\def\greinitialformat#1{%
+{\fontsize{50}{50}\selectfont #1}%
+}
+\setinitialspacing{M}
+
+\greblockcustos
+\begin{boldnummagnificat}{\magtex}
+\magverses
+\end{boldnummagnificat}
+\noindent%\begin{center}%
+\includegraphics{magnificat-protodiogenes-7a-crop.pdf}%
+%\end{center}
+\end{document}

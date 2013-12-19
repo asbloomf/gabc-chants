@@ -1,0 +1,26 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+name: Psalm121-4E;
+office-part: Psalm;
+occasion: Vespers;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+initial-style: 0;
+%%
+(c4)1. L{æ}(g)tá(hj)tus(j) sum(j) in(j) his,(j) quæ(j) <b>di</b>(k)cta(jr) sunt([ev:%j jr ocba:1;9.5mm 
+{%
+\greglyph{\char 17}{j}{j}{0}{}{}%
+\greendofelement{2}{0}%
+\grepunctumcavum{j}{i}{0}{}{}%
+{%
+% verbatim text at note level:
+\greovercurlybrace{9.5mm}{1}{0pt}{0pt}{1}%
+% end of verbatim text
+}{}%
+}%
+]) <b>mi</b>(ih)hi :(j.) <v>\greheightstar</v>(:) In(j) do(j)mum(j) Dó(j)mi(j)<i>ni</i>(h) <b>í</b>(j)bi(jr)mus.(i.) (::)
+
+%E(j) u(j) o(j) u(h) a(j) e.(i.) (::)
+

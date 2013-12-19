@@ -1,0 +1,690 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+% usual packages loading:
+%\usepackage{luatextra}
+%\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage[dvips]{geometry} % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper} % or letterpaper (US) or a5paper or....
+\usepackage{gregoriotex} % for gregorio score inclusion
+
+% If you use usual TeX fonts, here is a starting point:
+%\usepackage{palatino}
+%\input{glyphtounicode} \pdfglyphtounicode{f_f}{FB00} \pdfglyphtounicode{f_f_i}{FB03} \pdfglyphtounicode{f_f_l}{FB04}
+%\pdfglyphtounicode{Q_u}{E048} \pdfglyphtounicode{O_e}{0152} \pdfglyphtounicode{o_e}{0153}
+%\pdfgentounicode=1
+% to change the font to something better, you can install the kpfonts package (if not already installed). To do so
+% go open the "TeX Live Manager" in the Menu Start->All Programs->TeX Live 2010
+\input{../gsp-spaces}
+%\def\greinitialformat#1{{\fontsize{37}{37}\selectfont #1}}
+%small > footnotesize > scriptsize > tiny
+
+
+% my stuff
+\usepackage[garamond]{../mypackage}
+% end my stuff
+
+\setgrefactor{17}
+
+
+%\marginsize{25pt}{25pt}{25pt}{30pt}
+\usepackage{calc}
+%\setlength\headsep{20pt}
+%\setlength\footskip{15pt}
+\geometry{outer=25pt,inner=25pt,top=25pt+\headsep+\headheight,bottom=25pt+\footskip}
+\pagestyle{fancy} % no header or footers
+\let\oldheadrulewidth\headrulewidth
+\renewcommand\headrulewidth{0pt}
+%\cfoot{\thepage}
+
+\ifx\onlyoneant\undefined\def\onlyoneant{F}\fi
+
+% here we begin the document
+\begin{document}
+%\chead{Sunday At Vespers}
+
+% The title:
+\vspace*{-50pt plus 20pt}
+\begin{center}{\addfontfeature{Numbers=Lining}%
+\huge {\textsc\heading}}\end{center}
+%\vspace{-2ex}
+\bigskip
+
+% Here we set the space around the initial.
+% Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
+
+% Here we set the initial font. Change 43 if you want a bigger initial.
+\def\greinitialformat#1{%
+{\fontsize{40}{40}\selectfont #1}%
+}
+
+% We set red lines here, comment it if you want black ones.
+%\redlines
+
+
+\begin{center}{\textup At Matins}\end{center}
+\emph{\openingnote}
+
+\begin{center}{\textup In the \textsc 1st \textup Nocturn}\end{center}
+%TODO: 3 psalms
+%TODO: versicle and response
+
+Pater noster. \emph{in silence.}
+
+\emph{On these three days, there is neither Absolution nor Blessing.  At the end of the Lessons, \emph{Tu autem} is not said.}
+
+\begin{center}{\textup At Lauds}\end{center}
+
+%TODO: Benedictus
+
+
+%
+\def\psalmoneafterant{T}
+\ifx\psalmonebeforeant\undefined\else\if\psalmonebeforeant T%
+\vspace{0pt minus 14pt}
+\begin{center}{\Large \psalmone}\end{center}
+\vspace{0pt minus 18pt}
+\def\psalmoneafterant{F}
+\else
+\fi\fi
+\bigskip
+{\def\greinitialformat#1{%
+{\fontsize{\antoneinitialsize}{\antoneinitialsize}\selectfont #1}%
+}
+\preantone
+\if\onlyoneant T%
+\def\annot{\small{Ant.}}
+\else%
+\def\annot{\small{1. Ant.}}
+\fi%
+\def\annottwo{\small{\antonelinetwo}}
+\setinitialspacing{\antoneinitial}
+
+\includescore{\antonetex}
+}
+%\vspace{-1ex}
+\if\psalmoneafterant T%
+\ifx\antonetranslation\undefined\else%
+\translation[]{\normalsize \antonetranslation}
+\fi%
+\vspace{-1ex plus 1ex}%
+\begin{center}{\Large \psalmone}\end{center}
+\fi
+{\ifx\prepsalmone\undefined\else\prepsalmone
+\includescore{\psalmonetex}
+}
+\medskip
+
+\normalsize
+%\vspace{-20pt}
+\setlength{\columnsep}{18pt}
+\setlength{\columnseprule}{.4pt}
+\beginpsalmonecols
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}[\ifx\psalmonebeginversetwo\undefined 1\else\if\psalmonebeginversetwo T2\else 1\fi\fi]
+\input{\psalmoneversestex}
+\end{psalmverses}
+}
+
+\selectlanguage{american}
+%\columnbreak
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}
+\input{\psalmonetranslationtex}
+\end{psalmverses}
+}
+\selectlanguage{latin}
+\endpsalmonecols
+\if\onlyoneant T\else
+\medskip
+{\noindent\emph{Repeat antiphon.}\\}
+\fi
+
+\pagebreak
+%
+\cfoot{\thepage}
+\renewcommand\headrulewidth{\oldheadrulewidth}
+\chead{\addfontfeature{Numbers=Lining}%
+\heading}
+%
+%
+{\if\onlyoneant T\else%
+\def\greinitialformat#1{%
+{\fontsize{\anttwoinitialsize}{\anttwoinitialsize}\selectfont #1}%
+}
+\preanttwo
+\def\annot{\small{2. Ant.}}
+\def\annottwo{\small{\anttwolinetwo}}
+\setinitialspacing{\anttwoinitial}
+
+\includescore{\anttwotex}
+\translation[]{\normalsize \anttwotranslation}
+\fi
+\vspace{0pt minus 8pt}
+\begin{center}{\Large \psalmtwo}\end{center}
+\vspace{0pt minus 12pt}
+\ifx\prepsalmtwo\undefined\else\prepsalmtwo\fi
+\includescore{\psalmtwotex}
+}
+\normalsize\medskip
+
+\beginpsalmtwocols
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}[1]
+\input{\psalmtwoversestex}
+\end{psalmverses}
+}
+
+%\columnbreak
+\selectlanguage{american}
+\colchunk{\vspace{-12pt}%
+\sloppy
+\begin{psalmverses}[0]
+\input{\psalmtwotranslationtex}
+\end{psalmverses}
+}
+\selectlanguage{latin}
+\endpsalmtwocols
+\if\onlyoneant T\else%
+\medskip
+{\noindent\emph{Repeat antiphon.}\\}
+
+\pagebreak
+
+{\def\greinitialformat#1{%
+{\fontsize{\antthreeinitialsize}{\antthreeinitialsize}\selectfont #1}%
+}
+\preantthree
+\def\annot{\small{3. Ant.}}
+\def\annottwo{\small{\antthreelinetwo}}
+\setinitialspacing{\antthreeinitial}
+
+\includescore{\antthreetex}
+}
+%\vspace{-2ex}
+\translation[]{\normalsize \antthreetranslation}
+\fi
+\vspace{-12pt plus 12pt}
+\begin{center}{\Large \psalmthree}\end{center}
+\vspace{-6pt plus 6pt}
+{\ifx\prepsalmthree\undefined\else\prepsalmthree\fi
+\includescore{\psalmthreetex}
+}
+\normalsize
+
+%\medskip
+\beginpsalmthreecols
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}[1]
+\input{\psalmthreeversestex}
+\end{psalmverses}
+}
+%\columnbreak
+\selectlanguage{american}
+\colchunk{\vspace{-12pt}%
+\sloppy
+\begin{psalmverses}[0]
+\input{\psalmthreetranslationtex}
+\end{psalmverses}
+}
+\selectlanguage{latin}
+\endpsalmthreecols
+\if\onlyoneant T\else%
+\medskip
+{\noindent\emph{Repeat antiphon.}\\}
+\pagebreak
+
+{\def\greinitialformat#1{%
+{\fontsize{\antfourinitialsize}{\antfourinitialsize}\selectfont #1}%
+}
+\preantfour
+\def\annot{\small{4. Ant.}}
+\def\annottwo{\small{\antfourlinetwo}}
+\setinitialspacing{\antfourinitial}
+
+\includescore{\antfourtex}
+}
+\translation[]{\normalsize \antfourtranslation}
+%\vspace{-3.5ex}
+\fi%
+\vspace{-8pt plus 8pt}
+\begin{center}{\Large \psalmfour}\end{center}
+\vspace{-6pt plus 6pt}
+{\ifx\prepsalmfour\undefined\else\prepsalmfour\fi
+\includescore{\psalmfourtex}
+}
+\medskip
+\beginpsalmfourcols
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}[1]
+\input{\psalmfourversestex}
+\end{psalmverses}
+}
+\selectlanguage{american}
+\colchunk{\vspace{-12pt}%
+\ifx\psalmfourtranslationsmall\undefined\else\if\psalmfourtranslationsmall T\small\fi\fi
+\begin{psalmverses}[0]
+\input{\psalmfourtranslationtex}
+\end{psalmverses}
+}
+\selectlanguage{latin}
+\endpsalmfourcols
+\if\onlyoneant T\else%
+\medskip
+{\noindent\emph{Repeat antiphon.}}
+\ifx\nopagebreakbeforepsalmfive\undefined
+\pagebreak%
+\else\if\nopagebreakbeforepsalmfive T%
+\medskip\hrule%
+\else%
+\pagebreak%
+\fi\fi
+\medskip
+
+{\def\greinitialformat#1{%
+{\fontsize{\antfiveinitialsize}{\antfiveinitialsize}\selectfont #1}%
+}
+\preantfive
+\def\annot{\small{5. Ant.}}
+\def\annottwo{\small{\antfivelinetwo}}
+\setinitialspacing{\antfiveinitial}
+\ifx\antfiveNoEuouae\undefined\def\antfiveNoEuouae{F}\fi
+\includescore{\antfivetex\if\antfiveNoEuouae T_noEuouae\fi}
+}
+\vspace{0ex plus 0ex minus 3ex}
+\translation[]{\normalsize \antfivetranslation}
+\fi %end not only one antiphon
+\vspace{-12pt plus 12pt}
+\pagebreak[2]
+\begin{center}{\Large \psalmfive}\end{center}
+\vspace{0pt minus 12pt}
+{\ifx\prepsalmfive\undefined\else\prepsalmfive\fi
+\includescore{\psalmfivetex}
+}
+%
+%I changed this vspace to the medskip 2013-02-01
+%\vspace{0ex plus 1ex minus 1ex}
+\medskip
+%end change
+%
+%\begin{multicols}{2}
+%\vspace{-1ex}
+%\begin{Parallel}[v]{}{}
+% default colwidth is 265pt
+%colwidths={1=262pt},rulebetween
+%\smallskip
+\beginpsalmfivecols
+%\ParallelLText
+\colchunk{%
+\vspace{-12pt}
+\begin{psalmverses}[1]
+\input{\psalmfiveversestex}
+\end{psalmverses}
+}
+\selectlanguage{american}
+%\ParallelRText{%
+\colchunk{%
+\vspace{-12pt}
+\ifx\psalmfivetranslationsmall\undefined\else\if\psalmfivetranslationsmall T\small\fi\fi
+\sloppy
+\begin{psalmverses}[0]
+\input{\psalmfivetranslationtex}
+\end{psalmverses}}
+\selectlanguage{latin}
+\endpsalmfivecols
+\medskip
+\if\onlyoneant T%
+\let\preantfivetwo=\preantone%
+\let\antfivefontsizetwo=\antoneinitialsize%
+\let\antfivelinetwo=\antonelinetwo%
+\let\antfiveinitial=\antoneinitial%
+\let\antfivetex=\antonetex%
+\fi%
+%
+\def\nopagebreakafterpsalmfive{T}%
+\ifx\pagebreakafterpsalmfive\undefined\else\if\pagebreakafterpsalmfive T%
+\def\nopagebreakafterpsalmfive{F}%
+\fi\fi
+%
+\ifx\preantfivetwo\undefined
+{\noindent\emph{Repeat antiphon.}%
+\if\nopagebreakafterpsalmfive T%
+\\ \vspace{0ex minus 2ex}}%
+\fi%
+\else
+{\preantfivetwo
+\def\greinitialformat#1{%
+{\fontsize{\antfivefontsizetwo}{\antfivefontsizetwo}\selectfont #1}%
+}
+\if\onlyoneant T%
+\def\annot{\small{Ant.}}
+\else%
+\def\annot{\small{5. Ant.}}
+\fi%
+\def\annottwo{\small{\antfivelinetwo}}
+\setinitialspacing{\antfiveinitial}
+%
+\includescore{\antfivetex}
+\medskip}%
+\fi%
+\ifx\onlypsalms\undefined\def\onlypsalms{F}\fi%
+\if\onlypsalms F% this goes all the way to the end
+\if\nopagebreakafterpsalmfive F%
+\vspace*{-80pt}%
+\pagebreak%
+\fi
+\ifx\chapterhymnversicleantiphontex\undefined%
+\ifx\chaptertranslation\undefined%
+\def\nopagebreakafterpsalmfive{F}%
+\fi\fi%
+\if\nopagebreakafterpsalmfive T%
+\vspace{2ex plus 0.5ex minus 1.5ex}%
+\hrule%
+\vspace{0pt plus 1.5ex minus 0ex}%
+\fi
+\normalsize%
+\ifx\chapterhymnversicleantiphontex\undefined%
+\ifx\chaptertranslation\undefined%
+\emph{Chapter. }%
+\else%
+%\pagebreak[3]
+\begin{center}{\large\textbf Chapter.}\end{center}
+% default width is 265pt
+% ,colwidths={1=253pt}
+\begin{parcolumns}[rulebetween]{2}
+\colchunk{\sloppy\chapter}
+\colchunk{\sloppy \dropcap{american}{\chaptertranslation}}
+\end{parcolumns}
+\bigskip
+%\pagebreak[3]
+
+\fi%
+\ifx\hymntex\undefined
+{\vspace{-1ex plus 1ex}
+\emph{Hymn.} \hymn{}.%
+\ifx\vrtex\undefined\else
+\vfill
+\fi}
+\else{
+{%
+\ifx\pagebreakbeforehymn\undefined\def\pagebreakbeforehymn{F}\fi
+\if\pagebreakbeforehymn T%
+\pagebreak
+\else%
+\hrule
+\bigskip
+\fi
+\ifx\hymninitialsize\undefined\else%
+\def\greinitialformat#1{%
+{\fontsize{\hymninitialsize}{\hymninitialsize}\selectfont #1}%
+}
+\fi
+\def\annot{\small{Hymn.}}
+\def\annottwo{\small{\hymnlinetwo}}
+\setinitialspacing{\hymninitial}
+%
+\prehymn
+\includescore{\hymntex}
+}
+\normalsize\vspace{0pt minus 20pt}
+\selectlanguage{american}
+\begin{multicols}{2}
+\begin{psalmverses}
+{\hymntranslation}
+\end{psalmverses}
+\ifx\hymnnote\undefined\else%
+\begin{flushright}\emph{\hymnnote}\end{flushright}
+\fi
+\end{multicols}
+\medskip
+\selectlanguage{latin}
+}\fi
+%
+\ifx\vrtex\undefined%
+{\Vbar{}. \vr{}.\ifx\magantundefined\else
+
+\fi}
+\else{
+\ifx\vrpttex\undefined\else
+\selectlanguage{latin}
+\vspace{0pt minus 30pt}
+\emph{Tempore Paschali:}
+
+{\greblockcustos\includescore{\vrpttex}}
+\medskip
+\emph{Per annum:}
+
+\fi %vrpttex
+{\greblockcustos\includescore{\vrtex}}\vspace{-4pt plus 4pt}
+\translation[]{
+\Vbar{}. \vtranslation{}%
+\ifx\vrnospace\undefined
+
+\else\if\vrnospace T%
+\hspace{7ex minus 3ex}%
+\else
+
+\fi\fi%
+\Rbar{}. \rtranslation{}%
+}%
+}%
+\fi%
+\else% if the chapter, hymn, and antiphon are replaced by an antiphon
+\bigskip
+
+
+\emph{Chapter, Hymn, and Versicle are all omitted, but the following Antiphon is said :}
+
+
+\bigskip
+\def\annot{\small{Ant.}}
+\def\annottwo{\small{\chapterhymnversicleantiphonmode.}}
+\setinitialspacing{\chapterhymnversicleantiphoninitial}
+\prechapterhymnversicleantiphon
+\includescore{\chapterhymnversicleantiphontex}
+\prechapterhymnversicleantiphontranslation
+\translation[]{\chapterhymnversicleantiphontranslation}
+\bigskip
+\fi%
+%
+\ifx\magant\undefined%
+\vspace{-1ex plus 1ex}
+\emph{Magnificat}. %
+\else%
+\ifx\magtex\undefined
+{\emph{Antiphon for the Magnificat.} \magant{}.%
+\bigskip%
+}\else{
+%\pagebreak[3]
+\ifx\pagebreakbeforemagnificat\undefined\def\pagebreakbeforemagnificat{F}\fi
+\if\pagebreakbeforemagnificat T%
+\pagebreak
+\vspace*{-23pt plus 23pt}
+\fi
+\begin{center}{\large Magnificat.}\end{center}
+\vspace{-1ex}
+
+{\premag
+\def\greinitialformat#1{%
+{\fontsize{\magfontsize}{\magfontsize}\selectfont #1}%
+}
+\def\annot{\small{At Magn.}}
+\def\annottwo{\small{\magantlinetwo}}
+\setinitialspacing{\magantinitial}
+
+% We type a text in the top right corner of the score:
+%\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
+
+% and finally we include the score. The file must be in the same directory as this one.
+\ifx\maganttex\undefined\def\maganttex{MagnificatAntiphon}\fi
+\includescore{\maganttex}}%
+%\vspace{-1ex}
+\translation[]{\maganttranslation}
+\medskip
+\hrule
+\bigskip
+{\premagverses
+\ifx\magoneline\undefined\else\if\magoneline T\greblockcustos\fi\fi
+\begin{magnificat}{\magtex}
+%\vspace{-1ex}
+\magverses
+\end{magnificat}
+}
+\ifx\premagtwo\undefined
+{%\vspace{-1ex}
+\noindent\emph{Repeat antiphon.}\\}
+\else
+{\premagtwo
+\def\greinitialformat#1{%
+{\fontsize{\magfontsizetwo}{\magfontsizetwo}\selectfont #1}%
+}
+\def\annot{\small{At Magn.}}
+\def\annottwo{\small{\magantlinetwo}}
+\setinitialspacing{\magantinitial}
+
+\includescore{MagnificatAntiphon}}%
+\fi
+}%
+\fi%
+\fi%
+\ifx\collect\undefined%
+\emph{Collect}.
+
+\vfill
+\else%
+\hrule
+\smallskip
+\begin{center}{\large Collect.}\end{center}
+% default width is 265pt
+%\sloppy
+%,colwidths={1=220pt}
+\begin{parcolumns}[rulebetween]{2}
+\sloppy
+\prayer{\collect}{\collecttranslation}
+\end{parcolumns}
+\bigskip
+\fi
+%
+%
+\ifx\commemorationtex\undefined\else
+\ifx\pagebreakbeforecommemoration\undefined\def\pagebreakbeforecommemoration F\fi
+\if\pagebreakbeforecommemoration T%
+\pagebreak%
+\else%
+\hrule
+\bigskip
+\fi
+\input{\commemorationtex}
+%
+%%%%%%%%%%%%%commemoration
+%
+\def\greinitialformat#1{%
+{\fontsize{\commagantinitialsize}{\commagantinitialsize}\selectfont #1}%
+}
+
+\def\annot{\small At Magn.}
+\def\annottwo{\small \oldstylenums{\commagantlinetwo}}
+\setinitialspacing{\commagantinitial}
+
+%\smallskip
+%\hrule
+%\smallskip
+%\pagebreak
+\selectlanguage{latin}
+% The title:
+\begin{center}{\large \comheadingtext.}\end{center}
+\vspace{-1ex}
+% Here we set the space around the initial.
+% Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
+
+% We set red lines here, comment it if you want black ones.
+%\redlines
+
+% We set VII above the initial.
+{\gresetfirstlineaboveinitial{\annot}{\annot}
+\setsecondannotation{\annottwo}
+
+% We type a text in the top right corner of the score:
+%\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
+
+% and finally we include the score. The file must be in the same directory as this one.
+%\normalsize
+%\fontsize{12.35}{12.35}\selectfont
+\large
+\includescore{\commaganttex}}%
+%\bigskip
+%\vspace{-4ex}
+\translation[]{\englishcommagantiphon}
+\bigskip
+{\greblockcustos\includescore{\commvrtex}}
+\vspace{0pt minus 36pt}
+\translation[]{
+\Vbar{}. \commvtranslation{}\\
+\Rbar{}. \commrtranslation{}%
+}%
+%\smallskip
+\vspace{-2ex}
+\begin{center}{\large Collect.}\end{center}
+% default width is 265pt
+%\sloppy
+%,colwidths={1=220pt}
+\begin{parcolumns}[rulebetween]{2}
+\sloppy
+\prayer{\latincomcollect}{\englishcomcollect}
+\end{parcolumns}
+%
+%%%%%%%%%%%%%commemoration end
+%
+\bigskip
+\hrule
+\bigskip
+\fi
+\fi % end not only psalms
+%
+%
+\ifx\benedicamusdominogrefactor\undefined\else\setgrefactor{\benedicamusdominogrefactor}\fi
+\ifx\benedicamusdominotex\undefined\else
+\def\annot{\small{\benedicamusdominotone}}
+%\def\annottwo{}
+\setinitialspacing{B}
+\gresetfirstlineaboveinitial{\annot}{\annot}
+\setsecondannotation{}
+\setspaceafterinitial{0mm}
+\setspacebeforeinitial{0mm}
+\ifx\benedicamusdominointro\undefined\else
+\hspace{3ex}\emph{\benedicamusdominointro:}\\
+\fi
+\includescore{\benedicamusdominotex}
+\ifx\benedicamusdominotexalt\undefined\else
+{%
+\vspace{0pt plus 12pt}
+\ifx\benedicamusdominoaltintro\undefined
+\def\benedicamusdominoaltintro{or}\fi
+\hspace{3ex}\emph{\benedicamusdominoaltintro:}\\
+\def\annot{\small{\benedicamusdominotonealt}}
+%\def\annottwo{}
+\setinitialspacing{B}
+\gresetfirstlineaboveinitial{\annot}{\annot}
+\setsecondannotation{}
+\setspaceafterinitial{0mm}
+\setspacebeforeinitial{0mm}
+\greblockcustos%
+\includescore{\benedicamusdominotexalt}
+}
+\fi
+\fi
+
+\ifx\includefideliumanimae\undefined\else\if\includefideliumanimae T%
+\bigskip
+\begin{parcolumns}[rulebetween]{2}
+\selectlanguage{latin}%
+\colchunk{\Vbar{}. Fidélium ánimæ per misericórdiam Déi requiéscant in páce.}
+\selectlanguage{american}%
+\colchunk{\Vbar{}. May the souls of the faithful departed through the mercy of God rest in peace.}
+\selectlanguage{latin}%
+\colplacechunks{}
+\colchunk{\Rbar{}. Amen.}
+\colchunk{\Rbar{}. Amen.}
+\end{parcolumns}
+\fi\fi
+\vspace{-18pt} %this is really only needed if the benedicamus domino is a full line. so I should really put it in there!
+\end{document}

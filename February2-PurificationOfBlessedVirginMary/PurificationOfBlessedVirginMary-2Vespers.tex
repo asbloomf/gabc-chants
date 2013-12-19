@@ -1,0 +1,163 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+\sloppy
+
+%has the chapter, collect, and hymn
+\input{PurificationOfBlessedVirginMary-common}
+
+%psalms and antiphons page p1366 (1570)
+%\input{../ChristmasOctave-Circumcision/Circumcision-psalms}
+
+%commemoration for 4th Sunday after Pentecost
+%\def\pagebreakbeforecommemoration{T}
+%\def\commemorationtex{../TimeAfterPentecost/CommemorationPentecost4}
+%end commemoration stuff
+
+
+\newcommand{\heading}{Purification of the Blessed Virgin Mary 2 Vespers.}
+
+\newcommand{\predeusinadjutorium}{%
+%\smallskip
+\large
+\setgrefactor{15}
+}
+\def\deusinadjutoriumsolemn{F}
+
+\newcommand{\preantone}{\setgrefactor{17}
+\large
+%\greblockcustos
+}
+
+%\def\nopagebreakbeforepsalmthree{T}
+%\def\nopagebreakbeforepsalmfour{T}
+%\def\nopagebreakbeforepsalmfive{T}
+
+\newcommand{\antoneinitialsize}{40}
+\newcommand{\antonetex}{an--simeon_justus--solesmes}
+\newcommand{\antoneinitial}{S}
+\newcommand{\antonetranslation}{Simeon was just and devout, waiting for the consolation of Israel, and the Holy Ghost was upon him.}
+\definepsalm{1}{109}{3}{b}
+\newcommand{\prepsalmone}{%
+%\vspace{-1.5ex}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preanttwo}{\setgrefactor{17}
+%\greblockcustos
+\large
+}
+\newcommand{\anttwoinitialsize}{40}
+\newcommand{\anttwotex}{an--responsum_accepit--solesmes}
+\newcommand{\anttwoinitial}{R}
+\newcommand{\anttwotranslation}{It was revealed unto Simeon by the Holy Ghost that he should not see death before he had seen the Lord.}
+\definepsalm{2}{112}{7}{a}
+\newcommand{\prepsalmtwo}{%
+\normalsize
+%\greblockcustos
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantthree}{\setgrefactor{17}
+\large
+\greblockcustos
+}
+\newcommand{\antthreeinitialsize}{40}
+\newcommand{\antthreetex}{an--accipiens_simeon--solesmes}
+\newcommand{\antthreeinitial}{A}
+\newcommand{\antthreetranslation}{Simeon took the Child up in his arms, and gave thanks, and blessed the Lord.}
+\definepsalm{3}{121}{3}{b}
+\newcommand{\prepsalmthree}{%
+%\greblockcustos
+\normalsize
+}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantfour}{\setgrefactor{17}
+\greblockcustos
+\large
+%\normalsize
+}
+\newcommand{\antfourinitialsize}{40}
+\newcommand{\antfourtex}{an--lumen_ad_revelationem_c4_clef--solesmes}
+\newcommand{\antfourinitial}{L}
+\newcommand{\antfourtranslation}{A light to lighten the Gentiles, and the glory of thy people Israel.}
+\definepsalm{4}{126}{8}{c}
+\newcommand{\prepsalmfour}{%
+%\vspace{-1ex}
+%\setgrefactor{15}
+\normalsize
+}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\def\nopagebreakbeforepsalmfive{T}
+%\def\pagebreakafterpsalmfive{T}
+\newcommand{\preantfive}{\setgrefactor{17}
+\greblockcustos
+\large
+}
+%\newcommand{\preantfivetwo}{\preantfive}
+%\newcommand{\antfivefontsizetwo}{40}
+
+\newcommand{\antfiveinitialsize}{40}
+\newcommand{\antfivetex}{an--obtulerunt_pro_eo--solesmes}
+\newcommand{\antfiveinitial}{O}
+\newcommand{\antfivetranslation}{They offered for Him unto the Lord, a pair of turtle doves, or two young pigeons.}
+\definepsalm{5}{147}{8}{G}
+\newcommand{\prepsalmfive}{%
+%\vspace{-1ex}
+%\setgrefactor{15}%
+%\normalsize%
+}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\pagebreakbeforehymn{T}
+
+\newcommand{\prehymn}{\normalsize
+\setgrefactor{16}
+}
+
+%vr in common
+%\newcommand{\vrtex}{vrIstePuerMagnus}
+%\newcommand{\vtranslation}{This child is great before the Lord.}
+%\newcommand{\rtranslation}{For in truth His hand is with him.}
+
+\newcommand{\premag}{
+\normalsize
+\setgrefactor{17}
+%\greblockcustos
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+\newcommand{\magfontsize}{38}
+\def\pagebreakbeforemagnificat{T}
+\newcommand{\maganttex}{an--hodie_beata_virgo--solesmes}
+\newcommand{\magantinitial}{H}
+\newcommand{\maganttranslation}{Today did the Blessed Virgin Mary present the Child Jesus in the temple; and Simeon, filled with the Holy Ghost, took Him up in his arms, and blessed God for ever and ever.}
+\def\magsolemn{T}
+\def\magoneline{T}
+\def\psalmclef{c3}
+\definemag{8}{G*}
+\newcommand{\premagverses}{%
+%\greblockcustos
+\normalsize
+\setgrefactor{14}
+%\pagebreak
+}
+
+\def\benedicamusdominogrefactor{14}
+\definebenedicamusdomino{mary}{2} % Feast of Mary, 2nd vespers
+
+%\def\includefideliumanimae{T}
+
+\input{../FullVespers}
