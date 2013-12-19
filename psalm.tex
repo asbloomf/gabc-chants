@@ -58,15 +58,15 @@
 \ifx\csname preant\antnum two\endcsname\undefined
 {\noindent\emph{Repeat antiphon.}\\ \vspace{0ex minus 1ex}}
 \else
-{\csname preant\antnum two\endcsname
-\edef\greinitialformat##1{%
-{\fontsize{\csname ant\antnum fontsizetwo\endcsname}{\csname ant\antnum fontsizetwo\endcsname}\selectfont ##1}%
-}
-\edef\annot{\small{#1 Ant.}}
-\edef\annottwo{\small{\csname ant\antnum linetwo\endcsname}}
-\setinitialspacing{\csname ant\antnum initial\endcsname}
+    {\csname preant\antnum two\endcsname
+    \edef\greinitialformat##1{%
+    {\fontsize{\csname ant\antnum fontsizetwo\endcsname}{\csname ant\antnum fontsizetwo\endcsname}\selectfont ##1}%
+    }
+    \edef\annot{\small{#1 Ant.}}
+    \edef\annottwo{\small{\csname ant\antnum linetwo\endcsname}}
+    \setinitialspacing{\csname ant\antnum initial\endcsname}
 
-\includescore{\csname ant\antnum tex\endcsname}}%
+    \includescore{\csname ant\antnum tex\endcsname}}%
 \fi
 % straighten all this stuff out -- needs to default to page break after psalm
 % check nopagebreakbeforepsalm - if undefined, check pagebreakafterpsalm - if undefined, pagebreak

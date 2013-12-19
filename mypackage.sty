@@ -60,10 +60,11 @@
 \medskip
 \ifx\translationmargin\undef\def\translationmargin{18pt}\fi
 \begin{list}{}{\setlength\leftmargin{\translationmargin}\setlength\rightmargin{\leftmargin}\setlength\topsep{0pt}}
-\item #1#2\medskip
-\end{list}
-}
-\selectlanguage{latin}
+\item #1#2%\medskip
+\end{list}%
+}%
+\selectlanguage{latin}%
+\vspace{-6pt}
 }}
 
 \newcommand{\medianttermination}[2]{
@@ -127,6 +128,16 @@
 \colchunk{\dropcap{american}{#2}} \selectlanguage{latin}
 }
 
+\newcommand{\newprayer}[3][\null]{
+% 1 - format
+% 2 - latin
+% 3 - english
+% requires columns environment
+%\noindent%\selectlanguage{latin}
+\colchunk{#1 \dropcap{latin}{#2}} % \selectlanguage{american}
+\colchunk{#1 \dropcap{american}{#3}} \selectlanguage{latin}
+}
+
 \newlength{\mycolwidth}%
 
 \renewcommand{\emph}[1]{{\em #1}}
@@ -187,6 +198,8 @@
 \foreignlanguage{latin}{\Rbar{}. #1} & \foreignlanguage{american}{\Rbar{}. #2}\\
 }
 
+%\let\originalitem=\item
+%\def\item{\originalitem}
 \newcounter{vcounter}
 \newenvironment{psalmverses}[1][0]{
 % 1 - number to start on
@@ -198,6 +211,7 @@
 \setlength\labelwidth{50pt}\setlength\leftmargin{0pt}\setlength\itemindent{6ex}}
 \setcounter{vcounter}{#1}
 }{\end{list}}
+
 
 \def\boldVerse{T}
 \newenvironment{boldnumpsalmverses}[1][0]{
@@ -232,22 +246,43 @@
 
 \newlength{\annotwidth}
 \newlength{\annottwowidth}
+\newlength{\annotheight}%
+\newlength{\annottwoheight}% unused
+\newlength{\Etextheight}% unused
 \newlength{\spacewidth}
 \newlength{\initwidth}
-% greinitialformat must be set before calling!
+\newlength{\alsinitialsize}
+% grefactor must be set before calling!
 \newcommand{\setinitialspacing}[1]{%
 % 1 - initial, e.g., I
 \settowidth{\annotwidth}{\annot\hspace{0.5pc}}
-\ifx\annottwo\undefined\else%
-\settowidth{\annottwowidth}{\annottwo\hspace{0.5pc}}
-\ifdim\annottwowidth>\annotwidth%
-\setlength{\annotwidth}{\annottwowidth}
+\settoheight{\Etextheight}{E}
+\ifx\annottwo\undefined
+    %\settoheight{\annotheight}{\annot}
+    \setlength{\annotheight}{13pt}
+\else%
+    \setlength{\annotheight}{0pt}
+    \settowidth{\annottwowidth}{\annottwo\hspace{0.5pc}}
+    %\settoheight{\annottwoheight}{\annottwo}
+    %\addtolength{\annotheight}{\annottwoheight}
+    \ifdim\annottwowidth>\annotwidth%
+        \setlength{\annotwidth}{\annottwowidth}
+    \fi
 \fi
-\fi
+%
+%text height is: \the\textheight
+%E text height is: \the\Etextheight
+%grefactor is: \the\grefactor
+%Annot height is: \the\annotheight
+\setlength{\alsinitialsize}{\grefactor pt * \real{3.7} - 30pt + \annotheight}% \annotheight * \real{1.6}} % + \Etextheight - \annotheight}
+\def\greinitialformat##1{%
+{\fontsize{\alsinitialsize}{\alsinitialsize}\selectfont ##1}%
+}
+%
 \settowidth{\initwidth}{\greinitialformat{#1}}
 \settowidth{\spacewidth}{\greinitialformat{#1}\hspace{1pc}}
 \ifdim\spacewidth<\annotwidth%
-\setlength{\spacewidth}{\annotwidth}
+    \setlength{\spacewidth}{\annotwidth}
 \fi
 \addtolength{\spacewidth}{-\initwidth}
 \setlength{\spacewidth}{0.5\spacewidth}

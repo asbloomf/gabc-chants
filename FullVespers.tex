@@ -61,52 +61,16 @@
 %\redlines
 
 % We set VII above the initial.
-{\def\annot{\small \Vbar{}.}
-\setinitialspacing{D}
+\printdeusinadjutorium{}
 
-% We type a text in the top right corner of the score:
-%\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
-
-% and finally we include the score. The file must be in the same directory as this one.
-\ifx\printsolemnorfestaltone\undefined\else\if\printsolemnorfestaltone T%
-{\bfseries %
-\if\deusinadjutoriumsolemn T%
-Solemn %
-\else%
-Festal %
-\fi%
-Tone.
-
-}%
-\fi\fi%
-\vspace{0pt plus 4pt minus 12pt}%
-\ifx\predeusinadjutorium\undefined\else%
-\predeusinadjutorium%
-\fi%
-\includescore{../DeusInAdjutorium\if\deusinadjutoriumsolemn T%
-_solemn\ifx\includelaustibi\undefined\else\if\includelaustibi T%
-_laustibi\fi\fi%
-\fi}
-\if\deusinadjutoriumsolemn T\ifx\includelaustibi\undefined\else\if\includelaustibi T%
-\vspace{-3ex}\fi\fi\fi%
-}%
-\translation[]{\Vbar . O God, come to my assistance. \Rbar . O Lord, make haste to help me. Glory be \ldots}
-\if\deusinadjutoriumsolemn T\else
-\ifx\includelaustibi\undefined\else\if\includelaustibi T%
-{\itshape From Septuagesima to Wednesday in Holy Week, the following is said instead of} Allelúia :
-
-\includescore{../LausTibiDomine\if\deusinadjutoriumsolemn T%
-_solemn\fi}
-\fi\fi%
-\fi
-\smallskip%
+\bigskip%
 \hrule%
 %
 \def\psalmoneafterant{T}
 \ifx\psalmonebeforeant\undefined\else\if\psalmonebeforeant T%
-\vspace{0pt minus 14pt}
+%\vspace{0pt minus 14pt}
 \begin{center}{\Large \psalmone}\end{center}
-\vspace{0pt minus 18pt}
+%\vspace{0pt minus 18pt}
 \def\psalmoneafterant{F}
 \else
 \fi\fi
@@ -130,7 +94,7 @@ _solemn\fi}
 \ifx\antonetranslation\undefined\else%
 \translation[]{\normalsize \antonetranslation}
 \fi%
-\vspace{-1ex plus 1ex}%
+%\vspace{-1ex plus 1ex}%
 \begin{center}{\Large \psalmone}\end{center}
 \fi
 {\ifx\prepsalmone\undefined\else\prepsalmone
@@ -163,7 +127,7 @@ _solemn\fi}
 {\noindent\emph{Repeat antiphon.}\\}
 \fi
 
-\pagebreak
+\pagebreak%
 %
 \cfoot{\thepage}
 \renewcommand\headrulewidth{\oldheadrulewidth}
@@ -208,11 +172,19 @@ _solemn\fi}
 }
 \selectlanguage{latin}
 \endpsalmtwocols
-\if\onlyoneant T\else%
+\if\onlyoneant T%
+\vspace{-12pt plus 12pt}
+\else%
 \medskip
 {\noindent\emph{Repeat antiphon.}\\}
 
-\pagebreak
+\ifx\nopagebreakbeforepsalmthree\undefined\def\nopagebreakbeforepsalmthree{F}\fi
+\if\nopagebreakbeforepsalmthree T%
+\medskip\hrule%
+\medskip
+\else%
+\pagebreak%
+\fi
 
 {\def\greinitialformat#1{%
 {\fontsize{\antthreeinitialsize}{\antthreeinitialsize}\selectfont #1}%
@@ -227,7 +199,7 @@ _solemn\fi}
 %\vspace{-2ex}
 \translation[]{\normalsize \antthreetranslation}
 \fi
-\vspace{-12pt plus 12pt}
+%\vspace{-12pt plus 12pt}
 \begin{center}{\Large \psalmthree}\end{center}
 \vspace{-6pt plus 6pt}
 {\ifx\prepsalmthree\undefined\else\prepsalmthree\fi
@@ -252,10 +224,20 @@ _solemn\fi}
 }
 \selectlanguage{latin}
 \endpsalmthreecols
-\if\onlyoneant T\else%
+\if\onlyoneant T%
+\vspace{-10pt plus 10pt}
+\else%
 \medskip
 {\noindent\emph{Repeat antiphon.}\\}
-\pagebreak
+
+\ifx\nopagebreakbeforepsalmfour\undefined\def\nopagebreakbeforepsalmfour{F}\fi
+\if\nopagebreakbeforepsalmfour T%
+\medskip\hrule%
+\medskip
+\else%
+\pagebreak%
+\fi
+
 
 {\def\greinitialformat#1{%
 {\fontsize{\antfourinitialsize}{\antfourinitialsize}\selectfont #1}%
@@ -270,7 +252,7 @@ _solemn\fi}
 \translation[]{\normalsize \antfourtranslation}
 %\vspace{-3.5ex}
 \fi%
-\vspace{-8pt plus 8pt}
+%\vspace{-8pt plus 8pt}
 \begin{center}{\Large \psalmfour}\end{center}
 \vspace{-6pt plus 6pt}
 {\ifx\prepsalmfour\undefined\else\prepsalmfour\fi
@@ -292,16 +274,17 @@ _solemn\fi}
 }
 \selectlanguage{latin}
 \endpsalmfourcols
-\if\onlyoneant T\else%
+\if\onlyoneant T%
+\vspace{-10pt plus 10pt}
+\else%
 \medskip
 {\noindent\emph{Repeat antiphon.}}
-\ifx\nopagebreakbeforepsalmfive\undefined
-\pagebreak%
-\else\if\nopagebreakbeforepsalmfive T%
+\ifx\nopagebreakbeforepsalmfive\undefined\def\nopagebreakbeforepsalmfive{F}\fi
+\if\nopagebreakbeforepsalmfive T%
 \medskip\hrule%
 \else%
 \pagebreak%
-\fi\fi
+\fi
 \medskip
 
 {\def\greinitialformat#1{%
@@ -317,10 +300,10 @@ _solemn\fi}
 \vspace{0ex plus 0ex minus 3ex}
 \translation[]{\normalsize \antfivetranslation}
 \fi %end not only one antiphon
-\vspace{-12pt plus 12pt}
+%\vspace{-12pt plus 12pt}
 \pagebreak[2]
 \begin{center}{\Large \psalmfive}\end{center}
-\vspace{0pt minus 12pt}
+\vspace{-6pt plus 6pt}
 {\ifx\prepsalmfive\undefined\else\prepsalmfive\fi
 \includescore{\psalmfivetex}
 }
@@ -543,13 +526,14 @@ _solemn\fi}
 \includescore{\maganttex}}%
 %\vspace{-1ex}
 \translation[]{\maganttranslation}
-\medskip
+\bigskip
 \hrule
 \bigskip
 {\premagverses
 \ifx\magoneline\undefined\else\if\magoneline T\greblockcustos\fi\fi
 \begin{magnificat}{\magtex}
 %\vspace{-1ex}
+\medskip
 \magverses
 \end{magnificat}
 }
@@ -601,10 +585,6 @@ _solemn\fi}
 %
 %%%%%%%%%%%%%commemoration
 %
-\def\greinitialformat#1{%
-{\fontsize{\commagantinitialsize}{\commagantinitialsize}\selectfont #1}%
-}
-
 \def\annot{\small At Magn.}
 \def\annottwo{\small \oldstylenums{\commagantlinetwo}}
 \setinitialspacing{\commagantinitial}
@@ -624,9 +604,7 @@ _solemn\fi}
 %\redlines
 
 % We set VII above the initial.
-{\gresetfirstlineaboveinitial{\annot}{\annot}
-\setsecondannotation{\annottwo}
-
+{
 % We type a text in the top right corner of the score:
 %\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
 
@@ -668,10 +646,8 @@ _solemn\fi}
 \ifx\benedicamusdominogrefactor\undefined\else\setgrefactor{\benedicamusdominogrefactor}\fi
 \ifx\benedicamusdominotex\undefined\else
 \def\annot{\small{\benedicamusdominotone}}
-%\def\annottwo{}
+\def\annottwo{}
 \setinitialspacing{B}
-\gresetfirstlineaboveinitial{\annot}{\annot}
-\setsecondannotation{}
 \setspaceafterinitial{0mm}
 \setspacebeforeinitial{0mm}
 \ifx\benedicamusdominointro\undefined\else
@@ -685,10 +661,8 @@ _solemn\fi}
 \def\benedicamusdominoaltintro{or}\fi
 \hspace{3ex}\emph{\benedicamusdominoaltintro:}\\
 \def\annot{\small{\benedicamusdominotonealt}}
-%\def\annottwo{}
+\def\annottwo{}
 \setinitialspacing{B}
-\gresetfirstlineaboveinitial{\annot}{\annot}
-\setsecondannotation{}
 \setspaceafterinitial{0mm}
 \setspacebeforeinitial{0mm}
 \greblockcustos%

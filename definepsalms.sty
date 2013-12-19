@@ -1,7 +1,8 @@
-%﻿\NeedsTeXFormat{LaTeX2e}
+﻿%ï»¿\NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{definepsalms}
 
 \usepackage{xstring}
+\usepackage{needspace}
 
 \newcommand{\numbertoword}[1]{%
 \ifnum1=#1%
@@ -36,6 +37,54 @@ five%
 \fi%
 }
 
+\newcommand{\printdeusinadjutorium}{%
+% printsolemnorfestaltone T or F
+% deusinadjutoriumsolemn T or F
+% includelaustibi T or F
+% predeusinadjutorium - tex preceding gabc
+    \ifx\printsolemnorfestaltone\undefined%
+        \def\printsolemnorfestaltone{F}%
+    \fi
+    \ifx\predeusinadjutorium\undefined%
+        \def\predeusinadjutorium{}%
+    \fi
+    \ifx\includelaustibi\undefined
+        \def\includelaustibi{F}
+    \fi
+    {%
+    \if\printsolemnorfestaltone T%
+        {\bfseries %
+        \if\deusinadjutoriumsolemn T%
+        Solemn %
+        \else%
+        Festal %
+        \fi%
+        Tone.
+
+        }%
+    \fi%
+    \vspace{0pt plus 4pt minus 12pt}%
+    \predeusinadjutorium%
+    \def\annot{\small \Vbar{}.}
+    \setinitialspacing{D}
+    \includescore{../DeusInAdjutorium\if\deusinadjutoriumsolemn T%
+    _solemn\if\includelaustibi T%
+    _laustibi\fi%
+    \fi}
+    \if\deusinadjutoriumsolemn T\if\includelaustibi T%
+        \fi\fi%
+    }%
+    \translation[]{\Vbar . O God, come to my assistance. \Rbar . O Lord, make haste to help me. Glory be \ldots}
+    \if\deusinadjutoriumsolemn T\else
+        \if\includelaustibi T%
+            {\itshape From Septuagesima to Wednesday in Holy Week, the following is said instead of} Allelúia :
+
+            \includescore{../LausTibiDomine\if\deusinadjutoriumsolemn T%
+            _solemn\fi}
+        \fi%
+    \fi
+}
+
 %this is deprecated -- now \printpsalm should be used instead
 \newcommand{\definepsalm}[4]{
 % 1 - antiphon number, 1-5
@@ -56,6 +105,7 @@ five%
 \edef\antnum{\numbertoword{#1}}
 
 \expandafter\edef\csname psalm\antnum\endcsname{Psalm #2.}
+\expandafter\edef\csname psalm\antnum num\endcsname{#2}
 \expandafter\edef\csname psalm\antnum tone\endcsname{#3} % only used internally
 \expandafter\edef\csname psalm\antnum end\endcsname{#4} % only used internally
 %\def\emptypsalmend{per}
@@ -70,6 +120,7 @@ five%
 \ifx\psalmclef\undefined%
 \def\altclef{}%
 \else%
+%\expandafter\edef\csname psalmclef \antnum\endcsname{\psalmclef}
 \edef\altclef{-clef\psalmclef}%
 \fi
 
@@ -88,7 +139,7 @@ five%
 \csname psalm\antnum texbeg\endcsname\nostarend-verses\ifx\psalmbeginversetwo\undefined\else\if\psalmbeginversetwo T2\fi\fi
 }
 \expandafter\edef\csname psalm\antnum translationtex\endcsname{%
-../psalms/psalm#2-verses-en
+../psalms/psalm#2-verses-en%
 }
 
 % define the parcolumn options
@@ -163,7 +214,19 @@ five%
 % change the standard vespers file to use \psalmXXXcoloptions
 %\newenvironment\expandafter{\psalmMASTERcols}{\begin{parcolumns}\parcolumnsoptions}{\end{parcolumns}}
 }
+\newcommand{\printgabc}[5][]{
+% 1 - any extra tex to run before the chant - optional
+% 2 - annotation line one
+% 3 - annotation line two
+% 4 - first letter (big initial)
+% 5 - tex filename of gabc
+    {#1
+    \def\annot{\small{#2}}
+    \def\annottwo{\small{#3}}
+    \setinitialspacing{#4}
 
+    \includescore{#5}}
+}
 
 \newcommand{\printpsalm}[5]{
 % TODO: split this into separate commands for antiphon and psalm
@@ -177,31 +240,70 @@ five%
 % optional - define anttranslation and antinitialsize
 % \psalmbeginversetwo can be defined as T to append -verse2
 % \psalmclef can be used to append -clef{\psalmclef}
+% \onlyoneant
 % preant
 % prepsalm
+% preantafter
 %%%%% following are set automatically
 % psalmtitle - set from #2 (Psalm #2.)
 % psalmtex - psalm gabc
-% psalmtitleafterant - set based on psalmbeginversetwo
+% psalmtitleafterant - set based on psalmbeginversetwo (used to use psalmafterant)
 % psalmversestex - tex file with Latin psalm verses
 % psalmtranslationtex - tex file with English psalm verses
+% printantiphon - set to T unless onlyoneant defined and this is not ant 1
+% printantiphonafter - set to T if preantafter is set or if ant num is 5 and onlyoneant
 %
+%set up some variables based on which psalm it is
+\edef\antnum{\numbertoword{#1}}
+%\ifx\csname ant\antnum initialsize\endcsname\undefined\else
+%    \def\antinitialsize{\csname ant\antnum initialsize\endcsname}
+%\fi
+\ifx\anttranslation\undefined
+    \def\anttranslation{\csname ant\antnum translation\endcsname}
+\fi
+\ifx\psalmbeginversetwo\undefined%
+    \def\psalmbeginversetwo{\csname psalm\antnum beginversetwo\endcsname}
+\fi
+\ifx\preant\undefined
+    \def\preant{\csname preant\antnum\endcsname}
+\fi
+\ifx\prepsalm\undefined
+    \def\prepsalm{\csname prepsalm\antnum\endcsname}
+\fi
+\ifx\psalmclef\undefined
+    \IfInteger{\csname psalmclef\antnum\endcsname}{
+    %    psalm clef is: 
+    %    \csname psalmclef\antnum\endcsname
+        \edef\psalmclef{\csname psalmclef\antnum\endcsname}
+    }{}
+\fi
+\ifx\psalmtranslationsmall\undefined
+  \def\psalmtranslationsmall{\csname psalm\antnum translationsmall\endcsname}
+\fi
+
 %set up variables
+\edef\anttex{#4}
+\edef\antinitial{#5}
 \def\psalmtitleafterant{T}
 \ifx\psalmbeginversetwo\undefined
   \def\psalmbeginversetwo{F}%
 \else\if\psalmbeginversetwo T%
   \def\psalmtitleafterant{F}
 \fi\fi
+\ifx\nogloriapatri\undefined
+  \def\nogloriapatri{F}
+\fi
 
 \ifx\onlyoneant\undefined
   \def\onlyoneant{F}
 \fi
 
 \edef\psalmtitle{Psalm #2.}
-\edef\psalmtone{8}
-\edef\psalmend{G}
+%\edef\psalmtone{8}
+%\edef\psalmend{G}
 % TODO: split #3 into psalmtone & psalmend with xstring
+\StrLeft{#3}{1}[\psalmtone]
+\StrGobbleLeft{#3}{1}[\psalmend]
 \if\psalmtone p % must be T. Per.
   \def\antlinetwo{T. Per.}
   \def\psalmtone{per} % only used internally
@@ -209,11 +311,25 @@ five%
 \else
   \edef\antlinetwo{\psalmtone. \psalmend}
 \fi
-
-\ifx\psalmclef\undefined%
-\def\altclef{}%
+\def\printantiphon{T}
+\if\onlyoneant T%
+  \def\antlineone{Ant.}
+  \ifnum#1>1%
+    \def\printantiphon{F}
+  \fi
 \else%
-\edef\altclef{-clef\psalmclef}%
+  \edef\antlineone{#1. Ant.}
+\fi%
+%TODO: format mode and ending properly into antlinetwo
+
+% run prepsalm so it can define psalmclef
+{
+\ifx\prepsalm\undefined\else\prepsalm\fi
+}
+\ifx\psalmclef\undefined%
+  \def\altclef{}%
+\else%
+  \edef\altclef{-clef\psalmclef}%
 \fi
 
 \edef\expandedend{\psalmend}
@@ -221,13 +337,25 @@ five%
 \edef\mytempa{\psalmend}
 \StrSubstitute{\mytempa}{*}{star}[\expandedend]
 \StrSubstitute{\mytempa}{*}{}[\nostarend]
-\edef\psalmtexbeg{../psalms/Psalm#2-\psalmtone}
+\ifx\canticleof\undefined
+  \def\filename{Psalm#2}
+\else
+  \def\filename{#2}
+\fi
+\if\nogloriapatri T
+  \edef\psalmtexbeg{../psalms/no-gloria-patri/\filename-\psalmtone}
+  \edef\psalmtranslationtex{%
+  ../psalms/no-gloria-patri/\filename-verses-en%
+  }
+\else
+  \edef\psalmtexbeg{../psalms/\filename-\psalmtone}
+  \edef\psalmtranslationtex{%
+  ../psalms/\filename-verses-en%
+  }
+\fi
 \edef\psalmtex{\psalmtexbeg\expandedend\if\psalmbeginversetwo T-verse2\fi\altclef}
 \edef\psalmversestex{%
 \psalmtexbeg\nostarend-verses\if\psalmbeginversetwo T2\fi
-}
-\edef\psalmtranslationtex{%
-../psalms/psalm#2-verses-en
 }
 
 % define the parcolumn options
@@ -238,6 +366,92 @@ five%
 \def\endpsalmcols{\end{parcolumns}}
 %\def\psalmcoloptions{rulebetween}
 %109 & 110 are just rulebetween
+\ifx\canticleof\undefined
+\ifnum#2=2
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=250pt}]{2}}%262
+  \fi
+\fi
+\ifnum#2=4
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=250pt}]{2}}%262
+  \fi
+\fi
+\ifnum#2=14
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=240pt}]{2}}%262
+  \fi
+\fi
+\ifnum#2=15
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=265pt}]{2}}%262
+  \fi
+\fi
+\ifnum#2=21
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=275pt}]{2}}%262
+  \fi
+\fi
+\ifnum#2=23
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=235pt}]{2}}%262
+  \fi
+\fi
+\ifnum#2=26
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=260pt}]{2}}%262
+  \fi
+\fi
+\ifnum#2=50
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=255pt}]{2}}%262
+  \fi
+\fi
+\ifnum#2=58
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=240pt}]{2}}%262
+  \fi
+\fi
+\ifnum#2=68
+  \if\psalmtranslationsmall T%
+    %\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=263pt}]{2}}%262
+  \fi
+\fi
+\ifnum#2=71
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=254pt}]{2}}%262
+  \fi
+\fi
+\ifnum#2=72
+  \if\psalmtranslationsmall T%
+    %\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=260pt}]{2}}%262
+  \fi
+\fi
+\ifnum#2=73
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=260pt}]{2}}%262
+  \fi
+\fi
+\ifnum#2=76
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=260pt}]{2}}%262
+  \fi
+\fi
+\ifnum#2=87
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=251pt}]{2}}%262
+  \fi
+\fi
+%\ifnum#2=89
+%  \if\psalmtranslationsmall T%
+%    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=254pt}]{2}}%262
+%  \fi
+%\fi
+\ifnum#2=91
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=245pt}]{2}}%262
+  \fi
+\fi
 \ifnum#2=109
   \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=272pt}]{2}}%262
 \fi
@@ -291,44 +505,73 @@ five%
     \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=260pt}]{2}}
   \fi
 \fi
+%\ifnum#2=146
+%  \if\psalmtranslationsmall T%
+%    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=248pt}]{2}}%262
+%  \fi
+%\fi
 \ifnum#2=147
-  \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=285pt}]{2}}
+  %\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=285pt}]{2}}
   %\def\psalmcoloptions{rulebetween,colwidths={1=285pt}}
 \fi
+\else% canitcleof is defined
+%\IfStrEq{\canticleof}{Moses}
+%{
+%  \if\psalmtranslationsmall T%
+%    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=262pt}]{2}}%262
+%  \fi
+%}{}
+\fi%canticleof undefined
 
-
+%TODO: psalmtitle properly when canticleof defined
+\ifx\canticleof\undefined
+  \def\printpsalmtitle{%
+    \medskip
+    \needspace{\baselineskip}
+    {\large \hfill\psalmtitle\hfill}
+    \medskip
+    
+  }
+\else
+  \def\printpsalmtitle{%
+    \medskip
+    {\needspace{2\baselineskip}
+    \large
+    \hspace{1pc}
+    Canticle of \canticleof{}
+    \hfill
+    \emph{\canticleverses{}}
+    \hspace{1pc}}
+    \medskip
+    
+  }
+\fi
 \if\psalmtitleafterant F%
     \vspace{0pt minus 14pt}
-    \begin{center}{\Large \psalmtitle}\end{center}
+    \printpsalmtitle
     \vspace{0pt minus 18pt}
 \fi
 %\bigskip % probably can delete this
-{\edef\greinitialformat##1{%
-%TODO: instead of taking it from initialsize, calculate from grefactor
-{\fontsize{\antinitialsize}{\antinitialsize}\selectfont ##1}%
-}
-\ifx\preant\undefined\else\preant\fi
-%TODO: use xstring If #1 is empty string, Ant. otherwise #1. Ant.
-%\if T%
-%  \def\annot{\small{Ant.}}
-%\else%
-  \def\annot{\small{#1. Ant.}}
-%\fi%
-%TODO: format mode and ending properly into antlinetwo
-\def\annottwo{\small{\antlinetwo}}
-\setinitialspacing{#5}
+\ifx\preant\undefined
+    \def\preant{}
+\fi
+\if\printantiphon T%
+    \printgabc[\preant]{\antlineone}{\antlinetwo}{\antinitial}{\anttex}
+\fi
+\edef\psalmstartpagenumber{\thepage}
 
-\includescore{#4}
-}
 %\vspace{-1ex}
 \if\psalmtitleafterant T%
-  \ifx\anttranslation\undefined\else%
-    \translation[]{\normalsize \anttranslation}
-  \fi%
-  \vspace{-1ex plus 1ex}% maybe get rid of this
-  \begin{center}{\Large \psalmtitle}\end{center}
+  \if\printantiphon T%
+    \ifx\anttranslation\undefined\else%
+      \translation[]{\normalsize \anttranslation \medskip}
+    \fi%
+    %\vspace{-1ex plus 1ex}% maybe get rid of this
+  \fi
+  \printpsalmtitle
   %\vspace{0pt minus 12pt} % this line can probably be deleted
 \fi
+{
 {\ifx\prepsalm\undefined\else\prepsalm\fi
   \includescore{\psalmtex}
 }
@@ -348,16 +591,31 @@ five%
 \selectlanguage{american}
 \colchunk{\vspace{-12pt}%
 \sloppy
+\if\psalmtranslationsmall T\small\fi
 \begin{psalmverses}
 \input{\psalmtranslationtex}
 \end{psalmverses}
 }
 \selectlanguage{latin}
 \endpsalmcols
-\if\onlyoneant T\else% TODO: add optional preanttwo and antfontsizetwo (line 58 on psalm.tex)
-  \medskip
-  {\noindent\emph{Repeat antiphon.}\\}
-\fi%
+\ifnum\thepage=\psalmstartpagenumber
+    \let\preantafter=\undefined
+\else\ifx\preantafter\undefined
+    \let\preantafter=\preant
+\fi\fi
+
+\ifx\preantafter\undefined % if preantafter undefined, we don't reprint the antiphon
+    \if\onlyoneant T\else% if there is only one antiphon for all the psalms (like during Paschaltide), we don't print Repeat antiphon
+        \medskip
+        {\noindent\emph{Repeat antiphon.}\par\medskip}% \vspace{0ex minus 1ex}}
+    \fi
+\else
+    \medskip
+    \printgabc[\preantafter]{\antlineone}{\antlinetwo}{\antinitial}{\anttex}
+\fi
+}
+%
+\global\let\psalmclef=\undefined
 % TODO: do we need to do pagebreak stuff?
 }
 
@@ -371,6 +629,7 @@ five%
 \newcommand{\magant}{MagnificatAntiphon}
 \newcommand{\magantlinetwo}{Ant. \magtone. \magend}
 \ifx\maggrassi\undefined\def\maggrassi{F}\fi
+\ifx\magprotodiogenes\undefined\def\magprotodiogenes{F}\fi
 \StrSubstitute{\magend}{*}{star}[\expandedendmag]
 \StrSubstitute{\magend}{*}{}[\nostarendmag]
 \ifx\psalmclef\undefined%
@@ -381,14 +640,168 @@ five%
 \fi
 \def\magpost{}
 \if\maggrassi T\def\magpost{_grassi}\fi
+\if\magprotodiogenes T\def\magpost{_protodiogenes}\fi
 \newcommand{\magtex}{../psalms/Magnificat\if\magsolemn Tsolemn\else simple\fi\magtone\expandedendmag\altclef\magpost%
 \ifx\magoneline\undefined\else\if\magoneline ToneLine\fi\fi}
 \newcommand{\magverses}{%
-\ifx\magoneline\undefined\else\if\magoneline T\vspace{-15pt}\fi\fi
-\input{../psalms/magnificat-\magtone\nostarendmag\if\magsolemn Tsolemn\else simple\fi\if\maggrassi T-grassi\fi-verses}%
+%\ifx\magoneline\undefined\else\if\magoneline T\vspace{-15pt}\fi\fi
+\input{../psalms/magnificat-\magtone\nostarendmag\if\magsolemn Tsolemn\else simple\fi\if\maggrassi T-grassi\fi\if\magprotodiogenes T-protodiogenes\fi-verses}%
 }
 
 }
+
+\newcommand{\printchapter}[2]{
+% 1 - chapter
+% 2 - chapter translation
+%TODO: optional no translation
+    \begin{center}{\large\textbf Chapter.}\end{center}
+    % default width is 265pt
+    % ,colwidths={1=253pt}
+    \begin{parcolumns}[rulebetween]{2}
+    \colchunk{\sloppy#1}
+    \colchunk{\sloppy \dropcap{american}{#2}}
+    \end{parcolumns}
+}
+
+\newcommand{\printhymn}[4]{
+% 1 hymnlinetwo
+% 2 hymninitial
+% 3 hymntex
+% 4 hymntranslation
+    \printgabc[\ifx\prehymn\undefined\else\prehymn\fi]{\small{Hymn.}}{\small{#1}}{#2}{\hymntex} %
+%
+    \normalsize%\vspace{0pt minus 20pt}
+    \selectlanguage{american}
+    \begin{multicols}{2}
+    \begin{psalmverses}
+    {\hymntranslation}
+    \end{psalmverses}
+    \ifx\hymnnote\undefined\else%
+      \begin{flushright}\emph{\hymnnote}\end{flushright}
+    \fi
+    \end{multicols}
+}
+
+\newcommand{\printvr}[4][]{
+%1 optional - pre something like \greblockcustos
+%2 vrtex
+%3 vtranslation
+%4 rtranslation
+% vrnospace optional
+    {#1\includescore{#2}}\vspace{-4pt plus 4pt}
+    \translation[\normalsize]{
+    \Vbar{}. #3{}%
+    \ifx\vrnospace\undefined
+      \def\vrnospace{F}
+    \fi
+    \if\vrnospace T%
+      \hspace{7ex minus 3ex}%
+    \else
+      \\
+    \fi%
+    \Rbar{}. #4{}%
+    }%
+}
+
+\newcommand{\printmag}[4][Magnificat]{
+%1 - defaults to Magnificat, can be Benedictus
+%2 - psalm tone and ending, e.g., 8G
+%3 - ant starting initial
+%4 - antiphon tex
+\edef\antinitial{#3}
+\edef\anttex{#4}
+\StrLeft{#2}{1}[\anttone]
+\StrGobbleLeft{#2}{1}[\antend]
+\edef\antlinetwo{Ant. \anttone. \antend}
+\ifx\maggrassi\undefined\def\maggrassi{F}\fi
+\ifx\magprotodiogenes\undefined\def\magprotodiogenes{F}\fi
+\StrSubstitute{\antend}{*}{star}[\expandedend]
+\StrSubstitute{\antend}{*}{}[\nostarend]
+\ifx\psalmclef\undefined%
+%psalmclef should be something like c3
+    \def\altclef{}%
+\else%
+    \def\altclef{_\psalmclef}%
+\fi
+\def\antpost{}
+\if\maggrassi T\def\antpost{_grassi}\fi
+\ifx\magprotodiogenes\undefined\def\magprotodiogenes{F}\fi
+\if\nogloriapatri T
+  \def\psalmsubdir{/no-gloria-patri/}
+\else
+  \def\psalmsubdir{/}
+\fi
+\ifx\magsolemn\undefined
+  \def\magsolemn{F}
+\fi
+\ifx\preverses\undefined
+  \def\preverses{}
+\fi
+\edef\magtex{../psalms\psalmsubdir#1\if\magsolemn Tsolemn\else simple\fi\anttone\expandedend\altclef\antpost%
+\ifx\magoneline\undefined\else\if\magoneline ToneLine\fi\fi}
+\def\magverses{%
+  %\ifx\magoneline\undefined\else\if\magoneline T\vspace{-15pt}\fi\fi
+  \input{../psalms\psalmsubdir#1-\anttone\nostarend\if\magsolemn Tsolemn\else simple\fi\if\maggrassi T-grassi\fi\if\magprotodiogenes T-protodiogenes\fi-verses}%
+}
+\IfStrEq{#1}{Magnificat}
+{
+  \def\versenum{2}
+}{
+  \def\versenum{1}
+}
+
+\def\printantiphon{
+    \IfStrEq{#1}{Magnificat}
+    {
+      \def\annot{\small{At Magn.}}
+      \def\versenum{2}
+    }{
+      \def\annot{\small{At Bened.}}
+      \def\versenum{1}
+    }
+    \def\annottwo{\small{\antlinetwo}}
+    \setinitialspacing{\antinitial}
+    \ifx\anttex\undefined\def\anttex{MagnificatAntiphon}\fi
+    \includescore{\anttex}
+}
+
+    \begin{center}{\large #1.}\end{center}
+    \vspace{-1ex}
+
+    \edef\magstartpagenumber{\thepage}
+    {\preant
+     \printantiphon
+    }%
+    %\vspace{-1ex}
+    \translation[]{\anttranslation}
+    \bigskip
+    \needspace{3\baselineskip}
+    \ifnum\thepage=\magstartpagenumber
+      \hrule
+      \bigskip
+    \fi
+    {\preverses
+    \ifx\magoneline\undefined\else\if\magoneline T\greblockcustos\fi\fi
+    \begin{magnificat}[\versenum]{\magtex}
+    %\vspace{-1ex}
+    \magverses
+    \end{magnificat}
+    }
+    \ifnum\thepage=\magstartpagenumber
+    \else
+      \let\preanttwo=\preant
+    \fi
+    \ifx\preanttwo\undefined
+    {%\vspace{-1ex}
+    \noindent\emph{Repeat antiphon.}\\}
+    \else
+    {\preanttwo
+    \printantiphon
+    }%
+    \fi
+
+}
+
 
 \newcommand{\definebenedicamusdomino}[2]{
 % i would like something like [class=1,vespers=2,advent]
