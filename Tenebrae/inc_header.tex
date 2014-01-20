@@ -1,0 +1,39 @@
+\usepackage{../definepsalms}
+\usepackage{adjustbox}
+\sloppy
+\input{../inc_header} %
+\geometry{outer=0.3in,inner=0.4in,top=25pt+\headsep+\headheight,bottom=25pt+\footskip,twoside=true}
+
+
+\let\oldVbar=\Vbar
+\def\Vbar{\oldVbar\hspace{-2pt}}
+\let\oldRbar=\Rbar
+\def\Rbar{\oldRbar\hspace{-2pt}}
+
+\cfoot{%
+  \ifnum\thepage>1
+    \thepage
+  \fi
+}
+%\renewcommand\headrulewidth{\oldheadrulewidth}
+\chead{
+  \ifnum\thepage>1
+    \addfontfeature{Numbers=Lining}%
+    \heading{} \ifx\matinsnocturn\undefined\else(\matinsnocturn)\fi
+  \fi
+}
+
+\newcommand{\writeheading}[1]{
+  \begin{center}{
+  \addfontfeature{Numbers=Lining}
+  \textsc{#1}
+  }\end{center}
+  \medskip
+}
+\newcommand{\printseparation}{
+  %\hfil\rule{3in}{0.5pt}\hfil
+  \bigskip
+  \bigskip
+}
+
+\def\nogloriapatri{T}

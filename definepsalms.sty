@@ -323,6 +323,7 @@ five%
 %TODO: format mode and ending properly into antlinetwo
 
 % run prepsalm so it can define psalmclef
+% TODO: figure out how to do this without letting it run greblockcustos
 {
 \ifx\prepsalm\undefined\else\prepsalm\fi
 }
@@ -575,7 +576,9 @@ five%
 {\ifx\prepsalm\undefined\else\prepsalm\fi
   \includescore{\psalmtex}
 }
-\medskip % do we need this?
+%\medskip % do we need this?
+{\ifx\prepsalmverses\undefined\else\prepsalmverses\fi
+}
 
 \normalsize
 %\vspace{-20pt}
@@ -777,7 +780,7 @@ five%
     \bigskip
     \needspace{3\baselineskip}
     \ifnum\thepage=\magstartpagenumber
-      \hrule
+      %\hrule
       \bigskip
     \fi
     {\preverses

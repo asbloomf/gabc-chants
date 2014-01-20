@@ -3,59 +3,12 @@
 \def\heading{Holy Saturday At \officehour}
 %
 \documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
-\usepackage{../definepsalms}
-\sloppy
-\input{../inc_header} %
-
-\let\oldVbar=\Vbar
-\def\Vbar{\oldVbar\hspace{-2pt}
-}\let\oldRbar=\Rbar
-\def\Rbar{\oldRbar\hspace{-2pt}}
+\input{../tenebrae/inc_header}
 
 % here we begin the document
 \begin{document}
 %\chead{\heading}
 
-% The title:
-\vspace*{-50pt plus 20pt}
-\begin{center}{\addfontfeature{Numbers=Lining}%
-\huge \textsc{Holy Saturday}
-
-\cfoot{%
-  \ifnum\thepage>1
-    \thepage
-  \fi
-}
-%\renewcommand\headrulewidth{\oldheadrulewidth}
-\chead{
-  \ifnum\thepage>1
-    \addfontfeature{Numbers=Lining}%
-    \heading{} \ifx\matinsnocturn\undefined\else(\matinsnocturn)\fi
-  \fi
-}
-
-\bigskip
-\normalsize\textsc{At Matins}
-}\end{center}
-%\vspace{-2ex}
-%\bigskip
-
-%\emph{The altar should be completely bare, and without crucifix or candles.}
-
-\newcommand{\writeheading}[1]{
-  \begin{center}{
-  \addfontfeature{Numbers=Lining}
-  \textsc{#1}
-  }\end{center}
-  \medskip
-}
-\newcommand{\printseparation}{
-  %\hfil\rule{3in}{0.5pt}\hfil
-  \bigskip
-  \bigskip
-}
-
-\def\nogloriapatri{T}
 \input{nocturne1}
 \input{nocturne2}
 \input{nocturne3}

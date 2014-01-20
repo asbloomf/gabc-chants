@@ -6,4 +6,14 @@ date: 2013;
 style: modern;
 initial-style: 0;
 %%
-(c4)1. B{e}(f)ne(gh)dí(h)ctus(h) Dó(h)mi(h)<i>nus</i>,(hg) <i>De</i>(ixgi)<i>us</i>(h) <b>Is</b>(hr[ocba:1;6mm])<b>ra</b>(hg)ël :(gh..) <v>\greheightstar</v>(:) qui(h)a(h) vi(h)si(h)tá(h)vit,(h) et(h) fe(h)cit(h) red(h)em(h)pti(h)ó(h)nem(h) <i>ple</i>(g)<i>bis</i>(f) <b>su</b>(gh gr)æ :(g.) (::)
+(c4)1. B{e}(f)ne(gh)dí(h)ctus(h) Dó(h)mi(h)<i>nus</i>,(hg) <i>De</i>(ixgi)<i>us</i>(h) <b>Is</b>(%hr[ocba:1;8mm]
+[ev:%
+{%
+\grepunctumcavum{h}{h}{0}{}{}%
+{%
+% verbatim text at note level:
+\greovercurlybrace{8mm}{1}{0pt}{0pt}{1}%
+% end of verbatim text
+}{}%
+}%
+])<b>ra</b>(hg)ël :(gh..) <v>\greheightstar</v>(:) qui(h)a(h) vi(h)si(h)tá(h)vit,(h) et(h) fe(h)cit(h) red(h)em(h)pti(h)ó(h)nem(h) <i>ple</i>(g)<i>bis</i>(f) <b>su</b>(gh gr)æ :(g.) (::)
