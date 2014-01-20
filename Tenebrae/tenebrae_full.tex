@@ -2,12 +2,35 @@
 % !TEX encoding = UTF-8
 \def\heading{Maundy Thursday At \officehour}
 %
-\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\documentclass[12pt,twoside]{article} % use larger type; default would be 10pt
 \input{../tenebrae/inc_header}
+%\geometry{papersize={7in,10in}}
+
+\def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
+\def\mytitlepage{%
+\vspace*{50pt}
+\begin{center}{\addfontfeature{Numbers=Lining}%
+\huge \textsc{Tenebrae}
+\vspace*{50pt}
+\bigskip
+\bigskip
+\bigskip
+}\end{center}
+\normalsize
+\textsc{Maundy Thursday}\dotting 3\\
+\textsc{Good Friday}\dotting 33\\
+\textsc{Holy Saturday}\dotting 63\\
+\vfil
+\pagebreak
+}
+
 
 % here we begin the document
 \begin{document}
+\mytitlepage
+
 %\chead{\heading}
+\ifnum 1=1{
 \thispagestyle{empty}
 \input{../Tenebrae-Thursday/nocturne1}
 \input{../Tenebrae-Thursday/nocturne2}
@@ -29,7 +52,7 @@
 \input{../Tenebrae-Saturday/nocturne2}
 \input{../Tenebrae-Saturday/nocturne3}
 \input{../Tenebrae-Saturday/lauds}
-
+}\fi
 %
 
 \end{document}
