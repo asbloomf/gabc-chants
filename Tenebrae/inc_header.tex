@@ -2,7 +2,6 @@
 \usepackage{adjustbox}
 \sloppy
 \input{../inc_header} %
-\geometry{outer=0.3in,inner=0.4in,top=25pt+\headsep+\headheight,bottom=25pt+\footskip,twoside=true}
 
 
 \let\oldVbar=\Vbar
@@ -10,10 +9,16 @@
 \let\oldRbar=\Rbar
 \def\Rbar{\oldRbar\hspace{-2pt}}
 
+\ifbook{
+\lfoot[\thepage]{}
+\rfoot[]{\thepage}
+}
+\ifnotbook{
 \cfoot{%
   \ifnum\thepage>1
     \thepage
   \fi
+}
 }
 %\renewcommand\headrulewidth{\oldheadrulewidth}
 \chead{

@@ -4,7 +4,11 @@
 %\usepackage{luatextra}
 %\usepackage{graphicx} % support the \includegraphics command and options
 \usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper} % or letterpaper (US) or a5paper or....
+\ifx\undefined\mywidth
+    \geometry{letterpaper} % or letterpaper (US) or a5paper or....
+\else
+    \geometry{papersize={\mywidth,\myheight}}
+\fi
 \usepackage{gregoriotex} % for gregorio score inclusion
 
 % If you use usual TeX fonts, here is a starting point:
@@ -29,7 +33,18 @@
 \usepackage{calc}
 %\setlength\headsep{20pt}
 %\setlength\footskip{15pt}
-\geometry{outer=25pt,inner=25pt,top=25pt+\headsep+\headheight,bottom=25pt+\footskip}
+\ifx\undefined\tenebrae
+    \geometry{outer=25pt,inner=25pt,top=25pt+\headsep+\headheight,bottom=25pt+\footskip}
+\else
+    \ifx\undefined\mywidth
+        \geometry{outer=0.3in,inner=0.4in,top=25pt+\headsep+\headheight,bottom=25pt+\footskip,twoside=true}
+    \else
+        \setlength\headsep{0.25in}
+        \setlength\footskip{0.3in}
+        \geometry{outer=0.5in,inner=0.5in,top=0.25in+\headsep+\headheight,bottom=0.25in+\footskip,twoside=true}
+    \fi
+\fi
+
 \pagestyle{fancy} % no header or footers
 \let\oldheadrulewidth\headrulewidth
 \renewcommand\headrulewidth{\ifnum\thepage=1
@@ -37,4 +52,13 @@
 \else
 \oldheadrulewidth
 \fi}
+
+\ifx\undefined\ifbook
+    \newcommand{\ifbook}[1]{}
+    \newcommand{\ifnotbook}[1]{#1}
+\fi
+\ifx\undefined\ifsmallbook
+    \newcommand{\ifsmallbook}[1]{}
+    \newcommand{\ifnotsmallbook}[1]{#1}
+\fi
 %\cfoot{\thepage}

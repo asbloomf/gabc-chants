@@ -19,7 +19,11 @@
 \usepackage{fancyhdr} % for headers and footers
 \usepackage{xstring}
 %\usepackage{pdfcolparallel} % for parallel columns
-\usepackage{parcolumns}
+\ifx\undefined\useparacol
+  \usepackage{parcolumns}
+\else
+  \usepackage{paracol}
+\fi
 %\usepackage{wrapfig} % for wrapping figures -- can't get it to work with gregorio
 
 % choose the language of the document here
@@ -36,10 +40,15 @@
 \usepackage{fontspec}
 \renewcommand*\oldstylenums[1]{#1}
 \AtBeginDocument{\fontspec[Ligatures=TeX,Numbers=OldStyle]{Garamond Premier Pro}}
+\newcommand\garamond[1]{\fontspec[Numbers=OldStyle]{Garamond Premier Pro}#1}
 \let\oldchead\chead
-\renewcommand\chead[1]{\oldchead{\fontspec[Numbers=OldStyle]{Garamond Premier Pro}#1}}
+\renewcommand\chead[1]{\oldchead{\garamond{#1}}}
 \let\oldcfoot\cfoot
-\renewcommand\cfoot[1]{\oldcfoot{\fontspec[Numbers=OldStyle]{Garamond Premier Pro}#1}}
+\let\oldlfoot\lfoot
+\let\oldrfoot\rfoot
+\renewcommand\cfoot[1]{\oldcfoot{\garamond{#1}}}
+\renewcommand\lfoot[2][]{\oldlfoot[\garamond{#1}]{\garamond{#2}}}
+\renewcommand\rfoot[2][]{\oldrfoot[\garamond{#1}]{\garamond{#2}}}
 }
 
 \lhead{}\rhead{}
@@ -128,6 +137,15 @@
 \colchunk{\dropcap{american}{#2}} \selectlanguage{latin}
 }
 
+\newcommand{\paracolprayer}[2]{
+% 1 - latin
+% 2 - english
+% requires columns environment
+%\noindent%\selectlanguage{latin}
+\begin{column}{\dropcap{latin}{#1}}\end{column}
+\begin{column}{\dropcap{american}{#2}}\end{column} \selectlanguage{latin}
+}
+
 \newcommand{\newprayer}[3][\null]{
 % 1 - format
 % 2 - latin
@@ -164,11 +182,28 @@
 	\end{tabular}
 }
 
+\ifx\undefined\useparacol
 \newenvironment{columns}{
 	\begin{parcolumns}[rulebetween]{2}
 }{
 	\end{parcolumns}
 }
+\let\minipageitem=\item
+%
+\else%
+%
+\newenvironment{columns}{
+    \begin{paracol}{2}
+}{
+    \end{paracol}
+}
+\newcommand{\colchunk}[1]{
+\begin{column}#1\end{column}
+}
+%\let\minipageitem=\item
+\def\minipageitem#1{\parbox{\hsize}{\item#1\vspace{1.5pt}}}
+%\def\minipageitem#1{\parbox{\hsize}{\item #1}}
+\fi
 
 \newcommand{\versicle}[2]{
 % 1 - latin
@@ -210,7 +245,10 @@
 \setlength\parsep{0pt}
 \setlength\labelwidth{50pt}\setlength\leftmargin{0pt}\setlength\itemindent{6ex}}
 \setcounter{vcounter}{#1}
-}{\end{list}}
+}{\ifx\undefined\useparacol%
+\vspace{-12pt}%
+\fi%
+\end{list}}
 
 
 \def\boldVerse{T}

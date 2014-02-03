@@ -143,8 +143,14 @@ five%
 }
 
 % define the parcolumn options
+\def\useevencolumns{F}
+\ifx\undefined\ifsmallbook
+\else\ifsmallbook{
+  \def\useevencolumns{T}
+}\fi
 \expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween]{2}}
 \expandafter\def\csname endpsalm\antnum cols\endcsname{\end{parcolumns}}
+\if\useevencolumns F%
 %\expandafter\def\csname psalm\antnum coloptions\endcsname{rulebetween}
 %109 & 110 are just rulebetween
 \ifnum#2=109
@@ -210,6 +216,13 @@ five%
 \expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=285pt}]{2}}
 %\expandafter\def\csname psalm\antnum coloptions\endcsname{rulebetween,colwidths={1=285pt}}
 \fi
+%
+\fi %even columns
+%
+\ifx\undefined\useparacol\else
+\expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{paracol}{2}}
+\expandafter\def\csname endpsalm\antnum cols\endcsname{\end{paracol}}
+\fi%if not use paracol
 
 % change the standard vespers file to use \psalmXXXcoloptions
 %\newenvironment\expandafter{\psalmMASTERcols}{\begin{parcolumns}\parcolumnsoptions}{\end{parcolumns}}
@@ -363,8 +376,14 @@ five%
 \ifx\psalmtranslationsmall\undefined
     \def\psalmtranslationsmall{F}
 \fi
+\def\useevencolumns{F}
+\ifx\undefined\ifsmallbook
+\else\ifsmallbook{
+  \def\useevencolumns{T}
+}\fi
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween]{2}}
 \def\endpsalmcols{\end{parcolumns}}
+\if\useevencolumns F%
 %\def\psalmcoloptions{rulebetween}
 %109 & 110 are just rulebetween
 \ifx\canticleof\undefined
@@ -523,7 +542,13 @@ five%
 %  \fi
 %}{}
 \fi%canticleof undefined
-
+%
+\fi % even columns
+%
+\ifx\undefined\useparacol\else
+\def\beginpsalmcols{\begin{paracol}{2}}
+\def\endpsalmcols{\end{paracol}}
+\fi % end paracol
 %TODO: psalmtitle properly when canticleof defined
 \ifx\canticleof\undefined
   \def\printpsalmtitle{%
@@ -653,6 +678,7 @@ five%
 
 }
 
+\ifx\undefined\useparacol
 \newcommand{\printchapter}[2]{
 % 1 - chapter
 % 2 - chapter translation
@@ -665,6 +691,22 @@ five%
     \colchunk{\sloppy \dropcap{american}{#2}}
     \end{parcolumns}
 }
+%
+\else %
+%
+\newcommand{\printchapter}[2]{
+% 1 - chapter
+% 2 - chapter translation
+%TODO: optional no translation
+    \begin{center}{\large\textbf Chapter.}\end{center}
+    % default width is 265pt
+    % ,colwidths={1=253pt}
+    \begin{paracol}{2}
+    \begin{column}{\sloppy#1}\end{column}
+    \begin{column}{\sloppy \dropcap{american}{#2}}\end{column}
+    \end{paracol}
+}
+\fi
 
 \newcommand{\printhymn}[4]{
 % 1 hymnlinetwo

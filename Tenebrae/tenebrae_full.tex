@@ -1,13 +1,16 @@
 % !TEX TS-program = lualatex
 % !TEX encoding = UTF-8
-\def\heading{Maundy Thursday At \officehour}
+\def\tenebrae{T}
+\newcommand{\ifbook}[1]{#1}
+\newcommand{\ifnotbook}[1]{}
 %
-\documentclass[12pt,twoside]{article} % use larger type; default would be 10pt
+\documentclass[12pt]{article} % use larger type; default would be 10pt
 \input{../tenebrae/inc_header}
-%\geometry{papersize={7in,10in}}
 
-\def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
 \def\mytitlepage{%
+\thispagestyle{empty}
+\def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
+\def\wdotting{\leaders\hbox to 3em{\hfil.\hfil}\hfill}
 \vspace*{50pt}
 \begin{center}{\addfontfeature{Numbers=Lining}%
 \huge \textsc{Tenebrae}
@@ -17,9 +20,18 @@
 \bigskip
 }\end{center}
 \normalsize
-\textsc{Maundy Thursday}\dotting 3\\
-\textsc{Good Friday}\dotting 33\\
-\textsc{Holy Saturday}\dotting 63\\
+\textsc{Maundy Thursday}\dotting 2\\
+\hspace*{2em}\textsc{2nd Nocturn}\wdotting 11\\
+\hspace*{2em}\textsc{3rd Nocturn}\wdotting 18\\
+\hspace*{2em}\textsc{Lauds}\wdotting 24\\
+\textsc{Good Friday}\dotting 32\\
+\hspace*{2em}\textsc{2nd Nocturn}\wdotting 40\\
+\hspace*{2em}\textsc{3rd Nocturn}\wdotting 47\\
+\hspace*{2em}\textsc{Lauds}\wdotting 54\\
+\textsc{Holy Saturday}\dotting 62\\
+\hspace*{2em}\textsc{2nd Nocturn}\wdotting 68\\
+\hspace*{2em}\textsc{3rd Nocturn}\wdotting 74\\
+\hspace*{2em}\textsc{Lauds}\wdotting 78\\
 \vfil
 \pagebreak
 }
@@ -29,9 +41,13 @@
 \begin{document}
 \mytitlepage
 
-%\chead{\heading}
-\ifnum 1=1{
+%\let\olditem=\item
+%\def\item#1{\parbox{\hsize}{\olditem #1}}
+
+\ifnum 1=2{
+}\fi
 \thispagestyle{empty}
+\def\heading{Maundy Thursday At \officehour}
 \input{../Tenebrae-Thursday/nocturne1}
 \input{../Tenebrae-Thursday/nocturne2}
 \input{../Tenebrae-Thursday/nocturne3}
@@ -52,7 +68,6 @@
 \input{../Tenebrae-Saturday/nocturne2}
 \input{../Tenebrae-Saturday/nocturne3}
 \input{../Tenebrae-Saturday/lauds}
-}\fi
 %
 
 \end{document}
