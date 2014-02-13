@@ -33,11 +33,15 @@
 \usepackage{calc}
 %\setlength\headsep{20pt}
 %\setlength\footskip{15pt}
+\setlength\headheight{15pt}
+\setlength\headsep{22pt}
 \ifx\undefined\tenebrae
-    \geometry{outer=25pt,inner=25pt,top=25pt+\headsep+\headheight,bottom=25pt+\footskip}
+    \geometry{outer=25pt,inner=25pt,top=22pt+\headsep+\headheight,bottom=25pt+\footskip}
 \else
     \ifx\undefined\mywidth
-        \geometry{outer=0.3in,inner=0.4in,top=25pt+\headsep+\headheight,bottom=25pt+\footskip,twoside=true}
+        %had been .3 outer, .4 inner
+        %let's try .65 or .75 for inner and .5 for outer
+        \geometry{outer=0.5in,inner=0.75in,top=25pt+\headsep+\headheight,bottom=25pt+\footskip,twoside=true}
     \else
         \setlength\headsep{0.25in}
         \setlength\footskip{0.3in}

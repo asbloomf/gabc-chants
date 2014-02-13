@@ -5,9 +5,9 @@
 
 
 \let\oldVbar=\Vbar
-\def\Vbar{\oldVbar\hspace{-2pt}}
+\def\Vbar{\oldVbar\hspace*{-2pt}}
 \let\oldRbar=\Rbar
-\def\Rbar{\oldRbar\hspace{-2pt}}
+\def\Rbar{\oldRbar\hspace*{-2pt}}
 
 \ifbook{
 \lfoot[\thepage]{}
@@ -38,7 +38,7 @@
 \newcommand{\printseparation}{
   %\hfil\rule{3in}{0.5pt}\hfil
   \bigskip
-  \bigskip
+  \smallskip
 }
 
 \def\nogloriapatri{T}

@@ -6,22 +6,26 @@
 %
 \large
 %\printgabc{1. Ant.}{8. c.}{Z}{an--zelus_domus_tuae--solesmes}
+{
 \def\preant{\setgrefactor{17}\large}
-\def\prepsalm{\normalsize}
+\def\prepsalm{\normalsize\setgrefactor{15}}
 \def\anttranslation{God is my helper, and the Lord is the protector of my soul.}
 \def\psalmtranslationsmall{T}
 \printpsalm{1}{53}{8G}{an--deus_adjuvat_me--solesmes}{D}
 \let\prepsalm=\undefined
+}
 %
 %\medskip
 %\hfill\rule{3in}{0.5pt}\hfill
 \printseparation
+\bigskip
 {
 \def\preant{\setgrefactor{17}\large}
-\def\prepsalm{\normalsize}
+\def\prepsalm{\normalsize\setgrefactor{15}}
 \def\psalmtranslationsmall{T}
 \def\anttranslation{His place is in peace and His dwelling-place in Zion.}
-\def\lalinebreakafterthree\undefined{T}
+%\def\lalinebreakafterverse{3}
+%\def\lalinebreakafterthree\undefined{T}
 \printpsalm{2}{75}{7a}{an--in_pace_factus_est--solesmes}{I}
 \let\prepsalm=\undefined
 }
@@ -30,17 +34,21 @@
 \vspace{-3pt}
 {
 \def\preant{\setgrefactor{17}\large}
+\def\preantafter{\setgrefactor{15}\normalsize}
+\def\prepsalm{\normalsize\setgrefactor{15}}
 \def\psalmtranslationsmall{T}
 \def\anttranslation{I am become as a man without help, free among the dead.}
-\def\lalinebreakafterseven{T}
+%\def\lalinebreakafterseven{T}
 \def\prepsalmverses{\vspace{-9pt}}
 \printpsalm{3}{87}{4d}{an--factus_sum--solesmes}{F}
 }
 
-\bigskip\bigskip
+\bigskip%\bigskip
+{\setgrefactor{15}\normalsize
 \printvr{vr-inPaceFactusEst}
 {His place is in peace.}
 {And His dwelling-place in Sion.}
+}
 
 \bigskip
 Pater noster. \emph{in silence.}
@@ -50,10 +58,9 @@ De Epístola beáti Pauli Apóstoli ad Hebrǽos
 %\translation{From the letter of the blessed Apostle Paul to the Jews}
 \end{center}
 {
-\normalsize
 \hspace{10ex}\textsc{lesson vii}\hfill\emph{Chap. 9, 11-22}\hspace{10ex}
-\begin{parcolumns}[rulebetween,colwidths={1=255pt}]{2}
-\prayer{Christus assístens Póntifex futurórum bonórum, per ámplius et perféctius tabernáculum, non manufáctum, id est, non hujus creatiónis~:
+\begin{parcolumns}[rulebetween,colwidths={1=.51\linewidth}]{2}
+\lesson[\normalsize]{Christus assístens Póntifex futurórum bonórum, per ámplius et perféctius tabernáculum, non manufáctum, id est, non hujus creatiónis~:
 neque per sánguinem hircórum, aut vitulórum, sed per próprium sánguinem introívit semel in Sancta, ætérna redemptióne invénta.
 Si enim sanguis hircórum et taurórum, et cínis vítulæ aspérsus inquinátos sanctíficat ad emundatiónem carnis~:
 quanto magis sanguis Christi, qui per Spíritum Sanctum semetípsum óbtulit immaculátum Deo, emundábit consciéntiam nostram ab opéribus mórtuis, ad serviéndum Deo vivénti?}
@@ -65,21 +72,25 @@ How much more shall the Blood of Christ, who by the Holy Ghost offered Himself s
 \setgrefactor{14}
 \medskip
 
-\bigskip\bigskip
+%\bigskip\bigskip
 %\pagebreak
 
-\printgabc[\normalsize]{Resp. 7}{4.}{A}{re--astiterunt_reges--solesmes}
+\setgrefactor{17}
+\printgabc{Resp. 7}{4.}{A}{re--astiterunt_reges--solesmes}
 
-\translation[\normalsize]{\Rbar{}. The kings of the earth stood up, and the princes met together:
+{
+\translationcolumns[\normalsize]{\Rbar{}. The kings of the earth stood up, and the princes met together:
 * Against the Lord, and against His Anointed.
 \Vbar{}. Why have the gentiles raged and the people devised vain things?
 \Rbar{}. Against the Lord, and against His Anointed.}
+}
 
+\vspace{-9pt}
 \needspace{2\baselineskip}
 \begin{center}{\textsc{lesson viii}}\end{center}
-
+\vspace{-5pt}
 \begin{parcolumns}[rulebetween,colwidths={1=255pt}]{2}
-\prayer{Et ídeo novi testaménti mediátor est~: ut, morte intercedénte, in redemptiónem eárum prævaricatiónum, quæ erant sub prióri testaménto, repromissiónem accípiant, qui vocáti sunt ætérnæ hereditátis.
+\lesson[\normalsize]{Et ídeo novi testaménti mediátor est~: ut, morte intercedénte, in redemptiónem eárum prævaricatiónum, quæ erant sub prióri testaménto, repromissiónem accípiant, qui vocáti sunt ætérnæ hereditátis.
 Ubi enim testaméntum est~: mors necésse est intercédat testatóris.
 Testaméntum enim in mórtuis confirmátum est~: alióquin nondum valet, dum vivit qui testátus est.
 Unde nec primum quidem sine sánguine dedicátum est.}
@@ -93,18 +104,20 @@ Whereupon neither was the first indeed dedicated without blood.}
 %\pagebreak
 
 \needspace{8\baselineskip}
-\printgabc[\normalsize]{Resp. 8}{4.}{Æ}{re--aestimatus_sum--solesmes}
+\printgabc{Resp. 8}{4.}{Æ}{re--aestimatus_sum--solesmes}
 
-\translation[\normalsize]{\Rbar{}. I am counted with them that go down into the pit:
+{
+\translationcolumns[\normalsize]{\Rbar{}. I am counted with them that go down into the pit:
 * I am become as a man without help, free among the dead.
 \Vbar{}. They laid me in the lowest pit, in darkness, and in the shadow of death.
 \Rbar{}. I am become as a man \dots}
+}
 
 %\pagebreak
 \begin{center}{\textsc{lesson ix}}\end{center}
 
 \begin{parcolumns}[rulebetween,colwidths={1=255pt}]{2}
-\prayer{Lecto enim omni mandáto legis a Móyse univérso pópulo~: accípiens sánguinem vitulórum, et hircórum, cum aqua et lana coccínea, et hyssópo~: ipsum quoque librum, et omnem populum aspérsit dicens~: Hic sanguis testaménti, quod mandávit ad vos Deus.
+\lesson[\normalsize]{Lecto enim omni mandáto legis a Móyse univérso pópulo~: accípiens sánguinem vitulórum, et hircórum, cum aqua et lana coccínea, et hyssópo~: ipsum quoque librum, et omnem populum aspérsit dicens~: Hic sanguis testaménti, quod mandávit ad vos Deus.
 Etiam tabernáculum, et ómnia vasa ministérii sánguine simíliter aspérsit~:
 et ómnia pene in sánguine secúndum legem mundántur~: et sine sánguinis effusióne non fit remíssio.}
 {For when every commandment of the law had been read by Moses to all the people, he took the blood of calves and goats, with water, and scarlet wool and hyssop, and sprinkled both the book itself and all the people,
@@ -114,11 +127,13 @@ And almost all things, according to the law, are cleansed with blood: and withou
 \end{parcolumns}
 
 \bigskip\bigskip
+\bigskip\bigskip
 %\pagebreak
 
-\printgabc[\normalsize]{Resp. 9}{2.}{S}{re--sepulto_domino--solesmes}
+\printgabc{Resp. 9}{2.}{S}{re--sepulto_domino--solesmes}
 
-\translation[\normalsize]{\Rbar{}. When the Lord was buried, they sealed the sepulchre, rolling a stone to the door of the sepulchre:
+{
+\translationcolumns[\normalsize]{\Rbar{}. When the Lord was buried, they sealed the sepulchre, rolling a stone to the door of the sepulchre:
 * Setting a watch to guard Him.
 \Vbar{}. The chief priests came together unto Pilate, and made that request unto him.
 \Rbar{}. Setting a watch to guard Him.

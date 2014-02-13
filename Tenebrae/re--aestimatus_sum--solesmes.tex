@@ -182,7 +182,7 @@
 %
 {%
 \greglyph{\char 1025}{d}{d}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemus{f}{18}{0}{f}%
 }%
 }%
@@ -196,7 +196,7 @@
 \greglyph{\char 26}{d}{e}{4}{}{}%
 \greendofglyph{1}%
 \greglyph{\char 1025}{e}{e}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt,raise=-0.5pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt,raise=-0.5pt}{%
 \grehepisemusbottom{d}{0}{-1}%
 }%
 }%
@@ -258,14 +258,27 @@
 \greendofglyph{0}%
 \greglyph{\char 17}{f}{f}{0}{}{}%
 }%
-\gresyllable{b}{e}{r.}{1}{}{\Vbar{}.}{12}{}{%
+\gresyllable{b}{e}{r.}{1}{}{}{12}{}{%
 \greglyph{\char 6145}{f}{h}{8}{}{%
 \greaugmentumduplex{e}{f}{1}%
 }%
 }%
 %
-\grebarsyllable{}{\Vbar{}.}{}{1}{P}{o}{0}{}{%
-\gredivisiofinalis{}%
+\grebarsyllable{}{}{}{1}{}{\Vbar{}.}{0}{%
+\grelastofline %
+}{%
+\greindivisiofinalis{}%
+%
+%
+\grenewline %
+%
+%
+}%
+%
+\gresyllable{}{\Vbar{}.}{}{1}{P}{o}{0}{}{%
+\greendofelement{1}{0}%
+\greendofelement{1}{0}%
+\greendofelement{1}{0}%
 }%
 %
 \gresyllable{P}{o}{}{0}{s}{u}{0}{}{%
@@ -288,14 +301,14 @@
 \greglyph{\char 5121}{g}{g}{8}{}{}%
 \greendofglyph{1}%
 \greglyph{\char 19462}{g}{h}{4}{}{%
-\adjustbox{scale={0.85}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.85}{1},trim=0.7pt 0pt}{%
 \grehepisemus{i}{17}{1}{i}%
 \grehepisemus{i}{0}{0}{i}%
 }%
 }%
 \greendofelement{0}{0}%
 \greglyph{\char 22}{h}{g}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemus{i}{0}{0}{i}%
 }%
 }%
@@ -386,7 +399,9 @@
 \gresyllable{}{ú}{m}{0}{br}{a}{0}{}{%
 \greglyph{\char 17}{g}{g}{0}{}{}%
 }%
-\gresyllable{br}{a}{}{1}{m}{ó}{0}{}{%
+\gresyllable{br}{a}{}{1}{m}{ó}{0}{%
+\grelastofline %
+}{%
 \greglyph{\char 17439}{g}{g}{0}{}{%
 \grehepisemus{i}{22}{1}{i}%
 \grevepisemus{j}{18}%
@@ -395,6 +410,11 @@
 \greglyph{\char 19}{g}{e}{6}{}{}%
 \greendofglyph{3}%
 \greglyph{\char 19}{f}{e}{6}{}{}%
+%
+%
+\grenewline %
+%
+%
 }%
 %
 \gresyllable{m}{ó}{r}{0}{t}{i}{8}{}{%
@@ -402,14 +422,17 @@
 \greendofelement{0}{0}%
 \greglyph{\char 11271}{g}{e}{2}{}{}%
 }%
-\gresyllable{t}{i}{s.}{1}{}{\greheightstar}{12}{}{%
+\gresyllable{t}{i}{s.}{1}{}{}{12}{}{%
 \greglyph{\char 5121}{e}{d}{8}{}{%
 \greaugmentumduplex{d}{e}{1}%
 }%
 }%
 %
-\grebarsyllable{}{\greheightstar}{}{1}{F}{á}{0}{}{%
+\grebarsyllable{}{}{}{1}{}{\greheightstar}{0}{}{%
 \gredivisiofinalis{}%
+}%
+%
+\gresyllable{}{\greheightstar}{}{1}{F}{á}{0}{}{%
 }%
 %
 \gresyllable{F}{á}{}{0}{ct}{u}{0}{}{%

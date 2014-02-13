@@ -1,53 +1,56 @@
 ﻿% -*- root:Saturday.tex -*-
 %!TEX root = Saturday.tex
 %\pagebreak
-\bigskip\bigskip
+%\bigskip\bigskip
 \let\matinsnocturn=\undefined
 \needspace{6\baselineskip}
 \writeheading{At Lauds}
 \def\officehour{Lauds}
 %
 \large
-{
 \def\nogloriapatri{T}
+{
 \def\preant{\setgrefactor{17}\large}
 %\def\preantafter{\setgrefactor{17}\large}
-\def\prepsalm{\setgrefactor{17}\normalsize}
+\def\prepsalm{\setgrefactor{15}\normalsize}
 \def\anttranslation{O death, I will be thy death; I will be thy destruction, O hell.\needspace{4\baselineskip}}
-\def\lalinebreakafterthree{T}
+%\def\lalinebreakafterthree{T}
+\def\lalinebreakafterverse{10}
 \def\psalmtranslationsmall{T}
 \printpsalm{1}{50}{4c}{an--o_mors--solesmes}{O}
 }
 %
-%\printseparation{}
-\pagebreak
+\printseparation{}
+%\pagebreak
 {
 \def\preant{\setgrefactor{17}\large}
-\def\prepsalm{\normalsize}
+\def\prepsalm{\setgrefactor{15}\normalsize}
 \def\psalmtranslationsmall{T}
 \def\anttranslation{They shall mourn for Him as one mourneth for an only son, for the innocent Lord hath been slain.}
 \printpsalm{2}{91}{4A}{an--plangent_eum--solesmes}{P}
 \let\prepsalm=\undefined
 }
 %
-%\printseparation{}
-\pagebreak
+\printseparation{}
+%\pagebreak
 {
 \def\preant{\setgrefactor{17}\large}
-\def\prepsalm{\normalsize}
+\def\prepsalm{\setgrefactor{15}\normalsize}
 \def\psalmtranslationsmall{T}
 \def\anttranslation{Give heed, all ye people, and see my grief.}
 \printpsalm{3}{63}{7b}{an--attendite_universi--solesmes}{A}
 }%
-%\printseparation{}
-\pagebreak
+\printseparation{}
+\bigskip\bigskip
+%\pagebreak
 {
 \def\preant{\setgrefactor{17}\large}
+\def\prepsalm{\setgrefactor{15}\normalsize}
+\def\prepsalmverses{\vspace{-10pt}}
 \def\psalmtranslationsmall{T}
 \def\anttranslation{From the gate of hell, O Lord, deliver my soul.}
 \def\canticleof{Ezechias}
 \def\canticleverses{Is. 38, 10-20}
-\def\prepsalm{\normalsize}
 \needspace{4\baselineskip}
 \printpsalm{4}{ezechias38}{2D}{an--a_porta_inferi--solesmes}{A}
 \let\canticleof=\undefined
@@ -65,9 +68,9 @@
   \relax %
 }
 \def\preant{\setgrefactor{17}\large}
+\def\prepsalm{\setgrefactor{15}\normalsize\greblockcustos}
 \def\psalmtranslationsmall{T}
 \def\anttranslation{O all ye that pass by, attend and see if there be any sorrow like unto my sorrow.}
-\def\prepsalm{\normalsize\greblockcustos}
 \def\psalmclef{2}
 \printpsalm{5}{150}{8c}{an--o_vos_omnes--solesmes}{O}
 }
@@ -78,31 +81,39 @@
 {And Thou wilt not give Thy Holy One to see corruption.}
 
 \bigskip\bigskip
-\needspace{4\baselineskip}
+\pagebreak
+%\needspace{4\baselineskip}
+{
+\def\preant{\setgrefactor{17}\large}
+\def\prerepeatantiphon{\normalsize\bigskip}
 \def\magsolemn{T}
 \def\preverses{
-  \setgrefactor{15}
+  \setgrefactor{15}\normalsize
 }
-\def\anttranslation{\normalsize The women sitting at the sepulchre mourned, weeping for the Lord.}
+\def\anttranslation{\normalsize The women sitting at the sepulchre mourned, weeping for the Lord.\vspace{-4pt}}
 \printmag[Benedictus]{1g}{M}{an--mulieres--solesmes}
+}
 %{1g}{an--traditor_autem--solesmes}{T}
 
 %\emph{The candles on the triangular candlestick having been extinguished as has already been explained, the one at the top of the triangle alone remains lighted.  During the Canticle \emph{Benedíctus.} the candles on the altar are likewise extinguished one by one, from each side alternately, at every second verse, so that by the last verse all are extinguished.  All other lights and lamps in the church are also put out.}
-\bigskip\bigskip
+%\bigskip%\bigskip
+%\smallskip
+\vspace{-6pt}
+\setgrefactor{17}
 \printgabc{Ant.}{5.}{C}{../Tenebrae/an--christus_factus_est--solesmes_saturday}
 
-\bigskip
+\medskip
 
+\normalsize
 \emph{When the antiphon \emph{Christus fáctus est} is finished, \emph{Páter nóster} is said, in silence throughout.}
 
 \emph{Then is sung, without \emph{Orémus}, to the ferial tone \emph{B} (or the ancient simple tone) :}
 
-\bigskip
-%\bigskip
+\medskip
 
 \begin{parcolumns}[rulebetween]{2}
 \colchunk{\dropcap{latin}{Concéde, quǽsumus, } omnípotens Deus~:~† ut qui Fílii tui resurrectiónem devóta exspectatióne prævenímus;~* ejúsdem resurrectiónis glóriam consequámur.
 \emph{And in silence~:}
-Per eúmdem Dóminum nostrum Jesum Christum.}
+Per eúmdem Dóminum \dots{}}
 \selectlanguage{american}
 \colchunk{\dropcap{american}{Grant, we beseech thee, } O Almighty God: that we who anticipate the resurrection of thy Son with pious expectation, may obtain the glory of the same resurrection.}\end{parcolumns}

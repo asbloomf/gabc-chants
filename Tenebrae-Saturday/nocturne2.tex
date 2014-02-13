@@ -8,24 +8,29 @@
 \def\nogloriapatri{T}
 {
 \def\preant{\setgrefactor{17}\large}
-\def\anttranslation{Be ye lifted up, O eternal gates, and the King of glory shall enter in.}
+\def\preantafter{\setgrefactor{15}\normalsize}
 \def\psalmtranslationsmall{T}
-\def\prepsalm{\normalsize\greblockcustos}
-\def\lalinebreakaftersix{T}
+\def\prepsalm{\normalsize\greblockcustos\setgrefactor{15}}
+%\def\lalinebreakafterverse{2}
+%\def\lalinebreakaftersix{T}
+\def\anttranslation{Be ye lifted up, O eternal gates, and the King of glory shall enter in.}
 \printpsalm{1}{23}{5a}{an--elevamini--solesmes}{E}
 }%
 \printseparation
 {
 \def\preant{\setgrefactor{17}\large}
-\def\prepsalm{\normalsize}
+\def\dontrepeatantiphon{T}
+\def\prepsalm{\normalsize\setgrefactor{15}}
 \def\psalmtranslationsmall{T}
 \def\anttranslation{I believe that I see the good things of the Lord in the land of the living.}
 \printpsalm{2}{26}{4E}{an--credo_videre_holy_saturday--solesmes}{C}
 }%
-\printseparation
+%\printseparation
 {
 \def\preant{\setgrefactor{17}\large}
-\def\prepsalm{\normalsize\greblockcustos}
+\def\preantafter{\setgrefactor{15}\normalsize}
+\def\lalinebreakafterverse{5}
+\def\prepsalm{\normalsize\greblockcustos\setgrefactor{15}}
 \def\psalmtranslationsmall{T}
 \def\anttranslation{O Lord, Thou hast brought my soul out of hell.}
 \printpsalm{3}{29}{8G}{an--domine_abstraxisti--solesmes}{D}
@@ -33,7 +38,7 @@
 %psalm 70 - In te, Domine, speravi
 
 \bigskip
-\printvr[\setgrefactor{17}\normalsize]{vr-tuAutem}
+\printvr[\setgrefactor{15}\normalsize]{vr-tuAutem}
 {But Thou, O Lord, have mercy on me.}
 {And raise me, and I will repay them.}
 
@@ -45,31 +50,35 @@ Ex Tractátu sancti Augustíni Epíscopi super Psalmos
 %\translation{From the treatise of St Augustine, Bishop, upon the psalms}
 \end{center}
 {
-\normalsize
 \hspace{10ex}\textsc{lesson iv}\hfill\emph{On Ps. 63, at verse 7}\hspace{10ex}
 
 \begin{parcolumns}[rulebetween,colwidths={1=254pt}]{2}
-\prayer{Accédet homo ad cor altum, et exaltábitur Deus. Illi dixérunt~: Quis nos vidébit? Defecérunt scrutántes scrutatiónes, consília mala. Accéssit homo ad ipsa consília, passus est se tenéri ut homo. Non enim tenerétur nisi homo, aut viderétur nisi homo, aut cæderétur nisi homo, aut crucifigerétur, aut morerétur nisi homo. Accéssit ergo homo ad illas omnes passiónes, quæ in illo nihil valérent, nisi esset homo. Sed si ille non esset homo, non liberarétur homo. Accéssit homo ad cor altum, id est, cor secrétum, objíciens aspéctibus humánis hóminem, servans intus Deum~: celans formam Dei, in qua æquális est Patri, et ófferens formam servi, qua minor est Patre.}
+\lesson[\normalsize]{Accédet homo ad cor altum, et exaltábitur Deus. Illi dixérunt~: Quis nos vidébit? Defecérunt scrutántes scrutatiónes, consília mala. Accéssit homo ad ipsa consília, passus est se tenéri ut homo. Non enim tenerétur nisi homo, aut viderétur nisi homo, aut cæderétur nisi homo, aut crucifigerétur, aut morerétur nisi homo. Accéssit ergo homo ad illas omnes passiónes, quæ in illo nihil valérent, nisi esset homo. Sed si ille non esset homo, non liberarétur homo. Accéssit homo ad cor altum, id est, cor secrétum, objíciens aspéctibus humánis hóminem, servans intus Deum~: celans formam Dei, in qua æquális est Patri, et ófferens formam servi, qua minor est Patre.}
 {Man shall come to a deep mind and God shall be exalted. They said, Who shall see us? The diligent searchers out of evil counsels have failed. A Man came to these very counsels, and suffered Himself to be taken, as Man. For He had not been taken at all, unless Man, or seen, unless Man, or smitten, unless Man, or crucified, or died, unless Man. Man therefore attained unto all these sufferings, which had not availed against Him, unless He had been a Man. But if He had not been Man, man had not been redeemed. Man came to a deep mind, that is, a secret mind; showing Manhood to men, and keeping Godhead within; veiling the form of God, wherein He is Equal to the Father, and presenting the form of a servant, inferior to the Father.}
 \end{parcolumns}
+}
 \medskip
-
+%
+\bigskip\bigskip
 \bigskip\bigskip
 
-\setgrefactor{14}
-\printgabc[\normalsize]{Resp. 4}{7.}{R}{re--recessit_pastor--solesmes}
+\setgrefactor{17}
+\printgabc{Resp. 4}{7.}{R}{re--recessit_pastor--solesmes}
 
-\translation[\normalsize]{\Rbar{}. Our Shepherd has withdrawn, the fount of living water, at whose passing the sun was darkened:
+{
+\translationcolumns[\normalsize]{\Rbar{}. Our Shepherd has withdrawn, the fount of living water, at whose passing the sun was darkened:
 * For he also is led captive, who had taken the first man captive; this day hath our Saviour burst the gates and bars of death.
 \Vbar{}. The bonds of hell He hath utterly abolished, and hath done away the power of the devil.
 \Rbar{}. For he also is led captive \dots}
+}
 
 \bigskip
-\needspace{2\baselineskip}
+\pagebreak
+{
 \begin{center}{\textsc{lesson v}}\end{center}
 
 \begin{parcolumns}[rulebetween]{2}
-\prayer{Quo perduxérunt illas scrutatiónes suas, quas perscrutántes defecérunt, ut étiam mórtuo Dómino et sepúlto, custódes pónerent ad sepúlcrum?
+\lesson[\normalsize]{Quo perduxérunt illas scrutatiónes suas, quas perscrutántes defecérunt, ut étiam mórtuo Dómino et sepúlto, custódes pónerent ad sepúlcrum?
 Dixérunt enim Piláto~: Sedúctor ille~: hoc appellabátur nómine Dóminus Jesus Christus, ad solátium servórum suórum, quando dicúntur seductóres; ergo illi Piláto~: Sedúctor ille, ínquiunt, dixit adhuc vivens~: Post tres dies resúrgam.
 Jube ítaque custodíri sepúlcrum usque in diem tértium, ne forte véniant discípuli ejus, et furéntur eum, et dicant plebi, Surréxit a mórtuis~: et erit novíssimus error pejor prióre.
 Ait illis Pilátus~: Habétis custódiam, ite, custodíte sicut scitis.
@@ -79,22 +88,25 @@ For they said to Pilate: ``That seducer,'' by which name the Lord Jesus Christ w
 Command therefore that the sepulchre be guarded until the third day, lest His disciples come and steal Him away, and say unto the people: He is risen from the dead; and the last error shall be worse than the first.''
 Pilate said to them: Ye have a guard; go, and guard him as ye know. So they went and secured the sepulchre with guards, sealing up the stone.}
 \end{parcolumns}
+}
 
 \bigskip\bigskip
 
-\printgabc[\normalsize]{Resp. 5}{8.}{O}{re--o_vos_omnes--solesmes}
+\printgabc{Resp. 5}{8.}{O}{re--o_vos_omnes--solesmes}
 
-\translation[\normalsize]{\Rbar{}. O all ye that pass by, behold and see:
+{
+\translationcolumns[\normalsize]{\Rbar{}. O all ye that pass by, behold and see:
 * If there be any sorrow like unto My sorrow.
 \Vbar{}. Attend, O all ye peoples, and see My sorrow:
 \Rbar{}. If there be any sorrow like unto My sorrow.}
+}
 
-\bigskip\bigskip
+%\bigskip\bigskip
 \begin{center}{\textsc{lesson vi}}\end{center}
 
 %,colwidths={1=265pt}
 \begin{parcolumns}[rulebetween]{2}
-\prayer{Posuérunt custódes mílites ad sepúlcrum.
+\lesson[\normalsize]{Posuérunt custódes mílites ad sepúlcrum.
 Concússa terra Dóminus resurréxit~: mirácula facta sunt tália circa sepúlcrum, ut et ipsi mílites, qui custódes advénerant, testes fíerent, si vellent vera nuntiáre.
 Sed avarítia illa, quæ captivávit discípulum cómitem Christi, captivávit et mílitem custódem sepúlcri.
 Damus, ínquiunt, vobis pecúniam~: et dícite, quia vobis dormiéntibus venérunt discípuli ejus, et abstulérunt eum.
@@ -113,12 +125,14 @@ Thou callest upon sleeping witnesses: surely thou wast asleep thyself, who has f
 \end{parcolumns}
 
 \bigskip\bigskip
-\needspace{2\baselineskip}
+\bigskip\bigskip
+%\needspace{2\baselineskip}
 %\pagebreak
 
-\printgabc[\normalsize]{Resp. 6}{4.}{E}{re--ecce_quomodo_moritur--solesmes}
+\printgabc{Resp. 6}{4.}{E}{re--ecce_quomodo_moritur--solesmes}
 
-\translation[\normalsize]{\Rbar{}. Behold how the Just dieth, and none taketh it to heart; and just men are taken away, and none considereth. The Just is taken away from the face of iniquity:
+{
+\translationcolumns[\normalsize]{\Rbar{}. Behold how the Just dieth, and none taketh it to heart; and just men are taken away, and none considereth. The Just is taken away from the face of iniquity:
 * And his memory shall be in peace.
 \Vbar{}. As a lamb before his shearers, He was dumb and opened not His mouth; He was taken from prison and from judgment.
 \Rbar{}. And his memory shall be in peace.

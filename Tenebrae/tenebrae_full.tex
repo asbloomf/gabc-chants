@@ -10,7 +10,8 @@
 \def\mytitlepage{%
 \thispagestyle{empty}
 \def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
-\def\wdotting{\leaders\hbox to 3em{\hfil.\hfil}\hfill}
+%\def\wdotting{\leaders\hbox to 3em{\hfil.\hfil}\hfill}
+\def\wdotting{\hfill}
 \vspace*{50pt}
 \begin{center}{\addfontfeature{Numbers=Lining}%
 \huge \textsc{Tenebrae}
@@ -21,17 +22,17 @@
 }\end{center}
 \normalsize
 \textsc{Maundy Thursday}\dotting 2\\
-\hspace*{2em}\textsc{2nd Nocturn}\wdotting 11\\
-\hspace*{2em}\textsc{3rd Nocturn}\wdotting 18\\
-\hspace*{2em}\textsc{Lauds}\wdotting 24\\
-\textsc{Good Friday}\dotting 32\\
-\hspace*{2em}\textsc{2nd Nocturn}\wdotting 40\\
-\hspace*{2em}\textsc{3rd Nocturn}\wdotting 47\\
-\hspace*{2em}\textsc{Lauds}\wdotting 54\\
-\textsc{Holy Saturday}\dotting 62\\
-\hspace*{2em}\textsc{2nd Nocturn}\wdotting 68\\
-\hspace*{2em}\textsc{3rd Nocturn}\wdotting 74\\
-\hspace*{2em}\textsc{Lauds}\wdotting 78\\
+\hspace*{2em}\textsc{2nd Nocturn}\wdotting 12\\
+\hspace*{2em}\textsc{3rd Nocturn}\wdotting 20\\
+\hspace*{2em}\textsc{Lauds}\wdotting 26\\
+\textsc{Good Friday}\dotting 34\\
+\hspace*{2em}\textsc{2nd Nocturn}\wdotting 43\\
+\hspace*{2em}\textsc{3rd Nocturn}\wdotting 52\\
+\hspace*{2em}\textsc{Lauds}\wdotting 59\\
+\textsc{Holy Saturday}\dotting 66\\ % 3 + 64
+\hspace*{2em}\textsc{2nd Nocturn}\wdotting 73\\
+\hspace*{2em}\textsc{3rd Nocturn}\wdotting 80\\
+\hspace*{2em}\textsc{Lauds}\wdotting 85\\
 \vfil
 \pagebreak
 }
@@ -40,12 +41,12 @@
 % here we begin the document
 \begin{document}
 \mytitlepage
+%\mytitlepage % filler page
 
 %\let\olditem=\item
 %\def\item#1{\parbox{\hsize}{\olditem #1}}
 
-\ifnum 1=2{
-}\fi
+%\ifnum 1=2{
 \thispagestyle{empty}
 \def\heading{Maundy Thursday At \officehour}
 \input{../Tenebrae-Thursday/nocturne1}
@@ -62,12 +63,14 @@
 \input{../Tenebrae-Friday/lauds}
 
 \pagebreak
+%}\fi
+%\ifnum 1=2{
 \thispagestyle{empty}
 \def\heading{Holy Saturday At \officehour}
 \input{../Tenebrae-Saturday/nocturne1}
 \input{../Tenebrae-Saturday/nocturne2}
 \input{../Tenebrae-Saturday/nocturne3}
 \input{../Tenebrae-Saturday/lauds}
+%}\fi
 %
-
 \end{document}

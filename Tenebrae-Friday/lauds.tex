@@ -5,10 +5,12 @@
 \writeheading{At Lauds}
 %
 \large
-{
 \def\nogloriapatri{T}
-\def\preant{\setgrefactor{17}\normalsize}
-\def\preantafter{\setgrefactor{14}\normalsize}
+{
+\def\preant{\setgrefactor{17}\large}
+\def\preantafter{\setgrefactor{15}\normalsize}
+\def\lalinebreakafterverse{15}
+%\def\dontrepeatantiphon{T}
 \def\prepsalm{\setgrefactor{15}\normalsize}
 \def\anttranslation{God spared not His own Son but delivered Him up for us all.\needspace{5\baselineskip}}
 \def\psalmtranslationsmall{T}
@@ -17,81 +19,108 @@
 %
 \printseparation{}
 %\pagebreak
+{
 \def\preant{\setgrefactor{17}\large}
+%\def\preantafter{\setgrefactor{15}\normalsize}
+\def\dontrepeatantiphon
 \def\prepsalm{\normalsize}
+%\def\dontrepeatantiphon{T}
 \def\psalmtranslationsmall{T}
 \def\anttranslation{My spirit is overwhelmed within me; my heart within me is troubled.}
 \printpsalm{2}{142}{4E}{an--anxiatus_est--solesmes}{A}
 \let\prepsalm=\undefined
+}
 %
 \printseparation{}
 {
 \def\preant{\setgrefactor{17}\large}
+\def\preantafter{\setgrefactor{15}\normalsize}
+%\def\dontrepeatantiphon{T}
 \def\psalmtranslationsmall{T}
+%\def\lalinebreakafterverse{6}
 \def\anttranslation{One thief said unto the other: We indeed receive the due reward of our deeds, but what hath this Man done? Lord, remember me, when Thou comest into Thy kingdom.}
 \def\prepsalm{\normalsize}
 \printpsalm{3}{84}{1f}{an--ait_latro--solesmes}{A}
 }%
 \printseparation{}
 {
-\def\preant{\setgrefactor{17}\large}
+\def\preant{\setgrefactor{15}\large}
+\def\preantafter{\setgrefactor{15}\normalsize}
+\def\prepsalm{\setgrefactor{15}\normalsize}
+\def\prepsalmverses{\vspace{-2pt}}
 \def\psalmtranslationsmall{T}
-\def\anttranslation{Lord, when my soul is troubled, Thou wilt remember mercy.}
+\def\lalinebreakafterverse{29}
+\def\anttranslation{\vspace{-4pt}Lord, when my soul is troubled, Thou wilt remember mercy.\vspace{-4pt}}
 \def\canticleof{Habacuc}
 \def\canticleverses{Chap. 3, 2-19}
-\def\prepsalm{\normalsize\greblockcustos}
-\def\lalinebreakafternineteen{T}
-\def\enlinebreakafternineteen{T}
+%\def\lalinebreakafternineteen{T}
+%\def\enlinebreakafternineteen{T}
 \printpsalm{4}{habacuc3}{1f}{an--dum_conturbata--solesmes}{D}
 }
 \let\canticleof=\undefined
 \let\canticleverses=\undefined
 \let\prepsalm=\undefined
 %
-%\printseparation
-\pagebreak
+\printseparation
+%\pagebreak
+{
 \def\preant{\setgrefactor{17}\large}
+\def\prepsalm{\setgrefactor{15}\normalsize}
 \def\psalmtranslationsmall{T}
 \def\anttranslation{Remember me, Lord, when Thou comest into Thy kingdom.}
 \def\prepsalm{\normalsize}
 \printpsalm{5}{147}{8G}{an--memento_mei--solesmes}{M}
 \let\prepsalm=\undefined
+}
 
 \bigskip
-\printvr[\setgrefactor{14}\normalsize]{vr-collocavit}
+{
+\def\vrnospace{T}
+\printvr[\setgrefactor{15}\normalsize]{vr-collocavit}
 {He hath placed me in dark places.}
 {As those that have been long dead.}
+}
 
-\bigskip
+%\bigskip
 \needspace{4\baselineskip}
+{
+\def\preant{\setgrefactor{17}\large}
+\def\prerepeatantiphon{\normalsize\medskip}
 \def\magsolemn{T}
 \def\preverses{
-  \setgrefactor{15}
+  \setgrefactor{15}\normalsize
 }
-\def\anttranslation{\normalsize They set up over His head His accusation written: Jesus of Nazareth, King of the Jews.}
+\def\anttranslation{\normalsize They set up over His head His accusation written: Jesus of Nazareth, King of the Jews.\vspace{-12pt}}
 \needspace{6\baselineskip}
 \printmag[Benedictus]{1g}{P}{an--posuerunt--solesmes}
+}%
 %{1g}{an--traditor_autem--solesmes}{T}
-
+%
 %\emph{The candles on the triangular candlestick having been extinguished as has already been explained, the one at the top of the triangle alone remains lighted.  During the Canticle \emph{Benedíctus.} the candles on the altar are likewise extinguished one by one, from each side alternately, at every second verse, so that by the last verse all are extinguished.  All other lights and lamps in the church are also put out.}
-
-\bigskip
-
+%
+%\bigskip
+%
+\vspace{-10pt}
+{\normalsize
 \emph{After the repetition of the Antiphon at the \emph{Benedíctus}, all kneel and sing :}
+}
+\medskip
+\setgrefactor{17}
 \printgabc{Ant.}{5.}{C}{../Tenebrae/an--christus_factus_est--solesmes_friday}
-
+\normalsize
+%
 \bigskip
-
+%
 \emph{When the antiphon \emph{Christus fáctus est} is finished, \emph{Páter nóster} is said, in silence throughout.}
 
 \emph{Then is sung, without \emph{Orémus}, to the ferial tone \emph{B} (or the ancient simple tone) :}
-
+%
 \bigskip
-\bigskip
-
+%\medskip
+%
 \begin{columns}
 \colchunk{\dropcap{latin}{Respice, quǽsumus, } Dómine, super hanc famíliam tuam,~† pro qua Dóminus noster Jesus Christus non dubitávit mánibus tradi nocéntium,~* et crucis subíre torméntum.
 \emph{And in silence~:}
-Qui tecum vivit et regnat in unitáte\dots{}}
+Qui tecum vivit et regnat\dots{}}
 \selectlanguage{american}
 \colchunk{\dropcap{american}{Look down, we beseech thee, } O Lord, on this thy family, for which our Lord Jesus Christ did not hesitate to be delivered up into the hands of wicked men, and to suffer the torment of the Cross.}\end{columns}
