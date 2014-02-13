@@ -307,6 +307,7 @@
 {\ifx\prepsalmfive\undefined\else\prepsalmfive\fi
 \includescore{\psalmfivetex}
 }
+{\ifx\prepsalmfiveverses\undefined\else\prepsalmfiveverses\fi}
 %
 %I changed this vspace to the medskip 2013-02-01
 %\vspace{0ex plus 1ex minus 1ex}
@@ -494,7 +495,8 @@
 \fi%
 %
 \ifx\magant\undefined%
-\vspace{-1ex plus 1ex}
+\medskip
+%\vspace{-1ex plus 1ex}
 \emph{Magnificat}. %
 \else%
 \ifx\magtex\undefined
