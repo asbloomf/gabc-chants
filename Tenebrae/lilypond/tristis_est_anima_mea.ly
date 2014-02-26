@@ -1,0 +1,141 @@
+\header {
+  tagline = ""
+  composer = "Giovanni Battista Martini (?-?)"
+}
+\include "english.ly"
+\include "lilypond-book-preamble.ly"
+\include "header.ly"
+
+global = {
+  \key c \major
+  \time 4/4
+}
+
+sopMusic = \relative c' {
+  \clef "treble_8"
+  b2 b4 b | c e8 e e4( d) | e e2 d4( | d4) c c( b) | c2 e4. e8 | f4 f d d |
+  e4. d8 c2 | d4(e) d d | r2 e4 d | e d8 c d4 d | r2 c4 b | c b8 a b2 |
+  r4 e8 e c8. c16 f4 | d e8 e d8. d16 d4 | c2
+  \mark \markup { \musicglyph #"scripts.segno" }
+  e2 | d8 c d b c2 | b4 e4.( a,8) d4 ~ | d c c( b) | c e e d8( c) | c4 b r e8 e | e4 d8 c b4( c | b2) a \bar "||"
+    \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
+    \override Score.RehearsalMark #'self-alignment-X = #RIGHT
+    \override Score . RehearsalMark #'font-shape = #'italic
+    \override Score.RehearsalMark #'font-size = #0.5
+    \mark "Fine"
+}
+sopWords = \lyricmode {
+  \set fontSize = #0.5
+  %\set vocalName = "2. "
+  %\set shortVocalName = "2. "
+  Tri -- stis est | a -- ni -- ma me -- a us -- que __ ad mor -- tem. Su -- sti -- ne -- te hic et | vi -- gi -- la -- te __ me -- cum.  Nunc vi -- de -- bi -- tis tur -- bam, quæ cir -- cum -- da -- bit me, quæ cir -- cum -- da -- bit | me, quæ cir -- cum -- da -- bit -- me.  Vos fu -- gam ca -- pi -- e -- tis, et __ e -- go va -- dam, et e -- go __ | va -- dam, im -- mo -- la -- ri pro vo -- bis.
+}
+
+altoMusic = \relative c' {
+  \clef "treble_8"
+  gs2 gs4 gs | a c8 c a2 | gs a | g4 g f2 | e c'4. c8 | d4 d b b |
+  c4. b8 c2 | b4( c) b b | r2 c4 b | c b8 a b4 b | r2 a4 gs | a gs8 fs gs2 |
+  r4 c8 c a8. a16 d4 | b c8 c c8. b16 b4 | c2 r2 | r1 | r2 a |
+  g8 f g e f2 | e4 c' c b8( a) | a4 gs r c8 c | c4 b8 a gs4( a ~ | a gs) a2 \bar "||" 
+}
+
+altoWords = \lyricmode {
+  \set fontSize = #0.5
+  Tri -- stis est | a -- ni -- ma me -- a us -- que ad mor -- tem. Su -- sti -- ne -- te hic et | vi -- gi -- la -- te __ me -- cum.  Nunc vi -- de -- bi -- tis tur -- bam, quæ cir -- cum -- da -- bit me, quæ cir -- cum -- da -- bit | me, quæ cir -- cum -- da -- bit -- me.  Vos fu -- gam ca -- pi -- e -- tis, et e -- go __ va -- dam, im -- mo -- la -- ri pro vo -- bis.
+}
+
+bassMusic = \relative a {
+  \clef bass
+  e2 e4 e | c a8 a f'2 | e f | e4 e d2 | c r | f4. f8 g4 g |
+  e e f4. e8 | d4 c g' g | c b c g8 g | c,2 g' | a4 gs a e8 e | a,2( e') |
+  r4 c8 c f8. f16 d4 | g c,8 c g'8. g16 g,4 | c2 r2 | r2 a' | g8 f g e f2 |
+  e4 e8 c d2 | c4 c d4. d8 | e4 e c2 | d e4 a,8 a | e'2 a, \bar "||"
+}
+
+bassWords = \lyricmode {
+  \set fontSize = #0.5
+  Tri -- stis est | a -- ni -- ma me -- a us -- que ad mor -- tem. Su -- sti -- ne -- te | hic et vi -- gi -- la -- te me -- cum. | Nunc vi -- de -- bi -- tis tur -- bam, | quæ cir -- cum -- da -- bit me, __ quæ cir -- cum -- da -- bit | me, quæ cir -- cum -- da -- bit -- me.  Vos fu -- gam ca -- pi -- e -- tis, ca -- pi -- e -- tis, et e -- go | va -- dam, im -- mo -- la -- ri pro | vo -- bis.
+}
+
+chantMusic = \relative c' {
+  \clef "treble_8"
+  \cadenzaOn
+  c4( b) c( d) d d f e d e ~ e r8 d4 d d d d d d d d d d e d c c b ~ b d ~ d r8
+  \cadenzaOff \bar "||"
+  \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
+    \override Score.RehearsalMark #'self-alignment-X = #RIGHT
+    \override Score . RehearsalMark #'font-shape = #'italic
+    \override Score.RehearsalMark #'font-size = #0.5
+    \mark "D.S. al Fine"
+}
+
+
+chantWords = \lyricmode {
+  Ec -- ce ap -- pro -- pin -- quant ho -- ra __ et Fi -- li -- us ho -- mi -- nis tra -- de -- tur in ma -- nus pec -- ca -- to -- rum. __
+}
+
+%altoWords = \lyricmode {
+%  \override StanzaNumber #'font-name = #"Garamond Premier Pro"
+%  \override LyricText #'font-name = #"Garamond Premier Pro"
+%}
+
+\score {
+  \new ChoirStaff <<
+%    \new Lyrics = "sopranos"
+    \new Staff = "women" <<
+      \new Voice = "sopranos"{
+%        \voiceOne
+        << \global \sopMusic >>
+      }
+%      \new Voice = "altos" {
+%        \voiceTwo
+%        << \global \altoMusic >>
+%      }
+    >>
+    \new Lyrics = "sopranos"
+
+    \new Staff = "women2" <<
+      \new Voice = "altos" {
+%        \voiceTwo
+        << \global \altoMusic >>
+      }
+    >>
+    \new Lyrics = "altos"
+    
+    \new Staff = "men" <<
+      %\new Lyrics = "bass"
+      \new Voice = "bass" {
+%        \voiceOne
+        << \global \bassMusic >>
+      }
+    >>
+    \context Lyrics = "sopranos" \lyricsto "sopranos" \sopWords
+    \context Lyrics = "altos" \lyricsto "altos" \altoWords
+    \context Lyrics = "bass" \lyricsto "bass" \bassWords
+  >>
+  \layout {
+    \context {
+      \Staff
+    }
+  }
+}
+
+\score {
+  \new ChoirStaff <<
+    \new Staff = "chant" <<
+      \new Voice = "chant" \with {
+      \remove "Stem_engraver"
+    } {
+        << \global \chantMusic >>
+      }
+    >>
+    \new Lyrics = "chant"
+    \context Lyrics = "chant" \lyricsto "chant" \chantWords
+  >>
+  \layout {
+    \context {
+      \Staff
+    }
+  }
+}
+
