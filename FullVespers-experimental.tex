@@ -55,7 +55,7 @@
 %\redlines
 
 % We set VII above the initial.
-{\def\annot{\small \Vbar{}.}
+{\def\annot{\small \Vbar{}}
 \setinitialspacing{D}
 
 % We type a text in the top right corner of the score:
@@ -79,7 +79,7 @@ Tone.
 \fi%
 \includescore{../DeusInAdjutorium\if\deusinadjutoriumsolemn T%
 _solemn\fi}}%
-\translation[]{\Vbar . O God, come to my assistance. \Rbar . O Lord, make haste to help me. Glory be \ldots}
+\translation[]{\Vbar{} O God, come to my assistance. \Rbar{} O Lord, make haste to help me. Glory be \ldots}
 \ifx\includelaustibi\undefined\else\if\includelaustibi T%
 {\itshape From Septuagesima to Wednesday in Holy Week, the following is said instead of} Allelúia :
 
@@ -148,17 +148,17 @@ _solemn\fi}}%
 }\fi
 %
 \ifx\vrtex\undefined%
-{\Vbar{}. \vr{}.\\}
+{\Vbar{}~\vr{}.\\}
 \else{
 {\greblockcustos\includescore{\vrtex}}\vspace{0pt minus 20pt}
 \translation[]{
-\Vbar{}. \vtranslation{}%
+\Vbar{}~\vtranslation{}%
 \ifx\vrnospace\undefined
 \\%
 \else\if\vrnospace T%
 \hspace{7ex minus 3ex}%
 \fi\fi%
-\Rbar{}. \rtranslation{}%
+\Rbar{}~\rtranslation{}%
 }%
 }%
 \fi%
@@ -266,12 +266,12 @@ _solemn\fi}}%
 %\bigskip
 %\begin{parcolumns}[rulebetween]{2}
 %\selectlanguage{latin}%
-%\colchunk{\Vbar{}. Fidélium ánimæ per misericórdiam Déi requiéscant in páce.}
+%\colchunk{\Vbar{}~Fidélium ánimæ per misericórdiam Déi requiéscant in páce.}
 %\selectlanguage{american}%
-%\colchunk{\Vbar{}. May the souls of the faithful departed through the mercy of God rest in peace.}
+%\colchunk{\Vbar{}~May the souls of the faithful departed through the mercy of God rest in peace.}
 %\selectlanguage{latin}%
 %\colplacechunks{}
-%\colchunk{\Rbar{}. Amen.}
-%\colchunk{\Rbar{}. Amen.}
+%\colchunk{\Rbar{}~Amen.}
+%\colchunk{\Rbar{}~Amen.}
 %\end{parcolumns}
 \end{document}

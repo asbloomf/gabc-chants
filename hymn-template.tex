@@ -56,7 +56,7 @@
 \selectlanguage{latin}
 \smallskip
 \ifx\vrtex\undefined%
-\ifx\vr\undefined\else{\Vbar{}. \vr{}.
+\ifx\vr\undefined\else{\Vbar{}~\vr{}.
 
 }\fi
 \else{\vspace{0pt plus 18pt}%
@@ -64,7 +64,7 @@
 \vspace{0pt plus 20pt}
 \ifx\prevrtranslation\undefined\else\prevrtranslation\fi%
 \translation[]{%
-\Vbar{}. \vtranslation{}%
+\Vbar{}~\vtranslation{}%
 \ifx\vrnospace\undefined%
 \\%
 \else\if\vrnospace T%
@@ -72,7 +72,7 @@
 \else%
 \\%
 \fi\fi%
-\Rbar{}. \rtranslation{}%
+\Rbar{}~\rtranslation{}%
 }%
 }%
 \fi%

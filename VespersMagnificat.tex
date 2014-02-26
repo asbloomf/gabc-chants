@@ -56,7 +56,7 @@
 \ifx\hymntex\undefined%
 %no hymn tex, is there just a line and vr?
 \ifx\hymn\undefined\else{%
-\emph{Hymn.} \hymn{}. \Vbar{}. \vr{}.}%
+\emph{Hymn.} \hymn{}. \Vbar{}~\vr{}.}%
 % only do the hrul if there was a chapter
 \ifx\chaptertranslation\undefined%
 \bigskip%
@@ -97,7 +97,7 @@
 \selectlanguage{latin}
 \medskip
 \ifx\vrtex\undefined%
-{\Vbar{}. \vr{}.
+{\Vbar{}~\vr{}.
 
 }
 \else{
@@ -105,7 +105,7 @@
 \vspace{0pt plus 20pt}
 \ifx\prevrtranslation\undefined\else\prevrtranslation\fi
 \translation[]{
-\Vbar{}. \vtranslation{}%
+\Vbar{}~\vtranslation{}%
 \ifx\vrnospace\undefined%
 \\%
 \else\if\vrnospace T%
@@ -113,7 +113,7 @@
 \else%
 \\%
 \fi\fi%
-\Rbar{}. \rtranslation{}%
+\Rbar{}~\rtranslation{}%
 }%
 }%
 \fi\fi%

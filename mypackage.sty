@@ -40,7 +40,7 @@
 \usepackage{fontspec}
 \renewcommand*\oldstylenums[1]{#1}
 \AtBeginDocument{\fontspec[Ligatures=TeX,Numbers=OldStyle]{Garamond Premier Pro}}
-\newcommand\garamond[1]{\fontspec[Numbers=OldStyle]{Garamond Premier Pro}#1}
+\newcommand\garamond[1]{\fontspec[Ligatures=TeX,Numbers=OldStyle]{Garamond Premier Pro}#1}
 \let\oldchead\chead
 \renewcommand\chead[1]{\oldchead{\garamond{#1}}}
 \let\oldcfoot\cfoot
@@ -50,6 +50,11 @@
 \renewcommand\lfoot[2][]{\oldlfoot[\garamond{#1}]{\garamond{#2}}}
 \renewcommand\rfoot[2][]{\oldrfoot[\garamond{#1}]{\garamond{#2}}}
 }
+
+\newcommand{\versiculum}[1]{{\fontspec{versiculum}#1}}
+\def\Vbar{{\versiculum{v}}}
+\def\Rbar{{\versiculum{r}}}
+\def\Abar{{\versiculum{a}}}
 
 \lhead{}\rhead{}
 \lfoot{}\cfoot{}\rfoot{}
@@ -76,6 +81,16 @@
 \vspace{-6pt}
 }}
 
+\newcommand{\translationcolumns}[2][\relax]{%
+\selectlanguage{american}
+#1
+\noindent%
+\begin{multicols}{2}%
+{\noindent#2}
+\end{multicols}
+\selectlanguage{latin}
+}
+
 \newcommand{\medianttermination}[2]{
 % 1 - Mediant of 2 accents
 % 2 - Termination of 1 accent with 2 preperatory syllables
@@ -89,18 +104,19 @@
 \selectlanguage{latin}
 }
 
-\newcommand{\dropcap}[2]{%
-% 1 - language
-% 2 - text
+\newcommand{\dropcap}[3][]{%
+% 1 - optional command
+% 2 - language
+% 3 - text
 %\noindent%
 \vspace*{-1ex}%
-\StrPosition{#2}{ }[\mypos]%
+\StrPosition{#3}{ }[\mypos]%
 \ifnum\mypos=2
-\StrPosition[2]{#2}{ }[\mypos]%
+\StrPosition[2]{#3}{ }[\mypos]%
 \fi
-\lettrine{\StrLeft{#2}{1}}%
-   {\StrMid{#2}{2}{\mypos}}%
-\foreignlanguage{#1}{\StrGobbleLeft{#2}{\mypos}}%
+\lettrine{\StrLeft{#3}{1}}%
+   {#1\StrMid{#3}{2}{\mypos}}%
+\foreignlanguage{#2}{#1\StrGobbleLeft{#3}{\mypos}}%
 }
 
 \newcommand{\olderprayer}[2]{
@@ -135,6 +151,16 @@
 %\noindent%\selectlanguage{latin}
 \colchunk{\dropcap{latin}{#1}} % \selectlanguage{american}
 \colchunk{\dropcap{american}{#2}} \selectlanguage{latin}
+}
+
+\newcommand{\lesson}[3][\normalsize]{
+% 1 - optional for english translation
+% 2 - latin
+% 3 - english
+% requires columns environment
+%\noindent%\selectlanguage{latin}
+\colchunk{\dropcap{latin}{#2}} % \selectlanguage{american}
+\colchunk{\dropcap[#1]{american}{#3}} \selectlanguage{latin}
 }
 
 \newcommand{\paracolprayer}[2]{
@@ -188,7 +214,18 @@
 }{
 	\end{parcolumns}
 }
-\let\minipageitem=\item
+%\let\minipageitem=\item
+\newcommand{\minipageitem}[1]{\item #1 %
+\ifx\lalinebreakafterverse\undefined\else
+\ifnum\value{vcounter}=\lalinebreakafterverse\\\fi%
+\fi
+\ifx\lalinebreakafterversex\undefined\else
+\ifnum\value{vcounter}=\lalinebreakafterversex\\\fi%
+\fi
+\ifx\lalinebreakafterversexx\undefined\else
+\ifnum\value{vcounter}=\lalinebreakafterversexx\\\fi%
+\fi
+}
 %
 \else%
 %
@@ -208,29 +245,29 @@
 \newcommand{\versicle}[2]{
 % 1 - latin
 % 2 - english
-\colchunk{\selectlanguage{latin}\Vbar{}. #1}
-\colchunk{\selectlanguage{american}\Vbar{}. #2}
+\colchunk{\selectlanguage{latin}\Vbar{}~#1}
+\colchunk{\selectlanguage{american}\Vbar{}~#2}
 \colplacechunks{}
 }
 
 \newcommand{\response}[2]{
 % 1 - latin
 % 2 - english
-\colchunk{\selectlanguage{latin}\Rbar{}. #1}
-\colchunk{\selectlanguage{american}\Rbar{}. #2}
+\colchunk{\selectlanguage{latin}\Rbar{}~#1}
+\colchunk{\selectlanguage{american}\Rbar{}~#2}
 \colplacechunks{}
 }
 
 \newcommand{\oldversicle}[2]{
 % 1 - latin
 % 2 - english
-\foreignlanguage{latin}{\Vbar{}. #1} & \foreignlanguage{american}{\Vbar{}. #2}\\
+\foreignlanguage{latin}{\Vbar{}~#1} & \foreignlanguage{american}{\Vbar{}~#2}\\
 }
 
 \newcommand{\oldresponse}[2]{
 % 1 - latin
 % 2 - english
-\foreignlanguage{latin}{\Rbar{}. #1} & \foreignlanguage{american}{\Rbar{}. #2}\\
+\foreignlanguage{latin}{\Rbar{}~#1} & \foreignlanguage{american}{\Rbar{}~#2}\\
 }
 
 %\let\originalitem=\item

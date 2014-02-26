@@ -18,5 +18,5 @@ initial-style:0;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c3)()() <v>\Vbar</v>. Re(h)plé(h)ti(h) sunt(h) óm(h)nes(h) Spí(h)ri(h)tu(h) Sán(hi)cto,(h'_) (,) al(h)le(fe)lú(f_h)ia.(hi/H'G/hih./gh/G'FE'/FG/gf.) (::Z)
-<v>\Rbar</v>. Et(h) coe(h)pé(h)runt(h) lo(hi)qui,(h'_) (,) al(h)le(fe)lú(f_h)ia.(hi/H'G/hih./gh/G'FE'/fg/gf.) (::) 
+(c3)()() <sp>V/</sp> Re(h)plé(h)ti(h) sunt(h) óm(h)nes(h) Spí(h)ri(h)tu(h) Sán(hi)cto,(h'_) (,) al(h)le(fe)lú(f_h)ia.(hi/H'G/hih./gh/G'FE'/FG/gf.) (::Z)
+<sp>R/</sp> Et(h) coe(h)pé(h)runt(h) lo(hi)qui,(h'_) (,) al(h)le(fe)lú(f_h)ia.(hi/H'G/hih./gh/G'FE'/fg/gf.) (::) 
