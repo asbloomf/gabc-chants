@@ -14,14 +14,14 @@ transcriber:Andrew Hinkley;
 \greglyph{\char 17}{d}{e}{0}{}{}%
 \greendofglyph{1}%
 \greglyph{\char 19462}{e}{f}{4}{}{%
-\adjustbox{scale={0.85}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.85}{1},trim=0.7pt 0pt}{%
 \grehepisemus{g}{17}{1}{g}%
 \grehepisemus{g}{0}{0}{g}%
 }%
 }%
 \greendofelement{0}{0}%
 \greglyph{\char 22}{f}{e}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemus{g}{0}{0}{g}%
 }%
 }%
@@ -32,7 +32,7 @@ transcriber:Andrew Hinkley;
 \grepunctummora{d}{0}{1}{1}%
 }%
 }%
-]) (;) com(d)pre(dg)hén(g_hGFg_hz)de(g.h!iwj_I_H'/iwjIH)re(gh!ivHG'h) me :(hg..) <v>\greheightstar</v>(:) Quo(fg)tí(gjjk)di(j)e(j.) (,) a(j)pud(j) vos(j) é(k_i/j_h/i_j/k_j)ram(ki/j_k) in(h) tém(gf~)plo(h!iwji/jkj) dó(jv_IH'i)cens,(hhg.) (;) et(f) non(gh) me(h') te(h)nu(g)í(g_f)stis :(%fg!hvGF'_E_/fv_EDed..
+]) (;) com(d)pre(dg)hén(g_hGFg_h)de(g.h!iwj_I_H'/iwjIH)re(gh!ivHG'h) me :(hg..) <v>\greheightstar</v>(:) Quo(fg)tí(gjjk)di(j)e(j.) (,) a(j)pud(j) vos(j) é(k_i/j_h/i_j/k_j)ram(ki/j_k) in(h) tém(gf~)plo(h!iwji/jkjz) dó(jv_IH'i)cens,(hhg.) (;) et(f) non(gh) me(h') te(h)nu(g)í(g_f)stis :(%fg!hvGF'_E_/fv_EDed..
 [ev:%
 {%
 \greglyph{\char 1025}{f}{h}{0}{}{}%
@@ -54,7 +54,7 @@ transcriber:Andrew Hinkley;
 }%
 \greendofelement{0}{0}%
 \greglyph{\char 22}{f}{e}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemus{g}{0}{0}{g}%
 }%
 }%
@@ -67,7 +67,7 @@ transcriber:Andrew Hinkley;
 \greaugmentumduplex{d}{e}{1}%
 }%
 }%
-]) (:) et(d) ec(f_0!gh)ce(g') fla(g)gel(g)lá(g)tum(gh~) dú(h)ci(h)tis(hg/hig'gf.) (;) ad(f.h!iwj) cru(jvIH)ci(hkj'k)fi(%k.i!jwkJ_'I_H'iwjIH
+]) (:) et(d) ec(f_0!gh)ce(g') fla(g)gel(g)lá(g)tum(gh~) dú(h)ci(h)tis(hg/hig'gf.) (;z) ad(f.h!iwj) cru(jvIH)ci(hkj'k)fi(%k.i!jwkJ_'I_H'iwjIH
 [ev:%
 {%
 \greglyph{\char 5122}{k}{j}{1}{}{%
@@ -77,7 +77,7 @@ transcriber:Andrew Hinkley;
 \greglyph{\char 2561}{j}{j}{4}{}{}%
 \greendofglyph{9}%
 \greglyph{\char 19}{j}{i}{6}{}{%
-\adjustbox{scale={1.12}{1},lap=1.4pt}{%
+\adjustbox{scale={1.08}{1},lap=1.2pt}{%
 \grehepisemusbridge{k}{}{}%
 \grehepisemus{k}{12}{1}{k}%
 }%
@@ -98,7 +98,7 @@ transcriber:Andrew Hinkley;
 \greendofglyph{3}%
 \greglyph{\char 19}{h}{g}{6}{}{}%
 }%
-])gén(gh!ivHG'h)dum.(hg..) (::z) <sp>V/</sp>. Cum(ji~)que(jkj/iji/hhg) in(hi~)je(i)cís(i)sent(i) má(i)nus(i) in(ih~) Jé(jk)sum,(j.) (,) et(j) te(ji)nu(ih)ís(ij)sent(hi) é(g!hwi_h)um,(hg..) (;) dí(hi_HG/hih)xit(ghf) ad(g_h) é(%h!iwji/jkJ'_IH
+])gén(gh!ivHG'h)dum.(hg..) (::) <sp>V/</sp> Cum(ji~)que(jkj/iji/hhg) in(hi~)je(i)cís(i)sent(i) má(i)nus(i) in(ih~) Jé(jk)sum,(j.) (,) et(j) te(ji)nu(ih)ís(ij)sent(hi) é(g!hwi_h)um,(hg..) (;) dí(hi_HG/hih)xit(ghf) ad(g_h) é(%h!iwji/jkJ'_IH
 [ev:%
 {%
 \greglyph{\char 17}{h}{i}{0}{}{}%
@@ -108,7 +108,7 @@ transcriber:Andrew Hinkley;
 \greglyph{\char 1025}{j}{j}{0}{}{}%
 \greendofglyph{9}%
 \greglyph{\char 19}{j}{h}{6}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemus{k}{12}{1}{k}%
 }%
 \grevepisemus{i}{12}%

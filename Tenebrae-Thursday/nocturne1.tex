@@ -29,7 +29,7 @@
 }
 \def\psalmtranslationsmall{T}
 \ifnotbook{\def\prepsalm{\setgrefactor{14}\normalsize}}
-\ifbook{\def\prepsalm{\setgrefactor{15}\normalsize}}
+\ifbook{\def\prepsalm{\setgrefactor{15}\normalsize\greblockcustos}}
 \def\anttranslation{The zeal of Thy house hath consumed me, and the reproaches of them that reproach Thee, fell upon me.}
 \printpsalm{1}{68}{8c}{an--zelus_domus_tuae--solesmes}{Z}
 }
@@ -86,15 +86,30 @@ Jerusalem, Jerusalem, return to the Lord thy God.}
 {\setgrefactor{17}
 \printgabc{Resp. 1}{8.}{I}{re--in_monte_oliveti--solesmes}
 
-\translationcolumns[\normalsize]{\Rbar{}. At the Mount of Olives He prayed unto the Father: Father, if it be possible, let this cup pass from Me!
+\translationcolumns[\normalsize]{\Rbar{}~At the Mount of Olives He prayed unto the Father: Father, if it be possible, let this cup pass from Me!
 * The spirit indeed is willing, but the flesh is weak.
-\Vbar{}.~Watch and pray, that ye enter not into temptation.
-\Rbar{}.~The spirit~\dots{}}
+\Vbar{}~Watch and pray, that ye enter not into temptation.
+\Rbar{}~The spirit~\dots{}}
+}
+\bigbreak\bigbreak
+\emph{Alternately, the following three part arrangement can be sung in place of the chant.}
+\pagebreak
+{
+\noindent
+\def\betweenLilyPondSystem#1{
+\ifnum#1>1
+  \vfil\noindent
+\else
+  \linebreak
+\fi
+%\vspace{0.5\baselineskip}
+}
+\import{lilypond/}{in_monte_oliveti-systems}
 }
 
-%\pagebreak
-\printseparation{}
-\needspace{8\baselineskip}
+\pagebreak
+%\printseparation{}
+%\needspace{8\baselineskip}
 \begin{center}{\textsc{lesson ii}}\end{center}
 
 {\normalsize\setgrefactor{14}
@@ -112,10 +127,27 @@ Jerusalem, Jerusalem, return to the Lord thy God.}
 \large\setgrefactor{17}
 \printgabc{Resp. 2}{8.}{I}{re--tristis_est--solesmes}
 
-\translationcolumns[\normalsize]{\Rbar{}. My soul is sorrowful even unto death: stay here and watch with me: now shall ye see the crowd that shall surround me: *
+\translationcolumns[\normalsize]{\Rbar{}~My soul is sorrowful even unto death: stay here and watch with me: now shall ye see the crowd that shall surround me: *
 Ye shall take flight, and I will go to be offered up for you.
-\Vbar{}. Behold, the hour draweth nigh, and the Son of man shall be delivered into the hands of sinners.
-\Rbar{}. Ye shall flee \dots}
+\Vbar{}~Behold, the hour draweth nigh, and the Son of man shall be delivered into the hands of sinners.
+\Rbar{}~Ye shall flee \dots}
+}
+
+\bigbreak\bigbreak
+\emph{Alternately, the following three part arrangement can be sung in place of the chant.}
+
+\pagebreak
+{
+\def\betweenLilyPondSystem#1{
+\ifnum#1>1
+  \vfil\noindent
+\else
+  \linebreak
+\fi
+%\vspace{0\baselineskip}
+}
+\noindent
+\import{lilypond/}{tristis_est_anima_mea-systems}
 }
 
 \bigskip
@@ -136,10 +168,10 @@ Jerusalem, Jerusalem, return to the Lord thy God.}
 \large\setgrefactor{17}
 %\needspace{4\baselineskip}
 \printgabc{Resp. 3}{5.}{E}{re--ecce_vidimus--solesmes}
-\translationcolumns[\normalsize]{\Rbar{}. Behold, we have seen Him without comeliness or beauty: His look is gone from Him: He hath borne our sins and suffered for us:
+\translationcolumns[\normalsize]{\Rbar{}~Behold, we have seen Him without comeliness or beauty: His look is gone from Him: He hath borne our sins and suffered for us:
 * By His stripes are we healed.
-\Vbar{}. Truly He hath borne our infirmities, and carried our sorrows:
-\Rbar{}. By His stripes are we healed.
-\Rbar{}. Behold, we have seen \dots}
+\Vbar{}~Truly He hath borne our infirmities, and carried our sorrows:
+\Rbar{}~By His stripes are we healed.
+\Rbar{}~Behold, we have seen \dots}
 }
 \pagebreak

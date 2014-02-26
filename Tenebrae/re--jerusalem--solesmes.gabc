@@ -8,13 +8,13 @@ transcriber:Andrew Hinkley;
 [ev:%
 {%
 \greglyph{\char 22}{h}{h}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemus{i}{0}{0}{i}%
 }%
 }%
 \greendofglyph{4}%
 \greglyph{\char 22}{h}{h}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemus{i}{0}{0}{i}%
 }%
 }%
@@ -24,7 +24,7 @@ transcriber:Andrew Hinkley;
 {%
 \greflat{g}{0}%
 \greglyph{\char 1026}{f}{f}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemusbottom{e}{0}{-2}%
 }%
 \adjustbox{lap=0.7pt}{%
@@ -46,12 +46,12 @@ transcriber:Andrew Hinkley;
 \greendofglyph{3}%
 \greglyph{\char 19}{e}{d}{6}{}{}%
 }%
-])tá(de!fvED'e)tis :(ed..) (:) in(f)dú(f')e(f)re(f) cí(f)ne(f)re(fhffe) et(f') ci(h)lí(hv_GFg_f)ci(e!fwhGF'g)o,(gf..) <v>\greheightstar</v>(;) Qui(h)a(h) in(gh~) te(f) oc(ffe)cí(ge/fde)sus(d.c!dwede) est(ed..) (,) Sal(d)vá(efef)tor(%gxf_hF__E'/fwgFE'
+])tá(de!fvED'e)tis :(ed..) (:) in(f)dú(f')e(f)re(f) cí(f)ne(f)re(fhffe) et(f') ci(h)lí(hv_GFg_f)ci(e!fwhGF'g)o,(gf..) <v>\greheightstar</v>(;) Qui(h)a(h) in(gh~) te(f) oc(ffe)cí(ge/fde)sus(d.c!dwede) est(ed..) (,) Sal(d)vá(efefz)tor([ev:\ifnum0=1]f[ev:\fi]%gxf_hF__E'/fwgFE'
 [ev:%
 {%
 \greflat{g}{0}%
 \greglyph{\char 1026}{f}{f}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemusbottom{e}{0}{-2}%
 }%
 \adjustbox{lap=0.7pt}{%
@@ -77,7 +77,7 @@ transcriber:Andrew Hinkley;
 \grevepisemus{d}{12}%
 }%
 }%
-]) Is(d)ra(de!fvED'e)ël.(ed..) <sp>V/</sp>.(::) Dé(h)duc(hi//hh/fgf) qua(h)si(h) tor(h)rén(h)tem(h) lá(hi)cri(h)mas(h'_) (,) per(h) dí(hf)em(fi) et(gh) nó(h.g!hwihi)ctem,(ih..) (;) et(d) non(f) tá(h)ce(h)at(h) pu(h)píl(hi)la(h.) ó(hg/hg)cu(gf)li(h_i) tú(%h.g!hwiH'_GF'g
+]) Is(d)ra(de!fvED'e)ël.(ed..) <sp>V/</sp>(::) Dé(h)duc(hi//hh/fgf) qua(h)si(h) tor(h)rén(h)tem(h) lá(hi)cri(h)mas(h'_) (,) per(h) dí(hf)em(fi) et(gh) nó(h.g!hwihi)ctem,(ih..) (;) et(d) non(f) tá(h)ce(h)at(h) pu(h)píl(hi)la(h.) ó(hg/hg)cu(gf)li(h_i) tú(%h.g!hwiH'_GF'g
 [ev:%
 {%
 \greglyph{\char 6145}{h}{h}{8}{}{%
@@ -87,7 +87,7 @@ transcriber:Andrew Hinkley;
 \greglyph{\char 2561}{h}{h}{4}{}{}%
 \greendofglyph{9}%
 \greglyph{\char 19}{h}{g}{6}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemus{i}{12}{1}{i}%
 }%
 \grevepisemus{g}{12}%

@@ -31,7 +31,7 @@ transcriber:Andrew Hinkley;
 \greendofglyph{3}%
 \greglyph{\char 19}{e}{d}{6}{}{}%
 }%
-]) mé(de!fvED'e//)o :(ed..) (:) qui(f)a(ed) e(e)lon(fh~)gá(h)tus(gh) est(ffe) a(f!gwh.f/fwgfg) me,(gf..) (;) qui(h) con(hi~)so(ihhg)la(fe)bá(hg/h_i)tur(hv.f/g'h) me :(gf..) (:) Vi(h)dé(h)te,(gh) ó(ffe)mnes(f) pó(f!gwh)pu(e_fED'e)li,(ed..) <v>\greheightstar</v>(;) Si(d) est(ef) dó(gxffg)lor(e!fwg) sí(%gxgh_G'_FE
+]) mé(de!fvED'e//)o :(ed..) (:) qui(f)a(ed) e(e)lon(fh~)gá(h)tus(gh) est(ffe) a(f!gwh.f/fwgfg) me,(gf..) (;) qui(h) con(hi~)so(ihhg)la(fe)bá(hg/h_i)tur(hv.f/g'h) me :(gf..) (:) Vi(h)dé(h)te,(gh) ó(ffe)mnes(f) pó(f!gwh)pu(e_fED'e)li,(ed..) (;) <v>\greheightstar</v>() Si(d) est(ef) dó(gxffg)lor(e!fwg) sí(%gxgh_G'_FE
 [ev:%
 {%
 \greflat{g}{0}%
@@ -89,7 +89,7 @@ transcriber:Andrew Hinkley;
 \greendofglyph{3}%
 \greglyph{\char 19}{e}{d}{6}{}{}%
 }%
-]) mé(de!fvED'e//)us.(ed..) <sp>V/</sp>.(::) O(h) vos(hi//hh/fgf) ó(hi~)mnes,(h'_) (,) qui(h) tran(h)sí(hf)tis(fi) per(gh) ví(h.g!hwihi)am,(ih..) (;) at(h)tén(h)di(h)te(hg/hg) et(gf~) vi(h_i)dé(%h.g!hwiH'_GF'g
+]) mé(de!fvED'e//)us.(ed..) (::) <sp>V/</sp>() O(h) vos(hi//hh/fgf) ó(hi~)mnes,(h'_) (,) qui(h) tran(h)sí(hf)tis(fi) per(gh) ví(h.g!hwihi)am,(ih..) (;) at(h)tén(h)di(h)te(hg/hg) et(gf~) vi(h_i)dé(%h.g!hwiH'_GF'g
 [ev:%
 {%
 \greglyph{\char 6145}{h}{h}{8}{}{%
@@ -99,7 +99,7 @@ transcriber:Andrew Hinkley;
 \greglyph{\char 2561}{h}{h}{4}{}{}%
 \greendofglyph{9}%
 \greglyph{\char 19}{h}{g}{6}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemus{i}{12}{1}{i}%
 }%
 \grevepisemus{g}{12}%
@@ -113,4 +113,4 @@ transcriber:Andrew Hinkley;
 \greendofglyph{0}%
 \greglyph{\char 17}{g}{g}{0}{}{}%
 }%
-])te.(gf..) <v>\greheightstar</v>(::) Si(d) est.(ef) <sp>R/</sp>.(::) Ca(f)li(d')ga(f)vé(hih)runt.(h.) (::)
+])te.(gf..) (::) <v>\greheightstar</v>() Si(d) est.(ef) (::) <sp>R/</sp>() Ca(f)li(d')ga(f)vé(hih)runt.(h.) (::)

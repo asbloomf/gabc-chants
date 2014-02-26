@@ -10,6 +10,7 @@
     \geometry{papersize={\mywidth,\myheight}}
 \fi
 \usepackage{gregoriotex} % for gregorio score inclusion
+\usepackage{import}
 
 % If you use usual TeX fonts, here is a starting point:
 %\usepackage{palatino}
@@ -40,8 +41,9 @@
 \else
     \ifx\undefined\mywidth
         %had been .3 outer, .4 inner
-        %let's try .65 or .75 for inner and .5 for outer
-        \geometry{outer=0.5in,inner=0.75in,top=25pt+\headsep+\headheight,bottom=25pt+\footskip,twoside=true}
+        %let's try .75 for inner and .5 for outer
+        %now let's go to .3 outer, .95 inner
+        \geometry{outer=0.35in,inner=0.9in,top=25pt+\headsep+\headheight,bottom=25pt+\footskip,twoside=true}
     \else
         \setlength\headsep{0.25in}
         \setlength\footskip{0.3in}

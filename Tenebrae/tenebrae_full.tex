@@ -14,25 +14,29 @@
 \def\wdotting{\hfill}
 \vspace*{50pt}
 \begin{center}{\addfontfeature{Numbers=Lining}%
-\huge \textsc{Tenebrae}
+\Huge \textsc{Tenebrae}
 \vspace*{50pt}
 \bigskip
 \bigskip
 \bigskip
 }\end{center}
-\normalsize
+\large
 \textsc{Maundy Thursday}\dotting 2\\
 \hspace*{2em}\textsc{2nd Nocturn}\wdotting 12\\
 \hspace*{2em}\textsc{3rd Nocturn}\wdotting 20\\
 \hspace*{2em}\textsc{Lauds}\wdotting 26\\
+\\
 \textsc{Good Friday}\dotting 34\\
 \hspace*{2em}\textsc{2nd Nocturn}\wdotting 43\\
 \hspace*{2em}\textsc{3rd Nocturn}\wdotting 52\\
 \hspace*{2em}\textsc{Lauds}\wdotting 59\\
+\\
 \textsc{Holy Saturday}\dotting 66\\ % 3 + 64
 \hspace*{2em}\textsc{2nd Nocturn}\wdotting 73\\
 \hspace*{2em}\textsc{3rd Nocturn}\wdotting 80\\
 \hspace*{2em}\textsc{Lauds}\wdotting 85\\
+\\
+\textsc{Tone for the Prophecy}\dotting 92\\
 \vfil
 \pagebreak
 }
@@ -45,6 +49,8 @@
 
 %\let\olditem=\item
 %\def\item#1{\parbox{\hsize}{\olditem #1}}
+
+%\input{lilypond/in_monte_oliveti-systems}
 
 %\ifnum 1=2{
 \thispagestyle{empty}
@@ -72,5 +78,10 @@
 \input{../Tenebrae-Saturday/nocturne3}
 \input{../Tenebrae-Saturday/lauds}
 %}\fi
+
+\pagebreak
+\thispagestyle{empty}
+\def\heading{Tone for the Prophecy.}
+\input{prophecyTone-main}
 %
 \end{document}

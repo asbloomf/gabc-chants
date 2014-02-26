@@ -63,9 +63,9 @@ five%
 
         }%
     \fi%
-    \vspace{0pt plus 4pt minus 12pt}%
+    %\vspace{0pt plus 4pt minus 12pt}%
     \predeusinadjutorium%
-    \def\annot{\small \Vbar{}.}
+    \def\annot{\small \Vbar{}}
     \setinitialspacing{D}
     \includescore{../DeusInAdjutorium\if\deusinadjutoriumsolemn T%
     _solemn\if\includelaustibi T%
@@ -74,10 +74,12 @@ five%
     \if\deusinadjutoriumsolemn T\if\includelaustibi T%
         \fi\fi%
     }%
-    \translation[]{\Vbar . O God, come to my assistance. \Rbar . O Lord, make haste to help me. Glory be \ldots}
+    \translation[]{\Vbar{}~O God, come to my assistance. \Rbar{}~O Lord, make haste to help me. Glory be \ldots}
+    \bigskip
     \if\deusinadjutoriumsolemn T\else
         \if\includelaustibi T%
             {\itshape From Septuagesima to Wednesday in Holy Week, the following is said instead of} Allelúia :
+            \smallskip
 
             \includescore{../LausTibiDomine\if\deusinadjutoriumsolemn T%
             _solemn\fi}
@@ -389,7 +391,8 @@ five%
 \ifx\canticleof\undefined
 \ifnum#2=2
   \if\psalmtranslationsmall T%
-    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=250pt}]{2}}%262
+    %\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=250pt}]{2}}%262
+    %\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}%262
   \fi
 \fi
 \ifnum#2=4
@@ -404,12 +407,12 @@ five%
 \fi
 \ifnum#2=15
   \if\psalmtranslationsmall T%
-    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=265pt}]{2}}%262
+    %\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=265pt}]{2}}%262
   \fi
 \fi
 \ifnum#2=21
   \if\psalmtranslationsmall T%
-    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=275pt}]{2}}%262
+    %\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=275pt}]{2}}%262
   \fi
 \fi
 \ifnum#2=23
@@ -419,12 +422,24 @@ five%
 \fi
 \ifnum#2=26
   \if\psalmtranslationsmall T%
-    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=260pt}]{2}}%262
+    %\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=260pt}]{2}}%262
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.465\linewidth}]{2}}%262
+  \fi
+\fi
+\ifnum#2=37
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}%262
   \fi
 \fi
 \ifnum#2=50
   \if\psalmtranslationsmall T%
-    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=255pt}]{2}}%262
+    %\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=255pt}]{2}}%262
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}%262
+  \fi
+\fi
+\ifnum#2=53
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}%262
   \fi
 \fi
 \ifnum#2=58
@@ -435,26 +450,45 @@ five%
 \ifnum#2=68
   \if\psalmtranslationsmall T%
     %\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=263pt}]{2}}%262
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}}%262
   \fi
+\fi
+\ifnum#2=70
+    \if\psalmtranslationsmall T%
+        \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.485\linewidth}]{2}}
+    \fi
 \fi
 \ifnum#2=71
   \if\psalmtranslationsmall T%
-    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=254pt}]{2}}%262
+    %\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=254pt}]{2}}%262
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43375\linewidth}]{2}}
   \fi
 \fi
 \ifnum#2=72
   \if\psalmtranslationsmall T%
-    %\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=260pt}]{2}}%262
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}%262
   \fi
 \fi
 \ifnum#2=73
   \if\psalmtranslationsmall T%
-    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=260pt}]{2}}%262
+    %\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=260pt}]{2}}%262
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}%262
+  \fi
+\fi
+\ifnum#2=74
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}%262
   \fi
 \fi
 \ifnum#2=76
   \if\psalmtranslationsmall T%
-    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=260pt}]{2}}%262
+    %\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=260pt}]{2}}%262
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.48\linewidth}]{2}}%262
+  \fi
+\fi
+\ifnum#2=84
+  \if\psalmtranslationsmall T%
+    %\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43\linewidth}]{2}}%262
   \fi
 \fi
 \ifnum#2=87
@@ -462,14 +496,19 @@ five%
     \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=251pt}]{2}}%262
   \fi
 \fi
-%\ifnum#2=89
-%  \if\psalmtranslationsmall T%
-%    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=254pt}]{2}}%262
-%  \fi
-%\fi
+\ifnum#2=89
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}%262
+  \fi
+\fi
 \ifnum#2=91
   \if\psalmtranslationsmall T%
     \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=245pt}]{2}}%262
+  \fi
+\fi
+\ifnum#2=93
+  \if\psalmtranslationsmall T%
+    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.459\linewidth}]{2}}%262
   \fi
 \fi
 \ifnum#2=109
@@ -535,12 +574,12 @@ five%
   %\def\psalmcoloptions{rulebetween,colwidths={1=285pt}}
 \fi
 \else% canitcleof is defined
-%\IfStrEq{\canticleof}{Moses}
-%{
-%  \if\psalmtranslationsmall T%
-%    \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=262pt}]{2}}%262
-%  \fi
-%}{}
+\IfStrEq{\canticleof}{Moses}
+{
+  \if\psalmtranslationsmall T%
+    %\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.455\linewidth}]{2}}%262
+  \fi
+}{}
 \fi%canticleof undefined
 %
 \fi % even columns
@@ -602,7 +641,7 @@ five%
   \includescore{\psalmtex}
 }
 %\medskip % do we need this?
-{\ifx\prepsalmverses\undefined\else\prepsalmverses\fi
+{\ifx\prepsalmverses\undefined\medskip\else\prepsalmverses\fi
 }
 
 \normalsize
@@ -626,15 +665,20 @@ five%
 }
 \selectlanguage{latin}
 \endpsalmcols
-\ifnum\thepage=\psalmstartpagenumber
-    \let\preantafter=\undefined
-\else\ifx\preantafter\undefined
-    \let\preantafter=\preant
-\fi\fi
+\ifx\dontrepeatantiphon\undefined
+  \ifnum\thepage=\psalmstartpagenumber
+      \let\preantafter=\undefined
+  \else\ifx\preantafter\undefined
+      \let\preantafter=\preant
+  \fi\fi
+\else
+  \let\preantafter=\undefined
+\fi
 
 \ifx\preantafter\undefined % if preantafter undefined, we don't reprint the antiphon
     \if\onlyoneant T\else% if there is only one antiphon for all the psalms (like during Paschaltide), we don't print Repeat antiphon
         \medskip
+        \ifx\prerepeatantiphon\undefined\else\prerepeatantiphon\fi
         {\noindent\emph{Repeat antiphon.}\par\medskip}% \vspace{0ex minus 1ex}}
     \fi
 \else
@@ -735,7 +779,7 @@ five%
 % vrnospace optional
     {#1\includescore{#2}}\vspace{-4pt plus 4pt}
     \translation[\normalsize]{
-    \Vbar{}. #3{}%
+    \Vbar{}~#3{}%
     \ifx\vrnospace\undefined
       \def\vrnospace{F}
     \fi
@@ -744,7 +788,7 @@ five%
     \else
       \\
     \fi%
-    \Rbar{}. #4{}%
+    \Rbar{}~#4{}%
     }%
 }
 
@@ -838,6 +882,7 @@ five%
     \fi
     \ifx\preanttwo\undefined
     {%\vspace{-1ex}
+    \ifx\prerepeatantiphon\undefined\else\prerepeatantiphon\fi%
     \noindent\emph{Repeat antiphon.}\\}
     \else
     {\preanttwo
@@ -900,7 +945,7 @@ five%
     \def\append{SundaysOfAdventAndLent}
   }{}
   \IfBeginWith{\mytempa}{easterday}{%
-      \def\benedicamusdominotone{\Vbar{}.}
+      \def\benedicamusdominotone{\Vbar{}}
       \def\append{Easter}
   }{
     \IfBeginWith{\mytempa}{easter}{%

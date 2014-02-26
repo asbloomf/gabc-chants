@@ -14,7 +14,7 @@ transcriber:Andrew Hinkley;
 \greglyph{\char 1025}{h}{h}{0}{}{}%
 \greendofglyph{9}%
 \greglyph{\char 19}{h}{h}{6}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemusbridge{i}{}{}%
 \grehepisemus{i}{12}{1}{i}%
 }%
@@ -26,7 +26,7 @@ transcriber:Andrew Hinkley;
 }%
 \greendofelement{0}{0}%
 \greglyph{\char 22}{h}{g}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemus{i}{0}{0}{i}%
 }%
 }%
@@ -45,18 +45,18 @@ transcriber:Andrew Hinkley;
 \greglyph{\char 26}{g}{h}{4}{}{}%
 \greendofglyph{1}%
 \greglyph{\char 1025}{h}{i}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt,lap=1.5pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt,lap=1.5pt}{%
 \grehepisemusbottom{g}{0}{-1}%
 }%
 }%
 }%
-])tes(i) lá(h_i)pi(%ivH'_G_/hv_GF'Ef
+])tes(i) lá(h_iz)pi(iv%H'_G_/hv_GF'Ef
 [ev:%
 {%
-\greglyph{\char 23}{i}{h}{0}{}{}%
+%\greglyph{\char 23}{i}{h}{0}{}{}%
 \greendofglyph{9}%
 \greglyph{\char 19}{h}{h}{6}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemusbridge{i}{}{}%
 \grehepisemus{i}{12}{1}{i}%
 }%
@@ -68,7 +68,7 @@ transcriber:Andrew Hinkley;
 }%
 \greendofelement{0}{0}%
 \greglyph{\char 22}{h}{g}{0}{}{%
-\adjustbox{scale={1.3}{1},lap=2pt}{%
+\adjustbox{scale={1.3}{1},lap=2.3pt}{%
 \grehepisemus{i}{0}{0}{i}%
 }%
 }%
@@ -83,13 +83,13 @@ transcriber:Andrew Hinkley;
 \greendofglyph{0}%
 \greglyph{\char 17}{f}{f}{0}{}{}%
 }%
-])dem(fe__) (,) ad(e) ó(g')sti(i)um(hhg) mo(f')nu(hz)mén(g_0//%hiH'_G_/hv_GF
+])dem(fe__) (,) ad(e) ó(g')sti(i)um(hhg) mo(f')nu(h)mén(g_0//%hiH'_G_/hv_GF
 [ev:%
 {%
 \greglyph{\char 1025}{h}{h}{0}{}{}%
 \greendofglyph{9}%
 \greglyph{\char 19}{h}{h}{6}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemusbridge{i}{}{}%
 \grehepisemus{i}{12}{1}{i}%
 }%
@@ -101,7 +101,7 @@ transcriber:Andrew Hinkley;
 }%
 \greendofelement{0}{0}%
 \greglyph{\char 22}{h}{g}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemus{i}{0}{0}{i}%
 }%
 }%
@@ -120,7 +120,7 @@ transcriber:Andrew Hinkley;
 \greglyph{\char 26}{g}{h}{4}{}{}%
 \greendofglyph{1}%
 \greglyph{\char 1025}{h}{i}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt,lap=1.5pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt,lap=1.5pt}{%
 \grehepisemusbottom{g}{0}{-1}%
 }%
 }%
@@ -131,7 +131,7 @@ transcriber:Andrew Hinkley;
 \greglyph{\char 23}{i}{h}{0}{}{}%
 \greendofglyph{9}%
 \greglyph{\char 19}{h}{h}{6}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt,lap=0.3pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt,lap=0.3pt}{%
 \grehepisemusbridge{i}{}{}%
 \grehepisemus{i}{12}{1}{i}%
 }%
@@ -143,7 +143,7 @@ transcriber:Andrew Hinkley;
 }%
 \greendofelement{0}{0}%
 \greglyph{\char 22}{h}{g}{0}{}{%
-\adjustbox{scale={1.3}{1},lap=2pt}{%
+\adjustbox{scale={1.3}{1},lap=2.3pt}{%
 \grehepisemus{i}{0}{0}{i}%
 }%
 }%
@@ -158,7 +158,7 @@ transcriber:Andrew Hinkley;
 \greendofglyph{0}%
 \greglyph{\char 17}{f}{f}{0}{}{}%
 }%
-])tes,(fe__) (,) qui(e) cu(f')sto(h)dí(hv_GF)rent(f!gwh/ih'hg) íl(fg!hvGF'g)lum.(gf..) <sp>V/</sp>.(::) Ac(f)ce(e)dén(e.f!gwhhi~)tes(h) prín(ij~)ci(i)pes(h') sa(h)cer(h)dó(h)tum(hg) ad(hi) Pi(gh)lá(f!gwh_g)tum,(gf..) (;) pe(f)ti(%f!gwhGF'_E_
+])tes,(fe__) (,) qui(e) cu(f')sto(h)dí(hv_GFz)rent(f!gwh/ih'hg) íl(fg!hvGF'g)lum.(gf..) <sp>V/</sp>(::) Ac(f)ce(e)dén(e.f!gwhhi~)tes(h) prín(ij~)ci(i)pes(h') sa(h)cer(h)dó(h)tum(hg) ad(hi) Pi(gh)lá(f!gwh_g)tum,(gf..) (;) pe(f)ti(%f!gwhGF'_E_
 [ev:%
 {%
 \greglyph{\char 17}{f}{g}{0}{}{}%
@@ -168,7 +168,7 @@ transcriber:Andrew Hinkley;
 \greglyph{\char 19}{g}{f}{6}{}{}%
 \greendofglyph{3}%
 \greglyph{\char 19}{f}{f}{6}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt,lap=0.3pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt,lap=0.3pt}{%
 \grehepisemusbridge{g}{}{}%
 \grehepisemus{g}{12}{1}{g}%
 }%
@@ -189,9 +189,9 @@ transcriber:Andrew Hinkley;
 \greglyph{\char 26}{g}{h}{4}{}{}%
 \greendofglyph{1}%
 \greglyph{\char 1025}{h}{i}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt,lap=1.5pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt,lap=1.5pt}{%
 \grehepisemusbottom{g}{0}{-1}%
 }%
 }%
 }%
-])tes.(i) <sp>R/</sp>.(::) Se(e)púl(fhf)to.(h.) (::)
+])tes.(i) <sp>R/</sp>(::) Se(e)púl(fhf)to.(h.) (::)

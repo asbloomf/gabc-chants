@@ -14,7 +14,7 @@ transcriber:Andrew Hinkley;
 \greglyph{\char 19}{j}{i}{6}{}{}%
 \greendofglyph{3}%
 \greglyph{\char 19}{i}{i}{6}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemusbridge{j}{}{}%
 \grehepisemus{j}{12}{1}{j}%
 }%
@@ -26,7 +26,7 @@ transcriber:Andrew Hinkley;
 }%
 \greendofelement{0}{0}%
 \greglyph{\char 23}{i}{h}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemus{j}{0}{0}{j}%
 }%
 }%
@@ -39,7 +39,7 @@ transcriber:Andrew Hinkley;
 \grehepisemus{i}{17}{1}{i}%
 }%
 }%
-]) sa(h_j)cer(i)dó(hv./fig'h)tum,(gf/ghg.) (;) et(g) se(d')ni(f)ó(ffe')ri(g)bus(i.g!hwiHG') pó(f)pu(fg!hvGF'g)li :(gf..)
+]) sa(h_j)cer(iz)dó(hv./fig'h)tum,(gf/ghg.) (;) et(g) se(d')ni(f)ó(ffe')ri(g)bus(i.g!hwiHG') pó(f)pu(fg!hvGF'g)li :(gf..)
 <v>\greheightstar</v>(:) Pé(ih)trus(ij) au(jji~)tem(%ij!kvJI'_H_/iv_HG/h_g_
 [ev:%
 {%
@@ -50,7 +50,7 @@ transcriber:Andrew Hinkley;
 \greglyph{\char 19}{j}{i}{6}{}{}%
 \greendofglyph{3}%
 \greglyph{\char 19}{i}{i}{6}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemusbridge{j}{}{}%
 \grehepisemus{j}{12}{1}{j}%
 }%
@@ -62,7 +62,7 @@ transcriber:Andrew Hinkley;
 }%
 \greendofelement{0}{0}%
 \greglyph{\char 23}{i}{h}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemus{j}{0}{0}{j}%
 }%
 }%
@@ -106,5 +106,5 @@ transcriber:Andrew Hinkley;
 \greendofglyph{3}%
 \greglyph{\char 19}{g}{f}{6}{}{}%
 }%
-]) fí(fg!hvGF'g)nem.(gf..) (::z)
-<sp>V/</sp>.() Ad(i)du(i)xé(ih)runt(iji/hih/ggf) au(gh~)tem(h) é(h)um(h) ad(hg) Cá(ij)i(i)pham(i.) (,) prín(i)ci(ih)pem(hg~) sa(hi)cer(gh)dó(f!gwh_g)tum,(gf..) (;) u(f)bi(exef) scrí(fg)bæ(f) et(f) pha(f)ri(f)s<sp>'ae</sp>(f)i(gh_GF/ghg) con(exfge~)vé(f_g)ne(g!hwih/ijI'_HG)rant.(g_hGF/gf..) <v>\greheightstar</v>(::) Pé(ih)trus.(ij) (::)
+]) fí(fg!hvGF'g)nem.(gf..) (::)
+<sp>V/</sp>() Ad(i)du(i)xé(ih)runt(iji/hih/ggf) au(gh~)tem(h) é(h)um(h) ad(hg) Cá(ij)i(i)pham(i.) (,) prín(i)ci(ih)pem(hg~) sa(hi)cer(gh)dó(f!gwh_g)tum,(gf..) (;) u(f)bi(exef) scrí(fg)bæ(f) et(f) pha(f)ri(f)s<sp>'ae</sp>(f)i(gh_GF/ghg) con(exfge~)vé(f_g)ne(g!hwih/ijI'_HGz)rant.(g_hGF/gf..) (::) <v>\greheightstar</v>() Pé(ih)trus.(ij) (::)

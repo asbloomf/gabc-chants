@@ -37,7 +37,7 @@ transcriber:Andrew Hinkley;
 \grepunctummora{d}{0}{0}{0}%
 }%
 }%
-]) (;) dú(d.f!gwhhi)ctus(h) sum(h) ad(hi) im(ih'hvGF)mo(hf/hef)lán(%e.d!ewfef
+]) (;) dú(d.f!gwhhi)ctus(h) sum(h) ad(hi) im(ih'hvGFz)mo(hf/hef)lán(%e.d!ewfef
 [ev:%
 {%
 \greglyph{\char 5121}{e}{e}{8}{}{%
@@ -49,10 +49,10 @@ transcriber:Andrew Hinkley;
 \greglyph{\char 26}{e}{f}{4}{}{}%
 \greglyph{\char 13318}{f}{f}{2}{}{}%
 }%
-])dum,(fe..) (;) et(e) ne(e/hhf)sci(hz)é(%hf__/gv_FE'f
+])dum,(fe..) (;) et(e) ne(e/hhf)sci(h)é(%hf__/gv_FE'f
 hf[ev:%
 {%
-\adjustbox{scale={1.25}{1},lap=2.5pt}{%
+\adjustbox{scale={1.25}{1},lap=3pt}{%
 \grehepisemus{i}{2}{2}{i}%
 \grehepisemus{i}{0}{0}{i}%
 }%
@@ -74,21 +74,21 @@ hf[ev:%
 [ev:%
 {%
 \greglyph{\char 5121}{i}{h}{8}{}{%
-\adjustbox{scale={0.85}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.85}{1},trim=0.7pt 0pt}{%
 \grehepisemus{j}{17}{1}{j}%
 \grehepisemus{j}{0}{0}{j}%
 }%
 }%
 \greendofelement{1}{0}%
 \greglyph{\char 6146}{h}{h}{1}{}{%
-\adjustbox{scale={0.85}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.85}{1},trim=0.7pt 0pt}{%
 \grehepisemus{i}{2}{2}{i}%
 \grehepisemus{i}{0}{0}{i}%
 }%
 }%
 \greendofelement{0}{0}%
 \greglyph{\char 6147}{h}{f}{1}{}{%
-\adjustbox{scale={1.25}{1},lap=2.5pt}{%
+\adjustbox{scale={1.25}{1},lap=3pt}{%
 \grehepisemus{i}{2}{3}{i}%
 \grehepisemus{i}{0}{0}{i}%
 }%
@@ -116,7 +116,7 @@ hf[ev:%
 }%
 \greendofglyph{3}%
 \greglyph{\char 19}{g}{g}{6}{}{%
-\adjustbox{trim=2pt 0pt}{%
+\adjustbox{trim=2.5pt 0pt}{%
 \grehepisemusbridge{i}{}{}%
 \grehepisemus{i}{12}{1}{i}%
 }%
@@ -137,7 +137,7 @@ hf[ev:%
 \grevepisemus{e}{12}%
 }%
 }%
-])vén(e)ti(ef!gvFE'f)um.(fe..) <sp>V/</sp>.(::) Om(i!jwkJI)nes(h_i_h'_hg) i(h)ni(h)mí(h)ci(h) mé(hi)i(h'_) (,) ad(h)vér(hi~)sum(h) me(h) co(h)gi(h)tá(h)bant(ig~) má(hi)la(hi) mí(i!jwk_j)hi:(j.i) (;) vér(hih'___hg~)bum(hih) i(i)ní(ij)quum(i'_) (,) man(i)da(i)vé(ij)runt(i) ad(i)vér(i)sum(ij_ij'IH) me,(hg) di(h!iwji/jkj)cén(%i.h!iwjij
+])vén(e)ti(ef!gvFE'f)um.(fe..) <sp>V/</sp>(::) Om(i!jwkJI)nes(h_i_h'_hg) i(h)ni(h)mí(h)ci(h) mé(hi)i(h'_) (,) ad(h)vér(hi~)sum(h) me(h) co(h)gi(h)tá(h)bant(ig~) má(hi)la(hi) mí(i!jwk_j)hi:(j.i) (;) vér(hih'___hg~)bum(hih) i(i)ní(ij)quum(i'_) (,) man(i)da(i)vé(ij)runt(i) ad(i)vér(i)sum(ij_ij'IH) me,(hg) di(h!iwji/jkj)cén(%i.h!iwjij
 [ev:%
 {%
 \greglyph{\char 5121}{i}{i}{8}{}{%

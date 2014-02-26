@@ -78,13 +78,31 @@ Jerusalem, Jerusalem, return to the Lord thy God.}
 \setgrefactor{17}
 \printgabc{Resp. 1}{3.}{O}{re--omnes_amici_mei--solesmes}
 
-\translationcolumns[\normalsize]{\Rbar{}. All my friends have forsaken me, and they that lay wait for me have prevailed against me; he whom I loved hath betrayed me.
+\translationcolumns[\normalsize]{\Rbar{}~All my friends have forsaken me, and they that lay wait for me have prevailed against me; he whom I loved hath betrayed me.
 * And men of terrible countenance, piercing me with a cruel wound, have given me vinegar to drink.
-\Vbar{}. They cast me out among the wicked, and spared not my soul.
-\Rbar{}. And men of terrible countenance \dots{}}
+\Vbar{}~They cast me out among the wicked, and spared not my soul.
+\Rbar{}~And men of terrible countenance \dots{}}
 }
 
+%\bigbreak\bigbreak
+\emph{Alternately, the following three part arrangement can be sung in place of the chant.}
 \pagebreak
+{
+\noindent
+\def\betweenLilyPondSystem#1{
+\ifnum#1>1
+  %\vspace{0.5\baselineskip}
+  \vfil\noindent
+\else
+  \linebreak
+\fi
+}
+\import{lilypond/}{omnes_amici_mei-systems}
+}
+
+%\pagebreak
+\bigbreak
+\bigbreak
 \begin{center}{\textsc{lesson ii}}\end{center}
 
 {\normalsize\setgrefactor{14}
@@ -98,15 +116,31 @@ Jerusalem, Jerusalem, return to the Lord thy God.}
 }
 
 \bigskip\bigskip
-\pagebreak
+%\pagebreak
 
 {\setgrefactor{17}
 \printgabc{Resp. 2}{2.}{V}{re--velum_templi--solesmes}
 
-\translationcolumns[\normalsize]{\Rbar{}. The veil of the Temple was rent,
+\translationcolumns[\normalsize]{\Rbar{}~The veil of the Temple was rent,
 * And all the earth did quake: the thief on the cross cried, saying: Lord, remember me when Thou comest into Thy kingdom!
-\Vbar{}. The rocks were rent and the graves opened, and many bodies of the saints, which slept, arose.
-\Rbar{}. And all the earth \dots}
+\Vbar{}~The rocks were rent and the graves opened, and many bodies of the saints, which slept, arose.
+\Rbar{}~And all the earth \dots}
+}
+
+%\bigbreak\bigbreak
+\emph{Alternately, the following three part arrangement can be sung in place of the chant.}
+\pagebreak
+{
+\noindent
+\def\betweenLilyPondSystem#1{
+\ifnum#1>1
+  %\vspace{0.5\baselineskip}
+  \vfil\noindent
+\else
+  \linebreak
+\fi
+}
+\import{lilypond/}{in_monte_oliveti-systems}
 }
 
 \bigskip
@@ -134,9 +168,9 @@ Jerusalem, Jerusalem, return to the Lord thy God.}
 %
 {\setgrefactor{17}
 \printgabc{Resp. 3}{8.}{V}{re--vinea_mea--solesmes}
-\translationcolumns[\normalsize]{\Rbar{}. O my chosen vine, I planted thee:
+\translationcolumns[\normalsize]{\Rbar{}~O my chosen vine, I planted thee:
 * How then art thou turned to bitterness, that thou shouldst crucify me, and release Barabbas?
-\Vbar{}. I fenced thee, and gathered out the stones from thee, and built a tower.
-\Rbar{}. How then art thou \dots{}
-\Rbar{}. O my chosen vine \dots}
+\Vbar{}~I fenced thee, and gathered out the stones from thee, and built a tower.
+\Rbar{}~How then art thou \dots{}
+\Rbar{}~O my chosen vine \dots}
 }

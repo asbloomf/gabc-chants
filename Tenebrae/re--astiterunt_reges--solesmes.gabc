@@ -8,7 +8,7 @@ transcriber:Andrew Hinkley;
 [ev:%
 {%
 \greglyph{\char 6145}{h}{h}{8}{}{%
-\adjustbox{scale={0.85}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.85}{1},trim=0.7pt 0pt}{%
 \grehepisemus{i}{17}{1}{i}%
 \grehepisemus{i}{0}{0}{i}%
 }%
@@ -31,7 +31,7 @@ transcriber:Andrew Hinkley;
 \grepunctummora{f}{0}{0}{0}%
 }%
 }%
-]) (;) et(hf~) prín(ghg')ci(h)pes(h) con(hj)ve(hg)né(hv_GF/g_h)runt(g) in(g.h!iwj_I_H'/iwjIH) ú(gh!ivHG'h)num,(hg..) <v>\greheightstar</v>(:) Ad(j_kJH)vér(jkj)sus(jkz) Dó(ki/j_k)mi(h!iwjI'_HG'h)num,(hg..) (;) et(fg/hjgge') ad(g)vér(fef)sus(%dec./d!ewf_e_/fv_ED.
+]) (;) et(hf~) prín(ghg')ci(h)pes(h) con(hj)ve(hg)né(hv_GF/g_h)runt(g) in(g.h!iwj_I_H'/iwjIH) ú(gh!ivHG'h)num,(hg..) <v>\greheightstar</v>(:) Ad(j_kJH)vér(jkj)sus(jk) Dó(ki/j_k)mi(h!iwjI'_HG'h)num,(hg..) (;) et(fg/hjgge') ad(g)vér(fef)sus(%dec./d!ewf_e_/fv_ED.
 [ev:%
 {%
 \greglyph{\char 15371}{d}{d}{0}{}{%
@@ -41,14 +41,14 @@ transcriber:Andrew Hinkley;
 \greglyph{\char 17}{d}{e}{0}{}{}%
 \greendofglyph{1}%
 \greglyph{\char 19462}{e}{f}{4}{}{%
-\adjustbox{scale={0.85}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.85}{1},trim=0.7pt 0pt}{%
 \grehepisemus{g}{17}{1}{g}%
 \grehepisemus{g}{0}{0}{g}%
 }%
 }%
 \greendofelement{0}{0}%
 \greglyph{\char 22}{f}{e}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemus{g}{0}{0}{g}%
 }%
 }%
@@ -87,17 +87,17 @@ transcriber:Andrew Hinkley;
 \greendofglyph{3}%
 \greglyph{\char 19}{h}{g}{6}{}{}%
 }%
-]) é(gh!ivHG'h)jus.(hg..) <sp>V/</sp>.(::) Qua(ji)re(jkj/iji/hhg) fre(hi)mu(ih)é(ij)runt(hi) gén(g!hwi_h)tes,(hg..) (;) et(g) pó(fg)pu(g)li(g) me(g)di(g)tá(g)ti(g) sunt(hi_HG/hih~) in(ghf)á(g_h)ni(%h!iwji/jkJ'_IH
+]) é(gh!ivHG'h)jus.(hg..) <sp>V/</sp>(::) Qua(ji)re(jkj/iji/hhg) fre(hi)mu(ih)é(ij)runt(hi) gén(g!hwi_h)tes,(hg..) (;) et(g) pó(fg)pu(g)li(g) me(g)di(g)tá(g)ti(g) sunt(hi_HG/hih~) in(ghf)á(g_hz)ni(h!iwji/%jkJ'_IH
 [ev:%
 {%
-\greglyph{\char 17}{h}{i}{0}{}{}%
-\greendofglyph{1}%
-\greglyph{\char 19462}{i}{j}{4}{}{}%
+%\greglyph{\char 17}{h}{i}{0}{}{}%
+%\greendofglyph{1}%
+%\greglyph{\char 19462}{i}{j}{4}{}{}%
 \greendofelement{0}{0}%
 \greglyph{\char 1025}{j}{j}{0}{}{}%
 \greendofglyph{9}%
 \greglyph{\char 19}{j}{h}{6}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemus{k}{12}{1}{k}%
 }%
 \grevepisemus{i}{12}%

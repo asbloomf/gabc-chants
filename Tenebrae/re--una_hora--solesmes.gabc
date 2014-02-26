@@ -12,7 +12,7 @@ transcriber:Andrew Hinkley;
 }%
 \greendofglyph{1}%
 \greglyph{\char 19472}{g}{f}{4}{}{%
-\adjustbox{scale={1.25}{1},lap=2.5pt}{%
+\adjustbox{scale={1.25}{1},lap=3pt}{%
 \grehepisemus{i}{2}{3}{i}%
 \grehepisemus{i}{0}{0}{i}%
 }%
@@ -48,7 +48,7 @@ transcriber:Andrew Hinkley;
 {%
 \greadditionalline{18}{0}{2}%
 }{%
-\adjustbox{scale={1.2}{1},lap=1.5pt}{%
+\adjustbox{scale={1.2}{1},lap=1.7pt}{%
 \grehepisemusbridge{m}{}{}%
 \grehepisemus{m}{18}{0}{m}%
 }%
@@ -79,7 +79,7 @@ transcriber:Andrew Hinkley;
 }%
 \greendofglyph{1}%
 \greglyph{\char 19472}{g}{f}{4}{}{%
-\adjustbox{scale={1.25}{1},lap=2.5pt}{%
+\adjustbox{scale={1.25}{1},lap=3pt}{%
 \grehepisemus{i}{2}{3}{i}%
 \grehepisemus{i}{0}{0}{i}%
 }%
@@ -93,7 +93,7 @@ transcriber:Andrew Hinkley;
 \grepunctummora{d}{0}{0}{0}%
 }%
 }%
-]) (,z) trá(f)de(i)re(hghf~) me(g) Ju(%g!hwiH'GF'__/gwhGF
+]) (,) trá(f)de(i)re(hghf~) me(g) Ju(%g!hwiH'GF'__/gwhGF
 g!hwi[ev:%
 {{%
 \greendofglyph{9}%
@@ -102,7 +102,7 @@ g!hwi[ev:%
 }%
 \greendofglyph{3}%
 \greglyph{\char 19}{g}{g}{6}{}{%
-\adjustbox{trim=2pt 0pt}{%
+\adjustbox{trim=2.5pt 0pt}{%
 \grehepisemusbridge{i}{}{}%
 \grehepisemus{i}{12}{1}{i}%
 }%
@@ -121,7 +121,7 @@ g!hwi[ev:%
 \greendofglyph{3}%
 \greglyph{\char 19}{f}{e}{6}{}{}%
 }%
-])d<sp>'ae</sp>(ef!gvFE'f)is?(fe..) <sp>V/</sp>.(::) Quid(i) dor(i)mí(i!jwkJI)tis?(hih'___hg.) (,) súr(h)gi(h)te,(ig) et(hi) o(hi)rá(i!jwk_j)te,(ji..) (;) ne(hih'___hg) in(hih~)tré(ij)tis(i'_) in(i) ten(ij_ij'IH)ta(hgz)ti(h!iwji/jkj)ó(%i.h!iwjij
+])d<sp>'ae</sp>(ef!gvFE'f)is?(fe..) (::) <sp>V/</sp>() Quid(i) dor(i)mí(i!jwkJI)tis?(hih'___hg.) (,) súr(h)gi(h)te,(ig) et(hi) o(hi)rá(i!jwk_j)te,(ji..) (;) ne(hih'___hg) in(hih~)tré(ij)tis(i'_) in(i) ten(ij_ij'IH)ta(hg)ti(h!iwji/jkj)ó(%i.h!iwjij
 [ev:%
 {%
 \greglyph{\char 5121}{i}{i}{8}{}{%
