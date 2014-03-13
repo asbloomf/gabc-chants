@@ -6,7 +6,7 @@ transcriber:Albert Bloomfield;
 %%
 (c4)O(j_h) vos(i_h) óm(g_h)nes,(gg) <v>\greheightstar</v>(,) qui(f) trans(h')í(j)tis(ji) per(h) ví(j_k)am,(ji/jkkj.) (;)
 at(j)tén(j)di(ij)te,(h_g) et(hi) vi(i)dé(hgh)te(g_h_g'_ge.) (;) <v>\greheightstar</v>()
-Si(e) est(e) dó(g_0!hi)lor(h) sí(h!iwj!kv_J_I'H)mi(h.g!hwihi)lis(ih..) (,) si(ji)cut(jk~) dó(k)lor(%g.h!iwj_I_H'iwj/IH
+Si(e) est(e) dó(g_0!hi)lor(h) sí(h!iwj!kv_J_I'H)mi(h.g!hwihi)lis(ih..) (,) sic(ji)ut(jk~) dó(k)lor(%g.h!iwj_I_H'iwj/IH
 [ev:%
 {%
 \greglyph{\char 1025}{g}{i}{0}{}{%
@@ -58,4 +58,19 @@ et(g) vi(fg)dé(gh)te(g) do(hi_HG/hih)ló(ghf)rem(g_h) mé(%h!iwji/jkJ'_IH
 \greendofglyph{3}%
 \greglyph{\char 19}{h}{h}{6}{}{}%
 }%
-])um.(h_iHGhg..) <v>\greheightstar</v>(::) Si(e) est.(e) (::)
+])um.(%h_iHGhg..
+[ev:%
+\greglyph{\char 1025}{h}{h}{0}{}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
+\grehepisemusbottom{g}{0}{-1}%
+}%
+}%
+\greendofglyph{9}%
+\greglyph{\char 19}{h}{h}{6}{}{}%
+\greendofglyph{3}%
+\greglyph{\char 19}{g}{h}{6}{}{}%
+\greendofglyph{0}%
+\greglyph{\char 6145}{h}{e}{8}{}{%
+\greaugmentumduplex{g}{h}{1}%
+}%
+]) <v>\greheightstar</v>(::) Si(e) est.(e) (::)

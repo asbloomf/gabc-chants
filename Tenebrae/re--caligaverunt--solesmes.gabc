@@ -9,8 +9,10 @@ transcriber:Andrew Hinkley;
 {%
 \greflat{g}{0}%
 \greglyph{\char 1026}{f}{f}{0}{}{%
-\adjustbox{lap=0.7pt}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemusbottom{e}{0}{-2}%
+}%
+\adjustbox{lap=0.7pt}{%
 \grehepisemus{i}{18}{0}{i}%
 }%
 }%
@@ -31,7 +33,15 @@ transcriber:Andrew Hinkley;
 \greendofglyph{3}%
 \greglyph{\char 19}{e}{d}{6}{}{}%
 }%
-]) mé(de!fvED'e//)o :(ed..) (:) qui(f)a(ed) e(e)lon(fh~)gá(h)tus(gh) est(ffe) a(f!gwh.f/fwgfg) me,(gf..) (;) qui(h) con(hi~)so(ihhg)la(fe)bá(hg/h_i)tur(hv.f/g'h) me :(gf..) (:) Vi(h)dé(h)te,(gh) ó(ffe)mnes(f) pó(f!gwh)pu(e_fED'e)li,(ed..) (;) <v>\greheightstar</v>() Si(d) est(ef) dó(gxffg)lor(e!fwg) sí(%gxgh_G'_FE
+]) mé(de!fvED'e//)o :(ed..) (:) qui(f)a(ed) e(e)lon(fh~)gá(h)tus(gh) est(ffe) a(f!gwh.f/fwgfg) me,(gf..) (;) qui(h) con(hi~)so(ihhg)la(fe)bá(hg/%h_i
+[ev:%
+\greendofelement{0}{0}%
+\greglyph{\char 1025}{h}{h}{0}{}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
+\grehepisemusbottom{g}{0}{-1}%
+}%
+}%
+])tur(hv.f/g'h) me :(gf..) (:) Vi(h)dé(h)te,(gh) óm(ffe)nes(f) pó(f!gwh)pu(e_fED'e)li,(ed..) (;) <v>\greheightstar</v>() Si(d) est(ef) dó(gxffg)lor(e!fwg) sí(%gxgh_G'_FE
 [ev:%
 {%
 \greflat{g}{0}%
@@ -57,7 +67,7 @@ transcriber:Andrew Hinkley;
 [ev:%
 {%
 \greglyph{\char 5121}{e}{e}{8}{}{%
-\raisebox{1pt}{%
+\adjustbox{raise=1pt,lap=-0.4pt}{%
 \grepunctummora{e}{3}{0}{0}%
 }%
 }%
@@ -65,7 +75,7 @@ transcriber:Andrew Hinkley;
 \greglyph{\char 26}{e}{f}{4}{}{}%
 \greglyph{\char 13318}{f}{f}{2}{}{}%
 }%
-])lis(fe..) (;) si(gxgf)cut(gh~) dó(h)lor(gxd.e!fwg%_F_E'/fwgFE
+])lis(fe..) (;) sic(gxgf)ut(gh~) dó(h)lor(gxd.e!fwg%_F_E'/fwgFE
 [ev:%
 {%
 \adjustbox{lap=0.7pt}{%
@@ -89,11 +99,23 @@ transcriber:Andrew Hinkley;
 \greendofglyph{3}%
 \greglyph{\char 19}{e}{d}{6}{}{}%
 }%
-]) mé(de!fvED'e//)us.(ed..) (::) <sp>V/</sp>() O(h) vos(hi//hh/fgf) ó(hi~)mnes,(h'_) (,) qui(h) tran(h)sí(hf)tis(fi) per(gh) ví(h.g!hwihi)am,(ih..) (;) at(h)tén(h)di(h)te(hg/hg) et(gf~) vi(h_i)dé(%h.g!hwiH'_GF'g
+]) mé(de!fvED'e//)us.(ed..) (::) <sp>V/</sp>() O(h) vos(hi//hh/fgf) óm(hi~)nes,(h'_) (,) qui(h) tran(h)sí(hf)tis(fi) per(gh) ví(%h.g!hwihi
+[ev:%
+\greglyph{\char 6145}{h}{h}{8}{}{%
+\adjustbox{raise=1pt,lap=-0.4pt}{%
+\grepunctummora{h}{3}{0}{0}%
+}%
+}%
+\greendofglyph{1}%
+\greglyph{\char 26}{h}{i}{4}{}{}%
+\greglyph{\char 13318}{i}{i}{2}{}{}%
+])am,(ih..) (;) at(h)tén(h)di(h)te(hg/hg) et(gf~) vi(h_i)dé(%h.g!hwiH'_GF'g
 [ev:%
 {%
 \greglyph{\char 6145}{h}{h}{8}{}{%
+\adjustbox{lap=-0.4pt}{%
 \grepunctummora{h}{3}{0}{0}%
+}%
 }%
 \greendofglyph{1}%
 \greglyph{\char 2561}{h}{h}{4}{}{}%

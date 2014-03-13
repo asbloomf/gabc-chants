@@ -30,7 +30,7 @@ transcriber:Andrew Hinkley;
 [ev:%
 {%
 \greglyph{\char 6146}{h}{g}{1}{}{%
-\raisebox{1pt}{%
+\adjustbox{raise=1pt,lap=-0.4pt}{%
 \grepunctummora{h}{2}{0}{0}%
 }%
 }%
@@ -71,7 +71,30 @@ transcriber:Andrew Hinkley;
 \greendofglyph{0}%
 \greglyph{\char 5121}{i}{j}{8}{}{}%
 }%
-]) mó(j)ri(l.j!kwlKJ') pro(ijji) me?(i.) <v>\greheightstar</v>(:) Vel(g) Jú(iji/jkj)dam(i) non(hhg~) vi(fe)dé(e_0//fhf_g)tis,(fe/fgf.) (,) quó(f)mo(ed)do(e) non(fh~) dór(hv.f!h'i)mit,(ih/ih'hg.) (:) sed(g) fe(i)stí(h_0//ijh'hg)nat(%e.f!gwh_e_/fe'ed.
+]) mó(j)ri(%l.j!kwlKJ'
+[ev:%
+{%
+\greglyph{\char 6146}{l}{k}{1}%
+{%
+\greadditionalline{2}{0}{2}%
+}{%
+\adjustbox{lap=-0.4pt}{%
+\grepunctummora{l}{2}{0}{0}%
+}%
+}%
+\greendofglyph{1}%
+\greglyph{\char 2561}{k}{k}{4}%
+{%
+\greadditionalline{18}{0}{2}%
+}{}%
+\greendofglyph{9}%
+\greglyph{\char 19}{k}{i}{6}{}{}%
+\greendofglyph{3}%
+\greglyph{\char 19}{j}{i}{6}{}{%
+\grevepisemus{i}{12}%
+}%
+}%
+]) pro(ijji) me?(i.) <v>\greheightstar</v>(:) Vel(g) Jú(iji/jkj)dam(i) non(hhg~) vi(fe)dé(e_0//fhf_g)tis,(fe/fgf.) (,) quó(fz)mo(ed)do(e) non(fh~) dór(hv.f!h'i)mit,(ih/ih'hg.) (:) sed(g) fe(i)stí(h_0//ijh'hg)nat(%e.f!gwh_e_/fe'ed.
 [ev:%
 {%
 \greglyph{\char 1025}{e}{g}{0}{}{%
@@ -121,11 +144,11 @@ g!hwi[ev:%
 \greendofglyph{3}%
 \greglyph{\char 19}{f}{e}{6}{}{}%
 }%
-])d<sp>'ae</sp>(ef!gvFE'f)is?(fe..) (::) <sp>V/</sp>() Quid(i) dor(i)mí(i!jwkJI)tis?(hih'___hg.) (,) súr(h)gi(h)te,(ig) et(hi) o(hi)rá(i!jwk_j)te,(ji..) (;) ne(hih'___hg) in(hih~)tré(ij)tis(i'_) in(i) ten(ij_ij'IH)ta(hg)ti(h!iwji/jkj)ó(%i.h!iwjij
+])d<sp>'ae</sp>(ef!gvFE'f)is?(fe..) (::) <sp>V/</sp> Quid(i) dor(i)mí(i!jwkJI)tis?(hih'___hg.) (,) súr(h)gi(h)te,(ig) et(hi) o(hi)rá(i!jwk_j)te,(ji..) (;) ne(hih'___hg) in(hih~)tré(ij)tis(i'_) in(i) ten(ij_ij'IH)ta(hg)ti(h!iwji/jkjz)ó(%i.h!iwjij
 [ev:%
 {%
 \greglyph{\char 5121}{i}{i}{8}{}{%
-\raisebox{1pt}{%
+\adjustbox{raise=1pt,lap=-0.4pt}{%
 \grepunctummora{i}{3}{0}{0}%
 }%
 }%
@@ -133,4 +156,4 @@ g!hwi[ev:%
 \greglyph{\char 26}{i}{i}{4}{}{}%
 \greglyph{\char 13318}{j}{i}{2}{}{}%
 }%
-])nem.(iv_HGhg..) <v>\greheightstar</v>(::) Vel.(g) (::)
+])nem.(iv_HGhg..) <v>\greheightstar</v>(::) Vel(g) Jú(iji/jkj)dam.(i) (::)

@@ -48,8 +48,8 @@ transcriber:Andrew Hinkley;
 }%
 \greendofelement{0}{0}%
 \greglyph{\char 22}{j}{i}{0}{}{%
+\adjustbox{scale={1.15}{1},lap=2pt}{%
 \grehepisemusbridge{k}{}{}%
-\adjustbox{lap=1pt}{%
 \grehepisemus{k}{0}{0}{k}%
 }%
 }%
@@ -88,7 +88,7 @@ hg[ev:%
 \greglyph{\char 23}{k}{j}{0}{}{}%
 \greendofglyph{9}%
 \greglyph{\char 19}{j}{j}{6}{}{%
-\adjustbox{scale={0.85}{1},trim=0.7pt 0pt}{%
+\adjustbox{scale={0.8}{1},trim=0.5pt 0pt}{%
 \grehepisemusbridge{k}{}{}%
 \grehepisemus{k}{12}{1}{k}%
 }%
@@ -100,8 +100,8 @@ hg[ev:%
 }%
 \greendofelement{0}{0}%
 \greglyph{\char 22}{j}{i}{0}{}{%
+\adjustbox{scale={1.15}{1},lap=2pt}{%
 \grehepisemusbridge{k}{}{}%
-\adjustbox{lap=1pt}{%
 \grehepisemus{k}{0}{0}{k}%
 }%
 }%
@@ -189,4 +189,21 @@ hg[ev:%
 \greendofglyph{3}%
 \greglyph{\char 19}{h}{h}{6}{}{}%
 }%
-])rum.(h_iHG/hg..) <v>\greheightstar</v>(::) Mé(f)li(g)us.(hf) <sp>R/</sp>(::) U(gh)nus.(g) (::)
+])rum.(%h_iHG/hg..
+[ev:%
+{%
+\greglyph{\char 1025}{h}{h}{0}{}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
+\grehepisemusbottom{g}{0}{-1}%
+}%
+}%
+\greendofglyph{9}%
+\greglyph{\char 19}{h}{h}{6}{}{}%
+\greendofglyph{3}%
+\greglyph{\char 19}{g}{h}{6}{}{}%
+\greendofelement{0}{0}%
+\greglyph{\char 6145}{h}{f}{8}{}{%
+\greaugmentumduplex{g}{h}{1}%
+}%
+}%
+]) <v>\greheightstar</v>(::) Mé(f)li(g)us.(hf) <sp>R/</sp>(::) U(gh)nus.(g) (::)

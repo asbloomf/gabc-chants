@@ -19,7 +19,22 @@ transcriber:Andrew Hinkley;
 }%
 }%
 }%
-]) <v>\greheightstar</v>() súr(h.g!hwi!jvIH)ge,(ih..) (;) et(f) é(h)xu(gh)e(f) te(fe) vé(f!gwh)sti(e_fED'e)bus(ed__) (,) ju(d)cun(efef)di(%gxf_h_F_E/fwgFE
+]) <v>\greheightstar</v>() súr(h.g!hwi!jvIH)ge,(ih..) (;) et(f) é(h)xu(gh)e(f) te(fe) vé(f!gwh)sti(%e_fED'e
+[ev:%
+\greglyph{\char 1025}{e}{e}{0}{}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
+\grehepisemusbottom{d}{0}{-1}%
+}%
+}%
+\greendofglyph{9}%
+\greglyph{\char 19}{e}{e}{6}{}{}%
+\greendofglyph{3}%
+\greglyph{\char 19}{d}{e}{6}{}{%
+\grevepisemus{c}{12}%
+}%
+\greendofglyph{0}%
+\greglyph{\char 17}{e}{e}{0}{}{}%
+])bus(ed__) (,) ju(d)cun(efef)di(%gxf_h_F_E'/fwgFE'
 [ev:%
 {%
 \greflat{g}{0}%
@@ -27,26 +42,30 @@ transcriber:Andrew Hinkley;
 \adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemusbottom{e}{0}{-2}%
 }%
-\adjustbox{lap=0.7pt}{%
+\adjustbox{lap=0.8pt}{%
 \grehepisemus{i}{18}{0}{i}%
 }%
 }%
 \greendofglyph{9}%
 \greglyph{\char 19}{f}{f}{6}{}{%
-\adjustbox{lap=0.7pt}{%
+\adjustbox{lap=0.8pt}{%
 \grehepisemus{i}{12}{1}{i}%
 }%
 }%
 \greendofglyph{3}%
-\greglyph{\char 19}{e}{f}{6}{}{}%
+\greglyph{\char 19}{e}{f}{6}{}{%
+\grevepisemus{d}{12}%
+}%
 \greendofelement{0}{0}%
 \greglyph{\char 2561}{f}{f}{4}{}{}%
 \greendofglyph{9}%
 \greglyph{\char 19}{f}{d}{6}{}{}%
 \greendofglyph{3}%
-\greglyph{\char 19}{e}{d}{6}{}{}%
+\greglyph{\char 19}{e}{d}{6}{}{%
+\grevepisemus{d}{12}%
 }%
-])tá(de!fvED'e)tis :(ed..) (:) in(f)dú(f')e(f)re(f) cí(f)ne(f)re(fhffe) et(f') ci(h)lí(hv_GFg_f)ci(e!fwhGF'g)o,(gf..) <v>\greheightstar</v>(;) Qui(h)a(h) in(gh~) te(f) oc(ffe)cí(ge/fde)sus(d.c!dwede) est(ed..) (,) Sal(d)vá(efefz)tor([ev:\ifnum0=1]f[ev:\fi]%gxf_hF__E'/fwgFE'
+}%
+])tá(de!fvED'e)tis :(ed..) (:) in(f)dú(f')e(f)re(f) cí(f)ne(f)re(fhffe) et(f') ci(h)lí(hv_GFg_f)ci(e!fwhGF'g)o,(gf..) <v>\greheightstar</v>(;) Qui(h)a(h) in(gh~) te(f) oc(ffe)cí(ge/fde)sus(d.c!dwede) est(ed..) (,) Sal(d)vá(efefz)tor([ev:\ifnum0=1]f[ev:\fi]%gxf_h_F_E'/fwgFE'
 [ev:%
 {%
 \greflat{g}{0}%
@@ -54,13 +73,13 @@ transcriber:Andrew Hinkley;
 \adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemusbottom{e}{0}{-2}%
 }%
-\adjustbox{lap=0.7pt}{%
+\adjustbox{lap=0.8pt}{%
 \grehepisemus{i}{18}{0}{i}%
 }%
 }%
 \greendofglyph{9}%
 \greglyph{\char 19}{f}{f}{6}{}{%
-\adjustbox{lap=0.7pt}{%
+\adjustbox{lap=0.8pt}{%
 \grehepisemus{i}{12}{1}{i}%
 }%
 }%

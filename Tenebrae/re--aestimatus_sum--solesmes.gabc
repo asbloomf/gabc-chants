@@ -4,18 +4,30 @@ mode:4;
 book:The Liber Usualis, 1961, p. 772;
 transcriber:Andrew Hinkley;
 %%
-(c4) Æ(f)sti(de)má(ef)tus(e) sum(eg//ff/ded.) <v>\greheightstar</v>(,) cum(fd~) de(dfe)scen(fg~)dén(g_hd~)ti(f)bus(f) in(ef!hvGF/ghg) lá(egff)cum :(eef.) <v>\greheightstar</v>(:) Fá(d!ewg_/hi)ctus(h) sum(h') si(hg'gf)cut(gh) hó(%gh_G'_FE'f
+(c4) Æ(f)sti(de)má(ef)tus(e) sum(eg//ff/ded.) <v>\greheightstar</v>(,) cum(fd~) de(dfe)scen(fg~)dén(g_hd~)ti(f)bus(f) in(ef!hvGF/ghg) lá(egff)cum :(eef.) <v>\greheightstar</v>(:) Fá(%d!ewg_
+[ev:%
+\greglyph{\char 17}{d}{e}{0}{}{}%
+\greendofglyph{1}%
+\greglyph{\char 2562}{e}{h}{4}{}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
+\grehepisemus{h}{18}{0}{h}%
+}%
+}%
+\greendofelement{0}{0}%
+]/hi)ctus(h) sum(h') sic(hg'gf)ut(gh) hó(%gh_G'_FE'f
 [ev:%
 {%
 \greglyph{\char 1025}{g}{g}{0}{}{%
-\adjustbox{scale={1.2}{1},lap=1.5pt}{%
+\adjustbox{lap=0.8pt}{%
 \grehepisemusbridge{i}{}{}%
 \grehepisemus{i}{18}{0}{i}%
 }%
 }%
 \greendofglyph{9}%
 \greglyph{\char 19}{g}{f}{6}{}{%
-%\grehepisemus{i}{12}{1}{i}%
+\adjustbox{lap=0.8pt}{%
+\grehepisemus{i}{12}{1}{i}%
+}%
 \grevepisemus{f}{12}%
 }%
 \greendofglyph{3}%
@@ -50,7 +62,39 @@ transcriber:Andrew Hinkley;
 }%
 }%
 }%
-])o,(ed/efe.) (;) in(c)ter(de~) mór(e_fED)tu(fg)os(gv.fg!hv_/ig/h_g) lí(egff)ber.(fe..) (::z) <sp>V/</sp>(//////) Po(h)su(h)é(h)runt(gh) me(%gf!gwh_g_/hv_GE/f_e
+])o,(ed/efe.) (;) in(c)ter(de~) mór(%e_fED
+[ev:%
+\greglyph{\char 1025}{e}{e}{0}{}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
+\grehepisemusbottom{d}{0}{-1}%
+}%
+}%
+\greendofglyph{9}%
+\greglyph{\char 19}{e}{f}{6}{}{}%
+\greendofglyph{3}%
+\greglyph{\char 19}{d}{f}{6}{}{}%
+])tu(fg)os(%gv.fg!hv_/ig/h_g%
+[ev:%
+\greglyph{\char 23}{g}{f}{0}{}{%
+\grepunctummora{g}{0}{0}{0}%
+}%
+\greendofglyph{0}%
+\greglyph{\char 1025}{f}{h}{0}{}{}%
+\greendofglyph{1}%
+\greglyph{\char 22}{h}{i}{0}{}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
+\grehepisemus{i}{0}{0}{i}%
+}%
+}%
+\greendofelement{0}{0}%
+\greglyph{\char 5122}{i}{h}{1}{}{}%
+\greendofelement{0}{0}%
+\greglyph{\char 6145}{h}{e}{8}{}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
+\grehepisemus{i}{17}{1}{i}%
+}%
+}%
+]) lí(egff)ber.(fe..) (::z) <sp>V/</sp>(//////) Po(h)su(h)é(h)runt(gh) me(%gf!gwh_g_/hv_GE/f_e
 [ev:%
 {%
 \greglyph{\char 5121}{g}{g}{8}{}{}%
@@ -73,7 +117,19 @@ transcriber:Andrew Hinkley;
 \greglyph{\char 19}{e}{f}{6}{}{}%
 \greendofelement{0}{0}%
 \greglyph{\char 6145}{f}{g}{8}{}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemus{g}{17}{1}{g}%
 }%
 }%
-]) in(g) lá(gh)cu(g) in(gf~)fe(gh)ri(gf)ó(e!fwg_f)ri,(fe..) (;) in(f) te(de)ne(e)bró(ef)sis,(e'_) et(e) in(e!fwgFE) úm(g)bra(gh_gh'GFz) mór(ef/gef)tis.(ed..) (::) <v>\greheightstar</v>() Fá(d!ewg_/hi)ctus.(h) (::)
+}%
+]) in(g) lá(gh)cu(g) in(gf~)fe(gh)ri(gf)ó(e!fwg_f)ri,(fe..) (;) in(f) te(de)ne(e)bró(ef)sis,(e'_) et(e) in(e!fwgFE) úm(g)bra(gh_gh'GFz) mór(ef/gef)tis.(ed..) (::) <v>\greheightstar</v>() Fá(%d!ewg_
+[ev:%
+\greglyph{\char 17}{d}{e}{0}{}{}%
+\greendofglyph{1}%
+\greglyph{\char 2562}{e}{h}{4}{}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
+\grehepisemus{h}{18}{0}{h}%
+}%
+}%
+\greendofelement{0}{0}%
+]/hi)ctus.(h) (::)

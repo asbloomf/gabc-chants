@@ -21,7 +21,7 @@ transcriber:Andrew Hinkley;
 [ev:%
 {%
 \greglyph{\char 5121}{g}{g}{8}{}{%
-\raisebox{1pt}{%
+\adjustbox{raise=1pt,lap=-0.4pt}{%
 \grepunctummora{g}{3}{0}{0}%
 }%
 }%
@@ -29,11 +29,11 @@ transcriber:Andrew Hinkley;
 \greglyph{\char 26}{g}{g}{4}{}{}%
 \greglyph{\char 13318}{h}{g}{2}{}{}%
 }%
-])rat :(g_h/ih..) (:) a(e) fá(g)ci(gh)e(h') i(h)ni(h)qui(hg)tá(h_0//ighz)tis(hgg/efe.) (,) su(e)blá(e!fwgFE')tus(g) est(gh_gh'GF) jú(ef/gef)stus :(ed..) <v>\greheightstar</v>(:) Et(d_f) é(ixh_i)rit(g_h_g_) in(e_f) pá(%g.f!gwhgh
+])rat :(g_h/ih..) (:) a(e) fá(g)ci(gh)e(h') in(h)i(h)qui(hg)tá(h_0//ighz)tis(hgg/efe.) (,) su(e)blá(e!fwgFE')tus(g) est(gh_gh'GF) jú(ef/gef)stus :(ed..) <v>\greheightstar</v>(:) Et(d_f) é(ixh_i)rit(g_h_g_) in(e_f) pá(%g.f!gwhgh
 [ev:%
 {%
 \greglyph{\char 5121}{g}{g}{8}{}{%
-\raisebox{1pt}{%
+\adjustbox{raise=1pt,lap=-0.4pt}{%
 \grepunctummora{g}{3}{0}{0}%
 }%
 }%
@@ -45,7 +45,7 @@ transcriber:Andrew Hinkley;
 [ev:%
 {%
 \greglyph{\char 5121}{g}{g}{8}{}{%
-\raisebox{1pt}{%
+\adjustbox{raise=1pt,lap=-0.4pt}{%
 \grepunctummora{g}{3}{0}{0}%
 }%
 }%

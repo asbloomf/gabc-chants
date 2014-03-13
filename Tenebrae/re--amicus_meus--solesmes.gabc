@@ -4,7 +4,27 @@ mode:8;
 book:The Liber Usualis, 1961, p. 643;
 transcriber:Andrew Hinkley;
 %%
-(c4) A(g)mí(gf__//f.d!ewfED)cus(c_d) mé(f_g)us(fg!hvhg'/jh'hg.) <v>\greheightstar</v>(;) ó(j)scu(ji)li(hg) me(fg) trá(gh)di(g)dit(%
+(c4) A(g)mí(%gf__//f.d!ewfED
+[ev:%
+{%
+\greglyph{\char 5121}{g}{f}{8}{}{%
+\grehepisemus{h}{17}{1}{h}%
+\grehepisemus{h}{0}{0}{h}%
+}%
+\greendofelement{1}{0}%
+\greglyph{\char 6146}{f}{e}{1}{}{%
+\adjustbox{lap=-0.6pt}{%
+\grepunctummora{f}{2}{0}{0}%
+}%
+}%
+\greendofglyph{1}%
+\greglyph{\char 2561}{e}{e}{4}{}{}%
+\greendofglyph{9}%
+\greglyph{\char 19}{e}{c}{6}{}{}%
+\greendofglyph{3}%
+\greglyph{\char 19}{d}{c}{6}{}{}%
+}%
+])cus(c_d) mé(f_g)us(fg!hvhg'/jh'hg.) <v>\greheightstar</v>(;) ó(j)scu(ji)li(hg) me(fg) trá(gh)di(g)dit(%
 [ev:%g.h!iwj/jv_I_H'/iwj_i_/h_iHG
 {%
 \greglyph{\char 1025}{g}{i}{0}{}{%
@@ -14,14 +34,14 @@ transcriber:Andrew Hinkley;
 \greglyph{\char 2561}{i}{j}{4}{}{}%
 \greendofelement{0}{0}%
 \greglyph{\char 22}{j}{i}{0}{}{%
-\adjustbox{lap=2pt}{%
-\grehepisemusbridge{k}{}{}%
-\grehepisemus{k}{0}{0}{k}%
-}%
+%\adjustbox{lap=2pt}{%
+%\grehepisemusbridge{k}{}{}%
+%\grehepisemus{k}{0}{0}{k}%
+%}%
 }%
 \greendofglyph{9}%
 \greglyph{\char 19}{i}{i}{6}{}{%
-\adjustbox{scale={1.8}{1}}{%
+\adjustbox{scale={1.85}{1},lap=.3pt}{%
 \grehepisemus{k}{12}{1}{k}%
 }%
 }%
@@ -45,11 +65,37 @@ transcriber:Andrew Hinkley;
 \greendofglyph{3}%
 \greglyph{\char 19}{g}{g}{6}{}{}%
 }%
-]) sí(g!hwihi)gno:(hg..) (:) Quem(g) o(f)scu(ghg')lá(h)tus(g') fú(g)e(ge__/fv_ED'e)ro,(ed__) (,) í(f_0!gh)pse(g) est,(h.) (;) te(gf)né(f.h!iwjjv)te(%j_kJ'IH'__/iwjIH
+]) sí(g!hwihi)gno:(hg..) (:) Quem(g) o(f)scu(ghg')lá(h)tus(g') fú(g)e(%ge__/fv_ED'e
+[ev:% TODO:shorten these grehepisemus and put them both on the same vertical height -higher one
+{%
+\greglyph{\char 5122}{g}{f}{1}{}{%
+\adjustbox{scale={0.85}{1},trim=0.7pt 0pt}{%
+\grehepisemus{h}{2}{2}{h}%
+\grehepisemus{h}{0}{0}{h}%
+}%
+}%
+\greendofelement{0}{0}%
+\greglyph{\char 22}{f}{e}{0}{}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
+\grehepisemus{h}{0}{0}{h}%
+}%
+}%
+\greendofglyph{9}%
+\greglyph{\char 19}{e}{e}{6}{}{}%
+\greendofglyph{3}%
+\greglyph{\char 19}{d}{e}{6}{}{%
+\grevepisemus{c}{12}%
+}%
+\greendofglyph{0}%
+\greglyph{\char 17}{e}{e}{0}{}{}%
+}%
+])ro,(ed__) (,) íp(f_0!gh)se(g) est,(h.) (;) te(gf)né(f.h!iwjjv)te(%j_kJ'IH'__/iwjIH
 [ev:%
 {%
 \greglyph{\char 1025}{j}{j}{0}{}{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemusbottom{i}{0}{-1}%
+}%
 }%
 \greendofglyph{9}%
 \greglyph{\char 19}{j}{i}{6}{}{%
@@ -98,7 +144,9 @@ transcriber:Andrew Hinkley;
 {%
 \greadditionalline{18}{0}{2}%
 }{%
+\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
 \grehepisemusbottom{j}{0}{-1}%
+}%
 }%
 \greendofglyph{9}%
 \greglyph{\char 19}{k}{j}{6}{}{%
@@ -121,7 +169,7 @@ transcriber:Andrew Hinkley;
 \greendofelement{0}{0}%
 \greglyph{\char 2561}{j}{j}{4}{}{}%
 }%
-])lum(jkj') fé(h)cit(g!hwji/jkjz) sí(jv_IH/iv_HG)gnum,(hg..) (;) qui(f) per(ghg) ó(h)scu(g)lum(g.) (,) ad(g)im(g)plé(gh)vit(g) ho(g_hG'E)mo(g)cí(f/g'h)di(fe)um.(%dec./d!ewf_e_/fv_ED.
+])lum(jkj') fé(h)cit(g!hwji/jkjz) sí(jv_IH/iv_HG)gnum,(hg..) (;) qui(f) per(ghg) ó(h)scu(g)lum(g.) (,) ad(g)im(g)plé(gh)vit(g) ho(g_hG'E)mi(g)cí(f/g'h)di(fe)um.(%dec./d!ewf_e_/fv_ED.
 [ev:%
 {%
 \greglyph{\char 15371}{d}{d}{0}{}{%
@@ -183,14 +231,14 @@ transcriber:Andrew Hinkley;
 \greglyph{\char 2561}{i}{j}{4}{}{}%
 \greendofelement{0}{0}%
 \greglyph{\char 22}{j}{i}{0}{}{%
-\adjustbox{lap=2pt}{%
-\grehepisemusbridge{k}{}{}%
-\grehepisemus{k}{0}{0}{k}%
-}%
+%\adjustbox{lap=2pt}{%
+%\grehepisemusbridge{k}{}{}%
+%\grehepisemus{k}{0}{0}{k}%
+%}%
 }%
 \greendofglyph{9}%
 \greglyph{\char 19}{i}{i}{6}{}{%
-\adjustbox{scale={1.8}{1}}{%
+\adjustbox{scale={1.85}{1},lap=.3pt}{%
 \grehepisemus{k}{12}{1}{k}%
 }%
 }%
