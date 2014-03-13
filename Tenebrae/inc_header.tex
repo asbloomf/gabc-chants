@@ -39,5 +39,18 @@
   \bigskip
   \smallskip
 }
+\newcommand{\alternatemusicintro}{\emph{Alternately, the following three part arrangement can be sung in place of the chant.}}
+\def\betweenLilyPondSystem#1{
+  \ifnum#1>1
+    \vfil\noindent
+  \else
+    \linebreak
+  \fi
+  %\vspace{0.5\baselineskip}
+}
+\newcommand{\includelilypond}[1]{
+  \noindent
+  \import{lilypond/}{#1}
+}
 
 \def\nogloriapatri{T}
