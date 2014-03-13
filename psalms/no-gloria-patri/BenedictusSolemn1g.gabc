@@ -6,13 +6,13 @@ date: 2013;
 style: modern;
 initial-style: 0;
 %%
-(c4)1. B{e}(f)ne(gh)dí(h)ctus(h) Dó(h)mi(h)<i>nus</i>,(hg) <i>De</i>(ixgi)<i>us</i>(h) <b>Is</b>(%hr[ocba:1;7mm]
+(c4)1. B{e}(f)ne(gh)dí(h)ctus(h) Dó(h)mi(h)<i>nus</i>,(hg) <i>De</i>(ixgi)<i>us</i>(h) <b>Is</b>(%hr[ocba:1;6.5mm]
 [ev:%
 {%
 \grepunctumcavum{h}{h}{0}{}{}%
 {%
 % verbatim text at note level:
-\greovercurlybrace{7mm}{1}{0pt}{0pt}{1}%
+\greovercurlybrace{6.7mm}{1}{0pt}{0pt}{1}%
 % end of verbatim text
 }{}%
 }%
