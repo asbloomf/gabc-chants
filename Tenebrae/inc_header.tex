@@ -53,4 +53,33 @@
   \import{lilypond/}{#1}
 }
 
+\newcommand{\startday}[1]{
+%
+% The title page:
+\pagebreak
+\thispagestyle{empty}
+\cleardoublepage
+\thispagestyle{empty}
+\gdef\heading{#1 At \officehour}
+\begin{center}{\addfontfeature{Numbers=Lining}%
+\thispagestyle{empty}
+\vspace*{\stretch{1}}
+\Huge \textsc{#1}
+\vspace{\stretch{2}}
+
+\pagebreak
+\thispagestyle{empty}
+\vspace*{-25pt}
+\normalsize\textsc{At Matins}
+}\end{center}
+%\vspace{-2ex}
+%\bigskip
+
+%\emph{The altar is prepared with cross and six lighted candles, but without ornament.}
+
+\gdef\officehour{Matins}
+\gdef\matinsnocturn{1st Nocturn}
+\writeheading{In the 1st Nocturn}
+}
+
 \def\nogloriapatri{T}

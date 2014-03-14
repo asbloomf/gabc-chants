@@ -1,6 +1,6 @@
 \header {
   tagline = ""
-  composer = "Giovanni Battista Martini (?-?)"
+  composer = "Giovanni Battista Martini (1706-84)"
 }
 \include "english.ly"
 \include "lilypond-book-preamble.ly"
@@ -28,7 +28,7 @@ sopWords = \lyricmode {
   \set fontSize = #0.5
   %\set vocalName = "2. "
   %\set shortVocalName = "2. "
-  Tri -- stis est | a -- ni -- ma me -- a us -- que __ ad mor -- tem. Su -- sti -- ne -- te hic et | vi -- gi -- la -- te __ me -- cum.  Nunc vi -- de -- bi -- tis tur -- bam, quæ cir -- cum -- da -- bit me, quæ cir -- cum -- da -- bit | me, quæ cir -- cum -- da -- bit -- me.  Vos fu -- gam ca -- pi -- e -- tis, et __ e -- go va -- dam, et e -- go __ | va -- dam, im -- mo -- la -- ri pro vo -- bis.
+  Tri -- stis est | á -- ni -- ma me -- a us -- que __ ad mor -- tem_: su -- sti -- né -- te hic, et | vi -- gi -- lá -- te __ me -- cum_: Nunc vi -- dé -- bi -- tis tur -- bam, quæ cir -- cúm -- da -- bit me, quæ cir -- cúm -- da -- bit | me, quæ cir -- cúm -- da -- bit -- me_:  Vos fu -- gam ca -- pi -- é -- tis, et __ e -- go va -- dam, et e -- go __ | va -- dam im -- mo -- lá -- ri pro vo -- bis.
 }
 
 altoMusic = \relative c' {
@@ -41,7 +41,7 @@ altoMusic = \relative c' {
 
 altoWords = \lyricmode {
   \set fontSize = #0.5
-  Tri -- stis est | a -- ni -- ma me -- a us -- que ad mor -- tem. Su -- sti -- ne -- te hic et | vi -- gi -- la -- te __ me -- cum.  Nunc vi -- de -- bi -- tis tur -- bam, quæ cir -- cum -- da -- bit me, quæ cir -- cum -- da -- bit | me, quæ cir -- cum -- da -- bit -- me.  Vos fu -- gam ca -- pi -- e -- tis, et e -- go __ va -- dam, im -- mo -- la -- ri pro vo -- bis.
+  Tri -- stis est | á -- ni -- ma me -- a us -- que ad mor -- tem_: su -- sti -- né -- te hic, et | vi -- gi -- lá -- te __ me -- cum_: Nunc vi -- dé -- bi -- tis tur -- bam, quæ cir -- cúm -- da -- bit me, quæ cir -- cúm -- da -- bit | me, quæ cir -- cúm -- da -- bit -- me_:  Vos fu -- gam ca -- pi -- é -- tis, et e -- go __ va -- dam im -- mo -- lá -- ri pro vo -- bis.
 }
 
 bassMusic = \relative a {
@@ -54,7 +54,7 @@ bassMusic = \relative a {
 
 bassWords = \lyricmode {
   \set fontSize = #0.5
-  Tri -- stis est | a -- ni -- ma me -- a us -- que ad mor -- tem. Su -- sti -- ne -- te | hic et vi -- gi -- la -- te me -- cum. | Nunc vi -- de -- bi -- tis tur -- bam, | quæ cir -- cum -- da -- bit me, __ quæ cir -- cum -- da -- bit | me, quæ cir -- cum -- da -- bit -- me.  Vos fu -- gam ca -- pi -- e -- tis, ca -- pi -- e -- tis, et e -- go | va -- dam, im -- mo -- la -- ri pro | vo -- bis.
+  Tri -- stis est | á -- ni -- ma me -- a us -- que ad mor -- tem_: Su -- sti -- né -- te | hic et vi -- gi -- lá -- te me -- cum_: | Nunc vi -- dé --  bi -- tis tur -- bam, | quæ cir -- cúm -- da -- bit me, __ quæ cir -- cúm -- da -- bit | me, quæ cir -- cúm -- da -- bit -- me_:  Vos fu -- gam ca -- pi -- é -- tis, ca -- pi -- é -- tis, et e -- go | va -- dam im -- mo -- lá -- ri pro | vo -- bis.
 }
 
 chantMusic = \relative c' {

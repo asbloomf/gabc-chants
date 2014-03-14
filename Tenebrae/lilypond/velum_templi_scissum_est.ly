@@ -1,6 +1,6 @@
 \header {
   tagline = ""
-  composer = "Sean Connolly (?-)"
+  composer = "Sean Connolly"
 }
 \include "english.ly"
 \include "lilypond-book-preamble.ly"
@@ -39,18 +39,18 @@ sopWords = \lyricmode {
   \set fontSize = #0.5
   %\set vocalName = "2. "
   %\set shortVocalName = "2. "
-  et om -- nis | ter -- ra __ | tre -- mu -- it! | la -- tro de cru -- ce cla -- ma -- bat, di -- cens: me -- men -- to me -- i, | Do -- mi -- ne, dum ve -- ne -- ris in re -- gnum | Tu -- um!
+  Et om -- nis | ter -- ra __ | tré -- mu -- it_: | la -- tro de cru -- ce cla -- má -- bat, di -- cens_: Me -- mén -- to me -- i, | Dó -- mi -- ne, dum vé -- ne -- ris in re -- gnum | Tu -- um.
 }
 
 altoMusic = \relative c {
   \clef "treble_8"
   f2 g4. g8 | a2 g | a4 a d2 | cs4 cs8 cs d4 d8 d | cs4 d2 cs4 | d2. d4 |
-  d4. d8 c4 c | bf2. a8( g) | a4 bf( c d) | c2 bf | a4 a bf d ~ | d cs d2 \bar "||" 
+  d4. d8 c4 c | bf2. a8( g) | a4 bf( c d) | c2 bf | a4 a bf d ~ | d cs d2 \bar "||"
 }
 
 altoWords = \lyricmode {
   \set fontSize = #0.5
-  et om -- nis | ter -- ra | tre -- mu -- it! | la -- tro de cru -- ce cla -- ma -- bat, di -- cens: me -- men -- to me -- i, | Do -- mi -- ne, dum __ | ve -- ne -- ris in re -- gnum __ Tu -- um!
+  Et om -- nis | ter -- ra | tré -- mu -- it_: | la -- tro de cru -- ce cla -- má -- bat, di -- cens_: Me -- mén -- to me -- i, | Dó -- mi -- ne, dum __ | vé -- ne -- ris in re -- gnum __ Tu -- um.
 }
 
 bassMusic = \relative c {
@@ -61,7 +61,7 @@ bassMusic = \relative c {
 
 bassWords = \lyricmode {
   \set fontSize = #0.5
-  et om -- nis | ter -- ra | tre -- mu -- it! | la -- tro de cru -- ce cla -- ma -- bat, di -- cens: me -- men -- to me -- i, | Do -- mi -- ne, __ dum __ | ve -- ne -- ris in re -- gnum | Tu -- um!
+  Et om -- nis | ter -- ra | tré -- mu -- it_: | la -- tro de cru -- ce cla -- má -- bat, di -- cens_: Me -- mén -- to me -- i, | Dó -- mi -- ne, __ dum __ | vé -- ne -- ris in re -- gnum | Tu -- um.
 
 }
 
@@ -80,8 +80,8 @@ chantMusic = \relative c' {
 
 
 chantWords = \lyricmode {
-  Pe -- træ __ scis -- sæ sunt, et mo -- nu -- men -- ta a -- per -- ta sunt,
-  et mul -- ta cor -- po -- ra sanc -- to -- rum, qui do -- mi -- e -- runt sur -- re -- xe -- runt.
+  Pe -- træ __ scis -- sæ sunt, et mo -- nu -- mén -- ta a -- pér -- ta sunt,
+  et mul -- ta cór -- po -- ra sanc -- tó -- rum, qui do -- mí -- e -- rant sur -- re -- xé -- runt.
 }
 
 %altoWords = \lyricmode {

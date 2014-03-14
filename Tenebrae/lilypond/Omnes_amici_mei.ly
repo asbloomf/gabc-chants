@@ -1,6 +1,6 @@
 \header {
   tagline = ""
-  composer = "Sean Connolly (?-)"
+  composer = "Sean Connolly"
 }
 \include "english.ly"
 \include "lilypond-book-preamble.ly"
@@ -29,7 +29,7 @@ sopWords = \lyricmode {
   \set fontSize = #0.5
   %\set vocalName = "2. "
   %\set shortVocalName = "2. "
-  O -- mnes a -- mi -- ci | me -- i de -- re -- lin -- que -- runt me. | Et præ | va -- lu -- e -- runt in -- si -- pi -- en -- tes | mi -- hi; tra -- di -- dit | me quem | di -- li -- ge -- bam. | Et ter -- ri -- bi -- li -- bus o -- cu -- lis a -- ce -- to po -- ta -- bant | me.
+  Om -- nes a -- mí -- ci | me -- i de -- re -- li -- qué -- runt me, | et præ -- | va -- lu -- é -- runt in -- si -- di -- án -- tes | mi -- hi_: trá -- di -- dit | me quem | di -- li -- gé -- bam_: | Et ter -- ri -- bí -- li -- bus ó -- cu -- lis, a -- cé -- to po -- tá -- bant | me.
 }
 
 altoMusic = \relative c' {
@@ -43,8 +43,8 @@ altoMusic = \relative c' {
 
 altoWords = \lyricmode {
   \set fontSize = #0.5
-  O -- mnes a -- mi -- ci __ me -- i de -- re -- lin -- que -- runt me. __ | Et præ | va -- lu -- e -- runt in -- si -- pi -- en -- tes | mi -- hi; tra -- di -- dit | me quem | di -- li -- ge -- bam. | Et ter -- ri -- bi -- li -- bus o -- cu -- lis pla -- ga cru -- de -- li per -- cu -- ti -- en -- tes
-  a -- ce -- to po -- ta -- bant | me.
+  Om -- nes a -- mí -- ci __ me -- i de -- re -- li -- que -- runt me, __ | et præ -- | va -- lu -- é -- runt in -- si -- di -- án -- tes | mi -- hi_: trá -- di -- dit | me quem | di -- li -- gé -- bam_: | Et ter -- ri -- bí -- li -- bus ó -- cu -- lis pla -- ga cru -- dé -- li per -- cu -- ti -- én -- tes,
+  a -- cé -- to po -- tá -- bant | me.
 }
 
 bassMusic = \relative c {
@@ -58,8 +58,8 @@ bassMusic = \relative c {
 
 bassWords = \lyricmode {
   \set fontSize = #0.5
-  O -- mnes a -- mi -- ci __ me -- i de -- re -- lin -- que -- runt me. __ | Et præ | va -- lu -- e -- runt in -- si -- pi -- en -- tes | mi -- hi; tra -- di -- dit | me quem | di -- li -- ge -- bam. | Et ter -- ri -- bi -- li -- bus o -- cu -- lis pla -- ga cru -- de -- li per -- cu -- ti -- en -- tes
-  a -- ce -- to po -- ta -- bant | me.
+  Om -- nes a -- mí -- ci __ me -- i de -- re -- li -- qué -- runt me, __ | et præ -- | va -- lu -- é -- runt in -- si -- di -- án -- tes | mi -- hi_: trá -- di -- dit | me quem | di -- li -- gé -- bam_: | Et ter -- ri -- bí -- li -- bus ó -- cu -- lis pla -- ga cru -- dé -- li per -- cu -- ti -- én -- tes,
+  a -- cé -- to po -- tá -- bant | me.
 }
 
 chantMusic = \relative c {
@@ -76,7 +76,7 @@ chantMusic = \relative c {
 
 
 chantWords = \lyricmode {
-  In -- ter in -- i -- quos pro -- je -- ce -- runt me. Et non per -- pe -- ce -- runt a -- ni -- mæ me -- æ.
+  In -- ter in -- í -- quos pro -- je -- cé -- runt me, et non per -- pe -- cé -- runt á -- ni -- mæ me -- æ.
 }
 
 %altoWords = \lyricmode {
