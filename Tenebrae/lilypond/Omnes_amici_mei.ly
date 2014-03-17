@@ -14,7 +14,7 @@ global = {
 sopMusic = \relative c' {
   \clef "treble_8"
   f2 f4 f | e2. d4 | c2.( b4) | c2. c4 | c2 c |
-  c4 c c2 \bar "||" e2. e4 | c2 c | f1 | e2. e4 | d e d4. d8 |
+  c4 c c2\fermata \bar "||" e2. e4 | c2 c | f1 | e2. e4 | d e d4. d8 |
   e2 e \bar "||" r4 e e f | e2. e4 | d c b2 | a1 \bar "||"
   \mark \markup { \musicglyph #"scripts.segno" }
   f'2 f4 f | e4. e8 e4 e ~ | e d e2 | r1 | r |
@@ -34,8 +34,8 @@ sopWords = \lyricmode {
 
 altoMusic = \relative c' {
   \clef "treble_8"
-  a2 a4 a | gs2 a2( ~ | a4 g) f2( ~ | f4 e8 d) e4 f | g a f f |
-  g2 ~ g2 \bar "||" g g | a c( ~ | c4 b8 a) b2 | c2. c4 | c c c b |
+  a2 a4 a | gs2 a2 ~ | a4( g) f2 ~ | f4( e8 d) e4 f | g a f f |
+  g2 ~ g2\fermata \bar "||" g g | a c ~ | c4( b8 a) b2 | c2. c4 | c c c b |
   c2 c \bar "||" c c4 a | gs2. a4 | b a a( gs) | a1 \bar "||"
   a2 a4 a | gs4. gs8 gs2 | a4. a8 b4 c | c d e2 | d4 c b c ~ |
   c b c2 \bar "||" r4 g g2 | a4 c c( b8 a | b2) g | g1 \bar "||"
@@ -49,8 +49,8 @@ altoWords = \lyricmode {
 
 bassMusic = \relative c {
   \clef bass
-  d2 d4 d | e2 f2( ~ f4 e) d2 | c2. d4 | e f d4. d8 |
-  c2 ~ c \bar "||" c2. c4 | f2 e | d1 | e4 f g2 | f4( e) f g |
+  d2 d4 d | e2 f2 ~ f4( e) d2 | c2. d4 | e f d4. d8 |
+  c2 ~ c\fermata \bar "||" c2. c4 | f2 e | d1 | e4 f g2 | f4( e) f g |
   c,2 c \bar "||" r4 a'4 a d, | e2. c4 | d e d( e) | a1 \bar "||"
   d,2 d4 d | e4. e8 e2 | f4. f8 e4 a | a b c2 | b4 a g c, |
   f( g) c,2 \bar "||" r4 c c2 | f4 e d2 ~ | d c | c1 \bar "||"
@@ -126,20 +126,20 @@ chantWords = \lyricmode {
 }
 
 \score {
-  \new ChoirStaff <<
-    \new Staff = "chant" <<
-      \new Voice = "chant" \with {
-      \remove "Stem_engraver"
-    } {
-        << \global \chantMusic >>
-      }
-    >>
-    \new Lyrics = "chant"
-    \context Lyrics = "chant" \lyricsto "chant" \chantWords
+  \new Staff <<
+    \new Voice = "chant" \chantMusic
+    \new Lyrics = "chant" \lyricsto chant \chantWords
   >>
   \layout {
     \context {
       \Staff
+      \remove "Time_signature_engraver"
+      \override Stem #'transparent = ##t
+      \override Flag #'transparent = ##t
+    }
+    \context {
+      \Voice
+      \override Stem #'length = #0
     }
   }
 }

@@ -14,10 +14,10 @@ global = {
 sopMusic = \relative c' {
   \clef "treble_8"
   d2 d4 d | d d d( c) | d2 r2 | r4 bf4 ef2 | c4 d c2 | bf2 d2 |
-  c4 c ef ef8 ef | d4 d d4. d8 | d4 e f2 | d4 d cs( d ~ | d cs) d2 | 
+  c4 c ef ef8 ef | d4 d d4. d8 | d4 e f2 | d4 d cs( d) ~ | d( cs) d2 | 
   \mark \markup { \musicglyph #"scripts.segno" }
   a4 a8 a bf4 bf |
-  c4 c d2 | d4 d bf2 | c4 bf a2 | a b( | c4) d ef8[ d] c4 ~ | c bf a2 | g1 \bar "||"
+  c4 c d2 | d4 d bf2 | c4 bf a2 | a b( | c4) d ef8[ d] c4 ~ | c bf a2 | g1\fermata \bar "||"
     \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
     \override Score.RehearsalMark #'self-alignment-X = #RIGHT
     \override Score . RehearsalMark #'font-shape = #'italic
@@ -37,27 +37,27 @@ altoMusic = \relative c' {
   \clef "treble_8"
   bf2 a4 a | bf4 a g2 | fs4 a d2 | bf c | a4( bf2 a4) | bf2 bf |
   a4 a c c8 c | b4 b b4. b8 | b4 cs d a ~ | a g g( f | e2) d | fs4 fs8 fs g4 bf |
-  bf a bf2 | bf4 bf g2 | a4 g fs2 | fs g ~ | g4 g2 a8[ g] | fs4 g2 fs4 | g1 \bar "||"
+  bf a bf2 | bf4 bf g2 | a4 g fs2 | fs g ~ | g4 g2 a8[ g] | fs4 g2 fs4 | g1\fermata \bar "||"
 }
 
 altoWords = \lyricmode {
   \set fontSize = #0.5
   In mon -- te | O -- li -- vé -- | ti o -- rá -- | vit ad | Pa -- | trem_: Pa -- |
   ter, si fí -- e -- ri | po -- test, tráns -- e -- | at a me ca -- lix i -- ste_: | Spí -- ri -- tus qui -- dem |
-  prom -- ptus est, | ca -- ro au -- | tem in -- fír -- | ma, ca -- ro au -- tem in -- fír -- ma.
+  prom -- ptus est, | ca -- ro au -- | tem in -- fír -- | ma, ca -- ro au -- _ -- tem in -- fír -- ma.
 }
 
 bassMusic = \relative a {
   \clef bass
   g2 fs4 fs | g d ef2 | d r4 d | g2 ef4 ef | f1 | bf2 bf |
   f4 f c c8 c| g'4 g g4. g8 | g4 e d2 | bf4 bf a2 ~ | a d | d4 d8 d g4 g |
-  ef f bf,2 | bf4 bf ef2 | c4 c d2 | d g2( | ef4) b c c | d ef8( d c bf a4) | g1 \bar "||"
+  ef f bf,2 | bf4 bf ef2 | c4 c d2 | d g2( | ef4) b c c | d ef8( d c bf a4) | g1\fermata \bar "||"
 }
 
 chantMusic = \relative c {
   \clef bass
   \cadenzaOn
-  bf4 c( d) d d ef d c d4. r4 d d d d d d d c bf c c( ~ c d4.)
+  bf4 c( d) d d ef d c d4. r4 d d d d d d d c bf c c ~ c d4.)
   \cadenzaOff \bar "||"
   \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
     \override Score.RehearsalMark #'self-alignment-X = #RIGHT
@@ -119,20 +119,20 @@ chantWords = \lyricmode {
 }
 
 \score {
-  \new ChoirStaff <<
-    \new Staff = "chant" <<
-      \new Voice = "chant" \with {
-      \remove "Stem_engraver"
-    } {
-        << \global \chantMusic >>
-      }
-    >>
-    \new Lyrics = "chant"
-    \context Lyrics = "chant" \lyricsto "chant" \chantWords
+  \new Staff <<
+    \new Voice = "chant" \chantMusic
+    \new Lyrics = "chant" \lyricsto chant \chantWords
   >>
   \layout {
     \context {
       \Staff
+      \remove "Time_signature_engraver"
+      \override Stem #'transparent = ##t
+      \override Flag #'transparent = ##t
+    }
+    \context {
+      \Voice
+      \override Stem #'length = #0
     }
   }
 }

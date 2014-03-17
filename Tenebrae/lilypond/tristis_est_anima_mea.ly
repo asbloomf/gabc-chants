@@ -13,11 +13,12 @@ global = {
 
 sopMusic = \relative c' {
   \clef "treble_8"
-  b2 b4 b | c e8 e e4( d) | e e2 d4( | d4) c c( b) | c2 e4. e8 | f4 f d d |
+  b2 b4 b | c e8 e e4( d) | e e2 d4 ~ | d4 c c( b) | c2 e4. e8 | f4 f d d |
   e4. d8 c2 | d4(e) d d | r2 e4 d | e d8 c d4 d | r2 c4 b | c b8 a b2 |
   r4 e8 e c8. c16 f4 | d e8 e d8. d16 d4 | c2
   \mark \markup { \musicglyph #"scripts.segno" }
-  e2 | d8 c d b c2 | b4 e4.( a,8) d4 ~ | d c c( b) | c e e d8( c) | c4 b r e8 e | e4 d8 c b4( c | b2) a \bar "||"
+  e2 | d8 c d b c2 | b4 e4.( a,8) d4 ~ |
+  d c c( b) | c e e d8( c) | c4 b r e8 e | e4 d8 c b4( c | b2) a\fermata \bar "||"
     \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
     \override Score.RehearsalMark #'self-alignment-X = #RIGHT
     \override Score . RehearsalMark #'font-shape = #'italic
@@ -36,7 +37,7 @@ altoMusic = \relative c' {
   gs2 gs4 gs | a c8 c a2 | gs a | g4 g f2 | e c'4. c8 | d4 d b b |
   c4. b8 c2 | b4( c) b b | r2 c4 b | c b8 a b4 b | r2 a4 gs | a gs8 fs gs2 |
   r4 c8 c a8. a16 d4 | b c8 c c8. b16 b4 | c2 r2 | r1 | r2 a |
-  g8 f g e f2 | e4 c' c b8( a) | a4 gs r c8 c | c4 b8 a gs4( a ~ | a gs) a2 \bar "||" 
+  g8 f g e f2 | e4 c' c b8( a) | a4 gs r c8 c | c4 b8 a gs4( a) ~ | a( gs) a2\fermata \bar "||" 
 }
 
 altoWords = \lyricmode {
@@ -49,7 +50,7 @@ bassMusic = \relative a {
   e2 e4 e | c a8 a f'2 | e f | e4 e d2 | c r | f4. f8 g4 g |
   e e f4. e8 | d4 c g' g | c b c g8 g | c,2 g' | a4 gs a e8 e | a,2( e') |
   r4 c8 c f8. f16 d4 | g c,8 c g'8. g16 g,4 | c2 r2 | r2 a' | g8 f g e f2 |
-  e4 e8 c d2 | c4 c d4. d8 | e4 e c2 | d e4 a,8 a | e'2 a, \bar "||"
+  e4 e8 c d2 | c4 c d4. d8 | e4 e c2 | d e4 a,8 a | e'2 a,\fermata \bar "||"
 }
 
 bassWords = \lyricmode {
@@ -121,20 +122,20 @@ chantWords = \lyricmode {
 }
 
 \score {
-  \new ChoirStaff <<
-    \new Staff = "chant" <<
-      \new Voice = "chant" \with {
-      \remove "Stem_engraver"
-    } {
-        << \global \chantMusic >>
-      }
-    >>
-    \new Lyrics = "chant"
-    \context Lyrics = "chant" \lyricsto "chant" \chantWords
+  \new Staff <<
+    \new Voice = "chant" \chantMusic
+    \new Lyrics = "chant" \lyricsto chant \chantWords
   >>
   \layout {
     \context {
       \Staff
+      \remove "Time_signature_engraver"
+      \override Stem #'transparent = ##t
+      \override Flag #'transparent = ##t
+    }
+    \context {
+      \Voice
+      \override Stem #'length = #0
     }
   }
 }

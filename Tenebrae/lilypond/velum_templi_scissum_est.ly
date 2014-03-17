@@ -21,11 +21,13 @@ chantMusicPre = \relative c {
 
 chantWordsPre = \lyricmode {
   \set fontSize = #0.5
-  Ve -- lum tem -- pli scis -- sum __ est, __
+  Ve -- lum tem -- pli scis -- sum est,
 }
 
 sopMusic = \relative c' {
   \clef "treble_8"
+  \once \override Score.RehearsalMark #'extra-offset = #'( 8 . -1 )
+  \mark \markup { \musicglyph #"scripts.segno" }
   r4 d d cs | d f4.( e8 d4) | d cs d2 | e4 e8 e g4 g8 f | e4 d e2 | d2. f4 |
   f4. f8 f4 f | f e f2 | r1 | r4 f f e f f g f | e2 fs \bar "||"
   %\mark \markup { \musicglyph #"scripts.segno" }
@@ -75,13 +77,13 @@ chantMusic = \relative c' {
     \override Score.RehearsalMark #'self-alignment-X = #RIGHT
     \override Score . RehearsalMark #'font-shape = #'italic
     \override Score.RehearsalMark #'font-size = #0.5
-    \mark "D.C. al Fine"
+    \mark "D.S. al Fine"
 }
 
 
 chantWords = \lyricmode {
   Pe -- træ __ scis -- sæ sunt, et mo -- nu -- mén -- ta a -- pér -- ta sunt,
-  et mul -- ta cór -- po -- ra sanc -- tó -- rum, qui do -- mí -- e -- rant sur -- re -- xé -- runt.
+  et mul -- ta cór -- po -- ra sanc -- tó -- rum, qui dor -- mí -- e -- rant sur -- re -- xé -- runt.
 }
 
 %altoWords = \lyricmode {
@@ -90,20 +92,20 @@ chantWords = \lyricmode {
 %}
 
 \score {
-  \new ChoirStaff <<
-    \new Staff = "chantPre" <<
-      \new Voice = "chantPre" \with {
-      \remove "Stem_engraver"
-    } {
-        << \global \chantMusicPre >>
-      }
-    >>
-    \new Lyrics = "chantPre"
-    \context Lyrics = "chantPre" \lyricsto "chantPre" \chantWordsPre
+  \new Staff <<
+    \new Voice = "chantPre" \chantMusicPre
+    \new Lyrics = "chantPre" \lyricsto chantPre \chantWordsPre
   >>
   \layout {
     \context {
       \Staff
+      \remove "Time_signature_engraver"
+      \override Stem #'transparent = ##t
+      \override Flag #'transparent = ##t
+    }
+    \context {
+      \Voice
+      \override Stem #'length = #0
     }
   }
 }
@@ -150,21 +152,20 @@ chantWords = \lyricmode {
 }
 
 \score {
-  \new ChoirStaff <<
-    \new Staff = "chant" <<
-      \new Voice = "chant" \with {
-      \remove "Stem_engraver"
-    } {
-        << \global \chantMusic >>
-      }
-    >>
-    \new Lyrics = "chant"
-    \context Lyrics = "chant" \lyricsto "chant" \chantWords
+  \new Staff <<
+    \new Voice = "chant" \chantMusic
+    \new Lyrics = "chant" \lyricsto chant \chantWords
   >>
   \layout {
     \context {
       \Staff
+      \remove "Time_signature_engraver"
+      \override Stem #'transparent = ##t
+      \override Flag #'transparent = ##t
+    }
+    \context {
+      \Voice
+      \override Stem #'length = #0
     }
   }
 }
-
