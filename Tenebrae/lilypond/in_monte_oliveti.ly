@@ -54,18 +54,6 @@ bassMusic = \relative a {
   ef f bf,2 | bf4 bf ef2 | c4 c d2 | d g2( | ef4) b c c | d ef8( d c bf a4) | g1\fermata \bar "||"
 }
 
-chantMusic = \relative c {
-  \clef bass
-  \cadenzaOn
-  bf4 c( d) d d ef d c d4. r4 d d d d d d d c bf c c ~ c d4.)
-  \cadenzaOff \bar "||"
-  \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
-    \override Score.RehearsalMark #'self-alignment-X = #RIGHT
-    \override Score . RehearsalMark #'font-shape = #'italic
-    \override Score.RehearsalMark #'font-size = #0.5
-    \mark "D.S. al Fine"
-}
-
 bassWords = \lyricmode {
   \set fontSize = #0.5
   In mon -- te | O -- li -- vé -- ti o -- | rá -- vit ad | Pa -- trem_: Pa -- |
@@ -73,8 +61,27 @@ bassWords = \lyricmode {
   prom -- ptus est, | ca -- ro au -- tem in -- fír -- | ma, ca -- ro au -- tem | in -- fír -- ma.
 }
 
+chantMusic = \relative c {
+  \clef bass
+  \cadenzaOn
+  \stemOff
+  bf4 c( d) d d ef d c d4. s8 \bar "|"
+  s8 d\breve c4 bf c c ~ c( d4.)
+  s8 \bar "||"
+  \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
+    \override Score.RehearsalMark #'self-alignment-X = #RIGHT
+    \override Score . RehearsalMark #'font-shape = #'italic
+    \override Score.RehearsalMark #'font-size = #0.5
+    \mark "D.S. al Fine"
+  \stemOn
+  s8 <d fs a>4
+  \cadenzaOff
+}
+
 chantWords = \lyricmode {
-  Vi -- gi -- lá -- te, et o -- rá -- te, ut non in -- tré -- tis in ten -- ta -- ti -- ó -- nem. __
+  Vi -- gi -- lá -- te, et o -- rá -- te,
+  \once \override LyricText #'self-alignment-X = #LEFT
+  ut_non_intrétis_in_ten -- ta -- ti -- ó -- nem. Spi-
 }
 
 %altoWords = \lyricmode {
@@ -119,21 +126,10 @@ chantWords = \lyricmode {
 }
 
 \score {
-  \new Staff <<
+  \new Staff \with { \remove "Time_signature_engraver" } <<
+    \global
     \new Voice = "chant" \chantMusic
     \new Lyrics = "chant" \lyricsto chant \chantWords
   >>
-  \layout {
-    \context {
-      \Staff
-      \remove "Time_signature_engraver"
-      \override Stem #'transparent = ##t
-      \override Flag #'transparent = ##t
-    }
-    \context {
-      \Voice
-      \override Stem #'length = #0
-    }
-  }
 }
 
