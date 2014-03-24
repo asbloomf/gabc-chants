@@ -52,6 +52,19 @@ bassMusic = \relative a {
   g2 fs4 fs | g d ef2 | d r4 d | g2 ef4 ef | f1 | bf2 bf |
   f4 f c c8 c| g'4 g g4. g8 | g4 e d2 | bf4 bf a2 ~ | a d | d4 d8 d g4 g |
   ef f bf,2 | bf4 bf ef2 | c4 c d2 | d g2( | ef4) b c c | d ef8( d c bf a4) | g1\fermata \bar "||"
+  \cadenzaOn
+  \stemOff
+  bf4 c( d) d d ef d c d4. s8 \bar "|"
+  s8 d\breve c4 bf c c ~ c( d4.)
+  s8 \bar "||"
+  \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
+    \override Score.RehearsalMark #'self-alignment-X = #RIGHT
+    \override Score . RehearsalMark #'font-shape = #'italic
+    \override Score.RehearsalMark #'font-size = #0.5
+    \mark "D.S. al Fine"
+  \stemOn
+  s8 <d fs a>4
+  \cadenzaOff  
 }
 
 bassWords = \lyricmode {
@@ -59,6 +72,10 @@ bassWords = \lyricmode {
   In mon -- te | O -- li -- vé -- ti o -- | rá -- vit ad | Pa -- trem_: Pa -- |
   ter, si fí -- e -- ri | po -- test, tráns -- e -- at a me ca -- lix i -- ste_: | Spí -- ri -- tus qui -- dem |
   prom -- ptus est, | ca -- ro au -- tem in -- fír -- | ma, ca -- ro au -- tem | in -- fír -- ma.
+  Vi -- gi -- lá -- te, et o -- rá -- te,
+  \once \override LyricText #'self-alignment-X = #LEFT
+  ut_non_intrétis_in_ten -- ta -- ti -- ó -- nem.
+  Spi-
 }
 
 chantMusic = \relative c {
@@ -81,7 +98,8 @@ chantMusic = \relative c {
 chantWords = \lyricmode {
   Vi -- gi -- lá -- te, et o -- rá -- te,
   \once \override LyricText #'self-alignment-X = #LEFT
-  ut_non_intrétis_in_ten -- ta -- ti -- ó -- nem. Spi-
+  ut_non_intrétis_in_ten -- ta -- ti -- ó -- nem.
+  Spi-
 }
 
 %altoWords = \lyricmode {
@@ -125,11 +143,11 @@ chantWords = \lyricmode {
   }
 }
 
-\score {
-  \new Staff \with { \remove "Time_signature_engraver" } <<
-    \global
-    \new Voice = "chant" \chantMusic
-    \new Lyrics = "chant" \lyricsto chant \chantWords
-  >>
-}
+%\score {
+%  \new Staff \with { \remove "Time_signature_engraver" } <<
+%    \global
+%    \new Voice = "chant" \chantMusic
+%    \new Lyrics = "chant" \lyricsto chant \chantWords
+%  >>
+%}
 

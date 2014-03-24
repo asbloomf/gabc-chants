@@ -39,12 +39,27 @@ altoMusic = \relative c' {
   c2 c \bar "||" c c4 a | gs2. a4 | b a a( gs) | a1\fermata \bar "||"
   a2 a4 a | gs4. gs8 gs2 | a4. a8 b4 c | c d e2 | d4 c b c ~ |
   c b c2 \bar "||" r4 g g2 | a4 c c( b8 a | b2) g | g1\fermata \bar "||"
+  \stemOff
+  \cadenzaOn
+  e4( g) a a a( g) a a g( a) b a a4. s8 \bar "|"
+  s8 a4 a c e d ~ d a c b a b a( g a4.)
+  s8
+  \cadenzaOff \bar "||"
+  \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
+    \override Score.RehearsalMark #'self-alignment-X = #RIGHT
+    \override Score . RehearsalMark #'font-shape = #'italic
+    \override Score.RehearsalMark #'font-size = #0.5
+    \mark "D.S. al Fine"
+  \stemOn
+  s8 <d, a' f'>2
 }
 
 altoWords = \lyricmode {
   \set fontSize = #0.5
   Om -- nes a -- mí -- ci __ me -- i de -- re -- li -- que -- runt me, __ | et præ -- | va -- lu -- é -- runt in -- si -- di -- án -- tes | mi -- hi_: trá -- di -- dit | me quem | di -- li -- gé -- bam_: | Et ter -- ri -- bí -- li -- bus ó -- cu -- lis pla -- ga cru -- dé -- li per -- cu -- ti -- én -- tes,
   a -- cé -- to po -- tá -- bant | me.
+  In -- ter in -- í -- quos pro -- je -- cé -- runt me, et non per -- pe -- cé -- runt á -- ni -- mæ me -- æ.
+  Et
 }
 
 bassMusic = \relative c {
@@ -81,7 +96,8 @@ chantMusic = \relative c {
 
 
 chantWords = \lyricmode {
-  In -- ter in -- í -- quos pro -- je -- cé -- runt me, et non per -- pe -- cé -- runt á -- ni -- mæ me -- æ. Et
+  In -- ter in -- í -- quos pro -- je -- cé -- runt me, et non per -- pe -- cé -- runt á -- ni -- mæ me -- æ.
+  Et
 }
 
 %altoWords = \lyricmode {
@@ -130,10 +146,10 @@ chantWords = \lyricmode {
   }
 }
 
-\score {
-  \new Staff \with { \remove "Time_signature_engraver" } <<
-    \global
-    \new Voice = "chant" \chantMusic
-    \new Lyrics = "chant" \lyricsto chant \chantWords
-  >>
-}
+%\score {
+%  \new Staff \with { \remove "Time_signature_engraver" } <<
+%    \global
+%    \new Voice = "chant" \chantMusic
+%    \new Lyrics = "chant" \lyricsto chant \chantWords
+%  >>
+%}
