@@ -1,6 +1,6 @@
 \header {
   tagline = ""
-  composer = "Giovanni Battista Martini (1706-84)"
+  composer = "Giovanni Battista Martini (1706-1784)"
 }
 \include "english.ly"
 \include "lilypond-book-preamble.ly"
@@ -71,7 +71,7 @@ bassMusic = \relative a {
 
 bassWords = \lyricmode {
   \set fontSize = #0.5
-  Tri -- stis est | á -- ni -- ma me -- a us -- que ad mor -- tem_: Su -- sti -- né -- te | hic, et vi -- gi -- lá -- te me -- cum_: | nunc vi -- dé --  bi -- tis tur -- bam, | quæ cir -- cúm -- da -- bit me, __ quæ cir -- cúm -- da -- bit | me, quæ cir -- cúm -- da -- bit -- me_:  Vos fu -- gam ca -- pi -- é -- tis, ca -- pi -- é -- tis, et e -- go | va -- dam im -- mo -- lá -- ri pro | vo -- bis.
+  Tri -- stis est | á -- ni -- ma me -- a us -- que ad mor -- tem_: su -- sti -- né -- te | hic, et vi -- gi -- lá -- te me -- cum_: | nunc vi -- dé --  bi -- tis tur -- bam, | quæ cir -- cúm -- da -- bit me, __ quæ cir -- cúm -- da -- bit | me, quæ cir -- cúm -- da -- bit -- me_:  Vos fu -- gam ca -- pi -- é -- tis, ca -- pi -- é -- tis, et e -- go | va -- dam im -- mo -- lá -- ri pro | vo -- bis.
 }
 
 chantMusic = \relative c' {

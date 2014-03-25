@@ -1,3 +1,7 @@
+\paper {
+    ragged-last=##t
+}
+
 \header {
   tagline = ""
   composer = "Sean Connolly"
@@ -115,7 +119,7 @@ bassWords = \lyricmode {
   %Ve -- lum tem -- pli scis -- sum est,
   Et om -- nis | ter -- ra | tré -- mu -- it_: | la -- tro de cru -- ce cla -- má -- bat, di -- cens_: Me -- mén -- to me -- i, | Dó -- mi -- ne, __ dum __ | vé -- ne -- ris in re -- gnum | Tu -- um.
 
-  Pe -- træ __ scis -- sæ sunt, et mo -- nu -- mén -- ta a -- pér -- ta sunt,
+  Pe -- træ scis -- sæ sunt, et mo -- nu -- mén -- ta a -- pér -- ta sunt,
   \once \override LyricText #'self-alignment-X = #LEFT
   et_multa_córpora_sanctórum,_qui_dormí -- e -- rant sur -- re -- xé -- runt.
   Et
@@ -151,7 +155,7 @@ chantMusicSup = \relative c' {
 
 
 chantWords = \lyricmode {
-  Pe -- træ __ scis -- sæ sunt, et mo -- nu -- mén -- ta a -- pér -- ta sunt,
+  Pe -- træ scis -- sæ sunt, et mo -- nu -- mén -- ta a -- pér -- ta sunt,
   \once \override LyricText #'self-alignment-X = #LEFT
   et_multa_córpora_sanctórum,_qui_dormí -- e -- rant sur -- re -- xé -- runt.
   Et

@@ -1,6 +1,6 @@
 \header {
   tagline = ""
-  composer = "Giovanni Battista Martini (1706-84)"
+  composer = "Giovanni Battista Martini (1706-1784)"
 }
 \include "english.ly"
 \include "lilypond-book-preamble.ly"
