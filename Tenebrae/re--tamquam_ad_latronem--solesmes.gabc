@@ -90,7 +90,7 @@ transcriber:Andrew Hinkley;
 \greendofelement{0}{0}%
 }%
 ]%
-iwjIH)re(gh!ivHG'h) me :(hg..) <v>\greheightstar</v>(:) Quo(fg)tí(gjjk)di(j)e(j.) (,) a(j)pud(j) vos(j) é(k_i/j_h/%i_j/k_j
+iwjIH)re(gh!ivHG'h) me~:(hg..) <v>\greheightstar</v>(:) Quo(fg)tí(gjjk)di(j)e(j.) (,) a(j)pud(j) vos(j) é(k_i/j_h/%i_j/k_j
 [ev:%
 {%
 \greendofelement{0}{0}%
@@ -107,7 +107,7 @@ iwjIH)re(gh!ivHG'h) me :(hg..) <v>\greheightstar</v>(:) Quo(fg)tí(gjjk)di(j)e(j
 ])ram(ki/%j_k
 [ev:%
 {%
-\greglyph{\char 5122}{k}{j}{1}{}{}%
+%\greglyph{\char 5122}{k}{j}{1}{}{}%
 \greendofelement{0}{0}%
 \greglyph{\char 1025}{j}{h}{0}{}{%
 \adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
@@ -115,7 +115,7 @@ iwjIH)re(gh!ivHG'h) me :(hg..) <v>\greheightstar</v>(:) Quo(fg)tí(gjjk)di(j)e(j
 }%
 }%
 }%
-]) in(h) tém(gf~)plo(h!iwji/jkjz) dó(jv_IH'i)cens,(hhg.) (;) et(f) non(gh) me(h') te(h)nu(g)í(g_f)stis :(%fg!hvGF'_E_/fv_EDed..
+]) in(h) tém(gf~)plo(h!iwji/jkjz) dó(jv_IH'i)cens,(hhg.) (;) et(f) non(gh) me(h') te(h)nu(g)í(g_f)stis~:(%fg!hvGF'_E_/fv_EDed..
 [ev:%
 {%
 \greglyph{\char 1025}{f}{h}{0}{}{}%

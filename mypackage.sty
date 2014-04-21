@@ -115,7 +115,7 @@
 \StrPosition[2]{#3}{ }[\mypos]%
 \fi
 \lettrine{\StrLeft{#3}{1}}%
-   {#1\StrMid{#3}{2}{\mypos}}%
+   {#1\StrMid{#3}{2}{\mypos}} %
 \foreignlanguage{#2}{#1\StrGobbleLeft{#3}{\mypos}}%
 }
 
@@ -153,14 +153,15 @@
 \colchunk{\dropcap{american}{#2}} \selectlanguage{latin}
 }
 
-\newcommand{\lesson}[3][\normalsize]{
+\newcommand{\lesson}[4][\normalsize]{
 % 1 - optional for english translation
-% 2 - latin
-% 3 - english
+% 2 - latin first few words
+% 3 - latin bulk
+% 4 - english
 % requires columns environment
 %\noindent%\selectlanguage{latin}
-\colchunk{\dropcap{latin}{#2}} % \selectlanguage{american}
-\colchunk{\dropcap[#1]{american}{#3}} \selectlanguage{latin}
+\colchunk{\dropcap{latin}{#2} #3} % \selectlanguage{american}
+\colchunk{\dropcap[#1]{american}{#4}} \selectlanguage{latin}
 }
 
 \newcommand{\paracolprayer}[2]{
