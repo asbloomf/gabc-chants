@@ -458,7 +458,7 @@
 \emph{Tempore Paschali:}
 
 {\greblockcustos\includescore{\vrpttex}}
-\medskip
+\bigskip
 \emph{Per annum:}
 
 \fi %vrpttex
@@ -647,7 +647,9 @@
 %
 \ifx\benedicamusdominogrefactor\undefined\else\setgrefactor{\benedicamusdominogrefactor}\fi
 \ifx\benedicamusdominotex\undefined\else
-\def\annot{\small{\benedicamusdominotone}}
+% instead of Vbar this was \benedicamusdominotone
+% changed it on May 5, 2014 ASB
+\def\annot{\small{\Vbar}}
 \def\annottwo{}
 \setinitialspacing{B}
 \setspaceafterinitial{0mm}
@@ -687,4 +689,5 @@
 \end{parcolumns}
 \fi\fi
 \vspace{-18pt} %this is really only needed if the benedicamus domino is a full line. so I should really put it in there!
+\vfill
 \end{document}
