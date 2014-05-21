@@ -3,12 +3,12 @@
 
 % The first part of the score is called the header, you can input some useful informations here:
 
-name: Psalm 116;
-office-part: 5th psalm;
-occasion:  Vespers;
-date: 2011;
+name: Annuntiaverunt;
+office-part: versicle and response;
+occasion: Sts Peter and Paus;
+date: 2014;
 transcriber: Albert Bloomfield;
-transcription-date: 2011;
+transcription-date: 2014;
 style: modern;
 initial-style:0;
 
@@ -18,9 +18,5 @@ initial-style:0;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c4)()() 1. L{au}(g)dá(h)te(j) Dó(j)mi(j)num,(j) om(j)nes(j) <b>Gen</b>(k jr)tes :(j.) <v>\greheightstar</v>(:) lau(j)dá(j)te(j) e(j)um,(j) <i>om</i>(i)<i>nes</i>(j) <b>pó</b>(h)pu(gr)li :(g.) (::)
-
-%E(j) u(j) o(i) u(j) a(h) e.(g.) (::)
-
-%Mediant of 1 accent
-%Termination of 1 accent with 2 preperatory syllables
+(c3)()() <sp>V/</sp>~An(h)nun(h)ti(h)a(h)vé(h)runt(h) ó(h)pe(h)ra(h) Dé(h)i.(g'_hvGF'Efgf.) (::)
+<sp>R/</sp>~Et(h) fá(h)cta(h) é(h)jus(h) in(h)tel(h)le(h)xé(h)runt.(g'_hvGF'Efgf.) (::)

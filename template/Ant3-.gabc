@@ -1,0 +1,23 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Dixit Angelus ad Petrum;
+office-part: 3 Antiphon;
+mode: 8c;
+occasion: Sts Peter & Paul;
+book:The Liber Usualis, 1961, p. 1515;
+transcriber:Andrew Hinkley;
+annotation: 3 Ant.;
+annotation: 8. c;
+% liber usualis page 1515
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+(c3)DI(h)xit(h) An(hg~)ge(f)lus(gh) ad(g') Pé(e)trum :(e.) <v>\greheightstar</v>(;) Cir(e)cúm(g')da(h) tí(i_j)bi(i'_) (,) ve(i)sti(g)mén(ij)tum(i) tu(hg)um,(e.) (;) et(f) sé(h_f)que(g)re(f) me.(e.) (::z)
+
+E(h) u(h) o(f) u(h) a(i) e.(h.) (::)

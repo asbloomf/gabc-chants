@@ -1,0 +1,27 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Per Signum Crucis;
+office-part: 1 Antiphon;
+mode: 8c;
+occasion: Exaltation of the Holy Cross;
+book:The Liber Usualis, 1961, p. 1460;
+transcriber:Albert Bloomfield;
+annotation: 5 Ant.;
+annotation: 8. c;
+% liber usualis page 1460
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)PER(j) sí(j)gnum(j) Crú(jkj)cis(jij.) <v>\greheightstar</v>(,) de(j) in(j)i(j)mí(h)cis(j) nós(ih)tris(gh..) (;)
+lí(f)be(h)ra(jh) nos(i_j) Dé(h)us(h) nós(g.)ter.(g.) (::z)
+
+%<i>T. P.</i> Al(hi)le(h)lú(g.)ia.(g.) (::)
+
+E(j) u(j) o(h) u(j) a(k) e.(j.) (::)

@@ -1,0 +1,56 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Audi, benigne conditor;
+office-part: Vesper hymn;
+occasion: Lent;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+%initial-style:0;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4) VE(f)xíl(gh)la(ixi) Ré(hvGF')gis(g) pró(ghg)de(f)unt :(ed..) (;)
+Fúl(g)get(g') Crú(h)cis(fd) my(f)sté(ef)ri(d)um,(cd..) (:)
+Qua(d) ví(d')ta(f) mór(dc)tem(f) pér(f!gh)tu(g)lit,(gf..) (;)
+Et(f) mór(ixfh!ivHG')te(h) ví(fd)tam(f) pró(ef)tu(d)lit.(cd..) (::)
+
+2. Quæ(f) vul(gh)ne(ixi)rá(hvGF')ta(g) lán(ghg)ce(f)æ(ed..) (;)
+Mu(g)cró(g')ne(h) dír(fd)o,(f) crí(ef)mi(d)num(cd..) (:)
+Ut(d) nos(d') la(f)vá(dc)ret(f) sór(f!gh)di(g)bus,(gf..) (;)
+Ma(f)ná(ixfh!ivHG')vit(h) ún(fd)d<i>a</i>() et(f) sán(ef)gui(d)ne.(cd..) (::)
+
+3. Im(f)plé(gh)ta(ixi) sunt(hvGF') quæ(g) cón(ghg)ci(f)nit(ed..) (;)
+Dá(g)vid(g') fi(h)dé(fd)li(f) cár(ef)mi(d)ne,(cd..) (:)
+Di(d)cén(d')do(f) na(dc)ti(f)ó(f!gh)ni(g)bus :(gf..) (;)
+Re(f)gná(ixfh!ivHG')vit(h) a(fd) lí(f)gno(ef) Dé(d)us.(cd..) (::)
+
+4. Ar(f)bor(gh) de(ixi)có(hvGF')r<i>a</i>() et(g) fúl(ghg)gi(f)da,(ed..) (;)
+Or(g)ná(g')ta(h) Ré(fd)gis(f) púr(ef)pu(d)ra,(cd..) (:)
+E(d)lé(d')cta(f) dí(dc)gno(f) stí(f!gh)pi(g)te(gf..) (;)
+Tam(f) sán(ixfh!ivHG')cta(h) mém(fd)bra(f) tán(ef)ge(d)re.(cd..) (::)
+
+5. Be(f)á(gh)ta,(ixi) cú(hvGF')jus(g) brá(ghg)chi(f)is(ed..) (;)
+Pré(g)t<i>i</i>()um(g') pe(h)pén(fd)dit(f) sæ(ef)cu(d)li :(cd..) (:)
+Sta(d)té(d')ra(f) fá(dc)cta(f) cór(f!gh)po(g)ris,(gf..) (;)
+Tu(f)lít(ixfh!ivHG')que(h) præ(fd)dam(f) tár(ef)ta(d)ri.(cd..) (::)
+
+6. O(f) <sc>Crux</sc>(gh) <sc>á</sc>(ixi)<sc>ve</sc>,(hvGF') <sc>spes</sc>(g) <sc>ú</sc>(ghg)<sc>ni</sc>(f)<sc>ca</sc>(ed..),
+In(g) hac(g') tri(h)úm(fd)phi(f) gló(ef)ra(d)a :(cd..) (:)
+Pi(d)is(d') a(f)dáu(dc)ge(f) grá(f!gh)ti(g)am,(gf..) (;)
+Re(f)ís(ixfh!ivHG')que(h) dé(fd)le(f) crí(ef)mi(d)na.(cd..) (::)
+
+7. Te,(f) fons(gh) sa(ixi)lú(hvGF')tis(g) Trí(ghg)ni(f)tas,(ed..) (;)
+Col(g)láu(g')det(h) óm(fd)nis(f) spí(ef)ri(d)tus :(cd..) (:)
+Quí(d)bus(d') Crú(f)cis(dc) vi(f)ctó(f!gh)ri(g)am(gf..) (;)
+Lar(f)gí(ixfh!ivHG')ris,(h) ad(fd)de(f) præ(ef)mi(d)um.(cd..) (::)
+
+A(ded)men.(cd..) (::)

@@ -1,0 +1,74 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{import}
+\usepackage{../definepsalms}
+\sloppy
+
+\import{../CommonOfApostles/}{CommonOfApostles-Vespers2}
+\edef\antonetex{../CommonOfApostles/\antonetex}
+\edef\anttwotex{../CommonOfApostles/\anttwotex}
+\edef\antthreetex{../CommonOfApostles/\antthreetex}
+\edef\antfourtex{../CommonOfApostles/\antfourtex}
+\edef\antfivetex{../CommonOfApostles/\antfivetex}
+
+
+\input{StsPeterAndPaul-common} % chapter, collect, and hymn
+
+%commemoration for 3rd Sunday after Pentecost
+\def\pagebreakbeforecommemoration{T}
+\def\commemorationtex{../TimeAfterPentecost/CommemorationPentecost3}
+%end commemoration stuff
+
+
+\renewcommand{\heading}{SS Peter and Paul II Vespers.}
+
+\renewcommand{\predeusinadjutorium}{%
+%\smallskip
+\large
+\setgrefactor{15}
+}
+\def\deusinadjutoriumsolemn{T}
+\def\includelaustibi{F}
+
+
+\renewcommand{\vrtex}{vrAnnuntiaverunt}
+\renewcommand{\vtranslation}{They declared the works of God.}
+\renewcommand{\rtranslation}{And understood his doings.}
+
+\renewcommand{\premag}{
+\large
+\setgrefactor{17}
+%\greblockcustos
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+\renewcommand{\magfontsize}{38}
+\def\pagebreakbeforemagnificat{T}
+\newcommand{\maganttex}{MagnificatAntiphon2-Hodie}
+\renewcommand{\magantinitial}{H}
+\renewcommand{\maganttranslation}{This is the day whereon Simon Peter went up upon the gibbet of the cross, alleluia; this day did he, that holdeth the keys of the kingdom, depart hence with joy to be with Christ; this day did the Apostle Paul, the light of the whole world, bow his head, and for Christ's name's sake receive the crown of his testimony, alleluia.}
+\def\magsolemn{T}
+\def\magoneline{T}
+\let\magant\undefined
+\let\magantlinetwo\undefined
+\let\magtex\undefined
+\let\magverses\undefined
+\definemag{1}{D}
+\renewcommand{\premagverses}{%
+%\greblockcustos
+\normalsize
+\setgrefactor{14}
+%\pagebreak
+}
+
+\def\benedicamusdominogrefactor{14}
+\definebenedicamusdomino{1}{2}
+
+%\def\includefideliumanimae{T}
+
+\input{../FullVespers}

@@ -1,0 +1,66 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+% the office is said as on the Feast of the Finding of the Holy Cross, May 3, p 1453 with the following exception: Alleluia is omitted at the end of the Antiphons, Versicles, and short responsories, except at the third antiphon of vespers. Ecce Crucem Domini.
+
+% The Hymn Vexilla Regis is sung with its customary chant and doxology. In the sixth Stanza, O Crux ave spes unica, In hac triumphi gloria... is said.
+
+% Prayer. Deus, qui nos hodierna die (Proper of the day)
+
+% only magnificat antiphon is proper to 1st vespers (and not to 2nd)
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+\sloppy
+
+\input{ExaltationOfTheHolyCross-common}
+
+%commemoration for 5th Sunday after Pentecost
+%\def\pagebreakbeforecommemoration{T}
+%\def\commemorationtex{../TimeAfterPentecost/CommemorationPentecost5}
+%end commemoration stuff
+
+
+\newcommand{\heading}{The Exaltation of the Holy Cross I Vespers.}
+
+\newcommand{\predeusinadjutorium}{%
+%\smallskip
+\large
+\setgrefactor{15}
+}
+\def\deusinadjutoriumsolemn{F}
+\def\includelaustibi{F}
+
+\newcommand{\premag}{
+\normalsize
+\setgrefactor{15}
+%\greblockcustos
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+\newcommand{\magfontsize}{38}
+\def\pagebreakbeforemagnificat{T}
+\newcommand{\maganttex}{MagnificatAntiphon1-OCrux}
+\newcommand{\magantinitial}{T}
+\newcommand{\maganttranslation}{Hail, O Cross Brighter than all the stars thy name is honourable upon earth; To the eyes of men thou art exceeding lovely; holy art thou among all things that are earthly; thy transom made the one worthy balance whereon the price of the world was weighed; sweetest wood and sweetest iron, sweetest weight is hung on thee; O that every one that is here gathered this day to praise thee may find that thou art indeed salvation for him.\vspace{-2ex}}
+\def\magsolemn{F}
+\def\magoneline{T}
+%\def\psalmclef{c3}
+\definemag{1}{D}
+\newcommand{\premagverses}{%
+\greblockcustos
+\normalsize
+\setgrefactor{14}
+%\pagebreak
+}
+
+\def\benedicamusdominogrefactor{14}
+\definebenedicamusdomino{2}{1}
+
+%\def\includefideliumanimae{T}
+
+\input{../inc_header} %
+\input{../FullVespers-test}

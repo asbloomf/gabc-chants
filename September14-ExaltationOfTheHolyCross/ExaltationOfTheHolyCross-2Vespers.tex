@@ -1,0 +1,71 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+% as at first vespers except the antiphon of the magnificat, which is O Crux, p 1631 (mag 1 D2 p207)
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{import}
+\usepackage{../definepsalms}
+\sloppy
+
+%\import{./}{CommonOfApostles-Vespers2}
+%\edef\antonetex{../CommonOfApostles/\antonetex}
+%\edef\anttwotex{../CommonOfApostles/\anttwotex}
+%\edef\antthreetex{../CommonOfApostles/\antthreetex}
+%\edef\antfourtex{../CommonOfApostles/\antfourtex}
+%\edef\antfivetex{../CommonOfApostles/\antfivetex}
+
+\input{ExaltationOfTheHolyCross-common} % psalms, chapter, collect, and hymn
+
+%commemoration for 3rd Sunday after Pentecost
+%\def\pagebreakbeforecommemoration{T}
+%\def\commemorationtex{../TimeAfterPentecost/CommemorationPentecost3}
+%end commemoration stuff
+
+
+\newcommand{\heading}{The Exaltation of the Holy Cross II Vespers.}
+
+\newcommand{\predeusinadjutorium}{%
+%\smallskip
+\large
+\setgrefactor{15}
+}
+\def\deusinadjutoriumsolemn{F}
+\def\includelaustibi{F}
+
+
+\newcommand{\premag}{
+\large
+\setgrefactor{17}
+%\greblockcustos
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+\newcommand{\magfontsize}{38}
+\def\pagebreakbeforemagnificat{T}
+\newcommand{\maganttex}{MagnificatAntiphon2-OCrux}
+\newcommand{\magantinitial}{O}
+\newcommand{\maganttranslation}{O blessed art thou, O Cross which wast counted the only tree worthy to bear the Lord and King of heaven. Alleluia.}
+\def\magsolemn{F}
+\def\magoneline{T}
+\let\magant\undefined
+\let\magantlinetwo\undefined
+\let\magtex\undefined
+\let\magverses\undefined
+\definemag{1}{D2}
+\newcommand{\premagverses}{%
+%\greblockcustos
+\normalsize
+\setgrefactor{14}
+%\pagebreak
+}
+
+\def\benedicamusdominogrefactor{14}
+\definebenedicamusdomino{2}{2}
+
+%\def\includefideliumanimae{T}
+\input{../inc_header} %
+\input{../FullVespers-test}

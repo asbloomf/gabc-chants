@@ -1,0 +1,33 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: O Crux;
+office-part: Magnificat Antiphon;
+mode: 1D;
+occasion: Exaltation of the Holy Cross;
+book:The Liber Usualis, 1961, p. 1330 & The Liber Usualis, 1961, p. 1453;
+transcriber:Albert Bloomfield;
+style: modern;
+annotation: At Magn.;
+annotation: Ant. 1. D;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+%%
+(c4)O(c_d) Crux,(ff) <v>\greheightstar</v>() splen(dc~)dí(f)di(gh)or(h_g) cún(fe~)ctis(d) á(f_g)stris,(cd..) (;)
+mún(d_e)do(d) cé(dc)le(d)bris,(f.) (,) hom(fe)í(d)ni(fe)bus(ddc) mul(f_h)tum(gef___ggh) a(fe)má(d)bi(fe)lis,(ddc.) (;)
+sán(e!gwh_g)cti(fe)or(fgf) u(ed)ni(ef)vér(dcd~)sis :(d.) (:)
+quæ(dh) só(h)la(gef___ggh) fu(fe)í(d)sti(fe) dí(ddc~)gna(c.) (,) por(cd~)tá(f)re(ghg___) ta(fe)lén(dc~)tum(efe) mún(d.)di :(d.) (:)
+dúl(h)ce(gf) lí(gh)gnum,(ixh/iih.) (,) dúl(f)ces(ed) clá(fg)vos,(g.) (,) dúl(c)ci(d)a(f) fé(fg)rens(fe~) pón(ded___)de(cd)ra :(d.) (:)
+sál(ixh_ihg~)va(g_hG'F__E'D) præ(f')sén(g)tem(ed) ca(fe)tér(dd)vam,(c.) (;)
+in(c_d) tú(fe)is(f') hó(g)di(hg)e(gg) (,) láu(c)di(d)bus(f_g) con(ed~)gre(fe)gá(d.)tam.(d.) (::)
+
+%T. P. Al(c_d)le(f_gF'E)lú(ghg~__)ia,(fv_ED'C_) al(d_g)le(efe)lú(d.)ia.(d.) (::)
+
+E(h) u(h) o(g) u(f) a(gh) e.(gvFED.) (::)

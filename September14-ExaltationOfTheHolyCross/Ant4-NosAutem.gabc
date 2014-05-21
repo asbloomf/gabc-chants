@@ -1,0 +1,26 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Nos autem;
+office-part: 4 Antiphon;
+mode: 7c;
+occasion: Exaltation of the Holy Cross;
+book:The Liber Usualis, 1961, p. 1460;
+transcriber:Albert Bloomfield;
+annotation: 4 Ant.;
+annotation: 7. c;
+% liber usualis page 1460
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+(c3)NOS(ig/ij) au(i_j)tem(i'_) <v>\greheightstar</v>(,) glo(i)ri(g')á(h)ri(f') o(g)pór(ff)tet(e.) (;)
+in(e) Crú(h')ce(h) Dó(h')mi(h)ni(f') nó(h)stri(gv_FE) Jé(fg)su(f) Chrí(e.)sti.(e.) (::z)
+
+%<i>T. P.</i> Al(fg)le(f)lú(e.)ia.(e.) (::)
+
+E(i) u(i) o(j) u(i) a(h) e.(gh..) (::)

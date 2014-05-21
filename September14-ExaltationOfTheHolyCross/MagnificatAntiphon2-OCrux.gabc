@@ -1,0 +1,28 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: O Crux;
+office-part: Magnificat Antiphon;
+mode: 1D2;
+occasion: Exaltation of the Holy Cross;
+date: 2014;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: At Magn.;
+annotation: Ant. 1. D2;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)O(cdfvf!gw!hv_GE'fd) Crux(d'_) <v>\greheightstar</v>(,) be(h)ne(gvFEg_h)dí(d!ewf_d)cta!(d.) (;)
+quæ(d!ewf_e) só(de)la(ddc) (,) fu(f)í(f!gwh_g)sti(ed/fe) díg(d_!cd~)na(d.) (;)
+por(hg~)tá(hv_//jvIG'ivHG'Fg_h)re(h.) (,) Ré(cd~)gem(ddc) cæ(f)ló(f!gwh_g)rum(ed) et(fe) Dó(d)mi(cd)num,(d.) (;)
+al(dhg)le(h/hf'/f!gh'GFhv.de!fgf'fg!hvGF'ED'd//cecd.,de!fgf'fg!hvGF'ED'd)lú(ce/fd)ia.(d.) (::z)
+
+E(h) u(h) o(g) u(f) a(gf) e.(d.) (::)
