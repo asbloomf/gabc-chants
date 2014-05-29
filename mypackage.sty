@@ -304,6 +304,17 @@
 \setcounter{vcounter}{#1}
 }{\end{list}}
 
+\newenvironment{oddnumpsalmverses}[1][2]{
+% 1 - number to start on
+\begin{list}{\arabic{vcounter}.\addtocounter{vcounter}{1}}{
+\setlength\baselineskip{0pt}
+\setlength\itemsep{1pt}
+\usecounter{vcounter}
+\setlength\parsep{0pt}
+\setlength\labelwidth{50pt}\setlength\leftmargin{0pt}\setlength\itemindent{6ex}}
+\setcounter{vcounter}{#1}
+}{\end{list}}
+
 \newenvironment{magnificat}[2][2]{
 % 1 - number to start on
 % 2 - name of magnificat to include
@@ -319,6 +330,14 @@
 \normalsize
 \begin{boldnumpsalmverses}[#1]
 }{\end{boldnumpsalmverses}}
+
+\newenvironment{oddversesmagnificat}[2][2]{
+% 1 - number to start on
+% 2 - name of magnificat to include
+\includescore{#2}
+\normalsize
+\begin{oddnumpsalmverses}[#1]
+}{\end{oddnumpsalmverses}}
 
 \newlength{\annotwidth}
 \newlength{\annottwowidth}

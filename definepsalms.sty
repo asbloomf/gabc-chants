@@ -702,6 +702,7 @@ five%
 \newcommand{\magantlinetwo}{Ant. \magtone. \magend}
 \ifx\maggrassi\undefined\def\maggrassi{F}\fi
 \ifx\magprotodiogenes\undefined\def\magprotodiogenes{F}\fi
+\ifx\magsmc\undefined\def\magsmc{F}\fi
 \StrSubstitute{\magend}{*}{star}[\expandedendmag]
 \StrSubstitute{\magend}{*}{}[\nostarendmag]
 \ifx\psalmclef\undefined%
@@ -713,11 +714,12 @@ five%
 \def\magpost{}
 \if\maggrassi T\def\magpost{_grassi}\fi
 \if\magprotodiogenes T\def\magpost{_protodiogenes}\fi
+\if\magsmc T\def\magpost{_smc}\fi
 \newcommand{\magtex}{../psalms/Magnificat\if\magsolemn Tsolemn\else simple\fi\magtone\expandedendmag\altclef\magpost%
 \ifx\magoneline\undefined\else\if\magoneline ToneLine\fi\fi}
 \newcommand{\magverses}{%
 %\ifx\magoneline\undefined\else\if\magoneline T\vspace{-15pt}\fi\fi
-\input{../psalms/magnificat-\magtone\nostarendmag\if\magsolemn Tsolemn\else simple\fi\if\maggrassi T-grassi\fi\if\magprotodiogenes T-protodiogenes\fi-verses}%
+\input{../psalms/magnificat-\magtone\nostarendmag\if\magsolemn Tsolemn\else simple\fi\if\maggrassi T-grassi\fi\if\magprotodiogenes T-protodiogenes\fi\if\magsmc T-smc\fi-verses}%
 }
 
 }
