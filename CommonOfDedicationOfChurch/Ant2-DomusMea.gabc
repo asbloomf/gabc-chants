@@ -1,0 +1,20 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+% The first part of the score is called the header, you can input some useful informations here:
+name: Domus mea;
+office-part: 2 Antiphon;
+mode: 1D2;
+occasion: common of dedication of church;
+book:The Liber Usualis, 1961, p. 1247;
+transcriber:Albert Bloomfield;
+annotation: 2 Ant.;
+annotation: 1. D2;
+% liber usualis page 1515
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+(c4)DO(c)mus(d) mé(f_g)á,(g_hgg) <v>\greheightstar</v>(,) dó(f!gwh_g)mus(h') o(g)ra(f)ti(f)ó(f_e)nis(g) vo(fe)cá(d)bi(d)tur.(d.) (::)
+
+<i>T. P.</i> Al(e)le(fe)lú(d.)ia.(d.) (::)
+
+E(h) u(h) o(g) u(f) a(gf) e.(d.) (::)

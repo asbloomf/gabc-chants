@@ -1,0 +1,57 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+\sloppy
+
+\input{CommonOfDedicationOfChurch-common}
+
+\newcommand{\heading}{Common of the Dedication Of a Church I Vespers.}
+
+\newcommand{\predeusinadjutorium}{%
+%\smallskip
+\large
+\setgrefactor{15}
+}
+\def\deusinadjutoriumsolemn{F}
+
+
+\newcommand{\vrtex}{vrHaecEstDomusDomini}
+\newcommand{\vtranslation}{This is the house of the Lord, strongly built.}
+\newcommand{\rtranslation}{It is well founded upon strong rock.}
+\newcommand{\vrnospace}{T}
+
+\newcommand{\premag}{
+\large
+\setgrefactor{17}
+%\greblockcustos
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+\newcommand{\magfontsize}{38}
+\def\pagebreakbeforemagnificat{T}
+\newcommand{\maganttex}{MagnificatAntiphon1-Sanctificavit}
+\newcommand{\magantinitial}{S}
+\newcommand{\maganttranslation}{.}
+\def\magsolemn{T}
+\def\magoneline{F}
+%\def\psalmclef{c3}
+\definemag{1}{g}
+\newcommand{\premagverses}{%
+\greblockcustos
+\normalsize
+%\setgrefactor{17}
+%\pagebreak
+}
+
+\def\benedicamusdominogrefactor{14}
+\definebenedicamusdomino{2}{1}
+
+%\def\includefideliumanimae{T}
+
+\input{../inc_header} %
+\input{../FullVespers-test}

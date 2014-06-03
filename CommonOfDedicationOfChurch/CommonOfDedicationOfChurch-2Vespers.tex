@@ -1,0 +1,76 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{import}
+\usepackage{../definepsalms}
+\sloppy
+
+%\import{../CommonOfApostles/}{CommonOfApostles-Vespers2}
+%\edef\antonetex{../CommonOfApostles/\antonetex}
+%\edef\anttwotex{../CommonOfApostles/\anttwotex}
+%\edef\antthreetex{../CommonOfApostles/\antthreetex}
+%\edef\antfourtex{../CommonOfApostles/\antfourtex}
+%\edef\antfivetex{../CommonOfApostles/\antfivetex}
+
+
+\input{CommonOfDedicationOfChurch-common} % psalms, chapter, collect, and hymn
+
+%commemoration for 3rd Sunday after Pentecost
+%\def\pagebreakbeforecommemoration{T}
+%\def\commemorationtex{../TimeAfterPentecost/CommemorationPentecost3}
+%end commemoration stuff
+
+
+\newcommand{\heading}{Common of the Dedication Of a Church II Vespers.}
+
+\newcommand{\predeusinadjutorium}{%
+%\smallskip
+\large
+\setgrefactor{15}
+}
+\def\deusinadjutoriumsolemn{F}
+\def\includelaustibi{T}
+
+
+\newcommand{\vrtex}{vrDomumTuam}
+\def\vrnospace{T}
+\newcommand{\vtranslation}{Holiness becometh thine house, O Lord.}
+\newcommand{\rtranslation}{Forever.}
+
+\newcommand{\premag}{
+\large
+\setgrefactor{17}
+%\greblockcustos
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+\newcommand{\magfontsize}{38}
+\def\pagebreakbeforemagnificat{F}
+\newcommand{\maganttex}{MagnificatAntiphon2-OQuamMetuendusEst}
+\newcommand{\magantinitial}{O}
+\newcommand{\maganttranslation}{How dreadful is this place. Surely this is none other but the house of God, and the gate of heaven.}
+\def\magsolemn{T}
+\def\magoneline{T}
+\let\magant\undefined
+\let\magantlinetwo\undefined
+\let\magtex\undefined
+\let\magverses\undefined
+\definemag{6}{F}
+\newcommand{\premagverses}{%
+%\greblockcustos
+\normalsize
+\setgrefactor{14}
+%\pagebreak
+}
+
+\def\benedicamusdominogrefactor{14}
+\definebenedicamusdomino{2}{2}
+
+%\def\includefideliumanimae{T}
+
+\input{../inc_header}
+\input{../FullVespers-test}

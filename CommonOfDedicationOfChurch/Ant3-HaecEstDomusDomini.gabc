@@ -1,0 +1,26 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Haec est domus Domini;
+office-part: 3 Antiphon;
+mode: 1f;
+occasion: common of dedication of church;
+book:The Liber Usualis, 1961, p. 1247;
+transcriber:Albert Bloomfield;
+annotation: 3 Ant.;
+annotation: 1. f;
+% liber usualis page 1515
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+(c4)HÆC(d) est(d') dó(d)mus(d) Dó(f')mi(e)ni(dc__) <v>\greheightstar</v>(,) fír(f_h)mi(h)ter(g_h) æ(f_g)di(h)fi(g)cá(ffg)ta~ :(d.) (:)
+be(c_d)ne(f) fun(f)dá(gh)ta(g) est(ff) (,) su(e')pra(f) fír(g)mam(fe) pé(d.)tram.(d.) (::)
+
+<i>T. P.</i> Al(e)le(fe)lú(d.)ia.(d.) (::)
+
+E(h) u(h) o(g) u(f) a(gh) e.(gf..) (::)

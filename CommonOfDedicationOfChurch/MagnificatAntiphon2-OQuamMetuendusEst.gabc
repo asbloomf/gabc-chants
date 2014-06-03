@@ -1,0 +1,30 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: O quam metuendus est;
+office-part: Magnificat Antiphon;
+mode: 6F;
+occasion: common of dedication of church;
+date: 2014;
+transcriber: Albert Bloomfield;
+transcription-date: 2013;
+style: modern;
+annotation: At Magn.;
+annotation: Ant. 6. F;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)O(f/fdd) quam(dc~) me(f)tu(g)én(g')dus(g) est(f') <v>\greheightstar</v>() ló(g)cus(gh) í(f)ste!(f.) (:)
+ve(fh')re(ixiv_H'G) non(g') est(ixi) hic(h') á(ixi)li(gf)ud,(f.) (;)
+ni(f)si(f') dó(g)mus(f'z) Dé(ixfh'!iv_H'G )i,(hg__) (;)
+et(e_0fd/dc) pór(ixf!gwh/ig~)ta(gh) c<sp>'ae</sp>(f.)li.(f.) (::)
+
+<i>T. P.</i> Al(g)le(gh)lú(f.)ia.(f.) (::)
+
+E(h) u(h) o(f) u(gh) a(g) e.(f.) (::)

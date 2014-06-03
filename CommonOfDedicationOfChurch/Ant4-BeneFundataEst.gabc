@@ -1,0 +1,26 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Bene fundata est;
+office-part: 4 Antiphon;
+mode: 8c;
+occasion: common of dedication of church;
+book:The Liber Usualis, 1961, p. 1247;
+transcriber:Albert Bloomfield;
+annotation: 4 Ant.;
+annotation: 8. c;
+% liber usualis page 1515
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+(c4)BE(j_)ne(ji) fun(hg~)dá(hi)ta(h) est(g'_) <v>\greheightstar</v>(,) dó(g)mus(e') Dó(f)mi(e)ni(d.) (;)
+su(e)pra(f) fír(gh)mam(h) pé(g.)tram.(g.) (::)
+
+<i>T. P.</i> Al(hi)le(h)lú(g.)ia.(g.) (::z)
+
+E(j) u(j) o(h) u(j) a(k) e.(j.) (::)

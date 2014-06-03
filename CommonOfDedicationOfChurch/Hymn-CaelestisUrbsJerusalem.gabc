@@ -1,0 +1,57 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Caelestis urbs Jerusalem;
+office-part: Hymnus;
+mode: 1;
+occasion: common of dedication of Church;
+date: 2011;
+book:The Liber Usualis, 1961, p. 1248;
+transcriber:Albert Bloomfield;
+annotation: Hymn.;
+annotation: 1.;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)CÆ(cd)lé(f)stis(d) urbs(dc) Je(f)rú(ixgi)sa(g)lem,(h'_) (,)
+Be(h)á(j')ta(h) pá(hg)cis(f) ví(gh)si(h)o,(g.) (;)
+Quæ(f) cél(fe)sa(d) de(e') vi(f)vén(gh)ti(g)bus(f'_) (,)
+Sa(e)xis(g') ad(f) á(fe)stra(d) tól(e')le(d)ris,(c.) (;)
+Spon(c)s<sp>'ae</sp>(df)que(f) rí(fe)tu(d) cín(e')ge(f)ris(g'_) (,)
+Míl(h)l<i>e</i>() An(gf)ge(g)ló(fe)rum(d) míl(c')li(d)bus.(d.) (::)
+
+2. O(cd) sór(f)te(d) núp(dc)ta(f) pró(ixgi)spe(g)ra,(h'_) (,)
+Do(h)tá(j')ta(h) Pá(hg)tris(f) gló(gh)ri(h)a,(g.) (;)
+Re(f)spér(fe)sa(d) Spón(e')si(f) grá(gh)ti(g)a,(f'_) (,)
+Re(e)gí(g')na(f) for(fe)mo(d)sís(e')si(d)ma,(c.) (;)
+Chrí(c)sto(df) ju(f)gá(fe)ta(d) Prín(e')ci(f)pi,(g'_) (,)
+C<sp>'ae</sp>(h)li(gf) co(g)rú(fe)sca(d) cí(c')vi(d)tas.(d.) (::)
+
+3.Hic(cd) mar(f)ga(d)rí(dc)tis(f) é(ixgi)mi(g)cant,(h'_) (,)
+Pa(h)tén(j')tque(h) cún(hg)ctis(f) ó(gh)sti(h)a~ :(g.) (;)
+Vir(f)tú(fe)te(d) nam(e')que(f) pr<sp>'ae</sp>(gh)vi(g)a(f'_) (,)
+Mor(e)tá(g')lis(f) il(fe)luc(d) dú(e')ci(d)tur,(c.) (;)
+A(c)mó(df)re(f) Chrí(fe)sti(d) pér(e')ci(f)tus(g'_) (,)
+Tor(h)mén(gf)ta(g) quís(fe)quis(d) sús(c')ti(d)net.(d.) (::)
+
+4. Scál(cd)pri(f) sa(d)lú(dc)bris(f) í(ixgi)cti(g)bus,(h'_) (,)
+Et(h) tun(j')si(h)ó(hg)ne(f) plú(gh)ri(h)ma,(g.) (;)
+Fá(f)bri(fe) po(d)lí(e')ta(f) mál(gh)le(g)o(f'_) (,)
+Hanc(e) sá(g')xa(f) mó(fe)lem(d) cón(e')stru(d)unt,(c.) (;)
+Ap(c)tís(df)que(f) jún(fe)cta(d) né(e')xi(f)bus(g'_) (,)
+Lo(h)cán(gf)tur(g) in(fe) fa(d)stí(c')gi(d)o.(d.) (::)
+
+5. Dé(cd)cus(f) Pa(d)rén(dc)ti(f) dé(ixgi)bi(g)tum(h'_) (,)
+Sit(h) us(j')que(h)quá(hg)qu<i>e</i>() Al(f)tís(gh)si(h)mo,(g.) (;)
+Na(f)tó(fe)que(d) Pá(e')tris(f) ú(gh)ni(g)co,(f'_) (,)
+Et(e) ín(g')cly(f)to(fe) Pa(d)rá(e')cli(d)to,(c.) (;)
+C{u}i(c) laus,(df) po(f)té(fe)stas,(d) gló(e')ri(f)a(g'_) (,)
+Æ(h)tér(gf)na(g) sit(fe) per(d) s<sp>'ae</sp>(c')cu(d)la.(d.) (::)
+
+A(ded)men.(cd..) (::)

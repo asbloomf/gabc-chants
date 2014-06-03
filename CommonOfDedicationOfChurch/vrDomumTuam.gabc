@@ -1,0 +1,22 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Domum tuam;
+office-part: versicle and response;
+occasion: common of dedication of church;
+date: 2014;
+transcriber: Albert Bloomfield;
+transcription-date: 2014;
+style: modern;
+initial-style:0;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)()() <sp>V/</sp> Dó(h)mum(h) tú(h)am(h) Dó(h)mi(h)ne(h) dé(h)cet(h) san(h)cti(h)tú(h)d{o}. <v>(</v><i>T. P.</i> Allelúia.<v>)</v>(g'_hvGF'Efgf.) () (::) ()
+<sp>R/</sp> In(h) lon(h)gi(h)tú(h)di(h)nem(h) di(h)é(h)r{u}m. <v>(</v><i>T. P.</i> Allelúia.<v>)</v>(g'_hvGF'Efgf.) (::)
