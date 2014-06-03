@@ -68,23 +68,21 @@ five%
     \def\annot{\small \Vbar{}}
     \setinitialspacing{D}
     \includescore{../DeusInAdjutorium\if\deusinadjutoriumsolemn T%
-    _solemn\if\includelaustibi T%
+    _solemn\fi\if\includelaustibi T%
     _laustibi\fi%
-    \fi}
-    \if\deusinadjutoriumsolemn T\if\includelaustibi T%
-        \fi\fi%
+    }
     }%
     \translation[]{\Vbar{}~O God, come to my assistance. \Rbar{}~O Lord, make haste to help me. Glory be \ldots}
     \bigskip
-    \if\deusinadjutoriumsolemn T\else
-        \if\includelaustibi T%
-            {\itshape From Septuagesima to Wednesday in Holy Week, the following is said instead of} Allelúia :
-            \smallskip
-
-            \includescore{../LausTibiDomine\if\deusinadjutoriumsolemn T%
-            _solemn\fi}
-        \fi%
-    \fi
+%    \if\deusinadjutoriumsolemn T\else
+%        \if\includelaustibi T%
+%            {\itshape From Septuagesima to Wednesday in Holy Week, the following is said instead of} Allelúia :
+%            \smallskip
+%
+%            \includescore{../LausTibiDomine\if\deusinadjutoriumsolemn T%
+%            _solemn\fi}
+%        \fi%
+%    \fi
 }
 
 %this is deprecated -- now \printpsalm should be used instead
@@ -340,7 +338,15 @@ five%
 % run prepsalm so it can define psalmclef
 % TODO: figure out how to do this without letting it run greblockcustos
 {
-\ifx\prepsalm\undefined\else\prepsalm\fi
+\ifx\prepsalm\undefined\else
+\def\greblockcustos{%
+% the regular greblockcustos is global which messes us up here, so redefine it without the \global
+  \greblockcusto=1\relax %
+  \grelocalrightbox{}%
+  \relax %
+}
+\prepsalm
+\fi
 }
 \ifx\psalmclef\undefined%
   \def\altclef{}%

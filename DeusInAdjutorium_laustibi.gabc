@@ -1,0 +1,32 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Deus in adjutorium;
+office-part: beginning;
+occasion: all;
+date: 2011;
+transcriber: Benjamin Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: \Vbar;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+DE(c3h)us(h'_) (,) in(h) ad(h)ju(h)tó(hi)ri(h)um(h) mé(h)um(h'_) in(h)tén(gh)de. (h.) (::)
+
+<sp>R/</sp>~Dó(h)mi(h)ne(h'_) (,) ad(h) ad(h)ju(h)ván(h)dum(h) me(h'_) fe(h)stí(gh)na.(h.) (:)
+
+Gló(h)ri(h)a(h) Pá(h)tri,(h) et(h) Fí(h)li(h)o,(h'_) (,) et(h) Spi(h)rí(h)tu(h)i(h) Sán(gh)cto.(h.) (,)
+
+Si(h)cut(h) é(h)rat(h) in(h) prin(h)cí(h)pi(h)o,(h) et(h) nunc,(h) et(h) sem(h)per,(h.) (,) et(h) in(h) saé(h)cu(h)la(h) sæ(h)cu(h)ló(h)rum.(h) A(gh)men.(h.)
+
+<v>\dag{}</v>(;) Al(h)le(i)lú(hg~)ia.(g.) (::)
+
+<v>\hspace{-1ex}</v><i>or</i> <v>\dag{}</v>
+L{au}s(h) tí(h)bi(h) Dó(h)mi(h)ne(h'_) Rex(h) æ(h)tér(h)næ(i) gló(h')ri(h)æ.(g.) (::)

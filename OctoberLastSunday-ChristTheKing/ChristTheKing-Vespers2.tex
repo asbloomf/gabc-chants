@@ -15,8 +15,10 @@
 }
 \def\printsolemnorfestaltone{T}
 \def\deusinadjutoriumsolemn{T}
+\def\includelaustibi{F}
 
-\newcommand{\preantone}{\setgrefactor{15}
+\newcommand{\preantone}{\setgrefactor{17}
+\greblockcustos
 \large
 }
 \newcommand{\antoneinitialsize}{33}
@@ -25,7 +27,7 @@
 \newcommand{\antonetranslation}{He shall be called the Peaceful One, and His throne shall be established for ever.}
 \definepsalm{1}{109}{8}{G}
 \newcommand{\prepsalmone}{%
-\vspace{-1.5ex}
+%\vspace{-1.5ex}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -84,7 +86,7 @@
 \newcommand{\antfiveinitialsize}{40}
 \newcommand{\antfivetex}{Ant5-EcceDediTe}
 \newcommand{\antfiveinitial}{E}
-\newcommand{\antfivetranslation}{Behold I have given thee for a light of the Gentiles, that thou mayest be my salvation unto the ends of the earth.\vspace{2ex minus 2ex}}
+\newcommand{\antfivetranslation}{Behold I have given thee for a light of the Gentiles, that thou mayest be my salvation unto the ends of the earth.}
 \definepsalm{5}{116}{8}{G}
 \newcommand{\prepsalmfive}{%
 %\setgrefactor{15}%
@@ -96,7 +98,7 @@
 \newcommand{\chapter}{\dropcap{latin}{Fratres~: Grátias ágimus Deo Patri, qui dignos nos fecit in partem sortis sanctórum in} \textbf{lú}\-mi\-ne~:~\gredagger{} qui erípuit nos de potestáte \emph{te\-ne}\-\textbf{brá}\-rum,~* et tránstulit in regnum Fílii dilectiónis \textbf{su}\-æ.}
 \newcommand{\chaptertranslation}{Brethren: We give thanks to God the Father, who hath made us worthy to be partakers of the lot of the saints in light, who hath delivered us from the power of darkness, and hath translated us into the kingdom of the Son of His love.}
 
-\newcommand{\prehymn}{\normalsize
+\newcommand{\prehymn}{\large
 \setgrefactor{15}
 }
 \newcommand{\hymnlinetwo}{1.}
@@ -158,6 +160,7 @@ Reigning for aye o'er heaven's host.  Amen.
 %}
 \newcommand{\magfontsize}{38}
 \newcommand{\magantinitial}{H}
+\newcommand{\maganttex}{MagnificatAntiphon}
 \newcommand{\maganttranslation}{He hath on His garment and on His thigh written: King of kings and Lord of lords.  To Him be glory and empire for ever and ever.}
 \def\magsolemn{T}
 \def\magoneline{T}
@@ -174,4 +177,6 @@ Reigning for aye o'er heaven's host.  Amen.
 %\def\benedicamusdominogrefactor{14}
 \definebenedicamusdomino{1}{2}
 
-\input{../fullvespers}
+\input{../inc_header}
+\input{../fullvespers-test}
+%\input{../fullvespers}
