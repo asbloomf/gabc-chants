@@ -115,7 +115,7 @@
 \StrPosition[2]{#3}{ }[\mypos]%
 \fi
 \lettrine{\StrLeft{#3}{1}}%
-   {#1\StrMid{#3}{2}{\mypos}} %
+   {#1\StrMid{#3}{2}{\mypos}}%
 \foreignlanguage{#2}{#1\StrGobbleLeft{#3}{\mypos}}%
 }
 
