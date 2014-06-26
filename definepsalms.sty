@@ -618,9 +618,9 @@ five%
   }
 \fi
 \if\psalmtitleafterant F%
-    \vspace{0pt minus 14pt}
+    %\vspace{0pt minus 14pt}
     \printpsalmtitle
-    \vspace{0pt minus 18pt}
+    %\vspace{0pt minus 18pt}
 \fi
 %\bigskip % probably can delete this
 \ifx\preant\undefined
@@ -635,7 +635,7 @@ five%
 \if\psalmtitleafterant T%
   \if\printantiphon T%
     \ifx\anttranslation\undefined\else%
-      \translation[]{\normalsize \anttranslation \medskip}
+      \translation[]{\normalsize \anttranslation \bigskip}
     \fi%
     %\vspace{-1ex plus 1ex}% maybe get rid of this
   \fi

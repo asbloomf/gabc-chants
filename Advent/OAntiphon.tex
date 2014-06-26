@@ -14,23 +14,10 @@
 %\pdfgentounicode=1
 % to change the font to something better, you can install the kpfonts package (if not already installed). To do so
 % go open the "TeX Live Manager" in the Menu Start->All Programs->TeX Live 2010
-\input{../gsp-spaces}
-%\def\greinitialformat#1{{\fontsize{37}{37}\selectfont #1}}
-%small > footnotesize > scriptsize > tiny
+\input{../inc_header}
 
-
-% my stuff
-\usepackage[garamond]{../mypackage}
-% end my stuff
-
-\setgrefactor{17}
-
-\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
-%\geometry{letterpaper} % or letterpaper (US) or a5paper or....
-\geometry{outer=25pt,inner=25pt,top=25pt+\headsep+\headheight,bottom=30pt+\footskip}
-%\marginsize{25pt}{25pt}{25pt}{30pt}
-\pagestyle{fancy} % no header or footers
 %\cfoot{\thepage}
+\let\headrulewidth\oldheadrulewidth
 \newcommand{\heading}{December \oantiphondate.}
 \newcommand{\magantiphon}{December\oantiphondate-MagAntiphon}
 
@@ -52,7 +39,7 @@
 %\redlines
 
 \begin{center}{\large Magnificat.}\end{center}
-\vspace{-1ex}
+%\vspace{-1ex}
 
 {\premag
 \def\greinitialformat#1{%
@@ -70,7 +57,7 @@
 \includescore{\magantiphon}}%
 %\vspace{-1ex}
 \translation[]{\maganttranslation}
-\medskip
+\bigskip
 \hrule
 \medskip
 \medianttermination{Mediant of 1 accent with 3 preparatory syllables.}{Termination of 1 accent with 1 preparatory syllable.}

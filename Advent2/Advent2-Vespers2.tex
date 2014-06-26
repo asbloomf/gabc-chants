@@ -14,6 +14,7 @@
 \setgrefactor{16}
 }
 \def\deusinadjutoriumsolemn{F}
+\def\includelaustibi{F}
 
 \newcommand{\preantone}{\setgrefactor{17}
 \large
@@ -37,7 +38,7 @@
 \newcommand{\anttwoinitialsize}{40}
 \newcommand{\anttwotex}{Ant2-Urbs}
 \newcommand{\anttwoinitial}{U}
-\newcommand{\anttwotranslation}{Sion, the city of our strength; a Saviour, a wall and a bulwark shall be set therein: open ye the gates, for God is with us, alleluia.\vspace{-2ex}}
+\newcommand{\anttwotranslation}{Sion, the city of our strength; a Saviour, a wall and a bulwark shall be set therein: open ye the gates, for God is with us, alleluia.}
 \def\psalmclef{2}
 \definepsalm{2}{110}{7}{d}
 \let\psalmclef=\undefined
@@ -91,7 +92,6 @@
 \newcommand{\antfivetranslation}{Behold our Lord shall come with strength, and shall enlighten the eyes of His servants, alleluia.}
 \definepsalm{5}{113}{3}{a}
 \newcommand{\prepsalmfive}{%
-\vspace{-1ex}
 %\setgrefactor{15}%
 \normalsize%
 }
@@ -113,6 +113,7 @@
 %}
 \newcommand{\magfontsize}{38}
 \newcommand{\magantinitial}{T}
+\newcommand{\maganttex}{MagnificatAntiphon}
 \newcommand{\maganttranslation}{Art Thou He that art to come, or look we for another? Relate to John what you have seen: The blind recover their sight, the dead rise again, the poor have the Gospel preached to them, alleluia.}
 \def\magsolemn{F}
 \definemag{8}{G*}
@@ -131,4 +132,6 @@
 %\newcommand{\benedicamusdominotex}{../BenedicamusDomino/BenedicamusDomino_SundaysOfAdventAndLent}
 %\newcommand{\benedicamusdominotexalt}{../BenedicamusDomino/BenedicamusDomino_1class2ndvespersAlt}
 
-\input{../FullVespers}
+\input{../inc_header}
+\input{../FullVespers-test}
+%\input{../FullVespers}
