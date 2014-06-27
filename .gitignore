@@ -1,1 +1,5 @@
 gh-pages
+*.aux
+*.gaux
+*.pdf
+/node_modules
