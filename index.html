@@ -37,12 +37,15 @@ descr: Some gabc chants, mostly vespers and tenebrae
 <p>followed by a list of the pdfs</p>
 
 <ul>
-{% for d in site.data.pdfs %}
+{% for c in site.data.pdfs %}
+  <h3>{{ c[0] }}</h3>
+  {% for d in c[1] %}
   <li>
     <a href="{{ d.url }}">
       {{ d.name }}
     </a>
   </li>
+  {% endfor %}
 {% endfor %}
 </ul>
 

@@ -1,0 +1,9 @@
+Category 1:
+ - name: test
+   url: http://google.com
+ - name: another test
+   url: https://google.com
+
+Category 2:
+ - name: what
+   url: http://gmail.com
