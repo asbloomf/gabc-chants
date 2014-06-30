@@ -2,6 +2,7 @@ module.exports = function(grunt) {
 
 	var fs = require('fs');
 	var path = require('path');
+	var pdfsYml = "";
 
 	function ensureDir(dir) {
 		if(dir.length === '') return;
@@ -19,40 +20,58 @@ module.exports = function(grunt) {
 		ensureDir(path.dirname(target));
 
 		fs.writeFileSync(target, fs.readFileSync(source));
-		return;
+	}
 
-		var cbCalled = false;
+	function addCategory(dirname) {
+		if(pdfsYml.length > 0) pdfsYml += "\n";
+		pdfsYml += dirname + ":" + "\n";
+	}
+	function strSplice(str, index, count, add) {
+		return str.slice(0, index) + add + str.slice(index + count);
+	}
+	function convertName(filename) {
+		return filename.replace(/([A-Z][a-z]*|\d*)/g, "$1 ");
+	}
+	function addItem(fpath) {
+		var name = path.basename(fpath, '.pdf');
+		fpath = path.join('pdfs/', fpath);
+		pdfsYml += " - name: " + convertName(name) + "\n";
+		pdfsYml += "   url: " + fpath + "\n";
+		//grunt.log.write(name + '\n');
+	}
+	function writePdfsYml() {
+		fs.writeFileSync('gh-pages/_data/pdfs.yml', pdfsYml);
+	}
 
-		var rd = fs.createReadStream(source);
-		rd.on("error", done);
-
-		var wr = fs.createWriteStream(target);
-		wr.on("error", done);
-		wr.on("close", function(ex) {
-			done();
-		});
-		rd.pipe(wr);
-
-		function done(err) {
-			if(!cbCalled) {
-				cb(err);
-				cbCalled = true;
-			}
+	function numericSort(a, b) {
+		var numa = a.match(/\d+/);
+		var numb = b.match(/\d+/);
+		if(numa && numb) {
+			return numb - numa;
 		}
+		return a < b? 1: a === b? 0: -1;
 	}
 
 	function listDirs(root) {
-		var files = fs.readdirSync(root);
+		var files = fs.readdirSync(root).sort(numericSort);
+		var categoryAdded = false;
+
 		for (var i = files.length - 1; i >= 0; i--) {
 			var fn = root + '/' + files[i];
 			var stats = fs.statSync(fn);
 			if(stats.isFile()) {
 				if(files[i].slice(-4).toLowerCase() == ".pdf") {
 					// it is a PDF
+					if(!categoryAdded) {
+						addCategory(path.basename(root));
+						categoryAdded = true;
+					}
+
 					copyFile(fn, "gh-pages/pdfs" + fn.slice(1), function(err) {
 						grunt.log.write('F ' + fn + '\n');
 						if(err) grunt.log.error(err);
 					});
+					addItem(fn);
 				}
 			} else if(stats.isDirectory()) {
 				//grunt.log.write('D ' + fn + '\n');
@@ -74,6 +93,7 @@ module.exports = function(grunt) {
 			grunt.log.write(files[i] + '\n');
 		}*/
 		listDirs('.');
+		writePdfsYml();
 		grunt.log.ok();
 	});
 
