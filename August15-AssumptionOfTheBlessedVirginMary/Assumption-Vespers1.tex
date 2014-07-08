@@ -204,7 +204,7 @@ Amen.
 \setlength{\magantinitialspace}{4.5mm plus 0em minus 0em}
 \newcommand{\magantlinetwo}{Ant. 1. f}
 \newcommand{\maganttranslation}{O Virgin most prudent, whither goest thou, like the golden dawn?  Daughter of Sion, thou art all beautiful and sweet; fair as the moon, bright as the sun.}
-\newcommand{\magtex}{MagnificatSolemn1f}
+\newcommand{\magtex}{../psalms/MagnificatSolemn1f}
 \newcommand{\magverses}{\item Quia respéxit humilitátem \emph{an}\emph{cíl}\emph{lae} \textbf{sú}æ~:~* ecce enim ex hoc beátam me dícent ómnes gene\emph{ra}\emph{ti}\textbf{ó}nes.
 \item Quia fécit míhi \emph{má}\emph{gna} \emph{qui} \textbf{pó}\textbf{tens} est~:~* et sánctum \emph{nó}\emph{men} \textbf{é}jus.
 \item Et misericórdia éjus a progéni\emph{e} \emph{in} \emph{pro}\textbf{gé}\textbf{ni}es~* timén\emph{ti}\emph{bus} \textbf{é}um.
@@ -242,7 +242,8 @@ Amen.
 
 \setgrefactor{17}
 
-\marginsize{25pt}{25pt}{25pt}{30pt}
+%\marginsize{25pt}{25pt}{25pt}{30pt}
+\geometry{outer=25pt,inner=25pt,top=25pt+\headsep+\headheight,bottom=25pt+\footskip}
 \pagestyle{fancy} % no header or footers
 \let\oldheadrulewidth\headrulewidth
 \renewcommand\headrulewidth{0pt}
@@ -288,6 +289,7 @@ Amen.
 \setgrefactor{15}
 \includescore{DeusInAdjutorium_solemn.tex}}%
 \translation[]{\Vbar{} O God, come to my assistance. \Rbar{} O Lord, make haste to help me. Glory be \ldots}
+\bigskip
 %{\itshape From Septuagesima to Wednesday in Holy Week, the following is said instead of} Allelúia :
 
 %\includescore{LausTibiDomine}
@@ -302,11 +304,11 @@ Amen.
 \large
 \greblockcustos
 \includescore{\antonetex}
-\vspace{-1ex}
+%\vspace{-1ex}
 \translation[]{\normalsize \antonetranslation}
-\vspace{-3ex}
+%\vspace{-3ex}
 \begin{center}{\Large \psalmone}\end{center}
-\vspace{-1.5ex}
+%\vspace{-1.5ex}
 \includescore{\psalmonetex}
 \medskip
 
@@ -453,9 +455,9 @@ Amen.
 \includescore{\antfivetex}
 %\vspace{-4ex}
 \translation[]{\normalsize \antfivetranslation}
-\vspace{-2ex}
+%\vspace{-2ex}
 \begin{center}{\Large \psalmfive}\end{center}
-\vspace{-1ex}
+%\vspace{-1ex}
 %\setgrefactor{15}%
 \large%
 \includescore{\psalmfivetex}
@@ -517,7 +519,7 @@ Amen.
 \setgrefactor{16}
 {\includescore{\hymntex}
 }
-\vspace{-3ex}
+%\vspace{-3ex}
 \normalsize
 \selectlanguage{american}
 \begin{multicols}{2}
@@ -532,11 +534,11 @@ Amen.
 \Vbar{}~\vtranslation{}\\
 \Rbar{}~\rtranslation{}
 }
+\bigskip
 %\pagebreak
 \hrule
 \begin{center}{\large Magnificat.}\end{center}
-\vspace{-1ex}
-
+%\vspace{-1ex}
 \setspaceafterinitial{\magantinitialspace}
 \setspacebeforeinitial{\magantinitialspace}
 % We set VII above the initial.
@@ -556,7 +558,7 @@ Amen.
 \normalsize
 %\vspace{-2ex}
 \translation[]{\maganttranslation}
-\smallskip
+\bigskip
 %\hrule
 
 \normalsize
@@ -564,7 +566,7 @@ Amen.
 {\greblockcustos\setgrefactor{16}
 \normalsize
 \begin{magnificat}{\magtex}
-\vspace{-3ex}
+%\vspace{-3ex}
 \magverses
 \end{magnificat}
 }

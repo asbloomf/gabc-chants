@@ -4,6 +4,7 @@
 % This is a simple template for a LuaLaTeX document using gregorio scores.
 
 \documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
 
 \newcommand{\heading}{The Circumcision of Our Lord at 2nd Vespers.}
 \sloppy
@@ -14,6 +15,7 @@
 \setgrefactor{15}
 }
 \def\deusinadjutoriumsolemn{F}
+\def\includelaustibi{F}
 
 \input{Circumcision-psalms}
 
@@ -37,15 +39,13 @@
 \newcommand{\magfontsize}{33}
 \newcommand{\magantinitial}{M}
 \newcommand{\maganttranslation}{O mighty mystery of generation: the womb of her who knew not man is become the temple of God: He who takes flesh from her is not defiled: all nations shall come, and say: Glory be to Thee, O Lord.}
-\newcommand{\magtone}{2}
-\newcommand{\magend}{A}
 \def\magsolemn{T}
 \def\magoneline{F}
+\definemag{2}{A}
 \newcommand{\premagverses}{\greblockcustos\setgrefactor{15}
 \normalsize
 %\pagebreak
 }
-\input{../psalms/definemag}
 
 \newcommand{\collect}{Deus, qui salútis ætérnæ, beátæ Maríæ virginitáte fecúnda, humáno géneri praémia præstitísti~:~\dag{} tríbue quaésumus; ut ipsam pro nobis intercédere sentiámus,~* per quam merúimus auctórem vitæ suscípere, Dóminum nostrum Jesum Christum Fílium tuum.  Qui tecum vivit.}
 \newcommand{\collecttranslation}{O God, who by the fruitful virginity of blessed Mary hast bestowed upon mankind the rewards of eternal salvation: grant, we beseech Thee, that we may experience her intercession for us, through whom we have been made worthy to receive the Author of Life, Jesus Christ Thy Son, our Lord.}
@@ -54,5 +54,8 @@
 \newcommand{\benedicamusdominotex}{../BenedicamusDomino/BenedicamusDomino_2class2ndVespers}
 %\newcommand{\benedicamusdominotonealt}{5.}
 %\newcommand{\benedicamusdominotexalt}{../BenedicamusDomino/BenedicamusDomino_1class2ndvespersAlt}
+
+%\input{../inc_header}
+%\input{../FullVespers-test}
 
 \input{../FullVespers}

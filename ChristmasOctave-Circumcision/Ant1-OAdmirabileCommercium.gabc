@@ -18,6 +18,23 @@ annotation: 6. F;
 
 %%
 
-(c4)O(f/fd/dc) ad(f')mi(f)rá(fg)bi(g)le(g') com(f)mér(gh)ci(gf)um!(f.) <v>\greheightstar</v>(;) Cre(f)á(g')tor(f) gé(g')ne(f)ris(g) hu(gh)má(f)ni,(f.) (;) a(f)ni(f)má(ixfh'_!iv_H'G)tum(g') cór(ixi)pus(h') sú(g)mens,(f.) (;) de(f) Vír(g')gi(f)ne(f') ná(g)sci(f') di(f)gná(ixfh'_!iv_H'G)tus(hg) est :(g.) (:) et(g) pro(g)cé(h')dens(g) hó(fg)mo(f) si(fe)ne(d!ewf) sé(f_g)mi(f)ne,(c.) (;) lar(c_d)gí(f')tus(f) est(f) nó(g_h)bis(g') sú(h)am(hj) de(hg)i(h)tá(f.)tem.(f.) (::)
+(c4)O(f/fd/dc) ad(f')mi(f)rá(fg)bi(g)le(g') com(f)mér(gh)ci(gf)um!(f.) <v>\greheightstar</v>(;)
+Cre(f)á(g')tor(f) gé(g')ne(f)ris(g) hu(gh)má(f)ni,(f.) (;)
+a(f)ni(f)má(ix%fh'_!
+[ev:%
+\greglyph{\char 1026}{f}{i}{0}{}{%
+\grehepisemus{j}{18}{0}{j}%
+\grevepisemus{j}{18}%
+}%
+]iv_H'G)tum(g') cór(ixi)pus(h') sú(g)mens,(f.) (;)
+de(f) Vír(g')gi(f)ne(f') ná(g)sci(f') di(f)gná(ix%fh'_!
+[ev:%
+\greglyph{\char 1026}{f}{i}{0}{}{%
+\grehepisemus{j}{18}{0}{j}%
+\grevepisemus{j}{18}%
+}%
+]iv_H'G)tus(hg) est :(g.) (:)
+et(g) pro(g)cé(h')dens(g) hó(fg)mo(f) si(fe)ne(d!ewf) sé(f_g)mi(f)ne,(c.) (;)
+lar(c_d)gí(f')tus(f) est(f) nó(g_h)bis(g') sú(h)am(hj) de(hg)i(h)tá(f.)tem.(f.) (::)
 
 %E(h) u(h) o(f) u(gh) a(g) e.(f.) (::)

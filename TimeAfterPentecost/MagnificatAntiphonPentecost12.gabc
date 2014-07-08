@@ -20,7 +20,14 @@ annotation: Ant. 8. G;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c4)HO(g)mo(gd) quí(f_g)dam(g_h/hg'_) <v>\greheightstar</v>(,) de(f)scen(ghg~)dé(h)bat(g') ab(f) Je(gh)rú(g)sa(f)lem(g.) (,) in(fd~) Jé(f)ri(f)cho,(d!ew!fv_EC.) (;) et(f) ín(g')ci(h)dit(ji) in(hg~) la(fg)tró(g)nes :(g.) (:) qui(j'_) é(k)ti(i')am(j) de(h')spo(j)li(i)a(hg)vé(h)runt(gh) é(f)um,(f.) (;) et(g') plá(f)gis(g') im(h)pó(j')si(k)tis(j) a(k)bi(i')é(j)runt,(h_g_) (;) se(gf)mi(d)ví(e_f)vo(gh) re(h)lí(g.)cto.(g.) (::z)
+(c4)HO(g)mo(gd) quí(f_g)dam(g_h/%hg'_
+[ev:%
+\greendofelement{0}{0}%
+\greglyph{\char 6145}{h}{f}{8}{}{%
+\grehepisemus{i}{0}{0}{i}%
+\grevepisemus{f}{0}%
+}%
+]) <v>\greheightstar</v>(,) de(f)scen(ghg~)dé(h)bat(g') ab(f) Je(gh)rú(g)sa(f)lem(g.) (,) in(fd~) Jé(f)ri(f)cho,(d!ew!fv_EC.) (;) et(f) ín(g')ci(h)dit(ji) in(hg~) la(fg)tró(g)nes :(g.) (:) qui(j'_) é(k)ti(i')am(j) de(h')spo(j)li(i)a(hg)vé(h)runt(gh) é(f)um,(f.) (;) et(g') plá(f)gis(g') im(h)pó(j')si(k)tis(j) a(k)bi(i')é(j)runt,(h_g_) (;) se(gf)mi(d)ví(e_f)vo(gh) re(h)lí(g.)cto.(g.) (::z)
 
 E(j) u(j) o(i) u(j) a(h) e.(g.) (::)
 
