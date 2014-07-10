@@ -1,4 +1,1 @@
-* text=auto
-
-*.tex text eol=lf
-*.gabc text eol=lf
+* -crlf

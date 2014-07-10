@@ -3,3 +3,7 @@ gh-pages
 *.gaux
 *.pdf
 /node_modules
+*.fdb_latexmk
+*.synctex.gz
+*.eps
+misc/*-systems.*
