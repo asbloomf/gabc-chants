@@ -12,45 +12,40 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		clean: {
-			master: ["**/*.log", "**/*.aux", "**/*.gaux"],
-			ghpages: ["gh-pages/**/*.pdf"]
+			master: ["**/*.log", "**/*.aux", "**/*.gaux", "**/*.fdb_latexmk", "**/*.eps", "misc/magnificat-1D2-smc-?.pdf", "misc/magnificat-grassi-?.pdf", "misc/magnificat-protodiogenes-7a-?.pdf", "misc/*-systems.*"],
+			ghpages: ["gh-pages/**/*.pdf"],
+			all: ["**/*.pdf", "**/*.synctex.gz"]
 		},
 		copy: {
 			pdfs: {
 				expand: true,
-				src: ["**/*.pdf", "!gh-pages/**/*", "!**/*test.pdf", "!**/test*", ],
+				src: ["**/*.pdf", "!gh-pages/**/*", "!**/*test.pdf", "!**/test*", '!**/lauds.tex', '!**/nocturne*'],
 				dest: "gh-pages/pdfs/",
-				options: {
-					// process: function(content, srcpath) {
-					// 	var cat = convertName(path.dirname(srcpath));
-					// 	if(!pdfsJson[cat]) pdfsJson[cat] = [];
-					// 	var name = convertName(path.basename(srcpath, '.pdf'));
-					// 	var fpath = path.join('pdfs/', srcpath);
-					// 	var newObj = {name: name, url: fpath};
-					// 	var idx = findInsertionPoint(pdfsJson[cat], newObj, numericSortNew);
-					// 	pdfsJson[cat].splice(idx, 0, newObj);
-					// 	return content;
-					// }
-				}
 			}
 		},
 		custom: {
 			pdfs: {
 				expand: true,
-				src: ["**/*.pdf", "!gh-pages/**/*", "!**/*test.pdf", "!**/test*", ],
+				src: ["**/*.pdf", "!gh-pages/**/*", "!**/*test.pdf", "!**/test*", '!**/lauds.tex', '!**/nocturne*'],
 			}
 		},
 		gabc: {
 			build: {
 				expand: true,
-				src: ['**/*.gabc']
+				src: ['**/*.gabc', "!template*/**/*"]
 			}
 		},
 		tex: {
 			build: {
 				expand: true,
 				src: ['**/*.tex', '!psalms/**/*', '!template*/**/*', '!**/??--*', '!**/vr*', '!**/lesson?-*', '!**/Ant?-*', '!**/MagnificatAntiphon*'
-				, '!**/Psalm*', '!**/*-MagAntiphon*', '!**/*vr.tex', '!**/*-test.tex', '!**/test.tex']
+				, '!**/Psalm*', '!**/*-MagAntiphon*', '!**/*vr.tex', '!**/*-test.tex', '!**/test.tex', '!**/lauds.tex', '!**/nocturne*']
+			}
+		},
+		lilypond: {
+			build: {
+				expand: true,
+				src: ['**/*.ly', '!**/header.ly']
 			}
 		}
 	});
@@ -91,8 +86,13 @@ module.exports = function(grunt) {
 		return str.slice(0, index) + add + str.slice(index + count);
 	}
 	function convertName(filename) {
-		return filename.replace(/-main/, '')
-			.replace(/([a-z\-]+|\d+)/g, "$1 ").trim();
+		return filename
+			.replace(/_/g, ' ')
+			.replace(/-main/, '')
+			.replace(/([a-z\-]+|\d+)/g, "$1 ")
+			.replace(/- /g, ': ')
+			.replace(/ -/g, '')
+			.trim();
 	}
 	function writePdfsYml() {
 		grunt.file.write('gh-pages/_data/pdfs.yml', pdfsYml);
@@ -126,7 +126,11 @@ module.exports = function(grunt) {
 		grunt.log.ok();
 	});
 
-	grunt.registerTask('default', ['copy', 'custom']);
+	grunt.registerTask('default', ['clean:master', 'clean:ghpages', 'copy', 'custom']);
+
+	grunt.registerTask('build', ['clean', 'gabc', 'lilypond', 'tex']);
+
+	grunt.registerTask('all', ['build', 'default']);
 
 	/*grunt.registerTask('default', 'Log some stuff', function() {
 		var name = this.name || 'copyFiles'
@@ -199,6 +203,11 @@ module.exports = function(grunt) {
 	grunt.registerMultiTask('gabc', 'build gabc files', function() {
 		var done = this.async();
 		runFiles('gregorio', [], this.filesSrc, done);
+	});
+
+	grunt.registerMultiTask('lilypond', 'build ly files', function() {
+		var done = this.async();
+		runFiles('lilypond', [], this.filesSrc, done);
 	});
 
 	// // Project configuration
