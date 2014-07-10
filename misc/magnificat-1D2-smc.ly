@@ -5,6 +5,7 @@
   tagline = ""
   composer = "SMC"
 }
+\include "lilypond-book-preamble.ly"
 
 #(set-default-paper-size "letter")
 

@@ -1,7 +1,10 @@
-﻿\header {
+﻿\version "2.18.2"
+
+\header {
   tagline = ""
   composer = "Protodiogenes Lansingensis"
 }
+\include "lilypond-book-preamble.ly"
 
 #(set-default-paper-size "letter")
 
