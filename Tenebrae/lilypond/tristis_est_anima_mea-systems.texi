@@ -1,0 +1,7 @@
+@image{tristis_est_anima_mea-1}
+@image{tristis_est_anima_mea-2}
+@image{tristis_est_anima_mea-3}
+@image{tristis_est_anima_mea-4}
+@image{tristis_est_anima_mea-5}
+@image{tristis_est_anima_mea-6}
+@c eof

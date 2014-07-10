@@ -1,0 +1,6 @@
+@image{Omnes_amici_mei-1}
+@image{Omnes_amici_mei-2}
+@image{Omnes_amici_mei-3}
+@image{Omnes_amici_mei-4}
+@image{Omnes_amici_mei-5}
+@c eof

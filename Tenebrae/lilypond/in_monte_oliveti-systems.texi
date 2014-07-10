@@ -1,0 +1,6 @@
+@image{in_monte_oliveti-1}
+@image{in_monte_oliveti-2}
+@image{in_monte_oliveti-3}
+@image{in_monte_oliveti-4}
+@image{in_monte_oliveti-5}
+@c eof
