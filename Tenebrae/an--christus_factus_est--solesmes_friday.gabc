@@ -4,6 +4,13 @@ mode:5;
 book:The Liber Usualis, 1961, p. 659;
 transcriber:Andrew Hinkley;
 %%
+%
+%
+% %%%%%%%
+% % Right now, the small caps stuff is hard-coded in the tex file, so if you re-run gregorio, edit the TEX file
+% %%%%%%%
+%
+%
 (c4) CHr{i}(ffg)stus(f.) <v>\greheightstar</v>(,) fa(fg)ctus(f) est(f') pro(f) no(ghF'ED./g_e/fg)bis(f.) (;) o(f)bé(hf/gh!jj/kjk)di(jij)ens(h_g) (,) us(h!jjh)que(f.) ad(ixfiH'Gh) mor(f_g_f_)tem.(f.) (::)
 <sc>Mor</sc>(ixf!hhi)<sc>tem</sc>(g) au(gjj)tem(ixj.h!iw!jvIG'/hw!ivHG) cru(fv.ff)cis.(f_c) (,) (fg!hvGF./e!g'h//fhg/hggf.)
 (::)
