@@ -19,14 +19,14 @@ module.exports = function(grunt) {
 		copy: {
 			pdfs: {
 				expand: true,
-				src: ["**/*.pdf", "!gh-pages/**/*", "!**/*test.pdf", "!**/test*", '!**/lauds.tex', '!**/nocturne*'],
+				src: ["**/*.pdf", "!gh-pages/**/*", "!**/*test.pdf", "!**/test*", '!**/lauds.*', '!**/nocturne*', '!**/Tenebrae/*/*.pdf'],
 				dest: "gh-pages/pdfs/",
 			}
 		},
 		custom: {
 			pdfs: {
 				expand: true,
-				src: ["**/*.pdf", "!gh-pages/**/*", "!**/*test.pdf", "!**/test*", '!**/lauds.tex', '!**/nocturne*'],
+				src: ["gh-pages/pdfs/**/*.pdf", "!**/*test.pdf", "!**/test*", '!**/lauds.*', '!**/nocturne*', '!**/Tenebrae/*/*.pdf'],
 			}
 		},
 		gabc: {
@@ -111,12 +111,13 @@ module.exports = function(grunt) {
 	}
 
 	grunt.registerMultiTask('custom', 'debug stuff', function() {
+		grunt.log.writeln(this.filesSrc.length);
 		for (var i = this.filesSrc.length - 1; i >= 0; i--) {
 			var srcpath = this.filesSrc[i];
-			var cat = convertName(path.dirname(srcpath));
+			var cat = convertName(path.relative('gh-pages/pdfs/', path.dirname(srcpath)));
 			if(!pdfsJson[cat]) pdfsJson[cat] = [];
 			var name = convertName(path.basename(srcpath, '.pdf'));
-			var fpath = path.join('pdfs/', srcpath);
+			var fpath = path.relative('gh-pages/', srcpath);
 			var newObj = {name: name, url: fpath};
 			var idx = findInsertionPoint(pdfsJson[cat], newObj, numericSortNew);
 			pdfsJson[cat].splice(idx, 0, newObj);
