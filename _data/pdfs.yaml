@@ -49,9 +49,6 @@ misc:
     url: "pdfs\\misc\\magnificat-protodiogenes-7a-crop.pdf"
   - name: "protodiogenes: 7 a-magnificat-solemn"
     url: "pdfs\\misc\\protodiogenes-7a-magnificat-solemn.pdf"
-"":
-  - name: magnificat-crop
-    url: "pdfs\\magnificat-crop.pdf"
 Trinity  Sunday:
   - name: "Trinity Sunday: Vespers"
     url: "pdfs\\Trinity Sunday\\TrinitySunday-Vespers.pdf"
