@@ -25,28 +25,8 @@ misc:
     url: "pdfs\\misc\\grassi-magnificat-simple.pdf"
   - name: grassi-magnificat-solemn
     url: "pdfs\\misc\\grassi-magnificat-solemn.pdf"
-  - name: mag-crop
-    url: "pdfs\\misc\\mag-crop.pdf"
-  - name: magnificat
-    url: "pdfs\\misc\\magnificat.pdf"
-  - name: magnificat .backup
-    url: "pdfs\\misc\\magnificat.backup.pdf"
-  - name: magnificat .old
-    url: "pdfs\\misc\\magnificat.old.pdf"
-  - name: magnificat-crop
-    url: "pdfs\\misc\\magnificat-crop.pdf"
   - name: "magnificat: 1 D2smc-solemn"
     url: "pdfs\\misc\\magnificat-1D2-smc-solemn.pdf"
-  - name: "magnificat: 1 D2smc-crop"
-    url: "pdfs\\misc\\magnificat-1D2-smc-crop.pdf"
-  - name: "magnificat: 1 D2smc"
-    url: "pdfs\\misc\\magnificat-1D2-smc.pdf"
-  - name: "magnificat-smc: 1 D2falso-bordone"
-    url: "pdfs\\misc\\magnificat-smc-1D2-falso-bordone.pdf"
-  - name: "magnificat-protodiogenes: 7 a"
-    url: "pdfs\\misc\\magnificat-protodiogenes-7a.pdf"
-  - name: "magnificat-protodiogenes: 7 a-crop"
-    url: "pdfs\\misc\\magnificat-protodiogenes-7a-crop.pdf"
   - name: "protodiogenes: 7 a-magnificat-solemn"
     url: "pdfs\\misc\\protodiogenes-7a-magnificat-solemn.pdf"
 Trinity  Sunday:
