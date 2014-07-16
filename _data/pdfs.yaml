@@ -52,19 +52,6 @@ misc:
 "":
   - name: magnificat-crop
     url: "pdfs\\magnificat-crop.pdf"
-green  vespers  (Scribus ):
-  - name: 1  psalm
-    url: "pdfs\\green vespers (Scribus)\\1 psalm.pdf"
-  - name: 2  psalm
-    url: "pdfs\\green vespers (Scribus)\\2 psalm.pdf"
-  - name: 3  psalm
-    url: "pdfs\\green vespers (Scribus)\\3 psalm.pdf"
-  - name: 4  psalm
-    url: "pdfs\\green vespers (Scribus)\\4 psalm.pdf"
-  - name: 5  psalm
-    url: "pdfs\\green vespers (Scribus)\\5 psalm.pdf"
-  - name: lucis
-    url: "pdfs\\green vespers (Scribus)\\lucis.pdf"
 Trinity  Sunday:
   - name: "Trinity Sunday: Vespers"
     url: "pdfs\\Trinity Sunday\\TrinitySunday-Vespers.pdf"
