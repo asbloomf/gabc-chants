@@ -118,7 +118,7 @@ module.exports = function(grunt) {
 			if(!pdfsJson[cat]) pdfsJson[cat] = [];
 			var name = convertName(path.basename(srcpath, '.pdf'));
 			var fpath = path.relative('gh-pages/', srcpath);
-			var newObj = {name: name, url: fpath};
+			var newObj = {name: name, url: fpath.replace(/\\/g,'/')};
 			var idx = findInsertionPoint(pdfsJson[cat], newObj, numericSortNew);
 			pdfsJson[cat].splice(idx, 0, newObj);
 		};
