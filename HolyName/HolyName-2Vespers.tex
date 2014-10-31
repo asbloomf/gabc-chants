@@ -1,0 +1,52 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{import}
+\usepackage{../definepsalms}
+\sloppy
+
+\input{HolyName-common}
+
+%commemoration for 3rd Sunday after Pentecost
+%\def\pagebreakbeforecommemoration{T}
+%\def\commemorationtex{../TimeAfterPentecost/CommemorationPentecost3}
+%end commemoration stuff
+
+
+\newcommand{\heading}{The Holy Name of Jesus II Vespers.}
+
+\newcommand{\premag}{
+\large
+\setgrefactor{17}
+%\greblockcustos
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+\newcommand{\magfontsize}{38}
+\def\pagebreakbeforemagnificat{T}
+\newcommand{\maganttex}{an--vocabis_nomen_ejus--solesmes}
+\newcommand{\magantinitial}{V}
+\newcommand{\maganttranslation}{Thou shalt call His Name Jesus, for He shall save His people from their sins, alleluia.}
+\def\magsolemn{T}
+\def\magoneline{T}
+\let\magant\undefined
+\let\magantlinetwo\undefined
+\let\magtex\undefined
+\let\magverses\undefined
+\definemag{1}{g}
+\newcommand{\premagverses}{%
+%\greblockcustos
+\normalsize
+\setgrefactor{14}
+%\pagebreak
+}
+
+\definebenedicamusdomino{2}{2}
+
+%\def\includefideliumanimae{T}
+
+\input{../FullVespers}

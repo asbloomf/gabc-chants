@@ -7,3 +7,4 @@ gh-pages
 *.synctex.gz
 *.eps
 misc/*-systems.*
+*.log

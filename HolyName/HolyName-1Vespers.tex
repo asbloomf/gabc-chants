@@ -1,0 +1,51 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+\sloppy
+
+\input{HolyName-common}
+
+%commemoration for 5th Sunday after Pentecost
+%\def\pagebreakbeforecommemoration{T}
+%\def\commemorationtex{../TimeAfterPentecost/CommemorationPentecost5}
+%end commemoration stuff
+
+
+\newcommand{\heading}{The Holy Name of Jesus I Vespers.}
+
+
+\newcommand{\premag}{
+\large
+\setgrefactor{17}
+%\greblockcustos
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+\newcommand{\magfontsize}{38}
+\def\pagebreakbeforemagnificat{T}
+\newcommand{\maganttex}{MagnificatAntiphon1}
+\newcommand{\magantinitial}{T}
+\newcommand{\maganttranslation}{Thou art the Shepherd of the sheep and the Prince of the Apostles, and unto thee are given the keys of the kingdom of heaven.}
+\def\magsolemn{T}
+\def\magoneline{F}
+%\def\psalmclef{c3}
+\definemag{1}{f}
+\newcommand{\premagverses}{%
+\greblockcustos
+\normalsize
+%\setgrefactor{17}
+%\pagebreak
+}
+
+\def\benedicamusdominogrefactor{14}
+\definebenedicamusdomino{1}{1}
+
+%\def\includefideliumanimae{T}
+
+\input{../inc_header} %
+\input{../FullVespers-test}
