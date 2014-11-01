@@ -105,6 +105,7 @@
 \selectlanguage{latin}
 }
 
+\newcounter{dropcapcounter}
 \newcommand{\dropcap}[3][]{%
 % 1 - optional command
 % 2 - language
@@ -113,10 +114,12 @@
 \vspace*{-1ex}%
 \StrPosition{#3}{ }[\mypos]%
 \ifnum\mypos=2
+% find the next space then
 \StrPosition[2]{#3}{ }[\mypos]%
 \fi
+\setcounter{dropcapcounter}{\mypos - 1}
 \lettrine{\StrLeft{#3}{1}}%
-   {#1\StrMid{#3}{2}{\mypos}}%
+   {#1\StrMid{#3}{2}{\thedropcapcounter}} 
 \foreignlanguage{#2}{#1\StrGobbleLeft{#3}{\mypos}}%
 }
 
