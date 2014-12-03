@@ -312,8 +312,6 @@ Epiphany:
   - name: "Epiphany: Vespers 2"
     url: pdfs/Epiphany/Epiphany-Vespers2.pdf
 Easter:
-  - name: Easter At Vespers .old
-    url: pdfs/Easter/EasterAtVespers.old.pdf
   - name: Easter Vespers
     url: pdfs/Easter/EasterVespers.pdf
 "December 8 : Immaculate Conception":
