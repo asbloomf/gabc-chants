@@ -293,6 +293,9 @@ five%
 \ifx\psalmtranslationsmall\undefined
   \def\psalmtranslationsmall{\csname psalm\antnum translationsmall\endcsname}
 \fi
+\ifx\prepsalmverses\undefined
+    \def\prepsalmverses{\csname prepsalm\antnum verses\endcsname}
+\fi
 
 %set up variables
 \edef\anttex{#4}
