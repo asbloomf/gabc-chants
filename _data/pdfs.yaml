@@ -111,6 +111,8 @@ Time After Epiphany:
 Time After Easter:
   - name: "Sunday At Vespers: Paschal Time"
     url: pdfs/TimeAfterEaster/SundayAtVespers-PaschalTime.pdf
+  - name: "hymn: Ad Regias Agni Dapes"
+    url: pdfs/TimeAfterEaster/hymn-AdRegiasAgniDapes-main.pdf
   - name: Vespers Magnificat Easter 1
     url: pdfs/TimeAfterEaster/VespersMagnificatEaster1.pdf
   - name: Vespers Magnificat Easter 2
@@ -119,16 +121,12 @@ Time After Easter:
     url: pdfs/TimeAfterEaster/VespersMagnificatEaster3.pdf
   - name: Vespers Magnificat Easter 4
     url: pdfs/TimeAfterEaster/VespersMagnificatEaster4.pdf
-  - name: Vespers Magnificat Sunday After Ascension
-    url: pdfs/TimeAfterEaster/VespersMagnificatSundayAfterAscension.pdf
-  - name: Vespers Magnificat Sunday After Ascension-old
-    url: pdfs/TimeAfterEaster/VespersMagnificatSundayAfterAscension-old.pdf
   - name: Vespers Magnificat Easter 5
     url: pdfs/TimeAfterEaster/VespersMagnificatEaster5.pdf
+  - name: Vespers Magnificat Sunday After Ascension
+    url: pdfs/TimeAfterEaster/VespersMagnificatSundayAfterAscension.pdf
   - name: commemoration Easter 5
     url: pdfs/TimeAfterEaster/commemorationEaster5-main.pdf
-  - name: "hymn: Ad Regias Agni Dapes"
-    url: pdfs/TimeAfterEaster/hymn-AdRegiasAgniDapes-main.pdf
 Tenebrae:
   - name: tenebrae  full
     url: pdfs/Tenebrae/tenebrae_full.pdf
