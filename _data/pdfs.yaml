@@ -29,6 +29,210 @@ misc:
     url: pdfs/misc/magnificat-1D2-smc-solemn.pdf
   - name: "protodiogenes: 7 a-magnificat-solemn"
     url: pdfs/misc/protodiogenes-7a-magnificat-solemn.pdf
+Marian Antiphons:
+  - name: Alma
+    url: pdfs/MarianAntiphons/Alma-main.pdf
+  - name: Ave Regina
+    url: pdfs/MarianAntiphons/AveRegina-main.pdf
+  - name: Regina Caeli
+    url: pdfs/MarianAntiphons/ReginaCaeli-main.pdf
+  - name: Salve Regina
+    url: pdfs/MarianAntiphons/SalveRegina-main.pdf
+Sunday At Vespers:
+  - name: Sunday At Vespers
+    url: pdfs/SundayAtVespers/SundayAtVespers.pdf
+  - name: Sunday At Vespers .new
+    url: pdfs/SundayAtVespers/SundayAtVespers.new.pdf
+  - name: Sunday At Vespers .old
+    url: pdfs/SundayAtVespers/SundayAtVespers.old.pdf
+  - name: Sunday At Vespers-old
+    url: pdfs/SundayAtVespers/SundayAtVespers-old.pdf
+  - name: "hymn: Lucis Creator Optime 2old"
+    url: pdfs/SundayAtVespers/hymn-LucisCreatorOptime2-main-old.pdf
+  - name: Sunday At Vespers .v 2
+    url: pdfs/SundayAtVespers/SundayAtVespers.v2.pdf
+  - name: "hymn: Lucis Creator Optime 2"
+    url: pdfs/SundayAtVespers/hymn-LucisCreatorOptime2-main.pdf
+Advent:
+  - name: December 18
+    url: pdfs/Advent/December18.pdf
+  - name: December 21
+    url: pdfs/Advent/December21.pdf
+  - name: December 22
+    url: pdfs/Advent/December22.pdf
+  - name: December 23
+    url: pdfs/Advent/December23.pdf
+  - name: "hymn: Creator Alme Siderum"
+    url: pdfs/Advent/hymn-CreatorAlmeSiderum-main.pdf
+Advent 1:
+  - name: "Advent 1 : Vespers 2"
+    url: pdfs/Advent1/Advent1-Vespers2.pdf
+Advent 2:
+  - name: "Advent 2 : Vespers 2"
+    url: pdfs/Advent2/Advent2-Vespers2.pdf
+  - name: commemoration Advent 2
+    url: pdfs/Advent2/commemorationAdvent2-main.pdf
+Advent 3:
+  - name: "Advent 3 : Vespers 2"
+    url: pdfs/Advent3/Advent3-Vespers2.pdf
+Advent 4:
+  - name: "Advent 4 : Vespers 2old"
+    url: pdfs/Advent4/Advent4-Vespers2-old.pdf
+  - name: "Advent 4 : Vespers 2  :  Copy"
+    url: pdfs/Advent4/Advent4-Vespers2 - Copy.pdf
+  - name: "Advent 4 : Vespers 2"
+    url: pdfs/Advent4/Advent4-Vespers2.pdf
+Christmas:
+  - name: "Sunday Within Octave Of Christmas: Vespers 2old"
+    url: pdfs/Christmas/SundayWithinOctaveOfChristmas-Vespers2-old.pdf
+  - name: "Christmas: Vespers 2"
+    url: pdfs/Christmas/Christmas-Vespers2.pdf
+  - name: "Christmas: Vespers 2old"
+    url: pdfs/Christmas/Christmas-Vespers2-old.pdf
+  - name: "Sunday Within Octave Of Christmas: Vespers 2"
+    url: pdfs/Christmas/SundayWithinOctaveOfChristmas-Vespers2.pdf
+  - name: "hymn: Jesu Redemptor Omnium"
+    url: pdfs/Christmas/hymn-JesuRedemptorOmnium-main.pdf
+"Christmas Octave: Circumcision":
+  - name: "Circumcision: Vespers 2"
+    url: pdfs/ChristmasOctave-Circumcision/Circumcision-Vespers2.pdf
+Epiphany:
+  - name: "Epiphany: Vespers 1"
+    url: pdfs/Epiphany/Epiphany-Vespers1.pdf
+  - name: "Epiphany: Vespers 2"
+    url: pdfs/Epiphany/Epiphany-Vespers2.pdf
+Holy Family:
+  - name: "Holy Family: Vespers 2"
+    url: pdfs/HolyFamily/HolyFamily-Vespers2.pdf
+  - name: "Holy Family: Vespers 2exp"
+    url: pdfs/HolyFamily/HolyFamily-Vespers2-exp.pdf
+  - name: "Holy Family: Vespers 2 .backup"
+    url: pdfs/HolyFamily/HolyFamily-Vespers2.backup.pdf
+  - name: "Holy Family: Vespers 2  1 st-class"
+    url: pdfs/HolyFamily/HolyFamily-Vespers2_1st-class.pdf
+Holy Name:
+  - name: "Holy Name: 2 Vespers"
+    url: pdfs/HolyName/HolyName-2Vespers.pdf
+Time After Epiphany:
+  - name: Vespers Magnificat Epiphany 2
+    url: pdfs/TimeAfterEpiphany/VespersMagnificatEpiphany2.pdf
+  - name: Vespers Magnificat Epiphany 3backup
+    url: pdfs/TimeAfterEpiphany/VespersMagnificatEpiphany3-backup.pdf
+  - name: Vespers Magnificat Epiphany 3
+    url: pdfs/TimeAfterEpiphany/VespersMagnificatEpiphany3.pdf
+  - name: Vespers Magnificat Epiphany 4
+    url: pdfs/TimeAfterEpiphany/VespersMagnificatEpiphany4.pdf
+  - name: Vespers Magnificat Epiphany 5
+    url: pdfs/TimeAfterEpiphany/VespersMagnificatEpiphany5.pdf
+  - name: Vespers Magnificat Epiphany 6
+    url: pdfs/TimeAfterEpiphany/VespersMagnificatEpiphany6.pdf
+"February 2 : Purification Of Blessed Virgin Mary":
+  - name: "Purification Of Blessed Virgin Mary: 1 Vespers"
+    url: pdfs/February2-PurificationOfBlessedVirginMary/PurificationOfBlessedVirginMary-1Vespers.pdf
+  - name: "Purification Of Blessed Virgin Mary: 2 Vespers"
+    url: pdfs/February2-PurificationOfBlessedVirginMary/PurificationOfBlessedVirginMary-2Vespers.pdf
+Lent:
+  - name: Vespers Magnificat Lent 1
+    url: pdfs/Lent/VespersMagnificatLent1.pdf
+  - name: Vespers Magnificat Passion 1
+    url: pdfs/Lent/VespersMagnificatPassion1.pdf
+  - name: Vespers Magnificat Lent 2
+    url: pdfs/Lent/VespersMagnificatLent2.pdf
+  - name: Vespers Magnificat Passion 2
+    url: pdfs/Lent/VespersMagnificatPassion2.pdf
+  - name: Commemoration Feria Secunda Lent 3
+    url: pdfs/Lent/CommemorationFeriaSecundaLent3-main.pdf
+  - name: Vespers Magnificat Lent 3
+    url: pdfs/Lent/VespersMagnificatLent3.pdf
+  - name: Vespers Magnificat Lent 4
+    url: pdfs/Lent/VespersMagnificatLent4.pdf
+  - name: Vespers Magnificat Quinquagesima
+    url: pdfs/Lent/VespersMagnificatQuinquagesima.pdf
+  - name: Vespers Magnificat Septuagesima
+    url: pdfs/Lent/VespersMagnificatSeptuagesima.pdf
+  - name: Vespers Magnificat Sexagesima
+    url: pdfs/Lent/VespersMagnificatSexagesima.pdf
+  - name: "hymn: Audi Benigne Conditor"
+    url: pdfs/Lent/hymn-AudiBenigneConditor-main.pdf
+  - name: "hymn: Vexilla Regis"
+    url: pdfs/Lent/hymn-VexillaRegis-main.pdf
+Tenebrae:
+  - name: tenebrae  full
+    url: pdfs/Tenebrae/tenebrae_full.pdf
+  - name: "tenebrae  full  :  Copy"
+    url: pdfs/Tenebrae/tenebrae_full - Copy.pdf
+  - name: "tenebrae  full  :  uploaded"
+    url: pdfs/Tenebrae/tenebrae_full - uploaded.pdf
+  - name: "tenebrae  full  :  uploaded 2"
+    url: pdfs/Tenebrae/tenebrae_full - uploaded2.pdf
+  - name: "tenebrae  full  :  uploaded 3"
+    url: pdfs/Tenebrae/tenebrae_full - uploaded3.pdf
+  - name: "tenebrae  full  :  uploaded 5"
+    url: pdfs/Tenebrae/tenebrae_full - uploaded5.pdf
+  - name: tenebrae  full  small
+    url: pdfs/Tenebrae/tenebrae_full_small.pdf
+  - name: tenebrae  full  small-not-paracol
+    url: pdfs/Tenebrae/tenebrae_full_small-not-paracol.pdf
+  - name: tenebrae  full  small-paracol-minipage
+    url: pdfs/Tenebrae/tenebrae_full_small-paracol-minipage.pdf
+  - name: tenebrae  full  small-paracol-no-minipage
+    url: pdfs/Tenebrae/tenebrae_full_small-paracol-no-minipage.pdf
+  - name: tenebrae  full-uploaded 6
+    url: pdfs/Tenebrae/tenebrae_full-uploaded6.pdf
+  - name: "tenebrae  full-inner: 65 in"
+    url: pdfs/Tenebrae/tenebrae_full-inner-65in.pdf
+  - name: "tenebrae  full-inner: 75 in"
+    url: pdfs/Tenebrae/tenebrae_full-inner-75in.pdf
+"Tenebrae: Thursday":
+  - name: Thursday
+    url: pdfs/Tenebrae-Thursday/Thursday.pdf
+  - name: "Thursday  :  backup 2"
+    url: pdfs/Tenebrae-Thursday/Thursday - backup2.pdf
+  - name: Thursday-backup
+    url: pdfs/Tenebrae-Thursday/Thursday-backup.pdf
+"Tenebrae: Saturday":
+  - name: Saturday
+    url: pdfs/Tenebrae-Saturday/Saturday.pdf
+  - name: "Saturday  :  backup"
+    url: pdfs/Tenebrae-Saturday/Saturday - backup.pdf
+"Tenebrae: Friday":
+  - name: Friday
+    url: pdfs/Tenebrae-Friday/Friday.pdf
+  - name: Friday-backup
+    url: pdfs/Tenebrae-Friday/Friday-backup.pdf
+Easter:
+  - name: Easter Vespers
+    url: pdfs/Easter/EasterVespers.pdf
+Time After Easter:
+  - name: "Sunday At Vespers: Paschal Time"
+    url: pdfs/TimeAfterEaster/SundayAtVespers-PaschalTime.pdf
+  - name: "hymn: Ad Regias Agni Dapes"
+    url: pdfs/TimeAfterEaster/hymn-AdRegiasAgniDapes-main.pdf
+  - name: Vespers Magnificat Easter 1
+    url: pdfs/TimeAfterEaster/VespersMagnificatEaster1.pdf
+  - name: Vespers Magnificat Easter 2
+    url: pdfs/TimeAfterEaster/VespersMagnificatEaster2.pdf
+  - name: Vespers Magnificat Easter 3
+    url: pdfs/TimeAfterEaster/VespersMagnificatEaster3.pdf
+  - name: Vespers Magnificat Easter 4
+    url: pdfs/TimeAfterEaster/VespersMagnificatEaster4.pdf
+  - name: Vespers Magnificat Easter 5
+    url: pdfs/TimeAfterEaster/VespersMagnificatEaster5.pdf
+  - name: Vespers Magnificat Sunday After Ascension
+    url: pdfs/TimeAfterEaster/VespersMagnificatSundayAfterAscension.pdf
+  - name: commemoration Easter 5
+    url: pdfs/TimeAfterEaster/commemorationEaster5-main.pdf
+Corpus Christi:
+  - name: "hymn: Pange Lingua"
+    url: pdfs/CorpusChristi/hymn-PangeLingua-main.pdf
+Ascension:
+  - name: "Ascension: 1 Vespers"
+    url: pdfs/Ascension/Ascension-1Vespers.pdf
+Pentecost:
+  - name: "Pentecost: 1 Vespers"
+    url: pdfs/Pentecost/Pentecost-1Vespers.pdf
+  - name: "Pentecost: 2 Vespers"
+    url: pdfs/Pentecost/Pentecost-2Vespers.pdf
 Trinity  Sunday:
   - name: "Trinity Sunday: Vespers"
     url: pdfs/Trinity Sunday/TrinitySunday-Vespers.pdf
@@ -95,97 +299,6 @@ Time After Pentecost:
     url: pdfs/TimeAfterPentecost/VespersMagnificatPentecost23.pdf
   - name: Vespers Magnificat Pentecost 24
     url: pdfs/TimeAfterPentecost/VespersMagnificatPentecost24.pdf
-Time After Epiphany:
-  - name: Vespers Magnificat Epiphany 2
-    url: pdfs/TimeAfterEpiphany/VespersMagnificatEpiphany2.pdf
-  - name: Vespers Magnificat Epiphany 3backup
-    url: pdfs/TimeAfterEpiphany/VespersMagnificatEpiphany3-backup.pdf
-  - name: Vespers Magnificat Epiphany 3
-    url: pdfs/TimeAfterEpiphany/VespersMagnificatEpiphany3.pdf
-  - name: Vespers Magnificat Epiphany 4
-    url: pdfs/TimeAfterEpiphany/VespersMagnificatEpiphany4.pdf
-  - name: Vespers Magnificat Epiphany 5
-    url: pdfs/TimeAfterEpiphany/VespersMagnificatEpiphany5.pdf
-  - name: Vespers Magnificat Epiphany 6
-    url: pdfs/TimeAfterEpiphany/VespersMagnificatEpiphany6.pdf
-Time After Easter:
-  - name: "Sunday At Vespers: Paschal Time"
-    url: pdfs/TimeAfterEaster/SundayAtVespers-PaschalTime.pdf
-  - name: "hymn: Ad Regias Agni Dapes"
-    url: pdfs/TimeAfterEaster/hymn-AdRegiasAgniDapes-main.pdf
-  - name: Vespers Magnificat Easter 1
-    url: pdfs/TimeAfterEaster/VespersMagnificatEaster1.pdf
-  - name: Vespers Magnificat Easter 2
-    url: pdfs/TimeAfterEaster/VespersMagnificatEaster2.pdf
-  - name: Vespers Magnificat Easter 3
-    url: pdfs/TimeAfterEaster/VespersMagnificatEaster3.pdf
-  - name: Vespers Magnificat Easter 4
-    url: pdfs/TimeAfterEaster/VespersMagnificatEaster4.pdf
-  - name: Vespers Magnificat Easter 5
-    url: pdfs/TimeAfterEaster/VespersMagnificatEaster5.pdf
-  - name: Vespers Magnificat Sunday After Ascension
-    url: pdfs/TimeAfterEaster/VespersMagnificatSundayAfterAscension.pdf
-  - name: commemoration Easter 5
-    url: pdfs/TimeAfterEaster/commemorationEaster5-main.pdf
-Tenebrae:
-  - name: tenebrae  full
-    url: pdfs/Tenebrae/tenebrae_full.pdf
-  - name: "tenebrae  full  :  Copy"
-    url: pdfs/Tenebrae/tenebrae_full - Copy.pdf
-  - name: "tenebrae  full  :  uploaded"
-    url: pdfs/Tenebrae/tenebrae_full - uploaded.pdf
-  - name: "tenebrae  full  :  uploaded 2"
-    url: pdfs/Tenebrae/tenebrae_full - uploaded2.pdf
-  - name: "tenebrae  full  :  uploaded 3"
-    url: pdfs/Tenebrae/tenebrae_full - uploaded3.pdf
-  - name: "tenebrae  full  :  uploaded 5"
-    url: pdfs/Tenebrae/tenebrae_full - uploaded5.pdf
-  - name: tenebrae  full  small
-    url: pdfs/Tenebrae/tenebrae_full_small.pdf
-  - name: tenebrae  full  small-not-paracol
-    url: pdfs/Tenebrae/tenebrae_full_small-not-paracol.pdf
-  - name: tenebrae  full  small-paracol-minipage
-    url: pdfs/Tenebrae/tenebrae_full_small-paracol-minipage.pdf
-  - name: tenebrae  full  small-paracol-no-minipage
-    url: pdfs/Tenebrae/tenebrae_full_small-paracol-no-minipage.pdf
-  - name: tenebrae  full-uploaded 6
-    url: pdfs/Tenebrae/tenebrae_full-uploaded6.pdf
-  - name: "tenebrae  full-inner: 65 in"
-    url: pdfs/Tenebrae/tenebrae_full-inner-65in.pdf
-  - name: "tenebrae  full-inner: 75 in"
-    url: pdfs/Tenebrae/tenebrae_full-inner-75in.pdf
-"Tenebrae: Thursday":
-  - name: Thursday
-    url: pdfs/Tenebrae-Thursday/Thursday.pdf
-  - name: "Thursday  :  backup 2"
-    url: pdfs/Tenebrae-Thursday/Thursday - backup2.pdf
-  - name: Thursday-backup
-    url: pdfs/Tenebrae-Thursday/Thursday-backup.pdf
-"Tenebrae: Saturday":
-  - name: Saturday
-    url: pdfs/Tenebrae-Saturday/Saturday.pdf
-  - name: "Saturday  :  backup"
-    url: pdfs/Tenebrae-Saturday/Saturday - backup.pdf
-"Tenebrae: Friday":
-  - name: Friday
-    url: pdfs/Tenebrae-Friday/Friday.pdf
-  - name: Friday-backup
-    url: pdfs/Tenebrae-Friday/Friday-backup.pdf
-Sunday At Vespers:
-  - name: Sunday At Vespers
-    url: pdfs/SundayAtVespers/SundayAtVespers.pdf
-  - name: Sunday At Vespers .new
-    url: pdfs/SundayAtVespers/SundayAtVespers.new.pdf
-  - name: Sunday At Vespers .old
-    url: pdfs/SundayAtVespers/SundayAtVespers.old.pdf
-  - name: Sunday At Vespers-old
-    url: pdfs/SundayAtVespers/SundayAtVespers-old.pdf
-  - name: "hymn: Lucis Creator Optime 2old"
-    url: pdfs/SundayAtVespers/hymn-LucisCreatorOptime2-main-old.pdf
-  - name: Sunday At Vespers .v 2
-    url: pdfs/SundayAtVespers/SundayAtVespers.v2.pdf
-  - name: "hymn: Lucis Creator Optime 2"
-    url: pdfs/SundayAtVespers/hymn-LucisCreatorOptime2-main.pdf
 St Philip Neri:
   - name: "St Philip Neri: Vespers 1 .old"
     url: pdfs/StPhilipNeri/StPhilipNeri-Vespers1.old.pdf
@@ -195,6 +308,41 @@ St Philip Neri:
     url: pdfs/StPhilipNeri/StPhilipNeri-1Vespers.pdf
   - name: "commemoration: St Philip Neri: Vespers 1"
     url: pdfs/StPhilipNeri/commemoration-StPhilipNeri-Vespers1-main.pdf
+"March 25 : Annunciation":
+  - name: "Annunciation: 1 Vespers"
+    url: pdfs/March25-Annunciation/Annunciation-1Vespers.pdf
+  - name: "commemoration Annunciation: Vespers 1"
+    url: pdfs/March25-Annunciation/commemorationAnnunciation-Vespers1-main.pdf
+"March 19 : St Joseph":
+  - name: "commemoration St Joseph: Vespers 1"
+    url: pdfs/March19-StJoseph/commemorationStJoseph-Vespers1-main.pdf
+"June 24 : Birth Of John The Baptist":
+  - name: "Birth Of John The Baptist: 1 Vespers"
+    url: pdfs/June24-BirthOfJohnTheBaptist/BirthOfJohnTheBaptist-1Vespers.pdf
+  - name: "Birth Of John The Baptist: 2 Vespers"
+    url: pdfs/June24-BirthOfJohnTheBaptist/BirthOfJohnTheBaptist-2Vespers.pdf
+"June 29 : Sts Peter And Paul":
+  - name: "Sts Peter And Paul: 1 Vespers .backup"
+    url: pdfs/June29-StsPeterAndPaul/StsPeterAndPaul-1Vespers.backup.pdf
+  - name: "Sts Peter And Paul: 1 Vespers .work"
+    url: pdfs/June29-StsPeterAndPaul/StsPeterAndPaul-1Vespers.work.pdf
+  - name: "Sts Peter And Paul: 2 Vespers .bk"
+    url: pdfs/June29-StsPeterAndPaul/StsPeterAndPaul-2Vespers.bk.pdf
+  - name: "Sts Peter And Paul: 2 Vespers"
+    url: pdfs/June29-StsPeterAndPaul/StsPeterAndPaul-2Vespers.pdf
+"July 1 : Most Precious Blood Of Christ":
+  - name: "Most Precious Blood Of Christ: Vespers 1"
+    url: pdfs/July1-MostPreciousBloodOfChrist/MostPreciousBloodOfChrist-Vespers1.pdf
+  - name: "Most Precious Blood Of Christ: Vespers 2"
+    url: pdfs/July1-MostPreciousBloodOfChrist/MostPreciousBloodOfChrist-Vespers2.pdf
+"August 6 : Transfiguration Of Our Lord":
+  - name: "Transfiguration: Vespers 2  :  Copy"
+    url: pdfs/August6-TransfigurationOfOurLord/Transfiguration-Vespers2 - Copy.pdf
+  - name: "Transfiguration: Vespers 2"
+    url: pdfs/August6-TransfigurationOfOurLord/Transfiguration-Vespers2.pdf
+"August 15 : Assumption Of The Blessed Virgin Mary":
+  - name: "Assumption: Vespers 1"
+    url: pdfs/August15-AssumptionOfTheBlessedVirginMary/Assumption-Vespers1.pdf
 "September 29 : Dedication Of Church Of St Michael Archangel":
   - name: "Dedication St Michael: 1 Vespers"
     url: pdfs/September29-DedicationOfChurchOfStMichaelArchangel/DedicationStMichael-1Vespers.pdf
@@ -205,107 +353,12 @@ St Philip Neri:
     url: pdfs/September14-ExaltationOfTheHolyCross/ExaltationOfTheHolyCross-1Vespers.pdf
   - name: "Exaltation Of The Holy Cross: 2 Vespers"
     url: pdfs/September14-ExaltationOfTheHolyCross/ExaltationOfTheHolyCross-2Vespers.pdf
-Pentecost:
-  - name: "Pentecost: 1 Vespers"
-    url: pdfs/Pentecost/Pentecost-1Vespers.pdf
-  - name: "Pentecost: 2 Vespers"
-    url: pdfs/Pentecost/Pentecost-2Vespers.pdf
-"October Last Sunday: Christ The King":
-  - name: "Christ The King: Vespers 2 .original"
-    url: pdfs/OctoberLastSunday-ChristTheKing/ChristTheKing-Vespers2.original.pdf
-  - name: "Christ The King: Vespers 2 .old"
-    url: pdfs/OctoberLastSunday-ChristTheKing/ChristTheKing-Vespers2.old.pdf
-  - name: "Christ The King: Vespers 2"
-    url: pdfs/OctoberLastSunday-ChristTheKing/ChristTheKing-Vespers2.pdf
 "October 11 : Maternity Of Blessed Virgin Mary":
   - name: "Maternity Of BVM: 2 Vespers"
     url: pdfs/October11-MaternityOfBlessedVirginMary/MaternityOfBVM-2Vespers.pdf
-Marian Antiphons:
-  - name: Alma
-    url: pdfs/MarianAntiphons/Alma-main.pdf
-  - name: Ave Regina
-    url: pdfs/MarianAntiphons/AveRegina-main.pdf
-  - name: Regina Caeli
-    url: pdfs/MarianAntiphons/ReginaCaeli-main.pdf
-  - name: Salve Regina
-    url: pdfs/MarianAntiphons/SalveRegina-main.pdf
-"March 25 : Annunciation":
-  - name: "Annunciation: 1 Vespers"
-    url: pdfs/March25-Annunciation/Annunciation-1Vespers.pdf
-  - name: "commemoration Annunciation: Vespers 1"
-    url: pdfs/March25-Annunciation/commemorationAnnunciation-Vespers1-main.pdf
-"March 19 : St Joseph":
-  - name: "commemoration St Joseph: Vespers 1"
-    url: pdfs/March19-StJoseph/commemorationStJoseph-Vespers1-main.pdf
-Lent:
-  - name: Vespers Magnificat Lent 1
-    url: pdfs/Lent/VespersMagnificatLent1.pdf
-  - name: Vespers Magnificat Passion 1
-    url: pdfs/Lent/VespersMagnificatPassion1.pdf
-  - name: Vespers Magnificat Lent 2
-    url: pdfs/Lent/VespersMagnificatLent2.pdf
-  - name: Vespers Magnificat Passion 2
-    url: pdfs/Lent/VespersMagnificatPassion2.pdf
-  - name: Commemoration Feria Secunda Lent 3
-    url: pdfs/Lent/CommemorationFeriaSecundaLent3-main.pdf
-  - name: Vespers Magnificat Lent 3
-    url: pdfs/Lent/VespersMagnificatLent3.pdf
-  - name: Vespers Magnificat Lent 4
-    url: pdfs/Lent/VespersMagnificatLent4.pdf
-  - name: Vespers Magnificat Quinquagesima
-    url: pdfs/Lent/VespersMagnificatQuinquagesima.pdf
-  - name: Vespers Magnificat Septuagesima
-    url: pdfs/Lent/VespersMagnificatSeptuagesima.pdf
-  - name: Vespers Magnificat Sexagesima
-    url: pdfs/Lent/VespersMagnificatSexagesima.pdf
-  - name: "hymn: Audi Benigne Conditor"
-    url: pdfs/Lent/hymn-AudiBenigneConditor-main.pdf
-  - name: "hymn: Vexilla Regis"
-    url: pdfs/Lent/hymn-VexillaRegis-main.pdf
-"June 29 : Sts Peter And Paul":
-  - name: "Sts Peter And Paul: 1 Vespers .backup"
-    url: pdfs/June29-StsPeterAndPaul/StsPeterAndPaul-1Vespers.backup.pdf
-  - name: "Sts Peter And Paul: 1 Vespers .work"
-    url: pdfs/June29-StsPeterAndPaul/StsPeterAndPaul-1Vespers.work.pdf
-  - name: "Sts Peter And Paul: 2 Vespers .bk"
-    url: pdfs/June29-StsPeterAndPaul/StsPeterAndPaul-2Vespers.bk.pdf
-  - name: "Sts Peter And Paul: 2 Vespers"
-    url: pdfs/June29-StsPeterAndPaul/StsPeterAndPaul-2Vespers.pdf
-"June 24 : Birth Of John The Baptist":
-  - name: "Birth Of John The Baptist: 1 Vespers"
-    url: pdfs/June24-BirthOfJohnTheBaptist/BirthOfJohnTheBaptist-1Vespers.pdf
-  - name: "Birth Of John The Baptist: 2 Vespers"
-    url: pdfs/June24-BirthOfJohnTheBaptist/BirthOfJohnTheBaptist-2Vespers.pdf
-"July 1 : Most Precious Blood Of Christ":
-  - name: "Most Precious Blood Of Christ: Vespers 1"
-    url: pdfs/July1-MostPreciousBloodOfChrist/MostPreciousBloodOfChrist-Vespers1.pdf
-  - name: "Most Precious Blood Of Christ: Vespers 2"
-    url: pdfs/July1-MostPreciousBloodOfChrist/MostPreciousBloodOfChrist-Vespers2.pdf
-Holy Family:
-  - name: "Holy Family: Vespers 2"
-    url: pdfs/HolyFamily/HolyFamily-Vespers2.pdf
-  - name: "Holy Family: Vespers 2exp"
-    url: pdfs/HolyFamily/HolyFamily-Vespers2-exp.pdf
-  - name: "Holy Family: Vespers 2 .backup"
-    url: pdfs/HolyFamily/HolyFamily-Vespers2.backup.pdf
-  - name: "Holy Family: Vespers 2  1 st-class"
-    url: pdfs/HolyFamily/HolyFamily-Vespers2_1st-class.pdf
-"February 2 : Purification Of Blessed Virgin Mary":
-  - name: "Purification Of Blessed Virgin Mary: 1 Vespers"
-    url: pdfs/February2-PurificationOfBlessedVirginMary/PurificationOfBlessedVirginMary-1Vespers.pdf
-  - name: "Purification Of Blessed Virgin Mary: 2 Vespers"
-    url: pdfs/February2-PurificationOfBlessedVirginMary/PurificationOfBlessedVirginMary-2Vespers.pdf
-Holy Name:
-  - name: "Holy Name: 2 Vespers"
-    url: pdfs/HolyName/HolyName-2Vespers.pdf
-Epiphany:
-  - name: "Epiphany: Vespers 1"
-    url: pdfs/Epiphany/Epiphany-Vespers1.pdf
-  - name: "Epiphany: Vespers 2"
-    url: pdfs/Epiphany/Epiphany-Vespers2.pdf
-Easter:
-  - name: Easter Vespers
-    url: pdfs/Easter/EasterVespers.pdf
+"October Last Sunday: Christ The King":
+  - name: "Christ The King: Vespers 2"
+    url: pdfs/OctoberLastSunday-ChristTheKing/ChristTheKing-Vespers2.pdf
 "December 8 : Immaculate Conception":
   - name: "Immaculate Conception: 1 Vespers"
     url: pdfs/December8-ImmaculateConception/ImmaculateConception-1Vespers.pdf
@@ -313,34 +366,17 @@ Easter:
     url: pdfs/December8-ImmaculateConception/commemorationImmaculateConception-Vespers1-main.pdf
   - name: "Immaculate Conception: 2 Vespers"
     url: pdfs/December8-ImmaculateConception/ImmaculateConception-2Vespers.pdf
-Corpus Christi:
-  - name: "hymn: Pange Lingua"
-    url: pdfs/CorpusChristi/hymn-PangeLingua-main.pdf
-Common Of Dedication Of Church:
-  - name: "Common Of Dedication Of Church: 2 Vespers"
-    url: pdfs/CommonOfDedicationOfChurch/CommonOfDedicationOfChurch-2Vespers.pdf
+Common Of Apostles:
+  - name: "St James: Vespers 2"
+    url: pdfs/CommonOfApostles/StJames-Vespers2.pdf
 Common Of Confessor Bishop:
   - name: "St Francis De Sales: Vespers 2 .original"
     url: pdfs/CommonOfConfessorBishop/StFrancisDeSales-Vespers2.original.pdf
   - name: "St Francis De Sales: Vespers 2"
     url: pdfs/CommonOfConfessorBishop/StFrancisDeSales-Vespers2.pdf
-Common Of Apostles:
-  - name: "St James: Vespers 2"
-    url: pdfs/CommonOfApostles/StJames-Vespers2.pdf
-"Christmas Octave: Circumcision":
-  - name: "Circumcision: Vespers 2"
-    url: pdfs/ChristmasOctave-Circumcision/Circumcision-Vespers2.pdf
-Christmas:
-  - name: "Sunday Within Octave Of Christmas: Vespers 2old"
-    url: pdfs/Christmas/SundayWithinOctaveOfChristmas-Vespers2-old.pdf
-  - name: "Christmas: Vespers 2"
-    url: pdfs/Christmas/Christmas-Vespers2.pdf
-  - name: "Christmas: Vespers 2old"
-    url: pdfs/Christmas/Christmas-Vespers2-old.pdf
-  - name: "Sunday Within Octave Of Christmas: Vespers 2"
-    url: pdfs/Christmas/SundayWithinOctaveOfChristmas-Vespers2.pdf
-  - name: "hymn: Jesu Redemptor Omnium"
-    url: pdfs/Christmas/hymn-JesuRedemptorOmnium-main.pdf
+Common Of Dedication Of Church:
+  - name: "Common Of Dedication Of Church: 2 Vespers"
+    url: pdfs/CommonOfDedicationOfChurch/CommonOfDedicationOfChurch-2Vespers.pdf
 Benediction Chants:
   - name: Benediction Chants
     url: pdfs/BenedictionChants/BenedictionChants.pdf
@@ -349,43 +385,3 @@ Benediction Chants:
 Benedicamus Domino:
   - name: Benedicamus Domino
     url: pdfs/BenedicamusDomino/BenedicamusDomino.pdf
-"August 6 : Transfiguration Of Our Lord":
-  - name: "Transfiguration: Vespers 2  :  Copy"
-    url: pdfs/August6-TransfigurationOfOurLord/Transfiguration-Vespers2 - Copy.pdf
-  - name: "Transfiguration: Vespers 2"
-    url: pdfs/August6-TransfigurationOfOurLord/Transfiguration-Vespers2.pdf
-"August 15 : Assumption Of The Blessed Virgin Mary":
-  - name: "Assumption: Vespers 1"
-    url: pdfs/August15-AssumptionOfTheBlessedVirginMary/Assumption-Vespers1.pdf
-Ascension:
-  - name: "Ascension: 1 Vespers"
-    url: pdfs/Ascension/Ascension-1Vespers.pdf
-Advent 4:
-  - name: "Advent 4 : Vespers 2old"
-    url: pdfs/Advent4/Advent4-Vespers2-old.pdf
-  - name: "Advent 4 : Vespers 2  :  Copy"
-    url: pdfs/Advent4/Advent4-Vespers2 - Copy.pdf
-  - name: "Advent 4 : Vespers 2"
-    url: pdfs/Advent4/Advent4-Vespers2.pdf
-Advent 3:
-  - name: "Advent 3 : Vespers 2"
-    url: pdfs/Advent3/Advent3-Vespers2.pdf
-Advent 2:
-  - name: "Advent 2 : Vespers 2"
-    url: pdfs/Advent2/Advent2-Vespers2.pdf
-  - name: commemoration Advent 2
-    url: pdfs/Advent2/commemorationAdvent2-main.pdf
-Advent 1:
-  - name: "Advent 1 : Vespers 2"
-    url: pdfs/Advent1/Advent1-Vespers2.pdf
-Advent:
-  - name: December 18
-    url: pdfs/Advent/December18.pdf
-  - name: December 21
-    url: pdfs/Advent/December21.pdf
-  - name: December 22
-    url: pdfs/Advent/December22.pdf
-  - name: December 23
-    url: pdfs/Advent/December23.pdf
-  - name: "hymn: Creator Alme Siderum"
-    url: pdfs/Advent/hymn-CreatorAlmeSiderum-main.pdf
