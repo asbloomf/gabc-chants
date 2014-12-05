@@ -54,6 +54,18 @@ Sunday At Vespers:
   - name: "hymn: Lucis Creator Optime 2"
     url: pdfs/SundayAtVespers/hymn-LucisCreatorOptime2-main.pdf
 Advent:
+  - name: "hymn: Creator Alme Siderum"
+    url: pdfs/Advent/hymn-CreatorAlmeSiderum-main.pdf
+  - name: "1st Sunday in Advent: Vespers 2"
+    url: pdfs/Advent1/Advent1-Vespers2.pdf
+  - name: "2nd Sunday in Advent: Vespers 2"
+    url: pdfs/Advent2/Advent2-Vespers2.pdf
+  - name: "2nd Sunday in Advent: commemoration"
+    url: pdfs/Advent2/commemorationAdvent2-main.pdf
+  - name: "3rd Sunday in Advent: Vespers 2"
+    url: pdfs/Advent3/Advent3-Vespers2.pdf
+  - name: "4th Sunday in Advent: Vespers 2"
+    url: pdfs/Advent4/Advent4-Vespers2.pdf
   - name: December 17
     url: pdfs/Advent/December17.pdf
   - name: December 18
@@ -68,26 +80,6 @@ Advent:
     url: pdfs/Advent/December22.pdf
   - name: December 23
     url: pdfs/Advent/December23.pdf
-  - name: "hymn: Creator Alme Siderum"
-    url: pdfs/Advent/hymn-CreatorAlmeSiderum-main.pdf
-Advent 1:
-  - name: "Advent 1 : Vespers 2"
-    url: pdfs/Advent1/Advent1-Vespers2.pdf
-Advent 2:
-  - name: "Advent 2 : Vespers 2"
-    url: pdfs/Advent2/Advent2-Vespers2.pdf
-  - name: commemoration Advent 2
-    url: pdfs/Advent2/commemorationAdvent2-main.pdf
-Advent 3:
-  - name: "Advent 3 : Vespers 2"
-    url: pdfs/Advent3/Advent3-Vespers2.pdf
-Advent 4:
-  - name: "Advent 4 : Vespers 2old"
-    url: pdfs/Advent4/Advent4-Vespers2-old.pdf
-  - name: "Advent 4 : Vespers 2  :  Copy"
-    url: pdfs/Advent4/Advent4-Vespers2 - Copy.pdf
-  - name: "Advent 4 : Vespers 2"
-    url: pdfs/Advent4/Advent4-Vespers2.pdf
 Christmas:
   - name: "Sunday Within Octave Of Christmas: Vespers 2old"
     url: pdfs/Christmas/SundayWithinOctaveOfChristmas-Vespers2-old.pdf
