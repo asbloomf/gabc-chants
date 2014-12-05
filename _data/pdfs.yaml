@@ -94,6 +94,9 @@ Christmas:
 "Christmas Octave: Circumcision":
   - name: "Circumcision: Vespers 2"
     url: pdfs/ChristmasOctave-Circumcision/Circumcision-Vespers2.pdf
+Holy Name:
+  - name: "Holy Name: 2 Vespers"
+    url: pdfs/HolyName/HolyName-2Vespers.pdf
 Epiphany:
   - name: "Epiphany: Vespers 1"
     url: pdfs/Epiphany/Epiphany-Vespers1.pdf
@@ -108,9 +111,6 @@ Holy Family:
     url: pdfs/HolyFamily/HolyFamily-Vespers2.backup.pdf
   - name: "Holy Family: Vespers 2  1 st-class"
     url: pdfs/HolyFamily/HolyFamily-Vespers2_1st-class.pdf
-Holy Name:
-  - name: "Holy Name: 2 Vespers"
-    url: pdfs/HolyName/HolyName-2Vespers.pdf
 Time After Epiphany:
   - name: Vespers Magnificat Epiphany 2
     url: pdfs/TimeAfterEpiphany/VespersMagnificatEpiphany2.pdf
