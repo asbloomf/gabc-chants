@@ -20,6 +20,24 @@ annotation: 8. G*;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c4)TU(f_g) es(g'_) <v>\greheightstar</v>() qui(h) ven(g')tú(j)rus(ji) es,(h'_) (;) an(j) á(ji)li(hg)um(g_h) ex(i)spe(hi)ctá(g)mus?(g.) (:) Dí(j)ci(i_j)te(h) Jo(gf)án(gh)ni(hv_GF') quæ(h) vi(ji)dí(g)stis :(g.) (:) ad(hj~) lú(j)men(i) réd(jk)e(hg)unt(g') caé(h)ci,(g.) (;) mór(h')tu(g)i(hg) re(f)súr(gh~)gunt,(h') (;) páu(ji~)pe(j_k)res(kvJ'_I_H_) e(ji)van(g)ge(hg)li(f)zán(gh~)tur,(h'_) (,) al(j_)le(h_jH'F)lú(hh)ia.(g.) (::z)
+(c4)TU(f_g) es(g'_) <v>\greheightstar</v>() qui(h) ven(g')tú(j)rus(ji) es,(h'_) (;) an(j) á(ji)li(hg)um(g_h) ex(i)spe(hi)ctá(g)mus?(g.) (:) Dí(j)ci(i_j)te(h) Jo(gf)án(gh)ni(hv_GF') quæ(h) vi(ji)dí(g)stis :(g.) (:) ad(hj~) lú(j)men(i) réd(jk)e(hg)unt(g') caé(h)ci,(g.) (;) mór(h')tu(g)i(hg) re(f)súr(gh~)gunt,(h') (;) páu(ji~)pe(j_k)res(%kvJ'_I_H_
+	[ev:{%
+\greglyph{\char 23}{k}{j}{0}{}{}%
+\greendofglyph{9}%
+\greglyph{\char 19}{j}{j}{6}{}{%
+\grehepisemusbridge{k}{}{}%
+\grehepisemus{k}{12}{1}{k}%
+\grevepisemus{i}{12}%
+}%
+\greendofglyph{3}%
+\greglyph{\char 19}{i}{j}{6}{}{%
+\grehepisemus{k}{12}{1}{k}%
+}%
+\greendofglyph{3}%
+\greglyph{\char 19}{h}{j}{6}{}{%
+\grehepisemus{k}{12}{0}{k}%
+}%
+}%
+	]) e(ji)van(g)ge(hg)li(f)zán(gh~)tur,(h'_) (,) al(j_)le(h_jH'F)lú(hh)ia.(g.) (::z)
 
 E(j) u(j) o(i) u(j) a(h) e.(g.) (::)
