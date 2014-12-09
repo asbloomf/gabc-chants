@@ -1,0 +1,61 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{import}
+\usepackage{../definepsalms}
+\sloppy
+
+\input{AllSaints-common} % chapter, collect, and hymn
+
+%commemoration for 3rd Sunday after Pentecost
+%\def\pagebreakbeforecommemoration{T}
+%\def\commemorationtex{../TimeAfterPentecost/CommemorationPentecost23}
+%end commemoration stuff
+
+
+\newcommand{\heading}{All Saints II Vespers.}
+
+\definepsalm{5}{115}{8}{G}
+
+\def\vrnospace{T}
+\newcommand{\vrtex}{vrExsultabunt}
+\newcommand{\vtranslation}{The Saints will be joyful in glory.}
+\newcommand{\rtranslation}{They will rejoice upon their beds.}
+
+\newcommand{\premag}{
+\large
+\setgrefactor{17}
+%\greblockcustos
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+\newcommand{\magfontsize}{38}
+\def\pagebreakbeforemagnificat{T}
+\newcommand{\maganttex}{an--o_quam_gloriosum--solesmes}
+\newcommand{\magantinitial}{O}
+\newcommand{\maganttranslation}{Oh! how glorious is the kingdom where all the Saints rejoice with Christ; clothed in white robes, they follow the Lamb whithersoever he goeth!}
+\def\magsolemn{T}
+\def\magoneline{F}
+\let\magant\undefined
+\let\magantlinetwo\undefined
+\let\magtex\undefined
+\let\magverses\undefined
+\definemag{6}{F}
+\newcommand{\premagverses}{%
+\greblockcustos
+\large
+\setgrefactor{17}
+%\pagebreak
+}
+
+\def\benedicamusdominogrefactor{14}
+\definebenedicamusdomino{1}{2}
+
+%\def\includefideliumanimae{T}
+
+\input{../inc_header} %
+\input{../FullVespers-test}

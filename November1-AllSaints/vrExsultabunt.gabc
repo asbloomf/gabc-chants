@@ -1,0 +1,23 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Annuntiaverunt;
+office-part: versicle and response;
+occasion: All Saints;
+date: 2014;
+transcriber: Albert Bloomfield;
+transcription-date: 2014;
+style: modern;
+initial-style:0;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)()() <sp>V/</sp>~Ex(h)sul(h)tá(h)bunt(h) San(hi)cti(h.) (,) in(fe) gló(f_h)ri(h)a.(hiH'Ghih./ghG'FE'fggf.) (::)
+<sp>R/</sp>~Læ(h)ta(h)bún(hi)tur(h'_) (,) in(h) cu(h)bí(h)li(f')bus(e) su(f'h)is.(hiH'Ghih./ghG'FE'fggf.) (::)
+

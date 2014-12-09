@@ -1,0 +1,59 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+\sloppy
+
+\input{AllSaints-common}
+
+%TODO: 1 Vespers is not done
+
+%commemoration for 5th Sunday after Pentecost
+%\def\pagebreakbeforecommemoration{T}
+%\def\commemorationtex{../TimeAfterPentecost/CommemorationPentecost5}
+%end commemoration stuff
+
+
+\newcommand{\heading}{All Saints at 1 Vespers.}
+
+\definepsalm{5}{116}{8}{G}
+
+\newcommand{\vrtex}{vrLaetamini}
+\newcommand{\vtranslation}{Be glad in the Lord, and rejoice ye righteous.}
+\newcommand{\rtranslation}{And shout for joy, all ye that are upright in heart.}
+\newcommand{\vrnospace}{T}
+
+\newcommand{\premag}{
+\large
+\setgrefactor{15}
+%\greblockcustos
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+\newcommand{\magfontsize}{38}
+\def\pagebreakbeforemagnificat{T}
+\newcommand{\maganttex}{an--angeli_archangeli_all_saints--solesmes}
+\newcommand{\magantinitial}{A}
+\newcommand{\maganttranslation}{O ye Angels, ye Archangels, ye Thrones and Dominions, ye Principalities and Powers, ye mighty ones of the heavens, ye Cherubim and Seraphim, O ye Patriarchs and Prophets, ye holy Teachers of the Law, O ye Apostles, O all ye Martyrs of Christ, ye holy Confessors, ye Virgins of the Lord, ye Hermits, O all ye holy children of God, intercede for us.}
+\def\magsolemn{T}
+\def\magoneline{T}
+%\def\psalmclef{c3}
+\definemag{1}{D}
+\newcommand{\premagverses}{%
+%\greblockcustos
+\normalsize
+\setgrefactor{14}
+%\pagebreak
+}
+
+\def\benedicamusdominogrefactor{14}
+\definebenedicamusdomino{1}{1}
+
+%\def\includefideliumanimae{T}
+
+\input{../inc_header} %
+\input{../FullVespers-test}
