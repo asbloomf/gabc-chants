@@ -130,30 +130,30 @@ Time After Epiphany:
   - name: "Purification Of Blessed Virgin Mary: 2 Vespers"
     url: pdfs/February2-PurificationOfBlessedVirginMary/PurificationOfBlessedVirginMary-2Vespers.pdf
 Lent:
-  - name: Vespers Magnificat Lent 1
-    url: pdfs/Lent/VespersMagnificatLent1.pdf
-  - name: Vespers Magnificat Passion 1
-    url: pdfs/Lent/VespersMagnificatPassion1.pdf
-  - name: Vespers Magnificat Lent 2
-    url: pdfs/Lent/VespersMagnificatLent2.pdf
-  - name: Vespers Magnificat Passion 2
-    url: pdfs/Lent/VespersMagnificatPassion2.pdf
-  - name: Commemoration Feria Secunda Lent 3
-    url: pdfs/Lent/CommemorationFeriaSecundaLent3-main.pdf
-  - name: Vespers Magnificat Lent 3
-    url: pdfs/Lent/VespersMagnificatLent3.pdf
-  - name: Vespers Magnificat Lent 4
-    url: pdfs/Lent/VespersMagnificatLent4.pdf
-  - name: Vespers Magnificat Quinquagesima
-    url: pdfs/Lent/VespersMagnificatQuinquagesima.pdf
   - name: Vespers Magnificat Septuagesima
     url: pdfs/Lent/VespersMagnificatSeptuagesima.pdf
   - name: Vespers Magnificat Sexagesima
     url: pdfs/Lent/VespersMagnificatSexagesima.pdf
+  - name: Vespers Magnificat Quinquagesima
+    url: pdfs/Lent/VespersMagnificatQuinquagesima.pdf
   - name: "hymn: Audi Benigne Conditor"
     url: pdfs/Lent/hymn-AudiBenigneConditor-main.pdf
+  - name: Vespers Magnificat Lent 1
+    url: pdfs/Lent/VespersMagnificatLent1.pdf
+  - name: Vespers Magnificat Lent 2
+    url: pdfs/Lent/VespersMagnificatLent2.pdf
+  - name: Vespers Magnificat Lent 3
+    url: pdfs/Lent/VespersMagnificatLent3.pdf
+  - name: Commemoration Feria Secunda in the 3rd week of Lent
+    url: pdfs/Lent/CommemorationFeriaSecundaLent3-main.pdf
+  - name: Vespers Magnificat Lent 4
+    url: pdfs/Lent/VespersMagnificatLent4.pdf
   - name: "hymn: Vexilla Regis"
     url: pdfs/Lent/hymn-VexillaRegis-main.pdf
+  - name: Vespers Magnificat Passion 1
+    url: pdfs/Lent/VespersMagnificatPassion1.pdf
+  - name: Vespers Magnificat Passion 2
+    url: pdfs/Lent/VespersMagnificatPassion2.pdf
 Tenebrae:
   - name: tenebrae  full
     url: pdfs/Tenebrae/tenebrae_full.pdf
