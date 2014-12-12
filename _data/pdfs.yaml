@@ -41,8 +41,6 @@ Marian Antiphons:
 Sunday At Vespers:
   - name: Sunday At Vespers
     url: pdfs/SundayAtVespers/SundayAtVespers.pdf
-  - name: "hymn: Lucis Creator Optime 2old"
-    url: pdfs/SundayAtVespers/hymn-LucisCreatorOptime2-main-old.pdf
   - name: "hymn: Lucis Creator Optime 2"
     url: pdfs/SundayAtVespers/hymn-LucisCreatorOptime2-main.pdf
 Advent:
@@ -106,8 +104,6 @@ Holy Family:
 Time After Epiphany:
   - name: Vespers Magnificat Epiphany 2
     url: pdfs/TimeAfterEpiphany/VespersMagnificatEpiphany2.pdf
-  - name: Vespers Magnificat Epiphany 3backup
-    url: pdfs/TimeAfterEpiphany/VespersMagnificatEpiphany3-backup.pdf
   - name: Vespers Magnificat Epiphany 3
     url: pdfs/TimeAfterEpiphany/VespersMagnificatEpiphany3.pdf
   - name: Vespers Magnificat Epiphany 4
