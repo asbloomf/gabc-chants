@@ -71,16 +71,12 @@ Advent:
   - name: December 23
     url: pdfs/Advent/December23.pdf
 Christmas:
-  - name: "Sunday Within Octave Of Christmas: Vespers 2old"
-    url: pdfs/Christmas/SundayWithinOctaveOfChristmas-Vespers2-old.pdf
-  - name: "Christmas: Vespers 2"
-    url: pdfs/Christmas/Christmas-Vespers2.pdf
-  - name: "Christmas: Vespers 2old"
-    url: pdfs/Christmas/Christmas-Vespers2-old.pdf
-  - name: "Sunday Within Octave Of Christmas: Vespers 2"
-    url: pdfs/Christmas/SundayWithinOctaveOfChristmas-Vespers2.pdf
   - name: "hymn: Jesu Redemptor Omnium"
     url: pdfs/Christmas/hymn-JesuRedemptorOmnium-main.pdf
+  - name: "Christmas: Vespers 2"
+    url: pdfs/Christmas/Christmas-Vespers2.pdf
+  - name: "Sunday Within Octave Of Christmas: Vespers 2"
+    url: pdfs/Christmas/SundayWithinOctaveOfChristmas-Vespers2.pdf
 "Christmas Octave: Circumcision":
   - name: "Circumcision: Vespers 2"
     url: pdfs/ChristmasOctave-Circumcision/Circumcision-Vespers2.pdf
