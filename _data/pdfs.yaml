@@ -91,11 +91,7 @@ Epiphany:
 Holy Family:
   - name: "Holy Family: Vespers 2"
     url: pdfs/HolyFamily/HolyFamily-Vespers2.pdf
-  - name: "Holy Family: Vespers 2exp"
-    url: pdfs/HolyFamily/HolyFamily-Vespers2-exp.pdf
-  - name: "Holy Family: Vespers 2 .backup"
-    url: pdfs/HolyFamily/HolyFamily-Vespers2.backup.pdf
-  - name: "Holy Family: Vespers 2  1 st-class"
+  - name: "Holy Family: Vespers 2 1st class"
     url: pdfs/HolyFamily/HolyFamily-Vespers2_1st-class.pdf
 Time After Epiphany:
   - name: Vespers Magnificat Epiphany 2
