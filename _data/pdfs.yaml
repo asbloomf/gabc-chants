@@ -41,16 +41,8 @@ Marian Antiphons:
 Sunday At Vespers:
   - name: Sunday At Vespers
     url: pdfs/SundayAtVespers/SundayAtVespers.pdf
-  - name: Sunday At Vespers .new
-    url: pdfs/SundayAtVespers/SundayAtVespers.new.pdf
-  - name: Sunday At Vespers .old
-    url: pdfs/SundayAtVespers/SundayAtVespers.old.pdf
-  - name: Sunday At Vespers-old
-    url: pdfs/SundayAtVespers/SundayAtVespers-old.pdf
   - name: "hymn: Lucis Creator Optime 2old"
     url: pdfs/SundayAtVespers/hymn-LucisCreatorOptime2-main-old.pdf
-  - name: Sunday At Vespers .v 2
-    url: pdfs/SundayAtVespers/SundayAtVespers.v2.pdf
   - name: "hymn: Lucis Creator Optime 2"
     url: pdfs/SundayAtVespers/hymn-LucisCreatorOptime2-main.pdf
 Advent:
