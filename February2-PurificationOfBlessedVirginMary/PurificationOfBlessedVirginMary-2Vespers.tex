@@ -21,13 +21,6 @@
 
 \newcommand{\heading}{Purification of the Blessed Virgin Mary at II Vespers.}
 
-\newcommand{\predeusinadjutorium}{%
-%\smallskip
-\large
-\setgrefactor{15}
-}
-\def\deusinadjutoriumsolemn{F}
-
 \newcommand{\preantone}{\setgrefactor{17}
 \large
 %\greblockcustos
@@ -120,20 +113,15 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\def\pagebreakbeforehymn{T}
-
-\newcommand{\prehymn}{\normalsize
-\setgrefactor{16}
-}
-
 %vr in common
 %\newcommand{\vrtex}{vrIstePuerMagnus}
 %\newcommand{\vtranslation}{This child is great before the Lord.}
 %\newcommand{\rtranslation}{For in truth His hand is with him.}
 
 \newcommand{\premag}{
-\normalsize
+\large
 \setgrefactor{17}
+\gdef\psalmclef{c3}
 %\greblockcustos
 }
 %\newcommand{\premagtwo}{
@@ -143,15 +131,14 @@
 \def\pagebreakbeforemagnificat{T}
 \newcommand{\maganttex}{an--hodie_beata_virgo--solesmes}
 \newcommand{\magantinitial}{H}
-\newcommand{\maganttranslation}{Today did the Blessed Virgin Mary present the Child Jesus in the temple; and Simeon, filled with the Holy Ghost, took Him up in his arms, and blessed God for ever and ever.}
+\newcommand{\maganttranslation}{Today did the Blessed Virgin Mary present the Child Jesus in the temple; and Simeon, filled with the Holy Ghost, took Him up in his arms, and blessed God for ever and ever.\vspace{-2ex}}
 \def\magsolemn{T}
-\def\magoneline{T}
-\def\psalmclef{c3}
+\def\magoneline{F}
 \definemag{8}{G*}
 \newcommand{\premagverses}{%
-%\greblockcustos
+\greblockcustos
 \normalsize
-\setgrefactor{14}
+\setgrefactor{15}
 %\pagebreak
 }
 
@@ -160,4 +147,5 @@
 
 %\def\includefideliumanimae{T}
 
-\input{../FullVespers}
+\input{../inc_header}
+\input{../FullVespers-test}

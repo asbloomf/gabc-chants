@@ -817,12 +817,6 @@ five%
 \ifx\magprotodiogenes\undefined\def\magprotodiogenes{F}\fi
 \StrSubstitute{\antend}{*}{star}[\expandedend]
 \StrSubstitute{\antend}{*}{}[\nostarend]
-\ifx\psalmclef\undefined%
-%psalmclef should be something like c3
-    \def\altclef{}%
-\else%
-    \def\altclef{_\psalmclef}%
-\fi
 \def\antpost{}
 \if\maggrassi T\def\antpost{_grassi}\fi
 \ifx\magprotodiogenes\undefined\def\magprotodiogenes{F}\fi
@@ -837,8 +831,6 @@ five%
 \ifx\preverses\undefined
   \def\preverses{}
 \fi
-\edef\magtex{../psalms\psalmsubdir#1\if\magsolemn Tsolemn\else simple\fi\anttone\expandedend\altclef\antpost%
-\ifx\magoneline\undefined\else\if\magoneline ToneLine\fi\fi}
 \def\magverses{%
   %\ifx\magoneline\undefined\else\if\magoneline T\vspace{-15pt}\fi\fi
   \input{../psalms\psalmsubdir#1-\anttone\nostarend\if\magsolemn Tsolemn\else simple\fi\if\maggrassi T-grassi\fi\if\magprotodiogenes T-protodiogenes\fi-verses}%
@@ -870,6 +862,15 @@ five%
 
     \edef\magstartpagenumber{\thepage}
     {\preant
+    % do this here so preant can define altclef
+    \ifx\psalmclef\undefined%
+    %psalmclef should be something like c3
+        \def\altclef{}%
+    \else%
+        \def\altclef{_\psalmclef}%
+    \fi
+    \global\edef\magtex{../psalms\psalmsubdir#1\if\magsolemn Tsolemn\else simple\fi\anttone\expandedend\altclef\antpost%
+    \ifx\magoneline\undefined\else\if\magoneline ToneLine\fi\fi}
      \printantiphon
     }%
     %\vspace{-1ex}
