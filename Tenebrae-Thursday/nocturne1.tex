@@ -3,27 +3,21 @@
 \large
 %\printgabc{1. Ant.}{8. c.}{Z}{an--zelus_domus_tuae--solesmes}
 {
-\ifnotbook{\def\preant{\setgrefactor{16}\normalsize}}
-\ifbook{\def\preant{\setgrefactor{17}\large}
+\def\preant{\setgrefactor{17}\large}
 %\def\lalinebreakafterverse{11}
 \def\preantafter{\setgrefactor{14}\normalsize}
-}
-\ifnotbook{
-    \def\lalinebreakafterthirtynine{T}
-    \def\enlinebreakafterthirtyseven{T}
-}
+
 \def\psalmtranslationsmall{T}
-\ifnotbook{\def\prepsalm{\setgrefactor{14}\normalsize}}
-\ifbook{\def\prepsalm{\setgrefactor{15}\normalsize\greblockcustos}}
+\def\prepsalm{\setgrefactor{15}\normalsize\greblockcustos}
 \def\anttranslation{The zeal of Thy house hath consumed me, and the reproaches of them that reproach Thee, fell upon me.}
 \printpsalm{1}{68}{8c}{an--zelus_domus_tuae--solesmes}{Z}
 }
 %
 \printseparation{}
 \def\preant{\setgrefactor{17}\large}
-\ifbook{\def\prepsalm{\setgrefactor{15}\normalsize}
+\def\prepsalm{\setgrefactor{15}\normalsize}
 %\def\lalinebreakafterverse{4}
-}
+
 \def\psalmtranslationsmall{T}
 \def\anttranslation{Let them be turned back, and blush for shame: that think evil against me.}
 \printpsalm{2}{69}{8c}{an--avertantur_retrorsum--solesmes}{A}
@@ -34,10 +28,9 @@
 %\def\preantafter{\setgrefactor{15}\normalsize}
 \def\psalmtranslationsmall{T}
 \def\anttranslation{O my God, deliver me out of the hand of the sinner.}
-\ifbook{\def\prepsalm{\setgrefactor{15}\normalsize}
+\def\prepsalm{\setgrefactor{15}\normalsize}
 \def\lalinebreakafterverse{16}
-}
-\ifnotbook{\def\prepsalm{\setgrefactor{16}\normalsize\greblockcustos}}
+
 %\def\lalinebreakaftertwentyone{T}
 \printpsalm{3}{70}{8c}{an--deus_meus_eripe_me--solesmes}{D}
 \let\prepsalm=\undefined

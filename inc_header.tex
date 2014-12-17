@@ -44,7 +44,8 @@
         %let's try .75 for inner and .5 for outer
         %now let's go to .35 outer, .9 inner
         %this time let's try .4 and .85
-        \geometry{outer=0.4in,inner=0.85in,top=25pt+\headsep+\headheight,bottom=25pt+\footskip,twoside=true}
+        \ifbook{\geometry{outer=0.4in,inner=0.85in,top=25pt+\headsep+\headheight,bottom=25pt+\footskip,twoside=true}}
+        \ifnotbook{\geometry{outer=0.625in,inner=0.625in,top=25pt+\headsep+\headheight,bottom=25pt+\footskip,twoside=true}}
     \else
         \setlength\headsep{0.25in}
         \setlength\footskip{0.3in}
