@@ -135,49 +135,16 @@ Lent:
   - name: Vespers Magnificat Passion 2
     url: pdfs/Lent/VespersMagnificatPassion2.pdf
 Tenebrae:
-  - name: tenebrae  full
+  - name: Tenebrae
     url: pdfs/Tenebrae/tenebrae_full.pdf
-  - name: "tenebrae  full  :  Copy"
-    url: pdfs/Tenebrae/tenebrae_full - Copy.pdf
-  - name: "tenebrae  full  :  uploaded"
-    url: pdfs/Tenebrae/tenebrae_full - uploaded.pdf
-  - name: "tenebrae  full  :  uploaded 2"
-    url: pdfs/Tenebrae/tenebrae_full - uploaded2.pdf
-  - name: "tenebrae  full  :  uploaded 3"
-    url: pdfs/Tenebrae/tenebrae_full - uploaded3.pdf
-  - name: "tenebrae  full  :  uploaded 5"
-    url: pdfs/Tenebrae/tenebrae_full - uploaded5.pdf
-  - name: tenebrae  full  small
-    url: pdfs/Tenebrae/tenebrae_full_small.pdf
-  - name: tenebrae  full  small-not-paracol
-    url: pdfs/Tenebrae/tenebrae_full_small-not-paracol.pdf
-  - name: tenebrae  full  small-paracol-minipage
-    url: pdfs/Tenebrae/tenebrae_full_small-paracol-minipage.pdf
-  - name: tenebrae  full  small-paracol-no-minipage
-    url: pdfs/Tenebrae/tenebrae_full_small-paracol-no-minipage.pdf
-  - name: tenebrae  full-uploaded 6
-    url: pdfs/Tenebrae/tenebrae_full-uploaded6.pdf
-  - name: "tenebrae  full-inner: 65 in"
-    url: pdfs/Tenebrae/tenebrae_full-inner-65in.pdf
-  - name: "tenebrae  full-inner: 75 in"
-    url: pdfs/Tenebrae/tenebrae_full-inner-75in.pdf
-"Tenebrae: Thursday":
-  - name: Thursday
-    url: pdfs/Tenebrae-Thursday/Thursday.pdf
-  - name: "Thursday  :  backup 2"
-    url: pdfs/Tenebrae-Thursday/Thursday - backup2.pdf
-  - name: Thursday-backup
-    url: pdfs/Tenebrae-Thursday/Thursday-backup.pdf
-"Tenebrae: Saturday":
-  - name: Saturday
-    url: pdfs/Tenebrae-Saturday/Saturday.pdf
-  - name: "Saturday  :  backup"
-    url: pdfs/Tenebrae-Saturday/Saturday - backup.pdf
-"Tenebrae: Friday":
-  - name: Friday
-    url: pdfs/Tenebrae-Friday/Friday.pdf
-  - name: Friday-backup
-    url: pdfs/Tenebrae-Friday/Friday-backup.pdf
+  - name: Tenebrae Thursday
+    url: pdfs/Tenebrae/tenebrae_thursday.pdf
+  - name: Tenebrae Friday
+    url: pdfs/Tenebrae/tenebrae_friday.pdf
+  - name: Tenebrae Saturday
+    url: pdfs/Tenebrae/tenebrae_saturday.pdf
+  - name: Prophecy Tone
+    url: pdfs/Tenebrae/tenebrae_prophecyTone.pdf
 Easter:
   - name: Easter Vespers
     url: pdfs/Easter/EasterVespers.pdf
