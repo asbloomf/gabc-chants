@@ -241,7 +241,7 @@ five%
     \includescore{#5}}
 }
 
-\def\prepsalmverses{\medskip}
+\let\prepsalmverses=\medskip
 
 \newcommand{\printpsalm}[5]{
 % TODO: split this into separate commands for antiphon and psalm
@@ -295,7 +295,7 @@ five%
 \ifx\psalmtranslationsmall\undefined
   \def\psalmtranslationsmall{\csname psalm\antnum translationsmall\endcsname}
 \fi
-\ifx\prepsalmverses\undefined
+\ifx\prepsalmverses\medskip
     \def\prepsalmverses{\csname prepsalm\antnum verses\endcsname}
 \fi
 
