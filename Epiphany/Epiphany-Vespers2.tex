@@ -10,19 +10,49 @@
 \newcommand{\heading}{Epiphany at II Vespers.}
 \sloppy
 
+\def\preantfour{\setgrefactor{13}
+%\greblockcustos
+%\large
+\normalsize
+}
+
+\def\preantfive{\setgrefactor{15}
+%\greblockcustos
+\normalsize
+}
+\let\oldantfivetranslation=\antfivetranslation
+\def\antfivetranslation{\oldantfivetranslation\vspace{-1.5ex}}
+\newcommand{\psalmfivetranslationsmall}{T}
+%\definepsalm{5}{113}{7}{c2}
+\def\prepsalmfive{%
+\vspace{-1ex}
+%\setgrefactor{15}%
+\normalsize%
+}
+\newcommand{\dontrepeatantiphon}{T}
+\newcommand{\prepsalmfiveverses}{
+\vspace{-10pt}
+}
+
 \definepsalm{5}{113}{7}{c2}
 \def\nopagebreakbeforepsalmfive{T}
 \def\pagebreakafterpsalmfive{T}
 
+\def\magoneline{T}
+\newcommand{\premag}{
+\large
+\setgrefactor{15}
+}
 \newcommand{\maganttex}{MagnificatAntiphon2}
 \newcommand{\magantinitial}{T}
-\newcommand{\maganttranslation}{\vspace{-3ex}This day we keep a holiday in honour of three wonders: today a star led the wise men to the manger; today water was made wine at the marriage; today Christ was pleased to be baptized in Jordan by John for our salvation, alleluia.}
+\newcommand{\maganttranslation}{This day we keep a holiday in honour of three wonders: today a star led the wise men to the manger; today water was made wine at the marriage; today Christ was pleased to be baptized in Jordan by John for our salvation, alleluia.\vspace{-12pt}}
 \definemag{1}{D}
-\newcommand{\premagverses}{\greblockcustos\setgrefactor{15}
+\newcommand{\premagverses}{\greblockcustos\setgrefactor{14}
 \normalsize
 %\pagebreak
 }
 
 \definebenedicamusdomino{1}{2}
 
-\input{../FullVespers}
+\input{../inc_header}
+\input{../FullVespers-test}
