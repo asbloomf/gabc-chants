@@ -241,7 +241,7 @@ five%
     \includescore{#5}}
 }
 
-\let\prepsalmverses=\medskip
+\def\prepsalmverses{\medskip}
 
 \newcommand{\printpsalm}[5]{
 % TODO: split this into separate commands for antiphon and psalm
@@ -273,29 +273,32 @@ five%
 %\ifx\csname ant\antnum initialsize\endcsname\undefined\else
 %    \def\antinitialsize{\csname ant\antnum initialsize\endcsname}
 %\fi
-\ifx\anttranslation\undefined
+\ifcsname ant\antnum translation\endcsname
     \def\anttranslation{\csname ant\antnum translation\endcsname}
 \fi
-\ifx\psalmbeginversetwo\undefined%
+\ifcsname psalm\antnum beginversetwo\endcsname
     \def\psalmbeginversetwo{\csname psalm\antnum beginversetwo\endcsname}
 \fi
-\ifx\preant\undefined
+\ifcsname preant\antnum\endcsname
     \def\preant{\csname preant\antnum\endcsname}
 \fi
-\ifx\prepsalm\undefined
+\ifcsname preant\antnum two\endcsname
+    \def\preantafter{\csname preant\antnum two\endcsname}
+\fi
+\ifcsname prepsalm\antnum\endcsname
     \def\prepsalm{\csname prepsalm\antnum\endcsname}
 \fi
-\ifx\psalmclef\undefined
+\ifcsname psalmclef\antnum\endcsname
     \IfInteger{\csname psalmclef\antnum\endcsname}{
     %    psalm clef is: 
     %    \csname psalmclef\antnum\endcsname
         \edef\psalmclef{\csname psalmclef\antnum\endcsname}
     }{}
 \fi
-\ifx\psalmtranslationsmall\undefined
+\ifcsname psalm\antnum translationsmall\endcsname
   \def\psalmtranslationsmall{\csname psalm\antnum translationsmall\endcsname}
 \fi
-\ifx\prepsalmverses\medskip
+\ifcsname prepsalm\antnum verses\endcsname
     \def\prepsalmverses{\csname prepsalm\antnum verses\endcsname}
 \fi
 
