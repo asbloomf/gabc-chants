@@ -1,0 +1,55 @@
+\newcommand{\printbenedicamusdomino}[2]{
+	\def\annot{\small{#1}}
+	\setinitialspacing{B}
+	\includescore{#2}
+}
+{
+\setgrefactor{15}
+\label{benedicamusdomino-1}
+{{\centering \bfseries I. — On feasts of the I class.\\}
+{\centering \normalsize At 1st Vespers.\\}
+\printbenedicamusdomino{2}{../BenedicamusDomino/BenedicamusDomino_1class1stvespers}
+\bigskip\needspace{8\baselineskip}
+{\centering \normalsize At 2nd Vespers.\\}
+\printbenedicamusdomino{6.}{../BenedicamusDomino/BenedicamusDomino_1class2ndvespers_2lines}
+\smallskip
+\hspace{3ex}\emph{\normalsize or more commonly:}\\
+\printbenedicamusdomino{5.}{../BenedicamusDomino/BenedicamusDomino_1class2ndVespersAlt}}
+\bigskip
+
+\needspace{3\baselineskip}
+\label{benedicamusdomino-2}
+{{\centering \bfseries II. — On feasts of the II class.\\}
+{\centering \normalsize At 1st Vespers.\\}
+\printbenedicamusdomino{2.}{../BenedicamusDomino/BenedicamusDomino_2class1stvespers_2lines}
+\bigskip
+{\centering \normalsize At 2nd Vespers.\\}
+\printbenedicamusdomino{8.}{../BenedicamusDomino/BenedicamusDomino_2class2ndvespers_2lines}}
+\bigskip
+
+%{{\centering \bfseries III. — On feasts of the III class.\\}
+%\printbenedicamusdomino{2.}{../BenedicamusDomino/BenedicamusDomino_3class}}
+%\bigskip\vfill
+
+\needspace{3\baselineskip}
+\label{benedicamusdomino-mary}
+{{\centering \bfseries IV. — On feasts of the Blessed Virgin.\\}
+\printbenedicamusdomino{1.}{../BenedicamusDomino/BenedicamusDomino_blessedVirgin_2lines}}
+\bigskip
+
+\needspace{5\baselineskip}
+\label{benedicamusdomino-sunday}
+{{\centering \bfseries V. — On Sundays during the Year\\and Septuagesima, Sexagesima, and Quinquagesima.\\}
+\printbenedicamusdomino{1.}{../BenedicamusDomino/BenedicamusDomino_Sundays_2lines}}
+\bigskip
+
+\label{benedicamusdomino-lent}\label{benedicamusdomino-advent}
+{{\centering \bfseries VIII. — On Sundays of Advent and Lent.\\}
+\printbenedicamusdomino{6.}{../BenedicamusDomino/BenedicamusDomino_SundaysOfAdventAndLent_2lines}}
+\bigskip
+
+\label{benedicamusdomino-easter}
+{{\centering \bfseries IX. — On Sundays of Paschal Time.\\}
+\printbenedicamusdomino{7.}{../BenedicamusDomino/BenedicamusDomino_SundaysOfPaschalTime_2lines}}
+
+}

@@ -20,6 +20,12 @@ annotation: 1. g;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c4)EC(dd)ce(c) in(d) nú(e_f)bi(g)bus(fe) caé(d)li(d_c) <v>\greheightstar</v>(,) Dó(f_g)mi(h)nus(g') vé(h)ni(gf)et,(f.) (;) cum(f) po(e')te(f)stá(g')te(f) má(fe~)gna,(dc) al(d)le(fe)lú(d.)ia.(d.) (::z)
+(c4)EC(dd)ce(c) in(d) nú(e_f)bi(g)bus(fe) caé(d)li(d_c) <v>\greheightstar</v>(,)
+Dó(f_g)mi(h)nus(g') vé(h)ni(gf)et,(f.) (;)
+cum(f) po(e')te(f)stá(g')te(f) má(fe~)gna,(dc) al(d)le(fe)lú(d.)ia.(d.)
+(::[ev:\ifx\breakbeforeEuouae\undefined\else]z[ev:\fi}
+	\ifx\noeuouae\undefined\def\noeuouae{F}\fi
+	\if\noeuouae F
+{])
 
-E(h) u(h) o(g) u(f) a(gh) e.(g.) (::)
+E(h) u(h) o(g) u(f) a(gh) e.(g.) (::[ev:\fi])

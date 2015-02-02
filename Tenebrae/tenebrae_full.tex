@@ -5,6 +5,7 @@
 \newcommand{\ifnotbook}[1]{}
 %
 \documentclass[12pt]{article} % use larger type; default would be 10pt
+%\usepackage{hyperref}
 \input{../tenebrae/inc_header}
 
 \def\mypreface{
@@ -43,22 +44,22 @@ All chant is based on those found in the Liber Usualis published in 1961.
 \bigskip
 }\end{center}
 \large
-\textsc{Maundy Thursday}\dotting 3\\
-\hspace*{2em}\textsc{2nd Nocturn}\wdotting 17\\
-\hspace*{2em}\textsc{3rd Nocturn}\wdotting 25\\
-\hspace*{2em}\textsc{Lauds}\wdotting 31\\
+\textsc{Maundy Thursday}\dotting \pageref{thursday-1}\\
+\hspace*{2em}\textsc{2nd Nocturn}\wdotting \pageref{thursday-2}\\
+\hspace*{2em}\textsc{3rd Nocturn}\wdotting \pageref{thursday-3}\\
+\hspace*{2em}\textsc{Lauds}\wdotting \pageref{thursday-lauds}\\
 \\
-\textsc{Good Friday}\dotting 39\\
-\hspace*{2em}\textsc{2nd Nocturn}\wdotting 51\\
-\hspace*{2em}\textsc{3rd Nocturn}\wdotting 60\\
-\hspace*{2em}\textsc{Lauds}\wdotting 67\\
+\textsc{Good Friday}\dotting \pageref{friday-1}\\
+\hspace*{2em}\textsc{2nd Nocturn}\wdotting \pageref{friday-2}\\
+\hspace*{2em}\textsc{3rd Nocturn}\wdotting \pageref{friday-3}\\
+\hspace*{2em}\textsc{Lauds}\wdotting \pageref{friday-lauds}\\
 \\
-\textsc{Holy Saturday}\dotting 75\\
-\hspace*{2em}\textsc{2nd Nocturn}\wdotting 83\\
-\hspace*{2em}\textsc{3rd Nocturn}\wdotting 90\\
-\hspace*{2em}\textsc{Lauds}\wdotting 95\\
+\textsc{Holy Saturday}\dotting \pageref{saturday-1}\\
+\hspace*{2em}\textsc{2nd Nocturn}\wdotting \pageref{saturday-2}\\
+\hspace*{2em}\textsc{3rd Nocturn}\wdotting \pageref{saturday-3}\\
+\hspace*{2em}\textsc{Lauds}\wdotting \pageref{saturday-lauds}\\
 \\
-\textsc{Tone for the Prophecy}\dotting 102\\
+\textsc{Tone for the Prophecy}\dotting \pageref{prophecytone}\\
 \vfil
 \pagebreak
 \normalsize
@@ -78,26 +79,36 @@ All chant is based on those found in the Liber Usualis published in 1961.
 
 %\ifnum 1=2{
 \input{../Tenebrae-Thursday/nocturne1}
+\label{thursday-2}
 \input{../Tenebrae-Thursday/nocturne2}
+\label{thursday-3}
 \input{../Tenebrae-Thursday/nocturne3}
+\label{thursday-lauds}
 \input{../Tenebrae-Thursday/lauds}
 %}\fi
 %\ifnum 1=2{
 \input{../Tenebrae-Friday/nocturne1}
+\label{friday-2}
 \input{../Tenebrae-Friday/nocturne2}
+\label{friday-3}
 \input{../Tenebrae-Friday/nocturne3}
+\label{friday-lauds}
 \input{../Tenebrae-Friday/lauds}
 %}\fi
 %\ifnum 1=2{
 \input{../Tenebrae-Saturday/nocturne1}
+\label{saturday-2}
 \input{../Tenebrae-Saturday/nocturne2}
+\label{saturday-3}
 \input{../Tenebrae-Saturday/nocturne3}
+\label{saturday-lauds}
 \input{../Tenebrae-Saturday/lauds}
 %}\fi
 
 \pagebreak
 \thispagestyle{empty}
 \def\heading{Tone for the Prophecy.}
+\label{prophecytone}
 \input{prophecyTone-main}
 %
 \end{document}

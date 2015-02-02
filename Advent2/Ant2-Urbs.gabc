@@ -20,6 +20,15 @@ annotation: 7. d;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c2)URbs(c_g) <v>\greheightstar</v>() for(g)ti(g)tú(g')di(g)nis(g') nó(i)stræ(g) Sí(fg)on,(g.) (;) Sal(exe')vá(g)tor(f') po(exg)né(fe)tur(d') in(exe) é(f)a(exed) mú(c)rus(c.) (;) et(g_h_g_) an(gf~)te(g)mu(gj)rá(jjg)le :(g.) (:) a(g)pe(g')rí(h)te(gf) pór(g)tas,(e.d!ewf.) (;) qui(f)a(ffe) no(d)bís(e_f)cum(d) Dé(dc)us,(b) al(cd)le(d)lú(c.)ia.(c.) () (::) ()
+(c2)URbs(c_g) <v>\greheightstar</v>()
+for(g)ti(g)tú(g')di(g)nis(g') nó(i)stræ(g) Sí(fg)on,(g.) (;)
+Sal(exe')vá(g)tor(f') po(exg)né(fe)tur(d') in(exe) é(f)a(exed) mú(c)rus(c.) (;)
+et(g_h_g_) an(gf~)te(g)mu(gj)rá(jjg)le :(g.) (:)
+a(g)pe(g')rí(h)te(gf) pór(g)tas,(e.d!ewf.) (;)
+qui(f)a(ffe) no(d)bís(e_f)cum(d) Dé(dc)us,(b) al(cd)le(d)lú(c.)ia.(c.)
+() (::[ev:\ifx\breakbeforeEuouae\undefined\else]z[ev:\fi}
+	\ifx\noeuouae\undefined\def\noeuouae{F}\fi
+	\if\noeuouae F
+{]) ()
 
 E(g) u(g) o(h) u(g) a(f) e.(eg..) (::)

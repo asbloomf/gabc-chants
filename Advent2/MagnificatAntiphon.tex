@@ -275,6 +275,9 @@
 \greglyph{\char 17}{h}{h}{0}{}{}%
 \greendofglyph{0}%
 \greglyph{\char 17}{h}{g}{0}{}{}%
+% verbatim text at element level:
+}{\greblockcustos{%
+% end of verbatim text
 }%
 \gresyllable{i}{a}{.}{1}{}{}{12}{}{%
 \greglyph{\char 17}{g}{j}{0}{}{%
@@ -282,15 +285,22 @@
 }%
 }%
 %
-\grebarsyllable{}{}{}{1}{}{E}{0}{%
-\grelastofline %
-}{%
+\grebarsyllable{}{}{}{1}{}{E}{0}{}{%
 \greindivisiofinalis{}%
+% verbatim text at element level:
+\ifx\breakbeforeEuouae\undefined\else%
+% end of verbatim text
 %
 %
 \grenewline %
 %
 %
+% verbatim text at element level:
+\fi}
+	\ifx\noeuouae\undefined\def\noeuouae{F}\fi
+	\if\noeuouae F
+{%
+% end of verbatim text
 }%
 %
 \gresyllable{}{E}{}{1}{}{u}{0}{}{%
@@ -320,5 +330,8 @@
 }%
 %
 \grefinaldivisiofinalis{0}%
+% verbatim text at element level:
+\fi}%
+% end of verbatim text
 \endgregorioscore %
 \endinput %

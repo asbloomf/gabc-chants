@@ -1,0 +1,137 @@
+% !TEX TS-program = latexmk
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{book} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{titleps}
+%\usepackage{hyperref}
+\newcommand{\phantomsection}
+
+\setcounter{secnumdepth}{-1}
+
+\def\mywidth{6in}
+\def\myheight{9in}
+
+\input{../inc_header}
+\setlength\headheight{0.25in+15pt}
+\setlength\headsep{1pc}
+\setlength\topskip{0pc}
+\setlength\footskip{1pc}
+\geometry{outer=0.4in,inner=0.85in,top=0pc+\headheight+\headsep,bottom=1pc+\footskip,twoside=true}
+\newpagestyle{main}{
+\sethead[\garamond{\thepage}][\garamond{\chaptertitle}][] % even
+{}{\garamond{\sectiontitle}}{\garamond{\thepage}} % odd
+\setfoot[][][] % even
+{}{}{} % odd
+}
+\pagestyle{main}
+
+
+\titleformat
+{\section} % command
+[block] % shape
+{\phantomsection\large\addfontfeature{Numbers=Lining}} % format
+{} % label
+{} % sep
+{
+    % \rule{\textwidth}{1pt}
+    % \vspace{1ex}
+    \centering
+} % before-code
+%[
+% \vspace{-0.5ex}%
+% \rule{\textwidth}{0.3pt}
+%] % after-code
+ 
+ 
+\titleformat{\chapter}[block]
+{\thispagestyle{empty}\phantomsection\Large\scshape\addfontfeature{Numbers=Lining}}
+{}{0.5em}{\centering}
+ 
+\titlespacing{\chapter}{0pt}{-40pt}{1pc}
+\titlespacing{\section}{0pt}{*2.5}{*1}
+\titleclass{\chapter}{top}
+\newcommand{\chapterbreak}{\clearpage}
+%\titleclass{\section}{top}
+
+\contentsmargin{1pc}
+\dottedcontents{chapter}[0pc]{}{2pc}{1pc}
+\dottedcontents{section}[0pc]{}{0pc}{1pc}
+
+\newcommand{\printnote}[1]{
+	{\normalsize \emph{#1}}
+}
+\newcommand{\subtitle}[1]{
+\begin{center}{
+	{\addfontfeature{Numbers=Lining} \normalsize \emph{#1}}
+}\end{center}
+}
+
+\sloppy
+\begin{document}
+\large
+\setgrefactor{15}
+%\pagenumbering{roman}
+%\frontmatter
+
+\tableofcontents
+
+%\pagenumbering{arabic}
+%\mainmatter
+
+\chapter{Common of Festal Vespers}
+
+%\subtitle{Festal Tone}
+\label{deusinadjutorium}
+\sectionmark{Deus in adjutórium}
+\addcontentsline{toc}{section}{Deus in adjutórium}
+\printnote{The Festal Tone may be sung on any Sunday or Feast.}
+
+\smallskip
+\def\deusinadjutoriumsolemn{F}
+\printdeusinadjutorium{}
+
+%\pagebreak
+%\subtitle{Solemn Tone}
+\printnote{The Solemn Tone may only be sung on Feasts of the First or Second Class.}
+
+\medskip
+\def\deusinadjutoriumsolemn{T}
+\printdeusinadjutorium{}
+
+
+\printnote{Vespers then proceed with the Proper Antiphons, Psalms, Chapter, Hymn, Versicle,
+Magnificat, and Collect given for the respective Sunday or Feast.}
+
+\medskip
+
+\printnote{All Vespers conclude with the following:}
+\\
+\Vbar{} Dóminus vobíscum.\hspace{5em}
+\Rbar{} Et cum spíritu tuo.
+
+\printnote{Or, in the absence of a priest or deacon:}
+\\
+\Vbar{} Dómine, exáudi oratiónem meam.\\
+\Rbar{} Et clamor meus ad te véniat.
+
+\medskip
+
+\needspace{3\baselineskip}
+\phantomsection\printnote{The ``Benedicamus Domino'' is then sung in one of the different tones as follows:}
+
+\label{benedicamusdomino}
+\sectionmark{Benedicámus Dómino}
+\addcontentsline{toc}{section}{Benedicámus Dómino}
+\input{inc-benedicamus-domino}
+%this is just an example of using pageref
+%See Deus in adjutorium on page \pageref{deusinadjutorium} and Benedicamus domino on page \pageref{benedicamusdomino}.
+
+\input{inc-advent}
+
+\end{document}
+

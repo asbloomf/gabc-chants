@@ -134,15 +134,22 @@
 }%
 }%
 %
-\grebarsyllable{}{}{}{1}{}{E}{0}{%
-\grelastofline %
-}{%
+\grebarsyllable{}{}{}{1}{}{E}{0}{}{%
 \greindivisiofinalis{}%
+% verbatim text at element level:
+\ifx\breakbeforegloria\undefined\else%
+% end of verbatim text
 %
 %
 \grenewline %
 %
 %
+% verbatim text at element level:
+\fi}
+	\ifx\nogloriapatri\undefined\def\nogloriapatri{F}\fi
+	\if\nogloriapatri F
+{%
+% end of verbatim text
 }%
 %
 \gresyllable{}{E}{}{1}{}{u}{0}{}{%
@@ -172,5 +179,8 @@
 }%
 %
 \grefinaldivisiofinalis{0}%
+% verbatim text at element level:
+\fi%
+% end of verbatim text
 \endgregorioscore %
 \endinput %

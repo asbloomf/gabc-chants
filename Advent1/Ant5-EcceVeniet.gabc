@@ -20,6 +20,13 @@ annotation: 4. A*;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c3)EC(e')ce(f) vé(h)ni(hi)et(i.) <v>\greheightstar</v>(,) Pro(h_i)phé(j)ta(ih) má(i_)gnus,(i.) (;) et(i) í(f')pse(i) re(g')no(h)vá(f_e)bit(f') (,) Je(e)rú(d')sa(e)lem,(gxf_g) al(h')le(h)lú(f.)ia.(f.) (::z)
+(c3)EC(e')ce(f) vé(h)ni(hi)et(i.) <v>\greheightstar</v>(,)
+Pro(h_i)phé(j)ta(ih) má(i_)gnus,(i.) (;)
+et(i) í(f')pse(i) re(g')no(h)vá(f_e)bit(f') (,)
+Je(e)rú(d')sa(e)lem,(gxf_g) al(h')le(h)lú(f.)ia.(f.)
+(::[ev:\ifx\breakbeforeEuouae\undefined\else]z[ev:\fi}
+	\ifx\noeuouae\undefined\def\noeuouae{F}\fi
+	\if\noeuouae F
+{])
 
-E(i) u(h) o(i) u(j) a(h) e.(f.) (::)
+E(i) u(h) o(i) u(j) a(h) e.(f.) (::[ev:\fi])

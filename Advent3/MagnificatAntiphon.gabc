@@ -1,4 +1,4 @@
-﻿% !TEX TS-program = gregorio
+% !TEX TS-program = gregorio
 % !TEX encoding = UTF-8
 
 % The first part of the score is called the header, you can input some useful informations here:
@@ -13,6 +13,10 @@ transcription-date: 2011;
 style: modern;
 annotation: At Magn.;
 annotation: 8. G;
+def-m1:}{\greblockcustos{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}	\ifx\noeuouae\undefined\def\noeuouae{F}\fi	\if\noeuouae F{;
+def-m4:\fi};
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -20,6 +24,10 @@ annotation: 8. G;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c4)BE(g)á(gj)ta(hg) es(h') <v>\greheightstar</v>() Ma(f)rí(g_h)a,(g_h) (,) quæ(gf) cre(g)di(h)dí(hk)sti :(jkj.) (;) per(h)fi(i')ci(j)én(hg~)tur(h') in(g) te(g'_) (,) quæ(g) dí(g_h)cta(f_e) sunt(d) tí(e_f)bi(gh) a(h') Dó(g)mi(fg)no,(gv_FD') al(f)le(fg)lú(g.)ia.(g.) (::)
+(c4)BE(g)á(gj)ta(hg) es(h') <v>\greheightstar</v>()
+Ma(f)rí(g_h)a,(g_h) (,)
+quæ(gf) cre(g)di(h)dí(hk)sti :(jkj.) (;)
+per(h)fi(i')ci(j)én(hg~)tur(h') in(g) te(g'_) (,)
+quæ(g) dí(g_h)cta(f_e) sunt(d) tí(e_f)bi(gh) a(h') Dó(g)mi(fg)no,(gv_FD') al(f)le(fg)lú(g.[em1])ia.(g.) (::[em2]z[em3])
 
-E(j) u(j) o(i) u(j) a(h) e.(g.) (::)
+E(j) u(j) o(i) u(j) a(h) e.(g.) (::[em4])

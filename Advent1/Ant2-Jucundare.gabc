@@ -36,6 +36,13 @@ annotation: 8. G*;
 \greendofglyph{0}%
 \greglyph{\char 26}{j}{k}{4}{}{}%
 \greendofglyph{1}%
-]kjk)re(k_j_) <v>\greheightstar</v>(,) fí(ji)li(h)a(ij) Sí(hg)on,(g.) (;) ex(g)súl(g')ta(g) sa(f_e)tis(d.) (,) fí(e')li(f)a(gh) Je(h')rú(g)sa(fg)lem,(gv_FD') al(f)le(fg)lú(g.)ia.(g.) (::z)
+]kjk)re(k_j_) <v>\greheightstar</v>(,)
+fí(ji)li(h)a(ij) Sí(hg)on,(g.) (;)
+ex(g)súl(g')ta(g) sa(f_e)tis(d.) (,)
+fí(e')li(f)a(gh) Je(h')rú(g)sa(fg)lem,(gv_FD') al(f)le(fg)lú(g.)ia.(g.)
+(::[ev:\ifx\breakbeforeEuouae\undefined\else]z[ev:\fi}
+	\ifx\noeuouae\undefined\def\noeuouae{F}\fi
+	\if\noeuouae F
+{])
 
-E(j) u(j) o(i) u(j) a(h) e.(g.) (::)
+E(j) u(j) o(i) u(j) a(h) e.(g.) (::[ev:\fi])

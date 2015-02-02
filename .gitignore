@@ -8,3 +8,4 @@ gh-pages
 *.eps
 misc/*-systems.*
 *.log
+*.toc

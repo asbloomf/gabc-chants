@@ -54,7 +54,7 @@
   \import{lilypond/}{#1}
 }
 
-\newcommand{\startday}[1]{
+\newcommand{\startday}[2]{
 %
 % The title page:
 \pagebreak
@@ -67,6 +67,7 @@
 \vspace*{\stretch{1}}
 \Huge \textsc{#1}
 \vspace{\stretch{2}}
+\label{#2}
 
 \pagebreak
 \thispagestyle{empty}

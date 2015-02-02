@@ -20,6 +20,16 @@ annotation: 1. f;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c4)MOn(d_c~)tes(f) et(g) cól(f_h)les(h.) <v>\greheightstar</v>(,) can(hg~)tá(h)bunt(g) co(e')ram(f) Dé(g)o(fe) láu(d)dem,(d.) (;) et(d) óm(f)ni(fg)a(g') lí(h)gna(g) sil(fe~)vá(f_g)rum(g.) (,) pláu(hj~)dent(ji~) má(g)ni(ij)bus :(h.) (:) quó(f)ni(gh)am(h_g) vé(e)ni(fg)et(g_f) Dó(d')mi(f)nus(e') Do(f)mi(d)ná(d)tor(c'_) (,) in(d) ré(dd)gnum(c) æ(e)tér(ge~)num,(f_g) (,) al(e)le(c')lú(e)ia,(g') al(e)le(fe)lú(d.)ia.(d.) (::)
+(c4)MOn(d_c~)tes(f) et(g) cól(f_h)les(h.) <v>\greheightstar</v>(,)
+can(hg~)tá(h)bunt(g) co(e')ram(f) Dé(g)o(fe) láu(d)dem,(d.) (;)
+et(d) óm(f)ni(fg)a(g') lí(h)gna(g) sil(fe~)vá(f_g)rum(g.) (,)
+pláu(hj~)dent(ji~) má(g)ni(ij)bus :(h.) (:)
+quó(f)ni(gh)am(h_g) vé(e)ni(fg)et(g_f) Dó(d')mi(f)nus(e') Do(f)mi(d)ná(d)tor(c'_) (,)
+in(d) ré(dd)gnum(c) æ(e)tér(ge~)num,(f_g) (,)
+al(e)le(c')lú(e)ia,(g') al(e)le(fe)lú(d.)ia.(d.)
+(::[ev:\ifx\breakbeforeEuouae\undefined\else]z[ev:\fi}
+	\ifx\noeuouae\undefined\def\noeuouae{F}\fi
+	\if\noeuouae F
+{])
 
-E(h) u(h) o(g) u(f) a(gh) e.(gf..) (::)
+E(h) u(h) o(g) u(f) a(gh) e.(gf..) (::[ev:\fi])

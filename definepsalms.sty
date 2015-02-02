@@ -238,7 +238,12 @@ five%
     \def\annottwo{\small{#3}}
     \setinitialspacing{#4}
 
-    \includescore{#5}}
+    \ifx\gabcfolder\undefined
+        \includescore{#5}
+    \else
+        \includescore{\gabcfolder/#5}
+    \fi
+    }
 }
 
 \def\prepsalmverses{\medskip}
@@ -399,6 +404,7 @@ five%
 }\fi
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween]{2}}
 \def\endpsalmcols{\end{parcolumns}}
+\ifx\psalmcolsoverride\undefined
 \if\useevencolumns F%
 %\def\psalmcoloptions{rulebetween}
 %109 & 110 are just rulebetween
@@ -597,6 +603,9 @@ five%
 \fi%canticleof undefined
 %
 \fi % even columns
+\else %\psalmcolsoverride not \undefined
+  \def\beginpsalmcols{\psalmcolsoverride}
+\fi %\psalmcolsoverride not \undefined
 %
 \ifx\undefined\useparacol\else
 \def\beginpsalmcols{\begin{paracol}{2}}
@@ -729,7 +738,7 @@ five%
 \if\maggrassi T\def\magpost{_grassi}\fi
 \if\magprotodiogenes T\def\magpost{_protodiogenes}\fi
 \if\magsmc T\def\magpost{_smc}\fi
-\newcommand{\magtex}{../psalms/Magnificat\if\magsolemn Tsolemn\else simple\fi\magtone\expandedendmag\altclef\magpost%
+\def\magtex{../psalms/Magnificat\if\magsolemn Tsolemn\else simple\fi\magtone\expandedendmag\altclef\magpost%
 \ifx\magoneline\undefined\else\if\magoneline ToneLine\fi\fi}
 \newcommand{\magverses}{%
 %\ifx\magoneline\undefined\else\if\magoneline T\vspace{-15pt}\fi\fi
@@ -744,6 +753,7 @@ five%
 % 2 - chapter translation
 %TODO: optional no translation
     \begin{center}{\large\textbf Chapter.}\end{center}
+    \vspace{-0.5\baselineskip}
     % default width is 265pt
     % ,colwidths={1=253pt}
     \begin{parcolumns}[rulebetween]{2}
@@ -759,6 +769,7 @@ five%
 % 2 - chapter translation
 %TODO: optional no translation
     \begin{center}{\large\textbf Chapter.}\end{center}
+    \vspace{-0.5\baselineskip}
     % default width is 265pt
     % ,colwidths={1=253pt}
     \begin{paracol}{2}
@@ -773,13 +784,13 @@ five%
 % 2 hymninitial
 % 3 hymntex
 % 4 hymntranslation
-    \printgabc[\ifx\prehymn\undefined\else\prehymn\fi]{\small{Hymn.}}{\small{#1}}{#2}{\hymntex} %
+    \printgabc[\ifx\prehymn\undefined\else\prehymn\fi]{\small{Hymn.}}{\small{#1}}{#2}{#3} %
 %
     \normalsize%\vspace{0pt minus 20pt}
     \selectlanguage{american}
     \begin{multicols}{2}
     \begin{psalmverses}
-    {\hymntranslation}
+    {#4}
     \end{psalmverses}
     \ifx\hymnnote\undefined\else%
       \begin{flushright}\emph{\hymnnote}\end{flushright}
@@ -793,7 +804,14 @@ five%
 %3 vtranslation
 %4 rtranslation
 % vrnospace optional
-    {#1\includescore{#2}}\vspace{-4pt plus 4pt}
+    {#1
+\ifx\gabcfolder\undefined
+    \includescore{#2}
+\else
+    \includescore{\gabcfolder/#2}
+\fi
+    }
+    \vspace{-4pt plus 4pt}
     \translation[\normalsize]{
     \Vbar{}~#3{}%
     \ifx\vrnospace\undefined
@@ -825,6 +843,7 @@ five%
 \def\antpost{}
 \if\maggrassi T\def\antpost{_grassi}\fi
 \ifx\magprotodiogenes\undefined\def\magprotodiogenes{F}\fi
+\ifx\nogloriapatri\undefined\def\nogloriapatri{F}\fi
 \if\nogloriapatri T
   \def\psalmsubdir{/no-gloria-patri/}
 \else
@@ -836,6 +855,7 @@ five%
 \ifx\preverses\undefined
   \def\preverses{}
 \fi
+\ifx\preant\undefined\def\preant{}\fi
 \def\magverses{%
   %\ifx\magoneline\undefined\else\if\magoneline T\vspace{-15pt}\fi\fi
   \input{../psalms\psalmsubdir#1-\anttone\nostarend\if\magsolemn Tsolemn\else simple\fi\if\maggrassi T-grassi\fi\if\magprotodiogenes T-protodiogenes\fi-verses}%
@@ -859,9 +879,14 @@ five%
     \def\annottwo{\small{\antlinetwo}}
     \setinitialspacing{\antinitial}
     \ifx\anttex\undefined\def\anttex{MagnificatAntiphon}\fi
+\ifx\gabcfolder\undefined
     \includescore{\anttex}
+\else
+    \includescore{\gabcfolder/\anttex}
+\fi
 }
 
+    \needspace{3\baselineskip}
     \begin{center}{\large #1.}\end{center}
     \vspace{-1ex}
 
@@ -893,16 +918,22 @@ five%
     \magverses
     \end{magnificat}
     }
-    \ifnum\thepage=\magstartpagenumber
+    \ifx\dontrepeatantiphon\undefined
+      \ifnum\thepage=\magstartpagenumber
+          \let\preantafter=\undefined
+      \else\ifx\preantafter\undefined
+          \let\preantafter=\preant
+      \fi\fi
     \else
-      \let\preanttwo=\preant
+      \let\preantafter=\undefined
     \fi
-    \ifx\preanttwo\undefined
+
+    \ifx\preantafter\undefined
     {%\vspace{-1ex}
-    \ifx\prerepeatantiphon\undefined\else\prerepeatantiphon\fi%
-    \noindent\emph{Repeat antiphon.}\\}
+    \ifx\prerepeatantiphon\undefined\bigskip\else\prerepeatantiphon\fi%
+    \noindent\emph{Repeat antiphon.}}
     \else
-    {\preanttwo
+    {\preantafter
     \printantiphon
     }%
     \fi

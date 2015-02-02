@@ -20,6 +20,14 @@ annotation: 8. G;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c4)NE(g) tí(gj)me(hg)as(h') <v>\greheightstar</v>() Ma(f)rí(g_h)a,(g_h) (,) in(g)ve(g)ní(h')sti(g) grá(h_j!kv)ti(ji)am(g_h) a(i)pud(h') Dó(g)mi(fg)num :(g.) (:) ec(h')ce(g) con(ge~)cí(f!g'h)pi(fe)es,(d.) (;) et(d) pá(e_f)ri(gh)es(h) fí(g')li(g)um,(gv_FD') al(f)le(fg)lú(g.)ia.(g.) (::)
+(c4)NE(g) tí(gj)me(hg)as(h') <v>\greheightstar</v>()
+Ma(f)rí(g_h)a,(g_h) (,)
+in(g)ve(g)ní(h')sti(g) grá(h_j!kv)ti(ji)am(g_h) a(i)pud(h') Dó(g)mi(fg)num :(g.) (:)
+ec(h')ce(g) con(ge~)cí(f!g'h)pi(fe)es,(d.) (;)
+et(d) pá(e_f)ri(gh)es(h) fí(g')li(g)um,(gv_FD') al(f)le(fg)lú(g.[ev:}{\greblockcustos{])ia.(g.)
+(::[ev:\ifx\breakbeforeEuouae\undefined\else]z[ev:\fi}
+	\ifx\noeuouae\undefined\def\noeuouae{F}\fi
+	\if\noeuouae F\greblockcustos
+{])
 
-E(j) u(j) o(i) u(j) a(h) e.(g.) (::)
+E(j) u(j) o(i) u(j) a(h) e.(g.) (::[ev:\fi}])
