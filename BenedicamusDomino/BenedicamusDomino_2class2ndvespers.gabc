@@ -12,6 +12,8 @@ transcriber: Albert Bloomfield;
 transcription-date: 2011;
 style: modern;
 annotation: 8.;
+def-m1:\ifx\breakbeforeresp\undefined\else;
+def-m2:\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -19,5 +21,5 @@ annotation: 8.;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-BE(c4ghg'g)ne(f)di(hj)cá(jvjvI'HG'F)mus(hih') Dó(g)mi(fg)no.(g.) (::)
+BE(c4ghg'g)ne(f)di(hj)cá(jvjvI'HG'F)mus(hih') Dó(g)mi(fg)no.(g.) (::[em1]z[em2])
 <sp>R/</sp>~Dé(ghggf)o(hj)  grá(jvjvI'HG'FhiH'G)ti(fg)as.(g.) (::)
