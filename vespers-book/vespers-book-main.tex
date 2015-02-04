@@ -73,7 +73,7 @@
 
 \sloppy
 \begin{document}
-\large
+\normalsize
 \setgrefactor{15}
 %\pagenumbering{roman}
 %\frontmatter
@@ -128,10 +128,18 @@ Magnificat, and Collect given for the respective Sunday or Feast.}
 \sectionmark{Benedicámus Dómino}
 \addcontentsline{toc}{section}{Benedicámus Dómino}
 \input{inc-benedicamus-domino}
+
+\input{inc-marian-anthems}
+
+%TODO where should I try and put the grassi? And I'll have to reformat it for the right size
+
 %this is just an example of using pageref
 %See Deus in adjutorium on page \pageref{deusinadjutorium} and Benedicamus domino on page \pageref{benedicamusdomino}.
 
+\def\dontrepeatantiphon{T}
 \input{inc-advent}
 
+%TODO Appendix
+%\input{inc-benediction}
 \end{document}
 

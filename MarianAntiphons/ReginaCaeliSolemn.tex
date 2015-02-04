@@ -117,15 +117,19 @@
 }%
 }%
 %
-\grebarsyllable{}{}{}{1}{p}{o}{0}{%
-\grelastofline %
-}{%
+\gresyllable{}{}{}{1}{p}{o}{0}{}{%
+% verbatim text at element level:
+\ifx\nogabcbreaks\undefined%
+% end of verbatim text
 \greindivisiominima{}%
 %
 %
 \grenewlinewithspace{1}{0}{0}{0}%
 %
 %
+% verbatim text at element level:
+\fi%
+% end of verbatim text
 }%
 %
 \gresyllable{p}{o}{r}{0}{t}{á}{0}{}{%

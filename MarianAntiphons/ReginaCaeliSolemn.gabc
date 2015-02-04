@@ -2,11 +2,14 @@
 % !TEX encoding = UTF-8
 name:Regina Caeli;
 initial-style:1;
+def-m1:\ifx\nogabcbreaks\undefined;
+def-m2:\fi;
+
 %%
 (cb4) RE(f)gí(g')na(f) cæ(gh)li,(h.) <v>\greheightstar</v>(,)
 læ(i)tá(hg/ivHF'/gf./hg/hf/ggf)re,(f'_) (,)
 al(i)le(gf)lú(gh)ia :(f.) (::)
-Qui(f)a(j'_) quem(jkkj) me(ih)ru(gf)ís(gh)ti(h.) (,z)
+Qui(f)a(j'_) quem(jkkj) me(ih)ru(gf)ís(gh)ti(h.) ([em1],z[em2])
 % episemas above portare have to be adjusted manually
 % change h to k in the tex file
 %\grevepisemus{h}{2}%
