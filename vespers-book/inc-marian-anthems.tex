@@ -1,6 +1,18 @@
 \chapter{Marian Anthems}
 {
-\def\nogabcbreaks{Tone}
+\def\nogabcbreaks{T}
+\newcommand{\printsimpletone}{
+\vspace{0ex plus 0ex minus 2ex}
+\needspace{3\baselineskip}
+\begin{center}\textbf{Simple Tone.}\end{center}
+\vspace{0ex plus 0ex minus 1ex}
+}
+\newcommand{\printsolemntone}{
+%\vspace{0ex plus 0ex minus 0.5ex}
+\needspace{3\baselineskip}
+\begin{center}\textbf{Solemn Tone.}\end{center}
+\vspace{0ex plus 0ex minus 1ex}
+}
 \newcommand{\afterant}{
 \ifx\note\undefined\else%
 \textit{\note}
@@ -40,7 +52,9 @@
 
 \section{Alma Redemptoris Mater}
 \printnote{From Vespers of Saturday before the 1st Sunday of Advent to 2nd Vespers of the Purification.}
-\begin{center}\textbf{Solemn Tone.}\end{center}
+\printsimpletone{}
+\printgabc{Ant.}{5.}{A}{AlmaSimple}
+\printsolemntone{}
 \printgabc{Ant.}{5.}{A}{AlmaSolemn}
 \begin{quote}{Mother of Christ! hear thou thy people's cry
 Star of the deep, and portal of the sky!
@@ -48,9 +62,6 @@ Mother of Him who thee from nothing made,
 Sinking we strive and call to thee for aid;
 Oh, by that joy which Gabriel brought to thee,
 Thou Virgin first and last, let us thy mercy see.}\end{quote}
-\needspace{3\baselineskip}
-\begin{center}\textbf{Simple Tone.}\end{center}
-\printgabc{Ant.}{5.}{A}{AlmaSimple}
 
 \bigskip{}
 {
@@ -78,16 +89,11 @@ Thou Virgin first and last, let us thy mercy see.}\end{quote}
 % Ave Regina Cælorum
 \section{Ave Regina Cælorum}
 \printnote{From Compline of Feb 2nd (even if the Feast of the Purification be transferred) until Compline of Wednesday in Holy Week.}
-\vspace{-1ex}
-\begin{center}\textbf{Solemn Tone.}\end{center}
-\vspace{-1ex}
-\printgabc{Ant.}{6.}{A}{AveReginaSolemn}
-\vfil*
-\begin{quote}{Hail, Queen of Heaven! Hail, Queen of Angels! Hail, blest Root and Gate, from which came light upon the world! Rejoice, O glorious Virgin, that surpassest all in beauty! Hail, O most lovely, and pray for us to Christ.}\end{quote}
-\vfil
-\needspace{3\baselineskip}
-\begin{center}\textbf{Simple Tone.}\end{center}
+\printsimpletone{}
 \printgabc{Ant.}{6.}{A}{AveReginaSimple}
+\printsolemntone{}
+\printgabc{Ant.}{6.}{A}{AveReginaSolemn}
+\begin{quote}{Hail, Queen of Heaven! Hail, Queen of Angels! Hail, blest Root and Gate, from which came light upon the world! Rejoice, O glorious Virgin, that surpassest all in beauty! Hail, O most lovely, and pray for us to Christ.}\end{quote}
 
 \bigskip{}
 {
@@ -105,17 +111,13 @@ Thou Virgin first and last, let us thy mercy see.}\end{quote}
 
 
 % Regina Cæli
+\needspace{10\baselineskip}
 \section{Regina cæli}
 \printnote{From Compline of Easter Sunday to Compline of Friday after the Feast of Pentecost inclusively.}
-\vspace{-1ex}
-\begin{center}\textbf{Solemn Tone.}\end{center}
-\vspace{-1ex}
-\printgabc{Ant.}{6.}{R}{ReginaCaeliSolemn}
-\needspace{3\baselineskip}
-\vspace{-1ex}
-\begin{center}\textbf{Simple Tone.}\end{center}
-\vspace{-1ex}
+\printsimpletone{}
 \printgabc{Ant.}{6.}{A}{AveReginaSimple}
+\printsolemntone{}
+\printgabc{Ant.}{6.}{R}{ReginaCaeliSolemn}
 \begin{quote}{O Queen of heaven, rejoice, alleluia.
 For He whom thou didst merit to bear, alleluia;
 Has risen as He said, alleluia.
@@ -140,12 +142,11 @@ Pray for us to God, alleluia.}\end{quote}
 % Salve Regina
 \section{Salve Regina}
 \printnote{From 1st Vespers of the Feast of the Blessed Trinity to None on Saturday before the 1st Sunday of Advent.}
-\begin{center}\textbf{Solemn Tone.}\end{center}
+\printsimpletone{}
+\printgabc{Ant.}{5.}{S}{SalveReginaSimple}
+\printsolemntone{}
 \printgabc{Ant.}{1.}{S}{SalveReginaSolemn}
 \begin{quote}{Hail, holy Queen, Mother of mercy; hail, our life, our sweetness, and our hope! To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this vale of tears.  Turn then, most gracious advocate, thine eyes of mercy towards us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.  O clement, O loving, O sweet Virgin Mary.}\end{quote}
-\needspace{3\baselineskip}
-\begin{center}\textbf{Simple Tone.}\end{center}
-\printgabc{Ant.}{5.}{S}{SalveReginaSimple}
 
 \bigskip{}
 {
