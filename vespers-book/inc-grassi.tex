@@ -1,0 +1,50 @@
+{
+\clearpage
+\label{magnificat-grassi}
+\sectionmark{Magnificat by Grassi}
+\addcontentsline{toc}{section}{Magnificat by Grassi}
+
+\def\betweenLilyPondSystem#1{
+  \ifnum#1>1
+    \vfil\noindent
+  \else
+    \linebreak
+  \fi
+  %\vspace{0.5\baselineskip}
+}
+\newcommand{\includelilypond}[1]{
+  \noindent
+  \import{../misc/}{#1}
+}
+\def\magsolemn{F}
+\def\maggrassi{T}
+\definemag{8}{G}
+\def\annot{\magtone. \magend}
+\def\greinitialformat#1{%
+{\fontsize{50}{50}\selectfont #1}%
+}
+\setinitialspacing{M}
+\def\magoddverses{\input{../psalms/magnificat-\magtone\nostarendmag\if\magsolemn Tsolemn\else simple\fi-grassi-chant-verses}}
+\global\def\magtex{../psalms/Magnificat\if\magsolemn Tsolemn\else simple\fi\magtone\nostarendmag}
+\greblockcustos
+\begin{oddversesmagnificat}{\magtex}
+\magoddverses
+\end{oddversesmagnificat}
+
+\includelilypond{magnificat-grassi-small-systems}
+
+
+
+\def\magsolemn{T}
+\let\magant=\undefined
+\let\magantlinetwo=\undefined
+\let\magtex=\undefined
+\let\magverses=\undefined
+\definemag{8}{G}
+\def\annot{\magtone. \magend}
+\setinitialspacing{M}
+\global\def\magtex{../psalms/Magnificat\if\magsolemn Tsolemn\else simple\fi\magtone\nostarendmag}
+\begin{oddversesmagnificat}{\magtex}
+\magoddverses
+\end{oddversesmagnificat}
+}
