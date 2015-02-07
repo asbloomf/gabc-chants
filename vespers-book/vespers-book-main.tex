@@ -8,8 +8,16 @@
 \usepackage{titlesec}
 \usepackage{titletoc}
 \usepackage{titleps}
+\usepackage{letltxmacro}
+
 %\usepackage{hyperref}
 \newcommand{\phantomsection}
+
+\presetkeys{mymag}{grassilabel=magnificat-grassi}{}
+%\LetLtxMacro{\oldprintmag}{\printmag}
+%\renewcommand{\printmag}[4][grassilabel=magnificat-grassi]{
+%\oldprintmag[#1]{#2}{#3}{#4}
+%}
 
 \setcounter{secnumdepth}{-1}
 
@@ -21,7 +29,7 @@
 \setlength\headsep{1pc}
 \setlength\topskip{0pc}
 \setlength\footskip{1pc}
-\geometry{outer=0.4in,inner=0.85in,top=0pc+\headheight+\headsep,bottom=1pc+\footskip,twoside=true}
+\geometry{outer=0.4in,inner=0.85in,top=0pc+\headheight+\headsep,bottom=0.4in,twoside=true}
 \newpagestyle{main}{
 \sethead[\garamond{\thepage}][\garamond{\chaptertitle}][] % even
 {}{\garamond{\sectiontitle}}{\garamond{\thepage}} % odd
@@ -52,7 +60,7 @@
 {\thispagestyle{empty}\phantomsection\Large\scshape\addfontfeature{Numbers=Lining}}
 {}{0.5em}{\centering}
  
-\titlespacing{\chapter}{0pt}{-40pt}{1pc}
+\titlespacing{\chapter}{0pt}{-\headheight}{1pc}
 \titlespacing{\section}{0pt}{*2.5}{*1}
 \titleclass{\chapter}{top}
 \newcommand{\chapterbreak}{\clearpage}
@@ -133,7 +141,7 @@ Magnificat, and Collect given for the respective Sunday or Feast.}
 
 %TODO Appendix
 \chapter{Appendix}
-%\input{inc-benediction}
+\input{inc-benediction}
 \input{inc-grassi}
 
 \end{document}

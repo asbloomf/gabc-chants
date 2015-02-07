@@ -3,6 +3,7 @@
 
 \usepackage{xstring}
 \usepackage{needspace}
+\usepackage{xkeyval}
 
 \newcommand{\numbertoword}[1]{%
 \ifnum1=#1%
@@ -825,12 +826,25 @@ five%
     \Rbar{}~#4{}%
     }%
 }
+\makeatletter
+\define@key{mymag}{canticle}{
+  \global\def\canticle{#1}
+}
+\define@key{mymag}{grassilabel}{
+  \IfStrEq{#1}{}{}{\def\grassilabel{#1}} % define grassi label if present
+}
+\define@key{mymag}{Magnificat}[Magnificat]{\global\def\canticle{#1}}
+\define@key{mymag}{Benedictus}[Benedictus]{\global\def\canticle{#1}}
+%\presetkeys{mymag}{canticle=Magnificat}{}
+\makeatother
 
 \newcommand{\printmag}[4][Magnificat]{
 %1 - defaults to Magnificat, can be Benedictus
 %2 - psalm tone and ending, e.g., 8G
 %3 - ant starting initial
 %4 - antiphon tex
+\setkeys{mymag}{#1}
+\IfBeginWith{#2}{8G}{}{\let\grassilabel=\undefined}
 \edef\antinitial{#3}
 \edef\anttex{#4}
 \StrLeft{#2}{1}[\anttone]
@@ -858,9 +872,9 @@ five%
 \ifx\preant\undefined\def\preant{}\fi
 \def\magverses{%
   %\ifx\magoneline\undefined\else\if\magoneline T\vspace{-15pt}\fi\fi
-  \input{../psalms\psalmsubdir#1-\anttone\nostarend\if\magsolemn Tsolemn\else simple\fi\if\maggrassi T-grassi\fi\if\magprotodiogenes T-protodiogenes\fi-verses}%
+  \input{../psalms\psalmsubdir\canticle-\anttone\nostarend\if\magsolemn Tsolemn\else simple\fi\if\maggrassi T-grassi\fi\if\magprotodiogenes T-protodiogenes\fi-verses}%
 }
-\IfStrEq{#1}{Magnificat}
+\IfStrEq{\canticle}{Magnificat}
 {
   \def\versenum{2}
 }{
@@ -868,7 +882,7 @@ five%
 }
 
 \def\printantiphon{
-    \IfStrEq{#1}{Magnificat}
+    \IfStrEq{\canticle}{Magnificat}
     {
       \def\annot{\small{At Magn.}}
       \def\versenum{2}
@@ -887,7 +901,7 @@ five%
 }
 
     \needspace{3\baselineskip}
-    \begin{center}{\large #1.}\end{center}
+    \begin{center}{\large \canticle.}\end{center}
     \vspace{-1ex}
 
     \edef\magstartpagenumber{\thepage}
@@ -899,13 +913,16 @@ five%
     \else%
         \def\altclef{_\psalmclef}%
     \fi
-    \global\edef\magtex{../psalms\psalmsubdir#1\if\magsolemn Tsolemn\else simple\fi\anttone\expandedend\altclef\antpost%
+    \global\edef\magtex{../psalms\psalmsubdir\canticle\if\magsolemn Tsolemn\else simple\fi\anttone\expandedend\altclef\antpost%
     \ifx\magoneline\undefined\else\if\magoneline ToneLine\fi\fi}
      \printantiphon
     }%
     %\vspace{-1ex}
     \translation[]{\anttranslation}
-    \bigskip
+    \medskip
+    \ifx\grassilabel\undefined\else{
+      \emph{A 3 part arrangement by Grassi of the even verses may be found on page \pageref{\grassilabel}.}
+    }\fi
     \needspace{3\baselineskip}
     \ifnum\thepage=\magstartpagenumber
       %\hrule
@@ -939,7 +956,6 @@ five%
     \fi
 
 }
-
 
 \newcommand{\definebenedicamusdomino}[2]{
 % i would like something like [class=1,vespers=2,advent]

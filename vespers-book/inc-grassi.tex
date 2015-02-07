@@ -1,8 +1,21 @@
 {
-\clearpage
+\pagebreak
+\thispagestyle{empty}
+\newcommand{\printsimpletone}{
+\needspace{3\baselineskip}
+\begin{center}\textbf{Simple Tone.}\end{center}
+\vspace{0ex plus 0ex minus 2ex}
+}
+\newcommand{\printsolemntone}{
+%\vspace{0ex plus 0ex minus 0.5ex}
+\needspace{3\baselineskip}
+\begin{center}\textbf{Solemn Tone.}\end{center}
+\vspace{0ex plus 0ex minus 1ex}
+}
+
 \label{magnificat-grassi}
-\sectionmark{Magnificat by Grassi}
-\addcontentsline{toc}{section}{Magnificat by Grassi}
+\vspace*{-\headheight}
+\section{Magnificat by Grassi}
 
 \def\betweenLilyPondSystem#1{
   \ifnum#1>1
@@ -27,6 +40,7 @@
 \def\magoddverses{\input{../psalms/magnificat-\magtone\nostarendmag\if\magsolemn Tsolemn\else simple\fi-grassi-chant-verses}}
 \global\def\magtex{../psalms/Magnificat\if\magsolemn Tsolemn\else simple\fi\magtone\nostarendmag}
 \greblockcustos
+\printsimpletone{}
 \begin{oddversesmagnificat}{\magtex}
 \magoddverses
 \end{oddversesmagnificat}
@@ -44,6 +58,7 @@
 \def\annot{\magtone. \magend}
 \setinitialspacing{M}
 \global\def\magtex{../psalms/Magnificat\if\magsolemn Tsolemn\else simple\fi\magtone\nostarendmag}
+\printsolemntone{}
 \begin{oddversesmagnificat}{\magtex}
 \magoddverses
 \end{oddversesmagnificat}
