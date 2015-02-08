@@ -830,8 +830,8 @@ five%
 \define@key{mymag}{canticle}{
   \global\def\canticle{#1}
 }
-\define@key{mymag}{grassilabel}{
-  \IfStrEq{#1}{}{}{\def\grassilabel{#1}} % define grassi label if present
+\define@key{mymag}{note}{
+  \def\magnificatnote{#1}
 }
 \define@key{mymag}{Magnificat}[Magnificat]{\global\def\canticle{#1}}
 \define@key{mymag}{Benedictus}[Benedictus]{\global\def\canticle{#1}}
@@ -844,7 +844,6 @@ five%
 %3 - ant starting initial
 %4 - antiphon tex
 \setkeys{mymag}{#1}
-\IfBeginWith{#2}{8G}{}{\let\grassilabel=\undefined}
 \edef\antinitial{#3}
 \edef\anttex{#4}
 \StrLeft{#2}{1}[\anttone]
@@ -901,8 +900,11 @@ five%
 }
 
     \needspace{3\baselineskip}
+    \ifx\nomagtitle\undefined\def\nomagtitle{F}\fi
+    \if\nomagtitle F%
     \begin{center}{\large \canticle.}\end{center}
     \vspace{-1ex}
+    \fi
 
     \edef\magstartpagenumber{\thepage}
     {\preant
@@ -920,8 +922,8 @@ five%
     %\vspace{-1ex}
     \translation[]{\anttranslation}
     \medskip
-    \ifx\grassilabel\undefined\else{
-      \emph{A 3 part arrangement by Grassi of the even verses may be found on page \pageref{\grassilabel}.}
+    \ifx\magnificatnote\undefined\else{
+      \magnificatnote
     }\fi
     \needspace{3\baselineskip}
     \ifnum\thepage=\magstartpagenumber

@@ -9,11 +9,14 @@
 \usepackage{titletoc}
 \usepackage{titleps}
 \usepackage{letltxmacro}
+\usepackage[strict]{changepage} % gives us \ifoddpage
 
 %\usepackage{hyperref}
-\newcommand{\phantomsection}
-
-\presetkeys{mymag}{grassilabel=magnificat-grassi}{}
+\newcommand{\phantomsection}{}
+\newcommand{\magnote}{
+\IfStrEq{\anttone\nostarend}{8G}{\noindent\emph{A 3 part arrangement of the even verses by Grassi may be found on page \pageref{magnificat-grassi}.}}{}
+}
+\presetkeys{mymag}{note=\magnote}{}
 %\LetLtxMacro{\oldprintmag}{\printmag}
 %\renewcommand{\printmag}[4][grassilabel=magnificat-grassi]{
 %\oldprintmag[#1]{#2}{#3}{#4}
