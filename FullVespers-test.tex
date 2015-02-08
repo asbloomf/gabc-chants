@@ -92,7 +92,8 @@
   \ifx\chaptertranslation\undefined%
     \emph{Chapter. }%
   \else%
-    \printchapter{\chapter}{\chaptertranslation}
+    \ifx\chaptertext\undefined\let\chaptertext=\chapter\fi
+    \printchapter{\chaptertext}{\chaptertranslation}
     \bigskip
 
   \fi%

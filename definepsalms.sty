@@ -302,7 +302,7 @@ five%
     }{}
 \fi
 \ifcsname psalm\antnum translationsmall\endcsname
-  \def\psalmtranslationsmall{\csname psalm\antnum translationsmall\endcsname}
+    \def\psalmtranslationsmall{\csname psalm\antnum translationsmall\endcsname}
 \fi
 \ifcsname prepsalm\antnum verses\endcsname
     \def\prepsalmverses{\csname prepsalm\antnum verses\endcsname}
@@ -605,7 +605,7 @@ five%
 %
 \fi % even columns
 \else %\psalmcolsoverride not \undefined
-  \def\beginpsalmcols{\psalmcolsoverride}
+  \psalmcolsoverride[#2]
 \fi %\psalmcolsoverride not \undefined
 %
 \ifx\undefined\useparacol\else
@@ -712,6 +712,15 @@ five%
 }
 %
 \global\let\psalmclef=\undefined
+\global\let\altclef=\undefined
+\global\expandafter\let\csname ant\antnum translation\endcsname=\undefined
+\global\expandafter\let\csname psalm\antnum beginversetwo\endcsname=\undefined
+\global\expandafter\let\csname preant\antnum\endcsname=\undefined
+\global\expandafter\let\csname preant\antnum two\endcsname=\undefined
+\global\expandafter\let\csname prepsalm\antnum\endcsname=\undefined
+\global\expandafter\let\csname psalmclef\antnum\endcsname=\undefined
+\global\expandafter\let\csname psalm\antnum translationsmall\endcsname=\undefined
+\global\expandafter\let\csname prepsalm\antnum verses\endcsname=\undefined
 % TODO: do we need to do pagebreak stuff?
 }
 
@@ -949,8 +958,8 @@ five%
 
     \ifx\preantafter\undefined
     {%\vspace{-1ex}
-    \ifx\prerepeatantiphon\undefined\bigskip\else\prerepeatantiphon\fi%
-    \noindent\emph{Repeat antiphon.}}
+    \ifx\prerepeatantiphon\undefined\smallskip\else\prerepeatantiphon\fi%
+    \noindent\emph{Repeat antiphon.}\medskip}
     \else
     {\preantafter
     \printantiphon

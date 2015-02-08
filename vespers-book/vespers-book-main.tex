@@ -11,10 +11,15 @@
 \usepackage{letltxmacro}
 \usepackage[strict]{changepage} % gives us \ifoddpage
 
+\LetLtxMacro{\oldneedspace}{\needspace}
+\renewcommand{\needspace}[1]{
+	\checkoddpage\ifoddpage\oldneedspace{#1}\else\fi
+}
+
 %\usepackage{hyperref}
 \newcommand{\phantomsection}{}
 \newcommand{\magnote}{
-\IfStrEq{\anttone\nostarend}{8G}{\noindent\emph{A 3 part arrangement of the even verses by Grassi may be found on page \pageref{magnificat-grassi}.}}{}
+\IfStrEq{\anttone\nostarend}{8G}{\noindent\emph{A 3 part arrangement of the even verses by Grassi may be found on page \pageref{magnificat-grassi}.\\}}{}
 }
 \presetkeys{mymag}{note=\magnote}{}
 %\LetLtxMacro{\oldprintmag}{\printmag}
@@ -80,6 +85,73 @@
 \begin{center}{
 	{\addfontfeature{Numbers=Lining} \normalsize \emph{#1}}
 }\end{center}
+}
+
+\newcommand{\deusinadjutorium}{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, page \pageref{deusinadjutorium}.}}
+\newcommand{\printcollect}[2]{
+\needspace{3\baselineskip}
+\begin{center}{\large Collect.}\end{center}
+\vspace{-0.5\baselineskip plus 0.25\baselineskip}
+\begin{parcolumns}[rulebetween]{2}
+\sloppy
+\prayer{#1}{#2}
+\end{parcolumns}
+}
+\newcommand{\printcommemoration}[2][.]{
+	\def\gabcfolder{#1}
+	\input{\gabcfolder/#2}
+	\subtitle{\comheadingtext}
+	\sectionmark{\comheadingtext}
+
+	{
+	\def\noeuouae{T}
+	\printgabc{At Magn.}{\oldstylenums{\commagantlinetwo}}{\commagantinitial}{\commaganttex}
+	}
+	\translation[]{\englishcommagantiphon}
+
+	\bigskip
+	\printvr[\greblockcustos]{\commvrtex}
+	{\commvtranslation}
+	{\commrtranslation}
+
+	\printcollect{\latincomcollect}{\englishcomcollect}
+}
+\newcommand{\printvespers}[2][.]{
+	\def\gabcfolder{#1}
+	\input{\gabcfolder/#2}
+
+	\deusinadjutorium{}
+	\bigskip
+	\printpsalm{1}{\psalmonenum}{\psalmonetone\psalmoneend}{\antonetex}{\antoneinitial}
+	\bigskip
+	\printpsalm{2}{\psalmtwonum}{\psalmtwotone\psalmtwoend}{\anttwotex}{\anttwoinitial}
+	\bigskip
+	\needspace{6\baselineskip}
+	\printpsalm{3}{\psalmthreenum}{\psalmthreetone\psalmthreeend}{\antthreetex}{\antthreeinitial}
+	\bigskip
+	\needspace{3\baselineskip}
+	\printpsalm{4}{\psalmfournum}{\psalmfourtone\psalmfourend}{\antfourtex}{\antfourinitial}
+	\bigskip
+	\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
+	\bigskip
+
+	\needspace{3\baselineskip}
+	\printchapter{\chaptertext}{\chaptertranslation}
+
+	\bigskip
+	\printhymnnote
+
+	\bigskip
+	{
+	\let\anttranslation=\maganttranslation
+	\let\preverses=\premagverses
+    \let\preanttwo=\premagtwo
+    \let\preant=\premag
+	\printmag{\magtone\magend}{\magantinitial}{\maganttex}
+	}
+
+	\printcollect{\collect}{\collecttranslation}
+	\bigskip
 }
 
 \sloppy

@@ -1,24 +1,14 @@
 \chapter{Proper of the Time -- Advent Season}
 \section{First Sunday of Advent}
 \subtitle{1st Class}
-\newcommand{\deusinadjutorium}{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, page \pageref{deusinadjutorium}.}}
 \newcommand{\benedicamusdomino}[1][advent]{
 	\noindent\printnote{\Vbar~\emph{Benedicámus Dómino}, page \pageref{benedicamusdomino-#1}.}
 	\bigskip
 	\hrule
 }
-\newcommand{\adventhymn}{
+\newcommand{\printhymnnote}{
 	\noindent\printnote{Hymn. \emph{Créator alme síderum}, page \pageref{hymn-creatoralmesiderum}.
 	\Vbar~\emph{Roráte}, page \pageref{vr-rorate}.}
-}
-\newcommand{\collect}[2]{
-\needspace{3\baselineskip}
-\begin{center}{\large Collect.}\end{center}
-\vspace{-0.5\baselineskip plus 0.25\baselineskip}
-\begin{parcolumns}[rulebetween]{2}
-\sloppy
-\prayer{#1}{#2}
-\end{parcolumns}
 }
 \newcommand{\printoant}[2]{
 %	#1 number
@@ -34,7 +24,15 @@
 \normalsize
 %\def\nogloriapatri{T}
 %\def\breakbeforeEuouae{T}
-\def\psalmcolsoverride{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
+\newcommand{\psalmcolsoverride}[1][0]{
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
+\ifnum#1=110
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
+\fi
+\ifnum#1=111
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
+\fi
+}
 
 %1st sunday of advent
 {
@@ -129,7 +127,7 @@ Amen.}
 \printmag{8G}{N}{MagnificatAntiphon}
 }
 
-\collect{Excita, quaésumus Dómine, poténtiam tuam, et veni~:~† ut ab imminéntibus peccatórum nostrórum perículis, te mereámur protegénte éripi,~* te liberánte salvári.  Qui vivis et regnas cum Deo Patre in unitáte Spíritus Sancti Deus~:~* per ómnia saécula sæculórum.}
+\printcollect{Excita, quaésumus Dómine, poténtiam tuam, et veni~:~† ut ab imminéntibus peccatórum nostrórum perículis, te mereámur protegénte éripi,~* te liberánte salvári.  Qui vivis et regnas cum Deo Patre in unitáte Spíritus Sancti Deus~:~* per ómnia saécula sæculórum.}
 {Stir up Thy power, we beseech Thee, O Lord, and come: that from the threatening dangers of our sins we may deserve to be rescued by Thy protection, and to be saved by Thy deliverance: Who livest and reignest with God the Father in the unity of the Holy Ghost, world without end.}
 
 \bigskip
@@ -154,69 +152,14 @@ Amen.}
 \subtitle{1st Class}
 \printnote{If today is December 7, Vespers are of the Sunday with a Commemoration of the First Vespers of the Immaculate Conception.  If today is December 8, the Feast of the Immaculate Conception is celebrated with a Commemoration of this Sunday (see page \pageref{immaculateconception}).}
 
-\deusinadjutorium{}
-\def\gabcfolder{../Advent2}
+\def\preantfive{\def\breakbeforeEuouae{T}}
+\def\premag{\def\noeuouae{T}}
+\def\premagverses{\greblockcustos}
+\printvespers[../Advent2]{inc-Advent2-Vespers2}
 
-\bigskip
-{
-\def\anttranslation{Behold, the Lord shall come in the clouds of heaven with great power, alleluia.}
-%\def\dontrepeatantiphon{T}
-\printpsalm{1}{109}{1g}{Ant1-EcceInNubibusCaeli}{E}
-}
-\bigskip
-%\bigskip
-%\bigskip
-{\def\anttranslation{Sion, the city of our strength; a Saviour, a wall and a bulwark shall be set therein: open ye the gates, for God is with us, alleluia.}
-%\def\dontrepeatantiphon{T}
-\printpsalm{2}{110}{7d}{Ant2-Urbs}{U}
-}
-\bigskip
-\needspace{6\baselineskip}
-{\def\anttranslation{Behold the Lord shall appear, and shall not lie: if He make delay wait for Him, for He shall come, and shall not tarry, alleluia.}
-\def\dontrepeatantiphon{T}
-\printpsalm{3}{111}{7a}{Ant3-EcceApparebit}{E}
-}
-%\vfil
-\bigskip
-\needspace{3\baselineskip}
-{
-\def\anttranslation{The mountains and the hills shall sing praise before God, and all the trees of the woods shall clap their hands, for the Lord of all that hath dominion shall come into His everlasting kingdom, alleluia, alleluia.}
-\def\dontrepeatantiphon{T}
-\printpsalm{4}{112}{1f}{Ant4-Montes}{M}
-}
-\bigskip
-%\def\breakbeforeEuouae{T}
-{\def\preant{\def\breakbeforeEuouae{T}}
-\def\anttranslation{Behold our Lord shall come with strength, and shall enlighten the eyes of His servants, alleluia.}
-\printpsalm{5}{113}{3a}{Ant5-EcceDominusNoster}{E}
-}
-%\bigskip
-\needspace{3\baselineskip}
-\printchapter
-{\dropcap{latin}{Fratres~: Quæcúmque scripta sunt, ad nostram doctrínam} \textbf{scrí}\-pta sunt~:~\gredagger{} ut per patiéntiam, et consolatiónem \emph{Scri\-ptu}\-\textbf{rá}\-rum,~* spem ha\-be\-\textbf{á}\-mus.}
-{Brethren: What things soever were written, were written for our learning: that through patience and the comfort of the Scriptures, we might have hope.}
-
-\bigskip
-\adventhymn
-
-\bigskip
-{
-\def\dontrepeatantiphon{T}
-\newcommand{\anttranslation}{Art Thou He that art to come, or look we for another? Relate to John what you have seen: The blind recover their sight, the dead rise again, the poor have the Gospel preached to them, alleluia.}
-\def\preant{\def\noeuouae{T}}
-%\def\preanttwo{}
-\def\preverses{\greblockcustos}
-\printmag{8G*}{T}{MagnificatAntiphon}
-}
-
-\collect{Excita Dómine corda nostra ad præparándas Unigéniti tui vias~:~† ut per ejus advéntum,~* purificátis tibi méntibus servíre mereámur. Qui tecum vivit et regnat.}
-{Stir up our hearts, O Lord, to prepare the ways of Thine only-begotten Son: that through His coming we may deserve to serve Thee with purified minds: Who with Thee liveth and reigneth.}
-
-\bigskip
 \noindent
 \printnote{If today is December 7, the First Vespers of the Immaculate Conception is commemorated as follows.  Otherwise \Vbar~\emph{Bendicámus Dómino}, page \pageref{benedicamusdomino-advent}.}
 \bigskip
-\hrule
 }
 
 
@@ -226,26 +169,10 @@ Amen.}
 
 % commemoration of First Vespers of Immaculate Conception
 {
-\def\gabcfolder{../December8-ImmaculateConception}
-\subtitle{Commemoration of First Vespers of the Immaculate Conception}
-\sectionmark{Commemoration of First Vespers of the Immaculate Conception}
-
-{
-\def\noeuouae{T}
-\printgabc{\small At Magn.}{\small \oldstylenums{Ant. 8. G}}{B}{MagnificatAntiphon1}
-}
-\translation[]{All generations shall call me blessed, because he that is mighty, hath done great things for me, alleluia.}
+\printcommemoration[../December8-ImmaculateConception]{commemorationImmaculateConception-Vespers1}
 
 \bigskip
-\printvr[\greblockcustos]{vrImmaculataConceptio-commemoration}
-{Today is the Immaculate Conception of the holy Virgin Mary.}
-{Who with her virginal foot crushed the head of the serpent.}
-
-\collect{Deus, qui per Immaculátam Vírginis Conceptiónem dignum Fílio tuo habitáculum præparásti~:~\dag{} quaésumus; ut qui ex morte ejúsdem Fílii tui prævísa, eam ab omni labe præservásti,~* nos quoque mundos ejus intercessióne ad te perveníre concédas.  Per eúmdem Dominum.}
-{O God, who, by the Immaculate Conception of the Virgin, didst prepare for Thy Son a worthy habitation, we beseech Thee, that as Thou didst preserve her from every stain by the foreseen death of this Thy Son, so Thou wouldst grant that we also being cleansed from guilt by her intercession, may come to Thee.  Through the same Lord.}
-
-\bigskip
-\benedicamusdomino{}
+\benedicamusdomino[1]
 }
 
 
@@ -360,17 +287,25 @@ Amen.%\setgrefactor{15}
 \def\preverses{\greblockcustos}
 \def\dontrepeatantiphon{T}
 \printmag{1f}{H}{MagnificatAntiphon2}}
-\collect{Deus, qui per Immaculátam Vírginis Conceptiónem dignum Fílio tuo habitáculum præparásti~:~\dag{} quaésumus; ut qui ex morte ejúsdem Fílii tui prævísa, eam ab omni labe præservásti,~* nos quoque mundos ejus intercessióne ad te perveníre concédas.  Per eúmdem Dominum.}
+\printcollect{Deus, qui per Immaculátam Vírginis Conceptiónem dignum Fílio tuo habitáculum præparásti~:~\dag{} quaésumus; ut qui ex morte ejúsdem Fílii tui prævísa, eam ab omni labe præservásti,~* nos quoque mundos ejus intercessióne ad te perveníre concédas.  Per eúmdem Dominum.}
 {O God, who, by the Immaculate Conception of the Virgin, didst prepare for Thy Son a worthy habitation, we beseech Thee, that as Thou didst preserve her from every stain by the foreseen death of this Thy Son, so Thou wouldst grant that we also being cleansed from guilt by her intercession, may come to Thee.  Through the same Lord.}
+\bigskip
+%TODO commemoration from Friday of first week of Advent to Thursday of 2nd week
 
 \bigskip
-\benedicamusdomino[mary]
+\noindent
+\printnote{Then follows a Commemoration of the Advent Sunday or Feria according to the day of the week on which the Feast of the Immaculate Conception falls.}
+\bigskip
 }
 
 
+{
+\def\vrlinebreak{T}
+\printcommemoration[../Advent2]{CommemorationAdvent2}
 
-
-
+\bigskip
+\benedicamusdomino{}
+}
 
 
 
@@ -425,7 +360,7 @@ Amen.%\setgrefactor{15}
 {Brethren, Rejoice in the Lord always: again, I say, rejoice.  Let your modesty be known to all men: for the Lord is nigh.}
 
 \bigskip
-\adventhymn
+\printhymnnote
 
 \bigskip
 \printnote{When the third Sunday of Advent falls on December 17, the Antiphon \emph{O Sapiéntia} on page \pageref{osapientia} is sung in place of \emph{Beáta es}.}
@@ -451,7 +386,7 @@ Amen.%\setgrefactor{15}
 \printmag{2D}{O}{December17-MagAntiphon}
 }
 
-\collect{Aurem tuam, quaésumus Dómine, précibus nostris accómmoda~:~† et mentis nostræ ténebras~* grátia tuæ visitatiónis illústra.  Qui vivis et regnas.}
+\printcollect{Aurem tuam, quaésumus Dómine, précibus nostris accómmoda~:~† et mentis nostræ ténebras~* grátia tuæ visitatiónis illústra.  Qui vivis et regnas.}
 {Incline Thine ear, we beseech Thee, O Lord, to our petitions: and, by the grace of Thy visitation, enlighten the darkness of our minds: Who livest and reignest.}
 
 \bigskip
@@ -518,7 +453,7 @@ Amen.%\setgrefactor{15}
 {Brethren, let a man so account of us as of the ministers of Christ and the dispensers of the mysteries of God.  Here now it is required among the dispensers that a man be found faithful.}
 
 \bigskip
-\adventhymn
+\printhymnnote
 
 \pagebreak
 {
@@ -543,7 +478,7 @@ Amen.%\setgrefactor{15}
 \vfil
 }
 
-\collect{Excita, quaésumus Dómine, poténtiam tuam, et veni, et magna nobis virtúte succúrre~:~† ut per auxílium grátiæ tuæ, quod nostra peccáta præpédiunt,~* indulgéntia tuæ propitiatiónis accéleret.  Qui vivis et regnas cum Deo Patre.}
+\printcollect{Excita, quaésumus Dómine, poténtiam tuam, et veni, et magna nobis virtúte succúrre~:~† ut per auxílium grátiæ tuæ, quod nostra peccáta præpédiunt,~* indulgéntia tuæ propitiatiónis accéleret.  Qui vivis et regnas cum Deo Patre.}
 {O Lord, we beseech Thee, stir up Thy power, and come, and with great might succour us: that by the help of Thy grace that which is hindered by our sins may be hastened by Thy merciful forgiveness: who livest and reignest.}
 
 \bigskip
