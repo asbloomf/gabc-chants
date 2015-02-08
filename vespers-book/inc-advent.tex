@@ -8,8 +8,8 @@
 	\hrule
 }
 \newcommand{\adventhymn}{
-	\noindent\printnote{Hymn. \emph{Créator alme síderum}, page \pageref{hymn-creatoralmesiderum},
-	\Vbar~\emph{Roráte}, page \pageref{vr-rorate}}
+	\noindent\printnote{Hymn. \emph{Créator alme síderum}, page \pageref{hymn-creatoralmesiderum}.
+	\Vbar~\emph{Roráte}, page \pageref{vr-rorate}.}
 }
 \newcommand{\collect}[2]{
 \needspace{3\baselineskip}
@@ -51,7 +51,7 @@
 \printpsalm{2}{110}{8G*}{Ant2-Jucundare}{J}
 }
 \bigskip
-\needspace{12\baselineskip}
+\needspace{6\baselineskip}
 {\def\anttranslation{Behold, the Lord shall come, and all His Saints with Him: and there shall be in this day a great light, alleluia.}
 %\def\dontrepeatantiphon{T}
 \printpsalm{3}{111}{5a}{Ant3-EcceDominusVeniet}{E}
@@ -124,6 +124,7 @@ Amen.}
 \def\anttranslation{Fear not, Mary, for thou hast found grace with the Lord: behold thou shalt conceive and bring forth a son, alleluia.}
 %\def\preant{\def\noeuouae{T}}
 %\def\preanttwo{}
+\def\noeuouae{T}
 \def\preverses{\greblockcustos}
 \printmag{8G}{N}{MagnificatAntiphon}
 }
@@ -202,7 +203,7 @@ Amen.}
 {
 \def\dontrepeatantiphon{T}
 \newcommand{\anttranslation}{Art Thou He that art to come, or look we for another? Relate to John what you have seen: The blind recover their sight, the dead rise again, the poor have the Gospel preached to them, alleluia.}
-%\def\preant{\def\noeuouae{T}}
+\def\preant{\def\noeuouae{T}}
 %\def\preanttwo{}
 \def\preverses{\greblockcustos}
 \printmag{8G*}{T}{MagnificatAntiphon}
@@ -256,6 +257,7 @@ Amen.}
 
 % Second Vespers of Immaculate Conception
 {
+\label{immaculateconception}
 \def\gabcfolder{../December8-ImmaculateConception}
 \section{Immaculate Conception}
 \subtitle{1st Class, December 8}
@@ -426,13 +428,27 @@ Amen.%\setgrefactor{15}
 \adventhymn
 
 \bigskip
+\printnote{When the third Sunday of Advent falls on December 17, the Antiphon \emph{O Sapiéntia} on page \pageref{osapientia} is sung in place of \emph{Beáta es}.}
 {
 \def\dontrepeatantiphon{T}
 \newcommand{\anttranslation}{Blessed art thou, Mary, that hast believed: those things shall be accomplished in thee, which were spoken to thee by the Lord, alleluia.}
 \def\preant{\def\breakbeforeEuouae{T}}
 %\def\preanttwo{}
 \def\preverses{\greblockcustos}
+\label{magant-beataes}
 \printmag{8G}{T}{MagnificatAntiphon}
+}
+\bigskip
+{
+\def\nomagtitle{T}
+\def\magsolemn{T}
+\definemag{2}{D}
+\def\gabcfolder{../Advent}
+\def\noeuouae{T}
+	%print o sapientia
+%\printoant{17}{O Wisdom, which camest out of the mouth of the Most High, reaching from end to end and ordering all things mightily and sweetly: come and teach us the way of prudence.}
+\newcommand{\anttranslation}{O Wisdom, which camest out of the mouth of the Most High, reaching from end to end and ordering all things mightily and sweetly: come and teach us the way of prudence.}
+\printmag{2D}{O}{December17-MagAntiphon}
 }
 
 \collect{Aurem tuam, quaésumus Dómine, précibus nostris accómmoda~:~† et mentis nostræ ténebras~* grátia tuæ visitatiónis illústra.  Qui vivis et regnas.}
@@ -510,7 +526,6 @@ Amen.%\setgrefactor{15}
 \definemag{2}{D}
 \def\gabcfolder{../Advent}
 \def\noeuouae{T}
-\printoant{17}{O Wisdom, which camest out of the mouth of the Most High, reaching from end to end and ordering all things mightily and sweetly: come and teach us the way of prudence.}
 \printoant{18}{O Adonai, and Leader of the house of Israël, who didst appear to Moses in the flame of the burning bush and didst give unto him the law on Sinai: come and with an outstretched arm redeem us.}
 \printoant{19}{O Root of Jesse, which standest for an ensign of the people, before whom kings shall keep silence, whom the Gentiles shall beseech: come and deliver us, and tarry not.}
 \printoant{20}{O Key of David, and Sceptre of the house of Israël, that openest and no man shutteth, and shuttest and no man openeth: come and bring the prisoner forth from the prison-house, and him that sitteth in darkness and in the shadow of death.}
