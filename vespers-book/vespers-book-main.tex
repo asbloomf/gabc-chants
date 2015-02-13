@@ -117,6 +117,7 @@
 	\printcollect{\latincomcollect}{\englishcomcollect}
 }
 \newcommand{\printvespers}[2][.]{
+\setgrefactor{15}
 	\def\gabcfolder{#1}
 	\input{\gabcfolder/#2}
 
@@ -126,7 +127,7 @@
 	\bigskip
 	\printpsalm{2}{\psalmtwonum}{\psalmtwotone\psalmtwoend}{\anttwotex}{\anttwoinitial}
 	\bigskip
-	\needspace{6\baselineskip}
+	\needspace{3\baselineskip}
 	\printpsalm{3}{\psalmthreenum}{\psalmthreetone\psalmthreeend}{\antthreetex}{\antthreeinitial}
 	\bigskip
 	\needspace{3\baselineskip}
@@ -139,9 +140,14 @@
 	\printchapter{\chaptertext}{\chaptertranslation}
 
 	\bigskip
-	\printhymnnote
+	\ifx\printfullhymn\undefined
+		\printhymnnote
+	\else
+		\printfullhymn
+	\fi
 
 	\bigskip
+	\ifx\magreplacement\undefined
 	{
 	\let\anttranslation=\maganttranslation
 	\let\preverses=\premagverses
@@ -149,6 +155,10 @@
     \let\preant=\premag
 	\printmag{\magtone\magend}{\magantinitial}{\maganttex}
 	}
+	\else
+	{\magreplacement}
+	\fi
+	{\ifx\postmag\undefined\else\postmag\fi}
 
 	\printcollect{\collect}{\collecttranslation}
 	\bigskip
