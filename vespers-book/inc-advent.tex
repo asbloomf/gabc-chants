@@ -122,110 +122,29 @@
 % Second Vespers of Immaculate Conception
 {
 \label{immaculateconception}
-\def\gabcfolder{../December8-ImmaculateConception}
 \section{Immaculate Conception}
 \subtitle{1st Class, December 8}
 
-\deusinadjutorium{}
+\def\preantfive{\def\noeuouae{T}}
+\def\premagverses{\greblockcustos}
+\def\definevone{\def\noeuouae{T}\input{\gabcfolder/inc-ImmaculateConception-1Vespers}}
+\def\definevtwo{\def\noeuouae{T}\input{\gabcfolder/inc-ImmaculateConception-2Vespers}}
+\def\printfullhymn{
+	\label{hymn-avemarisstella}
+	{
+	\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
 
-\bigskip
-\needspace{6\baselineskip}
-{\def\anttranslation{Thou art all fair, O Mary; and the original stain is not in thee.}
-\def\dontrepeatantiphon{T}
-\printpsalm{1}{109}{1g2}{Ant1-TotaPulchraEsMaria}{T}
+	{
+		\def\vrlinebreak{T}
+		\label{vr-rorate}
+		\printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+	}
+	}
 }
-\bigskip
-\needspace{10\baselineskip}
-{\def\anttranslation{Thy vesture is white as snow; and thy face is as the sun.}
-%\def\dontrepeatantiphon{T}
-\printpsalm{2}{112}{8G}{Ant2-VestimentumTuum}{J}
-}
-\bigskip
-\needspace{12\baselineskip}
-{\def\anttranslation{Thou art the glory of Jerusalem; thou art the joy of Israel; thou art the honour of our people.}
-%\def\dontrepeatantiphon{T}
-\printpsalm{3}{121}{8c}{Ant3-TuGloriaJerusalem}{T}
-}
-%\vfil
-\bigskip
-{
-\def\anttranslation{Blessed art thou, O Virgin Mary, by the Lord, the Most High God, above all women upon the earth.}
-\def\dontrepeatantiphon{T}
-\def\noeuouae{T}
-\printpsalm{4}{126}{7a}{Ant4-BenedictaEsTu}{B}
-}
-\bigskip
-%\def\breakbeforeEuouae{T}
-{
-\def\anttranslation{Draw us, O immaculate Virgin: we will run after thee in the odour of thine ointments.}
-\printpsalm{5}{147}{3a2}{Ant5-TraheNos}{T}
-}
-%\bigskip
-\needspace{3\baselineskip}
-\printchapter
-{\dropcap{latin}{Dóminus possédit me in inítio viárum suárum, ántequam quidquam fáceret a} prin\-\textbf{cí}\-pi\-o.~\dag{} Ab ætérno ordináta sum, et ex antíquis ántequam \emph{ter\-ra} \textbf{fí}\-e\-ret.~* Nondum erant abýssi, et ego jam concépta \textbf{e}\-ram.}
-{The Lord possessed me in the begininning of his ways, before He made anything, from the beginning.  I was set up from eternity, and of old, before the earth was made.  The depths were not as yet, and I was already conceived.}
-
-\bigskip
-\label{hymn-avemarisstella}
-\printhymn{\oldstylenums{1.}}{A}{hymn-AvemarisStella}
-{
-\item Hail, thou star of ocean,
-Portal of the sky,
-Ever-Virgin Mother,
-Of the Lord most High.
-
-\item Oh! by Gabriel's Ave
-Uttered long ago
-Eva's name reversing
-Peace confirm below.
-
-\item Break the captive's fetters,
-Light on blindness pour
-Chase all evils from us,
-Every bliss implore.
-
-\item Show thyself a Mother,
-Offer Him our sighs,
-Who for us incarnate
-Did not thee despise.
-
-\item Virgin all excelling,
-Passing meek and lowly,
-Freed from guilt, preserve us
-Blameless chaste and holy.
-
-\item Still as on we journey
-Help our weak endeavour
-Till we gaze on Jesus
-And rejoice for ever.
-
-\item Father, Son, and Spirit,
-Three in One confessing.
-Give we equal glory,
-Equal praise and blessing.
-Amen.
+\printvespers[../December8-ImmaculateConception]{inc-ImmaculateConceptionVespers}
 }
 
 {
-\def\vrlinebreak{T}
-\printvr[\greblockcustos]{vrImmaculataConceptio}
-{Today is the Immaculate Conception of the holy Virgin Mary.}
-{Who with her virginal foot crushed the head of the serpent.}
-}
-
-\bigskip
-{
-\newcommand{\anttranslation}{This day a rod came forth from the root of Jesse: this day Mary was conceived without any stain of sin: this day the head of the old serpent was crushed by her.  Alleluia.}
-%\def\preant{\def\noeuouae{T}}
-%\def\preanttwo{}
-\def\breakbeforeEuouae{T}
-\def\noeuouae{T}
-\def\preverses{\greblockcustos}
-\def\dontrepeatantiphon{T}
-\printmag{1f}{H}{MagnificatAntiphon2}}
-\printcollect{Deus, qui per Immaculátam Vírginis Conceptiónem dignum Fílio tuo habitáculum præparásti~:~\dag{} quaésumus; ut qui ex morte ejúsdem Fílii tui prævísa, eam ab omni labe præservásti,~* nos quoque mundos ejus intercessióne ad te perveníre concédas.  Per eúmdem Dominum.}
-{O God, who, by the Immaculate Conception of the Virgin, didst prepare for Thy Son a worthy habitation, we beseech Thee, that as Thou didst preserve her from every stain by the foreseen death of this Thy Son, so Thou wouldst grant that we also being cleansed from guilt by her intercession, may come to Thee.  Through the same Lord.}
 \bigskip
 %TODO commemoration from Friday of first week of Advent to Thursday of 2nd week
 

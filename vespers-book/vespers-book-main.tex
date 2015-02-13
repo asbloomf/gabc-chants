@@ -149,6 +149,23 @@
 	\bigskip
 	\ifx\magreplacement\undefined
 	{
+	\ifx\definevone\undefined\else{
+		\definevone
+	    \begin{center}{\large Magnificat.}\end{center}
+    	\vspace{-1ex}
+		\printnote{At 1st Vespers the Magnificat is as follows.  For 2nd Vespers look after.\\}
+		\let\anttranslation=\maganttranslation
+		\let\preverses=\premagverses
+	    \let\preanttwo=\premagtwo
+	    \let\preant=\premag
+	    \def\nomagtitle{T}
+		\printmag{\magtone\magend}{\magantinitial}{\maganttex}
+	}\fi
+	\ifx\definevtwo\undefined\else
+		\definevtwo
+		\printnote{At 2nd Vespers the Magnificat is as follows.\\}
+		\def\nomagtitle{T}
+	\fi
 	\let\anttranslation=\maganttranslation
 	\let\preverses=\premagverses
     \let\preanttwo=\premagtwo
