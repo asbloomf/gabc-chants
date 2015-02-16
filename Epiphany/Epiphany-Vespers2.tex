@@ -35,19 +35,16 @@
 \vspace{-10pt}
 }
 
-\definepsalm{5}{113}{7}{c2}
 \def\nopagebreakbeforepsalmfive{T}
 \def\pagebreakafterpsalmfive{T}
 
 \def\magoneline{T}
+\let\oldmaganttranslation=\maganttranslation
+\def\maganttranslation{\oldmaganttranslation\vspace{-12pt}}
 \newcommand{\premag}{
 \large
 \setgrefactor{15}
 }
-\newcommand{\maganttex}{MagnificatAntiphon2}
-\newcommand{\magantinitial}{T}
-\newcommand{\maganttranslation}{This day we keep a holiday in honour of three wonders: today a star led the wise men to the manger; today water was made wine at the marriage; today Christ was pleased to be baptized in Jordan by John for our salvation, alleluia.\vspace{-12pt}}
-\definemag{1}{D}
 \newcommand{\premagverses}{\greblockcustos\setgrefactor{14}
 \normalsize
 %\pagebreak
@@ -55,5 +52,6 @@
 
 \definebenedicamusdomino{1}{2}
 
+\input{inc-Epiphany-Vespers2}
 \input{../inc_header}
 \input{../FullVespers-test}

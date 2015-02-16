@@ -119,9 +119,7 @@
 	\translation[]{\englishcommagantiphon}
 
 	\bigskip
-	\printvr[\greblockcustos]{\commvrtex}
-	{\commvtranslation}
-	{\commrtranslation}
+	\printvr[\greblockcustos]{\commvrtex}{\commvtranslation}{\commrtranslation}
 
 	\printcollect{\latincomcollect}{\englishcomcollect}
 }
@@ -142,7 +140,24 @@
 	\needspace{3\baselineskip}
 	\printpsalm{4}{\psalmfournum}{\psalmfourtone\psalmfourend}{\antfourtex}{\antfourinitial}
 	\bigskip
-	\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
+	\ifx\psalmfivenum\undefined{
+		\ifx\definevesperspropers\undefined\else{
+			\definevesperspropers
+			\ifx\vesperspropersnote\undefined\else
+				\printnote{\vesperspropersnote}
+			\fi
+			\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
+		}\fi
+		\ifx\definevesperspropersalt\undefined\else{
+			\definevesperspropersalt
+			\ifx\vesperspropersaltnote\undefined\else
+				\printnote{\vesperspropersaltnote}
+			\fi
+			\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
+		}\fi
+	}\else{
+		\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
+	}\fi
 	\bigskip
 
 	\needspace{3\baselineskip}
@@ -308,7 +323,10 @@ Magnificat, and Collect given for the respective Sunday or Feast.}
 \def\dontrepeatantiphon{T}
 \input{inc-advent}
 
+% christmas through epiphany
 \input{inc-christmas}
+
+\input{inc-timeafterepiphany}
 
 %TODO Appendix
 \chapter{Appendix}

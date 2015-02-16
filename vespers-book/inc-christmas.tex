@@ -1,4 +1,4 @@
-\chapter{Proper of the Time -- Advent Season}
+\chapter{Proper of the Time -- Christmas Season}
 {
 \newcommand{\benedicamusdomino}[1][advent]{
 	\noindent\printnote{\Vbar~\emph{Benedicámus Dómino}, page \pageref{benedicamusdomino-#1}.}
@@ -11,6 +11,8 @@
 \subtitle{1st Class}
 \medskip
 \subtitle{December 24, I Vespers}
+
+TODO
 }
 
 {
@@ -46,6 +48,101 @@
 	}
 }
 \printvespers[../Christmas]{inc-Christmas-Vespers2-psalms}
+\bigskip
+\benedicamusdomino{}
+}
+
+{
+\section{Octave of the Nativity of our Lord}
+\subtitle{1st Class}
+\medskip
+\subtitle{January 1, II Vespers}
+
+\def\definevesperspropers{\input{\gabcfolder/inc-Circumcision-Vespers2}}
+\newcommand{\printhymnnote}{
+	\noindent\printnote{Hymn. \emph{Jesu Redémptor ómnium}, page \pageref{hymn-jesuredemptoromnium}.\\}
+	{
+		\definevesperspropers
+		\printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+	}
+}
+%\def\definevesperspropersalt{\input{\gabcfolder/inc-SundayWithinOctaveOfChristmas-Vespers2}}
+%\def\vesperspropersnote{At II Vespers of the Octave of Christmas:}
+%\def\vesperspropersaltnote{At II Vespers of the Sunday within the Octave of Christmas:}
+
+\printvespers[../ChristmasOctave-Circumcision]{inc-Circumcision-psalms}
+\bigskip
+\benedicamusdomino{}
+}
+
+{
+\section{The Most Holy Name of Jesus}
+\subtitle{2nd Class}
+\medskip
+\subtitle{This feast is celebrated on the Sunday between the Octave Day of the Nativity and the Epiphany of Our Lord.  If no Sunday occurs within that time, this feast is then celebrated on January 2.}
+\medskip
+\subtitle{When the Feast of the Most Holy Name of Jesus occurs on January 5, the First Vespers of the Epiphany on page \pageref{epiphany1} are sung without a commemoration of the Holy Name of Jesus.}
+
+%\def\definevesperspropersalt{\input{\gabcfolder/inc-HolyName-1Vespers}}
+\def\definevesperspropers{\input{\gabcfolder/inc-HolyName-2Vespers}}
+%\def\vesperspropersaltnote{At I Vespers of the Most Holy Name of Jesus:}
+%\def\vesperspropersnote{At II Vespers of the Most Holy Name of Jesus:}
+\def\printfullhymn{
+	\label{hymn-jesudulcismemoria}
+	{
+		\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
+		\def\vrlinebreak{T}
+		\printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+	}
+}
+
+\printvespers[../HolyName]{inc-HolyName-common}
+\bigskip
+\benedicamusdomino{}
+}
+
+{
+\chapter{Proper of the Time -- Epiphany Season}
+\section{The Epiphany of Our Lord}
+\subtitle{1st Class}
+\medskip
+\subtitle{January 5, I Vespers as at II Vespers except where indicated.}
+\medskip
+\subtitle{January 6, II Vespers}
+
+\def\definevesperspropersalt{\input{\gabcfolder/inc-Epiphany-Vespers1}}
+\def\definevesperspropers{\input{\gabcfolder/inc-Epiphany-Vespers2}}
+\def\vesperspropersaltnote{At I Vespers of the Epiphany of our Lord:}
+\def\vesperspropersnote{At II Vespers of the Epiphany of our Lord:}
+
+\def\printfullhymn{
+	{
+		\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
+		\def\vrlinebreak{T}
+		\printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+	}
+}
+
+\printvespers[../Epiphany]{inc-Epiphany-Vespers}
+\bigskip
+\benedicamusdomino{}
+}
+
+{
+\section{Holy Family of Jesus, Mary \& Joseph}
+\subtitle{2nd Class}
+\medskip
+\subtitle{First Sunday after the Epiphany.}
+
+\def\printfullhymn{
+	{
+		\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
+		\def\vrlinebreak{T}
+		\printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+	}
+}
+
+\printvespers[../HolyFamily]{inc-HolyFamily-Vespers2}
 \bigskip
 \benedicamusdomino{}
 }
