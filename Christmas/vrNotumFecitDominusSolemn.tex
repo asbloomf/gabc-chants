@@ -80,7 +80,18 @@
 }%
 %
 \grebarsyllable{}{}{}{1}{\Rbar{}~S}{a}{0}{}{%
-\gredivisiofinalis{}%
+\greindivisiofinalis{}%
+% verbatim text at element level:
+\ifx\vrlinebreak\undefined\else%
+% end of verbatim text
+%
+%
+\grenewparline %
+%
+%
+% verbatim text at element level:
+\fi%
+% end of verbatim text
 }%
 %
 \gresyllable{\Rbar{}~S}{a}{}{0}{l}{u}{0}{}{%

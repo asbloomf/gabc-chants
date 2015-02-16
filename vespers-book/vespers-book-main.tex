@@ -97,6 +97,15 @@
 \prayer{#1}{#2}
 \end{parcolumns}
 }
+\newcommand{\psalmcolsoverride}[1][0]{
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
+\ifnum#1=110
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
+\fi
+\ifnum#1=111
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
+\fi
+}
 \newcommand{\printcommemoration}[2][.]{
 	\def\gabcfolder{#1}
 	\input{\gabcfolder/#2}
@@ -137,7 +146,34 @@
 	\bigskip
 
 	\needspace{3\baselineskip}
-	\printchapter{\chaptertext}{\chaptertranslation}
+	\ifx\chapterreplacement\undefined{
+		\ifx\chaptertext\undefined
+			\ifx\definevesperspropers\undefined\else
+			{
+				\ifx\vesperspropersnote\undefined\else
+					\printnote{\vesperspropersnote}
+				\fi
+				\definevesperspropers
+				\printchapter{\chaptertext}{\chaptertranslation}
+			}
+			\fi
+			\ifx\definevesperspropersalt\undefined\else
+			\bigskip
+			{
+				\ifx\vesperspropersaltnote\undefined\else
+					\printnote{\vesperspropersaltnote}
+				\fi
+				\definevesperspropersalt
+				\printchapter{\chaptertext}{\chaptertranslation}
+			}
+			\fi
+		\else
+			\printchapter{\chaptertext}{\chaptertranslation}
+		\fi
+	}
+	\else
+	{\chapterreplacement}
+	\fi
 
 	\bigskip
 	\ifx\printfullhymn\undefined
@@ -149,11 +185,13 @@
 	\bigskip
 	\ifx\magreplacement\undefined
 	{
-	\ifx\definevone\undefined\else{
-		\definevone
+	\ifx\definevesperspropersalt\undefined\else{
+		\definevesperspropersalt
 	    \begin{center}{\large Magnificat.}\end{center}
     	\vspace{-1ex}
-		\printnote{At 1st Vespers the Magnificat is as follows.  For 2nd Vespers look after.\\}
+    	\ifx\vesperspropersaltnote\undefined\else
+			\printnote{\vesperspropersaltnote\\}
+		\fi
 		\let\anttranslation=\maganttranslation
 		\let\preverses=\premagverses
 	    \let\preanttwo=\premagtwo
@@ -161,9 +199,11 @@
 	    \def\nomagtitle{T}
 		\printmag{\magtone\magend}{\magantinitial}{\maganttex}
 	}\fi
-	\ifx\definevtwo\undefined\else
-		\definevtwo
-		\printnote{At 2nd Vespers the Magnificat is as follows.\\}
+	\ifx\definevesperspropers\undefined\else
+		\definevesperspropers
+    	\ifx\vesperspropersnote\undefined\else
+			\printnote{\vesperspropersnote\\}
+		\fi
 		\def\nomagtitle{T}
 	\fi
 	\let\anttranslation=\maganttranslation
@@ -177,7 +217,34 @@
 	\fi
 	{\ifx\postmag\undefined\else\postmag\fi}
 
-	\printcollect{\collect}{\collecttranslation}
+	\ifx\collectreplacement\undefined{
+		\ifx\collect\undefined
+			\ifx\definevesperspropers\undefined\else
+			{
+				\ifx\vesperspropersnote\undefined\else
+					\printnote{\vesperspropersnote}
+				\fi
+				\definevesperspropers
+				\printcollect{\collect}{\collecttranslation}
+			}
+			\fi
+			\ifx\definevesperspropersalt\undefined\else
+			\bigskip
+			{
+				\ifx\vesperspropersaltnote\undefined\else
+					\printnote{\vesperspropersaltnote}
+				\fi
+				\definevesperspropersalt
+				\printcollect{\collect}{\collecttranslation}
+			}
+			\fi
+		\else
+			\printcollect{\collect}{\collecttranslation}
+		\fi
+	}
+	\else
+	{\collectreplacement}
+	\fi
 	\bigskip
 }
 
@@ -240,6 +307,8 @@ Magnificat, and Collect given for the respective Sunday or Feast.}
 
 \def\dontrepeatantiphon{T}
 \input{inc-advent}
+
+\input{inc-christmas}
 
 %TODO Appendix
 \chapter{Appendix}

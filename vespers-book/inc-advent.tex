@@ -1,4 +1,5 @@
 \chapter{Proper of the Time -- Advent Season}
+{
 \newcommand{\benedicamusdomino}[1][advent]{
 	\noindent\printnote{\Vbar~\emph{Benedicámus Dómino}, page \pageref{benedicamusdomino-#1}.}
 	\bigskip
@@ -22,16 +23,6 @@
 \normalsize
 %\def\nogloriapatri{T}
 %\def\breakbeforeEuouae{T}
-\newcommand{\psalmcolsoverride}[1][0]{
-\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
-\ifnum#1=110
-\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
-\fi
-\ifnum#1=111
-\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
-\fi
-}
-
 %1st sunday of advent
 {
 \section{First Sunday of Advent}
@@ -127,8 +118,10 @@
 
 \def\preantfive{\def\noeuouae{T}}
 \def\premagverses{\greblockcustos}
-\def\definevone{\def\noeuouae{T}\input{\gabcfolder/inc-ImmaculateConception-1Vespers}}
-\def\definevtwo{\def\noeuouae{T}\input{\gabcfolder/inc-ImmaculateConception-2Vespers}}
+\def\definevesperspropers{\def\noeuouae{T}\input{\gabcfolder/inc-ImmaculateConception-1Vespers}}
+\def\definevesperspropersalt{\def\noeuouae{T}\input{\gabcfolder/inc-ImmaculateConception-2Vespers}}
+\def\vesperspropersnote{At I Vespers:}
+\def\vesperspropersaltnote{At II Vespers:}
 \def\printfullhymn{
 	\label{hymn-avemarisstella}
 	{
@@ -231,4 +224,5 @@
 \printvespers[../Advent4]{inc-Advent4}
 \bigskip
 \benedicamusdomino{}
+}
 }

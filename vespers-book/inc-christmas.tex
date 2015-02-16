@@ -1,0 +1,53 @@
+\chapter{Proper of the Time -- Advent Season}
+{
+\newcommand{\benedicamusdomino}[1][advent]{
+	\noindent\printnote{\Vbar~\emph{Benedicámus Dómino}, page \pageref{benedicamusdomino-#1}.}
+	\bigskip
+	\hrule
+}
+
+{
+\section{Nativity of our Lord}
+\subtitle{1st Class}
+\medskip
+\subtitle{December 24, I Vespers}
+}
+
+{
+\subtitle{December 25, II Vespers}
+
+\def\definevesperspropers{\input{\gabcfolder/inc-Christmas-Vespers2}}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-SundayWithinOctaveOfChristmas-Vespers2}}
+\def\vesperspropersnote{At II Vespers of Christmas:}
+\def\vesperspropersaltnote{At II Vespers of the Sunday within the Octave of Christmas:}
+\def\premag{\def\noeuouae{T}}
+\def\premagverses{\greblockcustos}
+\def\printfullhymn{
+	\label{hymn-jesuredemptoromnium}
+	{
+	\input{\gabcfolder/inc-JesuRedemptorOmnium}
+	\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
+	}
+		% print all versicles that could follow hymn?
+	{
+		\def\vrlinebreak{T}
+		%\label{vr-rorate}
+		\printnote{\vesperspropersnote}
+		\definevesperspropers
+		\printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+	}
+	\bigskip
+	{
+		\def\vrlinebreak{T}
+		%\label{vr-rorate}
+		\printnote{\vesperspropersaltnote}
+		\definevesperspropersalt
+		\printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+	}
+}
+\printvespers[../Christmas]{inc-Christmas-Vespers2-psalms}
+\bigskip
+\benedicamusdomino{}
+}
+
+}

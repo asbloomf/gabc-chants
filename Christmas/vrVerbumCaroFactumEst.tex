@@ -64,7 +64,18 @@
 }%
 %
 \grebarsyllable{}{}{}{1}{\Rbar{}~}{E}{0}{}{%
-\gredivisiofinalis{}%
+\greindivisiofinalis{}%
+% verbatim text at element level:
+\ifx\vrlinebreak\undefined\else%
+% end of verbatim text
+%
+%
+\grenewparline %
+%
+%
+% verbatim text at element level:
+\fi%
+% end of verbatim text
 }%
 %
 \gresyllable{\Rbar{}~}{E}{t}{1}{h}{a}{0}{}{%
