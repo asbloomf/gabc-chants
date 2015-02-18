@@ -45,7 +45,8 @@
 % ,colwidths={1=253pt}
 \begin{parcolumns}[rulebetween]{2}
 %\chapter defines the dropcap part itself so it can have formatting inside
-\colchunk{\sloppy\chapter}
+\ifx\chaptertext\undefined\let\chaptertext=\chapter\fi
+\colchunk{\sloppy\chaptertext}
 \colchunk{\sloppy\dropcap{american}{\chaptertranslation}}
 \end{parcolumns}
 \medskip
