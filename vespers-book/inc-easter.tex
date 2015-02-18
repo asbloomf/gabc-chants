@@ -1,0 +1,27 @@
+{
+\chapter{Proper of the Time -- Easter Octave}
+\section{Easter Sunday}
+\subtitle{1st Class}
+\def\printfullhymn{
+    \emph{Chapter, Hymn, and Versicle are all omitted, but the following Antiphon is said :}
+
+    \bigskip
+    \def\annot{\small{Ant.}}
+    \def\annottwo{\small{\chapterhymnversicleantiphonmode.}}
+    \setinitialspacing{\chapterhymnversicleantiphoninitial}
+    \includescore{\gabcfolder/\chapterhymnversicleantiphontex}
+    \translation[]{\chapterhymnversicleantiphontranslation}
+    \bigskip
+}
+\printvespers[../Easter]{inc-EasterVespers}
+\newcommand{\printbenedicamusdomino}[2]{
+	\def\annot{\small{#1}}
+	\def\annottwo{}
+	\setinitialspacing{B}
+	\includescore{#2}
+}
+\def\breakbeforeresp{T}
+\printbenedicamusdomino{\Vbar}{../BenedicamusDomino/BenedicamusDomino_Easter}
+\bigskip
+\hrule
+}
