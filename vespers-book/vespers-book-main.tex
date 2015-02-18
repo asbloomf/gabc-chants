@@ -133,7 +133,11 @@
 		\bigskip
 	}\fi
 
-	\printhymnnote
+	\ifx\printfullhymn\undefined
+		\printhymnnote
+	\else
+		\printfullhymn
+	\fi
 
 	{
 		\let\anttranslation=\englishmagantiphon
