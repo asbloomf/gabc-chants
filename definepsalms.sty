@@ -859,6 +859,7 @@ five%
 \StrLeft{#2}{1}[\anttone]
 \StrGobbleLeft{#2}{1}[\antend]
 \edef\antlinetwo{Ant. \anttone. \antend}
+\ifx\magpsalmclef\undefined\else\let\psalmclef=\magpsalmclef\fi
 \ifx\maggrassi\undefined\def\maggrassi{F}\fi
 \ifx\magprotodiogenes\undefined\def\magprotodiogenes{F}\fi
 \StrSubstitute{\antend}{*}{star}[\expandedend]

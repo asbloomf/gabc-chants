@@ -1,0 +1,147 @@
+\chapter{Proper of the Time -- Shrovetide}
+{
+\newcommand{\benedicamusdomino}[1][sunday]{
+	\noindent\printnote{\Vbar~\emph{Benedicámus Dómino}, page \pageref{benedicamusdomino-#1}.}
+	\bigskip
+	\hrule
+}
+\newcommand{\printhymnnote}{
+	\noindent\printnote{Hymn. \emph{Lucis Creátor}, page \pageref{hymn-luciscreator}.
+	\Vbar~\emph{Dirigátur}, page \pageref{vr-dirigatur}.}
+}
+
+{
+\section{Septuagesima}
+\subtitle{2nd Class}
+\printnote{As on Sundays of Vespers throughout the year on page \pageref{sundayvespers}.}
+\printvespersmag[../Lent]{inc-VespersMagnificatSeptuagesima}
+
+\bigskip
+\benedicamusdomino{}
+}
+
+{
+\section{Sexagesima}
+\subtitle{2nd Class}
+\printnote{As on Sundays of Vespers throughout the year on page \pageref{sundayvespers}.}
+\printvespersmag[../Lent]{inc-VespersMagnificatSexagesima}
+
+\bigskip
+\benedicamusdomino{}
+}
+
+{
+\section{Quinquagesima}
+\subtitle{2nd Class}
+\printnote{As on Sundays of Vespers throughout the year on page \pageref{sundayvespers}.}
+\printvespersmag[../Lent]{inc-VespersMagnificatQuinquagesima}
+
+\bigskip
+\benedicamusdomino{}
+}
+}
+
+%lent
+{
+\newcommand{\benedicamusdomino}[1][lent]{
+	\noindent\printnote{\Vbar~\emph{Benedicámus Dómino}, page \pageref{benedicamusdomino-#1}.}
+	\bigskip
+	\hrule
+}
+\newcommand{\printhymnnote}{
+	\noindent\printnote{Hymn. \emph{Audi, benígne Cónditor}, page \pageref{hymn-audibenigneconditor}.
+	\Vbar~\emph{Angelis suis}, page \pageref{vr-angelissuis}.}
+}
+
+{
+\section{1st Sunday of Lent}
+\subtitle{1st Class}
+\printnote{As on Sundays of Vespers throughout the year on page \pageref{sundayvespers}.}
+\def\printfullhymn{
+	\label{hymn-audibenigneconditor}
+	{
+	\input{\gabcfolder/inc-hymn-AudiBenigneConditor}
+	\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
+
+	{
+		\def\vrlinebreak{T}
+		\label{vr-angelissuis}
+		\printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+	}
+	}
+}
+\printvespersmag[../Lent]{inc-VespersMagnificatLent1}
+
+\bigskip
+\benedicamusdomino{}
+}
+
+{
+\section{2nd Sunday of Lent}
+\subtitle{1st Class}
+\printnote{As on Sundays of Vespers throughout the year on page \pageref{sundayvespers}.}
+\printvespersmag[../Lent]{inc-VespersMagnificatLent2}
+
+\bigskip
+\benedicamusdomino{}
+}
+
+{
+\section{3rd Sunday of Lent}
+\subtitle{1st Class}
+\printnote{As on Sundays of Vespers throughout the year on page \pageref{sundayvespers}.}
+\printvespersmag[../Lent]{inc-VespersMagnificatLent3}
+
+\bigskip
+\benedicamusdomino{}
+}
+
+{
+\section{4th Sunday of Lent}
+\subtitle{1st Class}
+\printnote{As on Sundays of Vespers throughout the year on page \pageref{sundayvespers}.}
+\printvespersmag[../Lent]{inc-VespersMagnificatLent4}
+
+\bigskip
+\benedicamusdomino{}
+}
+
+{
+\section{Passion Sunday}
+\subtitle{1st Class}
+\printnote{As on Sundays of Vespers throughout the year on page \pageref{sundayvespers}.}
+\def\printfullhymn{
+	\label{hymn-vexillaregis}
+	TODO fix all caps alignment
+	{
+	\input{\gabcfolder/inc-hymn-VexillaRegis}
+	\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
+
+	{
+		\def\vrlinebreak{T}
+		\label{vr-eripeme}
+		\printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+	}
+	}
+}
+\printvespersmag[../Lent]{inc-VespersMagnificatPassion1}
+
+\bigskip
+\benedicamusdomino{}
+}
+
+{
+\section{Palm Sunday}
+\subtitle{1st Class}
+\printnote{As on Sundays of Vespers throughout the year on page \pageref{sundayvespers}.}
+\renewcommand{\printhymnnote}{
+	\noindent\printnote{Hymn. \emph{Vexílla Regis}, page \pageref{hymn-vexillaregis}.
+	\Vbar~\emph{Eripe me, Dómine}, page \pageref{vr-eripeme}.}
+}
+\printvespersmag[../Lent]{inc-VespersMagnificatPassion2}
+
+\bigskip
+\benedicamusdomino{}
+}
+
+}
