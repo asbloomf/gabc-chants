@@ -19,9 +19,87 @@
 	\def\annottwo{}
 	\setinitialspacing{B}
 	\includescore{#2}
+    \bigskip
+    \hrule
 }
 \def\breakbeforeresp{T}
 \printbenedicamusdomino{\Vbar}{../BenedicamusDomino/BenedicamusDomino_Easter}
-\bigskip
-\hrule
+}
+
+{
+\chapter{Proper of the Time -- Eastertide}
+\newcommand{\benedicamusdomino}[1][easter]{
+    \noindent\printnote{\Vbar~\emph{Benedicámus Dómino}, page \pageref{benedicamusdomino-#1}.}
+    \bigskip
+    \hrule
+}
+
+{
+\section{Low Sunday}
+\subtitle{1st Class}
+\def\printfullhymn{
+    \label{hymn-adregiasagnidapes}
+    {
+        \input{\gabcfolder/inc-hymn-AdRegiasAgniDapes}
+        \printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
+        \def\vrlinebreak{T}
+        \label{vr-manenobiscum}
+        \printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+    }
+}
+\printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster1}
+\benedicamusdomino{}
+}
+
+\newcommand{\printhymnnote}{
+    \noindent\printnote{Hymn. \emph{Ad Régias Agni Dapes}, page \pageref{hymn-adregiasagnidapes}.
+    \Vbar~\emph{Mane nobíscum}, page \pageref{vr-manenobiscum}.}
+}
+{
+\section{2nd Sunday after Easter}
+\subtitle{2nd Class}
+\printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster2}
+\benedicamusdomino{}
+}
+
+{
+\section{3rd Sunday after Easter}
+\subtitle{2nd Class}
+\printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster3}
+\benedicamusdomino{}
+}
+
+{
+\section{4th Sunday after Easter}
+\subtitle{2nd Class}
+\printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster4}
+\benedicamusdomino{}
+}
+
+{
+\section{5th Sunday after Easter}
+\subtitle{2nd Class}
+\printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster5}
+\benedicamusdomino{}
+}
+
+{
+\section{Ascension of Our Lord}
+\subtitle{1st Class}
+TODO
+}
+
+{
+\section{Sunday after the Ascension}
+\subtitle{2nd Class}
+\def\printfullhymn{
+    {
+        \printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
+        \def\vrlinebreak{T}
+        \printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+    }
+}
+\printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatSundayAfterAscension}
+\benedicamusdomino{}
+}
 }

@@ -739,6 +739,7 @@ five%
 \ifx\magsmc\undefined\def\magsmc{F}\fi
 \StrSubstitute{\magend}{*}{star}[\expandedendmag]
 \StrSubstitute{\magend}{*}{}[\nostarendmag]
+\ifx\magpsalmclef\undefined\else\let\psalmclef=\magpsalmclef\fi
 \ifx\psalmclef\undefined%
 %psalmclef should be something like c3
 \def\altclef{}%
@@ -749,13 +750,13 @@ five%
 \if\maggrassi T\def\magpost{_grassi}\fi
 \if\magprotodiogenes T\def\magpost{_protodiogenes}\fi
 \if\magsmc T\def\magpost{_smc}\fi
-\def\magtex{../psalms/Magnificat\if\magsolemn Tsolemn\else simple\fi\magtone\expandedendmag\altclef\magpost%
+\edef\magtex{../psalms/Magnificat\if\magsolemn Tsolemn\else simple\fi\magtone\expandedendmag\altclef\magpost%
 \ifx\magoneline\undefined\else\if\magoneline ToneLine\fi\fi}
 \newcommand{\magverses}{%
 %\ifx\magoneline\undefined\else\if\magoneline T\vspace{-15pt}\fi\fi
 \input{../psalms/magnificat-\magtone\nostarendmag\if\magsolemn Tsolemn\else simple\fi\if\maggrassi T-grassi\fi\if\magprotodiogenes T-protodiogenes\fi\if\magsmc T-smc\fi-verses}%
 }
-
+\let\psalmclef=\undefined
 }
 
 \ifx\undefined\useparacol
