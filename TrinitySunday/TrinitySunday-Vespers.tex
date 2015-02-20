@@ -2,11 +2,13 @@
 % !TEX encoding = UTF-8
 
 % This is a simple template for a LuaLaTeX document using gregorio scores.
+% page 914 (1102 in pdf) of liber
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
 \usepackage{../definepsalms}
-
-\input{inc-PentecostVespers}
-
 \sloppy
+
+\newcommand{\heading}{Trinity Sunday II Vespers.}
 
 \newcommand{\predeusinadjutorium}{%
 %\smallskip
@@ -20,8 +22,8 @@
 \large
 %\greblockcustos
 }
-\let\oldantonetranslation=\antonetranslation
-\renewcommand{\antonetranslation}{\oldantonetranslation\medskip}
+
+
 \newcommand{\antoneinitialsize}{40}
 \newcommand{\prepsalmone}{%
 %\vspace{-1.5ex}
@@ -36,36 +38,34 @@
 \newcommand{\anttwoinitialsize}{40}
 \newcommand{\prepsalmtwo}{%
 \normalsize
-\greblockcustos
+%\greblockcustos
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\preantthree}{\setgrefactor{17}
 \large
-\greblockcustos
+%\greblockcustos
 }
 \newcommand{\antthreeinitialsize}{40}
 \newcommand{\prepsalmthree}{%
 \normalsize
 }
-
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\preantfour}{\setgrefactor{17}
-\greblockcustos
+%\greblockcustos
 \large
 %\normalsize
 }
-\let\oldantfourtranslation=\antfourtranslation
-\renewcommand{\antfourtranslation}{\vspace{0ex minus 3.5ex}\oldantfourtranslation\vspace{0ex minus 3.5ex}}
 \newcommand{\antfourinitialsize}{40}
 \newcommand{\prepsalmfour}{%
 %\vspace{-1ex}
 %\setgrefactor{15}
 \normalsize
 }
-
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\def\nopagebreakbeforepsalmfive{T}
@@ -74,30 +74,24 @@
 %\greblockcustos
 \large
 }
-%\newcommand{\preantfivetwo}{\preantfive}
+\newcommand{\preantfivetwo}{\preantfive}
 \newcommand{\antfivefontsizetwo}{40}
 
 \newcommand{\antfiveinitialsize}{40}
-%\definepsalm{5}{113}{7}{c2}
 \newcommand{\prepsalmfive}{%
-%\vspace{-12pt plus 12pt}
+\medskip
+%\vspace{-1ex}
 %\setgrefactor{15}%
 %\normalsize%
 }
-
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\pagebreakbeforehymn{T}
 
 \newcommand{\prehymn}{\large
 \setgrefactor{16}
 }
-
-%\newcommand{\hymn}{O lux beata caelitum}
-%mode 2
-%\newcommand{\vr}{Notum fecit Dóminus}
-%\newcommand{\vrtex}{Hymn-VeniCreatorSpiritusvr}
-%\newcommand{\vtranslation}{The apostles spoke in divers tongues.}
-%\newcommand{\rtranslation}{The wonderful works of God.}
-%\def\vrnospace{T}
 
 \newcommand{\premag}{
 \normalsize
@@ -107,24 +101,23 @@
 %\newcommand{\premagtwo}{
 %\setgrefactor{16}
 %}
-%\newcommand{\maganttex}{MagnificatAntiphon2}
 \newcommand{\magfontsize}{30}
 \def\pagebreakbeforemagnificat{T}
-%\newcommand{\magantinitial}{H}
-%\newcommand{\maganttranslation}{Today the days of Pentecost are complete, alleluia; today the Holy Ghost appeared in fire to the disciples, gave them gifts and graces, sent them into all the world to preach and to bear witness; whoever believes and is baptised shall be saved, alleluia.}
 \def\magoneline{T}
 %\newcommand{\magtone}{8}
 %\newcommand{\magend}{G}
 \newcommand{\premagverses}{%
 %\greblockcustos
 \normalsize
-\setgrefactor{14}
+\setgrefactor{15}
 %\pagebreak
 }
-%\input{../psalms/definemag}
 
-%\definebenedicamusdomino{1}{2}
+\def\benedicamusdominogrefactor{14}
+\definebenedicamusdomino{1}{2}
 
-\def\includefideliumanimae{T}
+%\def\includefideliumanimae{T}
 
-%\input{../FullVespers}
+\input{inc-TrinitySunday-Vespers}
+\input{../inc_header}
+\input{../FullVespers-test}

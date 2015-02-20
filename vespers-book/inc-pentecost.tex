@@ -1,0 +1,66 @@
+\chapter{Proper of the Time -- Pentecost Octave}
+{
+\newcommand{\benedicamusdomino}[1][1class1stvespers]{
+	\noindent\printnote{\Vbar~\emph{Benedicámus Dómino}, page \pageref{benedicamusdomino-#1}.}
+	\bigskip
+	\hrule
+}
+
+{
+\section{Pentecost Sunday}
+\subtitle{1st Class}
+
+\def\definevesperspropers{\input{\gabcfolder/inc-Pentecost-2Vespers}}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-Pentecost-1Vespers}}
+\def\vesperspropersnote{At II Vespers:}
+\def\vesperspropersaltnote{At I Vespers:}
+%\def\premag{\def\noeuouae{T}}
+\def\premagverses{\greblockcustos}
+\def\printfullhymn{
+	{\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}}
+		% print all versicles that could follow hymn?
+	{
+		\def\vrlinebreak{T}
+		%\label{vr-rorate}
+		\printnote{\vesperspropersnote}
+		\definevesperspropers
+		\printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+	}
+	\bigskip
+	{
+		\def\vrlinebreak{T}
+		%\label{vr-rorate}
+		\printnote{\vesperspropersaltnote}
+		\definevesperspropersalt
+		\printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+	}
+}
+\printvespers[../Pentecost]{inc-PentecostVespers}
+\bigskip
+\benedicamusdomino{}
+}
+
+{
+\section{Trinity Sunday}
+\subtitle{1st Class}
+
+%\def\premag{\def\noeuouae{T}}
+\def\premagverses{\greblockcustos}
+\def\printfullhymn{
+	{
+		\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
+		\def\vrlinebreak{T}
+		\printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+	}
+}
+\printvespers[../TrinitySunday]{inc-TrinitySunday-Vespers}
+\bigskip
+\benedicamusdomino{}
+}
+
+}
+
+\chapter{Proper of the Time -- Time After Pentecost}
+{
+	
+}
