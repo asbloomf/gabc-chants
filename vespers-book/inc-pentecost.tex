@@ -62,5 +62,54 @@
 
 \chapter{Proper of the Time -- Time After Pentecost}
 {
+\newcommand{\benedicamusdomino}[1][sunday]{
+	\noindent\printnote{\Vbar~\emph{Benedicámus Dómino}, page \pageref{benedicamusdomino-#1}.}
+	\bigskip
+	\hrule
+}
+\newcommand{\printhymnnote}{}
+\newcommand{\printvespersafterpentecost}[1]{
+	{
+	\def\ordinalending{th}
+	\ifnum#1=2\def\ordinalending{nd}
+	\else\ifnum#1=3\def\ordinalending{rd}
+	\else\ifnum#1=21\def\ordinalending{st}
+	\else\ifnum#1=22\def\ordinalending{nd}
+	\else\ifnum#1=23\def\ordinalending{rd}
+	\else\ifnum#1=24\def\ordinalending{th or Last}
+	\fi\fi\fi\fi\fi\fi
+
+	\section{#1\ordinalending{}	Sunday after Pentecost}
+	\subtitle{2nd Class}
+	\printvespersmag[../TimeAfterPentecost]{inc-VespersMagnificatPentecost#1}
+	\bigskip
+	\benedicamusdomino{}
+	}
 	
+}
+
+\printvespersafterpentecost{2}
+\printvespersafterpentecost{3}
+\printvespersafterpentecost{4}
+\printvespersafterpentecost{5}
+\printvespersafterpentecost{6}
+\printvespersafterpentecost{7}
+\printvespersafterpentecost{8}
+\printvespersafterpentecost{9}
+\printvespersafterpentecost{10}
+\printvespersafterpentecost{11}
+\printvespersafterpentecost{12}
+\printvespersafterpentecost{13}
+\printvespersafterpentecost{14}
+\printvespersafterpentecost{15}
+\printvespersafterpentecost{16}
+\printvespersafterpentecost{17}
+\printvespersafterpentecost{18}
+\printvespersafterpentecost{19}
+\printvespersafterpentecost{20}
+\printvespersafterpentecost{21}
+\printvespersafterpentecost{22}
+\printvespersafterpentecost{23}
+\printvespersafterpentecost{24}
+
 }
