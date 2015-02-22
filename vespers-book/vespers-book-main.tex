@@ -3,6 +3,8 @@
 
 % This is a simple template for a LuaLaTeX document using gregorio scores.
 
+% easter can be from march 22 to april 25
+
 \documentclass[letterpaper,12pt]{book} % use larger type; default would be 10pt
 \usepackage{../definepsalms}
 \usepackage{titlesec}
@@ -218,12 +220,14 @@
 
 	\bigskip
 	\ifx\printfullhymn\undefined
-		\printhymnnote
+		\ifx\printhymnnote\undefined\else
+			\printhymnnote
+			\bigskip
+		\fi
 	\else
 		\printfullhymn
+		\bigskip
 	\fi
-
-	\bigskip
 	\ifx\magreplacement\undefined
 	{
 	\ifx\definevesperspropersalt\undefined\else{
@@ -341,12 +345,14 @@ Magnificat, and Collect given for the respective Sunday or Feast.}
 
 %\input{inc-benedicamus-domino}
 
+\def\dontrepeatantiphon{T}
+\input{inc-vespers-sunday}
+
 %\input{inc-marian-anthems}
 
 %this is just an example of using pageref
 %See Deus in adjutorium on page \pageref{deusinadjutorium} and Benedicamus domino on page \pageref{benedicamusdomino}.
 
-\def\dontrepeatantiphon{T}
 %\input{inc-advent}
 
 % christmas through Holy Family
@@ -359,7 +365,7 @@ Magnificat, and Collect given for the respective Sunday or Feast.}
 
 %\input{inc-easter}
 
-\input{inc-pentecost}
+%\input{inc-pentecost}
 
 \chapter{Appendix}
 %\input{inc-benediction}

@@ -698,6 +698,11 @@ five%
 \else
   \let\preantafter=\undefined
 \fi
+\if\onlyoneant T
+  \ifnum#1<5
+    \let\preantafter=\undefined
+  \fi
+\fi
 
 \ifx\preantafter\undefined % if preantafter undefined, we don't reprint the antiphon
     \if\onlyoneant T\else% if there is only one antiphon for all the psalms (like during Paschaltide), we don't print Repeat antiphon

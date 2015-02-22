@@ -16,14 +16,9 @@
 \def\printsolemnorfestaltone{T}
 \def\deusinadjutoriumsolemn{F}
 \def\includelaustibi{T}
-\def\psalmonebeforeant{T} % this just means the title Psalm 109.
 
-\newcommand{\antonetex}{Ant1-DixitDominus}
-\newcommand{\antoneinitial}{D}
 %\newcommand{\antonetranslation}{}
-\def\psalmbeginversetwo{T}
 \newcommand{\antoneinitialsize}{40}
-\definepsalm{1}{109}{7}{c2}
 \newcommand{\preantone}{\setgrefactor{17}
 \large
 \greblockcustos
@@ -38,11 +33,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\anttwotex}{Ant2-MagnaOperaDomini}
-\newcommand{\anttwoinitial}{J}
-\newcommand{\anttwotranslation}{Great are the works of the Lord, sought out according to all His wills.}
 \newcommand{\anttwoinitialsize}{40}
-\definepsalm{2}{110}{3}{b}
 \newcommand{\preanttwo}{\setgrefactor{17}%check
 %\greblockcustos
 \large
@@ -54,11 +45,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\antthreetex}{Ant3-QuiTimetDominum.tex}
-\newcommand{\antthreeinitial}{Q}
-\newcommand{\antthreetranslation}{He that feareth the Lord delighteth exceedingly in His commandments.}
 \newcommand{\antthreeinitialsize}{40}
-\definepsalm{3}{111}{4}{g}
 \newcommand{\preantthree}{\setgrefactor{17}%check
 \large
 \greblockcustos
@@ -70,12 +57,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\antfourtex}{Ant4-SitNomenDomini.tex}
-\newcommand{\antfourinitial}{S}
-\newcommand{\antfourtranslation}{Blessed be the name of the Lord forever.\vspace{-2ex}}
 \newcommand{\antfourinitialsize}{40}
 %\def\psalmfourtranslationsmall{T}
-\definepsalm{4}{112}{7}{c}
 \newcommand{\preantfour}{\setgrefactor{17}
 \large
 }
@@ -89,13 +72,9 @@
 
 \def\nopagebreakbeforepsalmfive{T}
 \def\pagebreakafterpsalmfive{T}
-\newcommand{\antfivetex}{Ant5-DeusAutemNoster.tex}
-\newcommand{\antfiveinitial}{E}
-\newcommand{\antfivetranslation}{But our God is in heaven; He hath done all things, whatsoever He would.}
 \newcommand{\antfiveinitialsize}{40}
 \newcommand{\antfivefontsizetwo}{34}
 \def\psalmfivetranslationsmall{T}
-\definepsalm{5}{113}{p}{}
 %\renewcommand{\antfivelinetwo}{T. Per.}
 %\newcommand{\psalmfiveend}{}
 %it defaults to T Per
@@ -119,43 +98,11 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\chapter}{\dropcap{latin}{Benedíctus Déus, et Páter Dómini nóstri Jésu} \textbf{Chrí}\-sti.~\gredagger{} Páter misericordiárum, et Déus totíus con\-so\-\emph{la}\-\emph{ti}\-\textbf{ó}\-nis,~* qui consolátur nos in ómni tribulatióne \textbf{nó}\-stra.}
-\newcommand{\chaptertranslation}{Blessed be the God and Father of our Lord Jesus Christ, the Father of mercies and the God of all comfort, who comforteth us in all our tribulation.}
-
-\newcommand{\hymnlinetwo}{8.}
-\newcommand{\hymntex}{hymn-LucisCreatorOptime.tex}
-\newcommand{\hymninitial}{L}
 \newcommand{\hymninitialsize}{30}
 \newcommand{\prehymn}{\normalsize
 \setgrefactor{14}
 }
-\newcommand{\hymntranslation}{%\vspace{-1ex}
-\item O blest Creator of the Light!
-Who dost the dawn from darkness bring:
-And, framing Nature's depth and height,
-Didst with the light thy work begin;
-\item Who gently blending eve with morn,
-And morn with eve, didst call them day;
-Thick flows the flood of darkness down;
-O hear us as we weep and pray.
-\item Keep thou our souls from schemes of crime;
-Nor guilt remorseful let them know;
-Nor, thinking but on things of time,
-Into eternal darkness go.
-\item Teach us to knock at heaven's high door;
-Teach us the prize of life to win;
-Teach us all evil to abhor,
-And purify ourselves within.
-\item Father of mercies, hear our cry;
-Hear us, O sole-begotten Son,
-Who, with the Holy Ghost most high,
-Reignest while endless ages run.
-Amen.
-}
 
-\newcommand{\vrtex}{Dirigaturvr.tex}
-\newcommand{\vtranslation}{Let my prayer be directed, O Lord.}
-\newcommand{\rtranslation}{As incense in Thy sight.}
 \newcommand{\vrnospace}{T}
 
 \newcommand{\benedicamusdominointro}{During the year and Septuagesima, Sexagesima, and Quinquagesima}
@@ -167,5 +114,6 @@ Amen.
 %\newcommand{\benedicamusdominotonealt}{6.}
 %\newcommand{\benedicamusdominotexalt}{../BenedicamusDomino/BenedicamusDomino_SundaysOfAdventAndLent}
 
+\input{inc-SundayAtVespers}
 %\input{../inc_header}
 \input{../FullVespers}

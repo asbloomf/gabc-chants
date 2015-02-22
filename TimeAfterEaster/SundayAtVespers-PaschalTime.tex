@@ -16,25 +16,16 @@
 \def\printsolemnorfestaltone{T}
 \def\deusinadjutoriumsolemn{F}
 \def\includelaustibi{F}
-\def\psalmonebeforeant{F} % this just means the title Psalm 109.
 
-\newcommand{\antonetex}{Ant-Alleluia}
-\newcommand{\antoneinitial}{A}
 %\newcommand{\antonetranslation}{}
 %\def\psalmbeginversetwo{T}
 \newcommand{\antoneinitialsize}{40}
-\def\onlyoneant{T}
-\definepsalm{1}{109}{7}{c2}
 \newcommand{\prepsalmtwo}{\setgrefactor{15}\greblockcustos}
-\definepsalm{2}{110}{7}{c2}
 \newcommand{\prepsalmthree}{\setgrefactor{17}}
-\definepsalm{3}{111}{7}{c2}
 \let\oldbeginpsalmthreecols=\beginpsalmthreecols
 \def\beginpsalmthreecols{\vspace{-12pt plus 12pt}\oldbeginpsalmthreecols}
 \def\psalmfourtranslationsmall{T}
-\definepsalm{4}{112}{7}{c2}
 %\def\psalmfivetranslationsmall{T}
-\definepsalm{5}{113}{7}{c2}
 \let\oldbeginpsalmfivecols=\beginpsalmfivecols
 \def\beginpsalmfivecols{\vspace{-12pt plus 12pt}\oldbeginpsalmfivecols}
 \newcommand{\preantone}{\setgrefactor{17}
@@ -48,8 +39,6 @@
 %\let\psalmbeginversetwo\undefined
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\def\onlypsalms{T}
 
 %\newcommand{\hymn}{Ad régias Agni dápes}
 %\newcommand{\vr}{Máne nobíscum Dómine}
@@ -77,5 +66,5 @@
 %\newcommand{\benedicamusdominoaltintro}{In Advent and Lent}
 %\newcommand{\benedicamusdominotonealt}{6.}
 %\newcommand{\benedicamusdominotexalt}{../BenedicamusDomino/BenedicamusDomino_SundaysOfAdventAndLent}
-
+\input{inc-SundayAtVespers-PaschalTime}
 \input{../FullVespers}

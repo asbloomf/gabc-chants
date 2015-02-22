@@ -1,0 +1,41 @@
+{
+	\section{Sunday at Vespers}
+	\def\printfullhymn{
+	    {
+	        \printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
+	        \input{\gabcfolder/inc-hymn-LucisCreatorOptime2}
+			{
+				\def\annot{\small{Hymn.}}
+				\def\annottwo{\small{\hymnlinetwo}}
+				\setinitialspacing{\hymninitial}
+				\normalsize
+				\begin{center}\addfontfeature{Numbers=Lining}\textbf{2. Another Chant (ad libitum).}\end{center}
+
+				\includescore{\gabcfolder/\hymntex}
+			}
+			{
+				\def\annot{\small{Hymn.}}
+				\def\annottwo{\small{\hymntwolinetwo}}
+				\setinitialspacing{\hymninitial}
+				\normalsize
+				\begin{center}\addfontfeature{Numbers=Lining}\textbf{3. Another Chant.}\end{center}
+
+				\includescore{\gabcfolder/\hymntextwo}
+			}
+
+			\bigskip\bigskip
+
+	        \def\vrlinebreak{T}
+	        \printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+	    }
+	}
+	\newcommand{\magreplacement}{\printnote{Magnificat. Collect.}}
+	\printvespers[../SundayAtVespers]{inc-SundayAtVespers}
+}
+
+{
+	\let\dontrepeatantiphon=\undefined
+	\section{Sunday at Vespers in Paschaltide}
+	\newcommand{\magreplacement}{\noindent\printnote{Hymn. Magnificat. Collect.}}
+	\printvespers[../TimeAfterEaster]{inc-SundayAtVespers-PaschalTime}
+}

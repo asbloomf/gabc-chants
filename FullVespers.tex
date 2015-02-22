@@ -399,7 +399,8 @@
 % default width is 265pt
 % ,colwidths={1=253pt}
 \begin{parcolumns}[rulebetween]{2}
-\colchunk{\sloppy\chapter}
+\ifx\chaptertext\undefined\let\chaptertext=\chapter\fi
+\colchunk{\sloppy\chaptertext}
 \colchunk{\sloppy \dropcap{american}{\chaptertranslation}}
 \end{parcolumns}
 \bigskip
