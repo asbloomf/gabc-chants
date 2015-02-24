@@ -124,7 +124,7 @@ Lent:
     url: pdfs/Lent/VespersMagnificatLent2.pdf
   - name: Vespers Magnificat Lent 3
     url: pdfs/Lent/VespersMagnificatLent3.pdf
-  - name: Commemoration Feria Secunda in the 3rd week of Lent
+  - name: Commemoration Feria Secunda (Monday) in the 3rd week of Lent
     url: pdfs/Lent/CommemorationFeriaSecundaLent3-main.pdf
   - name: Vespers Magnificat Lent 4
     url: pdfs/Lent/VespersMagnificatLent4.pdf
@@ -132,6 +132,8 @@ Lent:
     url: pdfs/Lent/hymn-VexillaRegis-main.pdf
   - name: Vespers Magnificat Passion 1
     url: pdfs/Lent/VespersMagnificatPassion1.pdf
+  - name: Commemoration Feria Tertia (Tuesday) in Passion Week
+    url: pdfs/Lent/CommemorationFeriaTertiaPassion1-main.pdf
   - name: Vespers Magnificat Passion 2
     url: pdfs/Lent/VespersMagnificatPassion2.pdf
 Tenebrae:
