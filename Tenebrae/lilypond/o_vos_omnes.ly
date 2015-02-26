@@ -37,12 +37,12 @@ wordsA = \lyricmode
 
 wordsB = \lyricmode
 {
-  At -- tén -- di -- te, et vi -- dé -- te 
+  at -- tén -- di -- te, et vi -- dé -- te 
 }
 
 wordsC = \lyricmode
 {
-  si est do -- lor sí -- mi -- lis 
+  Si est do -- lor sí -- mi -- lis 
 }
 
 wordsD = \lyricmode
