@@ -1,7 +1,9 @@
 {
+	\label{sundayvespers}
 	\section{Sunday at Vespers}
 	\def\printfullhymn{
 	    {
+	    	\label{hymn-luciscreator}
 	        \printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
 	        \input{\gabcfolder/inc-hymn-LucisCreatorOptime2}
 			{
@@ -26,6 +28,7 @@
 			\bigskip\bigskip
 
 	        \def\vrlinebreak{T}
+	        \label{vr-dirigatur}
 	        \printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
 	    }
 	}
@@ -35,6 +38,7 @@
 
 {
 	\let\dontrepeatantiphon=\undefined
+	\label{sundayvespers-easter}
 	\section{Sunday at Vespers in Paschaltide}
 	\newcommand{\magreplacement}{\noindent\printnote{Hymn. Magnificat. Collect.}}
 	\printvespers[../TimeAfterEaster]{inc-SundayAtVespers-PaschalTime}
