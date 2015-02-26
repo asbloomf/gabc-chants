@@ -79,7 +79,7 @@ TenorOneNotes = \relative c'
 %    \mark "Fine"
   d1 | f2. e4 | e2 r4 f~ | f f f g | 
   e( f4. e8 d4~ | d) cs  d a~ | a b c2 | a r4 g | 
-  d'2. c4 | bf a r d | g2. f4 | ef1 | d1\fermata \bar "||" \break 
+  d'2. c4 | bf a r d | g2. f4 | ef1( | d2) d\fermata \bar "||" \break 
 %  \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
 %    \override Score.RehearsalMark #'self-alignment-X = #RIGHT
 %    \override Score . RehearsalMark #'font-shape = #'italic
@@ -100,7 +100,7 @@ TenorTwoNotes = \relative c'
 {
   \global
   g1 | bf2.( a8 g | a4 b!) c2 | a1 | 
-  bf2. bf4 | bf2 a4 bf | a8( g g2 fs4) | g2 r \bar "||" 
+  bf2. bf4 | bf2 a4 bf | a8( g g2 fs4) | g2\fermata r \bar "||" 
   r2 d'~ | d f~ | f4 e e2 | d2. c4 | d4.( e8 f4 d~ | d c8 bf c2) | d1 \bar "||"
   \TenTwoRep
   r2 a2~ | a c~ | c4 c c2 | d4. d8 d4 d | 
@@ -121,12 +121,12 @@ BassOneNotes = \relative c
 {
   \global
   r2 d~ | d f~ | f g~( | g4 fs) fs2 | 
-  r4 g2 g4 | g2 f4 d | ef4.(  d8 c2) | d2 r \bar "||" 
+  r4 g2 g4 | g2 f4 d | ef4.(  d8 c2) | d2\fermata r \bar "||" 
   g1 | bf2. a4 | a2. g4~ | g f g( a | bf2 a4 bf~ | bf8 a g f g2) | a1 \bar "||"
   \BassOneRep
   r2 d~ | d a'~ | a4 a a2 | bf4. bf8 bf4 g | 
   a2( bf4. a8 | g4) a d,2~ | d r | r4 d g2~ | 
-  g4 f ef2 | d4 d g4.( f8 | ef2) d | c1 | g'\fermata \bar "||"
+  g4 f ef2 | d4 d g4.( f8 | ef2) d | c1( | g'2) g\fermata \bar "||"
   \BassOneRep
 }
 
@@ -142,7 +142,7 @@ BassTwoNotes = \relative c
 {
   \global
   r2 g~ | g d'~ | d c | d1 | 
-  r4 g,2 g4 | g2 d'4 bf | c4.( bf8 a2) | g r \bar "||" 
+  r4 g,2 g4 | g2 d'4 bf | c4.( bf8 a2) | g\fermata r \bar "||" 
   r2 g~ | g d'~ | d4 c c2 | bf2. a4 | g8( a bf c d4 bf | ef1) | d\bar "||"
   g1 | \BassTwoRep 
   R1 | R1 | R1 | R1 | R1 | R1 | R1 | R1 | R1 | R1 | R1 | R1 | R1 | \bar "||"
@@ -177,7 +177,7 @@ BassTwoWords = \lyricmode
     >>
 
     \new Staff = "BassTwo" << 
-      \clef bass
+      \clef bass 
       \new Voice = "B2" { \BassTwoNotes } 
       \new Lyrics \lyricsto "B2" { \BassTwoWords } 
     >>
