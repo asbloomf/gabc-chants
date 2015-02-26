@@ -10,7 +10,7 @@ global = { \key d \minor \time 4/4 }
 
 TenOneRep = 
 {
-  R1 | r2  g~ | g f | ef d4 d~( | d c8 bf c4) c | d2 r4 d~ | d d d d | ef2( d) | d1\fermata \bar "||"
+  R1 | r2  g~ | g f | ef d4 d~ | d( c8 bf c4) c | d2 r4 d~ | d d d d | ef2( d) | d1\fermata \bar "||"
 
 }
 
@@ -21,7 +21,7 @@ TenTwoRep =
 
 BassOneRep = 
 {
-  bf1 | a2 g | a r4 a4~( | a8 g g2) fs4 | g2 r4 g~ | g fs fs2 | g4. g8 g4 fs | g2.( fs4) | g1\fermata \bar "||"
+  bf1 | a2 g | a r4 a4~ | a8( g g2) fs4 | g2 r4 g~ | g fs fs2 | g4. g8 g4 fs | g2.( fs4) | g1\fermata \bar "||"
 }
 
 BassTwoRep = % this part excludes the first bar, because of octave problem 
@@ -78,7 +78,7 @@ TenorOneNotes = \relative c'
 %    \override Score.RehearsalMark #'font-size = #0.5
 %    \mark "Fine"
   d1 | f2. e4 | e2 r4 f~ | f f f g | 
-  e( f4. e8 d4~ | d) cs  d a~ | a b c2 | a r4 g | 
+  e( f4. e8 d4)~ | d cs  d a~ | a b c2 | a r4 g | 
   d'2. c4 | bf a r d | g2. f4 | ef1( | d2) d\fermata \bar "||" \break 
 %  \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
 %    \override Score.RehearsalMark #'self-alignment-X = #RIGHT
@@ -101,11 +101,11 @@ TenorTwoNotes = \relative c'
   \global
   g1 | bf2.( a8 g | a4 b!) c2 | a1 | 
   bf2. bf4 | bf2 a4 bf | a8( g g2 fs4) | g2\fermata r \bar "||" 
-  r2 d'~ | d f~ | f4 e e2 | d2. c4 | d4.( e8 f4 d~ | d c8 bf c2) | d1 \bar "||"
+  r2 d'~ | d f~ | f4 e e2 | d2. c4 | d4.( e8 f4 d)~ | d( c8 bf c2) | d1 \bar "||"
   \TenTwoRep
   r2 a2~ | a c~ | c4 c c2 | d4. d8 d4 d | 
   c2( d) | e f | d e | f d | 
-  r4 d g2~ | g4 f ef( d~ | d c) d a | c g c2~( | c4 b) b2\fermata \bar "||"
+  r4 d g2~ | g4 f ef( d)~ | d( c) d a | c g c2~ | c4( b) b2\fermata \bar "||"
   \TenTwoRep
 }
 
@@ -120,9 +120,9 @@ TenorTwoWords = \lyricmode
 BassOneNotes = \relative c
 {
   \global
-  r2 d~ | d f~ | f g~( | g4 fs) fs2 | 
+  r2 d~ | d f~ | f g~ | g4( fs) fs2 | 
   r4 g2 g4 | g2 f4 d | ef4.(  d8 c2) | d2\fermata r \bar "||" 
-  g1 | bf2. a4 | a2. g4~ | g f g( a | bf2 a4 bf~ | bf8 a g f g2) | a1 \bar "||"
+  g1 | bf2. a4 | a2. g4~ | g f g( a | bf2 a4 bf)~ | bf8( a g f g2) | a1 \bar "||"
   \BassOneRep
   r2 d~ | d a'~ | a4 a a2 | bf4. bf8 bf4 g | 
   a2( bf4. a8 | g4) a d,2~ | d r | r4 d g2~ | 
