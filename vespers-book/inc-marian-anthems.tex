@@ -2,14 +2,14 @@
 {
 \def\nogabcbreaks{T}
 \newcommand{\printsimpletone}{
-\vspace{0ex plus 0ex minus 2ex}
+\vspace{0ex plus 0ex minus 1ex}
 \needspace{3\baselineskip}
 \begin{center}\textbf{Simple Tone.}\end{center}
 \vspace{0ex plus 0ex minus 1ex}
 }
 \newcommand{\printsolemntone}{
 %\vspace{0ex plus 0ex minus 0.5ex}
-\needspace{3\baselineskip}
+\oldneedspace{3\baselineskip}
 \begin{center}\textbf{Solemn Tone.}\end{center}
 \vspace{0ex plus 0ex minus 1ex}
 }
@@ -17,7 +17,7 @@
 \ifx\note\undefined\else%
 \textit{\note}
 
-\medskip
+\smallskip
 \fi
 \sloppy
 \begin{columns}
@@ -30,12 +30,12 @@
 \prayer{\prayerlatin}{\prayerenglish}
 \end{columns}
 \ifx\notetwo\undefined\else%
-\bigskip
+\medskip
 
-\needspace{5\baselineskip}
+\needspace{2\baselineskip}
 \textit{\notetwo}
 
-\medskip
+\smallskip
 \begin{columns}
 \versicle{\vlatintwo}{\venglishtwo}
 \response{\rlatintwo}{\renglishtwo}
@@ -63,7 +63,6 @@ Sinking we strive and call to thee for aid;
 Oh, by that joy which Gabriel brought to thee,
 Thou Virgin first and last, let us thy mercy see.}\end{quote}
 
-\bigskip{}
 {
 \newcommand{\note}{During Advent:}
 \newcommand{\vlatin}{Angelus Dómini nuntiávit Maríæ.}
