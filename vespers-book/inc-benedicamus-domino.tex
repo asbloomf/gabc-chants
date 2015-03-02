@@ -1,5 +1,6 @@
 {
 \newcommand{\printbenedicamusdomino}[2]{
+	\greblockcustos
 	\def\annot{\small{#1}}
 	\setinitialspacing{B}
 	\includescore{#2}
@@ -25,7 +26,9 @@
 \printbenedicamusdomino{6.}{../BenedicamusDomino/BenedicamusDomino_1class2ndvespers}
 }
 \smallskip
-\emph{\normalsize or more commonly:}\\
+\emph{\normalsize or more commonly:}
+
+
 \def\breakbeforeresp{T}
 \printbenedicamusdomino{5.}{../BenedicamusDomino/BenedicamusDomino_1class2ndVespersAlt}}
 \bigskip
@@ -70,7 +73,7 @@
 
 \label{benedicamusdomino-easter}
 {{\centering \bfseries On Sundays of Paschal Time.\\}
-\def\breakbeforeresp{T}
+%\def\breakbeforeresp{T}
 \printbenedicamusdomino{7.}{../BenedicamusDomino/BenedicamusDomino_SundaysOfPaschalTime}}
 
 }
