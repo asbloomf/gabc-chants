@@ -355,9 +355,9 @@ five%
 \ifx\prepsalm\undefined\else
 \def\greblockcustos{%
 % the regular greblockcustos is global which messes us up here, so redefine it without the \global
-  \greblockcusto=1\relax %
+  \greblockcusto=1\relax%
   \grelocalrightbox{}%
-  \relax %
+  \relax%
 }
 \prepsalm
 \fi
@@ -659,6 +659,8 @@ five%
   \fi
   \printpsalmtitle
   %\vspace{0pt minus 12pt} % this line can probably be deleted
+\else
+  \medskip
 \fi
 {
 {\ifx\prepsalm\undefined\else\prepsalm\fi

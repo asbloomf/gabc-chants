@@ -11,6 +11,8 @@ transcriber: Albert Bloomfield;
 transcription-date: 2011;
 style: modern;
 initial-style:0;
+def-m1:\ifx\vrlinebreak\undefined\else;
+def-m2:\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -21,5 +23,5 @@ initial-style:0;
 % Eripe me, Dómine, ab hómine málo.
 % A viro iníquo éripe me.
 
-(c4)()() <sp>V/</sp>~M{á}(j)ne(j) no(j)bís(j)cum(j) Dó(j)mi(j)ne,(j) al(j)le(j)lú(j)ia.(i'_jvIH'Ghih.) (::)
+(c4)<sp>V/</sp>~M{á}(j)ne(j) no(j)bís(j)cum(j) Dó(j)mi(j)ne,(j) al(j)le(j)lú(j)ia.(i'_jvIH'Ghih.) (::[em1]Z[em2])
 <sp>R/</sp>~Quó(j)ni(j)am(j) ad(j)ve(j)spe(j)rá(j)scit,(j) al(j)le(j)lú(j)ia.(i'_jvIH'Ghih.) (::)

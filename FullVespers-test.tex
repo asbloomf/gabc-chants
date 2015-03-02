@@ -133,6 +133,7 @@
 
     \fi %vrpttex
     \printvr[\greblockcustos\ifx\prevr\undefined\else\prevr\fi]{\vrtex}{\vtranslation}{\rtranslation}
+    \bigskip
 }\fi%
 \else% if the chapter, hymn, and antiphon are replaced by an antiphon
     \bigskip
@@ -153,7 +154,7 @@
 \fi%
 %
 \ifx\magant\undefined%
-    \vspace{-1ex plus 1ex}
+    %\vspace{-1ex plus 1ex}
     \emph{Magnificat}. %
 \else\ifx\magtex\undefined
     {\emph{Antiphon for the Magnificat.} \magant{}.%
@@ -174,7 +175,7 @@
 \ifx\collect\undefined%
 \emph{Collect}.
 
-\vfill
+\vfil
 \else%
 \hrule
 \smallskip

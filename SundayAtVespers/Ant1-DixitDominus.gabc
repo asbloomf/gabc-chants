@@ -11,6 +11,10 @@ transcriber: Benjamin Bloomfield;
 transcription-date: 2011;
 style: modern;
 %initial-style:0;
+def-m1:}{\greblockcustos{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}	\ifx\noeuouae\undefined\def\noeuouae{F}\fi	\if\noeuouae F{;
+def-m4:\fi};
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -18,5 +22,6 @@ style: modern;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c3)DI(g)xit(h) Dó(i')mi(j)nus(i.) <v>\greheightstar</v>(,) Dó(i_h)mi(f)no(h) mé(g_f)o :(e.) (;) Sé(f)de(f') a(d) déx(fh)tris(g) mé(e.)is.(e.) (::)
-E(i) u(i) o(j) u(i) a(h) e.(ih..) (::)
+(c3)DI(g)xit(h) Dó(i')mi(j)nus(i.) <v>\greheightstar</v>(,) Dó(i_h)mi(f)no(h) mé(g_f)o :(e.) (;)
+Sé(f)de(f') a(d) déx(fh)tris(g) mé(e.[em1])is.(e.) (::[em2]z[em3])
+E(i) u(i) o(j) u(i) a(h) e.(ih..) (::[em4])

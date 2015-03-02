@@ -32,8 +32,10 @@
 	        \printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
 	    }
 	}
+	\def\vrlinebreak{T}
 	\newcommand{\magreplacement}{\noindent\printnote{Magnificat. Collect.\\\\Benedicámus Dómino \emph{ for Sundays during the year, page \pageref{benedicamusdomino-sunday}}.}}
 	\def\preantfour{\needspace{10\baselineskip}}
+	\def\prepsalmfive{\greblockcustos}
 	\printvespers[../SundayAtVespers]{inc-SundayAtVespers}
 }
 
@@ -54,5 +56,6 @@
 	    }
 	}	
 	\newcommand{\magreplacement}{\noindent\printnote{Magnificat. Collect.\\\\Benedicámus Dómino \emph{ for Sundays in Paschaltide, page \pageref{benedicamusdomino-easter}}.}}
+	\def\prepsalmfive{\greblockcustos}
 	\printvespers[../TimeAfterEaster]{inc-SundayAtVespers-PaschalTime}
 }
