@@ -15,7 +15,7 @@ annotation: 1 Ant.;
 annotation: 1. g2;
 def-m1:}{\greblockcustos{;
 def-m2:\ifx\breakbeforeEuouae\undefined\else;
-def-m3:\fi}	\ifx\noeuouae\undefined\def\noeuouae{F}\fi	\if\noeuouae F{;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
 def-m4:\fi};
 
 

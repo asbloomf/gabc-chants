@@ -157,17 +157,17 @@
 	\input{\gabcfolder/#2}
 
 	\deusinadjutorium{}
-	\bigskip
+	\medskip
 	\printpsalm{1}{\psalmonenum}{\psalmonetone\psalmoneend}{\antonetex}{\antoneinitial}
-	\bigskip
+	\medskip
 	\printpsalm{2}{\psalmtwonum}{\psalmtwotone\psalmtwoend}{\anttwotex}{\anttwoinitial}
-	\bigskip
+	\medskip
 	\needspace{3\baselineskip}
 	\printpsalm{3}{\psalmthreenum}{\psalmthreetone\psalmthreeend}{\antthreetex}{\antthreeinitial}
-	\bigskip
+	\medskip
 	\needspace{3\baselineskip}
 	\printpsalm{4}{\psalmfournum}{\psalmfourtone\psalmfourend}{\antfourtex}{\antfourinitial}
-	\bigskip
+	\medskip
 	\ifx\psalmfivenum\undefined{
 		\ifx\definevesperspropers\undefined\else{
 			\definevesperspropers
@@ -186,8 +186,7 @@
 	}\else{
 		\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
 	}\fi
-	\bigskip
-
+	%\medskip
 	\needspace{3\baselineskip}
 	\ifx\chapterreplacement\undefined{
 		\ifx\chaptertext\undefined
@@ -201,7 +200,7 @@
 			}
 			\fi
 			\ifx\definevesperspropersalt\undefined\else
-			\bigskip
+			\medskip
 			{
 				\ifx\vesperspropersaltnote\undefined\else
 					\printnote{\vesperspropersaltnote}
@@ -218,15 +217,15 @@
 	{\chapterreplacement}
 	\fi
 
-	\bigskip
+	\medskip
 	\ifx\printfullhymn\undefined
 		\ifx\printhymnnote\undefined\else
 			\printhymnnote
-			\bigskip
+			\medskip
 		\fi
 	\else
 		\printfullhymn
-		\bigskip
+		\medskip
 	\fi
 	\ifx\magreplacement\undefined
 	{
@@ -274,7 +273,7 @@
 			}
 			\fi
 			\ifx\definevesperspropersalt\undefined\else
-			\bigskip
+			\medskip
 			{
 				\ifx\vesperspropersaltnote\undefined\else
 					\printnote{\vesperspropersaltnote}
@@ -290,7 +289,7 @@
 	\else
 	{\collectreplacement}
 	\fi
-	\bigskip
+	\medskip
 }
 
 \sloppy
