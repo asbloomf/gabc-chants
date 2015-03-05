@@ -2,8 +2,6 @@
 % !TEX encoding = UTF-8
 \usepackage{../definepsalms}
 
-\input{inc-Christmas-Vespers2-psalms}
-
 \newcommand{\predeusinadjutorium}{%
 \smallskip
 \large
@@ -14,7 +12,8 @@
 
 \newcommand{\preantone}{\setgrefactor{17}
 \large
-%\greblockcustos
+\greblockcustos
+\def\breakbeforeEuouae{T}
 }
 \newcommand{\antoneinitialsize}{40}
 \newcommand{\prepsalmone}{%
@@ -52,7 +51,6 @@
 \normalsize
 }
 \newcommand{\antfourinitialsize}{34}
-\newcommand{\psalmfourtranslationsmall}{T}
 \newcommand{\prepsalmfour}{%
 %\vspace{-1ex}
 %\setgrefactor{15}
@@ -63,14 +61,11 @@
 
 \def\nopagebreakbeforepsalmfive{T}
 %\def\pagebreakafterpsalmfive{T}
-\newcommand{\preantfivetwo}{\setgrefactor{15}
+\newcommand{\preantfive}{\setgrefactor{15}
 \greblockcustos
 \normalsize
 }
-\newcommand{\preantfive}{\vspace{-9pt}\preantfivetwo}
-\newcommand{\antfivefontsizetwo}{34}
-\let\oldantfivetranslation=\antfivetranslation
-\def\antfivetranslation{\oldantfivetranslation\vspace{-7pt}}
+
 \newcommand{\antfiveinitialsize}{34}
 \newcommand{\psalmfivetranslationsmall}{T}
 \newcommand{\prepsalmfive}{%
@@ -79,9 +74,11 @@
 \normalsize%
 }
 \newcommand{\prepsalmfiveverses}{\smallskip}
-
+\def\pagebreakafterpsalmfive{T}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\hymn}{Jesu Redémptor ómnium}
 
-\newcommand{\pagebreakbeforemagnificat}{T}
+\newcommand{\pagebreakbeforemagnificat}{F}
+
+\input{inc-Christmas-Vespers1-psalms}

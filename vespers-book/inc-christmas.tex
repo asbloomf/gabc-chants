@@ -8,16 +8,26 @@
 
 {
 \label{christmas}
-\section{Nativity of our Lord}
-\subtitle{1st Class}
-\medskip
-\subtitle{December 24, I Vespers}
+\section{Nativity of our Lord -- I Vespers}
+\subtitle{December 24, 1st Class}
 
-TODO
+\newcommand{\printhymnnote}{
+	\noindent\printnote{Hymn. \emph{Jesu Redémptor ómnium}, page \pageref{hymn-jesuredemptoromnium}.\\}
+	{
+		\definevesperspropers
+		\def\vrlinebreak{T}
+		\printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+	}
+}
+\def\definevesperspropers{\input{\gabcfolder/inc-Christmas-Vespers1}}
+\printvespers[../Christmas-Vespers1]{inc-Christmas-Vespers1-psalms}
+\bigskip
+\benedicamusdomino{}
 }
 
 {
-\subtitle{December 25, II Vespers}
+\section{Nativity of our Lord -- II Vespers}
+\subtitle{December 25, 1st Class}
 
 \def\definevesperspropers{\input{\gabcfolder/inc-Christmas-Vespers2}}
 \def\definevesperspropersalt{\input{\gabcfolder/inc-SundayWithinOctaveOfChristmas-Vespers2}}

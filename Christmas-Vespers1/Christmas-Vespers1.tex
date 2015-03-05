@@ -1,0 +1,33 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+
+\newcommand{\heading}{Christmas at I Vespers.}
+\sloppy
+
+\input{Christmas-Vespers1-psalms}
+
+\def\vrnospace{T}
+
+\newcommand{\premag}{
+\large
+\setgrefactor{17}
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+\newcommand{\magfontsize}{33}
+\def\magoneline{T}
+\newcommand{\premagverses}{\greblockcustos\setgrefactor{15}
+\normalsize
+%\pagebreak
+}
+
+\definebenedicamusdomino{1}{1}
+
+\input{inc-Christmas-Vespers1}
+\input{../inc_header}
+\input{../FullVespers-test}

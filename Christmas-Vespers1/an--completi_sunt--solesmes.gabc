@@ -1,0 +1,15 @@
+name:Completi sunt;
+office-part:Antiphona;
+mode:8;
+book:The Liber Usualis, 1961, p. 364;
+transcriber:Andrew Hinkley;
+def-m1:}{\greblockcustos{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:\fi};
+%%
+(c4) COm(h')plé(f)ti(fg) sunt(g) <v>\greheightstar</v>()
+di(h_j)es(j_') Ma(g)rí(h)æ,(g.) (;)
+ut(j) pá(j')re(i)ret(h') fí(j)li(i)um(hg~) su(h)um(gf~) pri(g')mo(h)gé(i')ni(h[em1])tum.(g.) (::[em2]Z[em3])
+
+E(j) u(j) o(i) u(j) a(h) e.(g.) (::[em4])
