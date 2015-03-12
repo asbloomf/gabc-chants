@@ -3,9 +3,13 @@ office-part:Antiphona;
 mode:8;
 book:The Liber Usualis, 1961, p. 452;
 transcriber:Andrew Hinkley;
+def-m1:}{\greblockcustos{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:\fi};
 %%
-(c3) SA(h)cri(g')fi(e)cá(g_h)bo(fe) *()
+(c3) SA(h)cri(g')fi(e)cá(g_h)bo(fe) <v>\greheightstar</v>()
 hó(f)sti(e)am(d) lau(ef~)dis,(f.) (;)
-et(h) no(g')men(e) Dó(g_h)mi(f)ni(ed) in(ef)vo(f)cá(e.)bo.(e.) () (::) ()
+et(h) no(g')men(e) Dó(g_h)mi(f)ni(ed) in(ef)vo(f)cá(e.[em1])bo.(e.) (::[em2]z[em3])
 
-E(h) u(h) o(f) u(h) a(i) e.(h.) (::)
+E(h) u(h) o(f) u(h) a(i) e.(h.) (::[em4])

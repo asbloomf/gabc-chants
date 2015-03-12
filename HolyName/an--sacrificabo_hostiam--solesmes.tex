@@ -22,11 +22,11 @@
 \grehepisemusbottom{f}{0}{-1}%
 }%
 }%
-\gresyllable{b}{o}{}{1}{}{\grestar{}}{0}{}{%
+\gresyllable{b}{o}{}{1}{}{\greheightstar}{0}{}{%
 \greglyph{\char 6145}{f}{f}{8}{}{}%
 }%
 %
-\gresyllable{}{\grestar{}}{}{1}{h}{ó}{0}{}{%
+\gresyllable{}{\greheightstar}{}{1}{h}{ó}{0}{}{%
 }%
 %
 \gresyllable{h}{ó}{}{0}{st}{i}{0}{}{%
@@ -87,21 +87,29 @@
 \greglyph{\char 17}{e}{e}{0}{}{%
 \grepunctummora{e}{0}{0}{0}%
 }%
+% verbatim text at element level:
+}{\greblockcustos{%
+% end of verbatim text
 }%
-\gresyllable{b}{o}{.}{1}{}{}{0}{}{%
+\gresyllable{b}{o}{.}{1}{}{}{12}{}{%
 \greglyph{\char 17}{e}{h}{0}{}{%
 \grepunctummora{e}{0}{0}{0}%
 }%
 }%
 %
-\gresyllable{}{}{}{1}{}{}{12}{}{%
-}%
+\grebarsyllable{}{}{}{1}{}{E}{0}{}{%
+\greindivisiofinalis{}%
+% verbatim text at element level:
+\ifx\breakbeforeEuouae\undefined\else%
+% end of verbatim text
 %
-\grebarsyllable{}{}{}{1}{}{}{0}{}{%
-\gredivisiofinalis{}%
-}%
 %
-\gresyllable{}{}{}{1}{}{E}{0}{}{%
+\grenewline %
+%
+%
+% verbatim text at element level:
+\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{%
+% end of verbatim text
 }%
 %
 \gresyllable{}{E}{}{1}{}{u}{0}{}{%
@@ -131,5 +139,8 @@
 }%
 %
 \grefinaldivisiofinalis{0}%
+% verbatim text at element level:
+\fi}%
+% end of verbatim text
 \endgregorioscore %
 \endinput %

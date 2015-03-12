@@ -11,7 +11,7 @@
 \usepackage{titletoc}
 \usepackage{titleps}
 \usepackage{letltxmacro}
-\usepackage[strict]{changepage} % gives us \ifoddpage
+\usepackage{changepage} % gives us \ifoddpage use [strict]
 
 \LetLtxMacro{\oldneedspace}{\needspace}
 \renewcommand{\needspace}[1]{
@@ -91,13 +91,16 @@
 
 \newcommand{\deusinadjutorium}{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, page \pageref{deusinadjutorium}.}}
 \newcommand{\printcollect}[2]{
-\needspace{3\baselineskip}
-\begin{center}{\large Collect.}\end{center}
-\vspace{-0.5\baselineskip plus 0.25\baselineskip}
-\begin{parcolumns}[rulebetween]{2}
-\sloppy
-\prayer{#1}{#2}
-\end{parcolumns}
+	\ifx\printcollectheading\undefined\def\printcollectheading{T}\fi
+	\if\printcollectheading T
+	\needspace{3\baselineskip}
+	\begin{center}{\large Collect.}\end{center}
+	\vspace{-0.5\baselineskip plus 0.25\baselineskip}
+	\fi
+	\begin{parcolumns}[rulebetween]{2}
+	\sloppy
+	\prayer{#1}{#2}
+	\end{parcolumns}
 }
 \newcommand{\psalmcolsoverride}[1][0]{
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
@@ -105,6 +108,12 @@
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
 \fi
 \ifnum#1=111
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
+\fi
+\ifnum#1=129
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
+\fi
+\ifnum#1=131
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
 \fi
 }
@@ -172,14 +181,14 @@
 		\ifx\definevesperspropers\undefined\else{
 			\definevesperspropers
 			\ifx\vesperspropersnote\undefined\else
-				\printnote{\vesperspropersnote}
+				\noindent\printnote{\vesperspropersnote}
 			\fi
 			\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
 		}\fi
 		\ifx\definevesperspropersalt\undefined\else{
 			\definevesperspropersalt
 			\ifx\vesperspropersaltnote\undefined\else
-				\printnote{\vesperspropersaltnote}
+				\noindent\printnote{\vesperspropersaltnote}
 			\fi
 			\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
 		}\fi
@@ -187,9 +196,14 @@
 		\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
 	}\fi
 	%\medskip
+	\vspace{-\baselineskip}
 	\needspace{3\baselineskip}
 	\ifx\chapterreplacement\undefined{
 		\ifx\chaptertext\undefined
+			\def\printchapterheading{F}
+		    \begin{center}{\large\textbf Chapter.}\end{center}
+
+		    \vspace{-0.25\baselineskip plus 0.125\baselineskip}
 			\ifx\definevesperspropers\undefined\else
 			{
 				\ifx\vesperspropersnote\undefined\else
@@ -233,7 +247,9 @@
 			\definevesperspropersalt
 		    \begin{center}{\large Magnificat.}\end{center}
 	    	\vspace{-1ex}
+
 	    	\ifx\vesperspropersaltnote\undefined\else
+	    		\needspace{14\baselineskip}
 				\printnote{\vesperspropersaltnote\\}
 			\fi
 			\let\anttranslation=\maganttranslation
@@ -246,6 +262,7 @@
 		\ifx\definevesperspropers\undefined\else
 			\definevesperspropers
 	    	\ifx\vesperspropersnote\undefined\else
+	    		\needspace{14\baselineskip}
 				\printnote{\vesperspropersnote\\}
 			\fi
 			\def\nomagtitle{T}
@@ -261,8 +278,14 @@
 	\fi
 	{\ifx\postmag\undefined\else\postmag\fi}
 
+	\vspace{-\baselineskip}
 	\ifx\collectreplacement\undefined{
 		\ifx\collect\undefined
+			\def\printcollectheading{F}
+			\needspace{3\baselineskip}
+			\begin{center}{\large Collect.}\end{center}
+
+			\vspace{-0.5\baselineskip plus 0.25\baselineskip}
 			\ifx\definevesperspropers\undefined\else
 			{
 				\ifx\vesperspropersnote\undefined\else
@@ -351,10 +374,10 @@ Magnificat, and Collect given for the respective Sunday or Feast.}
 
 %\input{inc-marian-anthems}
 
-\input{inc-advent}
+%\input{inc-advent}
 
 % christmas through Holy Family
-%\input{inc-christmas}
+\input{inc-christmas}
 
 %\input{inc-timeafterepiphany}
 

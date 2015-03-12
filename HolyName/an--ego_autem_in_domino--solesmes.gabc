@@ -3,10 +3,14 @@ office-part:Antiphona;
 mode:3;
 book:The Liber Usualis, 1961, p. 451;
 transcriber:Andrew Hinkley;
+def-m1:}{\greblockcustos{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:\fi};
 %%
 (c4) E(e_d)go(g) au(hj)tem(j.) <v>\greheightstar</v>(,)
 in(i_j) Dó(k')mi(j)no(ji) gau(h!iwj_i)dé(hg)bo,(g.) (;)
 et(g) ex(e)sul(g)tá(gh)bo(g'_) (,)
-in(g) De(gh)o(hv_GF') Jé(g)su(gf) me(e.)o.(e.) (::z)
+in(g) De(gh)o(hv_GF') Jé(g)su(gf) me(e.[em1])o.(e.) (::[em2]z[em3])
 
-E(j) u(j) o(ji) u(hi) a(h) e.(gh..) (::)
+E(j) u(j) o(ji) u(hi) a(h) e.(gh..) (::[em4])

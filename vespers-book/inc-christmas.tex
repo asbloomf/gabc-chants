@@ -20,8 +20,9 @@
 	}
 }
 \def\definevesperspropers{\input{\gabcfolder/inc-Christmas-Vespers1}}
+\newcommand{\preantfour}{\needspace{5\baselineskip}}
 \printvespers[../Christmas-Vespers1]{inc-Christmas-Vespers1-psalms}
-\bigskip
+
 \benedicamusdomino{}
 }
 
@@ -59,20 +60,22 @@
 	}
 }
 \printvespers[../Christmas]{inc-Christmas-Vespers2-psalms}
-\bigskip
+
 \benedicamusdomino{}
 }
 
 {
 \section{Octave of the Nativity of our Lord}
 \subtitle{1st Class}
-\medskip
+
 \subtitle{January 1, II Vespers}
 
 \def\definevesperspropers{\input{\gabcfolder/inc-Circumcision-Vespers2}}
+\def\preantthree{\needspace{10\baselineskip}}
 \newcommand{\printhymnnote}{
 	\noindent\printnote{Hymn. \emph{Jesu Redémptor ómnium}, page \pageref{hymn-jesuredemptoromnium}.\\}
 	{
+		\def\vrlinebreak{T}
 		\definevesperspropers
 		\printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
 	}
@@ -82,16 +85,17 @@
 %\def\vesperspropersaltnote{At II Vespers of the Sunday within the Octave of Christmas:}
 
 \printvespers[../ChristmasOctave-Circumcision]{inc-Circumcision-psalms}
-\bigskip
+
 \benedicamusdomino{}
 }
 
 {
+\needspace{5\baselineskip}
 \section{The Most Holy Name of Jesus}
 \subtitle{2nd Class}
-\medskip
+
 \subtitle{This feast is celebrated on the Sunday between the Octave Day of the Nativity and the Epiphany of Our Lord.  If no Sunday occurs within that time, this feast is then celebrated on January 2.}
-\medskip
+
 \subtitle{When the Feast of the Most Holy Name of Jesus occurs on January 5, the First Vespers of the Epiphany on page \pageref{epiphany} are sung without a commemoration of the Holy Name of Jesus.}
 
 %\def\definevesperspropersalt{\input{\gabcfolder/inc-HolyName-1Vespers}}
@@ -99,6 +103,7 @@
 %\def\vesperspropersaltnote{At I Vespers of the Most Holy Name of Jesus:}
 %\def\vesperspropersnote{At II Vespers of the Most Holy Name of Jesus:}
 \def\printfullhymn{
+	\needspace{15\baselineskip}
 	\label{hymn-jesudulcismemoria}
 	{
 		\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
@@ -108,7 +113,7 @@
 }
 
 \printvespers[../HolyName]{inc-HolyName-common}
-\bigskip
+
 \benedicamusdomino{}
 }
 
@@ -117,9 +122,9 @@
 \label{epiphany}
 \section{The Epiphany of Our Lord}
 \subtitle{1st Class}
-\medskip
-\subtitle{January 5, I Vespers as at II Vespers except where indicated.}
-\medskip
+
+\subtitle{January 5, I Vespers, \emph{all as at II Vespers except where indicated.}}
+
 \subtitle{January 6, II Vespers}
 
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Epiphany-Vespers1}}
@@ -136,14 +141,14 @@
 }
 
 \printvespers[../Epiphany]{inc-Epiphany-Vespers}
-\bigskip
+
 \benedicamusdomino{}
 }
 
 {
 \section{Holy Family of Jesus, Mary \& Joseph}
 \subtitle{2nd Class}
-\medskip
+
 \subtitle{First Sunday after the Epiphany.}
 
 \def\printfullhymn{
@@ -155,7 +160,7 @@
 }
 
 \printvespers[../HolyFamily]{inc-HolyFamily-Vespers2}
-\bigskip
+
 \benedicamusdomino{}
 }
 
