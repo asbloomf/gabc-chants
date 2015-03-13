@@ -615,6 +615,9 @@ five%
 %TODO: psalmtitle properly when canticleof defined
 \ifx\canticleof\undefined
   \def\printpsalmtitle{%
+    \ifx\prepsalmtitle\undefined\else
+      \prepsalmtitle
+    \fi
     \medskip
     \needspace{\baselineskip}
     {\large \hfill\psalmtitle\hfill}
@@ -623,6 +626,9 @@ five%
   }
 \else
   \def\printpsalmtitle{%
+    \ifx\prepsalmtitle\undefined\else
+      \prepsalmtitle
+    \fi
     \medskip
     {\needspace{2\baselineskip}
     \large

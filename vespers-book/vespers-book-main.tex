@@ -178,19 +178,42 @@
 	\printpsalm{4}{\psalmfournum}{\psalmfourtone\psalmfourend}{\antfourtex}{\antfourinitial}
 	\medskip
 	\ifx\psalmfivenum\undefined{
-		\ifx\definevesperspropers\undefined\else{
-			\definevesperspropers
-			\ifx\vesperspropersnote\undefined\else
-				\noindent\printnote{\vesperspropersnote}
-			\fi
-			\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
-		}\fi
-		\ifx\definevesperspropersalt\undefined\else{
-			\definevesperspropersalt
-			\ifx\vesperspropersaltnote\undefined\else
-				\noindent\printnote{\vesperspropersaltnote}
-			\fi
-			\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
+		\ifx\antfivetex\undefined{%then it is a different antiphon for each
+			\ifx\definevesperspropersalt\undefined\else{
+				\definevesperspropersalt
+				\ifx\vesperspropersaltnote\undefined\else
+					\noindent\printnote{\vesperspropersaltnote}
+				\fi
+				\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
+			}\fi
+			\ifx\definevesperspropers\undefined\else{
+				\definevesperspropers
+				\ifx\vesperspropersnote\undefined\else
+					\noindent\printnote{\vesperspropersnote}
+				\fi
+				\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
+			}\fi
+		}\else{%they share the same antiphon
+			\ifx\definevesperspropersalt\undefined\else{
+				\definevesperspropersalt
+				\ifx\vesperspropersaltnote\undefined\else
+					\def\prepsalmtitle{
+						\smallskip
+						\noindent\printnote{\vesperspropersaltnote}
+
+					}
+				\fi
+				\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
+			}\fi
+			\def\onlyoneant{T}
+			\ifx\definevesperspropers\undefined\else{
+				\definevesperspropers
+				\ifx\vesperspropersnote\undefined\else
+					\noindent\printnote{\vesperspropersnote}
+				\fi
+				\def\prepsalmtitle{\def\onlyoneant{F}}
+				\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
+			}\fi
 		}\fi
 	}\else{
 		\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
@@ -204,15 +227,6 @@
 		    \begin{center}{\large\textbf Chapter.}\end{center}
 
 		    \vspace{-0.25\baselineskip plus 0.125\baselineskip}
-			\ifx\definevesperspropers\undefined\else
-			{
-				\ifx\vesperspropersnote\undefined\else
-					\printnote{\vesperspropersnote}
-				\fi
-				\definevesperspropers
-				\printchapter{\chaptertext}{\chaptertranslation}
-			}
-			\fi
 			\ifx\definevesperspropersalt\undefined\else
 			\medskip
 			{
@@ -220,6 +234,15 @@
 					\printnote{\vesperspropersaltnote}
 				\fi
 				\definevesperspropersalt
+				\printchapter{\chaptertext}{\chaptertranslation}
+			}
+			\fi
+			\ifx\definevesperspropers\undefined\else
+			{
+				\ifx\vesperspropersnote\undefined\else
+					\printnote{\vesperspropersnote}
+				\fi
+				\definevesperspropers
 				\printchapter{\chaptertext}{\chaptertranslation}
 			}
 			\fi
@@ -250,7 +273,7 @@
 
 	    	\ifx\vesperspropersaltnote\undefined\else
 	    		\needspace{14\baselineskip}
-				\printnote{\vesperspropersaltnote\\}
+				\printnote{\vesperspropersaltnote\\\vspace{-0.5\baselineskip}}
 			\fi
 			\let\anttranslation=\maganttranslation
 			\let\preverses=\premagverses
@@ -263,7 +286,7 @@
 			\definevesperspropers
 	    	\ifx\vesperspropersnote\undefined\else
 	    		\needspace{14\baselineskip}
-				\printnote{\vesperspropersnote\\}
+				\printnote{\vesperspropersnote\\\vspace{-0.5\baselineskip}}
 			\fi
 			\def\nomagtitle{T}
 		\fi

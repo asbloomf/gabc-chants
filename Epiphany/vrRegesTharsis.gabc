@@ -8,6 +8,9 @@ transcriber: Albert Bloomfield;
 transcription-date: 2012;
 style: modern;
 initial-style: 0;
+def-m1:\ifx\vrlinebreak\undefined\else;
+def-m2:\fi;
 %%
 
-(c3)<sp>V/</sp>~R{é}(h)ges(h) Thár(h)sis(h) et(h) ín(hi)su(h)læ(h'_) (,) mú(h)ne(f')ra(e) óf(f_h)fe(h)rent.(hiH'G/hih./ghG'FE'fg/gf.) (::) <sp>R/</sp>~Ré(h)ges(h) A(h)ra(h)bum(h) et(h) Sá(hi)ba(h'_) (,) dó(h)na(f') ad(e)dú(f_h)cent.(hiH'G/hih./ghG'FE'fg/gf.) (::)
+(c3)<sp>V/</sp>~R{é}(h)ges(h) Thár(h)sis(h) et(h) ín(hi)su(h)læ(h'_) (,) mú(h)ne(f')ra(e) óf(f_h)fe(h)rent.(hiH'G/hih./ghG'FE'fg/gf.) (::[em1]Z[em2])
+<sp>R/</sp>~Ré(h)ges(h) A(h)ra(h)bum(h) et(h) Sá(hi)ba(h'_) (,) dó(h)na(f') ad(e)dú(f_h)cent.(hiH'G/hih./ghG'FE'fg/gf.) (::)

@@ -13,6 +13,10 @@ transcription-date: 2012;
 style: modern;
 annotation: At Magn.;
 annotation: 1. D;
+def-m1:}{\greblockcustos{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:\fi};
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -23,9 +27,9 @@ annotation: 1. D;
 hó(d)di(dh)e(h.) (,) stél(h)la(g) Má(hg)gos(f) dú(g_h)xit(fv_EC') ad(d) præ(fe)sé(d)pi(cd)um :(d.) (:)
 hó(d)di(dg)e(g'_) (,) ví(h)num(g') ex(f) á(fe)qua(d') fá(f)ctum(g) est(ed) ad(fe~) núp(d)ti(cd)as :(d.) (:)
 hó(d)di(dh)e(h'_) (,) in(h) Jor(g')dá(h)ne(f') a(g) Jo(f')án(g)ne(g'_) (,) Chrí(g)stus(g') bap(g)ti(gh)zá(hg)ri(f') vó(g)lu(fe)it,(d_fd/dc.) (;)
-ut(c_d) sal(f_gF'E)vá(g_h_g_)ret(fe) nos,(dc) al(d)le(fe)lú(d.)ia.(d.) (::)
+ut(c_d) sal(f_gF'E)vá(g_h_g_)ret(fe) nos,(dc) al(d)le(fe)lú(d.[em1])ia.(d.) (::[em2]z[em3])
 
-E(h) u(h) o(g) u(f) a(gh) e.(gvFED.) (::)
+E(h) u(h) o(g) u(f) a(gh) e.(gvFED.) (::[em4])
 
 % comment out the following lines in the tex
 %\grehepisemusbridge{g}{}{}%

@@ -93,7 +93,18 @@
 }%
 %
 \grebarsyllable{}{}{}{1}{\Rbar{}~R}{é}{0}{}{%
-\gredivisiofinalis{}%
+\greindivisiofinalis{}%
+% verbatim text at element level:
+\ifx\vrlinebreak\undefined\else%
+% end of verbatim text
+%
+%
+\grenewparline %
+%
+%
+% verbatim text at element level:
+\fi%
+% end of verbatim text
 }%
 %
 \gresyllable{\Rbar{}~R}{é}{}{0}{g}{e}{0}{}{%

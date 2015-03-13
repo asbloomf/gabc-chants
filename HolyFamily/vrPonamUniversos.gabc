@@ -8,6 +8,8 @@ transcriber: Albert Bloomfield;
 transcription-date: 2011;
 style: modern;
 initial-style: 0;
+def-m1:\ifx\vrlinebreak\undefined\else;
+def-m2:\fi;
 %%
-(c3)<sp>V/</sp>~P{ó}(h)nam(h) u(h)ni(h)vér(h)sos(h) fí(h)li(h)os(h) tú(h)os(h) dó(h)ctos(h) a(h) Dó(h)mi(h)no.(g'_/hvGF'Efgf.) (::)
+(c3)<sp>V/</sp>~P{ó}(h)nam(h) u(h)ni(h)vér(h)sos(h) fí(h)li(h)os(h) tú(h)os(h) dó(h)ctos(h) a(h) Dó(h)mi(h)no.(g'_/hvGF'Efgf.) (::[em1]Z[em2])
 <sp>R/</sp>~Et(h) mul(h)ti(h)tú(h)di(h)nem(h) pá(h)cis(h) fí(h)li(h)is(h) tú(h)is.(g'_/hvGF'Efgf.) (::)
