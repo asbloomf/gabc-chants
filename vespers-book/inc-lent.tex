@@ -1,4 +1,12 @@
-\chapter{Proper of the Time -- Shrovetide}
+\chapter{Proper of the Time -- Shrovetide \& Lent}
+\newcommand{\printcommonvespers}[1][2nd]{
+	\subtitle{#1 Class}
+	\printnote{As on Sundays of Vespers throughout the year on page \pageref{sundayvespers}.}
+}
+\def\printcommemnote{\smallskip
+\noindent
+\printnote{\commemorations{}  Otherwise \Vbar~\emph{Bendicámus Dómino}, page \pageref{benedicamusdomino-lent}.}
+}
 {
 \newcommand{\benedicamusdomino}[1][sunday]{
 	\noindent\printnote{\Vbar~\emph{Benedicámus Dómino}, page \pageref{benedicamusdomino-#1}.}
@@ -12,8 +20,7 @@
 
 {
 \section{Septuagesima}
-\subtitle{2nd Class}
-\printnote{As on Sundays of Vespers throughout the year on page \pageref{sundayvespers}.}
+\printcommonvespers{}
 \printvespersmag[../Lent]{inc-VespersMagnificatSeptuagesima}
 
 \bigskip
@@ -22,8 +29,9 @@
 
 {
 \section{Sexagesima}
-\subtitle{2nd Class}
-\printnote{As on Sundays of Vespers throughout the year on page \pageref{sundayvespers}.}
+\printcommonvespers{}
+\def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.445\linewidth}]{2}}
+\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
 \printvespersmag[../Lent]{inc-VespersMagnificatSexagesima}
 
 \bigskip
@@ -32,8 +40,7 @@
 
 {
 \section{Quinquagesima}
-\subtitle{2nd Class}
-\printnote{As on Sundays of Vespers throughout the year on page \pageref{sundayvespers}.}
+\printcommonvespers{}
 \printvespersmag[../Lent]{inc-VespersMagnificatQuinquagesima}
 
 \bigskip
@@ -55,8 +62,7 @@
 
 {
 \section{1st Sunday of Lent}
-\subtitle{1st Class}
-\printnote{As on Sundays of Vespers throughout the year on page \pageref{sundayvespers}.}
+\printcommonvespers[1st]
 \def\printfullhymn{
 	\label{hymn-audibenigneconditor}
 	{
@@ -78,48 +84,55 @@
 
 {
 \section{2nd Sunday of Lent}
-\subtitle{1st Class}
-\printnote{As on Sundays of Vespers throughout the year on page \pageref{sundayvespers}.}
+\printcommonvespers[1st]
 \printvespersmag[../Lent]{inc-VespersMagnificatLent2}
+
+\def\commemorations{If today is March 18 or 19, the First Vespers of St Joseph is commemorated as follows.}
+\printcommemnote{}
 }
+
 {
-TODO could be commemoration of first vespers feast of St Joseph (March 19 or March 20 if transferred)
+\label{stjoseph-commem}
+\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
+\def\vrlinebreak{T}
+\printcommemoration[../March19-StJoseph]{commemorationStJoseph-Vespers1}
+
 \bigskip
 \benedicamusdomino{}
 }
 
 {
 \section{3rd Sunday of Lent}
-\subtitle{1st Class}
-\printnote{As on Sundays of Vespers throughout the year on page \pageref{sundayvespers}.}
+\printcommonvespers[1st]
 \printvespersmag[../Lent]{inc-VespersMagnificatLent3}
+
+\def\commemorations{If today is March 18 or 19, the First Vespers of St Joseph is commemorated as on page \pageref{stjoseph-commem}.  If today is March 25 or 26, the First Vespers of the Annunciation is commemorated as follows.}
+\printcommemnote{}
 }
+
 {
-TODO could be commem of first vespers of St Joseph (March 19 or March 20 if transferred)
-TODO could be commem of first vespers of Annunciation (March 25 or 26 if transferred)
+\label{annunciation-commem}
+%\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43\linewidth}]{2}}
+\printcommemoration[../March25-Annunciation]{commemorationAnnunciation-Vespers1}
+
 \bigskip
 \benedicamusdomino{}
 }
 
+\def\commemorations{If today is March 18 or 19, the First Vespers of St Joseph is commemorated as on page \pageref{stjoseph-commem}.  If today is March 25 or 26, the First Vespers of the Annunciation is commemorated as on page \pageref{annunciation-commem}.}
 {
 \section{4th Sunday of Lent}
-\subtitle{1st Class}
-\printnote{As on Sundays of Vespers throughout the year on page \pageref{sundayvespers}.}
+\printcommonvespers[1st]
 \printvespersmag[../Lent]{inc-VespersMagnificatLent4}
-}
-{
-TODO could be commem of St Joseph or annunciation
-\bigskip
-\benedicamusdomino{}
+
+\printcommemnote{}
 }
 
 {
 \section{Passion Sunday}
-\subtitle{1st Class}
-\printnote{As on Sundays of Vespers throughout the year on page \pageref{sundayvespers}.}
+\printcommonvespers[1st]
 \def\printfullhymn{
 	\label{hymn-vexillaregis}
-	TODO fix all caps alignment
 	{
 	\input{\gabcfolder/inc-hymn-VexillaRegis}
 	\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
@@ -132,26 +145,19 @@ TODO could be commem of St Joseph or annunciation
 	}
 }
 \printvespersmag[../Lent]{inc-VespersMagnificatPassion1}
-}
-{
-TODO could be commem of St Joseph or annunciation
-\bigskip
-\benedicamusdomino{}
+
+\printcommemnote{}
 }
 
 {
 \section{Palm Sunday}
-\subtitle{1st Class}
-\printnote{As on Sundays of Vespers throughout the year on page \pageref{sundayvespers}.}
+\printcommonvespers[1st]
 \renewcommand{\printhymnnote}{
 	\noindent\printnote{Hymn. \emph{Vexílla Regis}, page \pageref{hymn-vexillaregis}.
 	\Vbar~\emph{Eripe me, Dómine}, page \pageref{vr-eripeme}.}
 }
 \printvespersmag[../Lent]{inc-VespersMagnificatPassion2}
-}
-{
-TODO could be commem of annunciation
-TODO could be commem of 1st vespers of St Joseph the worker if today is April 30, May 1, or May 2
+
 \bigskip
 \benedicamusdomino{}
 }

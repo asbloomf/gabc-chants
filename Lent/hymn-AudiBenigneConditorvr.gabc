@@ -11,6 +11,8 @@ transcriber: Albert Bloomfield;
 transcription-date: 2011;
 style: modern;
 initial-style:0;
+def-m1:\ifx\vrlinebreak\undefined\else;
+def-m2:\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -21,5 +23,5 @@ initial-style:0;
 %Angelis súis Déus mandávit de te.
 %Ut custódiant te in ómnibus víis túis.
 
-(c3) () <sp>V/</sp>~{A}n(h)ge(h)lis(h) sú(h)is(h) Dé(h)us(h) man(h)dá(h)vit(h) de(h) te.(g'_hvGF'Efgf.) (::)
+(c3)<sp>V/</sp>~{A}n(h)ge(h)lis(h) sú(h)is(h) Dé(h)us(h) man(h)dá(h)vit(h) de(h) te.(g'_hvGF'Efgf.) (::[em1]Z[em2])
 <sp>R/</sp>~Ut(h) cu(h)stó(h)di(h)ant(h) te(h) in(h) óm(h)ni(h)bus(h) ví(h)is(h) tú(h)is.(g'_hvGF'Efgf.) (::)

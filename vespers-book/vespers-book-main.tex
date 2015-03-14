@@ -91,16 +91,18 @@
 
 \newcommand{\deusinadjutorium}{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, page \pageref{deusinadjutorium}.}}
 \newcommand{\printcollect}[2]{
+	\ifx\undefined\begincollectcols\def\begincollectcols{\begin{parcolumns}[rulebetween]{2}}\fi
 	\ifx\printcollectheading\undefined\def\printcollectheading{T}\fi
 	\if\printcollectheading T
 	\needspace{3\baselineskip}
 	\begin{center}{\large Collect.}\end{center}
-	\vspace{-0.5\baselineskip plus 0.25\baselineskip}
+	\vspace{-0.4\baselineskip}
 	\fi
-	\begin{parcolumns}[rulebetween]{2}
+	\begincollectcols
 	\sloppy
 	\prayer{#1}{#2}
 	\end{parcolumns}
+	\let\begincollectcols=\undefined
 }
 \newcommand{\psalmcolsoverride}[1][0]{
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
@@ -122,14 +124,13 @@
 	\input{\gabcfolder/#2}
 	\subtitle{\comheadingtext}
 	\sectionmark{\comheadingtext}
-
 	{
 	\def\noeuouae{T}
 	\printgabc{At Magn.}{\oldstylenums{\commagantlinetwo}}{\commagantinitial}{\commaganttex}
 	}
 	\translation[]{\englishcommagantiphon}
 
-	\bigskip
+	\smallskip
 	\printvr[\greblockcustos]{\commvrtex}{\commvtranslation}{\commrtranslation}
 
 	\printcollect{\latincomcollect}{\englishcomcollect}
@@ -140,8 +141,9 @@
 	\input{\gabcfolder/#2}
 
 	\ifx\chaptertext\undefined\else{
+		\oldneedspace{3\baselineskip}
 		\printchapter{\chaptertext}{\chaptertranslation}
-		\bigskip
+		\smallskip
 	}\fi
 
 	\ifx\printfullhymn\undefined
@@ -157,6 +159,7 @@
 	    \let\preant=\premag
 		\printmag{\magtone\magend}{\magantinitial}{\maganttex}
 	}
+	\vspace{-1\baselineskip}
 	\oldneedspace{3\baselineskip}
 	\printcollect{\latincollect}{\englishcollect}
 }
@@ -402,12 +405,12 @@ Magnificat, and Collect given for the respective Sunday or Feast.}
 % christmas through Holy Family
 %\input{inc-christmas}
 
-\input{inc-timeafterepiphany}
+%\input{inc-timeafterepiphany}
 
 %from shrovetide through passiontide
 %\input{inc-lent}
 
-%\input{inc-easter}
+\input{inc-easter}
 
 %\input{inc-pentecost}
 

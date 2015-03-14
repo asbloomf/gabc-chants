@@ -778,16 +778,18 @@ five%
 % 2 - chapter translation
 %TODO: optional no translation
     \ifx\printchapterheading\undefined\def\printchapterheading{T}\fi
+    \ifx\beginchaptercols\undefined\def\beginchaptercols{\begin{parcolumns}[rulebetween]{2}}\fi
     \if\printchapterheading T
     \begin{center}{\large\textbf Chapter.}\end{center}
-    \vspace{-0.25\baselineskip plus 0.125\baselineskip}
+    \vspace{-0.3\baselineskip}
     \fi
     % default width is 265pt
     % ,colwidths={1=253pt}
-    \begin{parcolumns}[rulebetween]{2}
+    \beginchaptercols{}
     \colchunk{\sloppy#1}
     \colchunk{\sloppy \dropcap{american}{#2}}
     \end{parcolumns}
+    \let\beginchaptercols=\undefined
 }
 %
 \else %
@@ -952,7 +954,7 @@ five%
     }%
     %\vspace{-1ex}
     \translation[]{\anttranslation}
-    \medskip
+    %\smallskip
     \ifx\magnificatnote\undefined\else{
       \vspace{0.5\baselineskip}
       \magnificatnote{}

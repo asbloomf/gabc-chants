@@ -10,6 +10,10 @@ date: 2011;
 transcriber: Albert Bloomfield;
 transcription-date: 2011;
 style: modern;
+def-m1:}{\greblockcustos{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:\fi};
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -17,7 +21,11 @@ style: modern;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-EC(c3d)ce(de) nunc(eed~) <v>\greheightstar</v>() tém(f')pus(h) ac(g')cep(h)tá(f)bi(de)le,(e_f_e_.) (;) ec(d)ce(de) nunc(e') dí(e)es(fg) sa(f')lú(e)tis :(e.) (:) in(d_f) his(h!i'j) er(hg~)go(f) di(i)é(hg)bus(e'_) (;) ex(f)hi(g')be(f)á(h')mus(g) nos(f'_) (,) si(d)cut(f) Dé(h_f)i(g') mi(f)nís(e)tros,(e.) (:) in(e_i) múl(i_j)ta(h) pa(hg)ti(f)én(h_i)ti(h)a,(e.) (;) in(g) je(f)jú(h')ni(i)is,(h'_) in(f) vi(e)gí(f)li(e)is,(d.) (;) et(f) in(ed~) ca(e)ri(fg)tá(%
+EC(c3d)ce(de) nunc(eed~) <v>\greheightstar</v>() tém(f')pus(h) ac(g')cep(h)tá(f)bi(de)le,(e_f_e_.) (;)
+ec(d)ce(de) nunc(e') dí(e)es(fg) sa(f')lú(e)tis :(e.) (:) in(d_f) his(h!i'j) er(hg~)go(f) di(i)é(hg)bus(e'_) (;)
+ex(f)hi(g')be(f)á(h')mus(g) nos(f'_) (,) si(d)cut(f) Dé(h_f)i(g') mi(f)nís(e)tros,(e.) (:)
+in(e_i) múl(i_j)ta(h) pa(hg)ti(f)én(h_i)ti(h)a,(e.) (;) in(g) je(f)jú(h')ni(i)is,(h'_) in(f) vi(e)gí(f)li(e)is,(d.) (;)
+et(f) in(ed~) ca(e)ri(fg)tá(%
 [ev:% g.f!gwh
 \greglyph{\char 5121}{g}{g}{8}{}{%
 \raisebox{1pt}{\grepunctummora{g}{3}{0}{0}}%
@@ -25,5 +33,6 @@ EC(c3d)ce(de) nunc(eed~) <v>\greheightstar</v>() tém(f')pus(h) ac(g')cep(h)tá(
 \greendofglyph{1}%
 \greglyph{\char 2561}{g}{f}{4}{}{}%
 ]%
-)te(fe) non(fgf~) fí(e.)cta.(e.) (::)
-E(h) u(h) o(g) u(h) a(f) e.(ef..) (::)
+)te(fe) non(fgf~) fí(e.[em1])cta.(e.) (::[em2]z[em3])
+
+E(h) u(h) o(g) u(h) a(f) e.(ef..) (::[em4])

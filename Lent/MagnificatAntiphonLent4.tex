@@ -127,14 +127,29 @@
 \greglyph{\char 17}{d}{d}{0}{}{%
 \grepunctummora{d}{0}{0}{0}%
 }%
+% verbatim text at element level:
+}{\greblockcustos{%
+% end of verbatim text
 }%
-\gresyllable{}{i}{s.}{1}{}{E}{0}{}{%
+\gresyllable{}{i}{s.}{1}{}{}{12}{}{%
 \greglyph{\char 17}{d}{h}{0}{}{%
 \grepunctummora{d}{0}{0}{0}%
 }%
-\greendofelement{2}{0}%
-\greendofelement{2}{0}%
-\gredivisiofinalis{}%
+}%
+%
+\grebarsyllable{}{}{}{1}{}{E}{0}{}{%
+\greindivisiofinalis{}%
+% verbatim text at element level:
+\ifx\breakbeforeEuouae\undefined\else%
+% end of verbatim text
+%
+%
+\grenewline %
+%
+%
+% verbatim text at element level:
+\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{%
+% end of verbatim text
 }%
 %
 \gresyllable{}{E}{}{1}{}{u}{0}{}{%
@@ -157,15 +172,15 @@
 \greglyph{\char 1025}{g}{g}{0}{}{}%
 }%
 %
-\gresyllable{}{e}{.}{1}{}{}{0}{%
-\grelastofscore %
-}{%
+\gresyllable{}{e}{.}{1}{}{}{12}{}{%
 \greglyph{\char 17}{g}{g}{0}{}{%
 \grepunctummora{g}{0}{0}{0}%
 }%
-\greendofelement{2}{0}%
-\greendofelement{2}{0}%
-\gredivisiofinalis{}%
 }%
+%
+\grefinaldivisiofinalis{0}%
+% verbatim text at element level:
+\fi}%
+% end of verbatim text
 \endgregorioscore %
 \endinput %
