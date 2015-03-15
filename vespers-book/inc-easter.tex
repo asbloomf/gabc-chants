@@ -1,5 +1,10 @@
 {
-\chapter{Proper of the Time -- Easter Octave}
+\def\printcommemnote{\smallskip
+\noindent
+\printnote{\commemorations{}  Otherwise \Vbar~\emph{Bendicámus Dómino}, page \pageref{benedicamusdomino-easter}.}
+}
+{
+\chapter{Proper of the Time -- Easter}
 \section{Easter Sunday}
 \subtitle{1st Class}
 \def\printfullhymn{
@@ -13,11 +18,15 @@
     \translation[]{\chapterhymnversicleantiphontranslation}
     \bigskip
 }
+\def\chapterreplacement{\bigskip}
+\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
+\def\postmag{\vspace{-0.05\baselineskip}}
 \printvespers[../Easter]{inc-EasterVespers}
 \newcommand{\printbenedicamusdomino}[2]{
 	\def\annot{\small{#1}}
 	\def\annottwo{}
 	\setinitialspacing{B}
+    \greblockcustos{}
 	\includescore{#2}
     \bigskip
     \hrule
@@ -26,8 +35,11 @@
 \printbenedicamusdomino{\Vbar}{../BenedicamusDomino/BenedicamusDomino_Easter}
 }
 
+\newcommand{\printcommonvespers}[1][2nd]{
+    \subtitle{#1 Class}
+    \printnote{From Vespers of Sundays in Eastertide on page \pageref{sundayvespers-easter}.}
+}
 {
-\chapter{Proper of the Time -- Eastertide}
 \newcommand{\benedicamusdomino}[1][easter]{
     \noindent\printnote{\Vbar~\emph{Benedicámus Dómino}, page \pageref{benedicamusdomino-#1}.}
     \bigskip
@@ -36,7 +48,7 @@
 
 {
 \section{Low Sunday}
-\subtitle{1st Class}
+\printcommonvespers[1st]
 \def\printfullhymn{
     \label{hymn-adregiasagnidapes}
     {
@@ -45,14 +57,23 @@
         \def\vrlinebreak{T}
         \label{vr-manenobiscum}
         \printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+        \bigskip
     }
 }
+%\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster1}
-\benedicamusdomino{}
+
+\def\commemorations{If the Feast of the Annunciation has been transferred to the Monday following Low Sunday, First Vespers is commemorated as on page \pageref{annunciation-commem}.  If today is April 30, May 1, or May 2, then First Vespers of St Joseph the Worker is commemorated as follows.}
+\printcommemnote{}
 }
 
 {
-    TODO low sunday could have commem of 1st vespers of annunciation or st joseph the worker
+\label{stjoseph-worker-commem}
+\def\vrlinebreak{T}
+%\printcommemoration[../May1-StJosephWorker]{commemorationStJosephWorker-Vespers1}
+
+\bigskip
+\benedicamusdomino{}
 }
 
 {
@@ -60,34 +81,33 @@
     probably just give them a page number and say to use the simple tone for the versicle and response
 }
 
-
 \newcommand{\printhymnnote}{
     \noindent\printnote{Hymn. \emph{Ad Régias Agni Dapes}, page \pageref{hymn-adregiasagnidapes}.
     \Vbar~\emph{Mane nobíscum}, page \pageref{vr-manenobiscum}.}
 }
 {
 \section{2nd Sunday after Easter}
-\subtitle{2nd Class}
+\printcommonvespers{}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster2}
 \benedicamusdomino{}
 }
 {
 \section{3rd Sunday after Easter}
-\subtitle{2nd Class}
+\printcommonvespers{}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster3}
 \benedicamusdomino{}
 }
 
 {
 \section{4th Sunday after Easter}
-\subtitle{2nd Class}
+\printcommonvespers{}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster4}
 \benedicamusdomino{}
 }
 
 {
 \section{5th Sunday after Easter}
-\subtitle{2nd Class}
+\printcommonvespers{}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster5}
 \benedicamusdomino{}
 }
@@ -103,7 +123,7 @@ TODO could be commem of 1st vespers of St Joseph the worker if today is April 30
 
 {
 \section{Sunday after the Ascension}
-\subtitle{2nd Class}
+\printcommonvespers{}
 \def\printfullhymn{
     {
         \printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
@@ -113,5 +133,6 @@ TODO could be commem of 1st vespers of St Joseph the worker if today is April 30
 }
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatSundayAfterAscension}
 \benedicamusdomino{}
+}
 }
 }
