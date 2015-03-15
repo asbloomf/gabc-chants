@@ -5,9 +5,6 @@
 \grenoinitial %
 \grebeginnotes %
 \gresetinitialclef{c}{3}{a}%
-\gresyllable{}{}{}{1}{\Vbar{}~D}{ó}{0}{}{%
-}%
-%
 \gresyllable{\Vbar{}~D}{ó}{}{0}{m}{i}{0}{}{%
 \greglyph{\char 17}{h}{h}{0}{}{}%
 }%
@@ -60,7 +57,18 @@
 }%
 %
 \grebarsyllable{}{}{}{1}{\Rbar{}~P}{a}{0}{}{%
-\gredivisiofinalis{}%
+\greindivisiofinalis{}%
+% verbatim text at element level:
+\ifx\vrlinebreak\undefined\else%
+% end of verbatim text
+%
+%
+\grenewparline %
+%
+%
+% verbatim text at element level:
+\fi%
+% end of verbatim text
 }%
 %
 \gresyllable{\Rbar{}~P}{a}{}{0}{r}{á}{0}{}{%
