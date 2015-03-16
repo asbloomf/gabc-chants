@@ -95,15 +95,8 @@
 \greglyph{\char 17}{h}{h}{0}{}{}%
 }%
 %
-\gresyllable{}{e}{t}{1}{c}{o}{0}{%
-\grelastofline %
-}{%
+\gresyllable{}{e}{t}{1}{c}{o}{0}{}{%
 \greglyph{\char 17}{h}{h}{0}{}{}%
-%
-%
-\grenewline %
-%
-%
 }%
 %
 \gresyllable{c}{o}{n}{0}{gr}{e}{0}{}{%
@@ -130,7 +123,18 @@
 }%
 %
 \grebarsyllable{}{}{}{1}{\gresetfixednexttextformat{1}Fl}{e}{0}{}{%
-\gredivisiofinalis{}%
+\greindivisiofinalis{}%
+% verbatim text at element level:
+\ifx\breakbeforeflex\undefined\else%
+% end of verbatim text
+%
+%
+\grenewline %
+%
+%
+% verbatim text at element level:
+\fi%
+% end of verbatim text
 }%
 %
 \gresyllable{\gresetfixedtextformat{1}Fl}{e}{x :}{1}{s}{u}{0}{}{%
