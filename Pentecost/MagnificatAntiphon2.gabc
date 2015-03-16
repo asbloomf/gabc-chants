@@ -13,13 +13,28 @@ transcription-date: 2011;
 style: modern;
 annotation: At Magn.;
 annotation: 1. D;
-
+def-m1:}{\greblockcustos{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:\fi};
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
 %%
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c4)HO(c)di(cd)e(d.) <v>\greheightstar</v>(,) com(d!ewf)plé(fe)ti(de) sunt(dc) (,) dí(f_h)es(g_h) Pen(f_g)te(h)có(fe)stes,(dc) al(d_g)le(efe)lú(d.)ia :(d.) (:) hó(ixdh'!iv)di(h)e(h'_) (,) Spí(h)ri(hg)tus(gf) Sán(ghg)ctus(ixhih.) (,) in(d) í(ff)gne(d) di(d)scí(dg)pu(f)lis(fe) ap(d)pá(fe)ru(dc)it,(c.) (;) et(cd~) trí(d)bu(d)it(de) é(d)is(c') cha(f)rís(gf)ma(ed)tum(efe) dó(d.)na :(d.) (:) mí(ixdh'!iv)sit(h) é(hg)os(g_h) (,) in(h) u(h)ni(hg)vér(h)sum(ji) mún(hi)dum(h.) (;) præ(h)di(g')cá(h)re(g') et(f) te(e_f)sti(gh)fi(fe)cá(d.)ri :(d.) (:) qui(fe) cre(d)dí(e')de(f)rit,(gh/hg) (,) et(ghg) bap(e)ti(gh)zá(fe)tus(d) fú(fe)e(dc)rit,(c.) (;) sál(c_d)vus(f_gF'E) é(g_h_g_)rit,(fv_ED'C_) al(d_g)le(efe)lú(d.)ia.(d.) (::)
+(c4)HO(c)di(cd)e(d.) <v>\greheightstar</v>(,)
+com(d!ewf)plé(fe)ti(de) sunt(dc) (,)
+dí(f_h)es(g_h) Pen(f_g)te(h)có(fe)stes,(dc) al(d_g)le(efe)lú(d.)ia :(d.) (:)
+hó(ixdh'!iv)di(h)e(h'_) (,)
+Spí(h)ri(hg)tus(gf) Sán(ghg)ctus(ixhih.) (,)
+in(d) í(ff)gne(d) di(d)scí(dg)pu(f)lis(fe) ap(d)pá(fe)ru(dc)it,(c.) (;)
+et(cd~) trí(d)bu(d)it(de) é(d)is(c') cha(f)rís(gf)ma(ed)tum(efe) dó(d.)na :(d.) (:)
+mí(ixdh'!iv)sit(h) é(hg)os(g_h) (,)
+in(h) u(h)ni(hg)vér(h)sum(ji) mún(hi)dum(h.) (;)
+præ(h)di(g')cá(h)re(g') et(f) te(e_f)sti(gh)fi(fe)cá(d.)ri :(d.) (:)
+qui(fe) cre(d)dí(e')de(f)rit,(gh/hg) (,)
+et(ghg) bap(e)ti(gh)zá(fe)tus(d) fú(fe)e(dc)rit,(c.) (;)
+sál(c_d)vus(f_gF'E) é(g_h_g_)rit,(fv_ED'C_) al(d_g)le(efe)lú(d.[em1])ia.(d.) (::[em2]z[em3])
 
-E(h) u(h) o(g) u(f) a(gh) e.(gvFED.) (::)
+E(h) u(h) o(g) u(f) a(gh) e.(gvFED.) (::[em4])

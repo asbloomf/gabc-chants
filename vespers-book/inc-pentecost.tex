@@ -9,8 +9,11 @@
 {
 \section{Pentecost Sunday}
 \subtitle{1st Class}
+\subtitle{I \& II Vespers}
 
-\def\definevesperspropers{\input{\gabcfolder/inc-Pentecost-2Vespers}}
+\def\definevesperspropers{\input{\gabcfolder/inc-Pentecost-2Vespers}
+	\def\prepsalmfive{\greblockcustos}
+}
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Pentecost-1Vespers}}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
@@ -22,16 +25,16 @@
 	{
 		\def\vrlinebreak{T}
 		%\label{vr-rorate}
-		\printnote{\vesperspropersnote}
-		\definevesperspropers
+		\printnote{\vesperspropersaltnote}
+		\definevesperspropersalt
 		\printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
 	}
 	\bigskip
 	{
 		\def\vrlinebreak{T}
 		%\label{vr-rorate}
-		\printnote{\vesperspropersaltnote}
-		\definevesperspropersalt
+		\printnote{\vesperspropersnote}
+		\definevesperspropers
 		\printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
 	}
 }

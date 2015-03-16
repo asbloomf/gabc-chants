@@ -17,11 +17,12 @@
 \def\includelaustibi{F}
 
 \newcommand{\preantone}{\setgrefactor{17}
+\def\breakbeforeEuouae{T}
 \large
 %\greblockcustos
 }
-\let\oldantonetranslation=\antonetranslation
-\renewcommand{\antonetranslation}{\oldantonetranslation\medskip}
+%\let\oldantonetranslation=\antonetranslation
+%\renewcommand{\antonetranslation}{\oldantonetranslation\medskip}
 \newcommand{\antoneinitialsize}{40}
 \newcommand{\prepsalmone}{%
 %\vspace{-1.5ex}
@@ -35,6 +36,7 @@
 }
 \newcommand{\anttwoinitialsize}{40}
 \newcommand{\prepsalmtwo}{%
+\def\breakbeforeflex{T}
 \normalsize
 \greblockcustos
 }
@@ -53,6 +55,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\preantfour}{\setgrefactor{17}
+\def\breakbeforeEuouae{T}
 \greblockcustos
 \large
 %\normalsize
@@ -99,32 +102,8 @@
 %\newcommand{\rtranslation}{The wonderful works of God.}
 %\def\vrnospace{T}
 
-\newcommand{\premag}{
-\normalsize
-\setgrefactor{14}
-%\greblockcustos
-}
-%\newcommand{\premagtwo}{
-%\setgrefactor{16}
-%}
-%\newcommand{\maganttex}{MagnificatAntiphon2}
-\newcommand{\magfontsize}{30}
-\def\pagebreakbeforemagnificat{T}
-%\newcommand{\magantinitial}{H}
-%\newcommand{\maganttranslation}{Today the days of Pentecost are complete, alleluia; today the Holy Ghost appeared in fire to the disciples, gave them gifts and graces, sent them into all the world to preach and to bear witness; whoever believes and is baptised shall be saved, alleluia.}
-\def\magoneline{T}
-%\newcommand{\magtone}{8}
-%\newcommand{\magend}{G}
-\newcommand{\premagverses}{%
-%\greblockcustos
-\normalsize
-\setgrefactor{14}
-%\pagebreak
-}
 %\input{../psalms/definemag}
 
 %\definebenedicamusdomino{1}{2}
-
-\def\includefideliumanimae{T}
 
 %\input{../FullVespers}

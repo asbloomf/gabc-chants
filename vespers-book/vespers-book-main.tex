@@ -202,7 +202,7 @@
 				\ifx\vesperspropersaltnote\undefined\else
 					\def\prepsalmtitle{
 						\smallskip
-						\noindent\printnote{\vesperspropersaltnote}
+						\noindent\printnote{\vesperspropersaltnote}\vspace{-0.5\baselineskip}
 
 					}
 				\fi
@@ -212,7 +212,7 @@
 			\ifx\definevesperspropers\undefined\else{
 				\definevesperspropers
 				\ifx\vesperspropersnote\undefined\else
-					\noindent\printnote{\vesperspropersnote}
+					\noindent\printnote{\vesperspropersnote}\vspace{-0.5\baselineskip}
 				\fi
 				\def\prepsalmtitle{\def\onlyoneant{F}}
 				\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
@@ -270,6 +270,22 @@
 	\ifx\magreplacement\undefined
 	{
 		\ifx\definevesperspropersalt\undefined\else{
+			{
+			\ifx\definevesperspropers\undefined\else
+				{
+					\definevesperspropersalt
+					\global\let\magtonealt=\magtone
+					\global\let\magendalt=\magend
+				}
+				{
+					\definevesperspropers
+					\IfStrEq{\magtonealt\magendalt}{\magtone\magend}
+					{\gdef\altmagsame{T}}
+					{\gdef\altmagsame{F}}
+
+				}
+			\fi
+			}
 			\definevesperspropersalt
 		    \begin{center}{\large Magnificat.}\end{center}
 	    	\vspace{-1ex}
@@ -283,7 +299,13 @@
 		    \let\preanttwo=\premagtwo
 		    \let\preant=\premag
 		    \def\nomagtitle{T}
-			\printmag{\magtone\magend}{\magantinitial}{\maganttex}
+		    \if\altmagsame T{
+		    	\printgabc{At Magn.}{Ant. \magtone{}. \magend}{\magantinitial}{\maganttex}
+		    	\translation[]{\anttranslation}
+		    	\bigskip
+		    }\else{
+				\printmag{\magtone\magend}{\magantinitial}{\maganttex}
+			}\fi
 		}\fi
 		\ifx\definevesperspropers\undefined\else
 			\definevesperspropers
@@ -298,6 +320,9 @@
 	    \let\preanttwo=\premagtwo
 	    \let\preant=\premag
 		\printmag{\magtone\magend}{\magantinitial}{\maganttex}
+		\global\let\altmagsame\undefined
+		\global\let\magtonealt=\undefined
+		\global\let\magendalt=\undefined
 	}
 	\else
 	{\magreplacement}
@@ -410,9 +435,9 @@ Magnificat, and Collect given for the respective Sunday or Feast.}
 %from shrovetide through passiontide
 %\input{inc-lent}
 
-\input{inc-easter}
+%\input{inc-easter}
 
-%\input{inc-pentecost}
+\input{inc-pentecost}
 
 \chapter{Appendix}
 %\input{inc-benediction}

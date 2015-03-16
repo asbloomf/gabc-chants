@@ -10,15 +10,36 @@
 \input{PentecostVespers}
 
 \newcommand{\heading}{Pentecost II Vespers.}
-\def\prepsalmfive{\vspace{-6pt}}
-\def\prepsalmfiveverses{\vspace{-6pt}}
+%\def\prepsalmfive{\vspace{-6pt}}
+%\def\prepsalmfiveverses{\vspace{-6pt}}
 \let\oldbeginpsalmfivecols=\beginpsalmfivecols
 %\def\beginpsalmfivecols{\vspace{-8pt plus 8pt}\oldbeginpsalmfivecols}
 
 \def\benedicamusdominogrefactor{14}
 \definebenedicamusdomino{1}{2}
 
-\let\includefideliumanimae=\undefined
+\newcommand{\premag}{
+\normalsize
+\setgrefactor{15}
+%\greblockcustos
+}
+%\newcommand{\premagtwo}{
+%\setgrefactor{16}
+%}
+%\newcommand{\maganttex}{MagnificatAntiphon2}
+\newcommand{\magfontsize}{30}
+\def\pagebreakbeforemagnificat{T}
+%\newcommand{\magantinitial}{H}
+%\newcommand{\maganttranslation}{Today the days of Pentecost are complete, alleluia; today the Holy Ghost appeared in fire to the disciples, gave them gifts and graces, sent them into all the world to preach and to bear witness; whoever believes and is baptised shall be saved, alleluia.}
+\def\magoneline{T}
+%\newcommand{\magtone}{8}
+%\newcommand{\magend}{G}
+\newcommand{\premagverses}{%
+%\greblockcustos
+\normalsize
+\setgrefactor{14}
+%\pagebreak
+}
 
 \input{inc-Pentecost-2Vespers}
 \input{../inc_header}
