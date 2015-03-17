@@ -1,0 +1,23 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
+\usepackage{calc}
+\geometry{letterpaper} % or letterpaper (US) or a5paper or....
+
+
+\newcommand{\heading}{Jesu Dulcis Memoria.}
+\def\hymninitialsize{34}
+
+\input{inc-JesuDulcisMemoria}
+
+\def\prehymn{\large\setgrefactor{17}}
+\geometry{outer=1in,inner=1in,top=1in+\headsep,bottom=\footskip}
+
+\input{../hymn-template}
+
+\usepackage{comment}
