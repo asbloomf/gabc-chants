@@ -83,6 +83,8 @@ Christmas:
 Holy Name:
   - name: "Holy Name: 2 Vespers"
     url: pdfs/HolyName/HolyName-2Vespers.pdf
+  - name: "Hymn: Jesu Dulcis Memoria"
+    url: hymn-JesuDulcisMemoria-main.pdf
 Epiphany:
   - name: "Epiphany: Vespers 1"
     url: pdfs/Epiphany/Epiphany-Vespers1.pdf
