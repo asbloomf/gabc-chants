@@ -13,6 +13,10 @@ transcription-date: 2011;
 style: modern;
 annotation: At Magn.;
 annotation: Ant. 7. A;
+def-m1:}{\greblockcustos{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:\fi};
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -20,6 +24,11 @@ annotation: Ant. 7. A;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c3)CUM(e') vo(e)cá(g)tus(h) fú(i')e(i)ris(g) <v>\greheightstar</v>() ad(h) núp(ij)ti(j)as,(i.) (;) re(j)cúm(ih~)be(h) in(hg~) no(f)vís(g_h)si(f)mo(f) ló(e.)co :(e.) (:) ut(e_f) dí(d')cat(f) tí(h)bi(h') qui(h) te(h') in(g)vi(f)tá(h_i)vit :(i.) (;) A(f)mí(h_i)ce,(i') a(i)scén(i)de(ih) su(f)pé(h)ri(h)us :(g.) (:) et(j) é(j')rit(i) tí(h)bi(g) gló(h_i)ri(h)a(e_f) (;) co(d')ram(f) si(h)mul(h') dis(g)cum(f)bén(h)ti(f)bus,(ed) al(ef)le(f)lú(e.)ia.(e.) (::)
+(c3)CUM(e') vo(e)cá(g)tus(h) fú(i')e(i)ris(g) <v>\greheightstar</v>() ad(h) núp(ij)ti(j)as,(i.) (;)
+re(j)cúm(ih~)be(h) in(hg~) no(f)vís(g_h)si(f)mo(f) ló(e.)co :(e.) (:)
+ut(e_f) dí(d')cat(f) tí(h)bi(h') qui(h) te(h') in(g)vi(f)tá(h_i)vit :(i.) (;)
+A(f)mí(h_i)ce,(i') a(i)scén(i)de(ih) su(f)pé(h)ri(h)us :(g.) (:)
+et(j) é(j')rit(i) tí(h)bi(g) gló(h_i)ri(h)a(e_f) (;)
+co(d')ram(f) si(h)mul(h') dis(g)cum(f)bén(h)ti(f)bus,(ed) al(ef)le(f)lú(e.[em1])ia.(e.) (::[em2]z[em3])
 
-E(i) u(i) o(j) u(i) a(h) e.(gf..) (::)
+E(i) u(i) o(j) u(i) a(h) e.(gf..) (::[em4])

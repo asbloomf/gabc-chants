@@ -13,6 +13,10 @@ transcription-date: 2011;
 style: modern;
 annotation: At Magn.;
 annotation: Ant. 8. G;
+def-m1:}{\greblockcustos{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:\fi};
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -20,12 +24,17 @@ annotation: Ant. 8. G;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c4)SCr{í}p(f!g'h)tum(g) est(g) e(fef)nim(d!ew!fv_EC.) <v>\greheightstar</v>(,) qui(f)a(g) dó(h)mus(j) mé(jv_IH)a(h'_) (,) dó(j)mus(ji) o(hg)ra(g)ti(gh)ó(e)nis(fg) est(g_h) cún(i)ctis(hi) gén(g)ti(fg)bus :(g.) (:) vos(j_k) au(j_i)tem(h'_) fe(j)cí(ji)stis(hg) íl(h)lam(g_h) (,) spe(e)lún(fg~)cam(f) la(f)tró(ev_DC)num ;(c.) (:) et(cd) é(dgf/gh)rat(g) quo(gh)tí(h)di(g_h/GF'g)e([ev:%g_f_ --this is just to fix the custos
+(c4)SCr{í}p(f!g'h)tum(g) est(g) e(fef)nim(d!ew!fv_EC.) <v>\greheightstar</v>(,)
+qui(f)a(g) dó(h)mus(j) mé(jv_IH)a(h'_) (,)
+dó(j)mus(ji) o(hg)ra(g)ti(gh)ó(e)nis(fg) est(g_h) cún(i)ctis(hi) gén(g)ti(fg)bus :(g.) (:)
+vos(j_k) au(j_i)tem(h'_) fe(j)cí(ji)stis(hg) íl(h)lam(g_h) (,)
+spe(e)lún(fg~)cam(f) la(f)tró(ev_DC)num ;(c.) (:)
+et(cd) é(dgf/gh)rat(g) quo(gh)tí(h)di(g_h/GF'g)e([ev:%g_f_ --this is just to fix the custos
 \greglyph{\char 5121}{g}{g}{8}{}{%
 \grehepisemus{h}{17}{1}{h}%
 \grehepisemus{h}{0}{0}{h}%
 }%
-]) (;z) dó([ev:%gh/i.h!iwj
+]) (;) dó([ev:%gh/i.h!iwj
 \greglyph{\char 1025}{g}{i}{0}{}{}%
 \greendofelement{0}{0}%
 \greglyph{\char 5121}{i}{i}{8}{}{%
@@ -33,6 +42,6 @@ annotation: Ant. 8. G;
 }%
 \greendofglyph{1}%
 \greglyph{\char 2561}{i}{h}{4}{}{}%
-])cens(hg) in(fg~) tém(g.)plo.(g.) (::)
+])cens(hg) in(fg~) tém(g.[em1])plo.(g.) (::[em2]z[em3])
 
-E(j) u(j) o(i) u(j) a(h) e.(g.) (::)
+E(j) u(j) o(i) u(j) a(h) e.(g.) (::[em4])
