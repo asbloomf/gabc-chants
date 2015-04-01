@@ -55,7 +55,7 @@ altoMusic = \relative c' {
 altoWords = \lyricmode {
   \set fontSize = #0.5
   Tri -- stis est | á -- ni -- ma me -- a us -- que ad mor -- tem_: su -- sti -- né -- te hic, et | vi -- gi -- lá -- te __ me -- cum_: nunc vi -- dé -- bi -- tis tur -- bam, quæ cir -- cúm -- da -- bit me, quæ cir -- cúm -- da -- bit | me, quæ cir -- cúm -- da -- bit -- me_:  Vos fu -- gam ca -- pi -- é -- tis, et e -- go __ va -- dam im -- mo -- lá -- ri pro vo -- bis.
-  Ec -- ce ap -- pro -- pín -- quant ho -- ra
+  Ec -- ce ap -- pro -- pín -- quat ho -- ra
   \once \override LyricText #'self-alignment-X = #LEFT
   et_Fílius_hóminis_tradétur_in ma -- nus pec -- ca -- tó -- rum.
   Vos
@@ -92,7 +92,7 @@ chantMusic = \relative c' {
 
 
 chantWords = \lyricmode {
-  Ec -- ce ap -- pro -- pín -- quant ho -- ra
+  Ec -- ce ap -- pro -- pín -- quat ho -- ra
   \once \override LyricText #'self-alignment-X = #LEFT
   et_Fílius_hóminis_tradétur_in ma -- nus pec -- ca -- tó -- rum.
   Vos
