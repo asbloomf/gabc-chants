@@ -1,0 +1,133 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+% easter can be from march 22 to april 25
+
+\documentclass[letterpaper,12pt]{book} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{titleps}
+\usepackage{letltxmacro}
+\usepackage{changepage} % gives us \ifoddpage use [strict]
+
+\LetLtxMacro{\oldneedspace}{\needspace}
+\renewcommand{\needspace}[1]{
+	\checkoddpage\ifoddpage\oldneedspace{#1}\else\fi
+}
+
+%\usepackage{hyperref}
+\newcommand{\phantomsection}{}
+
+\setcounter{secnumdepth}{-1}
+
+\def\mywidth{6in}
+\def\myheight{9in}
+
+\input{../inc_header}
+\setlength\headheight{0.25in+15pt}
+\setlength\headsep{1pc}
+\setlength\topskip{0pc}
+\setlength\footskip{1pc}
+\geometry{outer=0.4in,inner=0.85in,top=0pc+\headheight+\headsep,bottom=0.4in,twoside=true}
+\newpagestyle{main}{
+\sethead[\garamond{\thepage}][\garamond{\chaptertitle}][] % even
+{}{\garamond{\sectiontitle}}{\garamond{\thepage}} % odd
+\setfoot[][][] % even
+{}{}{} % odd
+}
+\pagestyle{main}
+
+
+\titleformat
+{\section} % command
+[block] % shape
+{\phantomsection\large\addfontfeature{Numbers=Lining}} % format
+{} % label
+{} % sep
+{
+    % \rule{\textwidth}{1pt}
+    % \vspace{1ex}
+    \centering
+} % before-code
+%[
+% \vspace{-0.5ex}%
+% \rule{\textwidth}{0.3pt}
+%] % after-code
+ 
+ 
+\titleformat{\chapter}[block]
+{\thispagestyle{empty}\phantomsection\Large\scshape\addfontfeature{Numbers=Lining}}
+{}{0.5em}{\centering}
+ 
+\titlespacing{\chapter}{0pt}{-\headheight}{1pc}
+\titlespacing{\section}{0pt}{*2.5}{*1}
+\titleclass{\chapter}{top}
+\newcommand{\chapterbreak}{\clearpage}
+%\titleclass{\section}{top}
+
+\contentsmargin{1pc}
+\dottedcontents{chapter}[0pc]{}{2pc}{1pc}
+\dottedcontents{section}[0pc]{}{0pc}{1pc}
+
+\newcommand{\printnote}[1]{
+	{\normalsize \emph{#1}}
+}
+\newcommand{\subtitle}[1]{
+\begin{center}{
+	{\addfontfeature{Numbers=Lining} \normalsize \emph{#1}}
+}\end{center}
+}
+
+\newcommand{\deusinadjutorium}{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, page \pageref{deusinadjutorium}.}}
+\newcommand{\printcollect}[2]{
+	\ifx\undefined\begincollectcols\def\begincollectcols{\begin{parcolumns}[rulebetween]{2}}\fi
+	\ifx\printcollectheading\undefined\def\printcollectheading{T}\fi
+	\if\printcollectheading T
+	\needspace{3\baselineskip}
+	\begin{center}{\large Collect.}\end{center}
+	\vspace{-0.4\baselineskip}
+	\fi
+	\begincollectcols
+	\sloppy
+	\prayer{#1}{#2}
+	\end{parcolumns}
+	\let\begincollectcols=\undefined
+}
+\newcommand{\psalmcolsoverride}[1][0]{
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
+\ifnum#1=110
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
+\fi
+\ifnum#1=111
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
+\fi
+\ifnum#1=129
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
+\fi
+\ifnum#1=131
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
+\fi
+}
+
+\sloppy
+\begin{document}
+\normalsize
+\setgrefactor{15}
+%\pagenumbering{roman}
+%\frontmatter
+
+%\pagenumbering{arabic}
+%\mainmatter
+
+\chapter{Christmas at Matins.}
+
+%\subtitle{Festal Tone}
+\printdeusinadjutorium{}
+
+
+
+\end{document}
+
