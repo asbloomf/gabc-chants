@@ -3,8 +3,6 @@
 
 % This is a simple template for a LuaLaTeX document using gregorio scores.
 
-% easter can be from march 22 to april 25
-
 \documentclass[letterpaper,12pt]{book} % use larger type; default would be 10pt
 \usepackage{../definepsalms}
 \usepackage{titlesec}
@@ -23,8 +21,11 @@
 
 \setcounter{secnumdepth}{-1}
 
-\def\mywidth{6in}
-\def\myheight{9in}
+%\def\mywidth{6in}
+%\def\myheight{9in}
+
+\def\mywidth{8.5in}
+\def\myheight{11in}
 
 \input{../inc_header}
 \setlength\headheight{0.25in+15pt}
@@ -111,6 +112,14 @@
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
 \fi
 }
+\newcommand{\writeheading}[1]{
+  \large
+  \begin{center}{
+  \addfontfeature{Numbers=Lining}
+  \textsc{#1}
+  }\end{center}
+  \medskip
+}
 
 \sloppy
 \begin{document}
@@ -124,10 +133,117 @@
 
 \chapter{Christmas at Matins.}
 
+{
+
+\centering{Pater noster.\hspace{1em}Ave María.\hspace{1em}Credo.}
+
+}
+\bigskip{}
+{% Domine, labia mea aperies...
+	\def\annot{\small \Vbar{}}
+	\alsetinitialspacing{D}
+	\includescore[a]{DomineLabiaMea}
+
+	\translation[]{\Vbar{}~Lord, Thou shalt open my lips. \Rbar{}~And my mouth will announce Thy praise.}
+	\bigskip
+}
+
 %\subtitle{Festal Tone}
 \printdeusinadjutorium{}
 
+{
+	
+	\centering{Invitatory.}
 
+}
+
+\newcommand{\printinvitatoryant}{
+	\def\annot{\small 4. g}
+	\alsetinitialspacing{C}
+	\includescore[a]{in-ChristusNatusEst}	
+}
+\newcommand{\printinvitatoryantparttwo}{
+	\includescore[a]{in-VeniteAdoremus}
+}
+{
+	\printinvitatoryant{}
+
+	\emph{The Choir repeats~:} Christus natus est nobis~:~* Veníte, adorémus.
+}
+
+{
+	\def\annot{\small 4. g}
+	\alsetinitialspacing{V}
+	\includescore[a]{in-ps94-1-Venite}
+
+	\bigskip
+	\printinvitatoryant{}
+}
+
+{
+	\bigskip
+	\includescore[a]{in-ps94-2-QuoniamDeus}
+
+	\bigskip
+	\printinvitatoryantparttwo{}
+}
+
+{
+	\bigskip
+	\emph{\small In the following Verse, at the words \emph{Veníte, adorémus et procidámus ante Déum.} the Choir kneels.}
+	\smallskip
+
+	\includescore[a]{in-ps94-3-QuoniamIpsius}
+
+	\bigskip
+	\printinvitatoryant{}
+}
+
+{
+	\bigskip
+	\includescore[a]{in-ps94-4-Hodie}
+
+	\bigskip
+	\printinvitatoryantparttwo{}
+}
+
+{
+	\bigskip
+	\includescore[a]{in-ps94-5-Quadraginta}
+
+	\bigskip
+	\printinvitatoryant{}
+}
+
+{
+	\bigskip
+	\includescore[a]{in-ps94-6-GloriaPatri}
+
+	\bigskip
+	\printinvitatoryantparttwo{}
+
+	\bigskip
+	\printinvitatoryant{}
+}
+
+% hymn
+
+{
+	\bigskip
+	\printgabc{Hym.}{1.}{J}{../Christmas/Hymn-JesuRedemptorOmnium}
+}
+
+{
+	\input{nocturn1}
+}
+
+{
+	\input{nocturn2}
+}
+
+{
+	\input{nocturn3}
+}
 
 \end{document}
 
