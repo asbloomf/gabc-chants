@@ -10,6 +10,7 @@
 \usepackage{titleps}
 \usepackage{letltxmacro}
 \usepackage{changepage} % gives us \ifoddpage use [strict]
+\usepackage{adjustbox}
 
 \LetLtxMacro{\oldneedspace}{\needspace}
 \renewcommand{\needspace}[1]{
@@ -131,6 +132,64 @@
 %\pagenumbering{arabic}
 %\mainmatter
 
+\chapter{The Office of Matins}
+
+{
+	\def\matins{\emph{Matins}}
+	\def\lauds{\emph{Lauds}}
+	\def\vespers{\emph{Vespers}}
+	\def\compline{\emph{Compline}}
+	\def\prime{\emph{Prime}}
+	\def\terce{\emph{Terce}}
+	\def\sext{\emph{Sext}}
+	\def\none{\emph{None}}
+	The Liturgy of the Roman Rite is comprised of the rites and ceremonies as described in certain Liturgical books. This
+	includes the Sacraments, various rites of blessings, but in particular of the Holy Sacrifice of the Mass and the Divine Office.
+	The Divine Office consists of major and minor ``hours'' which are spread throughout the day. Minor hours such as \prime,
+	\terce{}, \sext{} and \none{} take their name from the hour of the day. The day was considered to start at around 6:00 AM, so
+	\prime{} would correspond to the first hour of the day – or 6:00 AM. \terce{}, the third hour, would be around 9:00 AM; \sext{}
+	(6th hour) at noon; and \none{} (9th hour) at 3:00 PM. There is an additional minor hour – that of \compline{} – which is not
+	specific to an hour in the day, but which is the final night prayer.
+
+	Major hours are those of \matins{}, \lauds{}, and \vespers{}. \matins{} and \lauds{} are the hours typically associated with the early
+	hours of the AM to sunrise, while \vespers{} is an evening prayer. Thus the complete cycle of hours of the Divine office would
+	consist of \matins{}, \lauds{}, \prime{}, \terce{}, \sext{}, \none{}, \vespers{}, and \compline{}. In religious communities, \matins{} and \lauds{}
+	may actually start around 2:30 AM; \prime{} at 6:00 AM; \terce{} at 9:00 AM; \sext{} at 12:00 noon; \none{} at 3:00 PM; \vespers{}
+	around 5:30 PM; and finally \compline{} around 8:00 PM.
+
+	The Divine Office constitutes a continuous outpouring of prayer from Church Militant to her Creator, and ideally spans the
+	entirety of the Psalter within the course of a single week. The widespread incorporation of the psalms into the Liturgy of
+	the Church demonstrates the connective thread from thousands of years of history – from the Old Testament before Christ
+	all the way to the present – something that is also consistent in the Sacrifice of the Mass.
+
+	The authorship of the Psalms is attributed to King David roughly 1000 years before Christ, although modern theories
+	ascribe multiple authors over a period of time. Regardless of authorship, the psalms are wonderful songs of praise that
+	span all the purposes of prayer – Adoration, Petition, Contrition, and Thanksgiving. Thus their prominence throughout all
+	of the Liturgy – including as part of the Sacrifice of the Mass.
+
+	The minor hours of the Office essentially consist of 3 antiphons and 3 psalms, with the antiphons sung before and after
+	each psalm. The major hours of \lauds{} and \vespers{} essentially consist of 5 antiphons and 5 psalms (or sections of psalms),
+	again with the antiphons sung before and after each psalm. Additionally, \lauds{} and \vespers{} have a hymn and a canticle
+	(the \emph{Benedictus} in \lauds{}, the \emph{Magnificat} in \vespers{}). \matins{}, however, is very unique in terms of structure. It is subdivided
+	into three nocturns, each consisting not only of 3 antiphons and 3 psalms, but also having 3 lessons and 3 responsories.
+	There are additional elements – the hymn as with \lauds{} and \vespers{}, but also an \emph{Invitatory} at the very opening and the
+	use of \emph{Te Deum} in lieu of the final responsory on feast days. \matins{} is by far the longest of all of the hours of the Office.
+
+	As mentioned above, the day was divided according to hours from 6:00 AM to 6:00 PM. Thus the reference in the Gospel
+	to the owner of the vineyard seeking laborers at the 3rd, 6th, 9th, and 11th hours. The Romans divided the hours of the night
+	in similar fashion. The hours from 6:00 PM to 6:00 AM were divided into 4 watches of three hours each – and these were
+	called ``vigils'', i.e. when the night watch was kept. This type of division is mimicked in dividing the office into the three
+	nocturns.
+
+	The term ``\matins{}'' corresponds to morning, specifically dawn, but the origin of the office had its usage during the night
+	as the last part of the ``vigils''. \lauds{} (which take name from the use of the Laudate psalms) was the office actually
+	associated with dawn. Somewhat surprisingly, there were periods of time in which \lauds{} preceded \matins{}, though the
+	order today is \matins{} followed by \lauds{}, often with \lauds{} immediately following the office of \matins{}. For Christmas,
+	however, the offices of \matins{} and \lauds{} are separated from one another. \matins{} is followed by the Midnight Mass after
+	which \lauds{} would be celebrated\ldots{} followed by the Mass at Dawn, \prime{}, \terce{}, and then the Mass of the Day\ldots{} followed
+	then in due course by the remainder of the office.
+}
+
 \chapter{Christmas at Matins.}
 
 {
@@ -245,5 +304,9 @@
 	\input{nocturn3}
 }
 
+{
+	\def\gabcfolder{../Tenebrae}
+	\input{\gabcfolder/ProphecyTone-main}
+}
 \end{document}
 
