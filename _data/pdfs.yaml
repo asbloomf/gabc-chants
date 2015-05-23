@@ -25,7 +25,9 @@ misc:
     url: pdfs/misc/grassi-magnificat-simple.pdf
   - name: grassi-magnificat-solemn
     url: pdfs/misc/grassi-magnificat-solemn.pdf
-  - name: "magnificat: 1 D2smc-solemn"
+  - name: "magnificat: 1D smc-solemn"
+    url: pdfs/misc/magnificat-1D-smc-solemn.pdf
+  - name: "magnificat: 1D2 smc-solemn"
     url: pdfs/misc/magnificat-1D2-smc-solemn.pdf
   - name: "protodiogenes: 7 a-magnificat-solemn"
     url: pdfs/misc/protodiogenes-7a-magnificat-solemn.pdf
