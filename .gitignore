@@ -9,3 +9,4 @@ gh-pages
 misc/*-systems.*
 *.log
 *.toc
+*.gtex

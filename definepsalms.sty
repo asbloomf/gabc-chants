@@ -43,6 +43,9 @@ five%
 % deusinadjutoriumsolemn T or F
 % includelaustibi T or F
 % predeusinadjutorium - tex preceding gabc
+    \ifx\deusinadjutoriumsolemn\undefined%
+        \def\deusinadjutoriumsolemn{F}
+    \fi
     \ifx\printsolemnorfestaltone\undefined%
         \def\printsolemnorfestaltone{F}%
     \fi
@@ -67,7 +70,7 @@ five%
     %\vspace{0pt plus 4pt minus 12pt}%
     \predeusinadjutorium%
     \def\annot{\small \Vbar{}}
-    \setinitialspacing{D}
+    \alsetinitialspacing{D}
     \includescore{../DeusInAdjutorium\if\deusinadjutoriumsolemn T%
     _solemn\fi\if\includelaustibi T%
     _laustibi\fi%
@@ -237,7 +240,7 @@ five%
     {#1
     \def\annot{\small{#2}}
     \def\annottwo{\small{#3}}
-    \setinitialspacing{#4}
+    \alsetinitialspacing{#4}
 
     \ifx\gabcfolder\undefined
         \includescore{#5}
@@ -923,7 +926,7 @@ five%
       \def\versenum{1}
     }
     \def\annottwo{\small{\antlinetwo}}
-    \setinitialspacing{\antinitial}
+    \alsetinitialspacing{\antinitial}
     \ifx\anttex\undefined\def\anttex{MagnificatAntiphon}\fi
 \ifx\gabcfolder\undefined
     \includescore{\anttex}
