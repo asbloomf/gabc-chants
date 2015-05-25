@@ -1,7 +1,9 @@
-initial-style:0;
+initial-style:1;
 %%
-(c4)Gló(ixdh'!iv)ri(h)a(h) Pá(h)tri,(g') et(g) Fí(gh)li(g)o,(g.) (,)
+(c4)GL{ó}(ixdh'!iv)ri(h)a(h) Pá(h)tri,(g') et(g) Fí(gh)li(g)o,(g.) (,)
 et(h) Spi(g)rí(f)tu(fh)i(h) Sán(g_h)cto.(g.) (;)
 Sic(f)ut(h) é(ixhi)rat(h) in(h) prin(g)cí(gh)pi(g)o,(g'_) (,)
 et(f) nunc,(fh) et(h) sem(g_h)per,(hg..) (;)
-et(fe) in(fgf~) s<sp>'ae</sp>(gh)cu(g)la(g') sæ(g)cu(h.g!hw!i_j)ló(h)rum.(gh) A(h'hgh)men.(ffe/fg.. ::d+)
+et(fe) in(fgf~) s<sp>'ae</sp>(gh)cu(g)la(g') sæ(g)cu(h.g!hw!i_j)ló(h)rum.(gh) A(h'hgh)men.(ffe/fg..) <alt>\hspace{1ex}The Choir:</alt>(::)
+
+<v>\greheightstar</v>~V{e}(de/f'g)ní(g)te,(gh/hg/he__) ad(d.f!gwh)o(g)ré(fg!hvhgh)mus.(e.) (::d+)

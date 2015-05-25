@@ -1,4 +1,4 @@
-% !TEX TS-program = lualatex
+﻿% !TEX TS-program = lualatex
 % !TEX encoding = UTF-8
 
 % This is a simple template for a LuaLaTeX document using gregorio scores.
@@ -11,6 +11,7 @@
 \usepackage{letltxmacro}
 \usepackage{changepage} % gives us \ifoddpage use [strict]
 \usepackage{adjustbox}
+\usepackage{amsfonts}
 
 \LetLtxMacro{\oldneedspace}{\needspace}
 \renewcommand{\needspace}[1]{
@@ -83,7 +84,6 @@
 }\end{center}
 }
 
-\newcommand{\deusinadjutorium}{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, page \pageref{deusinadjutorium}.}}
 \newcommand{\printcollect}[2]{
 	\ifx\undefined\begincollectcols\def\begincollectcols{\begin{parcolumns}[rulebetween]{2}}\fi
 	\ifx\printcollectheading\undefined\def\printcollectheading{T}\fi
@@ -198,16 +198,25 @@
 
 }
 \bigskip{}
+\emph{Celebrant intones:}
+
+\smallskip{}
 {% Domine, labia mea aperies...
 	\def\annot{\small \Vbar{}}
 	\alsetinitialspacing{D}
-	\includescore[a]{DomineLabiaMea}
+	\includescore{DomineLabiaMea}
+
+	\emph{\maltese{} on the lips}
 
 	\translation[]{\Vbar{}~Lord, Thou shalt open my lips. \Rbar{}~And my mouth will announce Thy praise.}
 	\bigskip
 }
 
 %\subtitle{Festal Tone}
+\def\includelaustibi{F}
+\emph{Celebrant intones:}
+
+\smallskip{}
 \printdeusinadjutorium{}
 
 {
@@ -219,69 +228,104 @@
 \newcommand{\printinvitatoryant}{
 	\def\annot{\small 4. g}
 	\alsetinitialspacing{C}
-	\includescore[a]{in-ChristusNatusEst}	
+	\includescore{in-ChristusNatusEst}	
 }
 \newcommand{\printinvitatoryantparttwo}{
-	\includescore[a]{in-VeniteAdoremus}
+	\includescore{in-VeniteAdoremus}
 }
+
+\emph{Cantors intone:}
+
 {
 	\printinvitatoryant{}
 
+	\smallskip{}
 	\emph{The Choir repeats~:} Christus natus est nobis~:~* Veníte, adorémus.
 }
 
+\medskip{}
+%\emph{The Cantors sing the verses together from the center; the Choir sings the antiphon after each verse as indicated.}
+\emph{The Cantors:}
+
+\smallskip{}
 {
-	\def\annot{\small 4. g}
+	\def\annot{\small Ps. 94.}
 	\alsetinitialspacing{V}
-	\includescore[a]{in-ps94-1-Venite}
+	\includescore{in-ps94-1-Venite}
 
-	\bigskip
-	\printinvitatoryant{}
+%	\bigskip
+%	\printinvitatoryant{}
+}
+
+\medskip
+\emph{The Cantors:}
+
+{
+	\smallskip
+	\def\annot{\small \Vbar{} 2.}
+	\alsetinitialspacing{Q}
+	\includescore{in-ps94-2-QuoniamDeus}
+
+%	\bigskip
+%	\printinvitatoryantparttwo{}
 }
 
 {
-	\bigskip
-	\includescore[a]{in-ps94-2-QuoniamDeus}
-
-	\bigskip
-	\printinvitatoryantparttwo{}
-}
-
-{
-	\bigskip
+	\medskip
 	\emph{\small In the following Verse, at the words \emph{Veníte, adorémus et procidámus ante Déum.} the Choir kneels.}
+
+	\emph{The Cantors:}
 	\smallskip
 
-	\includescore[a]{in-ps94-3-QuoniamIpsius}
+	\def\annot{\small \Vbar{} 3.}
+	\alsetinitialspacing{Q}
+	\includescore{in-ps94-3-QuoniamIpsius}
 
-	\bigskip
-	\printinvitatoryant{}
+%	\bigskip
+%	\printinvitatoryant{}
 }
 
-{
-	\bigskip
-	\includescore[a]{in-ps94-4-Hodie}
+\medskip
+\emph{The Cantors:}
 
-	\bigskip
-	\printinvitatoryantparttwo{}
+{
+	\smallskip
+	\def\annot{\small \Vbar{} 4.}
+	\alsetinitialspacing{Q}
+	\includescore{in-ps94-4-Hodie}
+
+%	\bigskip
+%	\printinvitatoryantparttwo{}
 }
 
-{
-	\bigskip
-	\includescore[a]{in-ps94-5-Quadraginta}
+\medskip
+\emph{The Cantors:}
 
-	\bigskip
-	\printinvitatoryant{}
+{
+	\smallskip
+	\def\annot{\small \Vbar{} 5.}
+	\alsetinitialspacing{Q}
+	\includescore{in-ps94-5-Quadraginta}
+
+%	\bigskip
+%	\printinvitatoryant{}
 }
 
+\medskip
+\emph{The Cantors:}
+
 {
-	\bigskip
-	\includescore[a]{in-ps94-6-GloriaPatri}
+	\smallskip
+	\def\annot{\small \Vbar{} 6.}
+	\alsetinitialspacing{Q}
+	\includescore{in-ps94-6-GloriaPatri}
+
+%	\bigskip
+%	\printinvitatoryantparttwo{}
 
 	\bigskip
-	\printinvitatoryantparttwo{}
+	\emph{The Cantors:}
 
-	\bigskip
 	\printinvitatoryant{}
 }
 
@@ -289,7 +333,9 @@
 
 {
 	\bigskip
-	\printgabc{Hym.}{1.}{J}{../Christmas/Hymn-JesuRedemptorOmnium}
+	\emph{Celebrant intones, alternate verses between Choir 1 (Epistle Side) \& Choir 2 (Gospel Side).}
+
+	\printgabc{Hymn.}{1.}{J}{../Christmas/Hymn-JesuRedemptorOmnium}
 }
 
 {
