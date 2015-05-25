@@ -143,19 +143,24 @@
 	\def\terce{\emph{Terce}}
 	\def\sext{\emph{Sext}}
 	\def\none{\emph{None}}
+	\def\th{\textsuperscript{th}}
+	\def\rd{\textsuperscript{rd}}
+	\setlength{\parindent}{0cm}
+	\setlength{\parskip}{\baselineskip}
 	The Liturgy of the Roman Rite is comprised of the rites and ceremonies as described in certain Liturgical books. This
 	includes the Sacraments, various rites of blessings, but in particular of the Holy Sacrifice of the Mass and the Divine Office.
+
 	The Divine Office consists of major and minor ``hours'' which are spread throughout the day. Minor hours such as \prime,
-	\terce{}, \sext{} and \none{} take their name from the hour of the day. The day was considered to start at around 6:00 AM, so
-	\prime{} would correspond to the first hour of the day – or 6:00 AM. \terce{}, the third hour, would be around 9:00 AM; \sext{}
-	(6th hour) at noon; and \none{} (9th hour) at 3:00 PM. There is an additional minor hour – that of \compline{} – which is not
+	\terce{}, \sext{} and \none{} take their name from the hour of the day. The day was considered to start at around 6:00~AM, so
+	\prime{} would correspond to the first hour of the day – or 6:00~AM. \terce{}, the third hour, would be around 9:00~AM; \sext{}
+	(6\th{} hour) at noon; and \none{} (9\th{} hour) at 3:00~PM. There is an additional minor hour – that of \compline{} – which is not
 	specific to an hour in the day, but which is the final night prayer.
 
 	Major hours are those of \matins{}, \lauds{}, and \vespers{}. \matins{} and \lauds{} are the hours typically associated with the early
-	hours of the AM to sunrise, while \vespers{} is an evening prayer. Thus the complete cycle of hours of the Divine office would
+	hours of the morning to sunrise, while \vespers{} is an evening prayer. Thus the complete cycle of hours of the Divine office would
 	consist of \matins{}, \lauds{}, \prime{}, \terce{}, \sext{}, \none{}, \vespers{}, and \compline{}. In religious communities, \matins{} and \lauds{}
-	may actually start around 2:30 AM; \prime{} at 6:00 AM; \terce{} at 9:00 AM; \sext{} at 12:00 noon; \none{} at 3:00 PM; \vespers{}
-	around 5:30 PM; and finally \compline{} around 8:00 PM.
+	may actually start around 2:30~AM; \prime{} at 6:00~AM; \terce{} at 9:00~AM; \sext{} at 12:00~noon; \none{} at 3:00~PM; \vespers{}
+	around 5:30~PM; and finally \compline{} around 8:00~PM.
 
 	The Divine Office constitutes a continuous outpouring of prayer from Church Militant to her Creator, and ideally spans the
 	entirety of the Psalter within the course of a single week. The widespread incorporation of the psalms into the Liturgy of
@@ -175,9 +180,9 @@
 	There are additional elements – the hymn as with \lauds{} and \vespers{}, but also an \emph{Invitatory} at the very opening and the
 	use of \emph{Te Deum} in lieu of the final responsory on feast days. \matins{} is by far the longest of all of the hours of the Office.
 
-	As mentioned above, the day was divided according to hours from 6:00 AM to 6:00 PM. Thus the reference in the Gospel
-	to the owner of the vineyard seeking laborers at the 3rd, 6th, 9th, and 11th hours. The Romans divided the hours of the night
-	in similar fashion. The hours from 6:00 PM to 6:00 AM were divided into 4 watches of three hours each – and these were
+	As mentioned above, the day was divided according to hours from 6:00~AM to 6:00~PM. Thus the reference in the Gospel
+	to the owner of the vineyard seeking laborers at the 3\rd{}, 6\th{}, 9\th{}, and 11\th{} hours. The Romans divided the hours of the night
+	in similar fashion. The hours from 6:00~PM to 6:00~AM were divided into 4 watches of three hours each – and these were
 	called ``vigils'', i.e. when the night watch was kept. This type of division is mimicked in dividing the office into the three
 	nocturns.
 
@@ -338,21 +343,23 @@
 	\printgabc{Hymn.}{1.}{J}{../Christmas/Hymn-JesuRedemptorOmnium}
 }
 
+\pagebreak
+\def\alwaysrepeatantiphon{T}
 {
 	\input{nocturn1}
 }
 
 {
-	\input{nocturn2}
+%	\input{nocturn2}
 }
 
 {
-	\input{nocturn3}
+%	\input{nocturn3}
 }
 
 {
 	\def\gabcfolder{../Tenebrae}
-	\input{\gabcfolder/ProphecyTone-main}
+%	\input{\gabcfolder/ProphecyTone-main}
 }
 \end{document}
 
