@@ -673,6 +673,7 @@ five%
 \fi
 {
 {\ifx\prepsalm\undefined\else\prepsalm\fi
+ \ifx\prepsalmtext\undefined\else\prepsalmtext\fi
   \includescore{\psalmtex}
 }
 %\medskip % do we need this?
@@ -700,9 +701,12 @@ five%
 }
 \selectlanguage{latin}
 \endpsalmcols
+
 \ifx\dontrepeatantiphon\undefined
   \ifnum\thepage=\psalmstartpagenumber
+    \ifx\preantafter\undefined
       \let\preantafter=\undefined
+    \fi
   \else\ifx\preantafter\undefined
       \let\preantafter=\preant
   \fi\fi
@@ -712,6 +716,11 @@ five%
 \if\onlyoneant T
   \ifnum#1<5
     \let\preantafter=\undefined
+  \fi
+\fi
+\ifx\alwaysrepeatantiphon\undefined\else
+  \ifx\preantafter\undefined
+    \let\preantafter=\preant
   \fi
 \fi
 
