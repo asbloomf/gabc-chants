@@ -18,7 +18,7 @@ annotation: \Vbar;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-DE(c3h)us(h'_) (,) in(h) ad(h)ju(h)tó(hi)ri(h)um(h) mé(h)um(h'_) in(h)tén(gh)de. (h.) (::)
+DE(c3h)us(h'_) <v>\ifdefined\maltese\maltese\fi</v>(,) in(h) ad(h)ju(h)tó(hi)ri(h)um(h) mé(h)um(h'_) in(h)tén(gh)de. (h.) (::)
 
 <sp>R/</sp>~Dó(h)mi(h)ne(h'_) (,) ad(h) ad(h)ju(h)ván(h)dum(h) me(h'_) fe(h)stí(gh)na.(h.) (:)
 
