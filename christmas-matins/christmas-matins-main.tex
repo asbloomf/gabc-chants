@@ -47,7 +47,8 @@
 \titleformat
 {\section} % command
 [block] % shape
-{\phantomsection\large\addfontfeature{Numbers=Lining}} % format
+{\thispagestyle{empty}\phantomsection
+\large\addfontfeature{Numbers=Lining}\scshape} % format
 {} % label
 {} % sep
 {
@@ -66,8 +67,9 @@
 {}{0.5em}{\centering}
  
 \titlespacing{\chapter}{0pt}{-\headheight}{1pc}
-\titlespacing{\section}{0pt}{*2.5}{*1}
+\titlespacing{\section}{0pt}{-\headheight}{1pc}
 \titleclass{\chapter}{top}
+\titleclass{\section}{top}
 \newcommand{\chapterbreak}{\clearpage}
 %\titleclass{\section}{top}
 
@@ -100,26 +102,27 @@
 }
 \newcommand{\psalmcolsoverride}[1][0]{
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
-\ifnum#1=110
-\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
+\ifnum#1=2
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
 \fi
-\ifnum#1=111
-\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
+\ifnum#1=18
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.4425\linewidth}]{2}}
 \fi
-\ifnum#1=129
-\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
+\ifnum#1=44
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
 \fi
-\ifnum#1=131
+\ifnum#1=71
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.4325\linewidth}]{2}}
+\fi
+\ifnum#1=84
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.5\linewidth}]{2}}
+\fi
+\ifnum#1=88
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
 \fi
 }
 \newcommand{\writeheading}[1]{
-  \large
-  \begin{center}{
-  \addfontfeature{Numbers=Lining}
-  \textsc{#1}
-  }\end{center}
-  \medskip
+	\section{#1}
 }
 
 \sloppy
@@ -203,7 +206,7 @@
 
 }
 \bigskip{}
-\emph{Celebrant intones:}
+\noindent\emph{Celebrant intones:}
 
 \smallskip{}
 {% Domine, labia mea aperies...
@@ -219,7 +222,7 @@
 
 %\subtitle{Festal Tone}
 \def\includelaustibi{F}
-\emph{Celebrant intones:}
+\noindent\emph{Celebrant intones:}
 
 \smallskip{}
 \printdeusinadjutorium{}
@@ -239,7 +242,7 @@
 	\includescore{in-VeniteAdoremus}
 }
 
-\emph{Cantors intone:}
+\noindent\emph{Cantors intone:}
 
 {
 	\printinvitatoryant{}
@@ -248,9 +251,9 @@
 	\emph{The Choir repeats~:} Christus natus est nobis~:~* Veníte, adorémus.
 }
 
-\medskip{}
+\bigskip{}
 %\emph{The Cantors sing the verses together from the center; the Choir sings the antiphon after each verse as indicated.}
-\emph{The Cantors:}
+\noindent\emph{The Cantors:}
 
 \smallskip{}
 {
@@ -262,8 +265,8 @@
 %	\printinvitatoryant{}
 }
 
-\medskip
-\emph{The Cantors:}
+\bigskip
+\noindent\emph{The Cantors:}
 
 {
 	\smallskip
@@ -276,10 +279,10 @@
 }
 
 {
-	\medskip
+	\bigskip
 	\emph{\small In the following Verse, at the words \emph{Veníte, adorémus et procidámus ante Déum.} the Choir kneels.}
 
-	\emph{The Cantors:}
+	\noindent\emph{The Cantors:}
 	\smallskip
 
 	\def\annot{\small \Vbar{} 3.}
@@ -290,8 +293,8 @@
 %	\printinvitatoryant{}
 }
 
-\medskip
-\emph{The Cantors:}
+\bigskip
+\noindent\emph{The Cantors:}
 
 {
 	\smallskip
@@ -303,8 +306,8 @@
 %	\printinvitatoryantparttwo{}
 }
 
-\medskip
-\emph{The Cantors:}
+\bigskip
+\noindent\emph{The Cantors:}
 
 {
 	\smallskip
@@ -316,11 +319,11 @@
 %	\printinvitatoryant{}
 }
 
-\medskip
-\emph{The Cantors:}
+\bigskip
+\needspace{6\baselineskip}
+\noindent\emph{The Cantors:}
 
 {
-	\smallskip
 	\def\annot{\small \Vbar{} 6.}
 	\alsetinitialspacing{Q}
 	\includescore{in-ps94-6-GloriaPatri}
@@ -329,7 +332,7 @@
 %	\printinvitatoryantparttwo{}
 
 	\bigskip
-	\emph{The Cantors:}
+	\noindent\emph{The Cantors:}
 
 	\printinvitatoryant{}
 }
@@ -338,7 +341,7 @@
 
 {
 	\bigskip
-	\emph{Celebrant intones, alternate verses between Choir 1 (Epistle Side) \& Choir 2 (Gospel Side).}
+	\noindent\emph{Celebrant intones, alternate verses between Choir 1 (Epistle Side) \& Choir 2 (Gospel Side).}
 
 	\printgabc{Hymn.}{1.}{J}{../Christmas/Hymn-JesuRedemptorOmnium}
 }
@@ -346,7 +349,7 @@
 \pagebreak
 \def\alwaysrepeatantiphon{T}
 {
-%	\input{nocturn1}
+	\input{nocturn1}
 }
 
 {
@@ -354,12 +357,13 @@
 }
 
 {
-%	\input{nocturn3}
+	\input{nocturn3}
 }
 
+\pagebreak
 {
 	\def\gabcfolder{../Tenebrae}
-%	\input{\gabcfolder/ProphecyTone-main}
+	\input{\gabcfolder/ProphecyTone-main}
 }
 \end{document}
 
