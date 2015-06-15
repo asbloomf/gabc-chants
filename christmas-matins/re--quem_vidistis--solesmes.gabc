@@ -8,14 +8,32 @@ transcriber:Andrew Hinkley;
 pa(fd)stó(e_f)res?(g) dí(hg/h_i)ci(h)te,(h.) (;)
 an(dh~)nun(h)ti(hg)á(h_0//ig'h)te(e_f) nó(gh_G_F'/gwhgh)bis,(hg__) (,)
 in(h_i) tér(h)ris(gf) quis(g) ap(gd)pá(e)ru(egff)it?(eef.) <v>\greheightstar</v>(:)
-Ná(d!ewg_/hi)tum(h') ví(h)di(g.f!gwh/G'_FE'f)mus,(fe..) (;)
+Ná(d!ewg_/hi)tum(h') ví(h)di(%g.f!
+[ev:%
+\greglyph{\char\gregoriocharoffset{5121}}{g}{g}{8}{}{%
+\raisedot{\grepunctummora{g}{3}{0}{0}}%
+}%
+\greendofglyph{1}%
+]gwh/G'_FE'f)mus,(fe..) (;)
 et(e) chó(eg/hg)ros(f) An(e_d)ge(c)ló(de_D_C'/dw!e_f)rum(ed/efe.) (,)
 col(c)lau(de)dán(e_fE'D)tes(fg../fg!hv_/ig/h_g) Dó(e)mi(egff)num.(fe..) <sp>V/</sp>(::)
 
-Dí(h)ci(gh)te,(g.f!gwh_g_/hv_GE/f_e) quí(gf~)dnam(gh) vi(gf)dí(e!fwg_f)stis?(fe..) (;)
+Dí(h)ci(gh)te,(%g.f!
+[ev:%
+\greglyph{\char\gregoriocharoffset{5121}}{g}{g}{8}{}{%
+\raisedot{\grepunctummora{g}{3}{0}{0}}%
+}%
+\greendofglyph{1}%
+]gwh_g_/hv_GE/f_e) quí(gf~)dnam(gh) vi(gf)dí(e!fwg_f)stis?(fe..) (;)
 et(f) an(de~)nun(e)ti(e)á(ef)te(e) Chrí(ef)sti(e) na(e!fwgFE)ti(g)vi(gh_gh'GF)tá(ef/gef)tem.(ed..) <v>\greheightstar</v>(::)
 Ná(d!ewg_/hi)tum.(h') (::)
 
-Gló(h)ri(gh)a(g.f!gwh_g_/hv_GE/f_e) Pá(gf)tri,(gh) et(gf~) Fí(e)li(e!fwg_f)o,(fe..) (;)
+Gló(h)ri(gh)a(%g.f!
+[ev:%
+\greglyph{\char\gregoriocharoffset{5121}}{g}{g}{8}{}{%
+\raisedot{\grepunctummora{g}{3}{0}{0}}%
+}%
+\greendofglyph{1}%
+]gwh_g_/hv_GE/f_e) Pá(gf)tri,(gh) et(gf~) Fí(e)li(e!fwg_f)o,(fe..) (;)
 et(e) Spi(e)rí(e!fwgFE)tu(g)i(gh_gh'GF) Sán(ef/gef)cto.(ed..) <v>\greheightstar</v>(::)
 Ná(d!ewg_/hi)tum.(h') (::)
