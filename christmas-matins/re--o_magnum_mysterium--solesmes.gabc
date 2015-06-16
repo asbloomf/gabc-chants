@@ -7,10 +7,68 @@ transcriber:Andrew Hinkley;
 (c4) O(gh/iji) má(j)gnum(ji) <v>\greheightstar</v>()
 my(h)sté(hi/j_i)ri(hg)um,(g.h!iwjIH/ijgg/efe.) (,)
 et(e) ad(ef!gh)mi(g)rá(hg/hi)bi(h)le(h') sa(hg'gf)cra(fg!hv_/ig/h_g)mén(egff)tum,(eef.) (;)
-ut(ed) a(gh)ni(g)má(hi_H_G'/hw!i_j)li(i)a(i_0//jk/J'_I_/jv_I_H'G/h_g_) (,)
+ut(ed) a(gh)ni(g)má(hi_H_G'/%hw!i_j
+[ev:%
+\greendofelement{0}{0}%
+\greglyph{\char\gregoriocharoffset{26}}{h}{i}{4}{}{}%
+\greendofglyph{1}%
+\greglyph{\char\gregoriocharoffset{1025}}{i}{i}{0}{}{%
+\lowerepisema{\grehepisemusbottom{h}{0}{-1}}%
+}%
+])li(i)a(i_0//jk/J'_I_/%jv_I_
+[ev:%
+\greendofelement{0}{0}%
+\greglyph{\char\gregoriocharoffset{22}}{j}{i}{0}{}{%
+\grehepisemusbridge{k}{}{}%
+\grehepisemus{k}{0}{0}{k}%
+}%
+\greendofglyph{9}%
+\greglyph{\char\gregoriocharoffset{19}}{i}{h}{6}{}{%
+\pushhepisemusright{\grehepisemus{k}{12}{1}{k}}%
+}%
+\greendofglyph{3}%
+]H'G/h_g_) (,)
 vi(g)dé(i')rent(j) Dó(iih')mi(g)num(g.h!iwj) ná(ji'ih/iv_HG'h)tum,(hg__) (,)
-ja(h)cén(h')tem(e) in(e) præ(h)sé(g_h)pi(f_gF'__ED'e)o :(ed..) <v>\greheightstar</v>(:)
-Be(g)á(iji)ta(hih) Vír(ijIG)go,(hg__/hv_G_F/g!hwi_h_hg.) (;)
+ja(h)cén(h')tem(e) in(e) præ(h)sé(g_h)pi(%f_gF'__
+[ev:%
+\greglyph{\char\gregoriocharoffset{1025}}{f}{f}{0}{}{%
+\grehepisemusbottom{e}{0}{-1}%
+\grehepisemusbridge{h}{}{}%
+\grehepisemus{h}{18}{0}{h}%
+}%
+\greendofglyph{9}%
+\greglyph{\char\gregoriocharoffset{19}}{f}{e}{6}{}{%
+\pushhepisemusright{\grehepisemus{h}{12}{1}{h}}%
+\grevepisemus{e}{12}%
+}%
+\greendofglyph{3}%
+]ED'e)o :(ed..) <v>\greheightstar</v>(:)
+Be(g)á(iji)ta(hih) Vír(ijIG)go,(hg__/%hv_G_F/g!hwi_h_hg.
+[ev:%
+\greendofelement{0}{0}%
+\greglyph{\char\gregoriocharoffset{22}}{h}{g}{0}{}{%
+\grehepisemusbridge{i}{}{}%
+\grehepisemus{i}{0}{0}{i}%
+}%
+\greendofglyph{9}%
+\greglyph{\char\gregoriocharoffset{19}}{g}{g}{6}{}{%
+\pushhepisemusright{\grehepisemus{i}{12}{1}{i}}%
+}%
+\greendofglyph{3}%
+\greglyph{\char\gregoriocharoffset{19}}{f}{g}{6}{}{}%
+\greendofelement{0}{0}%
+\greglyph{\char\gregoriocharoffset{17}}{g}{h}{0}{}{}%
+\greendofglyph{1}%
+\greglyph{\char\gregoriocharoffset{19462}}{h}{h}{4}{}{%
+\grehepisemusbridge{j}{}{}%
+\grehepisemus{j}{17}{1}{j}%
+\grehepisemus{j}{0}{0}{j}%
+}%
+\greendofglyph{0}%
+\greglyph{\char\gregoriocharoffset{6145}}{h}{h}{8}{}{%
+\grepunctummora{g}{0}{0}{0}%
+}%
+]) (;)
 cú(h)jus(hg~) ví(h!iwj)sce(g)ra(e') me(g)ru(f)é(e./ced)runt(fd/efe.) (,)
 por(fd~)tá(ev./fff)re(f_d) Dó(f/g'h)mi(f/g'h)num(hiG'F/ghg) Chrí(egff)stum.(fe..)
 
