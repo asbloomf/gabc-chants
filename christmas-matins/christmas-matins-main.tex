@@ -17,7 +17,8 @@
 \renewcommand{\needspace}[1]{
 	\checkoddpage\ifoddpage\oldneedspace{#1}\else\fi
 }
-\newcommand{\raisedot}[1]{\adjustbox{raise=1pt}{#1}}
+\newcommand{\raisedot}[1]{\adjustbox{raise=1pt,lap=-0.25pt}{#1}}
+\newcommand{\pushdotleft}[1]{\adjustbox{lap=-0.5pt}{#1}}
 \newcommand{\raisehepisemus}[1]{\adjustbox{raise=2pt}{#1}}
 \newcommand{\pushhepisemusright}[1]{\adjustbox{lap=1pt}{#1}}
 \newcommand{\pushhepisemusleft}[1]{\adjustbox{lap=-1pt}{#1}}

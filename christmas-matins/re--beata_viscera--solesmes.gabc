@@ -5,11 +5,29 @@ book:The Liber Usualis, 1961, p. 389;
 transcriber:Andrew Hinkley;
 %%
 (c3) BE(e)á(e)ta(e.f!gwh) <v>\greheightstar</v>() ví(hihhg)sce(h!iwjij)ra(ji__) (,)
-Ma(ij)rí(j)æ(h/i'j) Vír(i)gi(i.g!hwi)nis,(ij/H'_G_/hv_G_F'Efe..) (;)
+Ma(ij)rí(j)æ(h/i'j) Vír(i)gi(%i.g!
+[ev:%
+\greglyph{\char\gregoriocharoffset{5122}}{i}{h}{1}{}{%
+\pushdotleft{\grepunctummora{i}{2}{0}{0}}%
+}%
+\greendofglyph{1}%
+]hwi)nis,(ij/H'_G_/hv_G_F'Efe..) (;)
 quæ(fd) por(e)ta(f)vé(fi)runt(hih) æ(h)tér(hg__/hv_GFgh)ni(g) Pá(g)tris(g!hwi/H'GF'___/gwhGF') Fí(e)li(ef!gvFE'f)um :(fe..) (:)
 et(e) be(e')á(e)ta(e.f!gwh) ú(hihhg)be(h!iwjij)ra,(ji__) (,)
 quæ(i) la(i')cta(i)vé(jjk)runt(j_kJH') Chrí(j)stum(ij) Dó(g)mi(gihh)num :(hg..) <v>\greheightstar</v>(:)
 Qui(i) hó(jjk)di(j_kJI'j)e(j_i) (,) pro(k) sa(jk)lú(i)te(ih) mún(i!jwkjk_JI)di(ji..) (;)
-de(g) Vír(iji/jkj)gi(ih)ne(h) ná(hv_/hv_GF)sci(fih/i_j) di(i.g!hwi/H'GF'___gwhGF')gná(e)tus(ef!gvFE'f) est.(fe..) <sp>V/</sp>(::)
+de(g) Vír(iji/jkj)gi(ih)ne(h) ná(hv_/hv_GF)sci(fih/i_j) di(%i.g!
+[ev:%
+\greglyph{\char\gregoriocharoffset{5122}}{i}{h}{1}{}{%
+\pushdotleft{\grepunctummora{i}{2}{0}{0}}%
+}%
+\greendofglyph{1}%
+]hwi/H'GF'___gwhGF')gná(e)tus(ef!gvFE'f) est.(fe..) <sp>V/</sp>(::)
 Dí(i!jwkJI)es(hih'___hg) san(h)cti(h)fi(h)cá(hi)tus(h) il(ig~)lú(hi)xit(hi) nó(i!jwk_j)bis :(ji..) (;)
-ve(hih'___hg)ní(hih)te,(i) Gén(ij~)tes,(i'_) (,) et(i) a(i)do(i)rá(ij_ij'IH)te(hg) Dó(h!iwji/jkj)mi(i.h!iwjij)num.(iv_HGhg..) <v>\greheightstar</v>(::) Qui(i) hó(jjk)di(j_kJI'j)e.(ji__) (::)
+ve(hih'___hg)ní(hih)te,(i) Gén(ij~)tes,(i'_) (,) et(i) a(i)do(i)rá(ij_ij'IH)te(hg) Dó(h!iwji/jkj)mi(%i.h!
+[ev:%
+\greglyph{\char\gregoriocharoffset{5121}}{i}{i}{8}{}{%
+\raisedot{\grepunctummora{i}{3}{0}{0}}%
+}%
+\greendofglyph{1}%
+]iwjij)num.(iv_HGhg..) <v>\greheightstar</v>(::) Qui(i) hó(jjk)di(j_kJI'j)e.(ji__) (::)
