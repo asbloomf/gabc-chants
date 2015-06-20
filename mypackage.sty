@@ -123,6 +123,22 @@
 \foreignlanguage{#2}{#1\StrGobbleLeft{#3}{\mypos}}%
 }
 
+\newcommand{\dropcapnospace}[3][]{%
+% 1 - optional command
+% 2 - language
+% 3 - text
+%\noindent%
+\StrPosition{#3}{ }[\mypos]%
+\ifnum\mypos=2
+% find the next space then
+\StrPosition[2]{#3}{ }[\mypos]%
+\fi
+\setcounter{dropcapcounter}{\mypos - 1}
+\lettrine{\StrLeft{#3}{1}}%
+   {#1\StrMid{#3}{2}{\thedropcapcounter}} 
+\foreignlanguage{#2}{#1\StrGobbleLeft{#3}{\mypos}}%
+}
+
 \newcommand{\olderprayer}[2]{
 % 1 - latin
 % 2 - english
