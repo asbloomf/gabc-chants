@@ -216,9 +216,10 @@
 
 }
 \bigskip{}
-\noindent\emph{Celebrant intones:}
+\ifprintwhointones{\noindent\emph{Celebrant intones:}
 
 \smallskip{}
+}{}
 {% Domine, labia mea aperies...
 	\def\annot{\small \Vbar{}}
 	\alsetinitialspacing{D}
@@ -232,9 +233,10 @@
 
 %\subtitle{Festal Tone}
 \def\includelaustibi{F}
-\noindent\emph{Celebrant intones:}
+\ifprintwhointones{\noindent\emph{Celebrant intones:}
 
 \smallskip{}
+}{}
 \printdeusinadjutorium{}
 
 {
@@ -252,8 +254,9 @@
 	\includescore{in-VeniteAdoremus}
 }
 
-\noindent\emph{Cantors intone:}
+\ifprintwhointones{\noindent\emph{Cantors intone:}
 
+}{}
 {
 	\printinvitatoryant{}
 
@@ -263,9 +266,10 @@
 
 \bigskip{}
 %\emph{The Cantors sing the verses together from the center; the Choir sings the antiphon after each verse as indicated.}
-\noindent\emph{The Cantors:}
+\ifprintwhointones{\noindent\emph{The Cantors:}
 
 \smallskip{}
+}{}
 {
 	\def\annot{\small Ps. 94.}
 	\alsetinitialspacing{V}
@@ -276,10 +280,11 @@
 }
 
 \bigskip
-\noindent\emph{The Cantors:}
+\ifprintwhointones{\noindent\emph{The Cantors:}
 
+\smallskip
+}{}
 {
-	\smallskip
 	\def\annot{\small \Vbar{} 2.}
 	\alsetinitialspacing{Q}
 	\includescore{in-ps94-2-QuoniamDeus}
@@ -292,9 +297,10 @@
 	\bigskip
 	\emph{\small In the following Verse, at the words \emph{Veníte, adorémus et procidámus ante Déum.} the Choir kneels.}
 
-	\noindent\emph{The Cantors:}
+	\ifprintwhointones{\noindent\emph{The Cantors:}
 	\smallskip
 
+	}{}
 	\def\annot{\small \Vbar{} 3.}
 	\alsetinitialspacing{Q}
 	\includescore{in-ps94-3-QuoniamIpsius}
@@ -304,10 +310,11 @@
 }
 
 \bigskip
-\noindent\emph{The Cantors:}
+\ifprintwhointones{\noindent\emph{The Cantors:}
 
+\smallskip
+}{}
 {
-	\smallskip
 	\def\annot{\small \Vbar{} 4.}
 	\alsetinitialspacing{Q}
 	\includescore{in-ps94-4-Hodie}
@@ -317,10 +324,11 @@
 }
 
 \bigskip
-\noindent\emph{The Cantors:}
+\ifprintwhointones{\noindent\emph{The Cantors:}
 
+\smallskip
+}{}
 {
-	\smallskip
 	\def\annot{\small \Vbar{} 5.}
 	\alsetinitialspacing{Q}
 	\includescore{in-ps94-5-Quadraginta}
@@ -330,9 +338,10 @@
 }
 
 \bigskip
-\needspace{6\baselineskip}
+\ifprintwhointones{\needspace{6\baselineskip}
 \noindent\emph{The Cantors:}
 
+}{}
 {
 	\def\annot{\small \Vbar{} 6.}
 	\alsetinitialspacing{Q}
@@ -342,8 +351,9 @@
 %	\printinvitatoryantparttwo{}
 
 	\bigskip
-	\noindent\emph{The Cantors:}
+	\ifprintwhointones{\noindent\emph{The Cantors:}
 
+	}{}
 	\printinvitatoryant{}
 }
 
@@ -351,8 +361,9 @@
 
 {
 	\bigskip
-	\noindent\emph{Celebrant intones, alternate verses between Choir 1 (Epistle Side) \& Choir 2 (Gospel Side).}
+	\ifprintwhointones{\noindent\emph{Celebrant intones, alternate verses between Choir 1 (Epistle Side) \& Choir 2 (Gospel Side).}
 
+	}{}
 	\printgabc{Hymn.}{1.}{J}{../Christmas/Hymn-JesuRedemptorOmnium}
 }
 
