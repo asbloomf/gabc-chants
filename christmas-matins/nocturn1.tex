@@ -3,14 +3,15 @@
   %\section{1st Nocturn}
 
   {
-    \def\preant{\setgrefactor{17}\normalsize\vspace{-\baselineskip}\noindent\emph{Celebrant intones:}
+    \def\preant{\setgrefactor{17}\ifprintwhointones{\normalsize\vspace{-\baselineskip}\noindent\emph{Celebrant intones:}
 
+    }{}
     \large}
     \def\preantafter{\setgrefactor{17}\large}
     \def\prepsalm{\normalsize}
-    \def\prepsalmtext{\vspace{-\baselineskip}\noindent\emph{First Cantor intones:}
+    \def\prepsalmtext{\ifprintwhointones{\vspace{-\baselineskip}\noindent\emph{First Cantor intones:}
 
-    }
+    }{}}
     \def\anttranslation{The Lord hath said unto me: Thou art My son, this day have I begotten thee.}
     %\def\psalmtranslationsmall{T}
     %\def\prerepeatantiphon{\vspace{-20pt}}
@@ -19,8 +20,10 @@
   }
 
   {
-    \def\preant{\setgrefactor{17}\noindent\normalsize\emph{Second Cantor intones:}
+    \bigskip
+    \def\preant{\setgrefactor{17}\ifprintwhointones{\noindent\normalsize\emph{Second Cantor intones:}
 
+    }{}
     \large}
     \def\preantafter{\setgrefactor{17}\large}
     \def\prepsalm{\normalsize}
@@ -31,8 +34,10 @@
   }
 
   {
-    \def\preant{\setgrefactor{17}\noindent\normalsize\emph{First Cantor intones:}
+    %\smallskip
+    \def\preant{\setgrefactor{17}\ifprintwhointones{\noindent\normalsize\emph{First Cantor intones:}
 
+    }{}
     \large}
     \def\preantafter{\setgrefactor{17}\large}
     \def\prepsalm{\normalsize}

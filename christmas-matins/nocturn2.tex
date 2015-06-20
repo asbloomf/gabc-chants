@@ -2,7 +2,11 @@
   \writeheading{In the 2nd Nocturn}
 
   {
-    \def\preant{\setgrefactor{17}\large}
+    \def\preant{\setgrefactor{17}\ifprintwhointones{\normalsize\vspace{-\baselineskip}\noindent\emph{Second Cantor intones:}
+
+    }{}
+    \large}
+    \def\preantafter{\setgrefactor{17}\large}
     \def\prepsalm{\normalsize}
     \def\anttranslation{We have drunk in thy loving-kindness, O God, in the midst of thy temple.}
     %\def\psalmtranslationsmall{T}
@@ -13,7 +17,12 @@
 
   {
     \bigskip
-    \def\preant{\setgrefactor{17}\large}
+    \needspace{10\baselineskip}
+    \def\preant{\setgrefactor{17}\ifprintwhointones{\normalsize\vspace{-\baselineskip}\noindent\emph{First Cantor intones:}
+
+    }{}
+    \large}
+    \def\preantafter{\setgrefactor{17}\large}
     \def\prepsalm{\normalsize}
     \def\anttranslation{In the Lord's days shall abundance of peace arise and flourish.}
     %\def\psalmtranslationsmall{T}
@@ -23,7 +32,11 @@
 
   {
     \bigskip
-    \def\preant{\setgrefactor{17}\large}
+    \def\preant{\setgrefactor{17}\ifprintwhointones{\noindent\emph{Second Cantor intones:}
+
+    }{}
+    \large}
+    \def\preantafter{\setgrefactor{17}\large}
     \def\prepsalm{\normalsize}
     \def\anttranslation{Truth is sprung out of the earth, and righteousness hath looked down from heaven.}
     %\def\psalmtranslationsmall{T}

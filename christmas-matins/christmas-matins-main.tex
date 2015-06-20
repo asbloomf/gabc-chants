@@ -24,6 +24,10 @@
 \newcommand{\pushhepisemusleft}[1]{\adjustbox{lap=-1pt}{#1}}
 \newcommand{\lowerepisema}[1]{\adjustbox{raise=-1pt}{#1}}
 
+\def\shouldprintwhointones{F}
+\newcommand{\ifprintwhointones}[2]{\if\shouldprintwhointones T#1\else#2\fi}
+\newcommand{\ifnotprintwhointones}[2]{\if\shouldprintwhointones T#2\else#1\fi}
+
 %\usepackage{hyperref}
 \newcommand{\phantomsection}{}
 

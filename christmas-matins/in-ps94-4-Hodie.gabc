@@ -4,6 +4,6 @@ initial-style:1;
 no(g)lí(gh)te(g) ob(g)du(h)rá(g)re(f) cór(fh)da(h) vé(g_h)stra,(g.) (;)
 sic(g)ut(f) in(fh) ex(h)a(h)cer(h)ba(h)ti(h)ó(ixhi)ne(h'_) se(h)cún(h)dum(g) dí(gh)em(g) ten(fe~)ta(f)ti(fg)ó(g)nis(gh) in(h) de(g)sér(gh)to~:(g.) (,)
 u(g)bi(g) ten(g)ta(g)vé(gh)runt(g) me(f) pá(fh)tres(h) vé(g_h)stri,(hg..) (;)
-pro(fe)ba(fgf)vé(gh)runt(g) et(g) vi(g)dé(gh)runt(g.) (,) ó(h.g!hw!i_j)pe(h)ra(gh) mé(h'hgh)a.(ffe/fg..) <alt>\hspace{1ex}The Choir:</alt>(::)
+pro(fe)ba(fgf)vé(gh)runt(g) et(g) vi(g)dé(gh)runt(g.) (,) ó(h.g!hw!i_j)pe(h)ra(gh) mé(h'hgh)a.(ffe/fg..) <alt>\ifprintwhointones{\hspace{1ex}The Choir:}{}</alt>(::)
 
 <v>\greheightstar</v>~V{e}(de/f'g)ní(g)te,(gh/hg/he__) ad(d.f!gwh)o(g)ré(fg!hvhgh)mus.(e.) (::d+)
