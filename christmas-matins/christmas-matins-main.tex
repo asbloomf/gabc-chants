@@ -79,9 +79,9 @@
 \titlespacing{\chapter}{0pt}{-\headheight}{1pc}
 \titlespacing{\section}{0pt}{-\headheight}{1pc}
 \titleclass{\chapter}{top}
-\titleclass{\section}{top}
 \newcommand{\chapterbreak}{\clearpage}
-%\titleclass{\section}{top}
+\titleclass{\section}{top}
+\newcommand{\sectionbreak}{\clearpage}
 
 \contentsmargin{1pc}
 \dottedcontents{chapter}[0pc]{}{2pc}{1pc}
@@ -144,6 +144,9 @@
 
 %\pagenumbering{arabic}
 %\mainmatter
+
+\vspace*{5in}
+\pagebreak
 
 \chapter{The Office of Matins}
 
@@ -378,13 +381,10 @@
 }
 
 {
-	\input{nocturn3}
+ 	\input{nocturn3}
 }
 
 \pagebreak
-{
-	\def\gabcfolder{../Tenebrae}
-	\input{\gabcfolder/ProphecyTone-main}
-}
+
 \end{document}
 
