@@ -91,6 +91,14 @@
 \end{multicols}
 \selectlanguage{latin}
 }
+\newcommand{\translationcolumnsindent}[2][\relax]{%
+\selectlanguage{american}
+#1
+\begin{multicols}{2}%
+{#2}
+\end{multicols}
+\selectlanguage{latin}
+}
 
 \newcommand{\medianttermination}[2]{
 % 1 - Mediant of 2 accents
