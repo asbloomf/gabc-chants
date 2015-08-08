@@ -4,89 +4,14 @@ mode:5;
 book:The Liber Usualis, 1961, p. 375;
 transcriber:Andrew Hinkley;
 %%
-(c3) HO(h)di(hhh)e(f.) <v>\greheightstar</v>() nó(hv_/!hv_)bis(fhe'/f_e_'ed.) (,) cæ(fv_ED)ló(e)rum(f') Rex(%hiih_'
-[ev:%
-%
-\greglyph{\char\gregoriocharoffset{1025}}{h}{i}{0}{}{}%
-\greendofglyph{0}%
-\greglyph{\char\gregoriocharoffset{5121}}{i}{d}{8}{}{%
-\adjustbox{lap=2pt}{\grehepisemus{i}{0}{0}{i}}%
-\grevepisemus{g}{0}%
-}%
-]) (,) de(d) Vír(gxefe/fg)gi(f)ne(f') ná(gxhg'gvFE/fg)sci(f) di(gxf_h/G'FE'___/fwgFE')gná(d)tus(de!fvED'e) est,(ed..) (;)
-ut(d_f) hó(h)mi(hi)nem(ihhg~) pér(gf~)di(hi)tum(ihhg) (,) ad(fe~) cæ(f)lé(f!gwh.f/fwgfg)sti(gf)a(f) ré(d.f!gwhhiH'G/ij/kh)gna(h'_) (,) re(h/i'j)vo(ki/jhi)cá(g'gfg)ret :(gf..) <v>\greheightstar</v>(:)
-Gáu(f!gwh/i_j)det(i') ex(i)ér(%i.h
-[ev:%
-%
-\greglyph{\char\gregoriocharoffset{5121}}{i}{i}{8}{}{%
-\raisedot{\grepunctummora{i}{3}{0}{0}}%
-}%
-]!iwj)ci(ih)tus(h) An(hhf~)ge(hi)ló(%h_iH'__GF'g
-[ev:%
-%
-\greglyph{\char\gregoriocharoffset{1025}}{h}{h}{0}{}{%
-\grehepisemusbottom{g}{0}{-1}%
-\grehepisemusbridge{j}{}{}%
-\grehepisemus{j}{18}{0}{j}%
-}%
-\greendofglyph{9}%
-\greglyph{\char\gregoriocharoffset{19}}{h}{g}{6}{}{%
-\pushhepisemusright{\grehepisemus{j}{12}{1}{j}}%
-\grevepisemus{g}{12}%
-}%
-\greendofglyph{3}%
-]GF'g)rum :(gf..) (;)
-qui(f)a(i') sá(h)lus(gh) æ(f)tér(e/hh)na(f/hh//hv_GF'%he'_
-[ev:%
-%
-\greendofglyph{0}%
-\greglyph{\char\gregoriocharoffset{6147}}{h}{f}{1}{}{%
-\grehepisemusbridge{g}{}{}%
-\pushhepisemusright{\grehepisemus{g}{0}{0}{g}}%
-\grevepisemus{d}{0}%
-}%
-\greendofelement{0}{0}%
-]/f_e'ed.) (;)
-hu(f)má(gxd!ew!f_g)no(f') gé(f)ne(e)ri(hv_/hv_) (,) ap(iv_H_G'_F/%iv_H_G'_E_/gxf_hF__E'
-[ev:%
-%
-\greendofelement{0}{0}%
-\greglyph{\char\gregoriocharoffset{23}}{i}{h}{0}{}{%
-\grehepisemusbridge{j}{}{}%
-\grehepisemus{j}{0}{0}{j}%
-}%
-\greendofglyph{9}%
-\greglyph{\char\gregoriocharoffset{19}}{h}{f}{6}{}{%
-\grehepisemusbridge{j}{}{}%
-\grehepisemus{j}{12}{1}{j}%
-}%
-\greendofglyph{3}%
-\greglyph{\char\gregoriocharoffset{19}}{g}{f}{6}{}{%
-\grehepisemusbridge{j}{}{}%
-\grehepisemus{j}{12}{2}{j}%
-\grevepisemus{f}{12}%
-}%
-\greendofglyph{10}%
-\greglyph{\char\gregoriocharoffset{19}}{e}{f}{6}{}{%
-\grehepisemus{j}{12}{0}{j}%
-}%
-\greendofelement{0}{0}%
-\greflat{g}{0}%
-\greglyph{\char\gregoriocharoffset{1026}}{f}{f}{0}{}{%
-\grehepisemusbottom{e}{0}{-2}%
-\grehepisemusbridge{i}{}{}%
-\grehepisemus{i}{18}{0}{i}%
-}%
-\greendofglyph{9}%
-\greglyph{\char\gregoriocharoffset{19}}{f}{f}{6}{}{%
-\pushhepisemusright{\grehepisemus{i}{12}{1}{i}}%
-}%
-\greendofglyph{3}%
-\greglyph{\char\gregoriocharoffset{19}}{e}{f}{6}{}{%
-\grevepisemus{d}{12}%
-}%
-\greendofglyph{0}%
-]fwgFE')pá(d)ru(de!fvED'e)it.(ed..) (::)
+(c3) HO(h)di(hhh)e(f.) <v>\greheightstar</v>() nó(hv_4/!hv_4)bis(fhe'/f_e_'ed.) (,) cæ(fv_ED)ló(e)rum(f')
+Rex(hiih_15') (,) de(d) Vír(gxefe/fg)gi(f)ne(f') ná(gxhg'gvFE/fg)sci(f) di(gxf_h/G'FE'___/fwgFE')gná(d)tus(de!fvED'e) est,(ed..) (;)
+ut(d_f) hó(h)mi(hi)nem(ihhg~) pér(gf~)di(hi)tum(ihhg) (,) ad(fe~) cæ(f)lé(f!gwh.f/fwgfg)sti(gf)a(f) ré(d.f!gwhhiH'G/ij/kh)gna(h'_) (,) re(h/i'j)vo(ki/jhi)cá(g'gfg)ret :(gf..) (:)
+<v>\greheightstar</v>~Gáu(f!gwh/i_j)det(i') ex(i)ér(i.h!iwj)ci(ih)tus(h)
+
+An(hhf~)ge(hi)ló(h_iH'__GF'gGF'g)rum :(gf..) (;)
+qui(f)a(i') sá(h)lus(gh) æ(f)tér(e/hh)na(f/hh//hv_GF'he'_15/f_e'ed.) (;)
+hu(f)má(gxd!ew!f_g)no(f') gé(f)ne(e)ri(hv_4/hv_4) (,) ap(iv_H_G'_F/iv_H_G'_E_/gxf_hF__E'fwgFE')pá(d)ru(de!fvED'e)it.(ed..) (::)
 <sp>V/</sp>~Gl{ó}(h)ri(h)a(hi//hh/fgf.) in(h) ex(hf)cél(fi)sis(gh) Dé(h.g!hwihi)o,(ih..) (;)
 et(d) in(f) tér(hi~)ra(h) pax(h) ho(h)mí(hi)ni(h)bus(h'_) bó(h)næ(hg/hg) vo(gf)lun(h_i)tá(h.g!hwi/H'_GF'g)tis.(gf..) (::)
 <v>\greheightstar</v>~Gáu(f!gwh/i_j)det.(i') (::)
