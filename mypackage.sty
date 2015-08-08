@@ -346,7 +346,7 @@
 \newenvironment{magnificat}[2][2]{
 % 1 - number to start on
 % 2 - name of magnificat to include
-\includescore{#2}
+\gregorioscore{#2}
 \normalsize
 \begin{psalmverses}[#1]
 }{\end{psalmverses}}
@@ -354,7 +354,7 @@
 \newenvironment{boldnummagnificat}[2][2]{
 % 1 - number to start on
 % 2 - name of magnificat to include
-\includescore{#2}
+\gregorioscore{#2}
 \normalsize
 \begin{boldnumpsalmverses}[#1]
 }{\end{boldnumpsalmverses}}
@@ -362,7 +362,7 @@
 \newenvironment{oddversesmagnificat}[2][2]{
 % 1 - number to start on
 % 2 - name of magnificat to include
-\includescore{#2}
+\gregorioscore{#2}
 \normalsize
 \begin{oddnumpsalmverses}[#1]
 }{\end{oddnumpsalmverses}}
@@ -413,8 +413,8 @@
 \setspaceafterinitial{\spacewidth}{0}
 \setspacebeforeinitial{\spacewidth}{0}
 %
-\gresetfirstlineaboveinitial{\annot}{\annot}
+\greannotation{\annot}
 \ifx\annottwo\undefined\else%
-\setsecondannotation{\annottwo}
+\greannotation{\annottwo}
 \fi
 }

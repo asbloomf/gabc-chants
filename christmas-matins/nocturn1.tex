@@ -1,13 +1,13 @@
 {
   \writeheading{In the 1st Nocturn}
   %\section{1st Nocturn}
-
+{
   {
-    \def\preant{\setgrefactor{17}\ifprintwhointones{\normalsize\vspace{-\baselineskip}\noindent\emph{Celebrant intones:}
+    \def\preant{\grechangestaffsize{17}\ifprintwhointones{\normalsize\vspace{-\baselineskip}\noindent\emph{Celebrant intones:}
 
     }{}
     \large}
-    \def\preantafter{\setgrefactor{17}\large}
+    \def\preantafter{\grechangestaffsize{17}\large}
     \def\prepsalm{\normalsize}
     \def\prepsalmtext{\ifprintwhointones{\vspace{-\baselineskip}\noindent\emph{First Cantor intones:}
 
@@ -21,11 +21,11 @@
 
   {
     \bigskip
-    \def\preant{\setgrefactor{17}\ifprintwhointones{\noindent\normalsize\emph{Second Cantor intones:}
+    \def\preant{\grechangestaffsize{17}\ifprintwhointones{\noindent\normalsize\emph{Second Cantor intones:}
 
     }{}
     \large}
-    \def\preantafter{\setgrefactor{17}\large}
+    \def\preantafter{\grechangestaffsize{17}\large}
     \def\prepsalm{\normalsize}
     \def\anttranslation{The Lord is as a bridegroom coming out of his chamber.}
     %\def\psalmtranslationsmall{T}
@@ -35,18 +35,18 @@
 
   {
     %\smallskip
-    \def\preant{\setgrefactor{17}\ifprintwhointones{\noindent\normalsize\emph{First Cantor intones:}
+    \def\preant{\grechangestaffsize{17}\ifprintwhointones{\noindent\normalsize\emph{First Cantor intones:}
 
     }{}
     \large}
-    \def\preantafter{\setgrefactor{17}\large}
+    \def\preantafter{\grechangestaffsize{17}\large}
     \def\prepsalm{\normalsize}
     \def\anttranslation{Grace is poured into thy lips, therefore God hath blessed thee for ever.}
     %\def\psalmtranslationsmall{T}
     %\def\prerepeatantiphon{\vspace{-20pt}}
     \printpsalm{3}{44}{1a2}{an--diffusa_est--solesmes}{T}
   }
-
+}
   \bigskip
   {
     %\def\vrnospace{T}
@@ -57,7 +57,7 @@
 
   {
     \bigskip
-    \includescore[a]{paterNoster}
+    \gregorioscore[a]{paterNoster}
 
     \medskip
     \emph{Absolution.} Exáudi, Dómine Jesu Christe, preces servórum tuórum~\dag{} et miserére nobis,~* qui cum Patre et Spíritu Sancto vivis et regnas in sǽcula sæculórum. \Rbar{}~Amen.
@@ -96,7 +96,7 @@
 
   {
     \bigskip
-    \setgrefactor{17}
+    \grechangestaffsize{17}
     \printgabc{1. Resp.}{5.}{H}{re--hodie_nobis_caelorum--solesmes}
     \vspace{-\baselineskip}
     {
@@ -143,7 +143,7 @@
 
   {
     \bigskip
-    \setgrefactor{17}
+    \grechangestaffsize{17}
     \printgabc{2. Resp.}{8.}{H}{re--hodie_nobis_de_caelo--solesmes}
     {
     \translationcolumns[\normalsize]{\Rbar{}~Today true peace comes down unto us from heaven.
@@ -184,7 +184,7 @@
 
   {
     \bigskip
-    \setgrefactor{17}
+    \grechangestaffsize{17}
     \printgabc{3. Resp.}{4.}{Q}{re--quem_vidistis--solesmes}
   }
   {

@@ -11,8 +11,8 @@
 \fi
 \usepackage{gregoriotex} % for gregorio score inclusion
 \usepackage{import}
-\ifdefined\autocompilegabc
-    \autocompilegabc
+\ifdefined\gresetcompilegabc
+    \gresetcompilegabc{auto}
 \fi
 
 % If you use usual TeX fonts, here is a starting point:
@@ -31,7 +31,7 @@
 \usepackage[garamond]{../mypackage}
 % end my stuff
 
-\setgrefactor{17}
+\grechangestaffsize{17}
 
 %\marginsize{25pt}{25pt}{25pt}{30pt}
 \usepackage{calc}

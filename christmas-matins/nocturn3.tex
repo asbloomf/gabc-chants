@@ -35,11 +35,11 @@
   \writeheading{In the 3rd Nocturn}
 
   {
-    \def\preant{\setgrefactor{17}\ifprintwhointones{\noindent\emph{First Cantor intones:}
+    \def\preant{\grechangestaffsize{17}\ifprintwhointones{\noindent\emph{First Cantor intones:}
 
     }{}
     \large}
-    \def\preantafter{\setgrefactor{17}\large}
+    \def\preantafter{\grechangestaffsize{17}\large}
     \def\prepsalm{\normalsize}
     \def\anttranslation{He shall cry unto Me, alleluia, Thou art My Father, alleluia.}
     %\def\psalmtranslationsmall{T}
@@ -50,10 +50,10 @@
 
   {
     \bigskip
-    \def\preant{\setgrefactor{17}\ifprintwhointones{\noindent\emph{Second Cantor intones:}
+    \def\preant{\grechangestaffsize{17}\ifprintwhointones{\noindent\emph{Second Cantor intones:}
 
     }{}\large}
-    \def\preantafter{\setgrefactor{17}\large}
+    \def\preantafter{\grechangestaffsize{17}\large}
     \def\prepsalm{\normalsize}
     \def\anttranslation{Let the heavens rejoice, and let the earth be glad before the Lord, for He cometh.}
     %\def\psalmtranslationsmall{T}
@@ -64,10 +64,10 @@
   {
     \bigskip
     \needspace{10\baselineskip}
-    \def\preant{\setgrefactor{17}\ifprintwhointones{\noindent\emph{First Cantor intones:}
+    \def\preant{\grechangestaffsize{17}\ifprintwhointones{\noindent\emph{First Cantor intones:}
 
     }{}\large}
-    \def\preantafter{\setgrefactor{17}\large}
+    \def\preantafter{\grechangestaffsize{17}\large}
     \def\prepsalm{\normalsize}
     \def\anttranslation{The Lord hath made known, alleluia, His salvation, alleluia.}
     %\def\psalmtranslationsmall{T}
@@ -121,7 +121,7 @@
 
   {
     \bigskip
-    \setgrefactor{17}
+    \grechangestaffsize{17}
     \printgabc{7. Resp.}{7.}{B}{re--beata_viscera--solesmes}
     {
       \translationcolumns[\normalsize]{\Rbar{}~Blessed be the womb of the Virgin Mary, which bore the Son of the Eternal Father, and blessed be the paps which give suck to Christ our Lord.
@@ -163,7 +163,7 @@
 
   {
     \bigskip
-    \setgrefactor{17}
+    \grechangestaffsize{17}
     \printgabc{8. Resp.}{8.}{V}{re--verbum_caro--solesmes}
     {
       \translationcolumns[\normalsize]{\Rbar{}~The Word was made flesh, and dwelt among us.
@@ -208,7 +208,7 @@
 
   {
     \bigskip
-    \setgrefactor{17}
+    \grechangestaffsize{17}
     \printgabc{3.}{}{T}{../misc/te-deum-solemn}
     \pagebreak
     \translationcolumnsindent[\normalsize]{%
@@ -298,8 +298,8 @@ In thee have I hoped, O Lord; let me not be confounded for ever.}
     \alsetinitialspacing{B}
     \large
     \def\breakbeforeresp{T}
-    \greblockcustos
-    \includescore{../BenedicamusDomino/BenedicamusDomino_1classLauds}
+    \greseteolcustos{manual}
+    \gregorioscore{../BenedicamusDomino/BenedicamusDomino_1classLauds}
 
     \bigskip{}
 

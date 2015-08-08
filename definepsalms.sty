@@ -71,7 +71,7 @@ five%
     \predeusinadjutorium%
     \def\annot{\small \Vbar{}}
     \alsetinitialspacing{D}
-    \includescore{../DeusInAdjutorium\if\deusinadjutoriumsolemn T%
+    \gregorioscore{../DeusInAdjutorium\if\deusinadjutoriumsolemn T%
     _solemn\fi\if\includelaustibi T%
     _laustibi\fi%
     }
@@ -83,7 +83,7 @@ five%
 %            {\itshape From Septuagesima to Wednesday in Holy Week, the following is said instead of} Allelúia :
 %            \smallskip
 %
-%            \includescore{../LausTibiDomine\if\deusinadjutoriumsolemn T%
+%            \gregorioscore{../LausTibiDomine\if\deusinadjutoriumsolemn T%
 %            _solemn\fi}
 %        \fi%
 %    \fi
@@ -243,9 +243,9 @@ five%
     \alsetinitialspacing{#4}
 
     \ifx\gabcfolder\undefined
-        \includescore{#5}
+        \gregorioscore{#5}
     \else
-        \includescore{\gabcfolder/#5}
+        \gregorioscore{\gabcfolder/#5}
     \fi
     }
 }
@@ -356,12 +356,13 @@ five%
 % TODO: figure out how to do this without letting it run greblockcustos
 {
 \ifx\prepsalm\undefined\else
-\def\greblockcustos{%
+%now it is \greseteolcustos{manual} so I don't know if we need to do anything special, I still need to look at the definition of it (ASB 2015-08-05)
+%\def\greblockcustos{%
 % the regular greblockcustos is global which messes us up here, so redefine it without the \global
-  \greblockcusto=1\relax%
-  \grelocalrightbox{}%
-  \relax%
-}
+%  \greblockcusto=1\relax%
+%  \grelocalrightbox{}%
+%  \relax%
+%}
 \prepsalm
 \fi
 }
@@ -674,7 +675,7 @@ five%
 {
 {\ifx\prepsalm\undefined\else\prepsalm\fi
  \ifx\prepsalmtext\undefined\else\prepsalmtext\fi
-  \includescore{\psalmtex}
+  \gregorioscore{\psalmtex}
 }
 %\medskip % do we need this?
 {\ifx\prepsalmverses\undefined\medskip\else\prepsalmverses\fi
@@ -844,16 +845,16 @@ five%
 }
 
 \newcommand{\printvr}[4][]{
-%1 optional - pre something like \greblockcustos
+%1 optional - pre something like \greseteolcustos{manual}
 %2 vrtex
 %3 vtranslation
 %4 rtranslation
 % vrnospace optional
     {#1
 \ifx\gabcfolder\undefined
-    \includescore{#2}
+    \gregorioscore{#2}
 \else
-    \includescore{\gabcfolder/#2}
+    \gregorioscore{\gabcfolder/#2}
 \fi
     }
     \vspace{-4pt plus 4pt}
@@ -938,9 +939,9 @@ five%
     \alsetinitialspacing{\antinitial}
     \ifx\anttex\undefined\def\anttex{MagnificatAntiphon}\fi
 \ifx\gabcfolder\undefined
-    \includescore{\anttex}
+    \gregorioscore{\anttex}
 \else
-    \includescore{\gabcfolder/\anttex}
+    \gregorioscore{\gabcfolder/\anttex}
 \fi
 }
 
@@ -980,7 +981,7 @@ five%
     \fi
     {\preverses
     %\ifx\magoneline\undefined\else\if\magoneline T%
-    \greblockcustos%
+    \greseteolcustos{manual}%
     %\fi\fi
     \begin{magnificat}[\versenum]{\magtex}
     %\vspace{-1ex}
