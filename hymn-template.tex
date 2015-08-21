@@ -11,7 +11,7 @@
 \usepackage[garamond]{../mypackage}
 % to change the font to something better, you can install the kpfonts package (if not already installed). To do so
 % go open the "TeX Live Manager" in the Menu Start->All Programs->TeX Live 2010
-\setgrefactor{17}
+\grechangestaffsize{17}
 
 %\def\greinitialformat#1{{\fontsize{37}{37}\selectfont #1}}
 %small > footnotesize > scriptsize > tiny
@@ -43,7 +43,7 @@
 
 % and finally we include the score. The file must be in the same directory as this one.
 \prehymn
-\includescore{\hymntex}
+\gregorioscore{\hymntex}
 \ifx\posthymn\undefined\else\posthymn\fi
 }
 \normalsize\vspace{0pt minus 20pt}
@@ -60,7 +60,7 @@
 
 }\fi
 \else{\vspace{0pt plus 18pt}%
-{\greblockcustos\includescore{\vrtex}}%
+{\greseteolcustos{manual}\gregorioscore{\vrtex}}%
 \vspace{0pt plus 20pt}
 \ifx\prevrtranslation\undefined\else\prevrtranslation\fi%
 \translation[]{%
@@ -92,7 +92,7 @@
 \ifx\benedicamusdominointro\undefined\else
 \hspace{3ex}\emph{\benedicamusdominointro:}\\
 \fi
-\includescore{\benedicamusdominotex}
+\gregorioscore{\benedicamusdominotex}
 \ifx\benedicamusdominotexalt\undefined\else
 {%
 \vspace{0pt plus 12pt}
@@ -106,8 +106,8 @@
 \setsecondannotation{}
 \setspaceafterinitial{0mm}
 \setspacebeforeinitial{0mm}
-\greblockcustos%
-\includescore{\benedicamusdominotexalt}
+\greseteolcustos{manual}%
+\gregorioscore{\benedicamusdominotexalt}
 }
 \fi
 \fi

@@ -13,7 +13,7 @@ transcription-date: 2011;
 style: modern;
 annotation: At Magn.;
 annotation: 4. E;
-def-m1:}{\greblockcustos{;
+def-m1:}{\greseteolcustos{manual}{;
 def-m2:\ifx\breakbeforeEuouae\undefined\else;
 def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
 def-m4:}\fi;

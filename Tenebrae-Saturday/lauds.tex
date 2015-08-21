@@ -11,9 +11,9 @@
 \large
 \def\nogloriapatri{T}
 {
-\def\preant{\setgrefactor{17}\large}
-%\def\preantafter{\setgrefactor{17}\large}
-\def\prepsalm{\setgrefactor{15}\normalsize}
+\def\preant{\grechangestaffsize{17}\large}
+%\def\preantafter{\grechangestaffsize{17}\large}
+\def\prepsalm{\grechangestaffsize{15}\normalsize}
 \def\anttranslation{O death, I will be thy death; I will be thy destruction, O hell.\needspace{4\baselineskip}}
 %\def\lalinebreakafterthree{T}
 \def\lalinebreakafterverse{10}
@@ -24,8 +24,8 @@
 \printseparation{}
 %\pagebreak
 {
-\def\preant{\setgrefactor{17}\large}
-\def\prepsalm{\setgrefactor{15}\normalsize}
+\def\preant{\grechangestaffsize{17}\large}
+\def\prepsalm{\grechangestaffsize{15}\normalsize}
 \def\psalmtranslationsmall{T}
 \def\anttranslation{They shall mourn for Him as one mourneth for an only son, for the innocent Lord hath been slain.}
 \printpsalm{2}{91}{4A}{an--plangent_eum--solesmes}{P}
@@ -35,8 +35,8 @@
 \printseparation{}
 %\pagebreak
 {
-\def\preant{\setgrefactor{17}\large}
-\def\prepsalm{\setgrefactor{15}\normalsize}
+\def\preant{\grechangestaffsize{17}\large}
+\def\prepsalm{\grechangestaffsize{15}\normalsize}
 \def\psalmtranslationsmall{T}
 \def\anttranslation{Give heed, all ye people, and see my grief.}
 \printpsalm{3}{63}{7b}{an--attendite_universi--solesmes}{A}
@@ -45,8 +45,8 @@
 \bigskip\bigskip
 %\pagebreak
 {
-\def\preant{\setgrefactor{17}\large}
-\def\prepsalm{\setgrefactor{15}\normalsize}
+\def\preant{\grechangestaffsize{17}\large}
+\def\prepsalm{\grechangestaffsize{15}\normalsize}
 \def\prepsalmverses{\vspace{-10pt}}
 \def\psalmtranslationsmall{T}
 \def\anttranslation{From the gate of hell, O Lord, deliver my soul.}
@@ -62,14 +62,14 @@
 %\printseparation
 \pagebreak
 {
-\def\greblockcustos{%
+\def\greseteolcustos{manual}{%
 % the regular greblockcustos is global which messes us up here, so redefine it without the \global
   \greblockcusto=1\relax %
   \grelocalrightbox{}%
   \relax %
 }
-\def\preant{\setgrefactor{17}\large}
-\def\prepsalm{\setgrefactor{15}\normalsize\greblockcustos}
+\def\preant{\grechangestaffsize{17}\large}
+\def\prepsalm{\grechangestaffsize{15}\normalsize\greseteolcustos{manual}}
 \def\psalmtranslationsmall{T}
 \def\anttranslation{O all ye that pass by, attend and see if there be any sorrow like unto my sorrow.}
 \def\psalmclef{2}
@@ -77,7 +77,7 @@
 }
 
 \bigskip
-\printvr[\setgrefactor{14}\normalsize]{vr-caroMea}
+\printvr[\grechangestaffsize{14}\normalsize]{vr-caroMea}
 {My flesh shall rest in hope.}
 {And Thou wilt not give Thy Holy One to see corruption.}
 
@@ -85,11 +85,11 @@
 \pagebreak
 %\needspace{4\baselineskip}
 {
-\def\preant{\setgrefactor{17}\large}
+\def\preant{\grechangestaffsize{17}\large}
 \def\prerepeatantiphon{\normalsize\bigskip}
 \def\magsolemn{T}
 \def\preverses{
-  \setgrefactor{15}\normalsize
+  \grechangestaffsize{15}\normalsize
 }
 \def\anttranslation{\normalsize The women sitting at the sepulchre mourned, weeping for the Lord.\vspace{-4pt}}
 \printmag[Benedictus]{1g}{M}{an--mulieres--solesmes}
@@ -99,7 +99,7 @@
 %\emph{The candles on the triangular candlestick having been extinguished as has already been explained, the one at the top of the triangle alone remains lighted.  During the Canticle \emph{Benedíctus.} the candles on the altar are likewise extinguished one by one, from each side alternately, at every second verse, so that by the last verse all are extinguished.  All other lights and lamps in the church are also put out.}
 %\bigskip%\bigskip
 %\smallskip
-\setgrefactor{17}
+\grechangestaffsize{17}
 \printgabc{Ant.}{5.}{C}{../Tenebrae/an--christus_factus_est--solesmes_saturday_edited}
 
 \medskip

@@ -19,7 +19,7 @@
 \expandafter\edef\csname annot\antnum\endcsname{\small{\csname ant\antnum linetwo\endcsname}}
 \setinitialspacing{\csname ant\antnum initial\endcsname}
 
-\includescore{\csname ant\antnum tex\endcsname}
+\gregorioscore{\csname ant\antnum tex\endcsname}
 \if\csname psalm\antnum afterant\endcsname T%
 \translation[]{\normalsize \csname ant\antnum translation\endcsname}
 \vspace{0pt minus 12pt} % this had been 8pt, but 1ex in psalm 1
@@ -27,7 +27,7 @@
 \vspace{0pt minus 12pt}
 \fi
 \csname prepsalm\antnum\endcsname
-\includescore{\csname psalm\antnum tex\endcsname}
+\gregorioscore{\csname psalm\antnum tex\endcsname}
 }
 \normalsize
 
@@ -66,7 +66,7 @@
     \edef\annottwo{\small{\csname ant\antnum linetwo\endcsname}}
     \setinitialspacing{\csname ant\antnum initial\endcsname}
 
-    \includescore{\csname ant\antnum tex\endcsname}}%
+    \gregorioscore{\csname ant\antnum tex\endcsname}}%
 \fi
 % straighten all this stuff out -- needs to default to page break after psalm
 % check nopagebreakbeforepsalm - if undefined, check pagebreakafterpsalm - if undefined, pagebreak

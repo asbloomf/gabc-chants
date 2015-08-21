@@ -28,7 +28,7 @@
 
 \usepackage[garamond]{../mypackage}
 
-\setgrefactor{17}
+\grechangestaffsize{17}
 %\usepackage{fontspec}
 % to change the font to something better, you can install the kpfonts package (if not already installed). To do so
 % go open the "TeX Live Manager" in the Menu Start->All Programs->TeX Live 2010
@@ -44,7 +44,7 @@
 
 \let\oldheadrulewidth\headrulewidth
 \renewcommand\headrulewidth{0pt}
-\setgrefactor{15}
+\grechangestaffsize{15}
 
 \def\heading{Te Deum}
 \def\antfilename{te-deum-alternate}
@@ -132,7 +132,7 @@ In thee have I hoped, O Lord; let me not be confounded for ever.}
 %\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
 
 % and finally we include the score. The file must be in the same directory as this one.
-\large \includescore{\antfilename}}
+\large \gregorioscore{\antfilename}}
 \renewcommand\headrulewidth{\oldheadrulewidth}
 \chead{\addfontfeature{Numbers=Lining}%
 \footnotesize\heading.}

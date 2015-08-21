@@ -22,7 +22,7 @@
 \usepackage[garamond]{../mypackage}
 % end my stuff
 
-\setgrefactor{17}
+\grechangestaffsize{17}
 
 \usepackage{calc}
 %\marginsize{25pt}{25pt}{30pt}{15pt}
@@ -85,7 +85,7 @@
 
 % and finally we include the score. The file must be in the same directory as this one.
 \prehymn
-\includescore{\hymntex}
+\gregorioscore{\hymntex}
 \ifx\posthymn\undefined\else\posthymn\fi
 }
 \normalsize\vspace{0pt minus 20pt}
@@ -102,7 +102,7 @@
 
 }
 \else{
-{\greblockcustos\includescore{\vrtex}}%
+{\greseteolcustos{manual}\gregorioscore{\vrtex}}%
 \vspace{0pt plus 20pt}
 \ifx\prevrtranslation\undefined\else\prevrtranslation\fi
 \translation[]{
@@ -144,7 +144,7 @@
 %\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
 %
 % and finally we include the score. The file must be in the same directory as this one.
-\includescore{\maganttex}}%
+\gregorioscore{\maganttex}}%
 \normalsize
 \pretranslation{}
 \translation[]{\englishmagantiphon}
@@ -187,7 +187,7 @@
 \ifx\benedicamusdominointro\undefined\else
 \hspace{3ex}\emph{\benedicamusdominointro:}\\
 \fi
-\includescore{\benedicamusdominotex}
+\gregorioscore{\benedicamusdominotex}
 \ifx\benedicamusdominotexalt\undefined\else
 {%
 \vspace{0pt plus 12pt}
@@ -201,8 +201,8 @@
 \setsecondannotation{}
 \setspaceafterinitial{0mm}
 \setspacebeforeinitial{0mm}
-\greblockcustos%
-\includescore{\benedicamusdominotexalt}
+\greseteolcustos{manual}%
+\gregorioscore{\benedicamusdominotexalt}
 }
 \fi
 \fi

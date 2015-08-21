@@ -9,11 +9,11 @@
 
 \newcommand{\predeusinadjutorium}{\smallskip
 \large
-\setgrefactor{15}
+\grechangestaffsize{15}
 }
 
 \newcommand{\antonelinetwo}{8. G}
-\newcommand{\preantone}{\setgrefactor{15}
+\newcommand{\preantone}{\grechangestaffsize{15}
 \large
 \setspaceafterinitial{2.5mm plus 0em minus 0em}
 \setspacebeforeinitial{2.5mm plus 0em minus 0em}
@@ -48,7 +48,7 @@
 }
 
 \newcommand{\anttwolinetwo}{8. c}
-\newcommand{\preanttwo}{\setgrefactor{17}
+\newcommand{\preanttwo}{\grechangestaffsize{17}
 \large
 \setspaceafterinitial{2.5mm plus 0em minus 0em}
 \setspacebeforeinitial{2.5mm plus 0em minus 0em}
@@ -59,7 +59,7 @@
 \newcommand{\psalmtwo}{Psalm 110.}
 \newcommand{\prepsalmtwo}{%
 \normalsize
-\greblockcustos
+\greseteolcustos{manual}
 }
 \newcommand{\psalmtwotex}{Psalm110-8c.tex}
 \newenvironment{psalmtwocols}{\begin{parcolumns}[rulebetween]{2}}{\end{parcolumns}}
@@ -89,7 +89,7 @@
 }
 
 \newcommand{\antthreelinetwo}{7. a}
-\newcommand{\preantthree}{\setgrefactor{17}
+\newcommand{\preantthree}{\grechangestaffsize{17}
 \large
 \setspaceafterinitial{2.8mm plus 0em minus 0em}
 \setspacebeforeinitial{2.8mm plus 0em minus 0em}
@@ -127,7 +127,7 @@
 }
 
 \newcommand{\antfourlinetwo}{3. a}
-\newcommand{\preantfour}{\setgrefactor{17}
+\newcommand{\preantfour}{\grechangestaffsize{17}
 \large
 \setspaceafterinitial{2.2mm plus 0em minus 0em}
 \setspacebeforeinitial{2.2mm plus 0em minus 0em}
@@ -138,7 +138,7 @@
 \newcommand{\psalmfour}{Psalm 112.}
 \newcommand{\prepsalmfour}{%
 %\vspace{-1ex}
-%\setgrefactor{15}
+%\grechangestaffsize{15}
 \normalsize
 }
 \newcommand{\psalmfourtex}{Psalm112-3a.tex}
@@ -165,8 +165,8 @@
 }
 
 \newcommand{\antfivelinetwo}{8. G}
-\newcommand{\preantfive}{\setgrefactor{17}
-\greblockcustos
+\newcommand{\preantfive}{\grechangestaffsize{17}
+\greseteolcustos{manual}
 \large
 \setspaceafterinitial{2.5mm plus 0em minus 0em}
 \setspacebeforeinitial{2.5mm plus 0em minus 0em}
@@ -177,7 +177,7 @@
 \newcommand{\psalmfive}{Psalm 116.}
 \newcommand{\prepsalmfive}{%
 \vspace{-1ex}
-%\setgrefactor{15}%
+%\grechangestaffsize{15}%
 \normalsize%
 }
 \newcommand{\psalmfivetex}{Psalm116-8G.tex}
@@ -195,7 +195,7 @@
 \newcommand{\chaptertranslation}{Brethren: We give thanks to God the Father, who hath made us worthy to be partakers of the lot of the saints in light, who hath delivered us from the power of darkness, and hath translated us into the kingdom of the Son of His love.}
 
 \newcommand{\prehymn}{\normalsize
-\setgrefactor{15}
+\grechangestaffsize{15}
 \setspaceafterinitial{3.1mm plus 0em minus 0em}
 \setspacebeforeinitial{3.1mm plus 0em minus 0em}
 }
@@ -252,15 +252,15 @@ Reigning for aye o'er heaven's host.  Amen.
 \large
 \setspaceafterinitial{4.0mm plus 0em minus 0em}
 \setspacebeforeinitial{4.0mm plus 0em minus 0em}
-\setgrefactor{17}
+\grechangestaffsize{17}
 }
 %\newcommand{\premagtwo}{
-%\setgrefactor{16}
+%\grechangestaffsize{16}
 %}
 \newcommand{\magfontsize}{38}
 \newcommand{\maganttranslation}{He hath on His garment and on His thigh written: King of kings and Lord of lords.  To Him be glory and empire for ever and ever.}
 \newcommand{\magtex}{MagnificatSolemn7a}
-\newcommand{\premagverses}{\greblockcustos\setgrefactor{14}
+\newcommand{\premagverses}{\greseteolcustos{manual}\grechangestaffsize{14}
 \setspaceafterinitial{2.3mm plus 0em minus 0em}
 \setspacebeforeinitial{2.3mm plus 0em minus 0em}
 \normalsize
@@ -306,7 +306,7 @@ Reigning for aye o'er heaven's host.  Amen.
 \usepackage[garamond]{../mypackage}
 % end my stuff
 
-\setgrefactor{17}
+\grechangestaffsize{17}
 
 
 \marginsize{25pt}{25pt}{25pt}{30pt}
@@ -350,12 +350,12 @@ Reigning for aye o'er heaven's host.  Amen.
 
 \smallskip
 \large
-\setgrefactor{15}
-\includescore{deusinadjutorium_solemn.tex}}%
+\grechangestaffsize{15}
+\gregorioscore{deusinadjutorium_solemn.tex}}%
 \translation[]{\Vbar{} O God, come to my assistance. \Rbar{} O Lord, make haste to help me. Glory be \ldots}
 %{\itshape From Septuagesima to Wednesday in Holy Week, the following is said instead of} Allelúia :
 
-%\includescore{LausTibiDomine}
+%\gregorioscore{LausTibiDomine}
 %\smallskip
 \hrule
 \medskip
@@ -365,14 +365,14 @@ Reigning for aye o'er heaven's host.  Amen.
 \preantone
 \gresetfirstlineaboveinitial{\small{1 Ant.}}{\small{1 Ant.}}
 \setsecondannotation{\small{\antonelinetwo}}
-\includescore{\antonetex}
+\gregorioscore{\antonetex}
 }
 \vspace{-3ex}
 \translation[]{\normalsize \antonetranslation}
 \vspace{-1ex}
 \begin{center}{\Large \psalmone}\end{center}
 {\prepsalmone
-\includescore{\psalmonetex}
+\gregorioscore{\psalmonetex}
 }
 \medskip
 
@@ -410,11 +410,11 @@ Reigning for aye o'er heaven's host.  Amen.
 \preanttwo
 \gresetfirstlineaboveinitial{\small {2 Ant.}}{\small {2 Ant.}}
 \setsecondannotation{\small {\anttwolinetwo}}
-\includescore{\anttwotex}
+\gregorioscore{\anttwotex}
 \translation[]{\normalsize \anttwotranslation}
 \begin{center}{\Large \psalmtwo}\end{center}
 \prepsalmtwo
-\includescore{\psalmtwotex}
+\gregorioscore{\psalmtwotex}
 }
 \normalsize\medskip
 
@@ -446,13 +446,13 @@ Reigning for aye o'er heaven's host.  Amen.
 \preantthree
 \gresetfirstlineaboveinitial{\small{3 Ant.}}{\small{3 Ant.}}
 \setsecondannotation{\small{\antthreelinetwo}}
-\includescore{\antthreetex}
+\gregorioscore{\antthreetex}
 }
 %\vspace{-2ex}
 \translation[]{\normalsize \antthreetranslation}
 \begin{center}{\Large \psalmthree}\end{center}
 {\prepsalmthree
-\includescore{\psalmthreetex}
+\gregorioscore{\psalmthreetex}
 }
 \normalsize
 
@@ -483,13 +483,13 @@ Reigning for aye o'er heaven's host.  Amen.
 \preantfour
 \gresetfirstlineaboveinitial{\footnotesize{4 Ant.}}{\small{4 Ant.}}
 \setsecondannotation{\small{\antfourlinetwo}}
-\includescore{\antfourtex}
+\gregorioscore{\antfourtex}
 }
 \translation[]{\normalsize \antfourtranslation}
 %\vspace{-3.5ex}
 \begin{center}{\Large \psalmfour}\end{center}
 {\prepsalmfour
-\includescore{\psalmfourtex}
+\gregorioscore{\psalmfourtex}
 }
 \medskip
 \begin{psalmfourcols}
@@ -519,14 +519,14 @@ Reigning for aye o'er heaven's host.  Amen.
 \preantfive
 \gresetfirstlineaboveinitial{\small{5 Ant.}}{\footnotesize{5 Ant.}}
 \setsecondannotation{\small{\antfivelinetwo}}
-\includescore{\antfivetex}
+\gregorioscore{\antfivetex}
 }
 %\vspace{-4ex}
 \translation[]{\normalsize \antfivetranslation}
 \vspace{-2ex}
 \begin{center}{\Large \psalmfive}\end{center}
 {\prepsalmfive
-\includescore{\psalmfivetex}
+\gregorioscore{\psalmfivetex}
 }
 %\begin{multicols}{2}
 %\vspace{-1ex}
@@ -563,7 +563,7 @@ Reigning for aye o'er heaven's host.  Amen.
 \def\greinitialformat#1{%
 {\fontsize{\antfivefontsizetwo}{\antfivefontsizetwo}\selectfont #1}%
 }
-\includescore{\antfivetex}}%
+\gregorioscore{\antfivetex}}%
 \fi
 
 \bigskip
@@ -586,7 +586,7 @@ Reigning for aye o'er heaven's host.  Amen.
 {\gresetfirstlineaboveinitial{\small{Hymn.}}{\small{Hymn.}}
 \setsecondannotation{\small{\hymnlinetwo}}
 \prehymn
-\includescore{\hymntex}
+\gregorioscore{\hymntex}
 }
 \normalsize
 \selectlanguage{american}
@@ -598,7 +598,7 @@ Reigning for aye o'er heaven's host.  Amen.
 \medskip
 \selectlanguage{latin}
 
-{\greblockcustos\includescore{\vrtex}}
+{\greseteolcustos{manual}\gregorioscore{\vrtex}}
 \translation[]{
 \Vbar{}~\vtranslation{}\\
 \Rbar{}~\rtranslation{}
@@ -619,7 +619,7 @@ Reigning for aye o'er heaven's host.  Amen.
 %\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
 
 % and finally we include the score. The file must be in the same directory as this one.
-\includescore{MagnificatAntiphon.tex}}%
+\gregorioscore{MagnificatAntiphon.tex}}%
 \vspace{-3ex}
 \translation[]{\maganttranslation}
 %\smallskip
@@ -642,7 +642,7 @@ Reigning for aye o'er heaven's host.  Amen.
 \def\greinitialformat#1{%
 {\fontsize{\magfontsizetwo}{\magfontsizetwo}\selectfont #1}%
 }
-\includescore{MagnificatAntiphon.tex}}%
+\gregorioscore{MagnificatAntiphon.tex}}%
 \fi
 
 \hrule
@@ -661,14 +661,14 @@ Reigning for aye o'er heaven's host.  Amen.
 \setspacebeforeinitial{0.3mm plus 0em minus 0em}
 \gresetfirstlineaboveinitial{\small 6.}{\small 6.}
 \setsecondannotation{}
-\includescore{\benedicamusdominotex}
+\gregorioscore{\benedicamusdominotex}
 \ifx\benedicamusdominotexalt\undefined
 {}
 \else
 {
 \hspace{3ex}\emph{or:}\\
 \gresetfirstlineaboveinitial{\small 5.}{\small 5.}
-\includescore{\benedicamusdominotexalt}
+\gregorioscore{\benedicamusdominotexalt}
 }
 \fi
 

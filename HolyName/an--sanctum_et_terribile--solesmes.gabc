@@ -3,7 +3,7 @@ office-part:Antiphona;
 mode:5;
 book:The Liber Usualis, 1961, p. 451;
 transcriber:Andrew Hinkley;
-def-m1:}{\greblockcustos{;
+def-m1:}{\greseteolcustos{manual}{;
 def-m2:\ifx\breakbeforeEuouae\undefined\else;
 def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
 def-m4:}\fi;

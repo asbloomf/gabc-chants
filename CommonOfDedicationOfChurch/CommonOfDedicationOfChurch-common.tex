@@ -1,8 +1,8 @@
 %psalms, antiphons, chapter and hymn are all common
 
-\newcommand{\preantone}{\setgrefactor{17}
+\newcommand{\preantone}{\grechangestaffsize{17}
 \large
-%\greblockcustos
+%\greseteolcustos{manual}
 \medskip
 }
 \newcommand{\antoneinitialsize}{40}
@@ -16,8 +16,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\preanttwo}{\setgrefactor{17}
-%\greblockcustos
+\newcommand{\preanttwo}{\grechangestaffsize{17}
+%\greseteolcustos{manual}
 \large
 }
 \newcommand{\anttwoinitialsize}{40}
@@ -27,14 +27,14 @@
 \definepsalm{2}{110}{1}{D2}
 \newcommand{\prepsalmtwo}{%
 \normalsize
-\greblockcustos
+\greseteolcustos{manual}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\preantthree}{\setgrefactor{17}
+\newcommand{\preantthree}{\grechangestaffsize{17}
 \large
-%\greblockcustos
+%\greseteolcustos{manual}
 }
 \newcommand{\antthreeinitialsize}{40}
 \newcommand{\antthreetex}{Ant3-HaecEstDomusDomini}
@@ -43,14 +43,14 @@
 \definepsalm{3}{111}{1}{f}
 \newcommand{\prepsalmthree}{%
 %\gdef\psalmclef{2}
-%\greblockcustos
+%\greseteolcustos{manual}
 \normalsize
 }
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\preantfour}{\setgrefactor{17}
-\greblockcustos
+\newcommand{\preantfour}{\grechangestaffsize{17}
+\greseteolcustos{manual}
 \large
 %\normalsize
 }
@@ -61,7 +61,7 @@
 \definepsalm{4}{112}{8}{c}
 \newcommand{\prepsalmfour}{%
 %\vspace{-1ex}
-%\setgrefactor{15}
+%\grechangestaffsize{15}
 \normalsize
 }
 %
@@ -69,8 +69,8 @@
 
 %\def\nopagebreakbeforepsalmfive{T}
 %\def\pagebreakafterpsalmfive{T}
-\newcommand{\preantfive}{\setgrefactor{17}
-%\greblockcustos
+\newcommand{\preantfive}{\grechangestaffsize{17}
+%\greseteolcustos{manual}
 \large
 }
 %\newcommand{\preantfivetwo}{\preantfive}
@@ -83,7 +83,7 @@
 \definepsalm{5}{147}{1}{g}
 \newcommand{\prepsalmfive}{%
 %\vspace{-1ex}
-%\setgrefactor{15}%
+%\grechangestaffsize{15}%
 %\normalsize%
 }
 %
@@ -92,7 +92,7 @@
 \def\pagebreakbeforehymn{T}
 
 \newcommand{\prehymn}{\large
-\setgrefactor{16}
+\grechangestaffsize{16}
 }
 
 
@@ -140,5 +140,5 @@ And for thine only Son most meet,
 And thee, all-glorious Paraclete,
 To whom praise, power, and glory rise
 Forever through the eternal skies.
-Amen.%\setgrefactor{15}
+Amen.%\grechangestaffsize{15}
 }

@@ -6,7 +6,7 @@
 %\label{prophecytone}
 %\huge{Tone for the Prophecy.}
 %}\end{center}
-\large\setgrefactor{17}
+\large\grechangestaffsize{17}
 {
 \def\greabovelinestextstyle#1{%
   \adjustbox{padding=0pt 0pt 0pt 3pt,raise=-1pt}{\small\emph{#1}}%
@@ -24,13 +24,13 @@
   \adjustbox{padding=0pt 0pt 0pt 3pt,raise=-1pt}{\small{#1}}%
   \relax %
 }
-\greblockcustos
+\greseteolcustos{manual}
 \printgabc{}{}{}{prophecyToneFlex}
 
 \bigskip\bigskip
 \emph{Examples of the full stop in the case of a monosyllable or of a Hebrew word.}
 \medskip
-\greblockcustos
+\greseteolcustos{manual}
 \printgabc{}{}{}{prophecyToneFullStop}
 }
 \let\greabovelinestextstle=\oldgreabovelinestextstyle

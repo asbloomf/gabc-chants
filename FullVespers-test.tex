@@ -127,12 +127,12 @@
         \vspace{0pt minus 30pt}
         \emph{Tempore Paschali:}
 
-        {\greblockcustos\includescore{\vrpttex}}
+        {\greseteolcustos{manual}\gregorioscore{\vrpttex}}
         \medskip
         \emph{Per annum:}
 
     \fi %vrpttex
-    \printvr[\greblockcustos\ifx\prevr\undefined\else\prevr\fi]{\vrtex}{\vtranslation}{\rtranslation}
+    \printvr[\greseteolcustos{manual}\ifx\prevr\undefined\else\prevr\fi]{\vrtex}{\vtranslation}{\rtranslation}
     \bigskip
 }\fi%
 \else% if the chapter, hymn, and antiphon are replaced by an antiphon
@@ -147,7 +147,7 @@
     \def\annottwo{\small{\chapterhymnversicleantiphonmode.}}
     \setinitialspacing{\chapterhymnversicleantiphoninitial}
     \prechapterhymnversicleantiphon
-    \includescore{\chapterhymnversicleantiphontex}
+    \gregorioscore{\chapterhymnversicleantiphontex}
     \prechapterhymnversicleantiphontranslation
     \translation[]{\chapterhymnversicleantiphontranslation}
     \bigskip
@@ -235,12 +235,12 @@
 %\normalsize
 %\fontsize{12.35}{12.35}\selectfont
 \large
-\includescore{\commaganttex}}%
+\gregorioscore{\commaganttex}}%
 %\bigskip
 %\vspace{-4ex}
 \translation[]{\englishcommagantiphon}
 \bigskip
-{\greblockcustos\includescore{\commvrtex}}
+{\greseteolcustos{manual}\gregorioscore{\commvrtex}}
 \vspace{0pt minus 36pt}
 \translation[]{
 \Vbar{}~\commvtranslation{}\\
@@ -266,7 +266,7 @@
 \fi % end not only psalms
 %
 %
-\ifx\benedicamusdominogrefactor\undefined\else\setgrefactor{\benedicamusdominogrefactor}\fi
+\ifx\benedicamusdominogrefactor\undefined\else\grechangestaffsize{\benedicamusdominogrefactor}\fi
 \ifx\benedicamusdominotex\undefined\else
 \def\annot{\small{\benedicamusdominotone}}
 %\def\annottwo{}
@@ -278,7 +278,7 @@
 \ifx\benedicamusdominointro\undefined\else
 \hspace{3ex}\emph{\benedicamusdominointro:}\\
 \fi
-\includescore{\benedicamusdominotex}
+\gregorioscore{\benedicamusdominotex}
 \ifx\benedicamusdominotexalt\undefined\else
 {%
 \vspace{0pt plus 12pt}
@@ -292,8 +292,8 @@
 \setsecondannotation{}
 \setspaceafterinitial{0mm}
 \setspacebeforeinitial{0mm}
-\greblockcustos%
-\includescore{\benedicamusdominotexalt}
+\greseteolcustos{manual}%
+\gregorioscore{\benedicamusdominotexalt}
 }
 \fi
 \fi

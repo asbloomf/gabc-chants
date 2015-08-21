@@ -11,7 +11,7 @@
 \def\usepagenumbers{T}
 
 \def\hymninitialsize{35}
-\def\prehymn{%\large\setgrefactor{14}\vspace*{-5ex plus 5ex}
+\def\prehymn{%\large\grechangestaffsize{14}\vspace*{-5ex plus 5ex}
 }
 
 \def\vrnospace{F}
@@ -21,7 +21,7 @@
 
 \newcommand{\premagant}{%
 %\normalsize
-\large%\greblockcustos
+\large%\greseteolcustos{manual}
 }
 
 \newcommand{\magantinitialsize}{38}
@@ -32,8 +32,8 @@
 }
 
 \newcommand{\premagverses}{\normalsize
-\greblockcustos
-\setgrefactor{17}}
+\greseteolcustos{manual}
+\grechangestaffsize{17}}
 
 \definebenedicamusdomino{easter}{}
 

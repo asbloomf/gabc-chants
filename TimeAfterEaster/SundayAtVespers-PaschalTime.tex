@@ -11,7 +11,7 @@
 \newcommand{\predeusinadjutorium}{%
 \smallskip%
 \large%
-\setgrefactor{15}%
+\grechangestaffsize{15}%
 }%
 \def\printsolemnorfestaltone{T}
 \def\deusinadjutoriumsolemn{F}
@@ -20,17 +20,17 @@
 %\newcommand{\antonetranslation}{}
 %\def\psalmbeginversetwo{T}
 \newcommand{\antoneinitialsize}{40}
-\newcommand{\prepsalmtwo}{\setgrefactor{15}\greblockcustos}
-\newcommand{\prepsalmthree}{\setgrefactor{17}}
+\newcommand{\prepsalmtwo}{\grechangestaffsize{15}\greseteolcustos{manual}}
+\newcommand{\prepsalmthree}{\grechangestaffsize{17}}
 \let\oldbeginpsalmthreecols=\beginpsalmthreecols
 \def\beginpsalmthreecols{\vspace{-12pt plus 12pt}\oldbeginpsalmthreecols}
 \def\psalmfourtranslationsmall{T}
 %\def\psalmfivetranslationsmall{T}
 \let\oldbeginpsalmfivecols=\beginpsalmfivecols
 \def\beginpsalmfivecols{\vspace{-12pt plus 12pt}\oldbeginpsalmfivecols}
-\newcommand{\preantone}{\setgrefactor{17}
+\newcommand{\preantone}{\grechangestaffsize{17}
 \large
-\greblockcustos
+\greseteolcustos{manual}
 }
 \newcommand{\prepsalmone}{%
 %\vspace{-3ex}
@@ -51,7 +51,7 @@
 %\newcommand{\hymninitial}{L}
 %\newcommand{\hymninitialsize}{30}
 %\newcommand{\prehymn}{\normalsize
-%\setgrefactor{14}
+%\grechangestaffsize{14}
 %}
 
 %\newcommand{\vrtex}{Dirigaturvr.tex}

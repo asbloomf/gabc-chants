@@ -23,7 +23,7 @@
 \usepackage[garamond]{../mypackage}
 % end my stuff
 
-\setgrefactor{17}
+\grechangestaffsize{17}
 
 
 \marginsize{25pt}{25pt}{25pt}{30pt}
@@ -77,13 +77,13 @@ Tone.
 \ifx\predeusinadjutorium\undefined\else%
 \predeusinadjutorium%
 \fi%
-\includescore{../DeusInAdjutorium\if\deusinadjutoriumsolemn T%
+\gregorioscore{../DeusInAdjutorium\if\deusinadjutoriumsolemn T%
 _solemn\fi}}%
 \translation[]{\Vbar{} O God, come to my assistance. \Rbar{} O Lord, make haste to help me. Glory be \ldots}
 \ifx\includelaustibi\undefined\else\if\includelaustibi T%
 {\itshape From Septuagesima to Wednesday in Holy Week, the following is said instead of} Allelúia :
 
-\includescore{LausTibiDomine}
+\gregorioscore{LausTibiDomine}
 \fi\fi
 \smallskip%
 \hrule%
@@ -134,7 +134,7 @@ _solemn\fi}}%
 \setinitialspacing{\hymninitial}
 %
 \prehymn
-\includescore{\hymntex}
+\gregorioscore{\hymntex}
 }
 \normalsize\vspace{0pt minus 20pt}
 \selectlanguage{american}
@@ -150,7 +150,7 @@ _solemn\fi}}%
 \ifx\vrtex\undefined%
 {\Vbar{}~\vr{}.\\}
 \else{
-{\greblockcustos\includescore{\vrtex}}\vspace{0pt minus 20pt}
+{\greseteolcustos{manual}\gregorioscore{\vrtex}}\vspace{0pt minus 20pt}
 \translation[]{
 \Vbar{}~\vtranslation{}%
 \ifx\vrnospace\undefined
@@ -186,7 +186,7 @@ _solemn\fi}}%
 %\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
 
 % and finally we include the score. The file must be in the same directory as this one.
-\includescore{MagnificatAntiphon}}%
+\gregorioscore{MagnificatAntiphon}}%
 %\vspace{-1ex}
 \translation[]{\maganttranslation}
 \medskip
@@ -210,7 +210,7 @@ _solemn\fi}}%
 \def\annottwo{\small{\magantlinetwo}}
 \setinitialspacing{\magantinitial}
 
-\includescore{MagnificatAntiphon}}%
+\gregorioscore{MagnificatAntiphon}}%
 \fi
 }%
 \fi%
@@ -244,7 +244,7 @@ _solemn\fi}}%
 \ifx\benedicamusdominointro\undefined\else
 \hspace{3ex}\emph{\benedicamusdominointro:}\\
 \fi
-\includescore{\benedicamusdominotex}
+\gregorioscore{\benedicamusdominotex}
 \ifx\benedicamusdominotexalt\undefined\else
 {%
 \vfill
@@ -258,7 +258,7 @@ _solemn\fi}}%
 \setsecondannotation{}
 \setspaceafterinitial{0mm}
 \setspacebeforeinitial{0mm}
-\includescore{\benedicamusdominotexalt}
+\gregorioscore{\benedicamusdominotexalt}
 }
 \fi
 \fi

@@ -14,7 +14,7 @@
     \def\annot{\small{Ant.}}
     \def\annottwo{\small{\chapterhymnversicleantiphonmode.}}
     \setinitialspacing{\chapterhymnversicleantiphoninitial}
-    \includescore{\gabcfolder/\chapterhymnversicleantiphontex}
+    \gregorioscore{\gabcfolder/\chapterhymnversicleantiphontex}
     \translation[]{\chapterhymnversicleantiphontranslation}
     \bigskip
 }
@@ -26,8 +26,8 @@
 	\def\annot{\small{#1}}
 	\def\annottwo{}
 	\setinitialspacing{B}
-    \greblockcustos{}
-	\includescore{#2}
+    \greseteolcustos{manual}{}
+	\gregorioscore{#2}
     \bigskip
     \hrule
 }
@@ -56,7 +56,7 @@
         \printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
         \def\vrlinebreak{T}
         \label{vr-manenobiscum}
-        \printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+        \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
         \bigskip
     }
 }
@@ -128,7 +128,7 @@ TODO could be commem of 1st vespers of St Joseph the worker if today is April 30
     {
         \printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
         \def\vrlinebreak{T}
-        \printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+        \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
     }
 }
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatSundayAfterAscension}

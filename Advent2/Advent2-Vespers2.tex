@@ -11,14 +11,14 @@
 \newcommand{\predeusinadjutorium}{%
 \smallskip
 \large
-\setgrefactor{16}
+\grechangestaffsize{16}
 }
 \def\deusinadjutoriumsolemn{F}
 \def\includelaustibi{F}
 
-\newcommand{\preantone}{\setgrefactor{17}
+\newcommand{\preantone}{\grechangestaffsize{17}
 \large
-\greblockcustos
+\greseteolcustos{manual}
 \def\breakbeforeEuouae{T}
 }
 \newcommand{\antoneinitialsize}{40}
@@ -28,19 +28,19 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\preanttwo}{\setgrefactor{17}
-%\greblockcustos
+\newcommand{\preanttwo}{\grechangestaffsize{17}
+%\greseteolcustos{manual}
 \large
 }
 \newcommand{\anttwoinitialsize}{40}
 \newcommand{\prepsalmtwo}{%
 \normalsize
-\greblockcustos
+\greseteolcustos{manual}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\preantthree}{\setgrefactor{17}
+\newcommand{\preantthree}{\grechangestaffsize{17}
 \large
 }
 \newcommand{\antthreeinitialsize}{40}
@@ -50,20 +50,20 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\preantfour}{\setgrefactor{17}
+\newcommand{\preantfour}{\grechangestaffsize{17}
 \large
 }
 \newcommand{\antfourinitialsize}{40}
 \newcommand{\prepsalmfour}{%
 %\vspace{-1ex}
-%\setgrefactor{15}
+%\grechangestaffsize{15}
 \normalsize
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\preantfive}{\setgrefactor{17}
-%\greblockcustos
+\newcommand{\preantfive}{\grechangestaffsize{17}
+%\greseteolcustos{manual}
 \large
 }
 \newcommand{\preantfivetwo}{\preantfive}
@@ -71,7 +71,7 @@
 
 \newcommand{\antfiveinitialsize}{40}
 \newcommand{\prepsalmfive}{%
-%\setgrefactor{15}%
+%\grechangestaffsize{15}%
 \normalsize%
 }
 
@@ -82,15 +82,15 @@
 
 \newcommand{\premag}{
 \large
-\setgrefactor{16}
+\grechangestaffsize{16}
 \def\breakbeforeEuouae{T}
 }
 %\newcommand{\premagtwo}{
-%\setgrefactor{16}
+%\grechangestaffsize{16}
 %}
 \newcommand{\magfontsize}{38}
 \def\pagebreakbeforemagnificat{T}
-\newcommand{\premagverses}{\greblockcustos\setgrefactor{15}
+\newcommand{\premagverses}{\greseteolcustos{manual}\grechangestaffsize{15}
 \setspaceafterinitial{2.3mm plus 0em minus 0em}
 \setspacebeforeinitial{2.3mm plus 0em minus 0em}
 \normalsize

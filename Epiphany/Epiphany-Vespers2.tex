@@ -11,14 +11,14 @@
 \newcommand{\heading}{Epiphany at II Vespers.}
 \sloppy
 
-\def\preantfour{\setgrefactor{13}
-%\greblockcustos
+\def\preantfour{\grechangestaffsize{13}
+%\greseteolcustos{manual}
 %\large
 \normalsize
 }
 
-\def\preantfive{\setgrefactor{15}
-%\greblockcustos
+\def\preantfive{\grechangestaffsize{15}
+%\greseteolcustos{manual}
 \normalsize
 }
 \let\oldantfivetranslation=\antfivetranslation
@@ -27,7 +27,7 @@
 %\definepsalm{5}{113}{7}{c2}
 \def\prepsalmfive{%
 \vspace{-1ex}
-%\setgrefactor{15}%
+%\grechangestaffsize{15}%
 \normalsize%
 }
 \newcommand{\dontrepeatantiphon}{T}
@@ -44,9 +44,9 @@
 \def\maganttranslation{\oldmaganttranslation}
 \newcommand{\premag}{
 \large
-\setgrefactor{15}
+\grechangestaffsize{15}
 }
-\newcommand{\premagverses}{\greblockcustos\setgrefactor{14}
+\newcommand{\premagverses}{\greseteolcustos{manual}\grechangestaffsize{14}
 \normalsize
 %\pagebreak
 }

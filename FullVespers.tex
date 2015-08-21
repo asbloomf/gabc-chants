@@ -23,7 +23,7 @@
 \usepackage[garamond]{../mypackage}
 % end my stuff
 
-\setgrefactor{17}
+\grechangestaffsize{17}
 
 
 %\marginsize{25pt}{25pt}{25pt}{30pt}
@@ -87,7 +87,7 @@
 \def\annottwo{\small{\antonelinetwo}}
 \setinitialspacing{\antoneinitial}
 
-\includescore{\antonetex}
+\gregorioscore{\antonetex}
 }
 %\vspace{-1ex}
 \if\psalmoneafterant T%
@@ -98,7 +98,7 @@
 \begin{center}{\Large \psalmone}\end{center}
 \fi
 {\ifx\prepsalmone\undefined\else\prepsalmone
-\includescore{\psalmonetex}
+\gregorioscore{\psalmonetex}
 }
 \medskip
 
@@ -144,14 +144,14 @@
 \def\annottwo{\small{\anttwolinetwo}}
 \setinitialspacing{\anttwoinitial}
 
-\includescore{\anttwotex}
+\gregorioscore{\anttwotex}
 \translation[]{\normalsize \anttwotranslation}
 \fi
 \vspace{0pt minus 8pt}
 \begin{center}{\Large \psalmtwo}\end{center}
 \vspace{0pt minus 12pt}
 \ifx\prepsalmtwo\undefined\else\prepsalmtwo\fi
-\includescore{\psalmtwotex}
+\gregorioscore{\psalmtwotex}
 }
 \normalsize\medskip
 
@@ -194,7 +194,7 @@
 \def\annottwo{\small{\antthreelinetwo}}
 \setinitialspacing{\antthreeinitial}
 
-\includescore{\antthreetex}
+\gregorioscore{\antthreetex}
 }
 %\vspace{-2ex}
 \translation[]{\normalsize \antthreetranslation}
@@ -203,7 +203,7 @@
 \begin{center}{\Large \psalmthree}\end{center}
 \vspace{-6pt plus 6pt}
 {\ifx\prepsalmthree\undefined\else\prepsalmthree\fi
-\includescore{\psalmthreetex}
+\gregorioscore{\psalmthreetex}
 }
 \normalsize
 
@@ -247,7 +247,7 @@
 \def\annottwo{\small{\antfourlinetwo}}
 \setinitialspacing{\antfourinitial}
 
-\includescore{\antfourtex}
+\gregorioscore{\antfourtex}
 }
 \translation[]{\normalsize \antfourtranslation}
 %\vspace{-3.5ex}
@@ -256,7 +256,7 @@
 \begin{center}{\Large \psalmfour}\end{center}
 \vspace{-6pt plus 6pt}
 {\ifx\prepsalmfour\undefined\else\prepsalmfour\fi
-\includescore{\psalmfourtex}
+\gregorioscore{\psalmfourtex}
 }
 \medskip
 \beginpsalmfourcols
@@ -295,7 +295,7 @@
 \def\annottwo{\small{\antfivelinetwo}}
 \setinitialspacing{\antfiveinitial}
 \ifx\antfiveNoEuouae\undefined\def\antfiveNoEuouae{F}\fi
-\includescore{\antfivetex\if\antfiveNoEuouae T_noEuouae\fi}
+\gregorioscore{\antfivetex\if\antfiveNoEuouae T_noEuouae\fi}
 }
 \vspace{0ex plus 0ex minus 3ex}
 \translation[]{\normalsize \antfivetranslation}
@@ -305,7 +305,7 @@
 \begin{center}{\Large \psalmfive}\end{center}
 \vspace{-6pt plus 6pt}
 {\ifx\prepsalmfive\undefined\else\prepsalmfive\fi
-\includescore{\psalmfivetex}
+\gregorioscore{\psalmfivetex}
 }
 {\ifx\prepsalmfiveverses\undefined\else\prepsalmfiveverses\fi}
 %
@@ -371,7 +371,7 @@
 \def\annottwo{\small{\antfivelinetwo}}
 \setinitialspacing{\antfiveinitial}
 %
-\includescore{\antfivetex}
+\gregorioscore{\antfivetex}
 \medskip}%
 \fi%
 \ifx\onlypsalms\undefined\def\onlypsalms{F}\fi%
@@ -432,7 +432,7 @@
 \setinitialspacing{\hymninitial}
 %
 \prehymn
-\includescore{\hymntex}
+\gregorioscore{\hymntex}
 }
 \normalsize\vspace{0pt minus 20pt}
 \selectlanguage{american}
@@ -458,12 +458,12 @@
 \vspace{0pt minus 30pt}
 \emph{Tempore Paschali:}
 
-{\greblockcustos\includescore{\vrpttex}}
+{\greseteolcustos{manual}\gregorioscore{\vrpttex}}
 \bigskip
 \emph{Per annum:}
 
 \fi %vrpttex
-{\greblockcustos\includescore{\vrtex}}\vspace{-4pt plus 4pt}
+{\greseteolcustos{manual}\gregorioscore{\vrtex}}\vspace{-4pt plus 4pt}
 \translation[]{
 \Vbar{}~\vtranslation{}%
 \ifx\vrnospace\undefined
@@ -489,7 +489,7 @@
 \def\annottwo{\small{\chapterhymnversicleantiphonmode.}}
 \setinitialspacing{\chapterhymnversicleantiphoninitial}
 \prechapterhymnversicleantiphon
-\includescore{\chapterhymnversicleantiphontex}
+\gregorioscore{\chapterhymnversicleantiphontex}
 \prechapterhymnversicleantiphontranslation
 \translation[]{\chapterhymnversicleantiphontranslation}
 \bigskip
@@ -526,14 +526,14 @@
 
 % and finally we include the score. The file must be in the same directory as this one.
 \ifx\maganttex\undefined\def\maganttex{MagnificatAntiphon}\fi
-\includescore{\maganttex}}%
+\gregorioscore{\maganttex}}%
 %\vspace{-1ex}
 \translation[]{\maganttranslation}
 \bigskip
 \hrule
 \bigskip
 {\premagverses
-\ifx\magoneline\undefined\else\if\magoneline T\greblockcustos\fi\fi
+\ifx\magoneline\undefined\else\if\magoneline T\greseteolcustos{manual}\fi\fi
 \begin{magnificat}{\magtex}
 %\vspace{-1ex}
 \medskip
@@ -552,7 +552,7 @@
 \def\annottwo{\small{\magantlinetwo}}
 \setinitialspacing{\magantinitial}
 
-\includescore{MagnificatAntiphon}}%
+\gregorioscore{MagnificatAntiphon}}%
 \fi
 }%
 \fi%
@@ -615,12 +615,12 @@
 %\normalsize
 %\fontsize{12.35}{12.35}\selectfont
 \large
-\includescore{\commaganttex}}%
+\gregorioscore{\commaganttex}}%
 %\bigskip
 %\vspace{-4ex}
 \translation[]{\englishcommagantiphon}
 \bigskip
-{\greblockcustos\includescore{\commvrtex}}
+{\greseteolcustos{manual}\gregorioscore{\commvrtex}}
 \vspace{0pt minus 36pt}
 \translation[]{
 \Vbar{}~\commvtranslation{}\\
@@ -646,7 +646,7 @@
 \fi % end not only psalms
 %
 %
-\ifx\benedicamusdominogrefactor\undefined\else\setgrefactor{\benedicamusdominogrefactor}\fi
+\ifx\benedicamusdominogrefactor\undefined\else\grechangestaffsize{\benedicamusdominogrefactor}\fi
 \ifx\benedicamusdominotex\undefined\else
 % instead of Vbar this was \benedicamusdominotone
 % changed it on May 5, 2014 ASB
@@ -658,7 +658,7 @@
 \ifx\benedicamusdominointro\undefined\else
 \hspace{3ex}\emph{\benedicamusdominointro:}\\
 \fi
-\includescore{\benedicamusdominotex}
+\gregorioscore{\benedicamusdominotex}
 \ifx\benedicamusdominotexalt\undefined\else
 {%
 \vspace{0pt plus 12pt}
@@ -670,8 +670,8 @@
 \setinitialspacing{B}
 \setspaceafterinitial{0mm}
 \setspacebeforeinitial{0mm}
-\greblockcustos%
-\includescore{\benedicamusdominotexalt}
+\greseteolcustos{manual}%
+\gregorioscore{\benedicamusdominotexalt}
 }
 \fi
 \fi

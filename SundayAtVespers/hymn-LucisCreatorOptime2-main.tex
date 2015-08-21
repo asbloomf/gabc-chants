@@ -13,7 +13,7 @@
 \usepackage[garamond]{../mypackage}
 % to change the font to something better, you can install the kpfonts package (if not already installed). To do so
 % go open the "TeX Live Manager" in the Menu Start->All Programs->TeX Live 2010
-\setgrefactor{17}
+\grechangestaffsize{17}
 
 %\def\greinitialformat#1{{\fontsize{37}{37}\selectfont #1}}
 %small > footnotesize > scriptsize > tiny
@@ -60,15 +60,15 @@
 \large%\vspace*{-20pt plus 20pt}
 \begin{center}\addfontfeature{Numbers=Lining}\textbf{2. Another Chant (ad libitum).}\end{center}
 
-\includescore{\hymntex}
+\gregorioscore{\hymntex}
 }
 \bigskip\bigskip
-{\greblockcustos\includescore{\vrtex}}
+{\greseteolcustos{manual}\gregorioscore{\vrtex}}
 \bigskip
 \emph{Magnificat}. \emph{Collect}.
 \bigskip
 
-\ifx\benedicamusdominogrefactor\undefined\else\setgrefactor{\benedicamusdominogrefactor}\fi
+\ifx\benedicamusdominogrefactor\undefined\else\grechangestaffsize{\benedicamusdominogrefactor}\fi
 \ifx\benedicamusdominotex\undefined\else
 \def\annot{\small{\benedicamusdominotone}}
 %\def\annottwo{}
@@ -80,7 +80,7 @@
 \ifx\benedicamusdominointro\undefined\else
 \hspace{3ex}\emph{\benedicamusdominointro:}\\
 \fi
-\includescore{\benedicamusdominotex}
+\gregorioscore{\benedicamusdominotex}
 \ifx\benedicamusdominotexalt\undefined\else
 {%
 \vspace{0pt plus 12pt}
@@ -94,8 +94,8 @@
 \setsecondannotation{}
 \setspaceafterinitial{0mm}
 \setspacebeforeinitial{0mm}
-\greblockcustos%
-\includescore{\benedicamusdominotexalt}
+\greseteolcustos{manual}%
+\gregorioscore{\benedicamusdominotexalt}
 }
 \fi
 \fi
@@ -114,15 +114,15 @@
 \begin{center}\addfontfeature{Numbers=Lining}\textbf{3. Another Chant.}\end{center}
 
 \normalsize
-\includescore{\hymntextwo}
+\gregorioscore{\hymntextwo}
 }
 \bigskip\bigskip
-{\greblockcustos\includescore{\vrtex}}
+{\greseteolcustos{manual}\gregorioscore{\vrtex}}
 \bigskip
 \emph{Magnificat}. \emph{Collect}.
 \bigskip
 
-\ifx\benedicamusdominogrefactor\undefined\else\setgrefactor{\benedicamusdominogrefactor}\fi
+\ifx\benedicamusdominogrefactor\undefined\else\grechangestaffsize{\benedicamusdominogrefactor}\fi
 \ifx\benedicamusdominotex\undefined\else
 \def\annot{\small{\benedicamusdominotone}}
 %\def\annottwo{}
@@ -134,7 +134,7 @@
 \ifx\benedicamusdominointro\undefined\else
 \hspace{3ex}\emph{\benedicamusdominointro:}\\
 \fi
-\includescore{\benedicamusdominotex}
+\gregorioscore{\benedicamusdominotex}
 \ifx\benedicamusdominotexalt\undefined\else
 {%
 \vspace{0pt plus 12pt}
@@ -148,8 +148,8 @@
 \setsecondannotation{}
 \setspaceafterinitial{0mm}
 \setspacebeforeinitial{0mm}
-\greblockcustos%
-\includescore{\benedicamusdominotexalt}
+\greseteolcustos{manual}%
+\gregorioscore{\benedicamusdominotexalt}
 }
 \fi
 \fi
