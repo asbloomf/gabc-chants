@@ -13,8 +13,8 @@ style: modern;
 %initial-style:0;
 def-m1:}{\greblockcustos{;
 def-m2:\ifx\breakbeforeEuouae\undefined\else;
-def-m3:}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
-def-m4:\fi;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:}\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -23,5 +23,5 @@ def-m4:\fi;
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
 (c4) DE(c)us(d) au(f')tem(e) nós(fg)ter(g) <v>\greheightstar</v>() in(gh) caé(fe)lo :(d.) (;)
-óm(f')ni(g)a(h') quae(ixi)cúm(h)que(gf) vó(g')lu(f)it,(gh) fé(g.)cit.(g. ::[em3])
+óm(f')ni(g)a(h') quae(ixi)cúm(h)que(gf) vó(g')lu(f)it,(gh) fé(g.[em1])cit.(g. ::[em2]z[em3])
 E(g) u(g) o(g) u(d) a(f) e.(ed..) (::[em4])

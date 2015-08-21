@@ -24,14 +24,7 @@ def-m4:}\fi;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c4)HO(g)mo(gd) quí(f_g)dam(g_h/%hg'_
-[ev:%
-\greendofelement{0}{0}%
-\greglyph{\char 6145}{h}{f}{8}{}{%
-\grehepisemus{i}{0}{0}{i}%
-\grevepisemus{f}{0}%
-}%
-]) <v>\greheightstar</v>(,)
+(c4)HO(g)mo(gd) quí(f_g)dam(g_h/hg'0_1) <v>\greheightstar</v>(,)
 de(f)scen(ghg~)dé(h)bat(g') ab(f) Je(gh)rú(g)sa(f)lem(g.) (,)
 in(fd~) Jé(f)ri(f)cho,(d!ew!fv_EC.) (;)
 et(f) ín(g')ci(h)dit(ji) in(hg~) la(fg)tró(g)nes :(g.) (:)
