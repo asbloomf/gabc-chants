@@ -12,13 +12,13 @@
 \subtitle{I \& II Vespers}
 
 \def\definevesperspropers{\input{\gabcfolder/inc-Pentecost-2Vespers}
-	\def\prepsalmfive{\greblockcustos}
+	\def\prepsalmfive{\greseteolcustos{manual}}
 }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Pentecost-1Vespers}}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
 %\def\premag{\def\noeuouae{T}}
-\def\premagverses{\greblockcustos}
+\def\premagverses{\greseteolcustos{manual}}
 \def\printfullhymn{
 	{\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}}
 		% print all versicles that could follow hymn?
@@ -27,7 +27,7 @@
 		%\label{vr-rorate}
 		\printnote{\vesperspropersaltnote}
 		\definevesperspropersalt
-		\printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+		\printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
 	}
 	\bigskip
 	{
@@ -35,7 +35,7 @@
 		%\label{vr-rorate}
 		\printnote{\vesperspropersnote}
 		\definevesperspropers
-		\printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+		\printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
 	}
 }
 \printvespers[../Pentecost]{inc-PentecostVespers}
@@ -48,12 +48,12 @@
 \subtitle{1st Class}
 
 %\def\premag{\def\noeuouae{T}}
-\def\premagverses{\greblockcustos}
+\def\premagverses{\greseteolcustos{manual}}
 \def\printfullhymn{
 	{
 		\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
 		\def\vrlinebreak{T}
-		\printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+		\printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
 	}
 }
 \def\begincollectcols{\vspace{-0.5\baselineskip}\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}

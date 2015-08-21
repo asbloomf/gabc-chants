@@ -1,9 +1,9 @@
 {
 \newcommand{\printbenedicamusdomino}[2]{
-	\greblockcustos
+	\greseteolcustos{manual}
 	\def\annot{\small{#1}}
-	\setinitialspacing{B}
-	\includescore{#2}
+	%\setinitialspacing{B}
+	\gregorioscore{#2}
 }
 
 \needspace{3\baselineskip}
@@ -14,7 +14,7 @@
 \sectionmark{Benedicámus Dómino}
 \addcontentsline{toc}{section}{Benedicámus Dómino}
 
-\setgrefactor{15}
+\grechangestaffsize{15}
 \label{benedicamusdomino-1}
 {{\centering \bfseries On feasts of the I class.\\}
 {\centering \normalsize At 1st Vespers.\\}

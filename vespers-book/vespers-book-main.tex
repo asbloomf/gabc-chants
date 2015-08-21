@@ -17,6 +17,7 @@
 \renewcommand{\needspace}[1]{
 	\checkoddpage\ifoddpage\oldneedspace{#1}\else\fi
 }
+\let\gredagger=\dag
 
 %\usepackage{hyperref}
 \newcommand{\phantomsection}{}
@@ -131,12 +132,12 @@
 	\translation[]{\englishcommagantiphon}
 
 	\smallskip
-	\printvr[\greblockcustos]{\commvrtex}{\commvtranslation}{\commrtranslation}
+	\printvr[\greseteolcustos{manual}]{\commvrtex}{\commvtranslation}{\commrtranslation}
 
 	\printcollect{\latincomcollect}{\englishcomcollect}
 }
 \newcommand{\printvespersmag}[2][.]{
-	\setgrefactor{15}
+	\grechangestaffsize{15}
 	\def\gabcfolder{#1}
 	\input{\gabcfolder/#2}
 
@@ -164,7 +165,7 @@
 	\printcollect{\latincollect}{\englishcollect}
 }
 \newcommand{\printvespers}[2][.]{
-	\setgrefactor{15}
+	\grechangestaffsize{15}
 	\def\gabcfolder{#1}
 	\input{\gabcfolder/#2}
 
@@ -370,7 +371,7 @@
 \sloppy
 \begin{document}
 \normalsize
-\setgrefactor{15}
+\grechangestaffsize{15}
 %\pagenumbering{roman}
 %\frontmatter
 
@@ -418,7 +419,7 @@ Magnificat, and Collect given for the respective Sunday or Feast.}
 \medskip
 
 \def\noeuouae{T}
-%\input{inc-benedicamus-domino}
+\input{inc-benedicamus-domino}
 
 \def\dontrepeatantiphon{T}
 \clearpage
@@ -426,7 +427,7 @@ Magnificat, and Collect given for the respective Sunday or Feast.}
 
 %\input{inc-marian-anthems}
 
-%\input{inc-advent}
+\input{inc-advent}
 
 % christmas through Holy Family
 %\input{inc-christmas}
@@ -438,7 +439,7 @@ Magnificat, and Collect given for the respective Sunday or Feast.}
 
 %\input{inc-easter}
 
-\input{inc-pentecost}
+%\input{inc-pentecost}
 
 \chapter{Appendix}
 %\input{inc-benediction}

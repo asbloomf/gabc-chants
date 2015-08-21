@@ -9,33 +9,33 @@
 			{
 				\def\annot{\small{Hymn.}}
 				\def\annottwo{\small{\hymnlinetwo}}
-				\setinitialspacing{\hymninitial}
+				%\setinitialspacing{\hymninitial}
 				\normalsize
 				\begin{center}\addfontfeature{Numbers=Lining}\textbf{2. Another Chant (ad libitum).}\end{center}
 
-				\includescore{\gabcfolder/\hymntex}
+				\gregorioscore{\gabcfolder/\hymntex}
 			}
 			{
 				\def\annot{\small{Hymn.}}
 				\def\annottwo{\small{\hymntwolinetwo}}
-				\setinitialspacing{\hymninitial}
+				%\setinitialspacing{\hymninitial}
 				\normalsize
 				\begin{center}\addfontfeature{Numbers=Lining}\textbf{3. Another Chant.}\end{center}
 
-				\includescore{\gabcfolder/\hymntextwo}
+				\gregorioscore{\gabcfolder/\hymntextwo}
 			}
 
 			\bigskip\bigskip
 
 	        \def\vrlinebreak{T}
 	        \label{vr-dirigatur}
-	        \printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+	        \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
 	    }
 	}
 	\def\vrlinebreak{T}
 	\newcommand{\magreplacement}{\noindent\printnote{Magnificat. Collect.\\\\Benedicámus Dómino \emph{ for Sundays during the year, page \pageref{benedicamusdomino-sunday}}.}}
 	\def\preantfour{\needspace{10\baselineskip}}
-	\def\prepsalmfive{\greblockcustos}
+	\def\prepsalmfive{\greseteolcustos{manual}}
 	\printvespers[../SundayAtVespers]{inc-SundayAtVespers}
 }
 
@@ -52,10 +52,10 @@
 
 	        \def\vrlinebreak{T}
 	        \label{vr-dirigatur}
-	        \printvr[\greblockcustos]{\vrtex}{\vtranslation}{\rtranslation}
+	        \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
 	    }
 	}	
 	\newcommand{\magreplacement}{\noindent\printnote{Magnificat. Collect.\\\\Benedicámus Dómino \emph{ for Sundays in Paschaltide, page \pageref{benedicamusdomino-easter}}.}}
-	\def\prepsalmfive{\greblockcustos}
+	\def\prepsalmfive{\greseteolcustos{manual}}
 	\printvespers[../TimeAfterEaster]{inc-SundayAtVespers-PaschalTime}
 }
