@@ -16,7 +16,7 @@ annotation: 8. c;
 def-m1:}{\greblockcustos{;
 def-m2:\ifx\breakbeforeEuouae\undefined\else;
 def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
-def-m4:\fi};
+def-m4:}\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 

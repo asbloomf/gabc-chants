@@ -6,7 +6,7 @@ transcriber:Andrew Hinkley;
 def-m1:}{\greblockcustos{;
 def-m2:\ifx\breakbeforeEuouae\undefined\else;
 def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
-def-m4:\fi};
+def-m4:}\fi;
 %%
 (c4) REX(g_) pa(fd)cí(f)fi(fg)cus(g_') <v>\greheightstar</v>(,)
 ma(g)gni(h)fi(g)cá(h')tus(g) est,(f.) (;)
