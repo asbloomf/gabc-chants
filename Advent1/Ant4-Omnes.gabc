@@ -13,6 +13,10 @@ transcription-date: 2011;
 style: modern;
 annotation: 4 Ant.;
 annotation: 7. c;
+def-m1:}{\greblockcustos{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:}\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -24,10 +28,6 @@ annotation: 7. c;
 si(i)ti(g)én(iji)tes,(h.) (,)
 ve(f')ní(h_)te(g) ad(fe) á(f)quas :(e.) (:)
 quaé(i_j!kwl)ri(k)te(j_kJH) Dó(j_k)mi(ji)num,(i.) (;)
-dum(ii) in(e)ve(g)ní(i)ri(h) pó(f_h)test,(gv_FE) al(fg)le(f)lú(e.)ia.(e.)
-(::[ev:\ifx\breakbeforeEuouae\undefined\else]z[ev:\fi}
-	\ifx\noeuouae\undefined\def\noeuouae{F}\fi
-	\if\noeuouae F
-{])
+dum(ii) in(e)ve(g)ní(i)ri(h) pó(f_h)test,(gv_FE) al(fg)le(f)lú(e.[em1])ia.(e.) (::[em2]z[em3])
 
-E(i) u(i) o(j) u(i) a(h) e.(gh..) (::[ev:\fi])
+E(i) u(i) o(j) u(i) a(h) e.(gh..) (::[em4])

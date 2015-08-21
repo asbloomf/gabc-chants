@@ -13,6 +13,10 @@ transcription-date: 2011;
 style: modern;
 annotation: 2 Ant.;
 annotation: 8. G*;
+def-m1:}{\greblockcustos{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:}\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -20,29 +24,9 @@ annotation: 8. G*;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c4)JU(f)cun(h)dá(h!iwj!%kvJ_I'_jw!
-[ev:%
-\greglyph{\char 23}{k}{j}{0}{}{}%
-\greendofglyph{9}%
-\greglyph{\char 19}{j}{j}{6}{}{%
-\grehepisemusbridge{k}{}{}%
-\grehepisemus{k}{12}{1}{k}%
-}%
-\greendofglyph{3}%
-\greglyph{\char 19}{i}{j}{6}{}{%
-\grehepisemus{k}{12}{0}{k}%
-\grevepisemus{h}{12}%
-}%
-\greendofglyph{0}%
-\greglyph{\char 26}{j}{k}{4}{}{}%
-\greendofglyph{1}%
-]kjk)re(k_j_) <v>\greheightstar</v>(,)
+(c4)JU(f)cun(h)dá(h!iwj!kvJ_I'_jw!kjk)re(k_j_) <v>\greheightstar</v>(,)
 fí(ji)li(h)a(ij) Sí(hg)on,(g.) (;)
 ex(g)súl(g')ta(g) sa(f_e)tis(d.) (,)
-fí(e')li(f)a(gh) Je(h')rú(g)sa(fg)lem,(gv_FD') al(f)le(fg)lú(g.)ia.(g.)
-(::[ev:\ifx\breakbeforeEuouae\undefined\else]z[ev:\fi}
-	\ifx\noeuouae\undefined\def\noeuouae{F}\fi
-	\if\noeuouae F
-{])
+fí(e')li(f)a(gh) Je(h')rú(g)sa(fg)lem,(gv_FD') al(f)le(fg)lú(g.[em1])ia.(g.) (::[em2]z[em3])
 
-E(j) u(j) o(i) u(j) a(h) e.(g.) (::[ev:\fi])
+E(j) u(j) o(i) u(j) a(h) e.(g.) (::[em4])
