@@ -8,7 +8,7 @@
 
 {
 \section{Pentecost Sunday}
-\subtitle{1st Class}
+\subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
 
 \def\definevesperspropers{\input{\gabcfolder/inc-Pentecost-2Vespers}
@@ -45,7 +45,7 @@
 
 {
 \section{Trinity Sunday}
-\subtitle{1st Class}
+\subtitle{\nth{1} Class}
 
 %\def\premag{\def\noeuouae{T}}
 \def\premagverses{\greseteolcustos{manual}}
@@ -83,7 +83,7 @@ Easter is March 22 to April 25
 \chapter{Proper of the Time -- Time After Pentecost}
 {
 \def\printcommonvespers{
-	\subtitle{2nd Class}
+	\subtitle{\nth{2} Class}
 	\printnote{From Vespers of Sundays throughout the year on page \pageref{sundayvespers}.}
 }
 \newcommand{\benedicamusdomino}[1][sunday]{
@@ -94,15 +94,7 @@ Easter is March 22 to April 25
 \newcommand{\printhymnnote}{}
 \newcommand{\printvespersafterpentecost}[1]{
 	{
-	\def\ordinalending{th}
-	\ifnum#1=2\def\ordinalending{nd}\fi
-	\ifnum#1=3\def\ordinalending{rd}\fi
-	\ifnum#1=21\def\ordinalending{st}\fi
-	\ifnum#1=22\def\ordinalending{nd}\fi
-	\ifnum#1=23\def\ordinalending{rd}\fi
-	\ifnum#1=24\def\ordinalending{th or Last}\fi
-
-	\section{#1\ordinalending{}	Sunday after Pentecost}
+	\section{\nth{#1}\ifnum#1=24{th or Last }\fi	Sunday after Pentecost}
 	\printcommonvespers{}
 	\printvespersmag[../TimeAfterPentecost]{inc-VespersMagnificatPentecost#1}
 	\smallskip

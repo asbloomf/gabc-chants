@@ -12,7 +12,9 @@
 \usepackage{titleps}
 \usepackage{letltxmacro}
 \usepackage{changepage} % gives us \ifoddpage use [strict]
-
+\usepackage[super]{nth}
+\LetLtxMacro{\oldnth}{\nth}
+\renewcommand{\nth}[1]{\addfontfeature{Numbers=Lining}\oldnth{#1}}
 \LetLtxMacro{\oldneedspace}{\needspace}
 \renewcommand{\needspace}[1]{
 	\checkoddpage\ifoddpage\oldneedspace{#1}\else\fi
@@ -77,9 +79,9 @@
 \newcommand{\chapterbreak}{\clearpage}
 %\titleclass{\section}{top}
 
-\contentsmargin{1pc}
-\dottedcontents{chapter}[0pc]{}{2pc}{1pc}
-\dottedcontents{section}[0pc]{}{0pc}{1pc}
+\contentsmargin{2pc}
+\dottedcontents{chapter}[2.3em]{}{2.3em}{1pc}
+\dottedcontents{section}[5.5em]{}{3.2em}{1pc}
 
 \newcommand{\printnote}[1]{
 	{\normalsize \emph{#1}}
