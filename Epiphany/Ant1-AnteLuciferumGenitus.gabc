@@ -23,16 +23,8 @@ def-m4:}\fi;
 %%
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
-(f3)AN(f_g)te(e) lu(f)cí(%fi'!
-[ev:%
-\greglyph{\char 1027}{f}{j}{0}{}{%
-\grevepisemus{k}{18}%
-}%
-\greendofglyph{1}%
-]jv)fe(h)rum(ge~) gé(gh)ni(f)tus,(f.) <v>\greheightstar</v>(;) et(fe) an(h)te(i) saé(j')cu(i)la,(h.) (;) Dó(h)mi(hv_GF)nus(g_f) Sal(f')vá(h)tor(g') nó(h)ster(f'_) (;) hó(g)di(ef)e(f_ge/ec.) (,) mún(e_f)do(h) ap(g)pá(e)ru(g[em1])it.(f.) (::[em2]z[em3])
+(f3)AN(f_g)te(e) lu(f)cí(fi'!jv)fe(h)rum(ge~) gé(gh)ni(f)tus,(f.) <v>\greheightstar</v>(;)
+et(fe) an(h)te(i) saé(j')cu(i)la,(h.) (;) Dó(h)mi(hv_GF)nus(g_f) Sal(f')vá(h)tor(g') nó(h)ster(f'_) (;)
+hó(g)di(ef)e(f_ge/ec.) (,) mún(e_f)do(h) ap(g)pá(e)ru(g[em1])it.(f.) (::[em2]z[em3])
 
 E(h) u(h) o(h) u(g) a(e) e.(f.) (::[em4])
-
-%fix vertical episemus -- needs to go above luCIferum instead of in middle space
-%replace \grevepisemus{h}{18}%
-%   with \grevepisemus{k}{18}%

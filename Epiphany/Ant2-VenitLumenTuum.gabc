@@ -24,27 +24,7 @@ def-m4:}\fi;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 (c4)VE(f)nit(ghg~) lú(h)men(gf) tú(g)um(f.) <v>\greheightstar</v>(,) Je(fgf)rú(d_c)sa(d!ew!fv_ED'e)lem,(ed..) (;)
-et(d) gló(dgf/gh)ri(gf)a(f) Dó(ghgh)mi(h)ni(%ghg'_
-[ev:%
-\greglyph{\char 15366}{g}{f}{0}{}{%
-\grehepisemus{i}{0}{0}{i}%
-\grevepisemus{f}{0}%
-}%
-]) (,) su(f)per(ghg~) te(h_g) ór(g_hG'E)ta(f!gwhgh) est,(hg..) (:)
-et(g) am(g)bu(gf)lá(g)bunt(fe) gén(d)tes(%fgf'_
-[ev:%
-\greglyph{\char 15366}{f}{f}{0}{}{%
-\grehepisemus{h}{0}{0}{h}%
-\grevepisemus{e}{0}%
-}%
-]) (,) in(f) lú(f)mi(fe)ne(c') tú(d)o,(c.) (,) al(d!ewf)le(fv_ED)lú(ed~[em1])ia.(d.) (::[em2]z[em3])
+et(d) gló(dgf/gh)ri(gf)a(f) Dó(ghgh)mi(h)ni(ghg'_1) (,) su(f)per(ghg~) te(h_g) ór(g_hG'E)ta(f!gwhgh) est,(hg..) (:)
+et(g) am(g)bu(gf)lá(g)bunt(fe) gén(d)tes(fgf'_15) (,) in(f) lú(f)mi(fe)ne(c') tú(d)o,(c.) (,) al(d!ewf)le(fv_ED)lú(ed~[em1])ia.(d.) (::[em2]z[em3])
 
 E(h) u(h) o(g) u(f) a(g) e.(ghg.) (::[em4])
-
-%in DomiNI horizontal episemus needs to be above
-% replace \grehepisemusbottom{f}{0}{0}%
-% with    \grehepisemus{i}{0}{0}{i}%
-
-%same in genTES
-% replace \grehepisemusbottom{e}{0}{0}%
-% with    \grehepisemus{i}{0}{0}{i}%

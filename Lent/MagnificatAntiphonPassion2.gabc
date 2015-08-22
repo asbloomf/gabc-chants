@@ -25,28 +25,7 @@ def-m4:}\fi;
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
 SCr{í}p(c4f)tum(fg) est(g) e(gh)nim :(g'_) <v>\greheightstar</v>(,) Per(g)cú(gh)ti(gf)am(g) pa(gh)stó(f)rem,(f.) (;)
-et(f) dis(g')per(h)gén(ji~)tur(hg) ó(hi)ves(h') gré(g)gis :(g.) (:) post(f)quam(h) au(%j_!k_l
-[ev:%
-{%
-\greglyph{\char 17}{j}{k}{0}{}{%
-\grehepisemusbottom{i}{0}{-1}%
-}%
-\greendofglyph{1}%
-\greglyph{\char 1025}{k}{k}{0}%
-{%
-\greadditionalline{18}{0}{2}%
-}{%
-\grehepisemusbottom{i}{0}{-1}%
-}%
-}%
-])tem(k.) re(k'_)sur(l)ré(j)xe(ij)ro,(h.) (;) præ(g)cé(hj)dam(hg~) vos(g) in(h) Ga(hji)li(h)laé(g.)am :(g.) (:)
+et(f) dis(g')per(h)gén(ji~)tur(hg) ó(hi)ves(h') gré(g)gis :(g.) (:) post(f)quam(h) au(j_k_l)tem(k.) re(k'_)sur(l)ré(j)xe(ij)ro,(h.) (;) præ(g)cé(hj)dam(hg~) vos(g) in(h) Ga(hji)li(h)laé(g.)am :(g.) (:)
 i(g_h)bi(f_e) me(d') vi(g)dé(f)bi(ef)tis,(d.) (,) dí(f)cit(gh) Dó(hg)mi(fg[em1])nus.(g.) (::[em2]z[em3])
 
 E(j) u(j) o(i) u(j) a(h) e.(g.h.) (::[em4])
-
-% change following lines
-% \grehepisemus{k}{0}{0}{k}%
-% to \grehepisemusbottom{i}{0}{-1}%
-
-% \grehepisemusbottom{j}{0}{-1}%
-% to \grehepisemusbottom{i}{0}{-1}%

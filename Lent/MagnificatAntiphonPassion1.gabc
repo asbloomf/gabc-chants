@@ -24,22 +24,7 @@ def-m4:}\fi;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(f3)A(e)bra(f!gwh)ham(h) <v>\greheightstar</v>(,) pá(ij)ter(hg) vé(f)ster(%f_hf/fe'_
-[ev:%
-{%
-\greglyph{\char 15372}{f}{f}{0}{}{%
-\grehepisemusbottom{e}{6}{-2}%
-}%
-\greendofelement{0}{0}%
-\greglyph{\char 6145}{f}{h}{8}{}{%
-\grehepisemus{g}{0}{0}{g}%
-\grevepisemus{d}{0}%
-}%
-}
-]) (,) ex(h!i'j)sul(ji~)tá(i.)vit(g') ut(i) vi(i)dé(ij)ret(i') dí(h)em(hg~) mé(f)um :(f.) (;)
+(f3)A(e)bra(f!gwh)ham(h) <v>\greheightstar</v>(,) pá(ij)ter(hg) vé(f)ster(f_hf/fe'_1) (,) ex(h!i'j)sul(ji~)tá(i.)vit(g') ut(i) vi(i)dé(ij)ret(i') dí(h)em(hg~) mé(f)um :(f.) (;)
 ví(f)dit,(e_c) et(e') ga(f)ví(h'_)sus(g[em1]) est.(f.) (::[em2]z[em3])
 
 E(h) u(h) o(h) u(g) a(e) e.(f.) (::[em4])
-% the horizontal episema over the end of véster needs to be manually moved above the neum.
-% replace \grehepisemusbottom{d}{0}{0}%
-%    with \grehepisemus{g}{0}{0}{g}%
