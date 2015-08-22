@@ -46,20 +46,25 @@
     \hrule
 }
 
+\newcommand{\printhymnnote}{
+    \noindent\printnote{Hymn. \emph{Ad Régias Agni Dapes}, page \pageref{hymn-adregiasagnidapes}.
+    \Vbar~\emph{Mane nobíscum}, page \pageref{vr-manenobiscum}.}
+}
+
 {
 \section{Low Sunday}
 \printcommonvespers[1st]
-\def\printfullhymn{
-    \label{hymn-adregiasagnidapes}
-    {
-        \input{\gabcfolder/inc-hymn-AdRegiasAgniDapes}
-        \printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
-        \def\vrlinebreak{T}
-        \label{vr-manenobiscum}
-        \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
-        \bigskip
-    }
-}
+%\def\printfullhymn{
+%    \label{hymn-adregiasagnidapes}
+%    {
+%        \input{\gabcfolder/inc-hymn-AdRegiasAgniDapes}
+%        \printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
+%        \def\vrlinebreak{T}
+%        \label{vr-manenobiscum}
+%        \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
+%        \bigskip
+%    }
+%}
 %\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster1}
 
@@ -81,10 +86,6 @@
     probably just give them a page number and say to use the simple tone for the versicle and response
 }
 
-\newcommand{\printhymnnote}{
-    \noindent\printnote{Hymn. \emph{Ad Régias Agni Dapes}, page \pageref{hymn-adregiasagnidapes}.
-    \Vbar~\emph{Mane nobíscum}, page \pageref{vr-manenobiscum}.}
-}
 {
 \section{2nd Sunday after Easter}
 \printcommonvespers{}
