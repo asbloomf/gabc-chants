@@ -73,7 +73,7 @@
 {\thispagestyle{empty}\phantomsection\Large\scshape\addfontfeature{Numbers=Lining}}
 {}{0.5em}{\centering}
  
-\titlespacing{\chapter}{0pt}{-\headheight}{1pc}
+\titlespacing{\chapter}{0pt}{6pt-\headheight}{1pc}
 \titlespacing{\section}{0pt}{*2.5}{*1}
 \titleclass{\chapter}{top}
 \newcommand{\chapterbreak}{\clearpage}
@@ -389,16 +389,19 @@
 \sectionmark{Deus in adjutórium}
 \addcontentsline{toc}{section}{Deus in adjutórium}
 \printnote{The Festal Tone may be sung on any Sunday or Feast.}
+\printnote{From Septuagesima to Wednesday in Holy Week, the \emph{Laus tibi} is said instead of \emph{Allelúia}.}
 
-\smallskip
+\bigskip
 \def\deusinadjutoriumsolemn{F}
 \printdeusinadjutorium{}
+\vfil
 
 \pagebreak
 %\subtitle{Solemn Tone}
 \printnote{The Solemn Tone may only be sung on Feasts of the First or Second Class.}
+\printnote{From Septuagesima to Wednesday in Holy Week, the \emph{Laus tibi} is said instead of \emph{Allelúia}.}
 
-\medskip
+\bigskip
 \def\deusinadjutoriumsolemn{T}
 \printdeusinadjutorium{}
 
@@ -406,7 +409,7 @@
 \printnote{Vespers then proceed with the Proper Antiphons, Psalms, Chapter, Hymn, Versicle,
 Magnificat, and Collect given for the respective Sunday or Feast.}
 
-\medskip
+\bigskip
 
 \printnote{All Vespers conclude with the following:}
 \\
@@ -418,9 +421,10 @@ Magnificat, and Collect given for the respective Sunday or Feast.}
 \Vbar{} Dómine, exáudi oratiónem meam.\\
 \Rbar{} Et clamor meus ad te véniat.
 
-\medskip
+\bigskip
 
 \def\noeuouae{T}
+%\vfil
 \input{inc-benedicamus-domino}
 
 \def\dontrepeatantiphon{T}

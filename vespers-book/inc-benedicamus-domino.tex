@@ -2,40 +2,44 @@
 \newcommand{\printbenedicamusdomino}[2]{
 	\greseteolcustos{manual}
 	\def\annot{\small{#1}}
-	%\setinitialspacing{B}
+	\alsetinitialspacing{B}
 	\gregorioscore{#2}
 }
 
-\needspace{3\baselineskip}
-\phantomsection\printnote{The ``Benedicamus Domino'' is then sung in one of the different tones as follows:}
-
 \pagebreak
+\phantomsection\printnote{The ``Benedicamus Domino'' is then sung in one of the different tones as follows:}
+\bigskip
 \label{benedicamusdomino}
 \sectionmark{Benedicámus Dómino}
 \addcontentsline{toc}{section}{Benedicámus Dómino}
 
+%\vfil
 \grechangestaffsize{15}
 \label{benedicamusdomino-1}
 {{\centering \bfseries On feasts of the I class.\\}
+\smallskip
 {\centering \normalsize At \nth{1} Vespers.\\}
+\smallskip
 \def\breakbeforeresp{T}
-\printbenedicamusdomino{2}{../BenedicamusDomino/BenedicamusDomino_1class1stvespers}
+\printbenedicamusdomino{2.}{../BenedicamusDomino/BenedicamusDomino_1class1stvespers}
 \bigskip\needspace{8\baselineskip}
+%\vfil
 {\centering \normalsize At \nth{2} Vespers.\\}
+\smallskip
 {\def\breakbeforeresp{T}
 \printbenedicamusdomino{6.}{../BenedicamusDomino/BenedicamusDomino_1class2ndvespers}
 }
-\smallskip
+\medskip
 \emph{\normalsize or more commonly:}
 
-
+\smallskip
 \def\breakbeforeresp{T}
 \printbenedicamusdomino{5.}{../BenedicamusDomino/BenedicamusDomino_1class2ndVespersAlt}}
-\bigskip
-
-\needspace{3\baselineskip}
+%\vfil
+\pagebreak
 \label{benedicamusdomino-2}
 {{\centering \bfseries On feasts of the II class.\\}
+\smallskip
 {\centering \normalsize At \nth{1} Vespers.\\}
 {\def\breakbeforeresp{T}
 \printbenedicamusdomino{2.}{../BenedicamusDomino/BenedicamusDomino_2class1stvespers}
@@ -54,6 +58,7 @@
 \needspace{3\baselineskip}
 \label{benedicamusdomino-mary}
 {{\centering \bfseries On feasts of the Blessed Virgin.\\}
+\smallskip
 %\def\breakbeforeresp{T}
 \printbenedicamusdomino{1.}{../BenedicamusDomino/BenedicamusDomino_blessedVirgin}}
 \bigskip\bigskip
@@ -61,18 +66,21 @@
 \needspace{6\baselineskip}
 \label{benedicamusdomino-sunday}
 {{\centering \bfseries On Sundays during the Year\\and Septuagesima, Sexagesima, and Quinquagesima.\\}
+\smallskip
 %\def\breakbeforeresp{T}
 \printbenedicamusdomino{1.}{../BenedicamusDomino/BenedicamusDomino_Sundays}}
 \bigskip\bigskip
 
 \label{benedicamusdomino-lent}\label{benedicamusdomino-advent}
 {{\centering \bfseries On Sundays of Advent and Lent.\\}
+\smallskip
 %\def\breakbeforeresp{T}
 \printbenedicamusdomino{6.}{../BenedicamusDomino/BenedicamusDomino_SundaysOfAdventAndLent}}
 \bigskip\bigskip
 
 \label{benedicamusdomino-easter}
 {{\centering \bfseries On Sundays of Paschal Time.\\}
+\smallskip
 %\def\breakbeforeresp{T}
 \printbenedicamusdomino{7.}{../BenedicamusDomino/BenedicamusDomino_SundaysOfPaschalTime}}
 
