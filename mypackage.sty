@@ -376,7 +376,7 @@
 \newlength{\initwidth}
 \newlength{\alsinitialsize}
 % grefactor must be set before calling!
-\newcommand{\alsetinitialspacing}[1]{%
+\newcommand{\aloldsetinitialspacing}[1]{%
 % 1 - initial, e.g., I
 \settowidth{\annotwidth}{\annot\hspace{0.5pc}}
 \settoheight{\Etextheight}{E}
@@ -413,6 +413,12 @@
 \setspaceafterinitial{\spacewidth}{0}
 \setspacebeforeinitial{\spacewidth}{0}
 %
+\greannotation{\annot}
+\ifx\annottwo\undefined\else%
+\greannotation{\annottwo}
+\fi
+}
+\newcommand{\alsetinitialspacing}[1]{%
 \greannotation{\annot}
 \ifx\annottwo\undefined\else%
 \greannotation{\annottwo}

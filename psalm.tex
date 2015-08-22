@@ -17,7 +17,7 @@
 \csname preant\antnum\endcsname
 \edef\annot{\small{#1. Ant.}}
 \expandafter\edef\csname annot\antnum\endcsname{\small{\csname ant\antnum linetwo\endcsname}}
-\setinitialspacing{\csname ant\antnum initial\endcsname}
+\alsetinitialspacing{\csname ant\antnum initial\endcsname}
 
 \gregorioscore{\csname ant\antnum tex\endcsname}
 \if\csname psalm\antnum afterant\endcsname T%
@@ -64,7 +64,7 @@
     }
     \edef\annot{\small{#1 Ant.}}
     \edef\annottwo{\small{\csname ant\antnum linetwo\endcsname}}
-    \setinitialspacing{\csname ant\antnum initial\endcsname}
+    \alsetinitialspacing{\csname ant\antnum initial\endcsname}
 
     \gregorioscore{\csname ant\antnum tex\endcsname}}%
 \fi
