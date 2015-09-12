@@ -26,6 +26,7 @@
 			}
 
 			\bigskip\bigskip
+				\oldneedspace{6\baselineskip}
 
 	        \def\vrlinebreak{T}
 	        \label{vr-dirigatur}
@@ -34,6 +35,7 @@
 	}
 	\def\vrlinebreak{T}
 	\newcommand{\magreplacement}{\noindent\printnote{Magnificat. Collect.\\\\Benedicámus Dómino \emph{ for Sundays during the year, page \pageref{benedicamusdomino-sunday}}.}}
+	\newcommand{\collectreplacement}{\bigskip}
 	\def\preantfour{\needspace{10\baselineskip}}
 	\def\prepsalmfive{\greseteolcustos{manual}}
 	\printvespers[../SundayAtVespers]{inc-SundayAtVespers}
@@ -55,7 +57,9 @@
 	        \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
 	    }
 	}	
+	\newcommand{\chapterreplacement}{\bigskip\noindent\printnote{Chapter.\\}}
 	\newcommand{\magreplacement}{\noindent\printnote{Magnificat. Collect.\\\\Benedicámus Dómino \emph{ for Sundays in Paschaltide, page \pageref{benedicamusdomino-easter}}.}}
+	\newcommand{\collectreplacement}{\bigskip}
 	\def\prepsalmfive{\greseteolcustos{manual}}
 	\printvespers[../TimeAfterEaster]{inc-SundayAtVespers-PaschalTime}
 }

@@ -2,16 +2,16 @@
 {
 \def\nogabcbreaks{T}
 \newcommand{\printsimpletone}{
-\vspace{0ex plus 0ex minus 1ex}
+\vspace{-1ex plus 1ex minus 1ex}
 \needspace{3\baselineskip}
 \begin{center}\textbf{Simple Tone.}\end{center}
-\vspace{0ex plus 0ex minus 1ex}
+\vspace{-1ex plus 1ex minus 1ex}
 }
 \newcommand{\printsolemntone}{
-%\vspace{0ex plus 0ex minus 0.5ex}
+\vspace{-1ex plus 1ex minus 1ex}
 \oldneedspace{3\baselineskip}
 \begin{center}\textbf{Solemn Tone.}\end{center}
-\vspace{0ex plus 0ex minus 1ex}
+\vspace{-1ex plus 1ex minus 1ex}
 }
 \newcommand{\afterant}{
 \ifx\note\undefined\else%
@@ -56,12 +56,18 @@
 \printgabc{Ant.}{5.}{A}{AlmaSimple}
 \printsolemntone{}
 \printgabc{Ant.}{5.}{A}{AlmaSolemn}
-\begin{quote}{Mother of Christ! hear thou thy people's cry
-Star of the deep, and portal of the sky!
-Mother of Him who thee from nothing made,
-Sinking we strive and call to thee for aid;
-Oh, by that joy which Gabriel brought to thee,
-Thou Virgin first and last, let us thy mercy see.}\end{quote}
+\begin{quote}{
+Beloved Mother of the Savior, and wide open Gate of heaven,
+Star of the Sea, bring help to the people that weakens and wavers.
+O thou, whom marvelling Nature saw give birth to thy Creator;
+Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show pity, to us sinners.%
+%Mother of Christ! hear thou thy people's cry
+%Star of the deep, and portal of the sky!
+%Mother of Him who thee from nothing made,
+%Sinking we strive and call to thee for aid;
+%Oh, by that joy which Gabriel brought to thee,
+%Thou Virgin first and last, let us thy mercy see.%
+}\end{quote}
 
 {
 \newcommand{\note}{During Advent:}
@@ -87,7 +93,7 @@ Thou Virgin first and last, let us thy mercy see.}\end{quote}
 
 % Ave Regina Cælorum
 \section{Ave Regina Cælorum}
-\printnote{From Compline of Feb \nth{2} (even if the Feast of the Purification be transferred) until Compline of Wednesday in Holy Week.}
+\printnote{From Compline of February \nth{2} (even if the Feast of the Purification be transferred) until Compline of Wednesday in Holy Week.}
 \printsimpletone{}
 \printgabc{Ant.}{6.}{A}{AveReginaSimple}
 \printsolemntone{}
@@ -139,6 +145,7 @@ Pray for us to God, alleluia.}\end{quote}
 
 
 % Salve Regina
+\oldneedspace{10\baselineskip}
 \section{Salve Regina}
 \printnote{From \nth{1} Vespers of the Feast of the Blessed Trinity to None on Saturday before the \nth{1} Sunday of Advent.}
 \printsimpletone{}
