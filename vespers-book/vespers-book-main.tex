@@ -134,7 +134,22 @@
 	\translation[]{\englishcommagantiphon}
 
 	\smallskip
-	\printvr[\greseteolcustos{manual}]{\commvrtex}{\commvtranslation}{\commrtranslation}
+	\ifx\commvlatin\undefined
+		\printvr[\greseteolcustos{manual}]{\commvrtex}{\commvtranslation}{\commrtranslation}
+	\else
+		% TODO: change this to columns!
+    \translation[\normalsize]{
+	    \Vbar{}~\commvlatin{}%
+	    \\
+	    \Vbar{}~\commvtranslation{}%
+
+	    \smallskip
+
+	    \Rbar{}~\commrlatin{}%
+	    \\
+	    \Rbar{}~\commrtranslation{}%
+	   }
+	\fi
 
 	\printcollect{\latincomcollect}{\englishcomcollect}
 }
@@ -225,7 +240,7 @@
 		\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
 	}\fi
 	%\medskip
-	\vspace{-\baselineskip}
+	%\vspace{-\baselineskip}
 	\needspace{3\baselineskip}
 	\ifx\chapterreplacement\undefined{
 		\ifx\chaptertext\undefined
