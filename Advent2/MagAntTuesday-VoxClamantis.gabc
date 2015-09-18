@@ -1,0 +1,26 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Vox clamantis;
+office-part: Magnificat Antiphon;
+mode: 5;
+occasion: 2nd Week of Advent Tuesday;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: At Magn.;
+annotation: Ant. 5;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)VOX(d) cla(e)mán(ee)tis(d') <v>\greheightstar</v>() in(f) de(h)sér(hhi)to :(h.) (;)
+Pa(i)rá(h_i)te(f') vi(e)am(f) Dó(e_f)mi(e)ni,(d.) (;)
+re(d_e)ctas(e_f) fá(d)ci(de)te(e'_) (,)
+sé(h)mi(e)tas(e') De(f)i(e) no(d.)stri.(d.) (::)

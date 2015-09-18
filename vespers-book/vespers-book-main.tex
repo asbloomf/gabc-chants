@@ -141,13 +141,13 @@
     \translation[\normalsize]{
 	    \Vbar{}~\commvlatin{}%
 	    \\
-	    \Vbar{}~\commvtranslation{}%
+	    \emph{\Vbar{}~\commvtranslation{}}%
 
 	    \smallskip
 
 	    \Rbar{}~\commrlatin{}%
 	    \\
-	    \Rbar{}~\commrtranslation{}%
+	    \emph{\Rbar{}~\commrtranslation{}}%
 	   }
 	\fi
 
@@ -305,11 +305,12 @@
 			\fi
 			}
 			\definevesperspropersalt
+    		\needspace{12\baselineskip}
 		    \begin{center}{\large Magnificat.}\end{center}
 	    	\vspace{-1ex}
 
 	    	\ifx\vesperspropersaltnote\undefined\else
-	    		\needspace{14\baselineskip}
+    		\needspace{10\baselineskip}
 				\printnote{\vesperspropersaltnote\\\vspace{-0.5\baselineskip}}
 			\fi
 			\let\anttranslation=\maganttranslation
@@ -328,7 +329,7 @@
 		\ifx\definevesperspropers\undefined\else
 			\definevesperspropers
 	    	\ifx\vesperspropersnote\undefined\else
-	    		\needspace{14\baselineskip}
+	    		\needspace{10\baselineskip}
 				\printnote{\vesperspropersnote\\\vspace{-0.5\baselineskip}}
 			\fi
 			\def\nomagtitle{T}
