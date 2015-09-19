@@ -13,8 +13,8 @@
 %	#1 number
 %	#2 translation
 {
-\needspace{5\baselineskip}
-\subtitle{December #1}
+\oldneedspace{5\baselineskip}
+\subtitle{December #1.}
 \printgabc{\small At Magn.}{\small \oldstylenums{Ant. 2. D}}{O}{December#1-MagAntiphon}
 \translation[]{#2}
 }
@@ -154,6 +154,7 @@
 {
 	\oldneedspace{5\baselineskip}
 	\subtitle{First Week of Advent.}
+	\vspace{-\baselineskip}
 	\subtitle{\small{Thursday.}}
 	{
 	\def\noeuouae{T}
@@ -163,6 +164,7 @@
 	\medbreak
 
 	\oldneedspace{5\baselineskip}
+	\vspace{-\baselineskip}
 	\subtitle{\small{Friday.}}
 	{
 	\def\noeuouae{T}
@@ -172,6 +174,8 @@
 	\medbreak
 
 	\oldneedspace{5\baselineskip}
+	\subtitle{Second Week of Advent.}
+	\vspace{-\baselineskip}
 	\subtitle{\small{Saturday.}}
 	{
 	\def\noeuouae{T}
@@ -181,7 +185,17 @@
 	\medbreak
 
 	\oldneedspace{5\baselineskip}
-	\subtitle{Second Week of Advent.}
+	\vspace{-\baselineskip}
+	\subtitle{\small{Sunday.}}
+	{
+	\def\noeuouae{T}
+	\printgabc{At Magn.}{\oldstylenums{Ant. 8. G}}{T}{../Advent2/MagnificatAntiphon-noEuouae}
+	}
+	\translation[]{Art Thou He that art to come, or look we for another? Relate to John what you have seen: The blind recover their sight, the dead rise again, the poor have the Gospel preached to them, alleluia.}
+	\medbreak
+
+	\oldneedspace{5\baselineskip}
+	\vspace{-\baselineskip}
 	\subtitle{\small{Monday.}}
 	{
 	\def\noeuouae{T}
@@ -191,6 +205,7 @@
 	\medbreak
 
 	\oldneedspace{5\baselineskip}
+	\vspace{-\baselineskip}
 	\subtitle{\small{Tuesday.}}
 	{
 	\def\noeuouae{T}
@@ -200,6 +215,7 @@
 	\medbreak
 
 	\oldneedspace{5\baselineskip}
+	\vspace{-\baselineskip}
 	\subtitle{\small{Wednesday.}}
 	{
 	\def\noeuouae{T}
@@ -209,6 +225,7 @@
 	\medbreak
 
 	\oldneedspace{5\baselineskip}
+	\vspace{-\baselineskip}
 	\subtitle{\small{Thursday.}}
 	{
 	\def\noeuouae{T}
@@ -216,17 +233,41 @@
 	}
 	\translation[]{He that shall come after me is preferred before me; whose shoes I am not worthy to loose.}
 	\medbreak
+
+		% TODO: change this to columns!
+    \translation[\normalsize]{
+	    \Vbar{}~Roráte cæli désuper, et nubes pluant \textbf{ju}stum.%
+	    \\
+	    \emph{\Vbar{}~Ye heavens, drop down dew from above, and let the clouds rain down the Just One.}%
+
+	    \smallskip
+
+	    \Rbar{}~Aperiátur terra, et gérminet Salva\textbf{tó}rem.%
+	    \\
+	    \emph{\Rbar{}~Let the earth open and bud forth the Saviour.}%
+	   }
+
+ 	\oldneedspace{3\baselineskip}
+	\begin{center}{\large Collect.}\end{center}
+	\vspace{-\baselineskip}
+	\def\printcollectheading{F}
+	{
+	\begin{center}{First Week of Advent.}\end{center}
+	\def\gabcfolder{../Advent1}
+	\input{\gabcfolder/inc-Advent1}
+	\printcollect{\collect}{\collecttranslation}
+	}
+	{
+	\medskip
+	\begin{center}{Second Week of Advent.}\end{center}
+	\def\gabcfolder{../Advent2}
+	\input{\gabcfolder/CommemorationAdvent2}
+	\printcollect{\latincomcollect}{\englishcomcollect}
+	}
+
+	\bigskip
+	\benedicamusdomino{}
 }
-
-
-{
-\def\vrlinebreak{T}
-\printcommemoration[../Advent2]{CommemorationAdvent2}
-
-\bigskip
-\benedicamusdomino{}
-}
-
 
 
 % 3rd Sunday of Advent
@@ -252,6 +293,8 @@
 		%print o sapientia
 	%\printoant{17}{O Wisdom, which camest out of the mouth of the Most High, reaching from end to end and ordering all things mightily and sweetly: come and teach us the way of prudence.}
 	\renewcommand{\anttranslation}{O Wisdom, which camest out of the mouth of the Most High, reaching from end to end and ordering all things mightily and sweetly: come and teach us the way of prudence.}
+	\oldneedspace{5\baselineskip}
+	\subtitle{December 17.}
 	\label{osapientia}
 	\def\preverses{\greseteolcustos{manual}}
 	\printmag{2D}{O}{December17-MagAntiphon}
@@ -287,6 +330,7 @@
 	\printoant{23}{O Emmanuel, our King and Lawgiver, the desire of the nations and the Saviour thereof, come to save us, O Lord our God.}
 
 	\bigskip
+	\pagebreak
 	\vfil
 	{\greseteolcustos{manual}
 	\begin{magnificat}{\magtex}
