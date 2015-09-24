@@ -249,7 +249,6 @@
 
 		    \vspace{-0.25\baselineskip plus 0.125\baselineskip}
 			\ifx\definevesperspropersalt\undefined\else
-			\medskip
 			{
 				\ifx\vesperspropersaltnote\undefined\else
 					\printnote{\vesperspropersaltnote}
@@ -257,6 +256,7 @@
 				\definevesperspropersalt
 				\printchapter{\chaptertext}{\chaptertranslation}
 			}
+			\medskip
 			\fi
 			\ifx\definevesperspropers\undefined\else
 			{
@@ -361,22 +361,22 @@
 			\begin{center}{\large Collect.}\end{center}
 
 			\vspace{-0.5\baselineskip plus 0.25\baselineskip}
+			\ifx\definevesperspropersalt\undefined\else
+			{
+				\ifx\vesperspropersaltnote\undefined\else
+					\printnote{\vesperspropersaltnote}
+				\fi
+				\definevesperspropersalt
+				\printcollect{\collect}{\collecttranslation}
+			}
+			\medskip
+			\fi
 			\ifx\definevesperspropers\undefined\else
 			{
 				\ifx\vesperspropersnote\undefined\else
 					\printnote{\vesperspropersnote}
 				\fi
 				\definevesperspropers
-				\printcollect{\collect}{\collecttranslation}
-			}
-			\fi
-			\ifx\definevesperspropersalt\undefined\else
-			\medskip
-			{
-				\ifx\vesperspropersaltnote\undefined\else
-					\printnote{\vesperspropersaltnote}
-				\fi
-				\definevesperspropersalt
 				\printcollect{\collect}{\collecttranslation}
 			}
 			\fi

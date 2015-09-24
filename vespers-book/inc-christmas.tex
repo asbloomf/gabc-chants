@@ -29,11 +29,15 @@
 {
 \section{Nativity of our Lord -- II Vespers}
 \subtitle{December 25, \nth{1} Class}
+\vspace{-1.5\baselineskip}
+\subtitle{\&}
+\vspace{-1.5\baselineskip}
+\section{Sunday within the Octave}
 
-\def\definevesperspropers{\input{\gabcfolder/inc-Christmas-Vespers2}}
-\def\definevesperspropersalt{\input{\gabcfolder/inc-SundayWithinOctaveOfChristmas-Vespers2}}
-\def\vesperspropersnote{At II Vespers of Christmas:}
-\def\vesperspropersaltnote{At II Vespers of the Sunday within the Octave of Christmas:}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-Christmas-Vespers2}}
+\def\definevesperspropers{\input{\gabcfolder/inc-SundayWithinOctaveOfChristmas-Vespers2}}
+\def\vesperspropersaltnote{At II Vespers of Christmas:}
+\def\vesperspropersnote{At II Vespers of the Sunday within the Octave of Christmas:}
 \def\premag{\def\noeuouae{T}}
 \def\premagverses{\greseteolcustos{manual}}
 \def\printfullhymn{
@@ -46,16 +50,16 @@
 	{
 		\def\vrlinebreak{T}
 		%\label{vr-rorate}
-		\printnote{\vesperspropersnote}
-		\definevesperspropers
+		\printnote{\vesperspropersaltnote}
+		\definevesperspropersalt
 		\printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
 	}
 	\bigskip
 	{
 		\def\vrlinebreak{T}
 		%\label{vr-rorate}
-		\printnote{\vesperspropersaltnote}
-		\definevesperspropersalt
+		\printnote{\vesperspropersnote}
+		\definevesperspropers
 		\printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
 	}
 }
