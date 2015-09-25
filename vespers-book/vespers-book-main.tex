@@ -203,6 +203,7 @@
 			\ifx\definevesperspropersalt\undefined\else{
 				\definevesperspropersalt
 				\ifx\vesperspropersaltnote\undefined\else
+					\oldneedspace{3\baselineskip}
 					\noindent\printnote{\vesperspropersaltnote}
 				\fi
 				\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
@@ -210,6 +211,7 @@
 			\ifx\definevesperspropers\undefined\else{
 				\definevesperspropers
 				\ifx\vesperspropersnote\undefined\else
+					\oldneedspace{3\baselineskip}
 					\noindent\printnote{\vesperspropersnote}
 				\fi
 				\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
@@ -220,6 +222,7 @@
 				\ifx\vesperspropersaltnote\undefined\else
 					\def\prepsalmtitle{
 						\smallskip
+						\oldneedspace{3\baselineskip}
 						\noindent\printnote{\vesperspropersaltnote}\vspace{-0.5\baselineskip}
 
 					}
@@ -230,6 +233,7 @@
 			\ifx\definevesperspropers\undefined\else{
 				\definevesperspropers
 				\ifx\vesperspropersnote\undefined\else
+					\oldneedspace{5\baselineskip}
 					\noindent\printnote{\vesperspropersnote}\vspace{-0.5\baselineskip}
 				\fi
 				\def\prepsalmtitle{\def\onlyoneant{F}}
