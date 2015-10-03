@@ -72,19 +72,22 @@
 \printcommemnote{}
 }
 
+\medskip
+\hrule
 {
 \label{stjoseph-worker-commem}
+\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43\linewidth}]{2}}
 \def\vrlinebreak{T}
-%\printcommemoration[../May1-StJosephWorker]{commemorationStJosephWorker-Vespers1}
+\printcommemoration[../May1-StJosephWorker]{commemorationStJosephWorker-Vespers1}
 
 \bigskip
 \benedicamusdomino{}
 }
 
-{
-    TODO Feast of St Joseph the worker could have commem of 2nd through 5th Sunday after Easter
-    probably just give them a page number and say to use the simple tone for the versicle and response
-}
+%{
+%    TODO If feast of St Joseph the worker falls from 2nd through 5th Sunday after Easter, it outranks the Sunday and the Sunday is commemorated
+%   Only Low Sunday and the Ascension itself are likely to outrank it
+%}
 
 {
 \section{\nth{2} Sunday after Easter}
@@ -95,6 +98,7 @@
 {
 \section{\nth{3} Sunday after Easter}
 \printcommonvespers{}
+\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster3}
 \benedicamusdomino{}
 }
@@ -118,8 +122,10 @@
 \subtitle{\nth{1} Class}
 TODO
 
-TODO could be commem of 1st vespers of St Joseph the worker if today is April 30 or May 1
+Also need to do St Joseph the Worker
 
+\def\commemorations{If today is April 30 or May 1, the First Vespers of St Joseph the Worker is commemorated as on page \pageref{stjoseph-worker-commem}.}
+\printcommemnote{}
 }
 
 {
