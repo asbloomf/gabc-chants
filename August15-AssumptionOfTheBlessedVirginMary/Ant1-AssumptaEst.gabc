@@ -3,7 +3,7 @@
 
 % The first part of the score is called the header, you can input some useful informations here:
 
-name: Assúmpta est María in caélum;
+name: Assúmpta est María in cælum;
 office-part: 1 Antiphon;
 mode: 7a;
 occasion: Assumption;
@@ -20,6 +20,6 @@ annotation: 7. a;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c3)AS(e)súm(e')pta(e) est(g') Ma(h)rí(i')a(j) in(h) caé(ii)lum :(g.) <v>\greheightstar</v>(;) gáu(hg)dent(e_f) An(h')ge(h)li,(g.) (;) lau(g_h)dán(i_j)tes(i) be(hg)ne(f)dí(g')cunt(f) Dó(e)mi(e)num.(e.) (::)
+(c3)AS(e)súm(e')pta(e) est(g') Ma(h)rí(i')a(j) in(h) cæ(ii)lum :(g.) <v>\greheightstar</v>(;) gáu(hg)dent(e_f) An(h')ge(h)li,(g.) (;) lau(g_h)dán(i_j)tes(i) be(hg)ne(f)dí(g')cunt(f) Dó(e)mi(e)num.(e.) (::)
 
 E(i) u(i) o(j) u(i) a(h) e.(gf..) (::)
