@@ -18,7 +18,7 @@ initial-style:0;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c4)()() 1. D{i}(g)xit(hj) Dó(j)mi(j)nus(j) <b>Dó</b>(k)mi(jr)no(j jr[ev: ][ocba:1;6mm]) <b>me</b>(ih)o :(j.) <v>\greheightstar</v>(:) Se(j)de(j) a(j) dex(j)<i>tris</i>(h) <b>me</b>(j jr)is :(ih..) (::)
+(c4)()() 1. D{i}(g)xit(hj) Dó(j)mi(j)nus(j) <b>Dó</b>(k)mi(jr)no(j jr[ev: ][ocba:1{]) <b>me</b>(ih[ocba:1}])o :(j.) <v>\greheightstar</v>(:) Se(j)de(j) a(j) dex(j)<i>tris</i>(h) <b>me</b>(j jr)is :(ih..) (::)
 
 %E(j) u(j) o(j) u(h) a(j) e.(ih..) (::)
 

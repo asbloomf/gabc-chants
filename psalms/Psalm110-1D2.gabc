@@ -18,7 +18,7 @@ initial-style:0;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c4)()() 1. Con(f)fi(gh)té(h)bor(h) ti(h)bi,(h) Dó(h)mi(h)ne,(h) in(h) to(h)to(h) <b>cor</b>(ixi hr)de(h) <b>me</b>(g hr)o :(h.) <v>\greheightstar</v>(:) in(h) con(h)sí(h)li(h)o(h) ju(h)stó(h)rum,(h) et(h) con(h)gre(h)<i>ga</i>(g)<i>ti</i>(f gr[ev: ][ocba:1;7.3mm])<b>ó</b>(gf)ne.(d.) (::)
+(c4)()() 1. Con(f)fi(gh)té(h)bor(h) ti(h)bi,(h) Dó(h)mi(h)ne,(h) in(h) to(h)to(h) <b>cor</b>(ixi hr)de(h) <b>me</b>(g hr)o :(h.) <v>\greheightstar</v>(:) in(h) con(h)sí(h)li(h)o(h) ju(h)stó(h)rum,(h) et(h) con(h)gre(h)<i>ga</i>(g)<i>ti</i>(f gr[ev: ][ocba:1{])<b>ó</b>(gf[ocba:1}])ne.(d.) (::)
 <i>Flex :</i>()  su(h)ó(h)rum, †(g. h h h  ::)
 
 %E(h) u(h) o(g) u(f) a(gf) e.(d.) (::)
