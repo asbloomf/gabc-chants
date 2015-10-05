@@ -20,6 +20,10 @@
 	\checkoddpage\ifoddpage\oldneedspace{#1}\else\fi
 }
 \let\gredagger=\dag
+\newcommand*\cleartoleftpage{%
+  \clearpage
+  \ifodd\value{page}\hbox{}\newpage\fi
+}
 
 %\usepackage{hyperref}
 \newcommand{\phantomsection}{}
@@ -97,7 +101,7 @@
 	\ifx\undefined\begincollectcols\def\begincollectcols{\begin{parcolumns}[rulebetween]{2}}\fi
 	\ifx\printcollectheading\undefined\def\printcollectheading{T}\fi
 	\if\printcollectheading T
-	\needspace{3\baselineskip}
+	\oldneedspace{3\baselineskip}
 	\begin{center}{\large Collect.}\end{center}
 	\vspace{-0.4\baselineskip}
 	\fi
@@ -121,6 +125,32 @@
 \ifnum#1=131
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
 \fi
+\ifnum#1=147
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.465\linewidth}]{2}}
+\fi
+}
+\newcommand{\printvrcommem}{
+		{\normalsize
+		\begin{parcolumns}[rulebetween]{2}
+		\colchunk{%
+			\selectlanguage{latin}%
+	    \Vbar{}~\commvlatin{}%
+    }
+		\colchunk{%
+			\selectlanguage{american}%
+	    \Vbar{}~\commvtranslation{}%
+		}
+		\colplacechunks
+    \colchunk{
+			\selectlanguage{latin}%
+	    \Rbar{}~\commrlatin{}%
+		}
+		\colchunk{%
+			\selectlanguage{american}%
+	    \Rbar{}~\commrtranslation{}%
+		}
+		\end{parcolumns}
+		}
 }
 \newcommand{\printcommemoration}[2][.]{
 	\def\gabcfolder{#1}
@@ -137,18 +167,9 @@
 	\ifx\commvlatin\undefined
 		\printvr[\greseteolcustos{manual}]{\commvrtex}{\commvtranslation}{\commrtranslation}
 	\else
-		% TODO: change this to columns!
-    \translation[\normalsize]{
-	    \Vbar{}~\commvlatin{}%
-	    \\
-	    \emph{\Vbar{}~\commvtranslation{}}%
-
-	    \smallskip
-
-	    \Rbar{}~\commrlatin{}%
-	    \\
-	    \emph{\Rbar{}~\commrtranslation{}}%
-	   }
+	{
+		\printvrcommem{}
+	}
 	\fi
 
 	\printcollect{\latincomcollect}{\englishcomcollect}
@@ -274,6 +295,7 @@
 			\fi
 		\else
 			\vspace{-\baselineskip}
+			\oldneedspace{3\baselineskip}
 			\printchapter{\chaptertext}{\chaptertranslation}
 		\fi
 	}
@@ -386,7 +408,8 @@
 			}
 			\fi
 		\else
-			\oldneedspace{5\baselineskip}
+			\oldneedspace{3\baselineskip}
+			\needspace{5\baselineskip}
 			\printcollect{\collect}{\collecttranslation}
 		\fi
 	}
@@ -455,27 +478,27 @@ Magnificat, and Collect given for the respective Sunday or Feast.}
 
 \def\dontrepeatantiphon{T}
 \clearpage
-%\input{inc-vespers-sunday}
+\input{inc-vespers-sunday}
 
-%\input{inc-marian-anthems}
+\input{inc-marian-anthems}
 
-%\input{inc-advent}
+\input{inc-advent}
 
 % christmas through Holy Family
-%\input{inc-christmas}
+\input{inc-christmas}
 
-%\input{inc-timeafterepiphany}
+\input{inc-timeafterepiphany}
 
 %from shrovetide through passiontide
-%\input{inc-lent}
+\input{inc-lent}
 
-%\input{inc-easter}
+\input{inc-easter} % need to add St Joseph the Worker and the Ascension
 
-%\input{inc-pentecost}
+\input{inc-pentecost}
 
-%\chapter{Appendix}
-%\input{inc-benediction}
-%\input{inc-grassi}
+\chapter{Appendix}
+\input{inc-benediction}
+\input{inc-grassi}
 
 \end{document}
 

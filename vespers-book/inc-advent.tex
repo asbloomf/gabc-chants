@@ -17,6 +17,8 @@
 \subtitle{December #1.}
 \printgabc{\small At Magn.}{\small \oldstylenums{Ant. 2. D}}{O}{December#1-MagAntiphon}
 \translation[]{#2}
+\medskip
+\emph{Magnificat is found on page \pageref{oantiphon-magnificat}.}
 }
 }
 
@@ -121,10 +123,10 @@
 \subtitle{\nth{1} Class, December 8}
 
 \def\premagverses{\greseteolcustos{manual}}
-\def\definevesperspropers{\def\noeuouae{T}\input{\gabcfolder/inc-ImmaculateConception-1Vespers}}
-\def\definevesperspropersalt{\def\noeuouae{T}\input{\gabcfolder/inc-ImmaculateConception-2Vespers}}
-\def\vesperspropersnote{At I Vespers:}
-\def\vesperspropersaltnote{At II Vespers:}
+\def\definevesperspropersalt{\def\noeuouae{T}\input{\gabcfolder/inc-ImmaculateConception-1Vespers}}
+\def\definevesperspropers{\def\noeuouae{T}\input{\gabcfolder/inc-ImmaculateConception-2Vespers}}
+\def\vesperspropersaltnote{At I Vespers:}
+\def\vesperspropersnote{At II Vespers:}
 \def\printfullhymn{
 	\label{hymn-avemarisstella}
 	{
@@ -230,19 +232,13 @@
 	}
 	\translation[]{He that shall come after me is preferred before me; whose shoes I am not worthy to loose.}
 	\medbreak
-
-		% TODO: change this to columns!
-    \translation[\normalsize]{
-	    \Vbar{}~Roráte cæli désuper, et nubes pluant \textbf{ju}stum.%
-	    \\
-	    \emph{\Vbar{}~Ye heavens, drop down dew from above, and let the clouds rain down the Just One.}%
-
-	    \smallskip
-
-	    \Rbar{}~Aperiátur terra, et gérminet Salva\textbf{tó}rem.%
-	    \\
-	    \emph{\Rbar{}~Let the earth open and bud forth the Saviour.}%
-	   }
+	{
+	    \newcommand{\commvlatin}{Roráte cæli désuper, et nubes pluant \textbf{ju}stum.}
+	    \newcommand{\commrlatin}{Aperiátur terra, et gérminet Salva\textbf{tó}rem.}
+	    \newcommand{\commvtranslation}{Ye heavens, drop down dew from above, and let the clouds rain down the Just One.}
+	    \newcommand{\commrtranslation}{Let the earth open and bud forth the Saviour.}
+	\printvrcommem{}
+	}
 
  	\oldneedspace{3\baselineskip}
 	\begin{center}{\large Collect.}\end{center}
@@ -308,6 +304,7 @@
 \section{Fourth Sunday of Advent}
 \subtitle{\nth{1} Class}
 \printnote{If today is December 24, First Vespers of Christmas are used on page \pageref{christmas}.}
+\medskip
 
 \def\preanttwo{\def\noeuouae{T}}
 \def\prepsalmfive{\greseteolcustos{manual}}
@@ -330,6 +327,7 @@
 	\pagebreak
 	\vfil
 	{\greseteolcustos{manual}
+	\label{oantiphon-magnificat}
 	\begin{magnificat}{\magtex}
 	\magverses
 	\end{magnificat}
