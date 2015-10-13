@@ -16,14 +16,7 @@ annotation: 8. c;
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
 %%
-(c4)E(j)go(ji/%jkj'_
-[ev:%
-\greendofelement{0}{0}%
-\greglyph{\char 15366}{j}{j}{0}{}{%
-\grehepisemusbottom{i}{0}{0}%
-\grevepisemus{l}{0}%
-}%
-]) <v>\greheightstar</v>(,) qui(j) ló(j)quor(i') ju(h)stí(j')ti(i)am,(g.) (;)
+(c4)E(j)go(ji/jkj'_) <v>\greheightstar</v>(,) qui(j) ló(j)quor(i') ju(h)stí(j')ti(i)am,(g.) (;)
 et(h) pro(f')pu(h)gná(j)tor(h) sum(i_j) ad(h) sal(h)ván(g.)dum.(g.) (::)
 
 E(j) u(j) o(h) u(j) a(k) e.(j.) (::)

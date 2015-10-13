@@ -203,13 +203,7 @@
 	\oldneedspace{3\baselineskip}
 	\printcollect{\latincollect}{\englishcollect}
 }
-\newcommand{\printvespers}[2][.]{
-	\grechangestaffsize{15}
-	\def\gabcfolder{#1}
-	\input{\gabcfolder/#2}
-
-	\deusinadjutorium{}
-	\medskip
+\newcommand{\printpsalms}{
 	\printpsalm{1}{\psalmonenum}{\psalmonetone\psalmoneend}{\antonetex}{\antoneinitial}
 	\medskip
 	\printpsalm{2}{\psalmtwonum}{\psalmtwotone\psalmtwoend}{\anttwotex}{\anttwoinitial}
@@ -265,6 +259,38 @@
 	}\else{
 		\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
 	}\fi
+}
+\newcommand{\printvespers}[2][.]{
+	\grechangestaffsize{15}
+	\def\gabcfolder{#1}
+	\input{\gabcfolder/#2}
+
+	\deusinadjutorium{}
+	\medskip
+	\ifx\psalmonenum\undefined{
+		\ifx\definevesperspropersalt\undefined\else{
+			\definevesperspropersalt
+			\ifx\prevesperspsalmsalt\undefined\else\prevesperspsalmsalt{}\fi
+			\ifx\vesperspropersaltnote\undefined\else
+				\oldneedspace{3\baselineskip}
+				\noindent\printnote{\vesperspropersaltnote}
+			\fi
+			\ifx\vesperspsalmsaltlabel\undefined\else\vesperspsalmsaltlabel{}\fi
+			\printpsalms{}
+		}\fi
+		\ifx\definevesperspropers\undefined\else{
+			\definevesperspropers
+			\ifx\prevesperspsalms\undefined\else\prevesperspsalms{}\fi
+			\ifx\vesperspropersnote\undefined\else
+				\oldneedspace{3\baselineskip}
+				\noindent\printnote{\vesperspropersnote}
+			\fi
+			\ifx\vesperspsalmslabel\undefined\else\vesperspsalmslabel{}\fi
+			\printpsalms{}
+		}\fi
+	}\else
+		\printpsalms{}
+	\fi
 	%\medskip
 	%\vspace{-\baselineskip}
 	\needspace{3\baselineskip}
@@ -296,6 +322,7 @@
 		\else
 			\vspace{-\baselineskip}
 			\oldneedspace{3\baselineskip}
+			\ifx\prechapter\undefined\else\prechapter\fi
 			\printchapter{\chaptertext}{\chaptertranslation}
 		\fi
 	}
@@ -333,13 +360,13 @@
 			\fi
 			}
 			\definevesperspropersalt
-    		\needspace{12\baselineskip}
     		\hrule
+    		\needspace{5\baselineskip}
 		    \begin{center}{\large Magnificat.}\end{center}
 	    	\vspace{-1ex}
 
 	    	\ifx\vesperspropersaltnote\undefined\else
-    		\needspace{10\baselineskip}
+    		\oldneedspace{6\baselineskip}
 				\printnote{\vesperspropersaltnote\\\vspace{-0.5\baselineskip}}
 			\fi
 			\let\anttranslation=\maganttranslation
@@ -360,7 +387,8 @@
 		\ifx\definevesperspropers\undefined\else
 			\definevesperspropers
 	    	\ifx\vesperspropersnote\undefined\else
-	    		\needspace{10\baselineskip}
+	    		\needspace{6\baselineskip}
+	    		\oldneedspace{3\baselineskip}
 				\printnote{\vesperspropersnote\\\vspace{-0.5\baselineskip}}
 			\fi
 			\def\nomagtitle{T}
@@ -495,6 +523,7 @@ Magnificat, and Collect given for the respective Sunday or Feast.}
 \input{inc-easter} % need to add St Joseph the Worker and the Ascension
 
 \input{inc-pentecost}
+\input{inc-proper-of-saints}
 
 \chapter{Appendix}
 \input{inc-benediction}
