@@ -13,6 +13,7 @@
 \usepackage{letltxmacro}
 \usepackage{changepage} % gives us \ifoddpage use [strict]
 \usepackage[super]{nth}
+\usepackage{xparse}
 \LetLtxMacro{\oldnth}{\nth}
 \renewcommand{\nth}[1]{\addfontfeature{Numbers=Lining}\oldnth{#1}}
 \LetLtxMacro{\oldneedspace}{\needspace}
@@ -174,6 +175,41 @@
 
 	\printcollect{\latincomcollect}{\englishcomcollect}
 }
+\DeclareDocumentCommand{\printbothversions}{ O{\undefined} O{\undefined} m m }{
+% #1 & #2 are the label
+% #3 is what to check for
+% #4 is the body of what to print
+	\ifx#3\undefined
+		\ifx\definevesperspropersalt\undefined\else
+	  {
+			\ifx\vesperspropersaltnote\undefined\else
+		    \oldneedspace{3\baselineskip}
+				\printnote{\vesperspropersaltnote}
+			\fi
+			\definevesperspropersalt
+			\ifx#2\undefined\else\label{#2}\fi
+	  	#4
+		}
+		\medskip
+		\fi
+		\ifx\definevesperspropers\undefined\else
+	  {
+			\ifx\vesperspropersnote\undefined\else
+	    	\oldneedspace{3\baselineskip}
+				\printnote{\vesperspropersnote}
+			\fi
+			\definevesperspropers
+			\ifx#1\undefined\else\label{#1}\fi
+	  	#4
+		}
+		\fi
+	\else
+  {
+		\ifx#1\undefined\else\label{#1}\fi
+  	#4
+	}
+	\fi
+}
 \newcommand{\printvespersmag}[2][.]{
 	\grechangestaffsize{15}
 	\def\gabcfolder{#1}
@@ -185,10 +221,19 @@
 		\smallskip
 	}\fi
 
-	\ifx\printfullhymn\undefined
-		\printhymnnote
+	\ifx\printhymnnote\undefined
+		\ifx\printfullhymn\undefined
+			%print the hymn
+			\printbothversions[\hymnlabel][\hymnaltlabel]{\hymntex}{\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}}
+			\printbothversions[\vrlabel][\vraltlabel]{\vrtex}{%
+		    \ifx\vrlinebreak\undefined\def\vrlinebreak{T}\fi
+		    \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
+			}
+		\else
+			\printfullhymn
+		\fi
 	\else
-		\printfullhymn
+		\printhymnnote
 	\fi
 
 	{
@@ -331,15 +376,23 @@
 	\fi
 
 	\medskip
-	\ifx\printfullhymn\undefined
-		\ifx\printhymnnote\undefined\else
-			\printhymnnote
-			\medskip
+	\ifx\printhymnnote\undefined
+		\ifx\printfullhymn\undefined
+			%print the hymn
+			\printbothversions[\hymnlabel][\hymnaltlabel]{\hymntex}{\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}}
+			\printbothversions[\vrlabel][\vraltlabel]{\vrtex}{%
+		    \ifx\vrlinebreak\undefined\def\vrlinebreak{T}\fi
+		    \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
+			}
+		\else
+			\printfullhymn
 		\fi
 	\else
-		\printfullhymn
-		\medskip
+		\printhymnnote
 	\fi
+
+	\medskip
+
 	\ifx\magreplacement\undefined
 	{
 		\ifx\definevesperspropersalt\undefined\else{
