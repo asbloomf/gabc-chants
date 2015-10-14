@@ -398,9 +398,10 @@
 %grefactor is: \the\grefactor
 %Annot height is: \the\annotheight
 \setlength{\alsinitialsize}{\grefactor pt * \real{3.7} - 30pt + \annotheight}% \annotheight * \real{1.6}} % + \Etextheight - \annotheight}
-\def\greinitialformat##1{%
-{\fontsize{\alsinitialsize}{\alsinitialsize}\selectfont ##1}%
-}
+%\def\greinitialformat##1{%
+%{\fontsize{\alsinitialsize}{\alsinitialsize}\selectfont ##1}%
+%}
+\grechangestyle{initial}{\fontsize{\alsinitialsize}{\alsinitialsize}\selectfont}%
 %
 \settowidth{\initwidth}{\greinitialformat{#1}}
 \settowidth{\spacewidth}{\greinitialformat{#1}\hspace{1pc}}
