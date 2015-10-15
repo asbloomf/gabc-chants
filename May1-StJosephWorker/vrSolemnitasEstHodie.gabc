@@ -7,6 +7,8 @@ office-part: versicle and response;
 transcriber: Albert Bloomfield;
 style: modern;
 initial-style:0;
+def-m1:\ifx\vrlinebreak\undefined\else;
+def-m2:\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -14,5 +16,5 @@ initial-style:0;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c3)<sp>V/</sp>~So(h)lém(h)ni(h)tas(h) est(h) hó(h)di(h)e(h) san(h)cti(h) Jo(hi)seph,(h'_) (,) al(h)le(fe)lú(f_h)ia.(hiH'Ghih.ghG'FE'fggf.) (::)
+(c3)<sp>V/</sp>~So(h)lém(h)ni(h)tas(h) est(h) hó(h)di(h)e(h) san(h)cti(h) Jo(hi)seph,(h'_) (,) al(h)le(fe)lú(f_h)ia.(hiH'Ghih.ghG'FE'fggf.) (::[em1]Z[em2])
 <sp>R/</sp>~Qui(h) má(h)ni(h)bus(h) su(h)is(h) Fí(h)li(h)o(h) De(h)i(h) mi(h)ni(h)strá(hi)vit,(h'_) (,) al(h)le(fe)lú(f_h)ia.(hiH'Ghih.ghG'FE'fggf.) (::)

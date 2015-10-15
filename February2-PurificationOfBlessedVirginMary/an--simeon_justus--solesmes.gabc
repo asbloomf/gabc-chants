@@ -3,6 +3,12 @@ office-part:Antiphona;
 mode:3;
 book:The Liber Usualis, 1961, p. 1366;
 transcriber:Andrew Hinkley;
+def-m1:}{\greseteolcustos{manual}{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:}\fi;
 %%
-(c4) SI(g)me(g)on(i_j) ju(h_j)stus(i') <v>\greheightstar</v>(,) et(h) ti(h)mo(g)rá(h_i)tus,(i.) (;) ex(g)spe(g)ctá(i_j)bat(h') re(h)dem(f)pti(h)ó(i')nem(h) Is(g_h)ra(g)el,(e.) (;) et(d_e) Spí(g)ri(h)tus(g) San(gf)ctus(d') e(e)rat(g') in(g) e(e.)o.(e.) (::)
-E(j) u(j) o(j) u(h) a(j) e.(i.) (::)
+(c4) SI(g)me(g)on(i_j) ju(h_j)stus(i') <v>\greheightstar</v>(,) et(h) ti(h)mo(g)rá(h_i)tus,(i.) (;)
+ex(g)spe(g)ctá(i_j)bat(h') re(h)dem(f)pti(h)ó(i')nem(h) Is(g_h)ra(g)el,(e.) (;)
+et(d_e) Spí(g)ri(h)tus(g) San(gf)ctus(d') e(e)rat(g') in(g) e(e.[em1])o.(e.) (::[em2]z[em3])
+E(j) u(j) o(j) u(h) a(j) e.(i.) (::[em4])
