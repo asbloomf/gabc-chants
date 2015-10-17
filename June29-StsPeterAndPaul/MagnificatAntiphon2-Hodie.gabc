@@ -13,6 +13,10 @@ transcription-date: 2011;
 style: modern;
 annotation: At Magn.;
 annotation: Ant. 1. D;
+def-m1:}{\greseteolcustos{manual}{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:}\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -20,8 +24,13 @@ annotation: Ant. 1. D;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c4)HO(c)di(cd)e(d.) <v>\greheightstar</v>(,) Sí(d!ewf)mon(fe) Pé(de)trus(ddc.) (,) a(f)scén(ghg)dit(ixhih) crú(fg)cis(h) pa(f')tí(g)bu(fe)lum,(dc) al(d_0g)le(efe)lú(d.)ia :(d.) (:)
-hó(ixdh'!iv)di(h)e(h'_) (,) Cla(h)vi(h')cu(g)lá(h')ri(g)us(f) ré(gh)gni,(ixhiHG.) (;) gáu(cd~)dens(d') mi(f)grá(f)vit(fe) ad(de) Chrí(dd)stum :(c.) (:)
-hó(c)di(cd)e(d'_) (,) Páu(f)lus(fe) A(d)pó(de)sto(dc)lus,(c.) (,) lú(f)men(g') ór(e)bis(fe) tér(d)ræ,(d.) (;) in(ixdh'!i)cli(hg)ná(h)to(j) cá(ji)pi(gh)te,(h.) (;) pro(fg) Chrí(h)sti(gf) nó(g)mi(fe)ne(dc__) (;) mar(cd)tý(f)ri(gf)o(f') co(f!g'h)ro(g')ná(f)tus(fe) est,(dc) al(d_g)le(efe)lú(d.)ia.(d.) (::)
+(c4)HO(c)di(cd)e(d.) <v>\greheightstar</v>(,) Sí(d!ewf)mon(fe) Pé(de)trus(ddc.) (,)
+a(f)scén(ghg)dit(ixhih) crú(fg)cis(h) pa(f')tí(g)bu(fe)lum,(dc) al(d_0g)le(efe)lú(d.)ia :(d.) (:)
+hó(ixdh'!iv)di(h)e(h'_) (,) Cla(h)vi(h')cu(g)lá(h')ri(g)us(f) ré(gh)gni,(ixhiHG.) (;)
+gáu(cd~)dens(d') mi(f)grá(f)vit(fe) ad(de) Chrí(dd)stum :(c.) (:)
+hó(c)di(cd)e(d'_) (,) Páu(f)lus(fe) A(d)pó(de)sto(dc)lus,(c.) (,) lú(f)men(g') ór(e)bis(fe) ter(d.)ræ,(d.) (;)
+in(ixdh'!i)cli(hg)ná(h)to(j) cá(ji)pi(gh)te,(h.) (;)
+pro(fg) Chrí(h)sti(gf) nó(g)mi(fe)ne,(dc__) (;)
+mar(cd)tý(f)ri(gf)o(f') co(f!g'h)ro(g')ná(f)tus(fe) est,(dc) al(d_g)le(efe)lú(d.[em1])ia.(d.) (::[em2]z[em3])
 
-E(h) u(h) o(g) u(f) a(gh) e.(gvFED.) (::)
+E(h) u(h) o(g) u(f) a(gh) e.(gvFED.) (::[em4])

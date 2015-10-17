@@ -13,12 +13,17 @@ transcription-date: 2012;
 style: modern;
 annotation: 1 Ant.;
 annotation: 7. a;
+def-m1:}{\greseteolcustos{manual}{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:}\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
 %%
+%TODO: it wasn't putting a dash after the big initial
 (c3)I(g)pse(e') præ(f)í(h)bit(h') <v>\greheightstar</v>() an(h)te(h) íl(ij)lum(i.) (;)
 in(h_i) spí(k)ri(j)tu(i) et(i) vir(g)tú(ij)te(i) E(h)lí(hih)æ,(hgh.) (;)
-pa(h)rá(hg)re(f) Dó(g_h)mi(g)no(e.) (,) plé(g_h)bem(f_h) per(g)fé(e.)ctam.(e) (::)
+pa(h)rá(hg)re(f) Dó(g_h)mi(g)no(e.) (,) plé(g_h)bem(f_h) per(g)fé(e.[em1])ctam.(e.) (::[em2]z[em3])
 
-E(i) u(i) o(j) u(i) a(h) e.(gf..) (::)
+E(i) u(i) o(j) u(i) a(h) e.(gf..) (::[em4])

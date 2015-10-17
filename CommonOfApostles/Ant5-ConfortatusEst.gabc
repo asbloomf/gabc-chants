@@ -13,16 +13,18 @@ transcription-date: 2012;
 style: modern;
 annotation: 5 Ant.;
 annotation: 7. c2;
+def-m1:}{\greseteolcustos{manual}{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:}\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
 %%
 
-(c3)COn(hg)for(h)tá(ih/i_j)tus(i) est(ij/ji'_) <v>\greheightstar</v>(,) prin(i)ci(i)pá(iv_HG)tus(f) e(h)ó(g_hf/fe)rum,(e.) (;)
-et(f) ho(e')no(d)rá(e')ti(e) sunt(f'_) (,) a(f)mí(f')ci(i) tú(h')i(g) Dé(e.)us.(e.) (::z)
+(c3)COn(hg)for(h)tá(ih/i_j)tus(i) est(ij/ji'0_1) <v>\greheightstar</v>(,)
+prin(i)ci(i)pá(iv_HG)tus(f) e(h)ó(g_hf/fe)rum,(e.) (;)
+et(f) ho(e')no(d)rá(e')ti(e) sunt(f'_) (,)
+a(f)mí(f')ci(i) tú(h')i(g) Dé(e.[em1])us.(e.) (::[em2]z[em3])
 
-E(i) u(i) o(j) u(i) a(h) e.(ih..) (::)
-
-% replace this with
-%\grehepisemusbottom{h}{0}{0}%
-%\grehepisemus{k}{0}{0}{k}%
+E(i) u(i) o(j) u(i) a(h) e.(ih..) (::[em4])

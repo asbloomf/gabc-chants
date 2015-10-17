@@ -13,6 +13,10 @@ transcription-date: 2011;
 style: modern;
 annotation: 3 Ant.;
 annotation: 4. A;
+def-m1:}{\greseteolcustos{manual}{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:}\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -21,6 +25,6 @@ annotation: 4. A;
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
 (c3)VE(f)stí(e')tus(f) é(h_i)rat(i'_) <v>\greheightstar</v>(,) vé(i)ste(h') a(i)spér(j)sa(ih) sán(i')gui(i)ne,(i.) (;)
-et(i) vo(f')cá(i)tur(g') nó(h)men(f) é(f_e~)jus(f_e) (,) Vér(d_e)bum(f_h) Dé(f.)i.(f.) (::z)
+et(i) vo(f')cá(i)tur(g') nó(h)men(f) é(f_e~)jus(f_e) (,) Vér(d_e)bum(f_h) Dé(f.[em1])i.(f.) (::[em2]z[em3])
 
-E(i) u(h) o(i) u(j) a(h) e.(f.) (::)
+E(i) u(h) o(i) u(j) a(h) e.(f.) (::[em4])
