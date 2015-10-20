@@ -13,6 +13,10 @@ transcription-date: 2013;
 style: modern;
 annotation: At Magn.;
 annotation: 1. D2;
+def-m1:}{\greseteolcustos{manual}{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:}\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -21,10 +25,11 @@ annotation: 1. D2;
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
 (c4)PR{í}n(c')ceps(d) glo(f)ri(g)o(fe)sís(d)sim(fe)e,(d/dc.) (,)
-Mích(f)a(ghg)el(h) Ar(gf~)chán(gh)ge(fv_ED)le,(d.) (;)
+Mích(f)a(ghg)ël(h) Ar(gf~)chán(gh)ge(fv_ED)le,(d.) (;)
 és(gf)to(ghg) mém(fe)or(fgf) nós(d.)tri :(d.) (:)
-hic(h) et(g) u(h!iwjz)bíq(ji)ue(hg) sem(ij)per(i_h) (,) pre(h)cá(ghf'/gf'f)re(d) pro(cd) nó(dg'!hv)bis(g'_) (,)
+hic(h) et(g) u(h!iwj)bíq(ji)ue(hg) sem(ij)per(i_h) (,)
+pre(h)cá(ghf'/gf'f)re(d) pro(cd) nó(dg'!hv)bis(g'_) (,)
 Fí(d)li(f')um(f) Dé(de)i,(dc..) (;)
-al(c_d)le(f_gF'E)lú(g_h_g~)ia,(fv_ED'_C_) al(d_g)le(efe)lú(d.)ia.(d.) (::)
+al(c_d)le(f_gF'E)lú(g_h_g~)ia,(fv_ED'_5C_) al(d_g)le(efe)lú(d.[em1])ia.(d.) (::[em2]z[em3])
 
-E(h) u(h) o(g) u(f) a(gf) e.(d.) (::)
+E(h) u(h) o(g) u(f) a(gf) e.(d.) (::[em4])

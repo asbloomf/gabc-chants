@@ -3,11 +3,15 @@ office-part:Antiphona;
 mode:1;
 book:The Liber Usualis, 1961, p. 1729;
 transcriber:Andrew Hinkley;
+def-m1:}{\greseteolcustos{manual}{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:}\fi;
 %%
 (c4) ET(d_c) o(f)mnes(g') An(f)ge(gh)li(h'_) <v>\greheightstar</v>(,)
 sta(h)bant(h') in(h) cir(h)cú(hj)i(h)tu(g) thro(f_h)ni,(g.) (;)
-et(g) ce(g)ci(g)dé(gh)runt(g') in(g) con(gz)spé(e')ctu(g) thro(h_g)ni(f'_) (,)
+et(g) ce(g)ci(g)dé(gh)runt(g') in(g) con(g)spé(e')ctu(g) thro(h_g)ni(f'_) (,)
 in(f) fá(fg)ci(e)es(f) su(d!ewf)as,(fc..) (;)
-et(f) a(f)do(e')ra(f)vé(g)runt(fe) De(d.)um.(d.) () (::) ()
+et(f) a(f)do(e')ra(f)vé(g)runt(fe) De(d.[em1])um.(d.) (::[em2]z[em3])
 
-E(h) u(h) o(g) u(f) a(gh) e(gf..) (::)
+E(h) u(h) o(g) u(f) a(gh) e(gf..) (::[em4])

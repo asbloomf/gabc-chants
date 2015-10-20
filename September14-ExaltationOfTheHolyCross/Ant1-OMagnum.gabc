@@ -11,6 +11,10 @@ book:The Liber Usualis, 1961, p. 1459;
 transcriber:Albert Bloomfield;
 annotation: 1 Ant.;
 annotation: 7. c;
+def-m1:}{\greseteolcustos{manual}{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:}\fi;
 % liber usualis page 1515
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
@@ -21,8 +25,8 @@ annotation: 7. c;
 
 (c3)O(ig/ij) má(ij)gnum(i'_) <v>\greheightstar</v>(,) pi(i)e(g)tá(hi)tis(f') ó(e)pus!(e.) (;)
 mors(h'_) mór(h)tu(h)a(f') tunc(h) est,(g.) (;)
-in(h) lí(h!iwj_i)gno(h') quan(h)do(g_h) mór(f')tu(e)a(f'_) ví(h)ta(g) fú(e.)it.(e.) (::)
+in(h) lí(h!iwj_i)gno(h') quan(h)do(g_h) mór(f')tu(e)a(f'_) ví(h)ta(g) fú(e.[em1])it.(e.) (::[em2]z[em3])
 
 %<i>T. P.</i> Al(fg)le(f)lú(e.)ia.(e.) (::)
 
-E(i) u(i) o(j) u(i) a(h) e.(gh..) (::)
+E(i) u(i) o(j) u(i) a(h) e.(gh..) (::[em4])

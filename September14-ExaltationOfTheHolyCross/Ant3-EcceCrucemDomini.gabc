@@ -11,6 +11,10 @@ book:The Liber Usualis, 1961, p. 1460;
 transcriber: Albert Bloomfield;
 annotation: 3 Ant.;
 annotation: 1. f;
+def-m1:}{\greseteolcustos{manual}{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:}\fi;
 % liber usualis page 1460
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
@@ -18,7 +22,9 @@ annotation: 1. f;
 %%
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
-(c4)EC(d)ce(e_f) Crú(g)cem(ge~) Dó(f_g)mi(fe)ni,(d.) <v>\greheightstar</v>(;) fú(f!gwh)gi(h)te(ghg___) pár(e_f)tes(g) ad(f)vér(fe)sæ :(d_e_d._) (:)
-ví(c)cit(cd~) lé(d)o(d'_) de(d) trí(e')bu(f) Jú(gh)da,(ghg___) (,) rá(e_f)dix(g) Dá(f)vid,(ev_DC') al(d)le(fe)lú(d.)ia.(d.) (::)
+(c4)EC(d)ce(e_f) Crú(g)cem(ge~) Dó(f_g)mi(fe)ni,(d.) <v>\greheightstar</v>(;)
+fú(f!gwh)gi(h)te(ghg___) pár(e_f)tes(g) ad(f)vér(fe)sæ :(d_e_d._) (:)
+ví(c)cit(cd~) lé(d)o(d'_) de(d) trí(e')bu(f) Jú(gh)da,(ghg___) (,)
+rá(e_f)dix(g) Dá(f)vid,(ev_DC') al(d)le(fe)lú(d.[em1])ia.(d.) (::[em2]z[em3])
 
-E(h) u(h) o(g) u(f) a(gh) e.(gf..) (::)
+E(h) u(h) o(g) u(f) a(gh) e.(gf..) (::[em4])

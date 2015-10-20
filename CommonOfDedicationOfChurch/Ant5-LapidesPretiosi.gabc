@@ -11,6 +11,10 @@ book:The Liber Usualis, 1961, p. 1247;
 transcriber:Albert Bloomfield;
 annotation: 5 Ant.;
 annotation: 7. c;
+def-m1:}{\greseteolcustos{manual}{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:}\fi;
 % liber usualis page 1515
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
@@ -19,9 +23,11 @@ annotation: 7. c;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c4)LA(dd)pi(c)des(d') pre(f)ti(e')ó(d)si(d!ewf.) <v>\greheightstar</v>(,) om(c)nes(d) mú(f')ri(e) tú(d!ewf)i,(fc..) (;)
-et(c_d) túr(f_g)res(f) Je(f_g)rú(h)sa(fe)lem(d!ewf.) (,) gém(cd)mis(f') æ(f)di(e)fi(gh)ca(fe)bún(d.)tur.(d.) (::)
+(c4)LA(dd)pi(c)des(d') pre(f)ti(e')ó(d)si(d!ewf.) <v>\greheightstar</v>(,)
+om(c)nes(d) mú(f')ri(e) tú(d!ewf)i,(fc..) (;)
+et(c_d) túr(f_g)res(f) Je(f_g)rú(h)sa(fe)lem(d!ewf.) (,)
+gém(cd)mis(f') æ(f)di(e)fi(gh)ca(fe)bún(d.)tur.(d.) (::)
 
-<i>T. P.</i> Al(e)le(fe)lú(d.)ia.(d.) (::)
+<i>T. P.</i> Al(e)le(fe)lú(d.[em1])ia.(d.) (::[em2]z[em3])
 
-E(h) u(h) o(g) u(f) a(gh) e.(g.) (::)
+E(h) u(h) o(g) u(f) a(gh) e.(g.) (::[em4])

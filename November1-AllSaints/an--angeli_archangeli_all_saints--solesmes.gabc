@@ -3,10 +3,14 @@ office-part:Antiphona;
 mode:1;
 book:The Liber Usualis, 1961, p. 1721;
 transcriber:Andrew Hinkley;
+def-m1:}{\greseteolcustos{manual}{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:}\fi;
 %%
-(c4) AN(cd)ge(d)li,(d) <v>\greheightstar</v>() Ar(dc)chán(d!ewf)ge(de)li,(ddc.) (;)
+(c4)AN(cd)ge(d)li,(d) <v>\greheightstar</v>() Ar(dc)chán(d!ewf)ge(de)li,(ddc.) (;)
 Thro(f!gwh_g)ni(f) et(f) Do(fe)mi(dc)na(d_g)ti(efe)ó(d.)nes,(d.) (;)
-Prin(c)ci(cd)pá(de)tus(dc) et(dc) Po(f!gh)te(fe)stá(dc)tes,(d_g) Vir(efe)tú(d.)tes :(d.) (:)
+Prin(c)ci(cd)pá(de)tus(dc) et(dc) Pot(f!gh)e(fe)stá(dc)tes,(d_g) Vir(efe)tú(d.)tes :(d.) (:)
 Ché(h)ru(ji)bim(hg) at(g)que(h) Sé(j!kl)ra(j)phim :(jvIH.) (;)
 Pa(h)tri(h)ár(h')chæ(g) et(fe~) Pro(fgf)phé(d.)tæ :(d.) (;)
 san(f)cti(e) le(fe)gis(d) Doct(fe)ó(dd)res,(c.) (;)
@@ -15,7 +19,7 @@ Chri(f)sti(e') Már(f)tý(de)res,(d_c) (,)
 san(c)cti(d) Con(f!gh)fes(f)só(fv_ED)res,(d'_) (,)
 Vír(g)gi(fe)nes(d) Dó(ed)mi(cd)ni,(d.) (;)
 A(hvGE'D)na(c)cho(efe)rí(d.)tæ,(d.) (;)
-San(cd)ctíqu(dfe)e(d) om(deD'C)nes,(dc..) (;)
-in(c)ter(d)cé(fge/hv./ghf/efd.,c!df/gvFDC./e/g'hg)di(fv_ED'C_)te(d_g) pro(efe) no(d.)bis.(d.) () (::) ()
+San(cd)ctí(dfe')que(d) om(deD'C)nes,(dc..) (;)
+in(c)ter(d)cé(fge/hv./ghf/efd. , <nlba>c!df/gvFDC./e/g'hg</nlba>)di(fv_ED'_5C_)te(d_g) pro(efe) no(d.[em1])bis.(d.) (::[em2]z[em3])
 
-E(h) u(h) o(g) u(f) a(gh) e(gFED.) (::)
+E(h) u(h) o(g) u(f) a(gh) e(gFED.) (::[em4])

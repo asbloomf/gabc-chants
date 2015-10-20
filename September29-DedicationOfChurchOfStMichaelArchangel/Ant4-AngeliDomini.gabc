@@ -13,6 +13,10 @@ transcription-date: 2013;
 style: modern;
 annotation: 4 Ant.;
 annotation: T. per;
+def-m1:}{\greseteolcustos{manual}{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:}\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -23,6 +27,6 @@ annotation: T. per;
 (c4)AN(d')ge(c)li(d') Dó(f)mi(fg)ni,(g.) <v>\greheightstar</v>(;)
 Dó(h')mi(g)num(h'_) be(h)ne(g)dí(f')ci(e)te(d'_) (,) in(f) æ(gh)tér(g.)num.(g.) <i>P. T.</i>(::)
 
-Al(fh)le(h)lú(g.)ia.(g.) (::z)
+Al(fh)le(h)lú(g.[em1])ia.(g.) (::[em2]z[em3])
 
-E(g) u(g) o(g) u(d) a(f) e.(ed..) (::)
+E(g) u(g) o(g) u(d) a(f) e.(ed..) (::[em4])
