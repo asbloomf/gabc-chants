@@ -56,6 +56,7 @@
 }
 \pagestyle{main}
 
+%\grechangeglyph{Porrectus*}{*}{.alt}
 
 \titleformat
 {\section} % command
@@ -120,11 +121,17 @@
 \ifnum#1=111
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
 \fi
+\ifnum#1=116
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.56\linewidth}]{2}}
+\fi
 \ifnum#1=129
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
 \fi
 \ifnum#1=131
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
+\fi
+\ifnum#1=137
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween]{2}}
 \fi
 \ifnum#1=147
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.465\linewidth}]{2}}
@@ -558,10 +565,10 @@ Magnificat, and Collect given for the respective Sunday or Feast.}
 \input{inc-benedicamus-domino}
 
 \def\dontrepeatantiphon{T}
+\input{inc-marian-anthems}
+
 \clearpage
 \input{inc-vespers-sunday}
-
-\input{inc-marian-anthems}
 
 \input{inc-advent}
 
@@ -576,6 +583,7 @@ Magnificat, and Collect given for the respective Sunday or Feast.}
 \input{inc-easter} % need to add St Joseph the Worker and the Ascension
 
 \input{inc-pentecost}
+
 \input{inc-proper-of-saints}
 
 \chapter{Appendix}

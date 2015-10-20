@@ -7,12 +7,12 @@
   \hrule
 }
 
-%December 8, Immaculate Conception
+%December 8: Immaculate Conception
 %Second Vespers of Immaculate Conception
 {
 \label{immaculateconception}
-\section{Immaculate Conception}
-\subtitle{\nth{1} Class, December 8}
+\section{December 8: Immaculate Conception}
+\subtitle{\nth{1} Class}
 
 \def\premagverses{\greseteolcustos{manual}}
 \def\definevesperspropersalt{\def\noeuouae{T}\input{\gabcfolder/inc-ImmaculateConception-1Vespers}}
@@ -147,7 +147,7 @@
 
 %Purification & Presentation (2nd class no commem of Sunday because it is a feast of the Lord)
 {
-\section{February 2, Purification \& Presentation}
+\section{February 2: Purification \& Presentation}
 \subtitle{\nth{2} Class}
 \subtitle{I Vespers}
 \printnote{Psalms and Antiphons of the Circumcision, page \pageref{circumcision}, continuing with the chapter on page \pageref{purification-chapter}.}
@@ -188,9 +188,9 @@
 \benedicamusdomino{}
 }
 
-%May 1 St Joseph the Worker (1st class)
+%May 1: St Joseph the Worker (1st class)
 {
-\section{May 1, St Joseph the Worker}
+\section{May 1: St Joseph the Worker}
 \subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
 
@@ -208,9 +208,9 @@
 \benedicamusdomino{}
 }
 
-%June 24 Nativity of St John the Baptist (1st class)
+%June 24: Nativity of St John the Baptist (1st class)
 {
-\section{June 24, Nativity of St John the Baptist}
+\section{June 24: Nativity of St John the Baptist}
 \subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
 
@@ -232,9 +232,9 @@
 \benedicamusdomino{}
 }
 
-%June 29 Sts Peter \& Paul (1st class)
+%June 29: Sts Peter \& Paul (1st class)
 {
-\section{June 29, Sts Peter \& Paul}
+\section{June 29: Sts Peter \& Paul}
 \subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
 
@@ -257,9 +257,10 @@
 \benedicamusdomino{}
 }
 
-%July 1 Most Precious Blood (1st class)
+%July 1: Most Precious Blood (1st class)
 {
-\section{July 1, The Precious Blood of Our Lord Jesus Christ}
+\global\let\psalmclefthree=\undefined
+\section{July 1: The Precious Blood of Our Lord Jesus Christ}
 \subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
 
@@ -278,9 +279,9 @@
 \benedicamusdomino{}
 }
 
-%Aug 6 Transfiguration (2nd class)
+%Aug 6: Transfiguration (2nd class)
 {
-\section{August 6, Transfiguration of Our Lord Jesus Christ}
+\section{August 6: Transfiguration of Our Lord Jesus Christ}
 \subtitle{\nth{2} Class}
 \subtitle{I \& II Vespers}
 
@@ -299,9 +300,9 @@
 \benedicamusdomino{}
 }
 
-%Aug 15 Assumption (1st class)
+%Aug 15: Assumption (1st class)
 {
-\section{August 15, Assumption of the B. V. M.}
+\section{August 15: Assumption of the B. V. M.}
 \subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
 
@@ -335,11 +336,12 @@
 \benedicamusdomino{}
 }
 
-%Sep 14 Exaltation of Holy Cross (2nd class)
+%Sep 14: Exaltation of Holy Cross (2nd class)
 {
-\section{September 14, Exaltation of the Holy Cross}
+\section{September 14: Exaltation of the Holy Cross}
 \subtitle{\nth{2} Class}
 \subtitle{I \& II Vespers}
+\printnote{At I Vespers, the }
 
 \def\definevesperspropers{\input{\gabcfolder/inc-ExaltationOfTheHolyCross-2Vespers}
   \def\prepsalmfive{\greseteolcustos{manual}}
@@ -350,14 +352,15 @@
 %\def\premag{\def\noeuouae{T}}
 \def\premagverses{\greseteolcustos{manual}}
 
+\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
 \printvespers[../September14-ExaltationOfTheHolyCross]{inc-ExaltationOfTheHolyCross}
 \bigskip
 \benedicamusdomino{}
 }
 
-%Sep 29 Dedication of St Michael (1st class)
+%Sep 29: Dedication of St Michael (1st class)
 {
-\section{September 29, Dedication of the Holy Cross}
+\section{September 29: Dedication of St Michael the Archangel}
 \subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
 
@@ -375,7 +378,7 @@
 \benedicamusdomino{}
 }
 
-%Last Sunday in October Christ the King (1st class)
+%Last Sunday in October: Christ the King (1st class)
 {
 \section{Last Sunday in October: Jesus Christ, King}
 \subtitle{\nth{1} Class}
@@ -384,18 +387,17 @@
 \def\definevesperspropers{\input{\gabcfolder/inc-ChristTheKing-2Vespers}
   \def\prepsalmfive{\greseteolcustos{manual}}
 }
-%\def\definevesperspropersalt{\input{\gabcfolder/inc-ChristTheKing-1Vespers}}
-%\def\vesperspropersnote{At II Vespers:}
-%\def\vesperspropersaltnote{At I Vespers:}
 %\def\premag{\def\noeuouae{T}}
 \def\premagverses{\greseteolcustos{manual}}
+\def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
+%\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
 
 \printvespers[../OctoberLastSunday-ChristTheKing]{inc-ChristTheKing}
 \bigskip
 \benedicamusdomino{}
 }
 
-%Nov 1 All Saints (1st class)
+%Nov 1: All Saints (1st class)
 {
 \section{November 1: All Saints}
 \subtitle{\nth{1} Class}
@@ -415,12 +417,12 @@
 \benedicamusdomino{}
 }
 
-%Nov 9 Dedication of Archbasilica of Holy Savior (2nd class)
+%Nov 9: Dedication of Archbasilica of Holy Savior (2nd class)
 {
 \section{November 9: Dedication of Archbasilica of Holy Savior}
 \subtitle{\nth{2} Class}
 \subtitle{I \& II Vespers}
-\printnote{From the Common of the Dedication of a Church.}
+\printnote{All from the Common of the Dedication of a Church.}
 
 \def\definevesperspropers{\input{\gabcfolder/inc-DedicationOfChurch-2Vespers}
   \def\prepsalmfive{\greseteolcustos{manual}}
