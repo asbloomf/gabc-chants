@@ -13,11 +13,6 @@
 
 \newcommand{\printhymnnote}{
 	\noindent\printnote{Hymn. \emph{Jesu Redémptor ómnium}, page \pageref{hymn-jesuredemptoromnium}.\\}
-	{
-		\definevesperspropers
-		\def\vrlinebreak{T}
-		\printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
-	}
 }
 \def\definevesperspropers{\input{\gabcfolder/inc-Christmas-Vespers1}}
 \newcommand{\preantfour}{\needspace{5\baselineskip}}
@@ -40,29 +35,8 @@
 \def\vesperspropersnote{At II Vespers of the Sunday within the Octave of Christmas:}
 \def\premag{\def\noeuouae{T}}
 \def\premagverses{\greseteolcustos{manual}}
-\def\printfullhymn{
-	\label{hymn-jesuredemptoromnium}
-	{
-	\input{\gabcfolder/inc-JesuRedemptorOmnium}
-	\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
-	}
-		% print all versicles that could follow hymn?
-	{
-		\def\vrlinebreak{T}
-		%\label{vr-rorate}
-		\printnote{\vesperspropersaltnote}
-		\definevesperspropersalt
-		\printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
-	}
-	\bigskip
-	{
-		\def\vrlinebreak{T}
-		%\label{vr-rorate}
-		\printnote{\vesperspropersnote}
-		\definevesperspropers
-		\printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
-	}
-}
+\def\hymnlabel{hymn-jesuredemptoromnium}
+\input{../Christmas/inc-JesuRedemptorOmnium}
 \printvespers[../Christmas]{inc-Christmas-Vespers2-psalms}
 
 \benedicamusdomino{}
@@ -103,15 +77,7 @@
 \def\definevesperspropers{\input{\gabcfolder/inc-HolyName-2Vespers}}
 %\def\vesperspropersaltnote{At I Vespers of the Most Holy Name of Jesus:}
 %\def\vesperspropersnote{At II Vespers of the Most Holy Name of Jesus:}
-\def\printfullhymn{
-	\needspace{15\baselineskip}
-	\label{hymn-jesudulcismemoria}
-	{
-		\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
-		\def\vrlinebreak{T}
-		\printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
-	}
-}
+\def\hymnlabel{hymn-jesudulcismemoria}
 
 \printvespers[../HolyName]{inc-HolyName-common}
 
@@ -133,14 +99,6 @@
 \def\vesperspropersaltnote{At I Vespers:}
 \def\vesperspropersnote{At II Vespers:}
 
-\def\printfullhymn{
-	{
-		\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
-		\def\vrlinebreak{T}
-		\printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
-	}
-}
-
 \printvespers[../Epiphany]{inc-Epiphany-Vespers}
 
 \benedicamusdomino{}
@@ -151,14 +109,6 @@
 \subtitle{\nth{2} Class}
 
 \subtitle{First Sunday after the Epiphany.}
-
-\def\printfullhymn{
-	{
-		\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
-		\def\vrlinebreak{T}
-		\printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
-	}
-}
 
 \printvespers[../HolyFamily]{inc-HolyFamily-Vespers2}
 

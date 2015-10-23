@@ -13,6 +13,7 @@
 \usepackage{letltxmacro}
 \usepackage{changepage} % gives us \ifoddpage use [strict]
 \usepackage[super]{nth}
+\usepackage[savepos]{zref}
 \usepackage{xparse}
 \LetLtxMacro{\oldnth}{\nth}
 \renewcommand{\nth}[1]{\addfontfeature{Numbers=Lining}\oldnth{#1}}
@@ -139,7 +140,8 @@
 }
 \newcommand{\printvrcommem}{
 		{\normalsize
-		\begin{parcolumns}[rulebetween]{2}
+		\ifx\beginvrcols\undefined\def\beginvrcols{\begin{parcolumns}[rulebetween]{2}}\fi
+		\beginvrcols
 		\colchunk{%
 			\selectlanguage{latin}%
 	    \Vbar{}~\commvlatin{}%
@@ -228,19 +230,22 @@
 		\smallskip
 	}\fi
 
-	\ifx\printhymnnote\undefined
-		\ifx\printfullhymn\undefined
+	\ifx\printfullhymn\undefined
+		\ifx\printhymnnote\undefined
 			%print the hymn
+			\ifx\hymninput\undefined\else
+				\input{\hymninput}
+			\fi
 			\printbothversions[\hymnlabel][\hymnaltlabel]{\hymntex}{\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}}
 			\printbothversions[\vrlabel][\vraltlabel]{\vrtex}{%
 		    \ifx\vrlinebreak\undefined\def\vrlinebreak{T}\fi
 		    \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
 			}
 		\else
-			\printfullhymn
+			\printhymnnote
 		\fi
 	\else
-		\printhymnnote
+		\printfullhymn
 	\fi
 
 	{
@@ -383,19 +388,21 @@
 	\fi
 
 	\medskip
-	\ifx\printhymnnote\undefined
-		\ifx\printfullhymn\undefined
-			%print the hymn
+	\ifx\printfullhymn\undefined
+		\ifx\printhymnnote\undefined
+			\ifx\hymninput\undefined\else
+				\input{\hymninput}
+			\fi
 			\printbothversions[\hymnlabel][\hymnaltlabel]{\hymntex}{\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}}
-			\printbothversions[\vrlabel][\vraltlabel]{\vrtex}{%
-		    \ifx\vrlinebreak\undefined\def\vrlinebreak{T}\fi
-		    \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
-			}
 		\else
-			\printfullhymn
+			\printhymnnote
 		\fi
+		\printbothversions[\vrlabel][\vraltlabel]{\vrtex}{%
+	    \ifx\vrlinebreak\undefined\def\vrlinebreak{T}\fi
+	    \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
+		}
 	\else
-		\printhymnnote
+		\printfullhymn
 	\fi
 
 	\medskip
@@ -420,13 +427,13 @@
 			\fi
 			}
 			\definevesperspropersalt
-    		\hrule
-    		\needspace{5\baselineskip}
-		    \begin{center}{\large Magnificat.}\end{center}
-	    	\vspace{-1ex}
+  		\hrule
+  		\needspace{5\baselineskip}
+	    \begin{center}{\large Magnificat.}\end{center}
+    	\vspace{-1ex}
 
-	    	\ifx\vesperspropersaltnote\undefined\else
-    		\oldneedspace{6\baselineskip}
+    	\ifx\vesperspropersaltnote\undefined\else
+    		\oldneedspace{7\baselineskip}
 				\printnote{\vesperspropersaltnote\\\vspace{-0.5\baselineskip}}
 			\fi
 			\let\anttranslation=\maganttranslation
@@ -572,7 +579,7 @@ Magnificat, and Collect given for the respective Sunday or Feast.}
 
 \input{inc-advent}
 
-% christmas through Holy Family
+%christmas through Holy Family
 \input{inc-christmas}
 
 \input{inc-timeafterepiphany}

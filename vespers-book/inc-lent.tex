@@ -51,36 +51,32 @@
 
 %lent
 {
+\renewcommand{\printcommonvespers}[1][2]{
+	\subtitle{\nth{#1} Class}
+	\printnote{From Vespers of Sundays on page \pageref{sundayvespers} until the chapter exclusive.\\}
+}
+
 \newcommand{\benedicamusdomino}[1][lent]{
 	\noindent\printnote{\Vbar~\emph{Benedicámus Dómino}, page \pageref{benedicamusdomino-#1}.}
 	\bigskip
 	\hrule
 }
-\newcommand{\printhymnnote}{
-	\noindent\printnote{Hymn. \emph{Audi, benígne Cónditor}, page \pageref{hymn-audibenigneconditor}.
-	\Vbar~\emph{Angelis suis}, page \pageref{vr-angelissuis}.}
-}
 
 {
 \section{\nth{1} Sunday of Lent}
 \printcommonvespers[1]
-\def\printfullhymn{
-	\label{hymn-audibenigneconditor}
-	{
-	\input{\gabcfolder/inc-hymn-AudiBenigneConditor}
-	\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
-
-	{
-		\def\vrlinebreak{T}
-		\label{vr-angelissuis}
-		\printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
-	}
-	}
-}
+\def\hymnlabel{hymn-audibenigneconditor}
+\def\vrlabel{vr-angelissuis}
+\def\hymninput{\gabcfolder/inc-hymn-AudiBenigneConditor}
 \printvespersmag[../Lent]{inc-VespersMagnificatLent1}
 
 \bigskip
 \benedicamusdomino{}
+}
+
+\newcommand{\printhymnnote}{
+	\noindent\printnote{Hymn. \emph{Audi, benígne Cónditor}, page \pageref{hymn-audibenigneconditor}.
+	\Vbar~\emph{Angelis suis}, page \pageref{vr-angelissuis}.}
 }
 
 {
@@ -109,7 +105,7 @@
 \printcommonvespers[1]
 \printvespersmag[../Lent]{inc-VespersMagnificatLent3}
 
-\def\commemorations{If today is March 18 or 19, the First Vespers of St Joseph is commemorated as on page \pageref{stjoseph-commem}.  If today is March 25 or 26, the First Vespers of the Annunciation is commemorated as follows.}
+\def\commemorations{If today is March 18 or 19, the First Vespers of St Joseph is commemorated as on page \pageref{stjoseph-commem}.  If today is March 24 or 25, the First Vespers of the Annunciation is commemorated as follows.}
 \printcommemnote{}
 }
 
@@ -124,7 +120,7 @@
 \benedicamusdomino{}
 }
 
-\def\commemorations{If today is March 18 or 19, the First Vespers of St Joseph is commemorated as on page \pageref{stjoseph-commem}.  If today is March 25 or 26, the First Vespers of the Annunciation is commemorated as on page \pageref{annunciation-commem}.}
+\def\commemorations{If today is March 18 or 19, the First Vespers of St Joseph is commemorated as on page \pageref{stjoseph-commem}.  If today is March 24 or 25, the First Vespers of the Annunciation is commemorated as on page \pageref{annunciation-commem}.}
 {
 \section{\nth{4} Sunday of Lent}
 \printcommonvespers[1]
@@ -133,27 +129,22 @@
 \printcommemnote{}
 }
 
+\medskip
+\hrule
 {
+\let\printhymnnote=\undefined
 \section{Passion Sunday}
 \printcommonvespers[1]
-\def\printfullhymn{
-	\label{hymn-vexillaregis}
-	{
-	\input{\gabcfolder/inc-hymn-VexillaRegis}
-	\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
-
-	{
-		\def\vrlinebreak{T}
-		\label{vr-eripeme}
-		\printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
-	}
-	}
-}
+\def\hymnlabel{hymn-vexillaregis}
+\def\vrlabel{vr-eripeme}
+\def\hymninput{\gabcfolder/inc-hymn-VexillaRegis}
 \printvespersmag[../Lent]{inc-VespersMagnificatPassion1}
 
 \printcommemnote{}
 }
 
+\medskip
+\hrule
 {
 \section{Palm Sunday}
 \printcommonvespers[1]

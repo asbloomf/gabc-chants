@@ -54,17 +54,6 @@
 {
 \section{Low Sunday}
 \printcommonvespers[1]
-%\def\printfullhymn{
-%    \label{hymn-adregiasagnidapes}
-%    {
-%        \input{\gabcfolder/inc-hymn-AdRegiasAgniDapes}
-%        \printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
-%        \def\vrlinebreak{T}
-%        \label{vr-manenobiscum}
-%        \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
-%        \bigskip
-%    }
-%}
 %\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster1}
 
@@ -131,13 +120,7 @@
 {
 \section{Sunday after the Ascension}
 \printcommonvespers{}
-\def\printfullhymn{
-    {
-        \printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
-        \def\vrlinebreak{T}
-        \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
-    }
-}
+\let\printhymnnote=\undefined
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatSundayAfterAscension}
 \benedicamusdomino{}
 }

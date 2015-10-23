@@ -19,27 +19,6 @@
 \def\vesperspropersaltnote{At I Vespers:}
 %\def\premag{\def\noeuouae{T}}
 \def\premagverses{\greseteolcustos{manual}}
-\def\printfullhymn{
-	{\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}}
-		% print all versicles that could follow hymn?
-	{
-		\def\vrlinebreak{T}
-		%\label{vr-rorate}
-		\oldneedspace{3\baselineskip}
-		\printnote{\vesperspropersaltnote}
-		\definevesperspropersalt
-		\printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
-	}
-	\bigskip
-	{
-		\def\vrlinebreak{T}
-		%\label{vr-rorate}
-		\oldneedspace{3\baselineskip}
-		\printnote{\vesperspropersnote}
-		\definevesperspropers
-		\printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
-	}
-}
 \printvespers[../Pentecost]{inc-PentecostVespers}
 \bigskip
 \benedicamusdomino{}
@@ -51,13 +30,6 @@
 
 %\def\premag{\def\noeuouae{T}}
 \def\premagverses{\greseteolcustos{manual}}
-\def\printfullhymn{
-	{
-		\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
-		\def\vrlinebreak{T}
-		\printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
-	}
-}
 \def\begincollectcols{\vspace{-0.5\baselineskip}\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 \printvespers[../TrinitySunday]{inc-TrinitySunday-Vespers}
 \bigskip
