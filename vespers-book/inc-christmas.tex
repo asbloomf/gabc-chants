@@ -72,23 +72,19 @@
 \section{Octave of the Nativity of our Lord}
 \subtitle{\nth{1} Class}
 
-\subtitle{January 1, II Vespers}
+\subtitle{January 1, I \& II Vespers}
+\label{circumcision}
 
 \def\definevesperspropers{\input{\gabcfolder/inc-Circumcision-Vespers2}}
 \def\preantthree{\needspace{10\baselineskip}}
-\newcommand{\printhymnnote}{
-	\noindent\printnote{Hymn. \emph{Jesu Redémptor ómnium}, page \pageref{hymn-jesuredemptoromnium}.\\}
-	{
-		\def\vrlinebreak{T}
-		\definevesperspropers
-		\printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
-	}
-}
-%\def\definevesperspropersalt{\input{\gabcfolder/inc-SundayWithinOctaveOfChristmas-Vespers2}}
-%\def\vesperspropersnote{At II Vespers of the Octave of Christmas:}
-%\def\vesperspropersaltnote{At II Vespers of the Sunday within the Octave of Christmas:}
-
-\printvespers[../ChristmasOctave-Circumcision]{inc-Circumcision-psalms}
+ \newcommand{\printhymnnote}{
+ 	\noindent\printnote{Hymn. \emph{Jesu Redémptor ómnium}, page \pageref{hymn-jesuredemptoromnium}.\\}
+ }
+\def\definevesperspropersalt{\input{\gabcfolder/inc-Circumcision-Vespers1}}
+\def\vesperspropersnote{At II Vespers:}
+\def\vesperspropersaltnote{At I Vespers:}
+\def\prechapter{\printnote{For the Feast of the Purification \& Presentation, continue with the chapter on page \pageref{purification-chapter}.}}
+\printvespers[../ChristmasOctave-Circumcision]{inc-Circumcision-Vespers-common}
 
 \benedicamusdomino{}
 }

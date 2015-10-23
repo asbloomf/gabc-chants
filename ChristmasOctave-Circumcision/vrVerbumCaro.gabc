@@ -1,0 +1,15 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+name: versicle and response for Christmas 1st vespers;
+office-part: versicle and response;
+occasion: Vespers;
+date: 2015;
+transcriber: Albert Bloomfield;
+transcription-date: 2015;
+style: modern;
+initial-style: 0;
+def-m1:\ifx\vrlinebreak\undefined\else;
+def-m2:\fi;
+%%
+(c3)<sp>V/</sp> Ver(h)bum(h) ca(h)ro(h) fa(h)ctum(h) est,(h) al(h)le(h)lu(h)ia.(g_'hvGF'Efgf.) (::[em1]Z[em2])
+<sp>R/</sp> Et(h) ha(h)bi(h)tá(h)vit(h) in(h) no(h)bis,(h) al(h)le(h)lu(h)ia.(g_'hvGF'Efgf.) (::)
