@@ -150,8 +150,8 @@
 			\selectlanguage{american}%
 	    \Vbar{}~\commvtranslation{}%
 		}
-		\colplacechunks
-    \colchunk{
+		\colplacechunks%
+    \colchunk{%
 			\selectlanguage{latin}%
 	    \Rbar{}~\commrlatin{}%
 		}
@@ -399,7 +399,7 @@
 		\fi
 		\printbothversions[\vrlabel][\vraltlabel]{\vrtex}{%
 	    \ifx\vrlinebreak\undefined\def\vrlinebreak{T}\fi
-	    \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
+	    \printvr[\if\vrlinebreak T\greseteolcustos{manual}\fi]{\vrtex}{\vtranslation}{\rtranslation}
 		}
 	\else
 		\printfullhymn

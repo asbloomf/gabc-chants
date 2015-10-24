@@ -2,7 +2,7 @@
 \chapter{Proper of the Saints}
 {
 \newcommand{\benedicamusdomino}[1][1]{
-  \noindent\printnote{\Vbar~\emph{Benedicámus Dómino}, page \pageref{benedicamusdomino-#1}.}
+  \noindent\printnote{\Vbar~\emph{Benedicámus Dómino \IfInteger{#1}{#1}{\csname benedicamusdominoname#1\endcsname}}, p. \pageref{benedicamusdomino-#1}.}
   \bigskip
   \hrule
 }
@@ -13,6 +13,7 @@
 \label{immaculateconception}
 \section{December 8: Immaculate Conception}
 \subtitle{\nth{1} Class}
+\subtitle{I \& II Vespers}
 
 \def\premagverses{\greseteolcustos{manual}}
 \def\definevesperspropersalt{\def\noeuouae{T}\input{\gabcfolder/inc-ImmaculateConception-1Vespers}}
@@ -20,6 +21,7 @@
 \def\vesperspropersaltnote{At I Vespers:}
 \def\vesperspropersnote{At II Vespers:}
 \def\hymnlabel{hymn-avemarisstella}
+\def\vrlinebreak{F}
 \printvespers[../December8-ImmaculateConception]{inc-ImmaculateConceptionVespers}
 }
 
@@ -149,10 +151,8 @@
 {
 \section{February 2: Purification \& Presentation}
 \subtitle{\nth{2} Class}
-\subtitle{I Vespers}
-\printnote{Psalms and Antiphons of the Circumcision, page \pageref{circumcision}, continuing with the chapter on page \pageref{purification-chapter}.}
-
-\subtitle{II Vespers}
+\subtitle{I \& II Vespers}
+\printnote{At I Vespers, Psalms and Antiphons of the Circumcision, p. \pageref{circumcision}, continuing with the chapter on p. \pageref{purification-chapter}.}
 
 \def\definevesperspropers{\input{\gabcfolder/inc-purification-2Vespers}
   \def\prepsalmfive{\greseteolcustos{manual}}
@@ -163,29 +163,19 @@
 %\def\premag{\def\noeuouae{T}}
 \def\premagverses{\greseteolcustos{manual}}
 \def\prechapter{\label{purification-chapter}}
-\def\printfullhymn{
+\def\printhymnnote{
   {
     \oldneedspace{3\baselineskip}
-    \printnote{Hymn. \emph{Ave Maris Stella}, page \pageref{hymn-avemarisstella}.\\}
-
-    \def\vrlinebreak{T}
-    \oldneedspace{3\baselineskip}
-    \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
+    \printnote{Hymn. \emph{Ave Maris Stella}, p. \pageref{hymn-avemarisstella}.\\}
+    %
+    % \def\vrlinebreak{T}
+    % \oldneedspace{3\baselineskip}
+    % \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
   }
 }
-% \def\printfullhymn{
-%   % TODO this is the same hymn as December 8, Immaculate Conception, so perhaps just reference it.
-%   {\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}}
-%     % print all versicles that could follow hymn?
-%   {
-%     \def\vrlinebreak{T}
-%     \oldneedspace{3\baselineskip}
-%     \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
-%   }
-% }
 \printvespers[../February2-PurificationOfBlessedVirginMary]{inc-purification}
 \bigskip
-\benedicamusdomino{}
+\benedicamusdomino[2]{}
 }
 
 %May 1: St Joseph the Worker (1st class)
@@ -197,15 +187,28 @@
 \def\definevesperspropers{\input{\gabcfolder/inc-StJosephWorker-2Vespers}
   \def\prepsalmfive{\greseteolcustos{manual}}
 }
-\def\definevesperspropersalt{\input{\gabcfolder/inc-StJosephWorker-1Vespers}}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-StJosephWorker-1Vespers}
+  \def\vrlinebreak{F}
+}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
 %\def\premag{\def\noeuouae{T}}
 \def\premagverses{\greseteolcustos{manual}}
 
 \printvespers[../May1-StJosephWorker]{inc-StJosephWorker}
-\bigskip
-\benedicamusdomino{}
+%if feast of St Joseph the worker falls from 2nd through 5th Sunday after Easter, it outranks the Sunday and the Sunday is commemorated
+\medskip
+\printnote{If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{} Mane nobíscum.} in simple commemoration tone, p. \pageref{vr-manenobiscum} and \emph{Collect}.  Otherwise \Vbar~\emph{Benedicámus Dómino 1}, p. \pageref{benedicamusdomino-1}.
+
+\begin{multicols}{2}
+\noindent\emph{\nth{2} Sunday after Easter}, p. \pageref{easter2}.\\
+\emph{\nth{3} Sunday after Easter}, p. \pageref{easter3}.\\
+\emph{\nth{4} Sunday after Easter}, p. \pageref{easter4}.\\
+\emph{\nth{5} Sunday after Easter}, p. \pageref{easter5}.
+\end{multicols}
+}
+% \bigskip
+% \benedicamusdomino{}
 }
 
 %June 24: Nativity of St John the Baptist (1st class)
@@ -220,16 +223,28 @@
 \def\definevesperspropersalt{\input{\gabcfolder/inc-BirthOfJohnTheBaptist-1Vespers}}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
-\def\prevesperspsalms{\noindent\printnote{Chapter and Hymn of II Vespers, page \pageref{june24-chapter}.\\}}
+\def\prevesperspsalms{\noindent\printnote{Chapter and following, page \pageref{june24-chapter}.\\}}
 \def\vesperspsalmslabel{\label{june24-2vespers}}
-\def\prevesperspsalmsalt{\noindent\printnote{For II Vespers psalms and antiphons, go to page \pageref{june24-2vespers}.}}
+\def\prevesperspsalmsalt{\noindent\printnote{II Vespers psalms and antiphons, page \pageref{june24-2vespers}.}\medskip}
 \def\prechapter{\label{june24-chapter}}
 %\def\premag{\def\noeuouae{T}}
 \def\premagverses{\greseteolcustos{manual}}
 
 \printvespers[../June24-BirthOfJohnTheBaptist]{inc-BirthOfJohnTheBaptist}
-\bigskip
-\benedicamusdomino{}
+
+\medskip
+\printnote{If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{} Dirigátur.} in simple commemoration tone, p. \pageref{vr-dirigatur} and \emph{Collect}.  Otherwise \Vbar~\emph{Benedicámus Dómino 1}, p. \pageref{benedicamusdomino-1}.
+
+\begin{multicols}{2}
+\noindent\emph{\nth{2} Sunday after Pentecost}, p. \pageref{pentecost2}.\\
+\emph{\nth{3} Sunday after Pentecost}, p. \pageref{pentecost3}.\\
+\emph{\nth{4} Sunday after Pentecost}, p. \pageref{pentecost4}.\\
+\emph{\nth{5} Sunday after Pentecost}, p. \pageref{pentecost5}.\\
+\emph{\nth{6} Sunday after Pentecost}, p. \pageref{pentecost6}.
+\end{multicols}
+}
+% \bigskip
+% \benedicamusdomino{}
 }
 
 %June 29: Sts Peter \& Paul (1st class)
@@ -244,17 +259,29 @@
 \def\definevesperspropersalt{\input{\gabcfolder/inc-StsPeterAndPaul-1Vespers}}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
-\def\prevesperspsalms{\noindent\printnote{Chapter and Hymn of II Vespers, page \pageref{june29-chapter}.\\}}
+\def\prevesperspsalms{\noindent\printnote{Chapter and following, page \pageref{june29-chapter}.\\}}
 \def\vesperspsalmslabel{\label{june29-2vespers}}
-\def\prevesperspsalmsalt{\noindent\printnote{For II Vespers psalms and antiphons, go to page \pageref{june29-2vespers}.}}
+\def\prevesperspsalmsalt{\noindent\printnote{II Vespers psalms and antiphons, page \pageref{june29-2vespers}.}\medskip}
 \def\prechapter{\label{june29-chapter}}
 %\def\premag{\def\noeuouae{T}}
 \def\premagverses{\greseteolcustos{manual}}
 
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
 \printvespers[../June29-StsPeterAndPaul]{inc-StsPeterAndPaul}
-\bigskip
-\benedicamusdomino{}
+
+\medskip
+\printnote{If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{} Dirigátur.} in simple commemoration tone, p. \pageref{vr-dirigatur} and \emph{Collect}.  Otherwise \Vbar~\emph{Benedicámus Dómino 1}, p. \pageref{benedicamusdomino-1}.
+
+\begin{multicols}{2}
+\noindent\emph{\nth{3} Sunday after Pentecost}, p. \pageref{pentecost3}.\\
+\emph{\nth{4} Sunday after Pentecost}, p. \pageref{pentecost4}.\\
+\emph{\nth{5} Sunday after Pentecost}, p. \pageref{pentecost5}.\\
+\emph{\nth{6} Sunday after Pentecost}, p. \pageref{pentecost6}.\\
+\emph{\nth{7} Sunday after Pentecost}, p. \pageref{pentecost7}.
+\end{multicols}
+}
+% \bigskip
+% \benedicamusdomino{}
 }
 
 %July 1: Most Precious Blood (1st class)
@@ -297,7 +324,7 @@
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 \printvespers[../August6-TransfigurationOfOurLord]{inc-Transfiguration}
 \bigskip
-\benedicamusdomino{}
+\benedicamusdomino[2]{}
 }
 
 %Aug 15: Assumption (1st class)
@@ -317,7 +344,7 @@
 \def\printfullhymn{
   {
     \oldneedspace{3\baselineskip}
-    \printnote{At II Vespers: Hymn. \emph{Ave Maris Stella}, page \pageref{hymn-avemarisstella}. \Vbar{} \emph{Exaltata.} page \pageref{vr-assumption}.\\}
+    \printnote{At II Vespers: Hymn. \emph{Ave Maris Stella}, p. \pageref{hymn-avemarisstella}. \Vbar{} \emph{Exaltata.} p. \pageref{vr-assumption}.\\}
 
     \printnote{\vesperspropersaltnote}
     \definevesperspropersalt
@@ -332,8 +359,21 @@
 }
 
 \printvespers[../August15-AssumptionOfTheBlessedVirginMary]{inc-Assumption}
-\bigskip
-\benedicamusdomino{}
+
+%     TODO Feast of Assumption (8/15) could have commem of Saturday before 3rd Sunday of August or 9th to 13th Sunday after Pentecost
+\medskip
+\printnote{If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{} Dirigátur.} in simple commemoration tone, p. \pageref{vr-dirigatur} and \emph{Collect}.  Otherwise \Vbar~\emph{Benedicámus Dómino 1}, p. \pageref{benedicamusdomino-1}.
+
+\begin{multicols}{2}
+\noindent\emph{\nth{9} Sunday after Pentecost}, p. \pageref{pentecost9}.\\
+\emph{\nth{10} Sunday after Pentecost}, p. \pageref{pentecost10}.\\
+\emph{\nth{11} Sunday after Pentecost}, p. \pageref{pentecost11}.\\
+\emph{\nth{12} Sunday after Pentecost}, p. \pageref{pentecost12}.\\
+\emph{\nth{13} Sunday after Pentecost}, p. \pageref{pentecost13}.
+\end{multicols}
+}
+% \bigskip
+% \benedicamusdomino{}
 }
 
 %Sep 14: Exaltation of Holy Cross (2nd class)
@@ -341,7 +381,6 @@
 \section{September 14: Exaltation of the Holy Cross}
 \subtitle{\nth{2} Class}
 \subtitle{I \& II Vespers}
-\printnote{At I Vespers, the }
 
 \def\definevesperspropers{\input{\gabcfolder/inc-ExaltationOfTheHolyCross-2Vespers}
   \def\prepsalmfive{\greseteolcustos{manual}}
@@ -355,7 +394,7 @@
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
 \printvespers[../September14-ExaltationOfTheHolyCross]{inc-ExaltationOfTheHolyCross}
 \bigskip
-\benedicamusdomino{}
+\benedicamusdomino[2]{}
 }
 
 %Sep 29: Dedication of St Michael (1st class)
@@ -374,8 +413,20 @@
 \def\premagverses{\greseteolcustos{manual}}
 
 \printvespers[../September29-DedicationOfChurchOfStMichaelArchangel]{inc-DedicationStMichael}
-\bigskip
-\benedicamusdomino{}
+
+\medskip
+\printnote{If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{} Dirigátur.} in simple commemoration tone, p. \pageref{vr-dirigatur} and \emph{Collect}.  Otherwise \Vbar~\emph{Benedicámus Dómino 1}, p. \pageref{benedicamusdomino-1}.
+
+\begin{multicols}{2}
+\noindent\emph{\nth{16} Sunday after Pentecost}, p. \pageref{pentecost16}.\\
+\emph{\nth{17} Sunday after Pentecost}, p. \pageref{pentecost17}.\\
+\emph{\nth{18} Sunday after Pentecost}, p. \pageref{pentecost18}.\\
+\emph{\nth{19} Sunday after Pentecost}, p. \pageref{pentecost19}.\\
+\emph{\nth{20} Sunday after Pentecost}, p. \pageref{pentecost20}.
+\end{multicols}
+}
+% \bigskip
+% \benedicamusdomino{}
 }
 
 %Last Sunday in October: Christ the King (1st class)
@@ -393,8 +444,12 @@
 %\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
 
 \printvespers[../OctoberLastSunday-ChristTheKing]{inc-ChristTheKing}
+\noindent
+\printnote{If today is October 31, the First Vespers of All Saints is commemorated with \emph{Magnificat}, p. \pageref{allsaints1-magnificat}; \emph{\Vbar{}~Lætámini}. in simle commemoration tone, p. \pageref{allsaints1-vr}; and \emph{Collect}, p. \pageref{allsaints-collect}.  Otherwise \Vbar~\emph{Benedicámus Dómino 1}, p. \pageref{benedicamusdomino-1}.}
 \bigskip
-\benedicamusdomino{}
+\hrule
+%\bigskip
+%\benedicamusdomino{}
 }
 
 %Nov 1: All Saints (1st class)
@@ -406,15 +461,30 @@
 \def\definevesperspropers{\input{\gabcfolder/inc-AllSaints-2Vespers}
   \def\prepsalmfive{\greseteolcustos{manual}}
 }
-\def\definevesperspropersalt{\input{\gabcfolder/inc-AllSaints-1Vespers}}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-AllSaints-1Vespers}\def\premag{\label{allsaints1-magnificat}}}
+\def\vraltlabel{allsaints1-vr}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
+\def\begincollectcols{\label{allsaints-collect}\begin{parcolumns}[rulebetween]{2}}
 %\def\premag{\def\noeuouae{T}}
 \def\premagverses{\greseteolcustos{manual}}
 
 \printvespers[../November1-AllSaints]{inc-AllSaints}
-\bigskip
-\benedicamusdomino{}
+
+\medskip
+\printnote{If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{} Dirigátur.} in simple commemoration tone, p. \pageref{vr-dirigatur} and \emph{Collect}.  Otherwise \Vbar~\emph{Benedicámus Dómino 1}, p. \pageref{benedicamusdomino-1}.
+
+\begin{multicols}{2}
+\noindent\emph{\nth{21} Sunday after Pentecost}, p. \pageref{pentecost21}.\\
+\emph{\nth{22} Sunday after Pentecost}, p. \pageref{pentecost22}.\\
+\emph{\nth{23} Sunday after Pentecost}, p. \pageref{pentecost23}.\\
+\emph{\nth{4} Sunday after Epiphany}, p. \pageref{epiphany4}.
+\end{multicols}
+}
+
+%     TODO Feast of All Saints (11/1) commem of Sunday, Saturday before 1st Sunday of November, 21st - 23rd Sunday after Pentecost or 4th after Epiphany
+% \bigskip
+% \benedicamusdomino{}
 }
 
 %Nov 9: Dedication of Archbasilica of Holy Savior (2nd class)
@@ -435,7 +505,7 @@
 
 \printvespers[../CommonOfDedicationOfChurch]{inc-DedicationOfChurch}
 \bigskip
-\benedicamusdomino{}
+\benedicamusdomino[2]{}
 }
 
 }

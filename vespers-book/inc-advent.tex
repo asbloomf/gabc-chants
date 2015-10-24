@@ -1,7 +1,7 @@
 \chapter{Proper of the Time -- Advent Season}
 {
 \newcommand{\benedicamusdomino}[1][advent]{
-	\noindent\printnote{\Vbar~\emph{Benedicámus Dómino}, page \pageref{benedicamusdomino-#1}.}
+	\noindent\printnote{\Vbar~\emph{Benedicámus Dómino \IfInteger{#1}{#1}{\csname benedicamusdominoname#1\endcsname}}, page \pageref{benedicamusdomino-#1}.}
 	\bigskip
 	\hrule
 }
@@ -89,7 +89,7 @@
 {
 \section{Second Sunday of Advent}
 \subtitle{\nth{1} Class}
-\printnote{If today is December 7, Vespers are of the Sunday with a Commemoration of the First Vespers of the Immaculate Conception.  If today is December 8, the Feast of the Immaculate Conception is celebrated with a Commemoration of this Sunday (see page \pageref{immaculateconception}).}
+\printnote{If today is December 7, the First Vespers of the Immaculate Conception is commemorated after Vespers of the Sunday.  If today is December 8, the Feast of the Immaculate Conception is celebrated with a Commemoration of this Sunday, page \pageref{immaculateconception}).}
 \medskip
 \def\preanttwo{\needspace{5\baselineskip}}
 \def\prepsalmthree{\needspace{5\baselineskip}}
@@ -99,7 +99,7 @@
 \printvespers[../Advent2]{inc-Advent2-Vespers2}
 
 \noindent
-\printnote{If today is December 7, the First Vespers of the Immaculate Conception is commemorated as follows.  Otherwise \Vbar~\emph{Bendicámus Dómino}, page \pageref{benedicamusdomino-advent}.}
+\printnote{If today is December 7, the First Vespers of the Immaculate Conception is commemorated as follows.  Otherwise \Vbar~\emph{Benedicámus Dómino \benedicamusdominonameadvent{}}, page \pageref{benedicamusdomino-advent}.}
 \bigskip
 \hrule
 }
@@ -112,7 +112,7 @@
 \printcommemoration[../December8-ImmaculateConception]{commemorationImmaculateConception-Vespers1}
 
 \bigskip
-\benedicamusdomino[1]
+\benedicamusdomino{}
 }
 
 
@@ -156,7 +156,7 @@
 {
 \section{Fourth Sunday of Advent}
 \subtitle{\nth{1} Class}
-\printnote{If today is December 24, First Vespers of Christmas are used on page \pageref{christmas}.}
+\printnote{If today is December 24, First Vespers of Christmas is used on page \pageref{christmas}.}
 \medskip
 
 \def\preanttwo{\def\noeuouae{T}}

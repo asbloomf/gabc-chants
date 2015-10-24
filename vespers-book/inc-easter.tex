@@ -1,7 +1,7 @@
 {
 \def\printcommemnote{\smallskip
 \noindent
-\printnote{\commemorations{}  Otherwise \Vbar~\emph{Bendicámus Dómino}, page \pageref{benedicamusdomino-easter}.}
+\printnote{\commemorations{}  Otherwise \Vbar~\emph{Benedicámus Dómino \benedicamusdominonameeaster{}}, page \pageref{benedicamusdomino-easter}.}
 }
 {
 \chapter{Proper of the Time -- Easter}
@@ -41,7 +41,7 @@
 }
 {
 \newcommand{\benedicamusdomino}[1][easter]{
-    \noindent\printnote{\Vbar~\emph{Benedicámus Dómino}, page \pageref{benedicamusdomino-#1}.}
+  \noindent\printnote{\Vbar~\emph{Benedicámus Dómino \IfInteger{#1}{#1}{\csname benedicamusdominoname#1\endcsname}}, page \pageref{benedicamusdomino-#1}.}
     \bigskip
     \hrule
 }
@@ -73,19 +73,16 @@
 \benedicamusdomino{}
 }
 
-%{
-%    TODO If feast of St Joseph the worker falls from 2nd through 5th Sunday after Easter, it outranks the Sunday and the Sunday is commemorated
-%   Only Low Sunday and the Ascension itself are likely to outrank it
-%}
-
 {
 \section{\nth{2} Sunday after Easter}
+\label{easter2}
 \printcommonvespers{}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster2}
 \benedicamusdomino{}
 }
 {
 \section{\nth{3} Sunday after Easter}
+\label{easter3}
 \printcommonvespers{}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster3}
@@ -94,6 +91,7 @@
 
 {
 \section{\nth{4} Sunday after Easter}
+\label{easter4}
 \printcommonvespers{}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster4}
 \benedicamusdomino{}
@@ -101,6 +99,7 @@
 
 {
 \section{\nth{5} Sunday after Easter}
+\label{easter5}
 \printcommonvespers{}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster5}
 \benedicamusdomino{}
@@ -110,8 +109,6 @@
 % \section{Ascension of Our Lord}
 % \subtitle{\nth{1} Class}
 % TODO
-
-% Also need to do St Joseph the Worker
 
 % \def\commemorations{If today is April 30 or May 1, the First Vespers of St Joseph the Worker is commemorated as on page \pageref{stjoseph-worker-commem}.}
 % \printcommemnote{}

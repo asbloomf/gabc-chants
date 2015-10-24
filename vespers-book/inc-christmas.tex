@@ -1,15 +1,15 @@
 \chapter{Proper of the Time -- Christmas Season}
 {
-\newcommand{\benedicamusdomino}[1][advent]{
-	\noindent\printnote{\Vbar~\emph{Benedicámus Dómino}, page \pageref{benedicamusdomino-#1}.}
+\newcommand{\benedicamusdomino}[1][1]{
+  \noindent\printnote{\Vbar~\emph{Benedicámus Dómino \IfInteger{#1}{#1}{\csname benedicamusdominoname#1\endcsname}}, page \pageref{benedicamusdomino-#1}.}
 	\bigskip
 	\hrule
 }
 
 {
 \label{christmas}
-\section{Nativity of our Lord -- I Vespers}
-\subtitle{December 24, \nth{1} Class}
+\section{December 24: Nativity of our Lord -- I Vespers}
+\subtitle{\nth{1} Class}
 
 \newcommand{\printhymnnote}{
 	\noindent\printnote{Hymn. \emph{Jesu Redémptor ómnium}, page \pageref{hymn-jesuredemptoromnium}.\\}
@@ -22,12 +22,13 @@
 }
 
 {
-\section{Nativity of our Lord -- II Vespers}
-\subtitle{December 25, \nth{1} Class}
+\section{December 25: Nativity of our Lord -- II Vespers}
+\subtitle{\nth{1} Class}
 \vspace{-1.5\baselineskip}
 \subtitle{\&}
 \vspace{-1.5\baselineskip}
 \section{Sunday within the Octave}
+\subtitle{\nth{2} Class}
 
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Christmas-Vespers2}}
 \def\definevesperspropers{\input{\gabcfolder/inc-SundayWithinOctaveOfChristmas-Vespers2}}
@@ -43,10 +44,10 @@
 }
 
 {
-\section{Octave of the Nativity of our Lord}
+\section{January 1: Octave of the Nativity of our Lord}
 \subtitle{\nth{1} Class}
 
-\subtitle{January 1, I \& II Vespers}
+\subtitle{I \& II Vespers}
 \label{circumcision}
 
 \def\definevesperspropers{\input{\gabcfolder/inc-Circumcision-Vespers2}}
@@ -81,18 +82,16 @@
 
 \printvespers[../HolyName]{inc-HolyName-common}
 
-\benedicamusdomino{}
+\benedicamusdomino[2]{}
 }
 
 {
 \chapter{Proper of the Time -- Epiphany Season}
 \label{epiphany}
-\section{The Epiphany of Our Lord}
+\section{January 6: The Epiphany of Our Lord}
 \subtitle{\nth{1} Class}
 
-\subtitle{January 5, I Vespers, \emph{all as at II Vespers except where indicated.}}
-
-\subtitle{January 6, II Vespers}
+\subtitle{I \& II Vespers}
 
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Epiphany-Vespers1}}
 \def\definevesperspropers{\input{\gabcfolder/inc-Epiphany-Vespers2}}
@@ -112,7 +111,7 @@
 
 \printvespers[../HolyFamily]{inc-HolyFamily-Vespers2}
 
-\benedicamusdomino{}
+\benedicamusdomino[2]{}
 }
 
 }

@@ -5,12 +5,11 @@
 	\printnote{From Vespers of Sundays throughout the year on page \pageref{sundayvespers}.\\}
 }
 \def\printcommemnote{\smallskip
-\noindent
-\printnote{\commemorations{}  Otherwise \Vbar~\emph{Bendicámus Dómino}, page \pageref{benedicamusdomino-lent}.}
+\noindent\printnote{\commemorations{}  Otherwise \Vbar~\emph{Benedicámus Dómino \benedicamusdominonamelent{}}, page \pageref{benedicamusdomino-lent}.}
 }
 {
 \newcommand{\benedicamusdomino}[1][sunday]{
-	\noindent\printnote{\Vbar~\emph{Benedicámus Dómino}, page \pageref{benedicamusdomino-#1}.}
+  \noindent\printnote{\Vbar~\emph{Benedicámus Dómino \IfInteger{#1}{#1}{\csname benedicamusdominoname#1\endcsname}}, page \pageref{benedicamusdomino-#1}.}
 	\bigskip
 	\hrule
 }
@@ -53,11 +52,11 @@
 {
 \renewcommand{\printcommonvespers}[1][2]{
 	\subtitle{\nth{#1} Class}
-	\printnote{From Vespers of Sundays on page \pageref{sundayvespers} until the chapter exclusive.\\}
+	\printnote{From Vespers of Sundays throughout the year on page \pageref{sundayvespers}.\\}
 }
 
 \newcommand{\benedicamusdomino}[1][lent]{
-	\noindent\printnote{\Vbar~\emph{Benedicámus Dómino}, page \pageref{benedicamusdomino-#1}.}
+  \noindent\printnote{\Vbar~\emph{Benedicámus Dómino \IfInteger{#1}{#1}{\csname benedicamusdominoname#1\endcsname}}, page \pageref{benedicamusdomino-#1}.}
 	\bigskip
 	\hrule
 }
