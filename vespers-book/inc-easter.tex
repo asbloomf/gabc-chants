@@ -1,7 +1,7 @@
 {
-\def\printcommemnote{\smallskip
+\newcommand{\printcommemnote}[1][easter]{\smallskip
 \noindent
-\printnote{\commemorations{}  Otherwise \Vbar~\emph{Benedicámus Dómino \benedicamusdominonameeaster{}}, page \pageref{benedicamusdomino-easter}.}
+\printnote{\commemorations{}  Otherwise \Vbar~\emph{Benedicámus Dómino \benedicamusdominonameeaster{}}, page \pageref{benedicamusdomino-#1}.}
 }
 {
 \chapter{Proper of the Time -- Easter}
@@ -105,19 +105,37 @@
 \benedicamusdomino{}
 }
 
-% {
-% \section{Ascension of Our Lord}
-% \subtitle{\nth{1} Class}
-% TODO
+{
+\section{Ascension of Our Lord}
+\subtitle{\nth{1} Class}
+\subtitle{I \& II Vespers}
 
-% \def\commemorations{If today is April 30 or May 1, the First Vespers of St Joseph the Worker is commemorated as on page \pageref{stjoseph-worker-commem}.}
-% \printcommemnote{}
-% }
+\def\premagverses{\greseteolcustos{manual}}
+\def\begincollectcols{\vspace{-0.5\baselineskip}\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
+\def\definevesperspropers{\input{\gabcfolder/inc-Ascension-2Vespers}
+    \def\prepsalmfive{\greseteolcustos{manual}}
+}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-Ascension-1Vespers}}
+\def\vesperspropersnote{At II Vespers:}
+\def\vesperspropersaltnote{At I Vespers:}
+\def\hymnlabel{hymn-salutishumanaesator}
+\printvespers[../Ascension]{inc-Ascension}
+
+\def\commemorations{If today is April 30 or May 1, the First Vespers of St Joseph the Worker is commemorated as on page \pageref{stjoseph-worker-commem}.}
+\printcommemnote[1]{}
+\medskip
+\hrule
+}
 
 {
 \section{Sunday after the Ascension}
 \printcommonvespers{}
-\let\printhymnnote=\undefined
+%\let\printhymnnote=\undefined
+\renewcommand{\printhymnnote}{
+    \noindent\printnote{Hymn. \emph{Salútis humánæ Sator}, page \pageref{hymn-salutishumanaesator}.}
+    \def\vrlinebreak{T}
+    \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
+}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatSundayAfterAscension}
 \benedicamusdomino{}
 }
