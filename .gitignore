@@ -11,3 +11,4 @@ misc/*-systems.*
 *.toc
 *.gtex
 *.greaux
+temp/
