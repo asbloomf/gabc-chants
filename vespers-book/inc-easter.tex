@@ -37,7 +37,7 @@
 
 \newcommand{\printcommonvespers}[1][2]{
     \subtitle{\nth{#1} Class}
-    \printnote{From Vespers of Sundays in Eastertide on page \pageref{sundayvespers-easter}.\\}
+    \printnote{From \emph{Vespers of Sundays in Paschaltide}, page \pageref{sundayvespers-easter}.\\}
 }
 {
 \newcommand{\benedicamusdomino}[1][easter]{
@@ -47,7 +47,7 @@
 }
 
 \newcommand{\printhymnnote}{
-    \noindent\printnote{Hymn. \emph{Ad Régias Agni Dapes}, page \pageref{hymn-adregiasagnidapes}.
+    \noindent\printnote{Hymn.~\emph{Ad Régias Agni Dapes}, page \pageref{hymn-adregiasagnidapes}.
     \Vbar~\emph{Mane nobíscum}, page \pageref{vr-manenobiscum}.}
 }
 
@@ -118,6 +118,7 @@
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Ascension-1Vespers}}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
+\let\printhymnnote=\undefined
 \def\hymnlabel{hymn-salutishumanaesator}
 \printvespers[../Ascension]{inc-Ascension}
 
@@ -132,7 +133,7 @@
 \printcommonvespers{}
 %\let\printhymnnote=\undefined
 \renewcommand{\printhymnnote}{
-    \noindent\printnote{Hymn. \emph{Salútis humánæ Sator}, page \pageref{hymn-salutishumanaesator}.}
+    \noindent\printnote{Hymn.~\emph{Salútis humánæ Sator}, page \pageref{hymn-salutishumanaesator}.}
     \def\vrlinebreak{T}
     \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
 }

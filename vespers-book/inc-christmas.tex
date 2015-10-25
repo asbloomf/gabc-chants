@@ -12,7 +12,7 @@
 \subtitle{\nth{1} Class}
 
 \newcommand{\printhymnnote}{
-	\noindent\printnote{Hymn. \emph{Jesu Redémptor ómnium}, page \pageref{hymn-jesuredemptoromnium}.\\}
+	\noindent\printnote{Hymn.~\emph{Jesu Redémptor ómnium}, page \pageref{hymn-jesuredemptoromnium}.\\}
 }
 \def\definevesperspropers{\input{\gabcfolder/inc-Christmas-Vespers1}}
 \newcommand{\preantfour}{\needspace{5\baselineskip}}
@@ -22,12 +22,13 @@
 }
 
 {
+\sectionmark{December 25: Nativity of our Lord \& Sunday within the Octave}
 \section{December 25: Nativity of our Lord -- II Vespers}
 \subtitle{\nth{1} Class}
 \vspace{-1.5\baselineskip}
 \subtitle{\&}
 \vspace{-1.5\baselineskip}
-\section{Sunday within the Octave}
+\section[December 25: Nativity of our Lord \& Sunday within the Octave]{Sunday within the Octave}
 \subtitle{\nth{2} Class}
 
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Christmas-Vespers2}}
@@ -53,12 +54,12 @@
 \def\definevesperspropers{\input{\gabcfolder/inc-Circumcision-Vespers2}}
 \def\preantthree{\needspace{10\baselineskip}}
  \newcommand{\printhymnnote}{
- 	\noindent\printnote{Hymn. \emph{Jesu Redémptor ómnium}, page \pageref{hymn-jesuredemptoromnium}.\\}
+ 	\noindent\printnote{Hymn.~\emph{Jesu Redémptor ómnium}, page \pageref{hymn-jesuredemptoromnium}.\\}
  }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Circumcision-Vespers1}}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
-\def\prechapter{\printnote{For the Feast of the Purification \& Presentation, continue with the chapter on page \pageref{purification-chapter}.}}
+\def\prechapter{\printnote{For the Feast of the Purification \& Presentation, continue to \emph{Chapter}, p.~\pageref{purification-chapter}.}\vspace{-1\baselineskip}}
 \printvespers[../ChristmasOctave-Circumcision]{inc-Circumcision-Vespers-common}
 
 \benedicamusdomino{}
@@ -97,6 +98,8 @@
 \def\definevesperspropers{\input{\gabcfolder/inc-Epiphany-Vespers2}}
 \def\vesperspropersaltnote{At I Vespers:}
 \def\vesperspropersnote{At II Vespers:}
+\def\prechapter{\vspace{-1\baselineskip}}
+\def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
 
 \printvespers[../Epiphany]{inc-Epiphany-Vespers}
 

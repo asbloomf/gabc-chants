@@ -114,11 +114,11 @@ five%
 \expandafter\edef\csname psalm\antnum end\endcsname{#4} % only used internally
 %\def\emptypsalmend{per}
 \if\csname psalm\antnum tone\endcsname p % must be T. Per.
-  \expandafter\def\csname ant\antnum linetwo\endcsname{T. Per.}
+  \expandafter\def\csname ant\antnum linetwo\endcsname{T.~Per.}
   \expandafter\def\csname psalm\antnum tone\endcsname{per} % only used internally
   \expandafter\def\csname psalm\antnum end\endcsname{} % only used internally
 \else
-  \expandafter\edef\csname ant\antnum linetwo\endcsname{\csname psalm\antnum tone\endcsname. #4}
+  \expandafter\edef\csname ant\antnum linetwo\endcsname{\csname psalm\antnum tone\endcsname.~#4}
 \fi
 
 \ifx\psalmclef\undefined%
@@ -335,11 +335,11 @@ five%
 \StrLeft{#3}{1}[\psalmtone]
 \StrGobbleLeft{#3}{1}[\psalmend]
 \if\psalmtone p % must be T. Per.
-  \def\antlinetwo{T. Per.}
+  \def\antlinetwo{T.~Per.}
   \def\psalmtone{per} % only used internally
   \def\psalmend{} % only used internally
 \else
-  \edef\antlinetwo{\psalmtone. \psalmend}
+  \edef\antlinetwo{\psalmtone.~\psalmend}
 \fi
 \def\printantiphon{T}
 \if\onlyoneant T%
@@ -348,7 +348,7 @@ five%
     \def\printantiphon{F}
   \fi
 \else%
-  \edef\antlineone{#1. Ant.}
+  \edef\antlineone{#1.~Ant.}
 \fi%
 %TODO: format mode and ending properly into antlinetwo
 
@@ -759,7 +759,7 @@ five%
 \edef\magtone{#1}
 \edef\magend{#2}
 \newcommand{\magant}{MagnificatAntiphon}
-\newcommand{\magantlinetwo}{Ant. \magtone. \magend}
+\newcommand{\magantlinetwo}{Ant.~\magtone.~\magend}
 \ifx\maggrassi\undefined\def\maggrassi{F}\fi
 \ifx\magprotodiogenes\undefined\def\magprotodiogenes{F}\fi
 \ifx\magsmc\undefined\def\magsmc{F}\fi
@@ -893,7 +893,7 @@ five%
 \edef\anttex{#4}
 \StrLeft{#2}{1}[\anttone]
 \StrGobbleLeft{#2}{1}[\antend]
-\edef\antlinetwo{Ant. \anttone. \antend}
+\edef\antlinetwo{Ant.~\anttone.~\antend}
 \ifx\magpsalmclef\undefined\else\let\psalmclef=\magpsalmclef\fi
 \ifx\maggrassi\undefined\def\maggrassi{F}\fi
 \ifx\magprotodiogenes\undefined\def\magprotodiogenes{F}\fi

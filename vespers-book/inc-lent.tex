@@ -2,7 +2,7 @@
 {
 \newcommand{\printcommonvespers}[1][2]{
 	\subtitle{\nth{#1} Class}
-	\printnote{From Vespers of Sundays throughout the year on page \pageref{sundayvespers}.\\}
+	\printnote{From \emph{Vespers of Sundays throughout the year}, page \pageref{sundayvespers}.\\}
 }
 \def\printcommemnote{\smallskip
 \noindent\printnote{\commemorations{}  Otherwise \Vbar~\emph{Benedicámus Dómino \benedicamusdominonamelent{}}, page \pageref{benedicamusdomino-lent}.}
@@ -14,13 +14,16 @@
 	\hrule
 }
 \newcommand{\printhymnnote}{
-	\noindent\printnote{Hymn. \emph{Lucis Creátor}, page \pageref{hymn-luciscreator}.
+	\noindent\printnote{Hymn.~\emph{Lucis Creátor}, page \pageref{hymn-luciscreator}.
 	\Vbar~\emph{Dirigátur}, page \pageref{vr-dirigatur}.}
 }
 
 {
 \section{Septuagesima}
+%\printnote{N.B.~From this Sunday until Palm Sunday inclusive, \emph{Allelúia} is replaced by \emph{Laus tibi\ldots{}} in the \emph{Deus in adjutórium}.}
 \printcommonvespers{}
+
+\printnote{N.B.~From this Sunday until Palm Sunday inclusive, at the \emph{Deus, in adjutórium}, the \emph{Allelúia} is replaced by \emph{Laus tibi, Dómine, Rex æternæ glóriæ}.}
 \printvespersmag[../Lent]{inc-VespersMagnificatSeptuagesima}
 
 \bigskip
@@ -52,7 +55,7 @@
 {
 \renewcommand{\printcommonvespers}[1][2]{
 	\subtitle{\nth{#1} Class}
-	\printnote{From Vespers of Sundays throughout the year on page \pageref{sundayvespers}.\\}
+	\printnote{From \emph{Vespers of Sundays throughout the year}, page \pageref{sundayvespers}.\\}
 }
 
 \newcommand{\benedicamusdomino}[1][lent]{
@@ -74,7 +77,7 @@
 }
 
 \newcommand{\printhymnnote}{
-	\noindent\printnote{Hymn. \emph{Audi, benígne Cónditor}, page \pageref{hymn-audibenigneconditor}.
+	\noindent\printnote{Hymn.~\emph{Audi, benígne Cónditor}, page \pageref{hymn-audibenigneconditor}.
 	\Vbar~\emph{Angelis suis}, page \pageref{vr-angelissuis}.}
 }
 
@@ -148,7 +151,7 @@
 \section{Palm Sunday}
 \printcommonvespers[1]
 \renewcommand{\printhymnnote}{
-	\noindent\printnote{Hymn. \emph{Vexílla Regis}, page \pageref{hymn-vexillaregis}.
+	\noindent\printnote{Hymn.~\emph{Vexílla Regis}, page \pageref{hymn-vexillaregis}.
 	\Vbar~\emph{Eripe me, Dómine}, page \pageref{vr-eripeme}.}
 }
 \printvespersmag[../Lent]{inc-VespersMagnificatPassion2}

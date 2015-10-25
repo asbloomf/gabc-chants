@@ -360,6 +360,7 @@
 			\ifx\definevesperspropersalt\undefined\else
 			{
 				\ifx\vesperspropersaltnote\undefined\else
+					\oldneedspace{\baselineskip}
 					\printnote{\vesperspropersaltnote}
 				\fi
 				\definevesperspropersalt
@@ -370,6 +371,7 @@
 			\ifx\definevesperspropers\undefined\else
 			{
 				\ifx\vesperspropersnote\undefined\else
+					\oldneedspace{3\baselineskip}
 					\printnote{\vesperspropersnote}
 				\fi
 				\definevesperspropers
@@ -377,7 +379,7 @@
 			}
 			\fi
 		\else
-			\vspace{-\baselineskip}
+			%\vspace{-\baselineskip}
 			\oldneedspace{3\baselineskip}
 			\ifx\prechapter\undefined\else\prechapter\fi
 			\printchapter{\chaptertext}{\chaptertranslation}
@@ -442,7 +444,7 @@
 		    \let\preant=\premag
 		    \def\nomagtitle{T}
 		    \if\altmagsame T{
-		    	\printgabc{At Magn.}{Ant. \magtone{}. \magend}{\magantinitial}{\maganttex}
+		    	\printgabc{At Magn.}{Ant.~\magtone{}.~\magend}{\magantinitial}{\maganttex}
 		    	\translation[]{\anttranslation}
 		    	\bigskip
 		    }\else{

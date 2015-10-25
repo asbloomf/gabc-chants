@@ -6,7 +6,7 @@
 	\hrule
 }
 \newcommand{\printhymnnote}{
-	\noindent\printnote{Hymn. \emph{Creátor alme síderum}, page \pageref{hymn-creatoralmesiderum}.
+	\noindent\printnote{Hymn.~\emph{Creátor alme síderum}, page \pageref{hymn-creatoralmesiderum}.
 	\Vbar~\emph{Roráte}, page \pageref{vr-rorate}.}
 }
 \newcommand{\printoant}[2]{
@@ -15,10 +15,10 @@
 {
 \oldneedspace{5\baselineskip}
 \subtitle{December #1.}
-\printgabc{\small At Magn.}{\small \oldstylenums{Ant. 2. D}}{O}{December#1-MagAntiphon}
+\printgabc{\small At Magn.}{\small \oldstylenums{Ant.~2.~D}}{O}{December#1-MagAntiphon}
 \translation[]{#2}
 \medskip
-\emph{Magnificat is found on page \pageref{oantiphon-magnificat}.}
+\emph{\emph{Magnificat}.~page \pageref{oantiphon-magnificat}.}
 }
 }
 
@@ -89,7 +89,7 @@
 {
 \section{Second Sunday of Advent}
 \subtitle{\nth{1} Class}
-\printnote{If today is December 7, the First Vespers of the Immaculate Conception is commemorated after Vespers of the Sunday.  If today is December 8, the Feast of the Immaculate Conception is celebrated with a Commemoration of this Sunday, page \pageref{immaculateconception}).}
+\printnote{If today is December 7, the First Vespers of the Immaculate Conception is commemorated after Vespers of the Sunday.  If today is December 8, the Feast of the Immaculate Conception is celebrated with a Commemoration of this Sunday, page \pageref{immaculateconception}.}
 \medskip
 \def\preanttwo{\needspace{5\baselineskip}}
 \def\prepsalmthree{\needspace{5\baselineskip}}
@@ -145,6 +145,7 @@
 	\def\preverses{\greseteolcustos{manual}}
 	\printmag{2D}{O}{December17-MagAntiphon}
 }
+\def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.48\linewidth}]{2}}
 \printvespers[../Advent3]{inc-Advent3}
 \bigskip
 \benedicamusdomino{}
