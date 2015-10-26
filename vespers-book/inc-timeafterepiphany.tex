@@ -1,9 +1,7 @@
 \chapter{Proper of the Time -- After Epiphany}
 {
 \newcommand{\benedicamusdomino}[1][sunday]{
-  \noindent\printnote{\Vbar~\emph{Benedicámus Dómino \IfInteger{#1}{#1}{\csname benedicamusdominoname#1\endcsname}}, page \pageref{benedicamusdomino-#1}.}
-	\bigskip
-	\hrule
+  \benedicamusdominomaster{#1}
 }
 \def\printhymnnote{}
 \def\printcommonvespers{

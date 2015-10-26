@@ -5,14 +5,13 @@
 	\printnote{From \emph{Vespers of Sundays throughout the year}, page \pageref{sundayvespers}.\\}
 }
 \def\printcommemnote{\smallskip
-\noindent\printnote{\commemorations{}  Otherwise \Vbar~\emph{Benedicámus Dómino \benedicamusdominonamelent{}}, page \pageref{benedicamusdomino-lent}.}
+\noindent\printnote{\commemorations{}  Otherwise \benedicamusdominoreference{lent}}
 }
 {
 \newcommand{\benedicamusdomino}[1][sunday]{
-  \noindent\printnote{\Vbar~\emph{Benedicámus Dómino \IfInteger{#1}{#1}{\csname benedicamusdominoname#1\endcsname}}, page \pageref{benedicamusdomino-#1}.}
-	\bigskip
-	\hrule
+  \benedicamusdominomaster{#1}
 }
+
 \newcommand{\printhymnnote}{
 	\noindent\printnote{Hymn.~\emph{Lucis Creátor}, page \pageref{hymn-luciscreator}.
 	\Vbar~\emph{Dirigátur}, page \pageref{vr-dirigatur}.}
@@ -24,6 +23,8 @@
 \printcommonvespers{}
 
 \printnote{N.B.~From this Sunday until Palm Sunday inclusive, at the \emph{Deus, in adjutórium}, the \emph{Allelúia} is replaced by \emph{Laus tibi, Dómine, Rex æternæ glóriæ}.}
+\def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}}
+
 \printvespersmag[../Lent]{inc-VespersMagnificatSeptuagesima}
 
 \bigskip
@@ -59,9 +60,7 @@
 }
 
 \newcommand{\benedicamusdomino}[1][lent]{
-  \noindent\printnote{\Vbar~\emph{Benedicámus Dómino \IfInteger{#1}{#1}{\csname benedicamusdominoname#1\endcsname}}, page \pageref{benedicamusdomino-#1}.}
-	\bigskip
-	\hrule
+  \benedicamusdominomaster{#1}
 }
 
 {
@@ -70,6 +69,7 @@
 \def\hymnlabel{hymn-audibenigneconditor}
 \def\vrlabel{vr-angelissuis}
 \def\hymninput{\gabcfolder/inc-hymn-AudiBenigneConditor}
+%\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 \printvespersmag[../Lent]{inc-VespersMagnificatLent1}
 
 \bigskip
@@ -86,7 +86,7 @@
 \printcommonvespers[1]
 \printvespersmag[../Lent]{inc-VespersMagnificatLent2}
 
-\def\commemorations{If today is March 18 or 19, the First Vespers of St Joseph is commemorated as follows.}
+\def\commemorations{If today is March 18 or 19, First Vespers of St Joseph is commemorated as follows.}
 \printcommemnote{}
 }
 
@@ -107,7 +107,7 @@
 \printcommonvespers[1]
 \printvespersmag[../Lent]{inc-VespersMagnificatLent3}
 
-\def\commemorations{If today is March 18 or 19, the First Vespers of St Joseph is commemorated as on page \pageref{stjoseph-commem}.  If today is March 24 or 25, the First Vespers of the Annunciation is commemorated as follows.}
+\def\commemorations{If today is March 18 or 19, First Vespers of St Joseph is commemorated as on page \pageref{stjoseph-commem}.  If today is March 24 or 25, First Vespers of the Annunciation is commemorated as follows.}
 \printcommemnote{}
 }
 
@@ -115,14 +115,14 @@
 \hrule
 {
 \label{annunciation-commem}
-%\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43\linewidth}]{2}}
+\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43\linewidth}]{2}}
 \printcommemoration[../March25-Annunciation]{commemorationAnnunciation-Vespers1}
 
 \bigskip
 \benedicamusdomino{}
 }
 
-\def\commemorations{If today is March 18 or 19, the First Vespers of St Joseph is commemorated as on page \pageref{stjoseph-commem}.  If today is March 24 or 25, the First Vespers of the Annunciation is commemorated as on page \pageref{annunciation-commem}.}
+\def\commemorations{If today is March 18 or 19, First Vespers of St Joseph is commemorated as on page \pageref{stjoseph-commem}.  If today is March 24 or 25, First Vespers of the Annunciation is commemorated as on page \pageref{annunciation-commem}.}
 {
 \section{\nth{4} Sunday of Lent}
 \printcommonvespers[1]

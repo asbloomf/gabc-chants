@@ -1,9 +1,7 @@
 \chapter{Proper of the Time -- Christmas Season}
 {
 \newcommand{\benedicamusdomino}[1][1]{
-  \noindent\printnote{\Vbar~\emph{Benedicámus Dómino \IfInteger{#1}{#1}{\csname benedicamusdominoname#1\endcsname}}, page \pageref{benedicamusdomino-#1}.}
-	\bigskip
-	\hrule
+  \benedicamusdominomaster{#1}
 }
 
 {
@@ -16,6 +14,7 @@
 }
 \def\definevesperspropers{\input{\gabcfolder/inc-Christmas-Vespers1}}
 \newcommand{\preantfour}{\needspace{5\baselineskip}}
+\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 \printvespers[../Christmas-Vespers1]{inc-Christmas-Vespers1-psalms}
 
 \benedicamusdomino{}
@@ -39,6 +38,7 @@
 \def\premagverses{\greseteolcustos{manual}}
 \def\hymnlabel{hymn-jesuredemptoromnium}
 \input{../Christmas/inc-JesuRedemptorOmnium}
+\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
 \printvespers[../Christmas]{inc-Christmas-Vespers2-psalms}
 
 \benedicamusdomino{}
@@ -72,7 +72,7 @@
 
 \printnote{This feast is celebrated on the Sunday between the Octave Day of the Nativity and the Epiphany of Our Lord.  If no Sunday occurs within that time, this feast is then celebrated on January 2.}
 
-\printnote{When the Feast of the Most Holy Name of Jesus occurs on January 5, the First Vespers of the Epiphany on page \pageref{epiphany} are sung without a commemoration of the Holy Name of Jesus.}
+\printnote{When the Feast of the Most Holy Name of Jesus occurs on January 5, the First Vespers of the Epiphany on page \pageref{epiphany} is sung without a commemoration of the Holy Name of Jesus.}
 
 \smallskip{}
 %\def\definevesperspropersalt{\input{\gabcfolder/inc-HolyName-1Vespers}}
@@ -80,6 +80,7 @@
 %\def\vesperspropersaltnote{At I Vespers of the Most Holy Name of Jesus:}
 %\def\vesperspropersnote{At II Vespers of the Most Holy Name of Jesus:}
 \def\hymnlabel{hymn-jesudulcismemoria}
+\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.425\linewidth}]{2}}
 
 \printvespers[../HolyName]{inc-HolyName-common}
 
@@ -111,6 +112,7 @@
 \subtitle{\nth{2} Class}
 
 \subtitle{First Sunday after the Epiphany.}
+%\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43825\linewidth}]{2}}
 
 \printvespers[../HolyFamily]{inc-HolyFamily-Vespers2}
 

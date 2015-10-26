@@ -1,9 +1,7 @@
 \chapter{Proper of the Time -- Pentecost Octave}
 {
 \newcommand{\benedicamusdomino}[1][1]{
-  \noindent\printnote{\Vbar~\emph{Benedicámus Dómino \IfInteger{#1}{#1}{\csname benedicamusdominoname#1\endcsname}}, page \pageref{benedicamusdomino-#1}.}
-	\bigskip
-	\hrule
+  \benedicamusdominomaster{#1}
 }
 
 {
@@ -46,10 +44,9 @@
 	\printnote{From Vespers of Sundays throughout the year on page \pageref{sundayvespers}.\\}
 }
 \newcommand{\benedicamusdomino}[1][sunday]{
-  \noindent\printnote{\Vbar~\emph{Benedicámus Dómino \IfInteger{#1}{#1}{\csname benedicamusdominoname#1\endcsname}}, page \pageref{benedicamusdomino-#1}.}
-	\bigskip
-	\hrule
+  \benedicamusdominomaster{#1}
 }
+
 \newcommand{\printhymnnote}{}
 \newcommand{\printvespersafterpentecost}[1]{
 	{
@@ -63,28 +60,33 @@
 	
 }
 
-\printvespersafterpentecost{2}
+{\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.455\linewidth}]{2}}
+\printvespersafterpentecost{2}}
 \printvespersafterpentecost{3}
 \printvespersafterpentecost{4}
-\printvespersafterpentecost{5}
+{\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
+\printvespersafterpentecost{5}}
 \printvespersafterpentecost{6}
 \printvespersafterpentecost{7}
 \printvespersafterpentecost{8}
 \printvespersafterpentecost{9}
 \printvespersafterpentecost{10}
 \printvespersafterpentecost{11}
-\printvespersafterpentecost{12}
+{\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.455\linewidth}]{2}}
+\printvespersafterpentecost{12}}
 \printvespersafterpentecost{13}
 \printvespersafterpentecost{14}
 \printvespersafterpentecost{15}
 \printvespersafterpentecost{16}
 \printvespersafterpentecost{17}
 \printvespersafterpentecost{18}
-\printvespersafterpentecost{19}
+{\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}}
+\printvespersafterpentecost{19}}
 \printvespersafterpentecost{20}
 \printvespersafterpentecost{21}
 \printvespersafterpentecost{22}
 \printvespersafterpentecost{23}
-\printvespersafterpentecost{24}
+{\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.455\linewidth}]{2}}
+\printvespersafterpentecost{24}}
 
 }

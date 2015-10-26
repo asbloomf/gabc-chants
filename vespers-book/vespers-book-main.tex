@@ -114,6 +114,14 @@
 	\end{parcolumns}
 	\let\begincollectcols=\undefined
 }
+\newcommand{\benedicamusdominoreference}[1]{%
+	\Vbar~\emph{Benedicámus Dómino \IfInteger{#1}{#1}{\csname benedicamusdominoname#1\endcsname}}, page \pageref{benedicamusdomino-#1}.
+}
+\newcommand{\benedicamusdominomaster}[1]{
+	\noindent\printnote{\benedicamusdominoreference{#1}}
+	\bigskip
+	\hrule
+}
 \newcommand{\psalmcolsoverride}[1][0]{
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
 \ifnum#1=110

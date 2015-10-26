@@ -42,6 +42,7 @@
 	\newcommand{\collectreplacement}{\bigskip}
 	\def\preantfour{\needspace{10\baselineskip}}
 	\def\prepsalmfive{\greseteolcustos{manual}}
+	\def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}}
 	\printvespers[../SundayAtVespers]{inc-SundayAtVespers}
 }
 
@@ -62,7 +63,7 @@
 	    }
 	}	
 	\newcommand{\chapterreplacement}{\bigskip\noindent\printnote{Chapter.\\}}
-	\newcommand{\magreplacement}{\noindent\printnote{Magnificat. Collect.\\\\\Vbar~\emph{Benedicámus Dómino \benedicamusdominonameeaster{}}, page \pageref{benedicamusdomino-easter}.}}
+	\newcommand{\magreplacement}{\noindent\printnote{Magnificat. Collect.\\\\\benedicamusdominoreference{easter}}}
 	\newcommand{\collectreplacement}{\bigskip}
 	\def\prepsalmfive{\greseteolcustos{manual}}
 	\printvespers[../TimeAfterEaster]{inc-SundayAtVespers-PaschalTime}

@@ -2,11 +2,14 @@
 \chapter{Proper of the Saints}
 {
 \newcommand{\benedicamusdomino}[1][1]{
-  \noindent\printnote{\Vbar~\emph{Benedicámus Dómino \IfInteger{#1}{#1}{\csname benedicamusdominoname#1\endcsname}}, p.~\pageref{benedicamusdomino-#1}.}
-  \bigskip
-  \hrule
+  \benedicamusdominomaster{#1}
 }
-
+\newcommand{\sundaycommemnote}{%
+  If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{} Dirigátur.} in simple commemoration tone, p.~\pageref{vr-dirigatur} and \emph{Collect}.  Otherwise \benedicamusdominoreference{1}
+}
+\newcommand{\sundaycommemnoteeaster}{%
+  If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{} Mane nobíscum.} in simple commemoration tone, p.~\pageref{vr-manenobiscum} and \emph{Collect}.  Otherwise \benedicamusdominoreference{1}
+}
 %December 8: Immaculate Conception
 %Second Vespers of Immaculate Conception
 {
@@ -201,7 +204,7 @@
 \printvespers[../May1-StJosephWorker]{inc-StJosephWorker}
 %if feast of St Joseph the worker falls from 2nd through 5th Sunday after Easter, it outranks the Sunday and the Sunday is commemorated
 \medskip
-\printnote{If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{} Mane nobíscum.} in simple commemoration tone, p.~\pageref{vr-manenobiscum} and \emph{Collect}.  Otherwise \Vbar~\emph{Benedicámus Dómino 1}, p.~\pageref{benedicamusdomino-1}.
+\printnote{\sundaycommemnoteeaster{}
 
 \begin{multicols}{2}
 \noindent\emph{\nth{2} Sunday after Easter}, p.~\pageref{easter2}.\\
@@ -236,7 +239,7 @@
 \printvespers[../June24-BirthOfJohnTheBaptist]{inc-BirthOfJohnTheBaptist}
 
 \medskip
-\printnote{If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{} Dirigátur.} in simple commemoration tone, p.~\pageref{vr-dirigatur} and \emph{Collect}.  Otherwise \Vbar~\emph{Benedicámus Dómino 1}, p.~\pageref{benedicamusdomino-1}.
+\printnote{\sundaycommemnote{}
 
 \begin{multicols}{2}
 \noindent\emph{\nth{2} Sunday after Pentecost}, p.~\pageref{pentecost2}.\\
@@ -273,7 +276,7 @@
 \printvespers[../June29-StsPeterAndPaul]{inc-StsPeterAndPaul}
 
 \medskip
-\printnote{If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{} Dirigátur.} in simple commemoration tone, p.~\pageref{vr-dirigatur} and \emph{Collect}.  Otherwise \Vbar~\emph{Benedicámus Dómino 1}, p.~\pageref{benedicamusdomino-1}.
+\printnote{\sundaycommemnote{}
 
 \begin{multicols}{2}
 \noindent\emph{\nth{3} Sunday after Pentecost}, p.~\pageref{pentecost3}.\\
@@ -365,7 +368,7 @@
 
 %     TODO Feast of Assumption (8/15) could have commem of Saturday before 3rd Sunday of August or 9th to 13th Sunday after Pentecost
 \medskip
-\printnote{If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{} Dirigátur.} in simple commemoration tone, p.~\pageref{vr-dirigatur} and \emph{Collect}.  Otherwise \Vbar~\emph{Benedicámus Dómino 1}, p.~\pageref{benedicamusdomino-1}.
+\printnote{\sundaycommemnote{}
 
 \begin{multicols}{2}
 \noindent\emph{\nth{9} Sunday after Pentecost}, p.~\pageref{pentecost9}.\\
@@ -420,7 +423,7 @@
 \printvespers[../September29-DedicationOfChurchOfStMichaelArchangel]{inc-DedicationStMichael}
 
 \medskip
-\printnote{If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{} Dirigátur.} in simple commemoration tone, p.~\pageref{vr-dirigatur} and \emph{Collect}.  Otherwise \Vbar~\emph{Benedicámus Dómino 1}, p.~\pageref{benedicamusdomino-1}.
+\printnote{\sundaycommemnote{}
 
 \begin{multicols}{2}
 \noindent\emph{\nth{16} Sunday after Pentecost}, p.~\pageref{pentecost16}.\\
@@ -452,7 +455,7 @@
 
 \printvespers[../OctoberLastSunday-ChristTheKing]{inc-ChristTheKing}
 \noindent
-\printnote{If today is October 31, the First Vespers of All Saints is commemorated with \emph{Magnificat}, p.~\pageref{allsaints1-magnificat}; \emph{\Vbar{}~Lætámini}.~in simple commemoration tone, p.~\pageref{allsaints1-vr}; and \emph{Collect}, p.~\pageref{allsaints-collect}.  Otherwise \Vbar~\emph{Benedicámus Dómino 1}, p.~\pageref{benedicamusdomino-1}.}
+\printnote{If today is October 31, the First Vespers of All Saints is commemorated with \emph{Magnificat antiphon}, p.~\pageref{allsaints1-magnificat}; \emph{\Vbar{}~Lætámini}.~in simple commemoration tone, p.~\pageref{allsaints1-vr}; and \emph{Collect}, p.~\pageref{allsaints-collect}.  Otherwise \benedicamusdominoreference{1}}
 \bigskip
 \hrule
 %\bigskip
@@ -479,7 +482,7 @@
 \printvespers[../November1-AllSaints]{inc-AllSaints}
 
 \medskip
-\printnote{If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{} Dirigátur.} in simple commemoration tone, p.~\pageref{vr-dirigatur} and \emph{Collect}.  Otherwise \Vbar~\emph{Benedicámus Dómino 1}, p.~\pageref{benedicamusdomino-1}.
+\printnote{\sundaycommemnote{}
 
 \begin{multicols}{2}
 \noindent\emph{\nth{21} Sunday after Pentecost}, p.~\pageref{pentecost21}.\\

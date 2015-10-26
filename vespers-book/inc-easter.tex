@@ -1,7 +1,7 @@
 {
 \newcommand{\printcommemnote}[1][easter]{\smallskip
 \noindent
-\printnote{\commemorations{}  Otherwise \Vbar~\emph{Benedicámus Dómino \benedicamusdominonameeaster{}}, page \pageref{benedicamusdomino-#1}.}
+\printnote{\commemorations{}  Otherwise \benedicamusdominoreference{#1}}
 }
 {
 \chapter{Proper of the Time -- Easter}
@@ -41,9 +41,7 @@
 }
 {
 \newcommand{\benedicamusdomino}[1][easter]{
-  \noindent\printnote{\Vbar~\emph{Benedicámus Dómino \IfInteger{#1}{#1}{\csname benedicamusdominoname#1\endcsname}}, page \pageref{benedicamusdomino-#1}.}
-    \bigskip
-    \hrule
+  \benedicamusdominomaster{#1}
 }
 
 \newcommand{\printhymnnote}{
@@ -54,10 +52,10 @@
 {
 \section{Low Sunday}
 \printcommonvespers[1]
-%\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
+\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster1}
 
-\def\commemorations{If the Feast of the Annunciation has been transferred to the Monday following Low Sunday, First Vespers is commemorated as on page \pageref{annunciation-commem}.  If today is April 30, May 1, or May 2, then First Vespers of St Joseph the Worker is commemorated as follows.}
+\def\commemorations{If the Feast of the Annunciation has been transferred to the Monday following Low Sunday, First Vespers is commemorated as on page \pageref{annunciation-commem}.  If today is April 30, May 1, or May 2, First Vespers of St Joseph the Worker is commemorated as follows.}
 \printcommemnote{}
 }
 
@@ -122,7 +120,7 @@
 \def\hymnlabel{hymn-salutishumanaesator}
 \printvespers[../Ascension]{inc-Ascension}
 
-\def\commemorations{If today is April 30 or May 1, the First Vespers of St Joseph the Worker is commemorated as on page \pageref{stjoseph-worker-commem}.}
+\def\commemorations{If today is April 30 or May 1, First Vespers of St Joseph the Worker is commemorated as on page \pageref{stjoseph-worker-commem}.}
 \printcommemnote[1]{}
 \medskip
 \hrule
