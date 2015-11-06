@@ -3,5 +3,12 @@ office-part:Antiphona;
 mode:7;
 book:The Liber Usualis, 1961, p. 1417;
 transcriber:Andrew Hinkley;
+def-m1:}{\greseteolcustos{manual}{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:}\fi;
 %%
-(c3) GA(e)bri(ei)el(i) An(hg~)ge(hi)lus(i'_) <v>\greheightstar</v>(,) lo(i)cú(jk)tus(j) est(i) Ma(hv_GF')rí(g)æ(fgf) di(e.)cens :(e.) (:) A(e)ve(ei) grá(i')ti(h)a(g) ple(hi)na :(i.) (,) Dó(i')mi(j)nus(k) te(ji)cum :(i.) (;) be(i)ne(ij)dí(j)cta(ih) tu(hh) in(fe~) mu(fg)li(f)é(e)ri(e)bis.(e.) <i>P. T.</i>(::) Al(fg)le(f)lú(e.)ia.(e.) (::)
+(c3) GA(e)bri(ei)el(i) An(hg~)ge(hi)lus(i'_) <v>\greheightstar</v>(,)
+lo(i)cú(jk)tus(j) est(i) Ma(hv_GF')rí(g)æ(fgf) di(e.)cens :(e.) (:)
+A(e)ve(ei) grá(i')ti(h)a(g) ple(hi)na :(i.) (,) Dó(i')mi(j)nus(k) te(ji)cum :(i.) (;)
+be(i)ne(ij)dí(j)cta(ih) tu(hh) in(fe~) mu(fg)li(f)é(e)ri(e)bis.(e.) <i>P. T.</i>(::) Al(fg)le(f)lú(e.)ia.(e.) (::)
