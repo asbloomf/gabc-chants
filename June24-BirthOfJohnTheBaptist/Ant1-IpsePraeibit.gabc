@@ -21,7 +21,6 @@ def-m4:}\fi;
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
 %%
-%TODO: it wasn't putting a dash after the big initial
 (c3)I(g)pse(e') præ(f)í(h)bit(h') <v>\greheightstar</v>() an(h)te(h) íl(ij)lum(i.) (;)
 in(h_i) spí(k)ri(j)tu(i) et(i) vir(g)tú(ij)te(i) E(h)lí(hih)æ,(hgh.) (;)
 pa(h)rá(hg)re(f) Dó(g_h)mi(g)no(e.) (,) plé(g_h)bem(f_h) per(g)fé(e.[em1])ctam.(e.) (::[em2]z[em3])
