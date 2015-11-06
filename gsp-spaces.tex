@@ -1,146 +1,16 @@
-% the additional width of the additional lines (compared to the width of the glyph they're associated with)
-\grechangedim{additionallineswidth}{0.14584 cm}{scalable}%
-% width of the additional lines, used only for the custos (maybe should depend on the width of the custos...)
-% the width is the one for the custos at end of lines, the line for custos in the middle of a score is the same
-% multiplied by 2.
-\grechangedim{additionalcustoslineswidth}{0.09114 cm}{scalable}%
-% null space
-\grechangedim{zerowidthspace}{0 cm}{scalable}%
-% space between glyphs in the same element
-\grechangedim{interglyphspace}{0.06927 cm plus 0.00363 cm minus 0.00363 cm}{scalable}%
-% space between an alteration (flat or natural) and the next glyph
-\grechangedim{alterationspace}{0.07747 cm plus 0.01276 cm minus 0.00455 cm}{scalable}%
-% space between a clef and a flat (for clefs with flat)
-\grechangedim{clefflatspace}{0.05469 cm plus 0.00638 cm minus 0.00638 cm}{scalable}%
-% space before a choral sign
-\grechangedim{beforelowchoralsignspace}{0.04556 cm plus 0.00638 cm minus 0.00638 cm}{scalable}%
-% when bolshifts are enabled, minimal space between a clef at the beginning of the line and a leading alteration glyph (should be larger than clefflatspace so that a flatted clef can be distinguished from a flat which is part of the first glyph on a line, but also smaller than spaceafterlineclef, the distance from the clef to the first notes)
-\grechangedim{beforealterationspace}{0.1 cm}{scalable}%
-% space between elements
-\grechangedim{interelementspace}{0.06927 cm plus 0.00182 cm minus 0.00363 cm}{scalable}%
-% larger space between elements
-\grechangedim{largerspace}{0.10938 cm plus 0.01822 cm minus 0.00911 cm}{scalable}%
-% space between elements in ancient notation
-\grechangedim{nabcinterelementspace}{0.06927 cm plus 0.00182 cm minus 0.00363 cm}{scalable}%
-% larger space between elements in ancient notation
-\grechangedim{nabclargerspace}{0.10938 cm plus 0.01822 cm minus 0.00911 cm}{scalable}%
-% space between elements which has the size of a note
-\grechangedim{glyphspace}{0.21877 cm plus 0.01822 cm minus 0.01822 cm}{scalable}%
-% space before custos
-\grechangedim{spacebeforecustos}{0.1823 cm plus 0.31903 cm minus 0.0638 cm}{scalable}%
-% space before punctum mora and augmentum duplex
-\grechangedim{spacebeforesigns}{0.05469 cm plus 0.00455 cm minus 0.00455 cm}{scalable}%
-% space after punctum mora and augmentum duplex
-\grechangedim{spaceaftersigns}{0.08203 cm plus 0.0082 cm minus 0.0082 cm}{scalable}%
-% space after a clef at the beginning of a line
-\grechangedim{spaceafterlineclef}{0.27345 cm plus 0.14584 cm minus 0.01367 cm}{scalable}%
 % minimal space between notes of different words
 %\grechangedim{interwordspacenotes}{0.27 cm plus 0.15 cm minus 0.05 cm}{scalable}%
-\grechangedim{interwordspacenotes}{0.27 cm plus 0.08 cm minus 0.05 cm}{scalable}%
+\grechangedim{interwordspacenotes}{0.15 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 % minimal space between notes of the same syllable.
 % Warning: always keep minus to 0; also keep plus very low, or some words won't be hyphenated
 %\grechangedim{intersyllablespacenotes}{0.24 cm plus 0.04cm minus 0cm}{scalable}%
-\grechangedim{intersyllablespacenotes}{0.24 cm plus 0.04cm minus 0cm}{scalable}%
+\grechangedim{intersyllablespacenotes}{0.15 cm plus 0.15cm minus 0cm}{scalable}%
 % minimal space between letters of different words. Makes sense to have
 % the same plus and minus as interwordspacenotes.
 %\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{scalable}%
-\grechangedim{interwordspacetext}{0.18 cm plus 0.08 cm minus 0.05 cm}{scalable}%
+\grechangedim{interwordspacetext}{0.15 cm plus 0.15 cm minus 0.10 cm}{scalable}%
 % Versions of interword spaces for euouae blocks
 %\grechangedim{interwordspacenotes@euouae}{0.19 cm plus 0.1 cm minus 0.05 cm}{scalable}%
-\grechangedim{interwordspacenotes@euouae}{0.13 cm plus 0.1 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacenotes@euouae}{0.13 cm plus 0.1 cm minus 0.05 cm}{scalable}%
 %\grechangedim{interwordspacetext@euouae}{0.27 cm plus 0.1 cm minus 0.05 cm}{scalable}%
-\grechangedim{interwordspacetext@euouae}{0.13 cm plus 0.1 cm minus 0.05 cm}{1}%
-% space between notes of a bivirga or trivirga
-\grechangedim{bitrivirspace}{0.06927 cm plus 0.00182 cm minus 0.00546 cm}{scalable}%
-% space between notes of a bistropha or tristrophae
-\grechangedim{bitristrospace}{0.06927 cm plus 0.00182 cm minus 0.00546 cm}{scalable}%
-% space between two punctum inclinatum
-\grechangedim{punctuminclinatumshift}{-0.03918 cm plus 0.0009 cm minus 0.0009 cm}{scalable}%
-% space before puncta inclinata
-\grechangedim{beforepunctainclinatashift}{0.05286 cm plus 0.00728 cm minus 0.00455 cm}{scalable}%
-% space between a punctum inclinatum and a punctum inclinatum deminutus
-\grechangedim{punctuminclinatumanddebilisshift}{-0.02278 cm plus 0.0009 cm minus 0.0009 cm}{scalable}%
-% space between two punctum inclinatum deminutus
-\grechangedim{punctuminclinatumdebilisshift}{-0.00728 cm plus 0.0009 cm minus 0.0009 cm}{scalable}%
-% space between puncta inclinata, larger ambitus (range=3rd)
-\grechangedim{punctuminclinatumbigshift}{0.07565 cm plus 0.0009 cm minus 0.0009 cm}{scalable}%
-% space between puncta inclinata, larger ambitus (range=4th -or more?-)
-\grechangedim{punctuminclinatummaxshift}{0.17865 cm plus 0.0009 cm minus 0.0009 cm}{scalable}%
-% space for the bars (inside syllables)
-%first for virgula and divisio minima
-\grechangedim{spacearoundsmallbar}{0.1823 cm plus 0.22787 cm minus 0.00469 cm}{scalable}%
-%then divisio minor
-\grechangedim{spacearoundminor}{0.1823 cm plus 0.22787 cm minus 0.00469 cm}{scalable}%
-%divisio major
-\grechangedim{spacearoundmaior}{0.1823 cm plus 0.22787 cm minus 0.00469 cm}{scalable}%
-%divisio finalis
-\grechangedim{spacearoundfinalis}{0.1823 cm plus 0.22787 cm minus 0.00469 cm}{scalable}%
-%a special space for finalis, for when it is the last glyph
-\grechangedim{spacebeforefinalfinalis}{0.29169 cm plus 0.07292 cm minus 0.27345 cm}{scalable}%
-% additional space that will appear around bars that are preceded by a custos and followed by a key.
-\grechangedim{spacearoundclefbars}{0.03645 cm plus 0.00455 cm minus 0.0009 cm}{scalable}%
-% space between the text and the text of the bar
-\grechangedim{textbartextspace}{0.24611 cm plus 0.13672 cm minus 0.04921 cm}{scalable}%
-% minimal space between a note and a bar
-\grechangedim{notebarspace}{0.31903 cm plus 0.27345 cm minus 0.02824 cm}{scalable}%
-% maximal space between two syllables for which we consider a dash is not needed
-\grechangedim{maximumspacewithoutdash}{0.00 cm}{scalable}%
-% an extensible space for the beginning of lines
-\grechangedim{afterclefnospace}{0 cm plus 0.27345 cm minus 0 cm}{scalable}%
-% space between the initial and the beginning of the score
-\grechangedim{afterinitialshift}{0.2457 cm}{scalable}%
-% space before the initial
-\grechangedim{beforeinitialshift}{0.2457 cm}{scalable}%
-% when bolshifts are enabled, minimum space between beginning of line and first syllable text
-\grechangedim{minimalspaceatlinebeginning}{0.05 cm}{scalable}%
-% space to force the initial width to.  Ignored when 0.
-\grechangedim{manualinitialwidth}{0 cm}{scalable}%
-% distance to move the initial up by
-\grechangedim{initialraise}{0 cm}{scalable}%
-% Space between lines in the annotation
-\grechangedim{annotationseparation}{0.05cm}{scalable}%
-% Amount to raise (positive) or lower (negative) the annotations from the default position (base line of top annotation aligned with top line of staff)
-\grechangedim{annotationraise}{0cm}{scalable}%
-% space at the beginning of the lines if there is no clef
-\grechangedim{noclefspace}{0.1 cm}{scalable}%
-% space around a clef change
-\grechangedim{clefchangespace}{0.01768 cm plus 0.00175 cm minus 0.01768 cm}{scalable}%
-%When \gre@clivisalignment is 2, this distance is the maximum length of the consonants after vowels for which the clivis will be aligned on its center.
-\grechangedim{clivisalignmentmin}{0.3 cm}{scalable}%
-
-
-
-%%%%%%%%%%%%%%%%%%
-% vertical spaces
-%%%%%%%%%%%%%%%%%%
-
-% first, we have two spaces for the chironomic signs
-\grechangedim{abovesignsspace}{0.8 cm}{scalable}%
-\grechangedim{belowsignsspace}{0 cm}{scalable}%
-% the amount to shift down:
-% (a) low choral signs that are not lower than the note, regardless of whether
-%     it's on a line or in a space
-% (b) high choral signs and low choral signs that are lower than the note which
-%     are in a space
-\grechangedim{choralsigndownshift}{0.00911 cm}{scalable}%
-% the amount to shift up:
-% (a) high choral signs and low choral signs that are lower than the note which
-%     are on a line
-\grechangedim{choralsignupshift}{0.04556 cm}{scalable}%
-% the space for the translation
-\grechangedim{translationheight}{0.5 cm}{scalable}%
-%the space above the lines
-\grechangedim{spaceabovelines}{0.45576 cm plus 0.36461 cm minus 0.09114 cm}{scalable}%
-%the space between the lines and the bottom of the text
-\grechangedim{spacelinestext}{0.60617 cm}{scalable}%
-%the space beneath the text
-\grechangedim{spacebeneathtext}{0 cm}{scalable}%
-% height of the text above the note line
-\grechangedim{abovelinestextraise}{-0.1 cm}{scalable}%
-% height that is added at the top of the lines if there is text above the lines (it must be bigger than the text for it to be taken into consideration)
-\grechangedim{abovelinestextheight}{0.3 cm}{scalable}%
-% an additional shift you can give to the brace above the bars if you don't like it
-\grechangedim{braceshift}{0 cm}{scalable}%
-% a shift you can give to the accentus above the curly brace
-\grechangedim{curlybraceaccentusshift}{-0.05 cm}{scalable}%
-
+\grechangedim{interwordspacetext@euouae}{0.13 cm plus 0.1 cm minus 0.05 cm}{scalable}%
