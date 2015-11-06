@@ -1,0 +1,217 @@
+{
+\section{March 25: Annunciation of the Blessed Virgin Mary}
+\subtitle{\nth{1} Class}
+\subtitle{I \& II Vespers}
+
+\def\definevesperspropers{\input{\gabcfolder/inc-Annunciation-2Vespers}
+  \def\prepsalmfive{\greseteolcustos{manual}}
+}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-Annunciation-1Vespers}}
+\def\vesperspropersnote{At II Vespers:}
+\def\vesperspropersaltnote{At I Vespers:}
+%\def\premag{\def\noeuouae{T}}
+\def\premagverses{\greseteolcustos{manual}}
+\def\printhymnnote{
+  {
+    \oldneedspace{3\baselineskip}
+    \printnote{Hymn.~\emph{Ave Maris Stella}, p.~\pageref{hymn-avemarisstella}.\\}
+
+    \printnote{At II Vespers in Paschal time, add Alleluia to the versicle and response.\\}
+    %
+    % \def\vrlinebreak{T}
+    % \oldneedspace{3\baselineskip}
+    % \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
+  }
+}
+\def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
+\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43\linewidth}]{2}}
+
+\printvespers[../March25-Annunciation]{inc-Annunciation}
+}
+
+{
+\bigskip
+
+\bigskip
+\noindent
+\printnote{Then follows a Commemoration of the Lenten Feria.}
+\bigskip
+}
+
+
+% Easter can be as early as March 22 or as late as April 25, so we basically need to include all the lenten ferias
+% I think if it falls on or after Palm Sunday, it is translated to Monday after Low Sunday
+% so I should only need to go from Wednesday of the second week unless I want to add St Joseph
+{
+\newcommand{\printcommem}[8][../Lent]{
+% #1 Folder (../Lent)
+% #2 name of the day of the week (Thursday)
+% #3 Tone (2)
+% #4 First letter of antiphon (Q)
+% #5 gabc (an--qui_me_sanum_fecit--solesmes)
+% #6 ant translation (He who healed me commanded me: Take up thy mat and walk in peace.)
+% #7 collect
+% #8 collect translation
+  \oldneedspace{4\baselineskip}
+  \sectionmark{#2 in \beforecommemweek{}\commemweek{}.}
+  \subtitle{\small{#2.}}
+  {
+  \def\noeuouae{T}
+  \printgabc{At Magn.}{\oldstylenums{Ant.~#3.}}{#4}{#1/#5}
+  }
+  \translation[]{#6}
+  \smallskip
+  \ifx\vrtitle\undefined%
+  {
+    \label{\vrlabel}
+    \printvrcommem{}
+  }\else%
+  \printnote{\emph{\Vbar{}~\vrtitle}, page \pageref{\vrlabel}.}
+  \fi
+  \printcollect{#7}{#8}
+  \medskip
+  \hrule
+  \medskip
+}
+\newcommand{\printweektitle}[2][the ]{
+  \edef\commemweek{#2}%
+  \edef\beforecommemweek{#1}%
+  \subtitle{#2.}\vspace{-1.3\baselineskip}%
+}
+{
+  \newcommand{\vrtitle}{Roráte cæli}
+  \newcommand{\vrlabel}{commvrrorate}
+  \newcommand{\commvlatin}{Roráte cæli désuper, et nubes pluant \textbf{ju}stum.}
+  \newcommand{\commrlatin}{Aperiátur terra, et gérminet Salva\textbf{tó}rem.}
+  \newcommand{\commvtranslation}{Ye heavens, drop down dew from above, and let the clouds rain down the Just One.}
+  \newcommand{\commrtranslation}{Let the earth open and bud forth the Saviour.}
+  % \oldneedspace{5\baselineskip}
+  % \subtitle{First Week of Lent.}\vspace{-0.5\baselineskip}
+  % \printcommem{Thursday}{4}{O}{an--o_mulier--solesmes}{O woman, great is thy faith: let it be unto thee as thou hast asked.}
+  % {Da, quǽsumus Dómine, pópulis christiánis, et quæ profiténtur agnóscere~:~* et cæléste munus dilígere, quod frequéntant. Per Dóminum.}{Grant, Lord, we beseech Thee, unto all Christian people, that what they now believe they may one day know and see in love unchecked, that heavenly gift whereof now they are the worshippers and the partakers.}
+
+  % \printcommem{Friday}{1}{Q}{an--qui_me_sanum_fecit--solesmes}{He who healed me commanded me: Take up thy bed and walk in peace.}
+  % {Exáudi nos miséricors Deus~:~* et méntibus nostris grátiæ tuæ lumen osténde. Per Dóminum nostrum.}
+  % {Hear us, O merciful God, and cause the bright beams of thy grace to shine upon our souls.}
+  
+  \oldneedspace{5\baselineskip}
+  \printweektitle{Second Week of Lent}
+  % \printcommem{Monday}{1}{Q}{an--qui_me_misit--solesmes}
+  % {He who sent Me is with Me and hath not left Me alone: for I always do those things that please Him.}
+  % {Adésto supplicatiónibus nostris omnípotesn Deus~:~* et quibus fidúciam sperándæ pietátis indúlges, consuétæ misericórdiæ tríbue benígnus efféctum. Per Dóminum.}
+  % {Graciously hear our prayers, O Almighty God, and as Thou dost give us to look with confidence for Thy favour for which we hope, so grant us, in Thy goodness, the manifestation of Thine accustomed mercy.}
+
+  % \printcommem{Tuesday}{4}{O}{an--omnes_autem_vos--solesmes}
+  % {And all ye are brethren, and call no man your father upon earth for One is your Father, Which is in heaven neither be ye called masters, for One is your Master, even Christ.}
+  % {Propitiáre Dómine supplicatiónibus nostris, et animárum nostrárum medére languóribus~:~* ut remissióne percépta, in tua semper benedictióne lætémur. Per Dóminum.}
+  % {Tend thy merciful ears, O Lord, we beseech thee, unto our supplications, and heal the sickness of our souls, that we, receiving thy pardon, may rejoice forever in thy blessing.}
+
+  \printcommem{Wednesday}{1}{T}{an--tradetur_enim_gentibus--solesmes}
+  {He will be handed over to the gentiles to be mocked and scourged and crucified.}
+  {Deus innocéntiæ restitútor et amátor, dírige ad te tuórum corda servórum~:~* ut spíritus tui fervóre concépto, et in fide inveniántur stábiles, et in ópere efficáces. Per Dóminum.}
+  {God, the Renewer and Lover of innocence, turn the hearts of Thy servants to Thyself, so that they, enkindled with the fire of Thy Spirit, may be found ever rooted in faith, and fruitful in works.}
+
+  \printcommem{Thursday}{7}{D}{an--dives_ille_guttam--solesmes}
+  {That rich man who had refused Lazarus bread-crumbs, cried for a drop of water.}
+  {Adésto Dómine fámulis tuis, et perpétuam benignitátem largíre poscéntibus~:~* ut iis, qui te auctóre et gubernatóre gloriántur, et congregáta restáures, et restauráta consérves. Per Dóminum.}
+  {Lord, be present to Thy servants, and grant unto those asking an abiding mercy; that as they boast in Thee, their creator and governer, so Thou wilt renew in them the gifts bestowed, and preserve what Thou hast renewed.}
+
+  \printcommem{Friday}{3}{Q}{an--quaerentes_eum_tenere--solesmes}
+  {Seeking to lay hands on Him, they feared the multitude, because they took Him for a Prophet.}
+  {Da, quǽsumus Dómine, pópulo tuo salútem mentis et córporis~:~* ut bonis opéribus inhæréndo, tuæ semper virtútis mereátur protectióne deféndi. Per Dóminum.}
+  {Grant unto Thy people, O Lord, we beseech Thee, soundness of mind and body, that they, cleaving unto good works, may evermore worthily be defended by the protection of Thy might.}
+
+  \oldneedspace{5\baselineskip}
+  \printweektitle{Third Week of Lent}
+  \printcommem{Monday}{1}{J}{an--jesus_autem_transiens--solesmes}
+  {But Jesus passing through their midst, went His way.}
+  {Subvéniat nobis Dómine misericórdia tua~:~* ut ab imminéntibus peccatórum nostrórum perículis te mereámur protegénte éripi, te liberánte salvári. Per Dóminum.}
+  {Let our help, O Lord, be in Thy mercy, that we over whom Thy wrath doth most justly hang because of our sins, may in all dangers worthily be shielded by Thy protection and delivered by Thy salvation.}
+
+  \printcommem{Tuesday}{4}{U}{an--ubi_duo_vel_tres--solesmes}
+  {Where two or three are gathered in my name, I am in their midst, saith the Lord.}
+  {Tua nos Dómine protectióne defénde~:~* et ab omni semper iniquitáte costódi. Per Dóminum.}
+  {O Lord, shield us by Thy protection, and keep us ever from all iniquity.}
+
+  \printcommem{Wednesday}{7}{N}{an--non_lotis_manibus--solesmes}
+  {To eat with unwashen hands, defileth not a man.}
+  {Concéde, quǽsumus omnípotens Deus~: ut qui protectiónis tuæ grátiam quǽrimus,~* liberáti a malis ómnibus, secúra tibi mente serviámus. Per Dóminum.}
+  {Grant, we beseech Thee, Almighty God, that we who seek the proctection of Thy grace, freed from all evils, may serve Thee in peace and quietness of spirit.}
+
+  \printcommem{Thursday}{1}{O}{an--omnes_qui_habebant--solesmes}
+  {All who had any sick brought them to Jesus, and they were healed.}
+  {Subjéctum tibi pópulum, quǽsumus Dómine, propitiátio cæléstis amplíficet~:~* et tuis semper fáciat servíre mandátis. Per Dóminum.}
+  {Lord, we beseech Thee that Thine heavenly Peace-Offering may so effectually work for all Thy people, bowing down before Thee, that they may ever continue to keep Thy commandments.}
+
+  \printcommem{Friday}{3}{D}{an--domine_ut_video--solesmes}
+  {Lord, I see that Thou art a prophet: our fathers worshipped on this mountain.}
+  {Præsta, quǽsumus omnípotens Deus~:~\dag{} ut qui in tua protectióne confídimus,~* cuncta nobis adversántia te adjuvánte vincámus. Per Dóminum.}
+  {Grant, we beseech Thee, Almighty God, that we who trust is Thy protection, may, with Thy help, overcome all evils that rise up against us.}
+
+  \oldneedspace{5\baselineskip}
+  \printweektitle{Fourth Week of Lent}
+  \printcommem{Monday}{5}{S}{an--solvite_templum_hoc--solesmes}
+  {Thus saith the Lord: Destroy this temple, and in three days I will rebuild it. But He was speaking of the temple of His Body.}
+  {Deprecatiónem nostram, quǽ\-su\-mus Dómine, benígnus exáudi~:~* et quibus supplicándi præstas afféctum, tríbue defensiónis auxílium. Per Dóminum.}
+  {Lord, we beseech Thee, graciously hear our supplication, and evermore help and defend all those to whom Thou hast given the mind to pray.}
+
+  \printcommem{Tuesday}{1}{N}{an--nemo_in_eum_misit--solesmes}
+  {No man laid hands on Him; because His hour was not yet come.}
+  {Miserére Dómine pópulo tuo~:~* et contínuis tribulatiónibus laborántem, propítius respiráre concéde. Per Dóminum.}
+  {Lord, have mercy upon Thy people, and be graciously pleased to grant relief unto the same, who are ever toiling amid the storms of diverse tribulations.}
+
+  \printcommem{Wednesday}{1}{I}{an--ille_homo--solesmes}
+  {The man that is called Jesus, made clay of spittle, and anointed mine eyes, and now I see.}
+  {Páteant aures misericórdiæ tuæ Dómine précibus supplicántium~:~* et ut peténtibus desideráta concédas, fac eos quæ tibi sunt plácita postuláre. Per Dóminum.}
+  {Let Thy merciful ears, Lord, be open unto the prayers of those entreating Thee, and that Thou mayest grant what we ask, teach us ever to ask what is pleasing to Thee.}
+
+  \printcommem{Thursday}{4}{P}{an--propheta_magnus--solesmes}
+  {A great prophet is risen up among us, and God hath visited His people.}
+  {Pópuli tui Deus institútor et rector, peccáta quibus impugnátur, expélle~:~* ut semper tibi plácitus, et tuo munímine sit secúrus. Per Dóminum.}
+  {O God, Teacher and Shepherd of Thy people, free the same from all sins assailing them, that they may be ever pleasing in Thy sight and safe under Thy shelter.}
+
+  \let\vrtitle=\undefined
+  \printcommem{Friday}{1}{D}{an--domine_si_hic_fuisses--solesmes}
+  {Lord, if Thou hadst been here, Lazarus had not died; behold already he stinketh, for he hath lain in the grave four days.}
+  {Da nobis, quǽsumus omnípotens Deus~:~* ut qui infirmitátis nostræ cónscii, de tua virtúte confídimus, sub tua semper pietáte gaudeámus. Per Dóminum.}
+  {Grant, we beseech Thee, Almighty God, unto us who know our weakness and who trust in Thy strength, to ever rejoice in Thy loving kindness.}
+}
+  
+{
+  \newcommand{\commvlatin}{Eripe me, Dómine, ab hómine \textbf{ma}lo.}
+  \newcommand{\commrlatin}{A viro iníquo éri\textbf{pe} me.}
+  \newcommand{\commvtranslation}{Deliver me, O Lord, from the wicked man.}
+  \newcommand{\commrtranslation}{And save me from the evil-doer.}
+  \newcommand{\vrtitle}{Eripe me}
+  \newcommand{\vrlabel}{commvreripeme}
+  \oldneedspace{7\baselineskip}
+  \printweektitle[]{Passiontide}
+  \printcommem{Monday}{4}{S}{an--si_quis_sitit--solesmes}
+  {If anyone thirst, let him come and drink; and from his belly will flow living water.}
+  {Da, quǽsumus Dómine, pópulo tuo salútem mentis et córporis~:~* ut bonis opéribus inhæréndo, tua semper mereátur protectióne deféndi. Per Dóminum.}
+  {Grant unto Thy people, O Lord, we beseech Thee, soundness of mind and body, that they, cleaving unto good works, may evermore worthily be defended by Thy protection.}
+
+  \printcommem{Tuesday}{1}{V}{an--vos_ascendite--solesmes}
+  {Go ye up unto this Feast; I go not, for My time is not yet full come.}
+  {Da nobis, quǽsumus Dómine, perseverántem in tua voluntáte famulátum~:~* ut in diébus nostris, et mérito et número pópulus tibi sérviens augeátur. Per Dóminum.}
+  {Grant, we beseech Thee, Lord, to give us grace to endure to the end in doing Thy will, that in our days Thy people which serve Thee may have increase, both in merit and number.}
+
+  \printcommem{Wednesday}{4}{M}{an--multa_bona_opera--solesmes}
+  {I have wrought many good works among you: on account of which work do you want to kill me?}
+  {Adésto supplicatiónibus nostris omnípotens Deus~:~* et quibus fidúciam sperándæ pietátis indúlges, consuétæ misericórdiæ tríbue benígnus efféctum. Per Dóminum.}
+  {Gratiously hear our prayers, Almighty God, and as Thou dost give us to look with confidence for Thy favour for which we hope, so grant us, in Thy goodness, Thine accustomed mercy.}
+
+  \printcommem{Thursday}{4}{D}{an--desiderio_desideravi--solesmes}
+  {With desire I have desired to eat this Pasch with you before I suffer.}
+  {Esto, quǽsumus Dómine, propítius plebi tuæ~:~* ut quæ tibi non placent respuéntes, tuórum pótius repleántur delectatiónibus mandatórum. Per Dóminum.}
+  {Lord, we beseech Thee, deal mercifully with Thy people, and fill plentifully with the rich things of Thy commandments those who shun that which displeaseth Thee.}
+
+  \let\vrtitle=\undefined
+  \printcommem{Friday}{1}{P}{an--principes_consilium--solesmes}
+  {The chief Priests consulted that they might kill Jesus, but they said: Not on the Feast-day, lest there be an uproar among the people.}
+  {Concéde, quǽsumus omnípotens Deus~:~* ut qui protectiónis tuæ grátiam quǽrimus, liberáti a malis ómnibus, secúra tibi mente serviámus. Per Dóminum.}
+  {Grant, we beseech Thee, Almighty God, that we who seek the proctection of Thy grace, freed from all evils, may serve Thee in peace and quietness of spirit.}
+}
+  % \bigskip
+  % \benedicamusdomino{}
+}
