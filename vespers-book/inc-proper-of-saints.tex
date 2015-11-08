@@ -5,10 +5,19 @@
   \benedicamusdominomaster{#1}
 }
 \newcommand{\sundaycommemnote}{%
-  If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{} Dirigátur.} in simple commemoration tone, p.~\pageref{vr-dirigatur} and \emph{Collect}.  Otherwise \benedicamusdominoreference{1}
+  If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{}~Dirigátur.} in simple commemoration tone, p.~\pageref{vr-dirigatur} and \emph{Collect}.
+
+  \benedicamusdominoreference{1}
 }
 \newcommand{\sundaycommemnoteeaster}{%
-  If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{} Mane nobíscum.} in simple commemoration tone, p.~\pageref{vr-manenobiscum} and \emph{Collect}.  Otherwise \benedicamusdominoreference{1}
+  If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{}~Mane nobíscum.} in simple commemoration tone, p.~\pageref{vr-manenobiscum} and \emph{Collect}.
+
+  \benedicamusdominoreference{1}
+}
+\newcommand{\sundaycommemnoteeasterpentecost}{%
+  If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{}~Mane nobíscum.} in Paschaltide or \emph{\Vbar{}~Dirigátur} after Pentecost in simple commemoration tone, p.~\pageref{vr-manenobiscum} and \emph{Collect}.
+
+  \benedicamusdominoreference{1}
 }
 %December 8: Immaculate Conception
 %Second Vespers of Immaculate Conception
@@ -153,6 +162,40 @@
 }
 
 
+%January 29, St Francis de Sales
+{
+\section{January 29: St Francis de Sales}
+\subtitle{\nth{1} Class (patron of the Archdiocese of Cincinnati)}
+\subtitle{I \& II Vespers}
+
+\def\definevesperspropers{\input{\gabcfolder/inc-CommonOfConfessorBishop-Vespers2}
+}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-CommonOfConfessorBishop-Vespers1}
+}
+\def\vesperspropersnote{At II Vespers:}
+\def\vesperspropersaltnote{At I Vespers:}
+%\def\premag{\def\noeuouae{T}}
+\def\premagverses{\greseteolcustos{manual}}
+\printvespers[../CommonOfConfessorBishop]{inc-StFrancisDeSales}
+\medskip
+\printnote{\sundaycommemnoteeasterpentecost{}
+
+\begin{multicols}{2}
+\noindent\emph{\nth{5} Sunday after Easter}, p.~\pageref{easter5}.\\
+\emph{Sunday after the Ascension}, p.~\pageref{easter6}.
+% pentecost and trinity sunday would outrank this feast
+\end{multicols}
+\begin{centering}
+
+\emph{\nth{2} Sunday after Pentecost}, p.~\pageref{pentecost2}.
+
+\end{centering}
+% \bigskip
+% \benedicamusdomino{}
+}
+}
+
+
 %Purification & Presentation (2nd class no commem of Sunday because it is a feast of the Lord)
 {
 \section{February 2: Purification \& Presentation}
@@ -184,6 +227,9 @@
 \benedicamusdomino[2]{}
 }
 
+%March 25: Annunciation 
+\input{inc-march25}
+
 %May 1: St Joseph the Worker (1st class)
 {
 \section{May 1: St Joseph the Worker}
@@ -212,6 +258,42 @@
 \emph{\nth{4} Sunday after Easter}, p.~\pageref{easter4}.\\
 \emph{\nth{5} Sunday after Easter}, p.~\pageref{easter5}.
 \end{multicols}
+}
+% \bigskip
+% \benedicamusdomino{}
+}
+
+%May 22: St Philip Neri (1)
+{
+\section{May 22: St Philip Neri}
+\subtitle{\nth{1} Class (proper to the Oratory)}
+\subtitle{I \& II Vespers}
+
+\def\definevesperspropers{\input{\gabcfolder/inc-StPhilipNeri-2Vespers}
+}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-StPhilipNeri-1Vespers}
+}
+\def\vesperspropersnote{At II Vespers:}
+\def\vesperspropersaltnote{At I Vespers:}
+%\def\premag{\def\noeuouae{T}}
+\def\premagverses{\greseteolcustos{manual}}
+
+\printvespers[../StPhilipNeri]{inc-StPhilipNeri}
+%when can feast fall?
+%if feast falls from 2nd through 5th Sunday after Easter, it outranks the Sunday and the Sunday is commemorated
+\medskip
+\printnote{\sundaycommemnoteeasterpentecost{}
+
+\begin{multicols}{2}
+\noindent\emph{\nth{5} Sunday after Easter}, p.~\pageref{easter5}.\\
+\emph{Sunday after the Ascension}, p.~\pageref{easter6}.
+% pentecost and trinity sunday would outrank this feast
+\end{multicols}
+\begin{centering}
+
+\emph{\nth{2} Sunday after Pentecost}, p.~\pageref{pentecost2}.
+
+\end{centering}
 }
 % \bigskip
 % \benedicamusdomino{}
