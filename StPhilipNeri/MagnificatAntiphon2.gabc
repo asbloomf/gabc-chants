@@ -3,16 +3,16 @@
 
 % The first part of the score is called the header, you can input some useful informations here:
 
-name: O Doctor optime;
+name: Domus méa;
 office-part: Magnificat Antiphon;
-mode: 2D;
-occasion: Common of Doctors at Vespers;
-date: 2011;
+mode: 4A;
+occasion: St Philip Neri;
+date: 2015;
 transcriber: Albert Bloomfield;
 transcription-date: 2011;
 style: modern;
 annotation: At Magn.;
-annotation: Ant. 2. D;
+annotation: 4. A;
 def-m1:}{\greseteolcustos{manual}{;
 def-m2:\ifx\breakbeforeEuouae\undefined\else;
 def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
@@ -22,13 +22,14 @@ def-m4:}\fi;
 
 %%
 
-(f3)O(ehhg) Dó(h)ctor(f) óp(gf)ti(ef)me,(f'_) <v>\greheightstar</v>(,)
-Ec(f)clé(fg)si(f)æ(f) sán(g_h)ctæ(fg) lú(ff)men,(e.) (;)
-be(f)á(cf)te(f) Fran(f)cí(g_h)sce,(kxiji/jkj.) (;)
-di(j)ví(j')næ(i) lé(h)gis(hg) a(f!gwh)má(h)tor :(e.) (:)
-de(eh)pre(g')cá(h)re(g') pro(f) nó(g)bis(f.) (,)
-Fí(e_f)li(h_g)um(e) Dé(gg)i.(f.) (::)
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-<i>T.~P.</i>() Al(e)le(ef)lú(f.[em1])ia.(f.) (::[em2]z[em3])
 
-E(h) u(h) o(h) u(g) a(e) e.(f.) (::[em4])
+%%
+(c3)VE(f)ní(e')te,(f) fí(h)li(hi)i,(i.) <v>\greheightstar</v>(,)
+au(hi)dí(j)te(ih) me,(i.) (;)
+ti(i)mó(f_i)rem(h_g) Dó(f')mi(e)ni(f_e) (,)
+do(d_e)cé(f')bo(h) vos.(f.) (::)
+T.~P. Al(d_e)le(f_h)lu(f.[em1])ia.(f.) (::[em2]z[em3])
+
+E(i) u(h) o(i) u(j) a(h) e.(f.) (::[em4])

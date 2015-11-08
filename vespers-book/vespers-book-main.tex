@@ -411,6 +411,14 @@
 	    \ifx\vrlinebreak\undefined\def\vrlinebreak{T}\fi
 	    \printvr[\if\vrlinebreak T\greseteolcustos{manual}\fi]{\vrtex}{\vtranslation}{\rtranslation}
 		}
+		\ifx\vrpttex\undefined\else%
+			\smallskip
+			\noindent
+			\printnote{In Paschaltide:}
+			\ifx\vrlinebreak\undefined\def\vrlinebreak{T}\fi
+			\if\vrlinebreak T\greseteolcustos{manual}\fi
+			\gregorioscore{\gabcfolder/\vrpttex}
+		\fi
 	\else
 		\printfullhymn
 	\fi
@@ -419,6 +427,7 @@
 
 	\ifx\magreplacement\undefined
 	{
+		\ifx\maganttex\undefined
 		\ifx\definevesperspropersalt\undefined\else{
 			{
 			\ifx\definevesperspropers\undefined\else
@@ -469,6 +478,7 @@
 				\printnote{\vesperspropersnote\\\vspace{-0.5\baselineskip}}
 			\fi
 			\def\nomagtitle{T}
+		\fi
 		\fi
 		\let\anttranslation=\maganttranslation
 		\let\preverses=\premagverses

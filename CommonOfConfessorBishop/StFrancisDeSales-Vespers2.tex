@@ -9,14 +9,26 @@
 \usepackage{../definepsalms}
 
 \input{CommonOfConfessorBishop-Vespers2}
-\input{CommonOfDoctors}
+\newcommand{\premag}{
+\large
+\grechangestaffsize{17}
+%\greseteolcustos{manual}
+}
+%\newcommand{\premagtwo}{
+%\grechangestaffsize{16}
+%}
+\newcommand{\magfontsize}{33}
+%\newcommand{\magtone}{8}
+%\newcommand{\magend}{G}
+\newcommand{\premagverses}{\grechangestaffsize{15}
+\normalsize
+%\pagebreak
+}
+%\input{../psalms/definemag}
 \def\deusinadjutoriumsolemn{T}
 \def\heading{St Francis de Sales. II Vespers.}
 
 %\let\nopagebreakbeforepsalmfive\undefined
-
-\newcommand{\collect}{Deus, qui ad animárum salútem beátum Francíscum Confessórem tuum atque Pontíficem, ómnibus ómnia factum esse voluísti~:~\dag{} concéde propítius~; ut caritátis tuæ dulcédine perfúsi,~* ejus dirigéntibus mónitis ac suffragántibus méritis, ætérna gáudia consequámur.  Per Dóminum nostrum.}
-\newcommand{\collecttranslation}{O God, who, in order to save souls, didst will that blessed Francis should become all things to all men: graciously fill us with the sweetness of Thy love, and grant that by the light of his counsel and with the help of his merits we may attain eternal joy.  Through our Lord.}
 
 \def\pagebreakbeforecommemoration{T}
 
@@ -27,4 +39,6 @@
 
 \definebenedicamusdomino{1}{2}
 
+\input{inc-CommonOfConfessorBishop-Vespers2}
+\input{inc-StFrancisDeSales}
 \input{../FullVespers}
