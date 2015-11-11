@@ -5,14 +5,16 @@
 
 name: Non vos relínquam;
 office-part: Magnificat Antiphon;
-mode: 1D;
-occasion: Pentecost 1 Vespers;
 date: 2011;
 transcriber: Albert Bloomfield;
 transcription-date: 2011;
 style: modern;
 annotation: At Magn.;
 annotation: 1. D;
+def-m1:}{\greseteolcustos{manual}{;
+def-m2:\ifx\breakbeforeEuouae\undefined\else;
+def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
+def-m4:}\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -20,6 +22,6 @@ annotation: 1. D;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c4)NON(cd~) vos(d) re(d)lín(de~)quam(d) <v>\greheightstar</v>() ór(dc~)pha(df)nos,(f_e) al(d)le(cd)lú(d_e)ia :(d/dc.) (:) vá(f_h)do(g_h) et(f) vé(g_h)ni(g)o(fe) ad(cd~) vos,(d_f) al(e)le(cd)lú(d_e)ia :(d/dc.) (:) et(c) gau(cd~)dé(d_e)bit(d_c) cor(c_d) vé(f_)strum,(e_f) al(gh)le(fe)lú(d.)ia.(d.) (::)
-
-E(h) u(h) o(g) u(f) a(gh) e.(gvFED.) (::)
+(c3)CUM(e) ju(e)cun(hg)di(h)tá(i)te(i'_) <v>\greheightstar</v>(,)
+Ma(j)ter(i')ni(h)ta(jk)tem(ji) be(i')á(j)tæ(g') Ma(h)rí(i)æ(i.) (,)
+sem(i)per(hf) Vír(h)gi(h)nis(g_h) ce(ih)le(f)bré(e.)mus.(e.) (::)

@@ -11,6 +11,8 @@ transcriber: Albert Bloomfield;
 transcription-date: 2012;
 style: modern;
 initial-style:0;
+def-m1:\ifx\vrlinebreak\undefined\else;
+def-m2:\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -18,5 +20,5 @@ initial-style:0;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c3)<sp>V/</sp>~B{e}(h)ne(h)dí(h)cta(h) tu(h) in(h) mu(h)li(h)é(h)ri(h)bus.(g'_hvGF'Efgf.) (::)
+(c3)<sp>V/</sp>~B{e}(h)ne(h)dí(h)cta(h) tu(h) in(h) mu(h)li(h)é(h)ri(h)bus.(g'_hvGF'Efgf.) (::[em1]Z[em2])
 <sp>R/</sp>~Et(h) be(h)ne(h)dí(h)ctus(h) frú(h)ctus(h) vén(h)tris(h) tú(h)i.(g'_hvGF'Efgf.) (::)
