@@ -304,13 +304,14 @@
 \newcounter{vcounter}
 \newenvironment{psalmverses}[1][0]{
 % 1 - number to start on
-\begin{list}{\arabic{vcounter}.}{
-\setlength\baselineskip{0pt}
-\setlength\itemsep{1pt}
-\usecounter{vcounter}
-\setlength\parsep{0pt}
-\setlength\labelwidth{50pt}\setlength\leftmargin{0pt}\setlength\itemindent{6ex}}
-\setcounter{vcounter}{#1}
+\begin{list}{\arabic{vcounter}.}{%
+%\setlength\baselineskip{0pt}
+\setlength\itemsep{1pt}%
+\usecounter{vcounter}%
+\setlength\parsep{0pt}%
+\setlength\labelwidth{50pt}\setlength\leftmargin{0pt}\setlength\itemindent{6ex}}%
+\setcounter{vcounter}{#1}%
+\vspace{-\baselineskip}%
 }{\ifx\undefined\useparacol%
 \vspace{-12pt}%
 \fi%
