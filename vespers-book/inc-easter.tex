@@ -75,6 +75,7 @@
 \section{\nth{2} Sunday after Easter}
 \label{easter2}
 \printcommonvespers{}
+\def\precollect{\printvrmanenobiscum}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster2}
 \benedicamusdomino{}
 }
@@ -83,6 +84,7 @@
 \label{easter3}
 \printcommonvespers{}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
+\def\precollect{\printvrmanenobiscum}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster3}
 \benedicamusdomino{}
 }
@@ -91,6 +93,7 @@
 \section{\nth{4} Sunday after Easter}
 \label{easter4}
 \printcommonvespers{}
+\def\precollect{\printvrmanenobiscum}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster4}
 \benedicamusdomino{}
 }
@@ -99,12 +102,14 @@
 \section{\nth{5} Sunday after Easter}
 \label{easter5}
 \printcommonvespers{}
+\def\precollect{\printvrmanenobiscum}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster5}
 \benedicamusdomino{}
 }
 
 {
 \section{Ascension of Our Lord}
+\label{ascension}
 \subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
 
@@ -128,6 +133,7 @@
 
 {
 \section{Sunday after the Ascension}
+\label{easter6}\label{sundayafterascension}
 \printcommonvespers{}
 %\let\printhymnnote=\undefined
 \renewcommand{\printhymnnote}{
@@ -135,6 +141,7 @@
     \def\vrlinebreak{T}
     \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
 }
+\def\precollect{\printvrmanenobiscum}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatSundayAfterAscension}
 \benedicamusdomino{}
 }

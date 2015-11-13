@@ -5,19 +5,13 @@
   \benedicamusdominomaster{#1}
 }
 \newcommand{\sundaycommemnote}{%
-  If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{}~Dirigátur.} in simple commemoration tone, p.~\pageref{vr-dirigatur} and \emph{Collect}.
-
-  \benedicamusdominoreference{1}
+  If today is Sunday, Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{}~Dirigátur.} in simple commemoration tone, p.~\pageref{vr-dirigatur} and \emph{Collect}.
 }
 \newcommand{\sundaycommemnoteeaster}{%
-  If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{}~Mane nobíscum.} in simple commemoration tone, p.~\pageref{vr-manenobiscum} and \emph{Collect}.
-
-  \benedicamusdominoreference{1}
+  If today is Sunday, Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{}~Mane nobíscum.} in simple commemoration tone, p.~\pageref{vr-manenobiscum} and \emph{Collect}.
 }
 \newcommand{\sundaycommemnoteeasterpentecost}{%
-  If today is Sunday, the Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{}~Mane nobíscum.} in Paschaltide or \emph{\Vbar{}~Dirigátur} after Pentecost in simple commemoration tone, p.~\pageref{vr-manenobiscum} and \emph{Collect}.
-
-  \benedicamusdominoreference{1}
+  If today is Sunday, Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{}~Mane nobíscum.} in Paschaltide, p.~\pageref{vr-manenobiscum} or \emph{\Vbar{}~Dirigátur} after Pentecost, p.~\pageref{vr-dirigatur}, in simple commemoration tone and \emph{Collect}.
 }
 
 %December 8: Immaculate Conception
@@ -42,19 +36,17 @@
 \medskip
 \printnote{\sundaycommemnoteeasterpentecost{}
 
-\begin{multicols}{2}
-\noindent\emph{\nth{5} Sunday after Easter}, p.~\pageref{easter5}.\\
-\emph{Sunday after the Ascension}, p.~\pageref{easter6}.
-% pentecost and trinity sunday would outrank this feast
-\end{multicols}
-\begin{centering}
+\bigskip{}
 
-\emph{\nth{2} Sunday after Pentecost}, p.~\pageref{pentecost2}.
+\emph{\nth{4} Sunday after Epiphany}, p.~\pageref{epiphany4}.
 
-\end{centering}
-% \bigskip
-% \benedicamusdomino{}
+\emph{Septuagesima}, p.~\pageref{septuagesima}.
+
+\emph{Sexagesima}, p.~\pageref{sexagesima}.
 }
+
+\bigskip{}
+\benedicamusdomino{}
 }
 
 
@@ -85,7 +77,7 @@
   }
 }
 \printvespers[../February2-PurificationOfBlessedVirginMary]{inc-purification}
-\bigskip
+\bigskip{}
 \benedicamusdomino[2]{}
 }
 
@@ -121,8 +113,8 @@
 \emph{\nth{5} Sunday after Easter}, p.~\pageref{easter5}.
 \end{multicols}
 }
-% \bigskip
-% \benedicamusdomino{}
+\bigskip
+\benedicamusdomino{}
 }
 
 %May 22: St Philip Neri (1)
@@ -146,19 +138,17 @@
 \medskip
 \printnote{\sundaycommemnoteeasterpentecost{}
 
-\begin{multicols}{2}
-\noindent\emph{\nth{5} Sunday after Easter}, p.~\pageref{easter5}.\\
+\bigskip{}
+\emph{\nth{5} Sunday after Easter}, p.~\pageref{easter5}.
+
 \emph{Sunday after the Ascension}, p.~\pageref{easter6}.
+
 % pentecost and trinity sunday would outrank this feast
-\end{multicols}
-\begin{centering}
-
 \emph{\nth{2} Sunday after Pentecost}, p.~\pageref{pentecost2}.
-
-\end{centering}
 }
-% \bigskip
-% \benedicamusdomino{}
+
+\bigskip{}
+\benedicamusdomino{}
 }
 
 %June 24: Nativity of St John the Baptist (1st class)
@@ -193,8 +183,8 @@
 \emph{\nth{6} Sunday after Pentecost}, p.~\pageref{pentecost6}.
 \end{multicols}
 }
-% \bigskip
-% \benedicamusdomino{}
+\bigskip
+\benedicamusdomino{}
 }
 
 %June 29: Sts Peter \& Paul (1st class)
@@ -230,8 +220,8 @@
 \emph{\nth{7} Sunday after Pentecost}, p.~\pageref{pentecost7}.
 \end{multicols}
 }
-% \bigskip
-% \benedicamusdomino{}
+\bigskip
+\benedicamusdomino{}
 }
 
 %July 1: Most Precious Blood (1st class)
@@ -322,10 +312,8 @@
 \emph{\nth{13} Sunday after Pentecost}, p.~\pageref{pentecost13}.
 \end{multicols}
 }
-\medskip
-\hrule
-% \bigskip
-% \benedicamusdomino{}
+\bigskip
+\benedicamusdomino{}
 }
 
 %Sep 14: Exaltation of Holy Cross (2nd class)
@@ -396,6 +384,12 @@
 \def\vesperspropersaltnote{At I Vespers:}
 %\def\premag{\def\noeuouae{T}}
 \def\premagverses{\greseteolcustos{manual}}
+\def\printhymnnote{
+  {
+    \oldneedspace{3\baselineskip}
+    \printnote{Hymn.~\emph{Ave Maris Stella}, p.~\pageref{hymn-avemarisstella}.\\}
+  }
+}
 
 \printvespers[../October11-MaternityOfBlessedVirginMary]{inc-MaternityOfBVM}
 
@@ -419,11 +413,10 @@
 
 \printvespers[../OctoberLastSunday-ChristTheKing]{inc-ChristTheKing}
 \noindent
-\printnote{If today is October 31, the First Vespers of All Saints is commemorated with \emph{Magnificat antiphon}, p.~\pageref{allsaints1-magnificat}; \emph{\Vbar{}~Lætámini}.~in simple commemoration tone, p.~\pageref{allsaints1-vr}; and \emph{Collect}, p.~\pageref{allsaints-collect}.  Otherwise \benedicamusdominoreference{1}}
+\printnote{If today is October 31, the First Vespers of All Saints is commemorated with \emph{Magnificat antiphon}, p.~\pageref{allsaints1-magnificat}; \emph{\Vbar{}~Lætámini}.~in simple commemoration tone, p.~\pageref{allsaints1-vr}; and \emph{Collect}, p.~\pageref{allsaints-collect}.}
+
 \bigskip
-\hrule
-%\bigskip
-%\benedicamusdomino{}
+\benedicamusdomino[1]{}
 }
 
 %Nov 1: All Saints (1st class)
@@ -455,7 +448,7 @@
 \emph{\nth{4} Sunday after Epiphany}, p.~\pageref{epiphany4}.
 \end{multicols}
 }
-\medskip
+\bigskip{}
 \benedicamusdomino{}
 }
 
