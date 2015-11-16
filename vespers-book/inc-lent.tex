@@ -26,6 +26,8 @@
 \printnote{N.B.~From this Sunday until Palm Sunday inclusive, at the \emph{Deus, in adjutórium}, the \emph{Allelúia} is replaced by \emph{Laus tibi, Dómine, Rex æternæ glóriæ}.}
 \def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}}
 \def\precollect{\printvrdirigatur}
+\let\oldthing=\printhymnnote
+\def\printhymnnote{\oldthing\bigskip}
 
 \printvespersmag[../Lent]{inc-VespersMagnificatSeptuagesima}
 
@@ -77,6 +79,7 @@
 \def\vrlabel{vr-angelissuis}
 \def\hymninput{\gabcfolder/inc-hymn-AudiBenigneConditor}
 %\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
+\def\premagnificat{\pagebreak}
 \printvespersmag[../Lent]{inc-VespersMagnificatLent1}
 
 \bigskip
@@ -92,6 +95,7 @@
 \section{\nth{2} Sunday of Lent}
 \label{lent2}
 \printcommonvespers[1]
+\def\precollect{\vspace{-1.5\baselineskip}}
 \printvespersmag[../Lent]{inc-VespersMagnificatLent2}
 
 \def\commemorations{If today is March 18 or 19, First Vespers of St Joseph is commemorated as follows.}
@@ -151,6 +155,7 @@
 \def\hymnlabel{hymn-vexillaregis}
 \def\vrlabel{vr-eripeme}
 \def\hymninput{\gabcfolder/inc-hymn-VexillaRegis}
+\def\premagnificat{\pagebreak}
 \printvespersmag[../Lent]{inc-VespersMagnificatPassion1}
 
 \printcommemnote{}

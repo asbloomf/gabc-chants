@@ -54,6 +54,10 @@
 \section{\nth{6} Sunday after Epiphany}
 \label{epiphany6}
 \printcommonvespers{}
+\def\prevespers{%
+  \let\oldthing=\englishmagantiphon
+  \def\englishmagantiphon{\oldthing\pagebreak}
+}
 \printvespersmag[../TimeAfterEpiphany]{inc-VespersMagnificatEpiphany6}
 
 \bigskip

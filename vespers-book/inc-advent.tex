@@ -34,6 +34,7 @@
 	\label{hymn-creatoralmesiderum}
 	{
 	\def\gabcfolder{../Advent}
+	\def\prehymntranslation{\vspace{-\baselineskip}}
 	\printhymn{\oldstylenums{4.}}{C}{hymn-CreatorAlmeSiderum}
 	{\item Creator of the stars of night
 	Thy people's everlasting light,
@@ -76,6 +77,12 @@
 	}
 }
 \def\prepsalmfive{\greseteolcustos{manual}}
+\def\prevespers{%
+	\let\oldthing\antfourtranslation
+	\def\antfourtranslation{\oldthing\vspace{-\baselineskip}}%
+	\let\oldthingb\antfivetranslation
+	\def\antfivetranslation{\oldthingb\vspace{-\baselineskip}}%
+}
 \printvespers[../Advent1]{inc-Advent1}
 \bigskip
 \benedicamusdomino{}
@@ -94,6 +101,7 @@
 \def\prepsalmfive{\greseteolcustos{manual}}
 \def\premag{\def\noeuouae{T}}
 \def\premagverses{\greseteolcustos{manual}}
+%\def\prechapter{\vspace{-\baselineskip}}
 \printvespers[../Advent2]{inc-Advent2-Vespers2}
 
 \noindent
@@ -143,6 +151,7 @@
 	\def\preverses{\greseteolcustos{manual}}
 	\printmag{2D}{O}{December17-MagAntiphon}
 }
+\def\prechapter{\vspace{-\baselineskip}}
 \def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.48\linewidth}]{2}}
 \printvespers[../Advent3]{inc-Advent3}
 \bigskip
@@ -158,7 +167,7 @@
 \printnote{If today is December 24, First Vespers of Christmas is used on page \pageref{christmas}.}
 \medskip
 
-\def\preanttwo{\def\noeuouae{T}}
+\def\prepsalmtwoverses{\oldneedspace{2\baselineskip}}
 \def\prepsalmfive{\greseteolcustos{manual}}
 \def\magreplacement{
 	%\pagebreak

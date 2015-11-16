@@ -310,6 +310,9 @@ five%
 \ifcsname prepsalm\antnum verses\endcsname
     \def\prepsalmverses{\csname prepsalm\antnum verses\endcsname}
 \fi
+\ifcsname prerepeatantiphon\antnum\endcsname
+    \def\prerepeatantiphon{\csname prerepeatantiphon\antnum\endcsname}
+\fi
 
 %set up variables
 \edef\anttex{#4}
@@ -623,7 +626,7 @@ five%
       \prepsalmtitle
     \fi
     \medskip
-    \needspace{\baselineskip}
+    %\needspace{\baselineskip}
     {\large \hfill\psalmtitle\hfill}
     \medskip
     
@@ -727,8 +730,7 @@ five%
 
 \ifx\preantafter\undefined % if preantafter undefined, we don't reprint the antiphon
     \if\onlyoneant T\else% if there is only one antiphon for all the psalms (like during Paschaltide), we don't print Repeat antiphon
-        \medskip
-        \ifx\prerepeatantiphon\undefined\else\prerepeatantiphon\fi
+        \ifx\prerepeatantiphon\undefined\smallskip\else\prerepeatantiphon\fi
         {\noindent\emph{Repeat antiphon.}\par\medskip}% \vspace{0ex minus 1ex}}
     \fi
 \else
@@ -747,6 +749,8 @@ five%
 \global\expandafter\let\csname psalmclef\antnum\endcsname=\undefined
 \global\expandafter\let\csname psalm\antnum translationsmall\endcsname=\undefined
 \global\expandafter\let\csname prepsalm\antnum verses\endcsname=\undefined
+\global\expandafter\let\csname prerepeatantiphon\antnum\endcsname=\undefined
+\global\let\prerepeatantiphon=\undefined
 % TODO: do we need to do pagebreak stuff?
 }
 
@@ -831,9 +835,9 @@ five%
 % 3 hymntex
 % 4 hymntranslation
     \printgabc[\ifx\prehymn\undefined\else\prehymn\fi]{\small{Hymn.}}{\small{#1}}{#2}{#3} %
-%
+    \ifx\prehymntranslation\undefined\else\prehymntranslation\fi%
     \normalsize%\vspace{0pt minus 20pt}
-    \selectlanguage{american}
+    \selectlanguage{american}\vspace{-\baselineskip}
     \begin{multicols}{2}
     \begin{psalmverses}
     {#4}

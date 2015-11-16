@@ -132,8 +132,14 @@
 \ifnum#1=111
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
 \fi
+%\ifnum#1=112
+%\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.445\linewidth}]{2}}
+%\fi
 \ifnum#1=116
-\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.56\linewidth}]{2}}
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.565\linewidth}]{2}}
+\fi
+\ifnum#1=121
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
 \fi
 \ifnum#1=129
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
@@ -258,6 +264,7 @@
 	\grechangestaffsize{15}
 	\def\gabcfolder{#1}
 	\input{\gabcfolder/#2}
+	\ifx\prevespers\undefined\else\prevespers\fi
 
 	\ifx\chaptertext\undefined\else{
 		\oldneedspace{3\baselineskip}
@@ -284,6 +291,7 @@
 	\fi
 
 	{
+		\ifx\premagnificat\undefined\else\premagnificat\fi
 		\let\anttranslation=\englishmagantiphon
 		\let\preverses=\premagverses
 	    \let\preanttwo=\premagtwo
@@ -298,6 +306,7 @@
 \newcommand{\printpsalms}{
 	\printpsalm{1}{\psalmonenum}{\psalmonetone\psalmoneend}{\antonetex}{\antoneinitial}
 	\medskip
+	\needspace{3\baselineskip}
 	\printpsalm{2}{\psalmtwonum}{\psalmtwotone\psalmtwoend}{\anttwotex}{\anttwoinitial}
 	\medskip
 	\needspace{3\baselineskip}
@@ -331,7 +340,7 @@
 					\def\prepsalmtitle{
 						\smallskip
 						\oldneedspace{3\baselineskip}
-						\noindent\printnote{\vesperspropersaltnote}\vspace{-0.5\baselineskip}
+						\noindent\printnote{\vesperspropersaltnote}\vspace{-1\baselineskip}
 
 					}
 				\fi
@@ -342,7 +351,7 @@
 				\definevesperspropers
 				\ifx\vesperspropersnote\undefined\else
 					\oldneedspace{5\baselineskip}
-					\noindent\printnote{\vesperspropersnote}\vspace{-0.5\baselineskip}
+					\noindent\printnote{\vesperspropersnote}\vspace{-1\baselineskip}
 				\fi
 				\def\prepsalmtitle{\def\onlyoneant{F}}
 				\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
@@ -356,6 +365,9 @@
 	\grechangestaffsize{15}
 	\def\gabcfolder{#1}
 	\input{\gabcfolder/#2}
+	\ifx\prevespers\undefined\else%
+	\prevespers{}
+	\fi
 
 	\deusinadjutorium{}
 	\medskip
@@ -388,10 +400,10 @@
 	\needspace{3\baselineskip}
 	\ifx\chapterreplacement\undefined{
 		\ifx\chaptertext\undefined
+			\ifx\prechapter\undefined\else\prechapter\fi
 			\def\printchapterheading{F}
-		    \begin{center}{\large\textbf Chapter.}\end{center}
-
-		    \vspace{-0.25\baselineskip plus 0.125\baselineskip}
+	    \begin{center}{\large\textbf Chapter.}\end{center}
+	    \vspace{-0.3\baselineskip}
 			\ifx\definevesperspropersalt\undefined\else
 			{
 				\ifx\vesperspropersaltnote\undefined\else
@@ -426,6 +438,7 @@
 
 	\medskip
 	\ifx\printfullhymn\undefined
+		\ifx\prehymn\undefined\else\prehymn\fi
 		\ifx\printhymnnote\undefined
 			\ifx\hymninput\undefined\else
 				\input{\hymninput}
@@ -527,6 +540,7 @@
 		\ifx\collect\undefined
 			\def\printcollectheading{F}
 			\needspace{3\baselineskip}
+			\ifx\precollect\undefined\else\precollect\fi
 			\begin{center}{\large Collect.}\end{center}
 
 			\vspace{-0.5\baselineskip plus 0.25\baselineskip}
@@ -552,6 +566,7 @@
 		\else
 			\oldneedspace{3\baselineskip}
 			\needspace{5\baselineskip}
+			\ifx\precollect\undefined\else\precollect\fi
 			\printcollect{\collect}{\collecttranslation}
 		\fi
 	}

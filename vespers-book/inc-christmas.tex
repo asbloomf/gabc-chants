@@ -12,8 +12,17 @@
 \newcommand{\printhymnnote}{
 	\noindent\printnote{Hymn.~\emph{Jesu Redémptor ómnium}, page \pageref{hymn-jesuredemptoromnium}.\\}
 }
-\def\definevesperspropers{\input{\gabcfolder/inc-Christmas-Vespers1}}
+\def\definevesperspropers{\input{\gabcfolder/inc-Christmas-Vespers1}%
+  \let\oldthing\maganttranslation
+  \def\maganttranslation{\vspace{-0.5\baselineskip}\oldthing\vspace{-0.5\baselineskip}}%
+}
 \newcommand{\preantfour}{\needspace{5\baselineskip}}
+\def\prevespers{%
+  \let\oldthing\antfourtranslation
+  \def\antfourtranslation{\oldthing\vspace{-\baselineskip}}%
+}
+\def\prechapter{\vspace{-\baselineskip}}
+\def\precollect{\vspace{-0.2\baselineskip}}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 \printvespers[../Christmas-Vespers1]{inc-Christmas-Vespers1-psalms}
 
@@ -81,7 +90,11 @@
 %\def\vesperspropersnote{At II Vespers of the Most Holy Name of Jesus:}
 \def\hymnlabel{hymn-jesudulcismemoria}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.425\linewidth}]{2}}
-
+\def\prevespers{%
+  \let\oldthing\antfivetranslation
+  \def\antfivetranslation{\oldthing\vspace{\baselineskip}}%
+}
+\def\prehymn{\pagebreak}
 \printvespers[../HolyName]{inc-HolyName-common}
 
 \benedicamusdomino[2]{}
@@ -101,6 +114,8 @@
 \def\vesperspropersnote{At II Vespers:}
 \def\prechapter{\vspace{-1\baselineskip}}
 \def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
+\def\prepsalmthreeverses{\vspace{-0.05\baselineskip}}
+\def\prerepeatantiphonthree{}
 
 \printvespers[../Epiphany]{inc-Epiphany-Vespers}
 
@@ -110,10 +125,21 @@
 {
 \section{Holy Family of Jesus, Mary \& Joseph}
 \subtitle{\nth{2} Class}
-
 \subtitle{First Sunday after the Epiphany.}
+
+\subtitle{I \& II Vespers}
 %\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43825\linewidth}]{2}}
 
+\def\prerepeatantiphontwo{\vspace{-0.5\baselineskip}}
+%\def\prerepeatantiphonthree{}
+\def\prevespers{%
+  \let\oldthing\anttwotranslation
+  \def\anttwotranslation{\vspace{-0.7\baselineskip}\oldthing\vspace{-0.7\baselineskip}}%
+  \let\oldthingb\antthreetranslation
+  \def\antthreetranslation{\oldthing\vspace{\baselineskip}}%
+  \let\oldthingc\antfivetranslation
+  \def\antfivetranslation{\oldthing\vspace{\baselineskip}}%
+}
 \printvespers[../HolyFamily]{inc-HolyFamily-Vespers2}
 
 \benedicamusdomino[2]{}
