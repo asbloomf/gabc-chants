@@ -313,7 +313,12 @@ five%
 \ifcsname prerepeatantiphon\antnum\endcsname
     \def\prerepeatantiphon{\csname prerepeatantiphon\antnum\endcsname}
 \fi
-
+\ifcsname prepsalmtitle\antnum\endcsname
+    \def\prepsalmtitle{\csname prepsalmtitle\antnum\endcsname}
+\fi
+\ifcsname postpsalmtitle\antnum\endcsname
+    \def\postpsalmtitle{\csname postpsalmtitle\antnum\endcsname}
+\fi
 %set up variables
 \edef\anttex{#4}
 \edef\antinitial{#5}
@@ -622,14 +627,16 @@ five%
 %TODO: psalmtitle properly when canticleof defined
 \ifx\canticleof\undefined
   \def\printpsalmtitle{%
-    \ifx\prepsalmtitle\undefined\else
+    \ifx\prepsalmtitle\undefined\medskip\else
       \prepsalmtitle
     \fi
-    \medskip
     %\needspace{\baselineskip}
+
     {\large \hfill\psalmtitle\hfill}
-    \medskip
-    
+
+    \ifx\postpsalmtitle\undefined\medskip\else
+      \postpsalmtitle
+    \fi
   }
 \else
   \def\printpsalmtitle{%
@@ -751,6 +758,10 @@ five%
 \global\expandafter\let\csname prepsalm\antnum verses\endcsname=\undefined
 \global\expandafter\let\csname prerepeatantiphon\antnum\endcsname=\undefined
 \global\let\prerepeatantiphon=\undefined
+\global\expandafter\let\csname prepsalmtitle\antnum\endcsname=\undefined
+\global\expandafter\let\csname postpsalmtitle\antnum\endcsname=\undefined
+\global\let\prepsalmtitle=\undefined
+\global\let\postpsalmtitle=\undefined
 % TODO: do we need to do pagebreak stuff?
 }
 

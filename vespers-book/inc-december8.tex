@@ -12,6 +12,13 @@
 \def\prehymn{\printnote{All kneel for the first stanza of the following hymn.}}
 \def\hymnlabel{hymn-avemarisstella}
 \def\vrlinebreak{F}
+\def\prechapter{\vspace{-\baselineskip}}
+\def\prevespers{
+  \let\oldthing=\antthreetranslation
+  \def\antthreetranslation{\oldthing\vspace{-\baselineskip}}
+  \let\oldthingb=\antfivetranslation
+  \def\antfivetranslation{\oldthingb\vspace{-\baselineskip}}
+}
 \printvespers[../December8-ImmaculateConception]{inc-ImmaculateConceptionVespers}
 }
 
@@ -20,7 +27,7 @@
 
 \bigskip
 \noindent
-\printnote{Then follows a Commemoration of the Advent Sunday or Feria according to the day of the week on which the Feast of the Immaculate Conception falls.}
+\printnote{Then follows a Commemoration of the Advent Sunday or Feria according to the day of the week.  The antiphon is followed by \emph{\Vbar{} Roráte cæli}, page \pageref{vr-rorate-dec8}, and then the appropriate Collect, page \pageref{collect-dec8}.}
 \bigskip
 }
 
@@ -109,6 +116,7 @@
   \hrule
   \medskip
   {
+      \label{vr-rorate-dec8}
       \newcommand{\commvlatin}{Roráte cæli désuper, et nubes pluant \textbf{ju}stum.}
       \newcommand{\commrlatin}{Aperiátur terra, et gérminet Salva\textbf{tó}rem.}
       \newcommand{\commvtranslation}{Ye heavens, drop down dew from above, and let the clouds rain down the Just One.}
@@ -117,8 +125,9 @@
   }
 
   \oldneedspace{3\baselineskip}
+  \label{collect-dec8}
   \begin{center}{\large Collect.}\end{center}
-  \vspace{-\baselineskip}
+  \vspace{-1.5\baselineskip}
   \def\printcollectheading{F}
   {
   \begin{center}{First Week of Advent.}\end{center}
@@ -127,7 +136,6 @@
   \printcollect{\collect}{\collecttranslation}
   }
   {
-  \medskip
   \begin{center}{Second Week of Advent.}\end{center}
   \def\gabcfolder{../Advent2}
   \input{\gabcfolder/CommemorationAdvent2}

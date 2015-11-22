@@ -114,14 +114,19 @@
 \section{Ascension of Our Lord}
 \label{ascension}
 \subtitle{\nth{1} Class, White or Gold}
+\vspace{-0.5\baselineskip}
 \subtitle{I \& II Vespers}
+\vspace{-0.5\baselineskip}
 
 \def\premagverses{\greseteolcustos{manual}}
-\def\begincollectcols{\vspace{-0.5\baselineskip}\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
+\def\begincollectcols{%\vspace{-0.5\baselineskip}
+\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
 \def\definevesperspropers{\input{\gabcfolder/inc-Ascension-2Vespers}
     \def\prepsalmfive{\greseteolcustos{manual}}
 }
-\def\definevesperspropersalt{\input{\gabcfolder/inc-Ascension-1Vespers}}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-Ascension-1Vespers}
+    \def\premagverses{\pagebreak}
+}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
 \let\printhymnnote=\undefined
@@ -145,6 +150,7 @@
     \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
 }
 \def\precollect{\printvrmanenobiscum}
+\def\premagverses{\pagebreak}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatSundayAfterAscension}
 \benedicamusdomino{}
 }

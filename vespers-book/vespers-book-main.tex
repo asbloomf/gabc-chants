@@ -141,6 +141,9 @@
 \ifnum#1=121
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
 \fi
+%\ifnum#1=125
+%\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.48\linewidth}]{2}}
+%\fi
 \ifnum#1=129
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
 \fi
@@ -340,7 +343,7 @@
 					\def\prepsalmtitle{
 						\smallskip
 						\oldneedspace{3\baselineskip}
-						\noindent\printnote{\vesperspropersaltnote}\vspace{-1\baselineskip}
+						\noindent\printnote{\vesperspropersaltnote}\vspace{-0.7\baselineskip}
 
 					}
 				\fi
@@ -438,7 +441,6 @@
 
 	\medskip
 	\ifx\printfullhymn\undefined
-		\ifx\prehymn\undefined\else\prehymn\fi
 		\ifx\printhymnnote\undefined
 			\ifx\hymninput\undefined\else
 				\input{\hymninput}
@@ -447,6 +449,7 @@
 		\else
 			\printhymnnote
 		\fi
+		\ifx\prevr\undefined\else\prevr\fi
 		\printbothversions[\vrlabel][\vraltlabel]{\vrtex}{%
 	    \ifx\vrlinebreak\undefined\def\vrlinebreak{T}\fi
 	    \printvr[\if\vrlinebreak T\greseteolcustos{manual}\fi]{\vrtex}{\vtranslation}{\rtranslation}
@@ -488,11 +491,13 @@
 			\definevesperspropersalt
   		\hrule
   		\needspace{5\baselineskip}
+			\ifx\premagnificat\undefined\else\premagnificat\fi
 	    \begin{center}{\large Magnificat.}\end{center}
     	\vspace{-1ex}
+    	\ifx\postmagtitle\undefined\else\postmagtitle\fi
 
     	\ifx\vesperspropersaltnote\undefined\else
-    		\oldneedspace{7\baselineskip}
+    		\oldneedspace{6\baselineskip}
 				\printnote{\vesperspropersaltnote\\\vspace{-0.5\baselineskip}}
 			\fi
 			\let\anttranslation=\maganttranslation
@@ -519,6 +524,7 @@
 			\fi
 			\def\nomagtitle{T}
 		\fi
+		\else\ifx\premagnificat\undefined\else\premagnificat\fi
 		\fi
 		\let\anttranslation=\maganttranslation
 		\let\preverses=\premagverses
@@ -668,7 +674,7 @@ Magnificat, and Collect given for the respective Sunday or Feast.}
 
 \def\noeuouae{T}
 \def\dontrepeatantiphon{T}
-%\vfil
+
 \input{inc-benedicamus-domino}
 
 \input{inc-marian-anthems}

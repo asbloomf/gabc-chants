@@ -12,12 +12,21 @@
 \def\definevesperspropers{\input{\gabcfolder/inc-Pentecost-2Vespers}
 	\def\prepsalmfive{\greseteolcustos{manual}}
 }
-\def\definevesperspropersalt{\input{\gabcfolder/inc-Pentecost-1Vespers}}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-Pentecost-1Vespers}%
+\def\postmagtitle{\vspace{-\baselineskip}}}%
+%
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
 %\def\premag{\def\noeuouae{T}}
 \def\premagverses{\greseteolcustos{manual}}
 \def\prehymn{\printnote{All kneel for the first stanza of the following hymn.}}
+\def\prevespers{%
+	\let\oldthing\antthreetranslation
+	\def\antthreetranslation{\oldthing\vspace{-\baselineskip}}%
+	%\let\oldthingb\antfivetranslation
+	%\def\antfivetranslation{\oldthingb\vspace{-\baselineskip}}%
+}
+%\def\prevr{\vspace{-0.7\baselineskip}}
 \printvespers[../Pentecost]{inc-PentecostVespers}
 \bigskip
 \benedicamusdomino{}
@@ -28,8 +37,11 @@
 \subtitle{\nth{1} Class, White or Gold}
 
 %\def\premag{\def\noeuouae{T}}
+%\def\prepsalmtwoverses{\vspace{-0.05\baselineskip}}
+\def\prerepeatantiphontwo{}
 \def\premagverses{\greseteolcustos{manual}}
-\def\begincollectcols{\vspace{-0.5\baselineskip}\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
+\def\prehymn{\pagebreak}
+\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 \printvespers[../TrinitySunday]{inc-TrinitySunday-Vespers}
 \bigskip
 \benedicamusdomino{}
@@ -40,8 +52,11 @@
 \chapter{Proper of the Time -- Time After Pentecost}
 {
 \def\printcommonvespers{
+	\vspace{-0.5\baselineskip}
 	\subtitle{\nth{2} Class, Green}
+	\vspace{-0.5\baselineskip}
 	\printnote{From Vespers of Sundays throughout the year on page \pageref{sundayvespers}.\\}
+	\vspace{-1\baselineskip}
 }
 \newcommand{\benedicamusdomino}[1][sunday]{
   \benedicamusdominomaster{#1}
@@ -75,19 +90,37 @@
 \printvespersafterpentecost{11}
 {\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.455\linewidth}]{2}}
 \printvespersafterpentecost{12}}
-\printvespersafterpentecost{13}
+{\def\prevespers{
+	\let\oldthing=\englishmagantiphon
+	\def\englishmagantiphon{\oldthing\pagebreak}
+}
+\printvespersafterpentecost{13}}
 \printvespersafterpentecost{14}
-\printvespersafterpentecost{15}
-\printvespersafterpentecost{16}
+{\def\prevespers{
+	\let\oldthing=\englishmagantiphon
+	\def\englishmagantiphon{\oldthing\pagebreak}
+}
+\printvespersafterpentecost{15}}
+{%\def\prevespers{\pagebreak}
+\printvespersafterpentecost{16}}
 \printvespersafterpentecost{17}
 \printvespersafterpentecost{18}
 {\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}}
 \printvespersafterpentecost{19}}
 \printvespersafterpentecost{20}
 \printvespersafterpentecost{21}
-\printvespersafterpentecost{22}
-\printvespersafterpentecost{23}
-{\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.455\linewidth}]{2}}
+{\def\prevespers{
+	\let\oldthing=\englishmagantiphon
+	\def\englishmagantiphon{\oldthing\pagebreak}
+}
+\printvespersafterpentecost{22}}
+{%\def\prevespers{\pagebreak}
+\printvespersafterpentecost{23}}
+{\def\prevespers{
+	\let\oldthing=\englishmagantiphon
+	\def\englishmagantiphon{\oldthing\pagebreak}	
+}
+\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.455\linewidth}]{2}}
 \printvespersafterpentecost{24}}
 
 }

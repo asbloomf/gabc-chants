@@ -25,6 +25,13 @@
 }
 \def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43\linewidth}]{2}}
+\def\prepsalmthreeverses{\pagebreak}
+\def\prevespers{
+  \let\oldthing=\anttwotranslation  
+  \def\anttwotranslation{\oldthing\vspace{-\baselineskip}}
+  \let\oldthingb=\antfourtranslation  
+  \def\antfourtranslation{\oldthing\pagebreak}
+}
 
 \printvespers[../March25-Annunciation]{inc-Annunciation}
 }
@@ -34,7 +41,7 @@
 
 \bigskip
 \noindent
-\printnote{Then follows a Commemoration of the Lenten Feria.}
+\printnote{Then follows a Commemoration of the Lenten Feria.  Finally, \benedicamusdominoreference{1}}
 \bigskip
 }
 
@@ -68,10 +75,11 @@
   }\else%
   \printnote{\emph{\Vbar{}~\vrtitle}, page \pageref{\vrlabel}.}
   \fi
+  \ifx\precollect\undefined\else\precollect\fi
   \printcollect{#7}{#8}
   \medskip
   \hrule
-  \medskip
+  %\smallskip
 }
 \newcommand{\printweektitle}[2][the ]{
   \edef\commemweek{#2}%
@@ -111,6 +119,7 @@
   {Deus innocéntiæ restitútor et amátor, dírige ad te tuórum corda servórum~:~* ut spíritus tui fervóre concépto, et in fide inveniántur stábiles, et in ópere efficáces. Per Dóminum.}
   {God, the Renewer and Lover of innocence, turn the hearts of Thy servants to Thyself, so that they, enkindled with the fire of Thy Spirit, may be found ever rooted in faith, and fruitful in works.}
 
+  %\newcommand{\vrtitle}{Roráte cæli}
   \printcommem{Thursday}{7}{D}{an--dives_ille_guttam--solesmes}
   {That rich man who had refused Lazarus bread-crumbs, cried for a drop of water.}
   {Adésto Dómine fámulis tuis, et perpétuam benignitátem largíre poscéntibus~:~* ut iis, qui te auctóre et gubernatóre gloriántur, et congregáta restáures, et restauráta consérves. Per Dóminum.}
@@ -128,21 +137,25 @@
   {Subvéniat nobis Dómine misericórdia tua~:~* ut ab imminéntibus peccatórum nostrórum perículis te mereámur protegénte éripi, te liberánte salvári. Per Dóminum.}
   {Let our help, O Lord, be in Thy mercy, that we over whom Thy wrath doth most justly hang because of our sins, may in all dangers worthily be shielded by Thy protection and delivered by Thy salvation.}
 
+  %\let\vrtitle=\undefined
   \printcommem{Tuesday}{4}{U}{an--ubi_duo_vel_tres--solesmes}
   {Where two or three are gathered in my name, I am in their midst, saith the Lord.}
   {Tua nos Dómine protectióne defénde~:~* et ab omni semper iniquitáte costódi. Per Dóminum.}
   {O Lord, shield us by Thy protection, and keep us ever from all iniquity.}
 
+  %\newcommand{\vrtitle}{Roráte cæli}
   \printcommem{Wednesday}{7}{N}{an--non_lotis_manibus--solesmes}
   {To eat with unwashen hands, defileth not a man.}
   {Concéde, quǽsumus omnípotens Deus~: ut qui protectiónis tuæ grátiam quǽrimus,~* liberáti a malis ómnibus, secúra tibi mente serviámus. Per Dóminum.}
   {Grant, we beseech Thee, Almighty God, that we who seek the proctection of Thy grace, freed from all evils, may serve Thee in peace and quietness of spirit.}
 
+  %\let\vrtitle=\undefined
   \printcommem{Thursday}{1}{O}{an--omnes_qui_habebant--solesmes}
   {All who had any sick brought them to Jesus, and they were healed.}
   {Subjéctum tibi pópulum, quǽsumus Dómine, propitiátio cæléstis amplíficet~:~* et tuis semper fáciat servíre mandátis. Per Dóminum.}
   {Lord, we beseech Thee that Thine heavenly Peace-Offering may so effectually work for all Thy people, bowing down before Thee, that they may ever continue to keep Thy commandments.}
 
+  %\newcommand{\vrtitle}{Roráte cæli}
   \printcommem{Friday}{3}{D}{an--domine_ut_video--solesmes}
   {Lord, I see that Thou art a prophet: our fathers worshipped on this mountain.}
   {Præsta, quǽsumus omnípotens Deus~:~\dag{} ut qui in tua protectióne confídimus,~* cuncta nobis adversántia te adjuvánte vincámus. Per Dóminum.}
@@ -160,6 +173,7 @@
   {Miserére Dómine pópulo tuo~:~* et contínuis tribulatiónibus laborántem, propítius respiráre concéde. Per Dóminum.}
   {Lord, have mercy upon Thy people, and be graciously pleased to grant relief unto the same, who are ever toiling amid the storms of diverse tribulations.}
 
+  %\newcommand{\vrtitle}{Roráte cæli}
   \printcommem{Wednesday}{1}{I}{an--ille_homo--solesmes}
   {The man that is called Jesus, made clay of spittle, and anointed mine eyes, and now I see.}
   {Páteant aures misericórdiæ tuæ Dómine précibus supplicántium~:~* et ut peténtibus desideráta concédas, fac eos quæ tibi sunt plácita postuláre. Per Dóminum.}
@@ -191,16 +205,20 @@
   {Da, quǽsumus Dómine, pópulo tuo salútem mentis et córporis~:~* ut bonis opéribus inhæréndo, tua semper mereátur protectióne deféndi. Per Dóminum.}
   {Grant unto Thy people, O Lord, we beseech Thee, soundness of mind and body, that they, cleaving unto good works, may evermore worthily be defended by Thy protection.}
 
+  {%\newcommand{\vrtitle}{Eripe me}
+  %\def\precollect{\vspace{-\baselineskip}}
   \printcommem{Tuesday}{1}{V}{an--vos_ascendite--solesmes}
   {Go ye up unto this Feast; I go not, for My time is not yet full come.}
   {Da nobis, quǽsumus Dómine, perseverántem in tua voluntáte famulátum~:~* ut in diébus nostris, et mérito et número pópulus tibi sérviens augeátur. Per Dóminum.}
   {Grant, we beseech Thee, Lord, to give us grace to endure to the end in doing Thy will, that in our days Thy people which serve Thee may have increase, both in merit and number.}
+  }
 
   \printcommem{Wednesday}{4}{M}{an--multa_bona_opera--solesmes}
   {I have wrought many good works among you: on account of which work do you want to kill me?}
   {Adésto supplicatiónibus nostris omnípotens Deus~:~* et quibus fidúciam sperándæ pietátis indúlges, consuétæ misericórdiæ tríbue benígnus efféctum. Per Dóminum.}
   {Gratiously hear our prayers, Almighty God, and as Thou dost give us to look with confidence for Thy favour for which we hope, so grant us, in Thy goodness, Thine accustomed mercy.}
 
+  %\newcommand{\vrtitle}{Eripe me}
   \printcommem{Thursday}{4}{D}{an--desiderio_desideravi--solesmes}
   {With desire I have desired to eat this Pasch with you before I suffer.}
   {Esto, quǽsumus Dómine, propítius plebi tuæ~:~* ut quæ tibi non placent respuéntes, tuórum pótius repleántur delectatiónibus mandatórum. Per Dóminum.}
