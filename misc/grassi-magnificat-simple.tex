@@ -13,8 +13,11 @@
 \usepackage{graphicx} % support the \includegraphics command and options
 \usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
 %\geometry{letterpaper} % or letterpaper (US) or a5paper or....
-\geometry{outer=72pt,inner=72pt,top=36pt+\headsep+\headheight,bottom=36pt+\footskip}
+\geometry{outer=72pt,inner=72pt,top=24pt+\headsep+\headheight,bottom=12pt+\footskip}
 \usepackage{gregoriotex} % for gregorio score inclusion
+\ifdefined\gresetcompilegabc
+    \gresetcompilegabc{auto}
+\fi
 
 % If you use usual TeX fonts, here is a starting point:
 %\usepackage{palatino}
@@ -74,6 +77,6 @@
 \end{boldnummagnificat}
 
 \noindent%\begin{center}%
-\includegraphics{magnificat-grassi.pdf}%
+\includegraphics{magnificat-grassi-4part.pdf}%
 %\end{center}
 \end{document}
