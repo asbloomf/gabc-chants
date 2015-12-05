@@ -12,3 +12,4 @@ misc/*-systems.*
 *.gtex
 *.greaux
 temp/
+*.mid

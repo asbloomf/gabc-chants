@@ -1,0 +1,11 @@
+@image{/src/gabc-chants/MarianAntiphons/AlmaRedemptorisMater-1}
+@image{/src/gabc-chants/MarianAntiphons/AlmaRedemptorisMater-2}
+@image{/src/gabc-chants/MarianAntiphons/AlmaRedemptorisMater-3}
+@image{/src/gabc-chants/MarianAntiphons/AlmaRedemptorisMater-4}
+@image{/src/gabc-chants/MarianAntiphons/AlmaRedemptorisMater-5}
+@image{/src/gabc-chants/MarianAntiphons/AlmaRedemptorisMater-6}
+@image{/src/gabc-chants/MarianAntiphons/AlmaRedemptorisMater-7}
+@image{/src/gabc-chants/MarianAntiphons/AlmaRedemptorisMater-8}
+@image{/src/gabc-chants/MarianAntiphons/AlmaRedemptorisMater-9}
+@image{/src/gabc-chants/MarianAntiphons/AlmaRedemptorisMater-10}
+@c eof

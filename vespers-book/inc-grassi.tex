@@ -15,8 +15,10 @@
 
 \label{magnificat-grassi}
 \vspace*{-\headheight}
+\vspace*{-0.5\baselineskip}
 \section{Magnificat 8.~G.}
 
+\vspace{-\baselineskip}
 \def\betweenLilyPondSystem#1{
   \ifnum#1>1
     \vfil\noindent
@@ -37,16 +39,21 @@
 {\fontsize{50}{50}\selectfont #1}%
 }
 \alsetinitialspacing{M}
-\def\magoddverses{\input{../psalms/magnificat-\magtone\nostarendmag\if\magsolemn Tsolemn\else simple\fi-grassi-chant-verses}}
-\global\def\magtex{../psalms/Magnificat\if\magsolemn Tsolemn\else simple\fi\magtone\nostarendmag}
 \greseteolcustos{manual}
 \printsimpletone{}
-\begin{oddversesmagnificat}{\magtex}
-\magoddverses
-\end{oddversesmagnificat}
+\begin{boldnummagnificat}{\magtex}
+\magverses
+\end{boldnummagnificat}
 
-\includelilypond{magnificat-grassi-small-systems}
+% \def\magoddverses{\input{../psalms/magnificat-\magtone\nostarendmag\if\magsolemn Tsolemn\else simple\fi-grassi-chant-verses}}
+% \global\def\magtex{../psalms/Magnificat\if\magsolemn Tsolemn\else simple\fi\magtone\nostarendmag}
+% \begin{oddversesmagnificat}{\magtex}
+% \magoddverses
+% \end{oddversesmagnificat}
 
+\vfill
+\includelilypond{magnificat-grassi-4part-small-systems-page1}
+\pagebreak
 
 
 \def\magsolemn{T}
@@ -57,9 +64,16 @@
 \definemag{8}{G}
 \def\annot{\magtone.~\magend}
 \alsetinitialspacing{M}
-\global\def\magtex{../psalms/Magnificat\if\magsolemn Tsolemn\else simple\fi\magtone\nostarendmag}
 \printsolemntone{}
-\begin{oddversesmagnificat}{\magtex}
-\magoddverses
-\end{oddversesmagnificat}
+\begin{boldnummagnificat}{\magtex}
+\magverses
+\end{boldnummagnificat}
+
+% \global\def\magtex{../psalms/Magnificat\if\magsolemn Tsolemn\else simple\fi\magtone\nostarendmag}
+% \begin{oddversesmagnificat}{\magtex}
+% \magoddverses
+% \end{oddversesmagnificat}
+
+\vfill
+\includelilypond{magnificat-grassi-4part-small-systems-page2}
 }

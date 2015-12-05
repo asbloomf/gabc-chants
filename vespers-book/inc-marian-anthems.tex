@@ -49,6 +49,18 @@
 }
 
 \def\gabcfolder{../MarianAntiphons}
+\newcommand{\includelilypond}[1]{
+  \noindent
+  \import{../MarianAntiphons/}{#1}%
+}
+\def\betweenLilyPondSystem#1{
+  \ifnum#1>1
+    \vfil\noindent
+  \else
+    \linebreak
+  \fi
+  %\vspace{0.5\baselineskip}
+}
 
 \section{Alma Redemptoris Mater}
 \printnote{From Vespers of Saturday before the \nth{1} Sunday of Advent to \nth{2} Vespers of the Purification.}
@@ -88,7 +100,8 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 
 \afterant{}
 }
-
+\includelilypond{AlmaRedemptorisMater-systems}%
+\pagebreak
 
 
 % Ave Regina Cælorum

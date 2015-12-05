@@ -1,7 +1,7 @@
 \version "2.14.2"
 \include "util.ly"
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 "Alma Redemptoris Mater"}}
+  %title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 "Alma Redemptoris Mater"}}
   composer = \markup"Giovanni Pierluigi da Palestrina (c. 1525–1594)"
   tagline = ""
 }
@@ -36,8 +36,17 @@ global = {
   \override DynamicTextSpanner #'style = #'none
 }
 
+incipit = {
+  ees,4( g8[ aes bes c]) bes4
+}
+incipitCue = {
+  \new CueVoice {
+    \incipit
+  }
+}
+
 sopMusic = \relative c' {
-	r1 |
+	\relative c'' { \incipitCue } |
   bes'2 bes |
   ees,4 f g8[ aes bes g]( |
   aes2 f) |
@@ -103,7 +112,7 @@ sopWords = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  r1 |
+  \relative c'' { \incipitCue } |
   g'2 g |
   g4 f ees8[ f g ees]( |
   f)[ ees]~ ees2( d4) |
@@ -168,7 +177,7 @@ altoWords = \lyricmode {
 }
 
 tenorMusic = \relative c' {
-  ees,4( g8[ aes bes c]) bes4 |
+  \incipit |
   ees2 ees |
   bes4 bes bes2( |
   c) bes |
@@ -234,7 +243,7 @@ tenorWords = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  r1 |
+  \incipitCue |
   ees,2 ees |
   ees4 d ees2( |
   aes,) bes |

@@ -1,0 +1,4 @@
+@image{magnificat-grassi-small-1}
+@image{magnificat-grassi-small-2}
+@image{magnificat-grassi-small-3}
+@c eof
