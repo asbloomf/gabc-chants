@@ -1,0 +1,8 @@
+@image{/src/gabc-chants/MarianAntiphons/AveReginaCaelorum-1}
+@image{/src/gabc-chants/MarianAntiphons/AveReginaCaelorum-2}
+@image{/src/gabc-chants/MarianAntiphons/AveReginaCaelorum-3}
+@image{/src/gabc-chants/MarianAntiphons/AveReginaCaelorum-4}
+@image{/src/gabc-chants/MarianAntiphons/AveReginaCaelorum-5}
+@image{/src/gabc-chants/MarianAntiphons/AveReginaCaelorum-6}
+@image{/src/gabc-chants/MarianAntiphons/AveReginaCaelorum-7}
+@c eof

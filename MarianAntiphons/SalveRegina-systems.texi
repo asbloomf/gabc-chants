@@ -1,0 +1,16 @@
+@image{/src/gabc-chants/MarianAntiphons/SalveRegina-1}
+@image{/src/gabc-chants/MarianAntiphons/SalveRegina-2}
+@image{/src/gabc-chants/MarianAntiphons/SalveRegina-3}
+@image{/src/gabc-chants/MarianAntiphons/SalveRegina-4}
+@image{/src/gabc-chants/MarianAntiphons/SalveRegina-5}
+@image{/src/gabc-chants/MarianAntiphons/SalveRegina-6}
+@image{/src/gabc-chants/MarianAntiphons/SalveRegina-7}
+@image{/src/gabc-chants/MarianAntiphons/SalveRegina-8}
+@image{/src/gabc-chants/MarianAntiphons/SalveRegina-9}
+@image{/src/gabc-chants/MarianAntiphons/SalveRegina-10}
+@image{/src/gabc-chants/MarianAntiphons/SalveRegina-11}
+@image{/src/gabc-chants/MarianAntiphons/SalveRegina-12}
+@image{/src/gabc-chants/MarianAntiphons/SalveRegina-13}
+@image{/src/gabc-chants/MarianAntiphons/SalveRegina-14}
+@image{/src/gabc-chants/MarianAntiphons/SalveRegina-15}
+@c eof
