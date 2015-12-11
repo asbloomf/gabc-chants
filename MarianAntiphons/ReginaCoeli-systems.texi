@@ -1,0 +1,14 @@
+@image{/src/gabc-chants/MarianAntiphons/ReginaCoeli-1}
+@image{/src/gabc-chants/MarianAntiphons/ReginaCoeli-2}
+@image{/src/gabc-chants/MarianAntiphons/ReginaCoeli-3}
+@image{/src/gabc-chants/MarianAntiphons/ReginaCoeli-4}
+@image{/src/gabc-chants/MarianAntiphons/ReginaCoeli-5}
+@image{/src/gabc-chants/MarianAntiphons/ReginaCoeli-6}
+@image{/src/gabc-chants/MarianAntiphons/ReginaCoeli-7}
+@image{/src/gabc-chants/MarianAntiphons/ReginaCoeli-8}
+@image{/src/gabc-chants/MarianAntiphons/ReginaCoeli-9}
+@image{/src/gabc-chants/MarianAntiphons/ReginaCoeli-10}
+@image{/src/gabc-chants/MarianAntiphons/ReginaCoeli-11}
+@image{/src/gabc-chants/MarianAntiphons/ReginaCoeli-12}
+@image{/src/gabc-chants/MarianAntiphons/ReginaCoeli-13}
+@c eof
