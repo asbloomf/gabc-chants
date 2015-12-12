@@ -115,7 +115,7 @@ tenorMusic = \relative c'' {
   \incipit
   g'1( f) | f( d) | d\breve | e | f2.( e8[ d] c4 a d2) ~ d g, c c |
   bes a g1 | d'2.( e4 f1) | ees2 ees c1 | bes f | g2 a bes c ~ c4( bes bes a8[ g] a1)
-  bes r | g bes2 c | d4( c d e f2. e8[ f] | g2) d r g ~g4 g f2 d e | e2.( e4 d c d2)
+  bes r | g bes2 c | d4( c d e f2. e8[ f] | g2) d r g ~ g f2 d e | e2.( e4 d c d2)
 
   % page 2
 

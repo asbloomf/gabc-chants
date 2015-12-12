@@ -25,7 +25,7 @@
   ragged-bottom = ##f
   line-width = #(- line-width (* mm  3.000000))  
 }
-#(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
+#(set-global-staff-size 17) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 17 20))) }
 global = {
   \key g\major
   \autoBeamOff
@@ -34,8 +34,17 @@ global = {
   \time 4/4
 }
 
+incipit = {
+  g8[^\markup\italic"more liturgico" fis e fis] d[ e]( g4)^\fermata \bar"||"
+}
+incipitCue = {
+  \new CueVoice {
+      g8[ fis e fis] d[ e]( g4)^\fermata \bar"||"
+  }
+}
+
 sopMusic = \relative c' {
-  r1 \bar"||"
+  \relative c'' {\incipitCue}
   b'2 a~ |
   a g4 fis |
   g4.( fis16)[ g]( a4 g)~ |
@@ -112,7 +121,7 @@ altWords = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  r1 \bar"||"
+  \relative c'' {\incipitCue}
   d2 d~ |
   d d |
   d4 e4.( d16)[ c b8 c]( |
@@ -156,7 +165,7 @@ altoMusic = \relative c' {
 }
 
 tenorMusic = \relative c' {
-  r1 \bar"||"
+  \incipitCue
   g2 a( |
   b) b4 a |
   b4( c4. b8)[ b a16 g]( |
@@ -201,7 +210,7 @@ tenorMusic = \relative c' {
 }
 
 bassMusic = \relative c' {
-  g8[^\markup\italic"more liturgico" fis e fis] d[ e]( g4)^\fermata \bar"||"
+  \incipit
   g2 fis( |
   g) g4 d |
   g8[ fis e d c d]( e4 |
