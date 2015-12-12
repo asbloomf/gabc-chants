@@ -12,11 +12,13 @@
 %	#2 translation
 {
 \oldneedspace{5\baselineskip}
+\hrule
 \subtitle{December #1.}
 \printgabc{\small At Magn.}{\small \oldstylenums{Ant.~2.~D}}{O}{December#1-MagAntiphon}
 \translation[]{#2}
 \medskip
 \emph{\emph{Magnificat}.~page \pageref{oantiphon-magnificat}.}
+\bigskip
 }
 }
 
@@ -100,10 +102,11 @@
 \grechangedim{spacelinestext}{0.70617 cm}{scalable}%
 }
 \def\prepsalmthree{\needspace{5\baselineskip}}
+\def\prerepeatantiphonthree{\bigskip}
 \def\prepsalmfive{\greseteolcustos{manual}}
 \def\premag{\def\noeuouae{T}}
 \def\premagverses{\greseteolcustos{manual}}
-%\def\prechapter{\vspace{-\baselineskip}}
+\def\prechapter{\needspace{5\baselineskip}}
 \printvespers[../Advent2]{inc-Advent2-Vespers2}
 
 \noindent

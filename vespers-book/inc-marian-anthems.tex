@@ -56,6 +56,8 @@
 \def\betweenLilyPondSystem#1{
   \ifnum#1>1
     \vfil\noindent
+    %\linebreak
+    %\bigskip
   \else
     \linebreak
   \fi
@@ -68,6 +70,9 @@
 \printgabc{Ant.}{5.}{A}{AlmaSimple}
 \printsolemntone{}
 \printgabc{Ant.}{5.}{A}{AlmaSolemn}
+
+\includelilypond{AlmaRedemptorisMater-systems}%
+
 \begin{quote}{
 Beloved Mother of the Savior, and wide open Gate of heaven,
 Star of the Sea, bring help to the people that weakens and wavers.
@@ -100,8 +105,6 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 
 \afterant{}
 }
-\includelilypond{AlmaRedemptorisMater-systems}%
-\pagebreak
 
 
 % Ave Regina Cælorum
@@ -113,7 +116,9 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 \printgabc{Ant.}{6.}{A}{AveReginaSolemn}
 \begin{quote}{Hail, Queen of Heaven! Hail, Queen of Angels! Hail, blest Root and Gate, from which came light upon the world! Rejoice, O glorious Virgin, that surpassest all in beauty! Hail, O most lovely, and pray for us to Christ.}\end{quote}
 
-\bigskip{}
+\includelilypond{AveReginaCaelorum-systems}%
+\pagebreak
+
 {
 \newcommand{\vlatin}{Dignáre me laudáre te Vírgo sacráta.}
 \newcommand{\venglish}{Voucshafe, O holy Virgin, that I may praise thee.}
@@ -124,18 +129,19 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 
 \afterant{}
 }
-\includelilypond{AveReginaCaelorum-systems}%
 
 
 
 % Regina Cæli
-\needspace{10\baselineskip}
+\needspace{9\baselineskip}
 \section{Regina cæli}
 \printnote{From Compline of Easter Sunday to Compline of Friday after the Feast of Pentecost inclusively.}
 \printsimpletone{}
 \printgabc{Ant.}{6.}{R}{ReginaCaeliSimple}
+\oldneedspace{12\baselineskip}
 \printsolemntone{}
 \printgabc{Ant.}{6.}{R}{ReginaCaeliSolemn}
+
 \begin{quote}{O Queen of heaven, rejoice, alleluia.
 For He whom thou didst merit to bear, alleluia;
 Has risen as He said, alleluia.
@@ -152,8 +158,8 @@ Pray for us to God, alleluia.}\end{quote}
 
 \afterant{}
 }
-\includelilypond{ReginaCoeli-systems}%
 
+\includelilypond{ReginaCoeli-systems}%
 
 
 
@@ -165,7 +171,12 @@ Pray for us to God, alleluia.}\end{quote}
 \printsimpletone{}
 \printgabc{Ant.}{5.}{S}{SalveReginaSimple}
 \printsolemntone{}
-\printgabc{Ant.}{1.}{S}{SalveReginaSolemn}
+\printgabc{Ant.}{1.}{S}{SalveReginaSolemn-drone}
+
+\begin{quote}{Hail, holy Queen, Mother of mercy; hail, our life, our sweetness, and our hope! To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this vale of tears.  Turn then, most gracious advocate, thine eyes of mercy towards us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.  O clement, O loving, O sweet Virgin Mary.}\end{quote}
+
+\includelilypond{SalveRegina-systems}%
+
 \begin{quote}{Hail, holy Queen, Mother of mercy; hail, our life, our sweetness, and our hope! To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this vale of tears.  Turn then, most gracious advocate, thine eyes of mercy towards us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.  O clement, O loving, O sweet Virgin Mary.}\end{quote}
 
 \bigskip{}
@@ -179,6 +190,5 @@ Pray for us to God, alleluia.}\end{quote}
 
 \afterant{}
 }
-\includelilypond{SalveRegina-systems}%
 
 }
