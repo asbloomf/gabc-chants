@@ -1,5 +1,7 @@
 \version "2.14.2"
 \include "util.ly"
+ss=\once \set suggestAccidentals = ##t
+
 \header {
   %title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 "Alma Redemptoris Mater"}}
   composer = \markup"Francesco Soriano (c. 1549–1621)"
@@ -59,10 +61,10 @@ sopMusic = \relative c'' {
   a\breve | r1 c | b\breve | r2 d1 d2 | d1 d2 d | e2. f4 d2 c | bes2. bes4 a1 ~
 
   % page 3
-%todo fix editorial accidentals
-  a2 b c a ~ a4( g) g1( fis2)  | g\breve \bar"||" bes\breve | a1 b | c1. c2 | c\breve | c1 c |
+
+  a2 b c a ~ a4( g) g1( \ss fis2)  | g\breve \bar"||" bes\breve | a1 b | c1. c2 | c\breve | c1 c |
   bes( a) | g( a) | bes( c) | bes( a) | g2 bes a b | c c d2. d4 |
-  d2 c b1 | b r | r2 d c1 | b2 b c c | bes?1 a2 g | a4( g g1 fis2) | g\breve
+  d2 c b1 | \ss b r | r2 d c1 | b2 b c c | bes?1 a2 g | a4( g g1 fis2) | g\breve
  \bar"|."
 }
 sopWords = \lyricmode {
