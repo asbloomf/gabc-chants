@@ -61,13 +61,13 @@ sopWords = \lyricmode {
   ia, læ -- ta -- re, al -- le -- lu -- ia; Qui -- a
   quem me -- ru -- i -- sti por -- ta -- re, al -- le --
 
-  lu -- ia, al -- le -- lu -- ia,_ al -- le -- lu -- ia.
-  Re -- sur -- re -- xit, si -- cut di -- xit, re -- sur -- re -- xit,_ sic -- ut di --
-  xit, al -- le -- lu -- ia;_
+  lu -- ia, al -- le -- lu -- ia, __ al -- le -- lu -- ia.
+  Re -- sur -- re -- xit, si -- cut di -- xit, re -- sur -- re -- xit, __ sic -- ut di --
+  xit, al -- le -- lu -- ia; __
 
   O -- ra pro no -- bis De -- um,
-  al -- le -- lu -- ia,_ al -- le -- lu --
-  ia, al -- le -- lu -- ia,_ al -- le -- lu -- ia.
+  al -- le -- lu -- ia, __ al -- le -- lu --
+  ia, al -- le -- lu -- ia, __ al -- le -- lu -- ia.
 }
 
 altoMusic = \relative c' {
@@ -91,16 +91,16 @@ altoMusic = \relative c' {
 }
 altoWords = \lyricmode {
   Re -- gi -- na cæ -- li læ -- ta -- re, al -- le -- lu --
-  ia, læ -- ta -- re, al -- le -- lu -- ia;_ Qui -- a
+  ia, læ -- ta -- re, al -- le -- lu -- ia; __ Qui -- a
   quem me -- ru -- i -- sti por -- ta -- re, al --
 
-  le -- lu -- ia,_ al -- le -- lu -- ia, al -- le -- lu -- ia.
+  le -- lu -- ia, __ al -- le -- lu -- ia, al -- le -- lu -- ia.
   Re -- sur -- re -- xit, si -- cut di -- xit, re -- sur -- re -- xit, sic -- ut di --
-  xit, al -- le -- lu -- ia;_
+  xit, al -- le -- lu -- ia; __
 
   O -- ra pro no -- bis De -- um,
-  al -- le -- lu -- ia,_ al -- le -- lu --
-  ia,_ al -- le -- lu -- ia, al -- le -- lu -- ia._
+  al -- le -- lu -- ia, al -- le -- lu --
+  ia, __ al -- le -- lu -- ia, al -- le -- lu -- ia. __
 }
 
 tenorMusic = \relative c' {
@@ -127,14 +127,14 @@ tenorMusic = \relative c' {
 tenorWords = \lyricmode {
   Re -- gi -- na cæ -- li læ -- ta -- re, al -- le --
   lu --  ia, al -- le -- lu -- ia, al -- le -- lu -- ia; Qui -- a quem
-  me -- ru -- i -- sti_ por -- ta -- re,
+  me -- ru -- i -- sti __ por -- ta -- re,
 
   al -- le -- lu -- ia, al -- le -- lu -- ia.
   Re -- sur -- re -- xit, si -- cut di --
-  xit, al -- le -- lu -- ia;_ O --
+  xit, al -- le -- lu -- ia; __ O --
 
   ra pro no -- bis De -- um, al -- le -- lu --
-  ia,_ al -- le -- lu -- ia, al -- le -- lu -- ia, al -- le -- lu -- ia,_
+  ia, __ al -- le -- lu -- ia, al -- le -- lu -- ia, al -- le -- lu -- ia, __
   al -- le -- lu -- ia, al -- le -- lu -- ia.
 }
 
@@ -164,10 +164,10 @@ bassWords = \lyricmode {
 
   al -- le -- lu -- ia.
   Re -- sur -- re -- xit, si -- cut di -- xit,
-  al -- le -- lu -- ia;_
+  al -- le -- lu -- ia; __
 
   O -- ra pro no -- bis De -- um, al -- le -- lu --
-  ia,_ al -- le -- lu -- ia, al -- le -- lu -- ia,_
+  ia,_ al -- le -- lu -- ia, al -- le -- lu -- ia, __
   al -- le -- lu -- ia, al -- le -- lu -- ia.
 }
 

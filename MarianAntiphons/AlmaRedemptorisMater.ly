@@ -170,7 +170,7 @@ altoWords = \lyricmode {
   Et stel -- la ma -- ris, suc -- cúr -- re ca -- dén -- ti,
   súr -- ge -- re qui cu -- rat pó -- pu -- lo_:
   Tu quæ ge -- nu -- í -- sti, na -- tú -- ra mi -- rán -- te, tu -- um san -- ctum Ge -- ni -- tó -- rem_:
-  Vir -- go pri -- us ac po -- sté -- ri -- us, 
+  Vir -- go pri -- us ac __ po -- sté -- ri -- us, 
   Ga -- bri -- é -- lis ab o -- re
   su -- mens il -- lud A -- ve, pec -- ca -- tó -- rum mi -- se -- ré -- re,
     pec -- ca -- tó -- rum mi -- se -- ré -- re.
@@ -234,12 +234,12 @@ tenorMusic = \relative c' {
 tenorWords = \lyricmode {
   Al -- ma Red -- em -- ptó -- ris Ma -- ter, quæ pér -- vi -- a cæ -- li por -- ta ma -- nes,
   Et stel -- la ma -- ris, suc -- cúr -- re ca -- dén -- ti,
-  súr -- ge -- re qui cu -- rat pó -- pu -- lo_:
+  súr -- ge -- re qui cu -- rat __ pó -- pu -- lo_:
   Tu quæ ge -- nu -- í -- sti, na -- tú -- ra mi -- rán -- te, tu -- um san -- ctum Ge -- ni -- tó -- rem_:
-  Vir -- go pri -- us ac po -- sté -- ri -- us,
+  Vir -- go pri -- us ac __ po -- sté -- ri -- us,
   Ga -- bri -- é -- lis ab o -- re
   su -- mens il -- lud A -- ve, pec -- ca -- tó -- rum mi -- se -- ré -- re,
-    pec -- ca -- tó -- rum mi -- se -- ré -- re.
+  pec -- ca -- tó -- rum mi -- se -- ré -- re.
 }
 
 bassMusic = \relative c' {
@@ -299,9 +299,9 @@ bassMusic = \relative c' {
 bassWords = \lyricmode {
   Red -- em -- ptó -- ris Ma -- ter, quæ pér -- vi -- a cæ -- li por -- ta ma -- nes,
   Et stel -- la ma -- ris, suc -- cúr -- re ca -- dén -- ti,
-  súr -- ge -- re qui cu -- rat pó -- pu -- lo_:
+  súr -- ge -- re qui cu -- rat pó -- pu -- lo_: __
   Tu quæ ge -- nu -- í -- sti, na -- tú -- ra mi -- rán -- te, tu -- um san -- ctum Ge -- ni -- tó -- rem_:
-  Vir -- go pri -- us ac po -- sté -- ri -- us, Ga -- bri -- é -- lis ab o -- re
+  Vir -- go pri -- us ac po -- sté -- ri -- us, Ga -- bri -- é -- lis ab __ o -- re
   su -- mens il -- lud A -- ve, pec -- ca -- tó -- rum mi -- se -- ré -- re,
     pec -- ca -- tó -- rum mi -- se -- ré -- re.
 }

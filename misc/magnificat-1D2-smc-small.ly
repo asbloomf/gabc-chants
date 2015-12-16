@@ -4,10 +4,10 @@
 
 \paper {
   %myStaffSize = #19
-  myStaffSize = #24
+  myStaffSize = #19
   indent = 0\mm
   %line-width = 7.5\in
-  line-width = 8.5\in - 72\pt
+  line-width = 6\in - 1.25\in
   %ragged-right = ##t
   force-assignment = #""
   line-width = #(- line-width (* mm  3.000000))
@@ -15,7 +15,7 @@
    (make-pango-font-tree "Garamond Premier Pro"
                          "Garamond Premier Pro"
                          "Garamond Premier Pro"
-                          (/ myStaffSize 23)))
+                          (/ myStaffSize 22)))
 }
 
 \score {

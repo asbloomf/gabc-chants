@@ -74,10 +74,10 @@ sopWords = \lyricmode {
 
   Ad te su -- spi -- ra -- mus ge -- men -- tes et flen -- tes in hac la -- cry -- ma --
   rum val -- le. E -- ia er -- go ad -- vo -- ca -- ta no --
-  stra, no -- stra, il -- los tu -- os mi -- se -- ri -- cor -- des o -- cu -- los
+  stra, no -- stra, il -- los tu -- os mi -- se -- ri -- cor -- des o -- cu -- los __
 
   ad nos con -- ver -- te. Et Je -- sum be -- ne -- di -- ctum fru --
-  ctum_ ven -- tris_ tu -- i, no -- bis post hoc ex -- i -- li --
+  ctum __ ven -- tris __ tu -- i, no -- bis post hoc ex -- i -- li --
   um o -- sten -- de. O pi -- a, O dul -- cis Vir -- go, Ma -- ri -- a.
 }
 
@@ -134,13 +134,13 @@ tenorMusic = \relative c'' {
 }
 
 tenorWords = \lyricmode {
-  Sal -- ve Re -- gi -- na, ma -- ter mi -- se -- ri --
+  Sal -- ve Re -- gi -- na, ma -- ter __ mi -- se -- ri --
   cor -- di -- æ, vi -- ta, dul -- ce -- do, et spes no -- stra sal --
   ve. Ad te cla -- ma -- mus e -- xu -- les fi -- lii E --
 
   væ. Ad te su -- spi -- ra -- mus ge -- men -- tes et flen -- tes_ in hac la -- cry -- ma --
   rum val -- le. E -- ia er -- go_ ad -- vo --
-  ca -- ta no -- stra, il -- los tu -- os mi -- se -- ri -- cor -- des o -- cu -- los_
+  ca -- ta no -- stra, il -- los tu -- os mi -- se -- ri -- cor -- des o -- cu -- los
 
   ad nos con -- ver -- te. Et Je -- sum be -- ne -- di -- ctum fru -- ctum
   ven -- tris_ tu -- i, fru -- ctum ven -- tris tu -- i, no -- bis post hoc ex -- i -- li --
@@ -173,7 +173,7 @@ bassWords = \lyricmode {
 
   væ. Ad te su -- spi -- ra -- mus ge -- men -- tes et flen -- tes_ in hac la -- cry -- ma -- rum
   val -- le._ E -- ia er -- go ad -- vo -- ca --
-  ta no -- stra, il -- los tu -- os mi -- se -- ri -- cor -- des o -- cu -- los
+  ta no -- stra, il -- los tu -- os mi -- se -- ri -- cor -- des o -- cu -- los __
 
   ad nos con -- ver -- te. Et Je -- sum be -- ne -- di -- ctum
   no -- bis post hoc ex -- i -- li --
