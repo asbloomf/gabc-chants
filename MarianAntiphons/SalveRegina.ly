@@ -52,7 +52,7 @@ sopMusic = \relative c'' {
 	\relative c''' { \incipitCue }
   d\breve | c1( bes) | a\breve | c\breve | c2 c f f | d2.( e4 f2) c |
   d1 r2 bes ~ | bes4( c d2) c bes | c4( bes bes1 a2) | bes d1 c2 | bes a g( a ~ a4 g g1 fis2) |
-  g g bes c | d2.( c4 d e f2) | f d2. d4 c2 | bes a bes1 | a\breve | r\breve
+  g g bes c | d2.( c4 d e f2) | f d2. d4 c2 | bes a bes1 | a\breve | R\breve
 
   % page 2
 
@@ -117,7 +117,7 @@ tenorMusic = \relative c'' {
   \incipit
   g'1( f) | f( d) | d\breve | e | f2.( e8[ d] c4 a d2) ~ d g, c c |
   bes a g1 | d'2.( e4 f1) | ees2 ees c1 | bes f | g2 a bes c ~ c4( bes bes a8[ g] a1)
-  bes r | g bes2 c | d4( c d e f2. e8[ f] | g2) d r g ~ g f2 d e | e2.( e4 d c d2)
+  bes r | g bes2 c | d4( c d e f2. e8[ f] | g2) d r g ~ g4 g f2 d e | f2.( e4 d c d2)
 
   % page 2
 
@@ -138,9 +138,9 @@ tenorWords = \lyricmode {
   cor -- di -- æ, vi -- ta, dul -- ce -- do, et spes no -- stra sal --
   ve. Ad te cla -- ma -- mus e -- xu -- les fi -- lii E --
 
-  væ. Ad te su -- spi -- ra -- mus ge -- men -- tes et flen -- tes_ in hac la -- cry -- ma --
-  rum val -- le. E -- ia er -- go_ ad -- vo --
-  ca -- ta no -- stra, il -- los tu -- os mi -- se -- ri -- cor -- des o -- cu -- los
+  væ. Ad te su -- spi -- ra -- mus ge -- men -- tes et flen -- tes __ in hac la -- cry -- ma --
+  rum val -- le. E -- ia er -- go __ ad -- vo --
+  ca -- ta no -- stra, il -- los tu -- os mi -- se -- ri -- cor -- des o -- cu -- los __
 
   ad nos con -- ver -- te. Et Je -- sum be -- ne -- di -- ctum fru -- ctum
   ven -- tris_ tu -- i, fru -- ctum ven -- tris tu -- i, no -- bis post hoc ex -- i -- li --
@@ -151,7 +151,7 @@ bassMusic = \relative c'' {
   \incipitCue
   g1( bes) | f( g) | d\breve | c | f1. d2 | g g f e |
   d1 r2 g ~ g4( a bes2) a bes | ees,1( f) | bes,2 bes'1 a2 | g f ees( c | d\breve) |
-  g1 r | r2 g g f | bes1 f | r\breve | r2 d'2. d4 c2 | bes a bes1 |
+  g1 r | r2 g g f | bes1 f | R\breve | r2 d'2. d4 c2 | bes a bes1 |
 
   % page 2
 
@@ -162,7 +162,7 @@ bassMusic = \relative c'' {
   % page 3
 
   f2 d e f | c( ees d1) | g\breve \bar"||" g | d1 g | f1. f2 | c'\breve | f, |
-  r | r | r | r | r2 g fis g | c, c' bes2. g4 |
+  R | R | R | R | r2 g fis g | c, c' bes2. g4 |
   bes2 c g1 | g2 g a1 | g2 bes a1 | g2 g c a | bes1 f2 g | c,1( d) | g\breve
   \bar"|."
 }

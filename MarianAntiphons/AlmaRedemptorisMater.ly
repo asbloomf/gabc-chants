@@ -205,7 +205,7 @@ tenorMusic = \relative c' {
   %page2
   c4 c2 bes4 |
   aes2 g |
-  r1 |
+  R1 |
   r4 ees'2 d4 |
   c2 bes |
   r2 ees~ |
@@ -271,7 +271,7 @@ bassMusic = \relative c' {
   %page2
   c4 aes2 ees'4 |
   f2 ees |
-  r1 |
+  R1 |
   r4 ees8[ f g aes]( bes4)~ |
   bes aes g4.( f8 |
   ees4) f g aes |

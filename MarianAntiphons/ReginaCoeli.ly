@@ -46,12 +46,12 @@ sopMusic = \relative c'' {
 
   a4 g fis4.( g8 | a4) b4.( c8 d4) ~ d cis d8([ c b a] | g4) b a g ~ g( fis8[ e] fis2) | g1 \bar"||"
   r2 c | d e | d4 d g,2 | a b4 b | c e2 d4 ~ d c b a ~ a8([ g] g2 fis4)
-  g2 r | r1 | r1 | r4 d'4 c b | a8([ b c d] e[ d] d4) ~ d( cis d2) | \break
+  g2 r | R1 | R1 | r4 d'4 c b | a8([ b c d] e[ d] d4) ~ d( cis d2) | \break
 
   % page 3
 
-  b1 | c2 b4 a ~ a gis a4.( b16[ c] | d1) | g, | r1 |
-  r | r | r2 r4 g | g8([ a b c] d4) e | d4.( c8 b2) | a4 g a2 |
+  b1 | c2 b4 a ~ a gis a4.( b16[ c] | d1) | g, | R1 |
+  R | R | r2 r4 g | g8([ a b c] d4) e | d4.( c8 b2) | a4 g a2 |
   g r4 g | g8([ a b c] d4) e | d4.( c8 b4) g | a b4.( a8 g4) ~ g( fis8[ e] fis2) | g1
 
   \bar"|."
@@ -73,18 +73,18 @@ sopWords = \lyricmode {
 altoMusic = \relative c' {
   d1 | d2 e4 g ~ g( fis8[ e] fis2) | g4 g e8([ d e fis] | g[ fis16 e d8 e] fis4) e | fis g2 fis 4 |
   g g fis2 | e g ~ g4 fis e2 | d1 ~ d2 r4 g ~ g( fis8[ e] fis4) fis |
-  g1 | g2 e4 e ~ e( d8[ c] b2) | a4 a'2 g4 ~ g( fis e2) | d r | r1 | r4 g4.( fis8 e[ d]
+  g1 | g2 e4 e ~ e( d8[ c] b2) | a4 a'2 g4 ~ g( fis e2) | d r | R1 | r4 g4.( fis8 e[ d]
 
   % page 2
 
   c4) e d4.( e8 | fis4) g4.( fis8 d4) | e2 fis4 g | d e2 c4 | d1 | d \bar"||"
   g2 a | b a4 g | fis a4.( g8 g4) ~ g( fis) g2 | e4. e8 g4 fis | a4.( g8 fis4) fis | b,4.( c8 d2) |
-  b2 r | r1 | r2 r4 g'4 ~ g fis e d8([ e] | fis[ g] a4 g8[ fis fis e16 d] | e2 fis) |
+  b2 r | R1 | r2 r4 g'4 ~ g fis e d8([ e] | fis[ g] a4 g8[ fis fis e16 d] | e2 fis) |
 
   % page 3
 
-  g1 | g2. f4 | e2 c | f1 | e | r |
-  r | r | r4 g, g8([ a b c] | d4. e8 fis4) g | fis g4.( fis8 g[ e] | fis4) g2 fis4 |
+  g1 | g2. f4 | e2 c | f1 | e | R |
+  R | R | r4 g, g8([ a b c] | d4. e8 fis4) g | fis g4.( fis8 g[ e] | fis4) g2 fis4 |
   g8([ fis e d] e2 | d4) d b c | b2. c4 | a d4.( c16[ d] e4) | d1 ~ d
 
   \bar"|."
@@ -106,13 +106,13 @@ altoWords = \lyricmode {
 tenorMusic = \relative c' {
   b1 | a2 b | d1 | d2 r4 a | g8([ a b c] d4 c8[ b] | a4) b d d |
   b g a d | c2 b | a c ~ c4( b) a2 | b g | d' d |
-  e d ~ d4( b) c2 | b4.( a8 g[ a b c] | d2) r | r1 | r4 d2 c4 ~ c( b a2) | g r2 |
+  e d ~ d4( b) c2 | b4.( a8 g[ a b c] | d2) r | R1 | r4 d2 c4 ~ c( b a2) | g r2 |
 
   % page 2
 
   r2 r4 d'4 ~ d8([ c b a] g4) b | a2 d4 d( | b8[ a g fis] e4) g | a1 | g \bar"||"
-  r1 | r2 c | d e | d1 | r | r2 d | g, a |
-  g r4 d' | c b a8([ b c d] e[ d] d2 cis4 | d2) r | r1 | r2 d ~ 
+  R1 | r2 c | d e | d1 | R | r2 d | g, a |
+  g r4 d' | c b a8([ b c d] e[ d] d2 cis4 | d2) r | R1 | r2 d ~ 
 
   % page 3
 
@@ -139,20 +139,20 @@ tenorWords = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  g1 | fis2 e | d1 | g2 r | r1 | r2 r4 d |
-  e8([ fis g fis16 e] d8[ e fis g] | a2) e4 g | d2( a' | fis4 g) d2 | g,1 | r |
-  c2 g' | g a | g2.( e4) | fis2 e | r1 | d4.( e8 fis[ g] a4) ~ a g2( fis4) | g1 |
+  g1 | fis2 e | d1 | g2 r | R1 | r2 r4 d |
+  e8([ fis g fis16 e] d8[ e fis g] | a2) e4 g | d2( a' | fis4 g) d2 | g,1 | R |
+  c2 g' | g a | g2.( e4) | fis2 e | R1 | d4.( e8 fis[ g] a4) ~ a g2( fis4) | g1 |
 
   % page 2
 
-  r1 | r | r2 r4 g ~ g8([ fis e d] c4) e | d1 | g, \bar"||"
-  r1 | r | r | r2 g' | a b | a4 a d,2 | e d |
-  r4 g2 fis4 | e d8([ e] fis[ g] a4 | g8[ fis fis e16 d] e2 | d) r | r1 | r |
+  R1 | R | r2 r4 g ~ g8([ fis e d] c4) e | d1 | g, \bar"||"
+  R1 | R | R | r2 g' | a b | a4 a d,2 | e d |
+  r4 g2 fis4 | e d8([ e] fis[ g] a4 | g8[ fis fis e16 d] e2 | d) r | R1 | R |
 
   % page 3
 
   g1 | c,2 d | e f | d1 | c4 c c8([ d e f] | g4. a8 b4) c |
-  b g4.( fis?8 g[ e] | fis4) g2 fis4 | g1 | r4 b b e, | b'4.( a8 g2) | r1 |
+  b g4.( fis?8 g[ e] | fis4) g2 fis4 | g1 | r4 b b e, | b'4.( a8 g2) | R1 |
   r4 c,4 c8([ d e fis] | g2.) c,4 | g'2. e4 | fis g2( c,4 | d1) | g,
 
   \bar"|."
