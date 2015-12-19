@@ -12,7 +12,12 @@
 %	#2 translation
 {
 \oldneedspace{5\baselineskip}
-\hrule
+	\par
+  \cleaders\vbox to 2\baselineskip{%
+    \vss
+    \hrule width\linewidth
+    \vss
+  }\vskip2\baselineskip
 \subtitle{December #1.}
 \printgabc{\small At Magn.}{\small \oldstylenums{Ant.~2.~D}}{O}{December#1-MagAntiphon}
 \translation[]{#2}
