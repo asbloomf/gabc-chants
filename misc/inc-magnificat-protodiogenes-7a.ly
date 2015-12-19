@@ -19,6 +19,10 @@ stemOff = {
 }
 
 \layout {
+  \context {
+    \Score
+    \omit BarNumber
+  }
 }
 
 global = {
@@ -28,6 +32,7 @@ global = {
 
 sopMusic = \relative c'' {
   \cadenzaOn
+  \relative c' { \stemOff \new CueVoice { e4 } \stemOn }
   b\breve \bar "|" \cadenzaOff
   b2 b4 |
   \set melismaBusyProperties = #'()
@@ -37,6 +42,7 @@ sopMusic = \relative c'' {
   e\breve \bar "|" \cadenzaOff
   e4 d c |
   b2 a4 | b2. \bar "||"
+  \relative c'' { \stemOff \new CueVoice { g4 } }
 }
 sopWords = \lyricmode {
 
@@ -44,6 +50,7 @@ sopWords = \lyricmode {
 
 altoMusic = \relative c' {
   \cadenzaOn
+  \relative c' { \stemOff \new CueVoice { e4 } \stemOn }
   e\breve \bar "|" \cadenzaOff
   g2 g4 |
   \set melismaBusyProperties = #'()
@@ -54,10 +61,12 @@ altoMusic = \relative c' {
   a4 d, e |
   e2 e4 |
   dis2. \bar "||"
+  \relative c'' { \stemOff \new CueVoice { g4 } }
 }
 
 tenorMusic = \relative c' {
   \cadenzaOn
+  \relative c { \stemOff \new CueVoice { e4 } \stemOn }
   b\breve \bar "|" \cadenzaOff
   b2 b4 |
   \set melismaBusyProperties = #'()
@@ -68,10 +77,12 @@ tenorMusic = \relative c' {
   c4 b a |
   g2 g4 |
   b2. \bar "||"
+  \relative c' { \stemOff \new CueVoice { g4 } }
 }
 
 bassMusic = \relative c'' {
   \cadenzaOn
+  \relative c { \stemOff \new CueVoice { e4 } \stemOn }
   g,\breve \bar "|" \cadenzaOff
   e2 d4 |
   \set melismaBusyProperties = #'()
@@ -82,11 +93,13 @@ bassMusic = \relative c'' {
   a4 b c |
   b2 c4 |
   b2. \bar "||"
+  \relative c' { \stemOff \new CueVoice { g4 } }
 }
 
 hiddenMusic = \relative c'' {
 \hideNotes
   \cadenzaOn
+  r4
   r\breve \bar "|" \cadenzaOff
   r2. |
   r |
@@ -94,7 +107,8 @@ hiddenMusic = \relative c'' {
   r\breve \bar "|" \cadenzaOff
   r2. |
   r |
-  r2 a4\bar "||"
+  r2. \bar "||"
+  a4
 \unHideNotes
 }
 
@@ -202,4 +216,60 @@ altoWordsVI = \lyricmode {
   et_in_sæcula
   \once \override LyricText #'self-alignment-X = #CENTER
   sæ -- cu -- ló -- rum. A -- men.
+}
+
+\score {
+  \new ChoirStaff <<
+    %\new Lyrics = "sopranos"
+    \new Staff = "women" <<
+      \new Voice = "sopranos"{
+        \voiceOne
+        << \global \sopMusic >>
+      }
+      \new Voice = "altos" {
+        \voiceTwo
+        << \global \altoMusic >>
+      }
+    >>
+    
+    \new Lyrics = "altos"
+    \new Lyrics = "altosII"
+    \new Lyrics = "altosIII"
+    \new Lyrics = "altosIV"
+    \new Lyrics = "altosV"
+    \new Lyrics = "altosVI"
+    
+    \new Staff = "men" <<
+      \clef bass
+      \new Voice = "tenor" {
+        \voiceOne
+        << \global \tenorMusic >>
+      }
+      \new Voice = "bass" {
+        \voiceTwo
+        << \global \bassMusic >>
+      }
+      \new Voice = "hidden"{
+        \voiceThree
+        << \global \hiddenMusic >>
+      }
+    >>
+    \context Lyrics = "altos" \lyricsto "sopranos" \altoWords
+  \context Lyrics = "altos" \lyricsto "hidden" \hiddenWords
+    \context Lyrics = "altosII" \lyricsto "sopranos" \altoWordsII
+  \context Lyrics = "altosII" \lyricsto "hidden" \hiddenWordsII
+    \context Lyrics = "altosIII" \lyricsto "sopranos" \altoWordsIII
+  \context Lyrics = "altosIII" \lyricsto "hidden" \hiddenWordsIII
+    \context Lyrics = "altosIV" \lyricsto "sopranos" \altoWordsIV
+  \context Lyrics = "altosIV" \lyricsto "hidden" \hiddenWordsIV
+    \context Lyrics = "altosV" \lyricsto "sopranos" \altoWordsV
+  \context Lyrics = "altosV" \lyricsto "hidden" \hiddenWordsV
+    \context Lyrics = "altosVI" \lyricsto "sopranos" \altoWordsVI
+  >>
+  \layout {
+    \context {
+      \Staff
+      \remove "Time_signature_engraver"
+    }
+  }
 }

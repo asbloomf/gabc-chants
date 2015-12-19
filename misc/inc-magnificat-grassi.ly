@@ -19,6 +19,10 @@ stemOff = {
 }
 
 \layout {
+  \context {
+    \Score
+    \omit BarNumber
+  }
 }
 
 global = {

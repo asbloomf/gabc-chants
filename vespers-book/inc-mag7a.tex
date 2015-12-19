@@ -1,0 +1,80 @@
+{
+\cleartoleftpage{}
+\thispagestyle{empty}
+\newcommand{\printsimpletone}{
+\needspace{3\baselineskip}
+\begin{center}\textbf{Simple Tone.}\end{center}
+\vspace{0ex plus 0ex minus 2ex}
+}
+\newcommand{\printsolemntone}{
+%\vspace{0ex plus 0ex minus 0.5ex}
+\needspace{3\baselineskip}
+\begin{center}\textbf{Solemn Tone.}\end{center}
+\vspace{0ex plus 0ex minus 1ex}
+}
+
+\label{magnificat-7a}
+\vspace*{-\headheight}
+\vspace*{-0.5\baselineskip}
+\section{Magnificat 7.~a.}
+
+\vspace{-\baselineskip}
+\def\betweenLilyPondSystem#1{
+  \ifnum#1>1
+    \vfil\noindent
+  \else
+    \linebreak
+  \fi
+  %\vspace{0.5\baselineskip}
+}
+\newcommand{\includelilypond}[1]{
+  \noindent
+  \import{../misc/}{#1}
+}
+\def\magsolemn{F}
+\def\magprotodiogenes{T}
+\definemag{7}{a}
+\def\annot{\magtone.~\magend}
+\def\greinitialformat#1{%
+{\fontsize{50}{50}\selectfont #1}%
+}
+\alsetinitialspacing{M}
+\greseteolcustos{manual}
+\printsimpletone{}
+\begin{boldnummagnificat}{\magtex}
+\magverses
+\end{boldnummagnificat}
+
+% \def\magoddverses{\input{../psalms/magnificat-\magtone\nostarendmag\if\magsolemn Tsolemn\else simple\fi-grassi-chant-verses}}
+% \global\def\magtex{../psalms/Magnificat\if\magsolemn Tsolemn\else simple\fi\magtone\nostarendmag}
+% \begin{oddversesmagnificat}{\magtex}
+% \magoddverses
+% \end{oddversesmagnificat}
+
+\vfill
+\includelilypond{magnificat-protodiogenes-7a-small-systems-page1}
+\pagebreak
+
+
+\def\magsolemn{T}
+\let\magant=\undefined
+\let\magantlinetwo=\undefined
+\let\magtex=\undefined
+\let\magverses=\undefined
+\def\magprotodiogenes{T}
+\definemag{7}{a}
+\def\annot{\magtone.~\magend}
+\alsetinitialspacing{M}
+\printsolemntone{}
+\begin{boldnummagnificat}{\magtex}
+\magverses
+\end{boldnummagnificat}
+
+% \global\def\magtex{../psalms/Magnificat\if\magsolemn Tsolemn\else simple\fi\magtone\nostarendmag}
+% \begin{oddversesmagnificat}{\magtex}
+% \magoddverses
+% \end{oddversesmagnificat}
+
+\vfill
+\includelilypond{magnificat-protodiogenes-7a-small-systems-page2}
+}

@@ -20,6 +20,10 @@ stemOff = {
 }
 
 \layout {
+  \context {
+    \Score
+    \omit BarNumber
+  }
 }
 
 global = {
@@ -56,7 +60,7 @@ altoMusic = \relative c' {
 }
 
 tenorMusic = \relative c' {
-  \relative c' { \stemOff \new CueVoice { d4 } \stemOn }
+  \relative c { \stemOff \new CueVoice { d4 } \stemOn }
   bes bes( c) | c1 | d2 c | bes4(
   \set melismaBusyProperties = #'()
   \slurDashed
@@ -67,7 +71,7 @@ tenorMusic = \relative c' {
 }
 
 bassMusic = \relative c' {
-  \relative c' { \stemOff \new CueVoice { d4 } \stemOn }
+  \relative c { \stemOff \new CueVoice { d4 } \stemOn }
   bes g( f) | f1 | bes2 a | g2. f4 |
   \set melismaBusyProperties = #'()
   \slurDashed
@@ -81,7 +85,16 @@ hiddenMusic = \relative c' {
   \repeat unfold 6 { \skip1 } 
   \unset melismaBusyProperties
   f1 | bes2 a | g4( g) f2 e1 f | c2 c | f1 \bar "||" 
+  f4
 \unHideNotes
+}
+
+hiddenMusicII = {
+  \hideNotes
+  \repeat unfold 6 { \skip1 }
+  \repeat unfold 7 { \skip1 }
+  f4
+  \unHideNotes
 }
 
 hiddenWords = \lyricmode {
@@ -183,6 +196,7 @@ bassWords = \lyricmode {
 %  \set stanza = #"2. "
   \once \override LyricText #'self-alignment-X = #LEFT
   in | De -- o | sa -- lu -- tá -- ri | me -- _ o.
+  \markup\italic"→ 3."
 }
 bassWordsII = \lyricmode {
 %  \override StanzaNumber #'font-name = #"Garamond Premier Pro"
@@ -194,6 +208,7 @@ bassWordsII = \lyricmode {
 %  \set stanza = #"4. "
   \once \override LyricText #'self-alignment-X = #LEFT
   et | san -- ctum | no -- _ _ men | e -- _ jus.
+  \markup\italic"→ 5."
 }
 bassWordsIII = \lyricmode {
 %  \override StanzaNumber #'font-name = #"Garamond Premier Pro"
@@ -205,6 +220,7 @@ bassWordsIII = \lyricmode {
 %  \set stanza = #"6. "
   \once \override LyricText #'self-alignment-X = #LEFT
   dispérsit_su -- pér -- bos | men -- te | cor -- dis | su -- _ | i.
+  \markup\italic"→ 7."
 }
 bassWordsIV = \lyricmode {
 %  \override StanzaNumber #'font-name = #"Garamond Premier Pro"
@@ -216,6 +232,7 @@ bassWordsIV = \lyricmode {
 %  \set stanza = #"8. "
   \once \override LyricText #'self-alignment-X = #LEFT
   et_dívi -- tes di -- mí -- sit in -- á -- _ _ | nes.
+  \markup\italic"→ 9."
 }
 bassWordsV = \lyricmode {
 %  \override StanzaNumber #'font-name = #"Garamond Premier Pro"
@@ -227,6 +244,7 @@ bassWordsV = \lyricmode {
 %  \set stanza = #"10. "
   \once \override LyricText #'self-alignment-X = #LEFT
   Abraham,_et | sé -- mi -- ni __ e -- jus in | sæ -- cu -- | la.
+  \markup\italic"→ 11."
 }
 bassWordsVI = \lyricmode {
 %  \override StanzaNumber #'font-name = #"Garamond Premier Pro"
@@ -238,4 +256,79 @@ bassWordsVI = \lyricmode {
 %  \set stanza = #"12. "
   \once \override LyricText #'self-alignment-X = #LEFT
   et_in_sæcula | sæ -- cu -- | ló -- _ _ rum. | A -- _ | men.
+}
+
+\score {
+  \new ChoirStaff <<
+    %\new Lyrics = "sopranos"
+    \new Staff = "women" <<
+      \new Voice = "sopranos"{
+        \voiceOne
+        << \global \sopMusic >>
+      }
+      \new Voice = "altos" {
+        \voiceTwo
+        << \global \altoMusic >>
+      }
+      \new Voice = "hiddenII" {
+        \voiceThree
+        << \global \hiddenMusicII >>
+      }
+    >>
+    
+    \new Lyrics = "altos"
+    \new Lyrics = "altosII"
+    \new Lyrics = "altosIII"
+    \new Lyrics = "altosIV"
+    \new Lyrics = "altosV"
+    \new Lyrics = "altosVI"
+
+    \new Staff = "men" <<
+      \clef bass
+      \new Voice = "tenors" {
+        \voiceThree
+        << \global \tenorMusic >>
+      }
+      \new Voice = "bass"{
+        \voiceFour
+        << \global \bassMusic >>
+      }
+      \new Voice = "hidden" {
+        \voiceThree
+        \override Slur #'transparent = ##t
+        << \global \hiddenMusic >>
+      }
+    >>
+    \new Lyrics = "bass"
+    \new Lyrics = "bassII"
+    \new Lyrics = "bassIII"
+    \new Lyrics = "bassIV"
+    \new Lyrics = "bassV"
+    \new Lyrics = "bassVI"
+    
+    \context Lyrics = "altos" \lyricsto "sopranos" \altoWords
+    \context Lyrics = "altos" \lyricsto "hiddenII" \hiddenWords
+    \context Lyrics = "altosII" \lyricsto "sopranos" \altoWordsII
+    \context Lyrics = "altosII" \lyricsto "hiddenII" \hiddenWordsII
+    \context Lyrics = "altosIII" \lyricsto "sopranos" \altoWordsIII
+    \context Lyrics = "altosIII" \lyricsto "hiddenII" \hiddenWordsIII
+    \context Lyrics = "altosIV" \lyricsto "sopranos" \altoWordsIV
+    \context Lyrics = "altosIV" \lyricsto "hiddenII" \hiddenWordsIV
+    \context Lyrics = "altosV" \lyricsto "sopranos" \altoWordsV
+    \context Lyrics = "altosV" \lyricsto "hiddenII" \hiddenWordsV
+    \context Lyrics = "altosVI" \lyricsto "sopranos" \altoWordsVI
+
+    \context Lyrics = "bass" \lyricsto "hidden" \bassWords
+    \context Lyrics = "bassII" \lyricsto "hidden" \bassWordsII
+    \context Lyrics = "bassIII" \lyricsto "hidden" \bassWordsIII
+    \context Lyrics = "bassIV" \lyricsto "hidden" \bassWordsIV
+    \context Lyrics = "bassV" \lyricsto "hidden" \bassWordsV
+    \context Lyrics = "bassVI" \lyricsto "hidden" \bassWordsVI
+  >>
+  \layout {
+    \context {
+      \Staff
+      \remove "Time_signature_engraver"
+    }
+  }
 }
