@@ -13,3 +13,4 @@ misc/*-systems.*
 *.greaux
 temp/
 *.mid
+*.fls
