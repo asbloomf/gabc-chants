@@ -109,7 +109,10 @@
 \subtitle{I \& II Vespers}
 
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Epiphany-Vespers1}}
-\def\definevesperspropers{\input{\gabcfolder/inc-Epiphany-Vespers2}}
+\def\definevesperspropers{\input{\gabcfolder/inc-Epiphany-Vespers2}%
+  \let\oldthing\maganttranslation
+  \def\maganttranslation{\oldthing\vspace{-0.25\baselineskip}}
+}
 \def\vesperspropersaltnote{At I Vespers:}
 \def\vesperspropersnote{At II Vespers:}
 \def\prechapter{\vspace{-1\baselineskip}}

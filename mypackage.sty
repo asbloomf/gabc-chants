@@ -348,7 +348,7 @@
 % 1 - number to start on
 % 2 - name of magnificat to include
 \gregorioscore{#2}
-\normalsize
+\normalsize\smallskip\ifx\premagtexverses\undefined\else\premagtexverses\fi
 \begin{psalmverses}[#1]
 }{\end{psalmverses}}
 

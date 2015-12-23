@@ -13,7 +13,10 @@
 	\def\prepsalmfive{\greseteolcustos{manual}}
 }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Pentecost-1Vespers}%
-\def\postmagtitle{\vspace{-\baselineskip}}}%
+\let\oldthing=\maganttranslation
+\def\maganttranslation{\oldthing\vspace{-0.5\baselineskip}}
+\def\postmagtitle{\vspace{-\baselineskip}}%
+}%
 %
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
@@ -82,12 +85,18 @@
 \printvespersafterpentecost{4}
 {\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 \printvespersafterpentecost{5}}
-\printvespersafterpentecost{6}
+{\def\prevespers{\let\oldthing=\englishmagantiphon
+	\def\englishmagantiphon{\vspace{-0.3\baselineskip}\oldthing\vspace{-0.3\baselineskip}}
+	}
+\printvespersafterpentecost{6}}
 \printvespersafterpentecost{7}
 \printvespersafterpentecost{8}
 \printvespersafterpentecost{9}
 \printvespersafterpentecost{10}
-\printvespersafterpentecost{11}
+{\def\prevespers{\let\oldthing=\englishmagantiphon
+	\def\englishmagantiphon{\oldthing\vspace{-0.25\baselineskip}}
+	}
+\printvespersafterpentecost{11}}
 {\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.455\linewidth}]{2}}
 \printvespersafterpentecost{12}}
 {\def\prevespers{
@@ -96,12 +105,9 @@
 }
 \printvespersafterpentecost{13}}
 \printvespersafterpentecost{14}
-{\def\prevespers{
-	\let\oldthing=\englishmagantiphon
-	\def\englishmagantiphon{\oldthing\pagebreak}
-}
+{%\def\precollect{\vspace{-1.5\baselineskip}}
 \printvespersafterpentecost{15}}
-{%\def\prevespers{\pagebreak}
+{\def\prevespers{\oldneedspace{8\baselineskip}}
 \printvespersafterpentecost{16}}
 \printvespersafterpentecost{17}
 \printvespersafterpentecost{18}

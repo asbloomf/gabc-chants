@@ -37,7 +37,13 @@
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
 %\def\premag{\def\noeuouae{T}}
-\def\premagverses{\greseteolcustos{manual}}
+%\def\premagnificat{\vspace{-0.8\baselineskip}}
+\def\premagverses{\greseteolcustos{manual}\vspace{-0.1\baselineskip}}
+\def\prevespers{%
+  %\let\oldthing=\maganttranslation
+  %\def\maganttranslation{\vspace{-0.25\baselineskip}\oldthing\vspace{-0.25\baselineskip}}
+  \def\premagtexverses{\smallskip}
+}
 \printvespers[../CommonOfConfessorBishop]{inc-StFrancisDeSales}
 \medskip
 \printnote{\sundaycommemnote{}
@@ -266,7 +272,9 @@
 \def\definevesperspropers{\input{\gabcfolder/inc-MostPreciousBloodOfChrist-2Vespers}
   \def\prepsalmfive{\greseteolcustos{manual}}
 }
-\def\definevesperspropersalt{\input{\gabcfolder/inc-MostPreciousBloodOfChrist-1Vespers}}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-MostPreciousBloodOfChrist-1Vespers}%
+  \def\postmagtitle{\vspace{-0.5\baselineskip}}%
+}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
 %\def\premag{\def\noeuouae{T}}
@@ -274,7 +282,7 @@
 
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
 \printvespers[../July1-MostPreciousBloodOfChrist]{inc-MostPreciousBloodOfChrist}
-\bigskip
+\medskip
 \benedicamusdomino{}
 }
 
@@ -283,11 +291,11 @@
 \section{August 6: Transfiguration of Our Lord Jesus Christ}
 \vspace{-0.5\baselineskip}
 \subtitle{\nth{2} Class, White}
-\vspace{-0.5\baselineskip}
+\vspace{-0.8\baselineskip}
 \subtitle{I \& II Vespers}
 \vspace{-0.5\baselineskip}
 
-\def\prepsalmtitleone{\pagebreak}
+\def\prepsalmtitleone{\oldneedspace{4\baselineskip}}
 \def\definevesperspropers{\input{\gabcfolder/inc-Transfiguration-2Vespers}
   \def\prepsalmfive{\greseteolcustos{manual}}
 }
@@ -392,6 +400,7 @@
 \def\vesperspropersaltnote{At I Vespers:\medskip}
 %\def\premag{\def\noeuouae{T}}
 \def\premagverses{\greseteolcustos{manual}}
+\def\prechapter{\vspace{-0.5\baselineskip}}
 
 \printvespers[../September29-DedicationOfChurchOfStMichaelArchangel]{inc-DedicationStMichael}
 
@@ -531,10 +540,10 @@
 %}
 \def\prevr{\pagebreak}
 \def\definevesperspropers{\input{\gabcfolder/inc-DedicationOfChurch-2Vespers}
+  \let\oldthinga=\maganttranslation
+  \def\maganttranslation{\oldthinga\oldneedspace{8\baselineskip}}
 }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-DedicationOfChurch-1Vespers}
-  %\let\oldthinga=\maganttranslation
-  %\def\maganttranslation{\oldthinga\pagebreak}
 }
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
