@@ -38,15 +38,41 @@
 	    }
 	}
 	\def\vrlinebreak{T}
-	\newcommand{\magreplacement}{\noindent\printnote{Magnificat. Collect.\\\\\Vbar~\emph{Benedicámus Dómino \benedicamusdominonamesunday{}}, page \pageref{benedicamusdomino-sunday}; or in Lent, \emph{\benedicamusdominonamelent{}}, page \pageref{benedicamusdomino-lent}.}}
+	\newcommand{\printsundaysthroughtheyear}{
+		\printnote{Time after Epiphany, \emph{p.~\pageref{epiphany2} to \pageref{epiphany6}.}}
+
+		\printnote{Shrovetide \& Lent, \emph{p.~\pageref{septuagesima} to \pageref{lent6}.}}
+
+		\printnote{Time after Pentecost, \emph{p.~\pageref{pentecost2} to \pageref{pentecost24}.}}
+
+	}
+	\newcommand{\magreplacement}{\vspace{-\baselineskip}\noindent\begin{centering}
+
+		\emph{Magnificat \& Collect of the Sunday.}
+
+		\end{centering}
+		\medskip{}
+		%\vspace{-\baselineskip}
+		\printsundaysthroughtheyear{}
+		\bigskip{}
+		\Vbar~\emph{Benedicámus Dómino \benedicamusdominonamesunday{}}, page \pageref{benedicamusdomino-sunday}; or in Lent, \emph{\benedicamusdominonamelent{}}, page \pageref{benedicamusdomino-lent}.
+	}
 	\newcommand{\collectreplacement}{\bigskip}
 	\def\preantfour{\needspace{10\baselineskip}}
 	\def\prepsalmfive{\greseteolcustos{manual}}
-	\def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}}
+	%\def\prechapter{\vspace{-\baselineskip}}
+	\def\beginchaptercols{
+		\noindent{}\printnote{In Shrovetide \& Lent, from the Sunday, \emph{p.~\pageref{septuagesima} to \pageref{lent6}.}}
+
+		\bigskip{}
+		\noindent{}\printnote{Otherwise:}
+		\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}
+	}
 	\printvespers[../SundayAtVespers]{inc-SundayAtVespers}
-	\medskip
+	\bigskip
+	\bigskip
 	\hrule
-	\medskip
+	\bigskip
 }
 
 {
@@ -64,9 +90,34 @@
 	        \label{vr-manenobiscum}
 	        \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
 	    }
-	}	
-	\newcommand{\chapterreplacement}{\bigskip\noindent\printnote{Chapter.\\}}
-	\newcommand{\magreplacement}{\noindent\printnote{Magnificat. Collect.\\\\\benedicamusdominoreference{easter}}}
+	}
+	\newcommand{\printsundaysaftereaster}{
+		\begin{multicols}{2}
+		\noindent\emph{Low Sunday}, p.~\pageref{easter1}.\\
+		\noindent\emph{\nth{2} Sunday after Easter}, p.~\pageref{easter2}.\\
+		\emph{\nth{3} Sunday after Easter}, p.~\pageref{easter3}.\\
+		\emph{\nth{4} Sunday after Easter}, p.~\pageref{easter4}.\\
+		\emph{\nth{5} Sunday after Easter}, p.~\pageref{easter5}.\\
+		\emph{Sunday after the Ascension}, p.~\pageref{easter6}.
+		\end{multicols}
+	}
+	\newcommand{\chapterreplacement}{\noindent\begin{centering}
+
+		\emph{Chapter of the Sunday.}
+
+		\end{centering}%
+		\vspace{-\baselineskip}
+		\printsundaysaftereaster{}
+	}
+	\newcommand{\magreplacement}{\noindent\begin{centering}
+
+		\emph{Magnificat \& Collect of the Sunday.}
+
+		\end{centering}
+		\vspace{-\baselineskip}
+		\printsundaysaftereaster{}
+		\benedicamusdominoreference{easter}
+	}
 	\newcommand{\collectreplacement}{\bigskip}
 	\def\prepsalmfive{\greseteolcustos{manual}}
 	\printvespers[../TimeAfterEaster]{inc-SundayAtVespers-PaschalTime}
