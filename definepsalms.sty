@@ -241,11 +241,15 @@ five%
     \def\annot{\small{#2}}
     \def\annottwo{\small{#3}}
     \alsetinitialspacing{#4}
+    \ifx\noeuouae\undefined\def\noeuouae{F}\fi
+    \if\noeuouae T\def\mygabcscore{#5.noEuouae}
+    \else\def\mygabcscore{#5}
+    \fi
 
     \ifx\gabcfolder\undefined
-        \gregorioscore{#5}
+        \gregorioscore{\mygabcscore}
     \else
-        \gregorioscore{\gabcfolder/#5}
+        \gregorioscore{\gabcfolder/\mygabcscore}
     \fi
     \greseteolcustos{auto}
     }
@@ -956,6 +960,8 @@ five%
     \def\annottwo{\small{\antlinetwo}}
     \alsetinitialspacing{\antinitial}
     \ifx\anttex\undefined\def\anttex{MagnificatAntiphon}\fi
+      \ifx\noeuouae\undefined\def\noeuouae{F}\fi
+      \if\noeuouae T\edef\anttex{\anttex.noEuouae}\fi
 \ifx\gabcfolder\undefined
     \gregorioscore{\anttex}
 \else
