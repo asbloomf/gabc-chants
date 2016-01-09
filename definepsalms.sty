@@ -247,6 +247,7 @@ five%
     \else
         \gregorioscore{\gabcfolder/#5}
     \fi
+    \greseteolcustos{auto}
     }
 }
 
@@ -686,6 +687,7 @@ five%
 {\ifx\prepsalm\undefined\else\prepsalm\fi
  \ifx\prepsalmtext\undefined\else\prepsalmtext\fi
   \gregorioscore{\psalmtex}
+  \greseteolcustos{auto}
 }
 %\medskip % do we need this?
 {\ifx\prepsalmverses\undefined\medskip\else\prepsalmverses\fi
@@ -871,6 +873,7 @@ five%
 \else
     \gregorioscore{\gabcfolder/#2}
 \fi
+    \greseteolcustos{auto}
     }
     \vspace{-4pt plus 4pt}
     \translation[\normalsize]{
@@ -958,6 +961,7 @@ five%
 \else
     \gregorioscore{\gabcfolder/\anttex}
 \fi
+    \greseteolcustos{auto}
 }
 
     \needspace{3\baselineskip}
@@ -1002,6 +1006,7 @@ five%
     %\vspace{-1ex}
     \magverses
     \end{magnificat}
+    \greseteolcustos{auto}%
     }
     \ifx\dontrepeatantiphon\undefined
       \ifnum\thepage=\magstartpagenumber

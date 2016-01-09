@@ -225,6 +225,7 @@
 	\smallskip
 	\ifx\commvlatin\undefined
 		\printvr[\greseteolcustos{manual}]{\commvrtex}{\commvtranslation}{\commrtranslation}
+			\greseteolcustos{auto}
 	\else
 	{
 		\printvrcommem{}
@@ -290,6 +291,7 @@
 			\printbothversions[\vrlabel][\vraltlabel]{\vrtex}{%
 		    \ifx\vrlinebreak\undefined\def\vrlinebreak{T}\fi
 		    \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
+		    \greseteolcustos{auto}
 			}
 		\else
 			\printhymnnote
@@ -458,6 +460,7 @@
 		\printbothversions[\vrlabel][\vraltlabel]{\vrtex}{%
 	    \ifx\vrlinebreak\undefined\def\vrlinebreak{T}\fi
 	    \printvr[\if\vrlinebreak T\greseteolcustos{manual}\fi]{\vrtex}{\vtranslation}{\rtranslation}
+	    \greseteolcustos{auto}
 		}
 		\ifx\vrpttex\undefined\else%
 			\smallskip
@@ -466,6 +469,7 @@
 			\ifx\vrlinebreak\undefined\def\vrlinebreak{T}\fi
 			\if\vrlinebreak T\greseteolcustos{manual}\fi
 			\gregorioscore{\gabcfolder/\vrpttex}
+			\greseteolcustos{auto}
 		\fi
 	\else
 		\printfullhymn
