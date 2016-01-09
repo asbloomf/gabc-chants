@@ -4,13 +4,14 @@
   "description": "build the website for gabc-chants",
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-copy": "^0.5.0",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-nodeunit": "~0.3.3",
     "grunt-contrib-uglify": "~0.4.0",
-    "grunt-contrib-copy": "^0.5.0",
-    "js-yaml": "^3.1.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-contrib-clean": "^0.5.0"
+    "grunt-text-replace": "^0.4.0",
+    "js-yaml": "^3.1.0"
   },
   "repository": {
     "type": "git",
