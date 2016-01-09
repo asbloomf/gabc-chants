@@ -63,7 +63,7 @@ sopMusic = \relative c' {
   
   ees2 d4 c~ |
   c8[ bes]~ bes2 a4 |
-  bes1 \bar"||"
+  bes1 \bar"||" \break
   ees2. d4 |
   c bes c2 |
   bes4 bes c2 |
@@ -83,7 +83,7 @@ sopMusic = \relative c' {
   bes bes bes bes~ |
   bes aes g ees~ |
   ees8[ f g ees]( f2) |
-  g1 \bar"||"
+  g1 \bar"||" \break
   ees2 f |
   g aes |
   f1 |

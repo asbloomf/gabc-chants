@@ -7,5 +7,4 @@
 @image{AlmaRedemptorisMater-7}
 @image{AlmaRedemptorisMater-8}
 @image{AlmaRedemptorisMater-9}
-@image{AlmaRedemptorisMater-10}
 @c eof

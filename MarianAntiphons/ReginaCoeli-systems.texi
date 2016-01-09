@@ -10,5 +10,4 @@
 @image{ReginaCoeli-10}
 @image{ReginaCoeli-11}
 @image{ReginaCoeli-12}
-@image{ReginaCoeli-13}
 @c eof

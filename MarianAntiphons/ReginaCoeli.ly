@@ -44,7 +44,7 @@ sopMusic = \relative c'' {
 
   % page 2
 
-  a4 g fis4.( g8 | a4) b4.( c8 d4) ~ d cis d8([ c b a] | g4) b a g ~ g( fis8[ e] fis2) | g1 \bar"||"
+  a4 g fis4.( g8 | a4) b4.( c8 d4) ~ d cis d8([ c b a] | g4) b a g ~ g( fis8[ e] fis2) | g1 \bar"||" %\break
   r2 c | d e | d4 d g,2 | a b4 b | c e2 d4 ~ d c b a ~ a8([ g] g2 fis4)
   g2 r | R1 | R1 | r4 d'4 c b | a8([ b c d] e[ d] d4) ~ d( cis d2) | \break
 
