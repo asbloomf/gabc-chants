@@ -13,10 +13,8 @@ transcription-date: 2011;
 style: modern;
 annotation: At Magn.;
 annotation: Ant. 8. G;
-def-m1:}{\greseteolcustos{manual}{;
 def-m2:\ifx\breakbeforeEuouae\undefined\else;
-def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
-def-m4:}\fi;
+def-m3:\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -30,9 +28,9 @@ in(fd~) Jé(f)ri(f)cho,(d!ew!fv_EC.) (;)
 et(f) ín(g')ci(h)dit(ji) in(hg~) la(fg)tró(g)nes :(g.) (:)
 qui(j'_) é(k)ti(i')am(j) de(h')spo(j)li(i)a(hg)vé(h)runt(gh) é(f)um,(f.) (;)
 et(g') plá(f)gis(g') im(h)pó(j')si(k)tis(j) a(k)bi(i')é(j)runt,(h_g_) (;)
-se(gf)mi(d)ví(e_f)vo(gh) re(h)lí(g.[em1])cto.(g.) (::[em2]z[em3])
+se(gf)mi(d)ví(e_f)vo(gh) re(h)lí(g.)cto.(g.) (::[em2]z[em3])
 
-E(j) u(j) o(i) u(j) a(h) e.(g.) (::[em4])
+<eu>E(j) u(j) o(i) u(j) a(h) e.</eu>(g.) (::)
 
 % need to move the horizontal episema above on the end of quídam (the second word)
 % so change

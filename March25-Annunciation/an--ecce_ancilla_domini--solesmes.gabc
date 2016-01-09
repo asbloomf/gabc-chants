@@ -3,13 +3,11 @@ office-part:Antiphona;
 mode:8;
 book:The Liber Usualis, 1961, p. 1417;
 transcriber:Andrew Hinkley;
-def-m1:}{\greseteolcustos{manual}{;
 def-m2:\ifx\breakbeforeEuouae\undefined\else;
-def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
-def-m4:}\fi;
+def-m3:\fi;
 %%
 (c4) EC(j_)ce(ji) an(hg~)cíl(hi)la(h) Dó(gh)mi(g)ni :(g.) <v>\greheightstar</v>(;)
 fi(g_e)at(g.) mí(f_e)hi(f'_) (,)
-se(d)cún(e')dum(f) ver(gh)bum(h) tu(g.)um.(g.) <i>P. T.</i>(::) Al(hi)le(h)lú(g.[em1])ia.(g.) (::[em2]z[em3])
+se(d)cún(e')dum(f) ver(gh)bum(h) tu(g.)um.(g.) <i>P. T.</i>(::) Al(hi)le(h)lú(g.)ia.(g.) (::[em2]z[em3])
 
-E(j) u(j) o(h) u(j) a(k) e.(j.) (::[em4])
+<eu>E(j) u(j) o(h) u(j) a(k) e.</eu>(j.) (::)

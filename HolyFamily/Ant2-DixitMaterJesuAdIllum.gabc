@@ -13,10 +13,8 @@ transcription-date: 2011;
 style: modern;
 annotation: 2. Ant.;
 annotation: 4. E;
-def-m1:}{\greseteolcustos{manual}{;
 def-m2:\ifx\breakbeforeEuouae\undefined\else;
-def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
-def-m4:}\fi;
+def-m3:\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -25,6 +23,6 @@ def-m4:}\fi;
 (c4)DI(f)xit(e') Má(f)ter(d') Jé(c)su(df) ad(fe) íl(de)lum :(e.) <v>\greheightstar</v>(;)
 Fí(e!g'h)li,(h') quid(h) fe(hg)cí(hj)sti(hv_GF) nó(gh)bis(gf) sic?(ef..) (;)
 Ec(d)ce(g') pá(h)ter(g') tú(g)us(dc) et(d) é(de)go(e'_) (,)
-do(f)lén(e.d!ewf)tes(d.) quæ(e')re(f)bá(gh)mus(g[em1]) te.(e.) (::[em2]z[em3])
+do(f)lén(e.d!ewf)tes(d.) quæ(e')re(f)bá(gh)mus(g) te.(e.) (::[em2]z[em3])
 
-E(h) u(g) o(h) u(ih) a(gf) e.(e.) (::[em4])
+<eu>E(h) u(g) o(h) u(ih) a(gf) e.</eu>(e.) (::)

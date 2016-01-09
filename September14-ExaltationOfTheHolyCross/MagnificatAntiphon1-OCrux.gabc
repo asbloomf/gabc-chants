@@ -12,10 +12,8 @@ transcriber:Albert Bloomfield;
 style: modern;
 annotation: At Magn.;
 annotation: Ant. 1. D;
-def-m1:}{\greseteolcustos{manual}{;
 def-m2:\ifx\breakbeforeEuouae\undefined\else;
-def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
-def-m4:}\fi;
+def-m3:\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -35,8 +33,8 @@ dúl(h)ce(gf) lí(gh)gnum,(ixh/iih.) (,) dúl(f)ces(ed) clá(fg)vos,(g.) (,)
 dúl(c)ci(d)a(f) fé(fg)rens(fe~) pón(ded___)de(cd)ra :(d.) (:)
 sál(ixh_0ihg~)va(g_hG'F__E'D) præ(f')sén(g)tem(ed) ca(fe)tér(dd)vam,(c.) (;)
 in(c_d) tú(fe)is(f') hó(g)di(hg)e(gg) (,)
-láu(c)di(d)bus(f_g) con(ed~)gre(fe)gá(d.[em1])tam.(d.) (::[em2]z[em3])
+láu(c)di(d)bus(f_g) con(ed~)gre(fe)gá(d.)tam.(d.) (::[em2]z[em3])
 
 %T. P. Al(c_d)le(f_gF'E)lú(ghg~__)ia,(fv_ED'C_) al(d_g)le(efe)lú(d.)ia.(d.) (::)
 
-E(h) u(h) o(g) u(f) a(gh) e.(gvFED.) (::[em4])
+<eu>E(h) u(h) o(g) u(f) a(gh) e.</eu>(gvFED.) (::)

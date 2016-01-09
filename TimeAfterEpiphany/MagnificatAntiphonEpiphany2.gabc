@@ -10,10 +10,8 @@ date: 2011;
 transcriber: Albert Bloomfield;
 transcription-date: 2011;
 style: modern;
-def-m1:}{\greseteolcustos{manual}{;
 def-m2:\ifx\breakbeforeEuouae\undefined\else;
-def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
-def-m4:}\fi;
+def-m3:\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -23,6 +21,6 @@ def-m4:}\fi;
 
 (c4)DE(d)fi(d)ci(dc)én(f)te(g) ví(f_h)no,(h'_) <v>\greheightstar</v>(,)
 jús(h)sit(h) Jé(hj)sus(h') im(g)plé(h')ri(g) hý(e_f)dri(g)as(fe) á(d)qua,(d.) (;)
-quæ(h!iw!jv_IH') in(g) ví(fe)num(g) con(fe~)vér(d)sa(fe) est,(c) al(d)le(fe)lú(d.[em1])ia.(d.) (::[em2]z[em3])
+quæ(h!iw!jv_IH') in(g) ví(fe)num(g) con(fe~)vér(d)sa(fe) est,(c) al(d)le(fe)lú(d.)ia.(d.) (::[em2]z[em3])
 
-E(h) u(h) o(g) u(f) a(gh) e.(gf..) (::[em4])
+<eu>E(h) u(h) o(g) u(f) a(gh) e.</eu>(gf..) (::)

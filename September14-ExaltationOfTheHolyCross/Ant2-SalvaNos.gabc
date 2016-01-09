@@ -9,10 +9,8 @@ book:The Liber Usualis, 1961, p. 1460;
 transcriber: Albert Bloomfield;
 annotation: 2 Ant.;
 annotation: 3. a;
-def-m1:}{\greseteolcustos{manual}{;
 def-m2:\ifx\breakbeforeEuouae\undefined\else;
-def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
-def-m4:}\fi;
+def-m3:\fi;
 % liber usualis page 1460
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -21,8 +19,8 @@ def-m4:}\fi;
 Chrí(j)ste(j) Sal(h')vá(j)tor,(i.) (,)
 per(g) vir(h')tú(h)tem(i') Crú(h)cis~:(g.) (:)
 qui(g) sal(g')vá(i)sti(h') Pé(j)trum(i') in(h) má(g!hw!iv_HG)ri,(h'_) (,)
-mi(g)se(gf)ré(gh)re(gf) nó(e.[em1])bis.(e.) (::[em2]z[em3])
+mi(g)se(gf)ré(gh)re(gf) nó(e.)bis.(e.) (::[em2]z[em3])
 
 %<i>T. P.</i> Al(g)le(gf)lú(e.)ia.(e.) (::)
 
-E(j) u(j) o(j) u(h) a(j) e.(ih..) (::[em4])
+<eu>E(j) u(j) o(j) u(h) a(j) e.</eu>(ih..) (::)

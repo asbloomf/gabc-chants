@@ -3,16 +3,14 @@ office-part:Antiphona;
 mode:1;
 book:The Liber Usualis, 1961, p. 1355;
 transcriber:Andrew Hinkley;
-def-m1:}{\greseteolcustos{manual}{;
 def-m2:\ifx\breakbeforeEuouae\undefined\else;
-def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
-def-m4:}\fi;
+def-m3:\fi;
 %%
 (c4) SE(d!ewf)nex(d') <v>\greheightstar</v>(,) pú(d)e(c)rum(d') por(f)tá(d!ewf_c)bat,(c.) (;) pu(f)er(f') %
 % there should be an ictus like (ixfh_'/ig~) but it's putting it below the episema so I'm leaving it out
 au(ixfh_/ig~)tem(ghg___) (,) se(e_f)nem(g) re(cd~)gé(d.)bat :(d.) (:)
 quem(d) Vir(f')go(e) pé(f')pe(e)rit,(d.) (;) et(e) post(c) par(d_e)tum(d) Vir(e_f)go(g) per(cd~)mán(d.)sit :(d.) (:)
 i(f)psum(ixghg/hih) quem(h_g~) gé(h)nu(g)it,(fv_EC'_4) (,)
-a(d)do(fe)rá(d.[em1])vit.(d.) (::[em2]z[em3])
+a(d)do(fe)rá(d.)vit.(d.) (::[em2]z[em3])
 
-E(h) u(h) o(g) u(f) a(gh) e.(gvFED.) (::[em4])
+<eu>E(h) u(h) o(g) u(f) a(gh) e.</eu>(gvFED.) (::)

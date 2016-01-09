@@ -13,10 +13,8 @@ transcription-date: 2011;
 style: modern;
 annotation: At Magn.;
 annotation: 1. g2;
-def-m1:}{\greseteolcustos{manual}{;
 def-m2:\ifx\breakbeforeEuouae\undefined\else;
-def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
-def-m4:}\fi;
+def-m3:\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -28,6 +26,6 @@ Sal(g)vá(g)tor(g) ap(gh)pá(h)ru(gf)it :(f.) (:) hó(f)di(gh)e(h'_) (,)
 in(h) tér(h)ra(hg) cá(ixi)nunt(h') An(g)ge(fh)li,(h'_) (;)
 læ(h)tán(hg)tur(ixi) Ar(h')chán(g)ge(fh)li :(h.) (:)
 hó(h)di(j)e(j_kJ'IH') (,) ex(h)súl(ixh.g!hwi)tant(h') jú(g)sti,(f_h) (,)
-di(f)cén(h)tes :(g_h) (;) Gló(g_h)ri(fe)a(d) in(e') ex(f)cél(g_h)sis(g) Dé(fe)o,(dc) al(d)le(fe)lú(d.[em1])ia.(d.) (::[em2]z[em3])
+di(f)cén(h)tes :(g_h) (;) Gló(g_h)ri(fe)a(d) in(e') ex(f)cél(g_h)sis(g) Dé(fe)o,(dc) al(d)le(fe)lú(d.)ia.(d.) (::[em2]z[em3])
 
-E(h) u(h) o(g) u(f) a(g) e.(ghg.) (::[em4])
+<eu>E(h) u(h) o(g) u(f) a(g) e.</eu>(ghg.) (::)

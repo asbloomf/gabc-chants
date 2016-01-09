@@ -11,10 +11,8 @@ book:The Liber Usualis, 1961, p. 1515;
 transcriber:Andrew Hinkley;
 annotation: 3 Ant.;
 annotation: 8. c;
-def-m1:}{\greseteolcustos{manual}{;
 def-m2:\ifx\breakbeforeEuouae\undefined\else;
-def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
-def-m4:}\fi;
+def-m3:\fi;
 % liber usualis page 1515
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
@@ -24,6 +22,6 @@ def-m4:}\fi;
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 (c3)DI(h)xit(h) An(hg~)ge(f)lus(gh) ad(g') Pé(e)trum :(e.) <v>\greheightstar</v>(;)
 Cir(e)cúm(g')da(h) tí(i_j)bi(i'_) (,) ve(i)sti(g)mén(ij)tum(i) tu(hg)um,(e.) (;)
-et(f) sé(h_f)que(g)re(f[em1]) me.(e.) (::[em2]z[em3])
+et(f) sé(h_f)que(g)re(f) me.(e.) (::[em2]z[em3])
 
-E(h) u(h) o(f) u(h) a(i) e.(h.) (::[em4])
+<eu>E(h) u(h) o(f) u(h) a(i) e.</eu>(h.) (::)

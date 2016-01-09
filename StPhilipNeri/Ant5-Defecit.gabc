@@ -13,10 +13,8 @@ transcription-date: 2011;
 style: modern;
 annotation: 5 Ant.;
 annotation: 3. a;
-def-m1:}{\greseteolcustos{manual}{;
 def-m2:\ifx\breakbeforeEuouae\undefined\else;
-def-m3:\fi}\ifx\noeuouae\undefined\def\noeuouae{F}\fi\if\noeuouae F{;
-def-m4:}\fi;
+def-m3:\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -30,6 +28,6 @@ et(ge~) cor(fe) mé(d.)um,(d.) (;)
 Dé(g)us(hi) cór(j)dis(h) mé(hk)i,(k'_) (,)
 et(l) pars(k) mé(ji)a(hg) Dé(h)us(g.) (,)
 in(g!h'j) æ(gf)tér(e.)num.(e.) (::)
-<i>T.~P.</i> Al(g)le(gf)lú(e.[em1])ia.(e.) (::[em2]z[em3])
+<i>T.~P.</i> Al(g)le(gf)lú(e.)ia.(e.) (::[em2]z[em3])
 
-E(j) u(j) o(j) u(h) a(j) e.(ih..) (::[em4])
+<eu>E(j) u(j) o(j) u(h) a(j) e.</eu>(ih..) (::)
