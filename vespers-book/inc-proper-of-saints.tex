@@ -36,9 +36,7 @@
 }
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
-%\def\premag{\def\noeuouae{T}}
-%\def\premagnificat{\vspace{-0.8\baselineskip}}
-\def\premagverses{\greseteolcustos{manual}\vspace{-0.1\baselineskip}}
+\def\premagverses{\vspace{-0.1\baselineskip}}
 \def\prevespers{%
   %\let\oldthing=\maganttranslation
   %\def\maganttranslation{\vspace{-0.25\baselineskip}\oldthing\vspace{-0.25\baselineskip}}
@@ -69,14 +67,10 @@
 \subtitle{I \& II Vespers}
 \printnote{At I Vespers, Psalms and Antiphons of the Circumcision, p.~\pageref{circumcision}, continuing with the chapter on p.~\pageref{purification-chapter}.}
 
-\def\definevesperspropers{\input{\gabcfolder/inc-purification-2Vespers}
-  \def\prepsalmfive{\greseteolcustos{manual}}
-}
+\def\definevesperspropers{\input{\gabcfolder/inc-purification-2Vespers}}
 \def\definevesperspropersalt{\input{\gabcfolder/inc-purification-1Vespers}}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
-%\def\premag{\def\noeuouae{T}}
-\def\premagverses{\greseteolcustos{manual}}
 \def\prechapter{\label{purification-chapter}}
 \def\printhymnnote{
   {
@@ -105,15 +99,12 @@
 \def\definevesperspropers{\input{\gabcfolder/inc-StJosephWorker-2Vespers}
   \let\oldthing=\maganttranslation
   \def\maganttranslation{\oldthing\pagebreak}
-  \def\prepsalmfive{\greseteolcustos{manual}}
 }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-StJosephWorker-1Vespers}
   \def\vrlinebreak{T}
 }
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
-%\def\premag{\def\noeuouae{T}}
-\def\premagverses{\greseteolcustos{manual}}
 \def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
 \def\prerepeatontiphonthree{}
 
@@ -145,8 +136,6 @@
 }
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
-%\def\premag{\def\noeuouae{T}}
-\def\premagverses{\greseteolcustos{manual}}
 %\def\prehymn{\pagebreak}
 
 \printvespers[../StPhilipNeri]{inc-StPhilipNeri}
@@ -178,7 +167,6 @@
 \def\definevesperspropers{\input{\gabcfolder/inc-BirthOfJohnTheBaptist-2Vespers}
   \let\oldthing=\antonetranslation
   \def\antonetranslation{\oldthing\pagebreak}
-  \def\prepsalmfive{\greseteolcustos{manual}}
 }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-BirthOfJohnTheBaptist-1Vespers}}
 \def\vesperspropersnote{At II Vespers:}
@@ -187,9 +175,7 @@
 \def\vesperspsalmslabel{\label{june24-2vespers}}
 \def\prevesperspsalmsalt{\noindent\printnote{II Vespers psalms and antiphons, page \pageref{june24-2vespers}.}\medskip}
 \def\prechapter{\label{june24-chapter}}
-%\def\premag{\def\noeuouae{T}}
 \def\premagnificat{\pagebreak}
-\def\premagverses{\greseteolcustos{manual}}
 
 \printvespers[../June24-BirthOfJohnTheBaptist]{inc-BirthOfJohnTheBaptist}
 
@@ -222,7 +208,6 @@
   \let\oldthingb=\antthreetranslation
   \def\antthreetranslation{\vspace{-0.5\baselineskip}\oldthing\vspace{-0.6\baselineskip}}
   \def\prepsalmoneverses{\vspace{-0.1\baselineskip}}
-  \def\prepsalmfive{\greseteolcustos{manual}}
 }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-StsPeterAndPaul-1Vespers}
   \def\postpsalmtitleone{\pagebreak}
@@ -241,8 +226,6 @@
 \def\prevesperspsalmsalt{\noindent\printnote{II Vespers psalms and antiphons, page \pageref{june29-2vespers}.}\medskip}
 \def\prechapter{\label{june29-chapter}}
 %\def\precollect{\vspace{-0.5\baselineskip}}
-%\def\premag{\def\noeuouae{T}}
-\def\premagverses{\greseteolcustos{manual}}
 
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
 \printvespers[../June29-StsPeterAndPaul]{inc-StsPeterAndPaul}
@@ -269,16 +252,12 @@
 \subtitle{I \& II Vespers}
 
 \def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}
-\def\definevesperspropers{\input{\gabcfolder/inc-MostPreciousBloodOfChrist-2Vespers}
-  \def\prepsalmfive{\greseteolcustos{manual}}
-}
+\def\definevesperspropers{\input{\gabcfolder/inc-MostPreciousBloodOfChrist-2Vespers}}
 \def\definevesperspropersalt{\input{\gabcfolder/inc-MostPreciousBloodOfChrist-1Vespers}%
   \def\postmagtitle{\vspace{-0.5\baselineskip}}%
 }
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
-%\def\premag{\def\noeuouae{T}}
-\def\premagverses{\greseteolcustos{manual}}
 
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
 \printvespers[../July1-MostPreciousBloodOfChrist]{inc-MostPreciousBloodOfChrist}
@@ -296,14 +275,10 @@
 \vspace{-0.5\baselineskip}
 
 \def\prepsalmtitleone{\oldneedspace{4\baselineskip}}
-\def\definevesperspropers{\input{\gabcfolder/inc-Transfiguration-2Vespers}
-  \def\prepsalmfive{\greseteolcustos{manual}}
-}
+\def\definevesperspropers{\input{\gabcfolder/inc-Transfiguration-2Vespers}}
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Transfiguration-1Vespers}}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
-%\def\premag{\def\noeuouae{T}}
-\def\premagverses{\greseteolcustos{manual}}
 
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 \printvespers[../August6-TransfigurationOfOurLord]{inc-Transfiguration}
@@ -317,14 +292,10 @@
 \subtitle{\nth{1} Class, White or Gold}
 \subtitle{I \& II Vespers}
 
-\def\definevesperspropers{\input{\gabcfolder/inc-Assumption-2Vespers}
-  \def\prepsalmfive{\greseteolcustos{manual}}
-}
+\def\definevesperspropers{\input{\gabcfolder/inc-Assumption-2Vespers}}
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Assumption-1Vespers}}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
-%\def\premag{\def\noeuouae{T}}
-\def\premagverses{\greseteolcustos{manual}}
 \def\printfullhymn{
   {
     \oldneedspace{3\baselineskip}
@@ -366,9 +337,7 @@
 \subtitle{\nth{2} Class, Red}
 \subtitle{I \& II Vespers}
 
-\def\definevesperspropers{\input{\gabcfolder/inc-ExaltationOfTheHolyCross-2Vespers}
-  \def\prepsalmfive{\greseteolcustos{manual}}
-}
+\def\definevesperspropers{\input{\gabcfolder/inc-ExaltationOfTheHolyCross-2Vespers}}
 \def\definevesperspropersalt{\input{\gabcfolder/inc-ExaltationOfTheHolyCross-1Vespers}}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
@@ -376,8 +345,6 @@
 \def\prerepeatantiphonthree{}
 \def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
 \def\prehymntranslation{\oldneedspace{3\baselineskip}}
-%\def\premag{\def\noeuouae{T}}
-\def\premagverses{\greseteolcustos{manual}}
 
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
 \printvespers[../September14-ExaltationOfTheHolyCross]{inc-ExaltationOfTheHolyCross}
@@ -398,8 +365,6 @@
 \def\definevesperspropersalt{\input{\gabcfolder/inc-DedicationStMichael-1Vespers}}
 \def\vesperspropersnote{At II Vespers:\medskip}
 \def\vesperspropersaltnote{At I Vespers:\medskip}
-%\def\premag{\def\noeuouae{T}}
-\def\premagverses{\greseteolcustos{manual}}
 \def\prechapter{\vspace{-0.5\baselineskip}}
 
 \printvespers[../September29-DedicationOfChurchOfStMichaelArchangel]{inc-DedicationStMichael}
@@ -432,8 +397,6 @@
 \def\definevesperspropersalt{\input{\gabcfolder/inc-MaternityOfBVM-Vespers1}}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
-%\def\premag{\def\noeuouae{T}}
-\def\premagverses{\greseteolcustos{manual}}
 \def\printhymnnote{
   {
     \oldneedspace{3\baselineskip}
@@ -457,11 +420,7 @@
 
 \def\postpsalmtitletwo{\pagebreak}
 \def\prerepeatantiphontwo{}
-\def\definevesperspropers{\input{\gabcfolder/inc-ChristTheKing-2Vespers}
-  \def\prepsalmfive{\greseteolcustos{manual}}
-}
-%\def\premag{\def\noeuouae{T}}
-\def\premagverses{\greseteolcustos{manual}}
+\def\definevesperspropers{\input{\gabcfolder/inc-ChristTheKing-2Vespers}}
 \def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
 %\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
 
@@ -502,8 +461,6 @@
 \def\vesperspropersaltnote{At I Vespers:}
 \def\prechapter{\needspace{6\baselineskip}}
 \def\begincollectcols{\label{allsaints-collect}\begin{parcolumns}[rulebetween]{2}}
-%\def\premag{\def\noeuouae{T}}
-\def\premagverses{\greseteolcustos{manual}}
 
 \printvespers[../November1-AllSaints]{inc-AllSaints}
 
@@ -547,8 +504,6 @@
 }
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
-%\def\premag{\def\noeuouae{T}}
-\def\premagverses{\greseteolcustos{manual}}
 
 \printvespers[../CommonOfDedicationOfChurch]{inc-DedicationOfChurch}
 \bigskip
