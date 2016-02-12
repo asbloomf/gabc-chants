@@ -9,6 +9,9 @@
 \usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
 \geometry{letterpaper} % or letterpaper (US) or a5paper or....
 \usepackage{gregoriotex} % for gregorio score inclusion
+\ifdefined\gresetcompilegabc
+    \gresetcompilegabc{auto}
+\fi
 
 % If you use usual TeX fonts, here is a starting point:
 %\usepackage{palatino}
@@ -68,9 +71,9 @@
 }\fi
 \fi
 \else% hymntex was defined
-\def\greinitialformat#1{%
-{\fontsize{\hymninitialsize}{\hymninitialsize}\selectfont #1}%
-}
+% \def\greinitialformat#1{%
+% {\fontsize{\hymninitialsize}{\hymninitialsize}\selectfont #1}%
+% }
 
 % We set red lines here, comment it if you want black ones.
 %\redlines
@@ -130,9 +133,9 @@
 %\redlines
 
 % Here we set the initial font. Change 43 if you want a bigger initial.
-\def\greinitialformat#1{%
-{\fontsize{\magantinitialsize}{\magantinitialsize}\selectfont #1}%
-}
+% \def\greinitialformat#1{%
+% {\fontsize{\magantinitialsize}{\magantinitialsize}\selectfont #1}%
+% }
 
 {\def\annot{\small At Magn.}
 \def\annottwo{\small\oldstylenums{\magantlinetwo}}
