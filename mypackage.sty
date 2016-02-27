@@ -347,6 +347,7 @@
 \newenvironment{magnificat}[2][2]{
 % 1 - number to start on
 % 2 - name of magnificat to include
+\gresetinitiallines{0}
 \gregorioscore{#2}
 \normalsize\smallskip\ifx\premagtexverses\undefined\else\premagtexverses\fi
 \begin{psalmverses}[#1]
@@ -355,6 +356,7 @@
 \newenvironment{boldnummagnificat}[2][2]{
 % 1 - number to start on
 % 2 - name of magnificat to include
+\gresetinitiallines{0}
 \gregorioscore{#2}
 \normalsize
 \begin{boldnumpsalmverses}[#1]
@@ -363,6 +365,7 @@
 \newenvironment{oddversesmagnificat}[2][2]{
 % 1 - number to start on
 % 2 - name of magnificat to include
+\gresetinitiallines{0}
 \gregorioscore{#2}
 \normalsize
 \begin{oddnumpsalmverses}[#1]

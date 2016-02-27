@@ -7,7 +7,6 @@ date: 2015;
 transcriber: Albert Bloomfield;
 transcription-date: 2015;
 style: modern;
-initial-style: 0;
 def-m1:\ifx\vrlinebreak\undefined\else;
 def-m2:\fi;
 %%

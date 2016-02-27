@@ -5,7 +5,6 @@
 
 name: In omnem terram;
 office-part: versicle and response;
-initial-style:0;
 def-m1:\ifx\vrlinebreak\undefined\else;
 def-m2:\fi;
 

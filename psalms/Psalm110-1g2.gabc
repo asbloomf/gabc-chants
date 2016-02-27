@@ -10,7 +10,6 @@ date: 2012;
 transcriber: Albert Bloomfield;
 transcription-date: 2012;
 style: modern;
-initial-style:0;
 def-m1:\ifx\flexlinebreak\undefined\else;
 def-m2:\fi;
 

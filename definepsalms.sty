@@ -71,6 +71,7 @@ five%
     \predeusinadjutorium%
     \def\annot{\small \Vbar{}}
     \alsetinitialspacing{D}
+    \gresetinitiallines{1}
     \gregorioscore{../DeusInAdjutorium\if\deusinadjutoriumsolemn T%
     _solemn\fi\if\includelaustibi T%
     _laustibi\fi%
@@ -238,6 +239,7 @@ five%
 % 4 - first letter (big initial)
 % 5 - tex filename of gabc
     {#1%
+    \gresetinitiallines{1}
     \def\annot{\small{#2}}
     \def\annottwo{\small{#3}}
     \alsetinitialspacing{#4}
@@ -690,6 +692,7 @@ five%
 {
 {\ifx\prepsalm\undefined\else\prepsalm\fi
  \ifx\prepsalmtext\undefined\else\prepsalmtext\fi
+  \gresetinitiallines{0}
   \gregorioscore{\psalmtex}
   \greseteolcustos{auto}
 }
@@ -877,6 +880,7 @@ five%
 %4 rtranslation
 % vrnospace optional
     {#1
+    \gresetinitiallines{0}
 \ifx\gabcfolder\undefined
     \gregorioscore{#2}
 \else
@@ -967,6 +971,7 @@ five%
     \ifx\anttex\undefined\def\anttex{MagnificatAntiphon}\fi
       \ifx\noeuouae\undefined\def\noeuouae{F}\fi
       \if\noeuouae T\edef\anttex{\anttex.noEuouae}\fi
+      \gresetinitiallines{1}
 \ifx\gabcfolder\undefined
     \gregorioscore{\anttex}
 \else

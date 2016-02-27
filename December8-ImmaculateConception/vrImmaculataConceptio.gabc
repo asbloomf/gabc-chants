@@ -10,7 +10,6 @@ date: 2013;
 transcriber: Albert Bloomfield;
 transcription-date: 2013;
 style: modern;
-initial-style:0;
 def-m1:\ifx\vrlinebreak\undefined\else\if\vrlinebreak T;
 def-m2:\fi\fi;
 

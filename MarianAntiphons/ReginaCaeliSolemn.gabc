@@ -1,7 +1,6 @@
 % !TEX TS-program = gregorio
 % !TEX encoding = UTF-8
 name:Regina Caeli;
-initial-style:1;
 def-m1:\ifx\nogabcbreaks\undefined;
 def-m2:\fi;
 

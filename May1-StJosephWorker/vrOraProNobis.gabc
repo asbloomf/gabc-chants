@@ -6,7 +6,6 @@
 office-part: versicle and response;
 transcriber: Albert Bloomfield;
 style: modern;
-initial-style:0;
 def-m1:\ifx\vrlinebreak\undefined\else;
 def-m2:\fi;
 
