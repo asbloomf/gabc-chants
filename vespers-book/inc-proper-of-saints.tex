@@ -338,13 +338,18 @@
 \subtitle{I \& II Vespers}
 
 \def\definevesperspropers{\input{\gabcfolder/inc-ExaltationOfTheHolyCross-2Vespers}}
-\def\definevesperspropersalt{\input{\gabcfolder/inc-ExaltationOfTheHolyCross-1Vespers}}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-ExaltationOfTheHolyCross-1Vespers}%
+%\def\premagverses{\oldneedspace{4\baselineskip}}%
+}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
 \def\postpsalmtitlethree{\oldneedspace{9\baselineskip}}
 \def\prerepeatantiphonthree{}
 \def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
+\def\prepsalmtitlefour{\oldneedspace{8\baselineskip}}
+\def\prepsalmfourverses{\oldneedspace{2\baselineskip}}
 \def\prehymntranslation{\oldneedspace{3\baselineskip}}
+%\def\precollect{\vspace{-0.5\baselineskip}}
 
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
 \printvespers[../September14-ExaltationOfTheHolyCross]{inc-ExaltationOfTheHolyCross}
@@ -356,7 +361,9 @@
 {
 \section{September 29: Dedication of St Michael the Archangel}
 \subtitle{\nth{1} Class, White or Gold}
+\vspace{-0.5\baselineskip}
 \subtitle{I \& II Vespers}
+\def\postdeusinadjutorium{\pagebreak}
 
 \def\definevesperspropers{\input{\gabcfolder/inc-DedicationStMichael-2Vespers}
   \def\prepsalmtitlefive{\bigskip}
@@ -365,6 +372,7 @@
 \def\definevesperspropersalt{\input{\gabcfolder/inc-DedicationStMichael-1Vespers}}
 \def\vesperspropersnote{At II Vespers:\medskip}
 \def\vesperspropersaltnote{At I Vespers:\medskip}
+\def\prepsalmtitleone{\vspace{-0.5\baselineskip}}
 \def\prechapter{\vspace{-0.5\baselineskip}}
 
 \printvespers[../September29-DedicationOfChurchOfStMichaelArchangel]{inc-DedicationStMichael}

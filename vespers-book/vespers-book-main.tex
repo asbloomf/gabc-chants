@@ -48,13 +48,14 @@
 \def\myheight{9in}
 
 \input{../inc_header}
+\gresetbarspacing{new}
 \setlength\headheight{0.25in+15pt}
 \setlength\headsep{1pc}
 \setlength\topskip{0pc}
 \setlength\footskip{1pc}
 \geometry{outer=0.4in,inner=0.85in,top=0pc+\headheight+\headsep,bottom=0.4in,twoside=true}
 \newpagestyle{main}{
-\setheadrule{0.2pt}
+%\setheadrule{0pt}
 \sethead[\garamond{\thepage}][\garamond{\chaptertitle}][] % even
 {}{\garamond{\sectiontitle}}{\garamond{\thepage}} % odd
 \setfoot[][][] % even
@@ -124,11 +125,20 @@
 \newcommand{\benedicamusdominoreference}[1]{%
 	\Vbar~\emph{Benedicámus Dómino \IfInteger{#1}{#1}{\csname benedicamusdominoname#1\endcsname}}, page \pageref{benedicamusdomino-#1}.
 }
+\newcommand{\benedicamusdominoreferencelentoreaster}{%
+	In Lent, \Vbar~\emph{Benedicámus Dómino \benedicamusdominonamelent}, page \pageref{benedicamusdomino-lent}, or in Easter, \emph{\benedicamusdominonameeaster}, page \pageref{benedicamusdomino-easter}.
+}
 \newcommand{\benedicamusdominomaster}[1]{
 	\noindent\printnote{\benedicamusdominoreference{#1}}
 	\bigskip
 	\hrule
 }
+\newcommand{\benedicamusdominolentoreaster}{
+	\noindent\printnote{\benedicamusdominoreferencelentoreaster}
+	\bigskip
+	\hrule
+}
+
 \newcommand{\psalmcolsoverride}[1][0]{
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
 \ifnum#1=110
@@ -381,6 +391,7 @@
 	\fi
 
 	\deusinadjutorium{}
+	\ifx\postdeusinadjutorium\undefined\else\postdeusinadjutorium\fi
 	\medskip
 	\ifx\psalmonenum\undefined{
 		\ifx\definevesperspropersalt\undefined\else{
@@ -627,7 +638,7 @@
 
 	\bigskip{}\noindent{}First edition, 3 December 2015.
 
-	\bigskip{}\noindent{}Many thanks to Elie Roux for creating Gregorio, to all the people answering questions on the Gregorio forums, to Olivier Berton for creating GregoBase (http://gregobase.selapa.net), which makes it much easier to find all the chant that many people, but especially Andrew Hinkley, have contributed to the public domain.  Also many thanks to my brother Benjamin, whose website (http://bbloomf.github.io/jgabc) makes it incredibly easy to typeset the psalms and considerably easier than otherwise to typeset Gregorian chant with Gregorio.
+	\bigskip{}\noindent{}Many thanks to Elie Roux for creating Gregorio, to all the people answering questions on the Gregorio forums, to Olivier Berton for creating GregoBase (http://gregobase.selapa.net) which makes it much easier to find all the chant that Andrew Hinkley and others have contributed to the public domain.  Also many thanks to my brother Benjamin, whose website (http://bbloomf.github.io/jgabc) makes it incredibly easy to typeset the psalms and substantially easier than otherwise to typeset Gregorian chant with Gregorio.
 
 	\bigskip{}\noindent{}http://asbloomf.github.io/gabc-chants
 
