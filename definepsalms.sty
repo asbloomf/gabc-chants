@@ -742,7 +742,12 @@ five%
 \fi
 
 \ifx\preantafter\undefined % if preantafter undefined, we don't reprint the antiphon
-    \if\onlyoneant T\else% if there is only one antiphon for all the psalms (like during Paschaltide), we don't print Repeat antiphon
+    \ifx\printrepeatantiphon\undefined%
+      \if\onlyoneant T\def\printrepeatantiphon{F}%
+      \else\def\printrepeatantiphon{T}%
+      \fi
+    \fi
+    \if\printrepeatantiphon T% if there is only one antiphon for all the psalms (like during Paschaltide), we don't print Repeat antiphon
         \ifx\prerepeatantiphon\undefined\smallskip\else\prerepeatantiphon\fi
         {\noindent\emph{Repeat antiphon.}\par\medskip}% \vspace{0ex minus 1ex}}
     \fi
