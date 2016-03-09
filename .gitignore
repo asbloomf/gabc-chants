@@ -9,3 +9,7 @@ gh-pages
 misc/*-systems.*
 *.log
 *.toc
+*.gtex
+*.noEuouae.gabc
+*.fls
+*.mid
