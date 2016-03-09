@@ -2,9 +2,11 @@
 %\grechangedim{interwordspacenotes}{0.27 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \grechangedim{interwordspacenotes}{0.15 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 % minimal space between notes of the same syllable.
-% Warning: always keep minus to 0; also keep plus very low, or some words won't be hyphenated
-%\grechangedim{intersyllablespacenotes}{0.24 cm plus 0.04cm minus 0cm}{scalable}%
+%\grechangedim{intersyllablespacenotes}{0.24 cm}{scalable}%
 \grechangedim{intersyllablespacenotes}{0.15 cm}{scalable}%
+% stretching added in the case where the text of two syllables of the same word are
+% separated with an automatic hyphen
+%\grechangedim{intersyllablespacestretchhyphen}{0cm plus 0.05cm}{scalable}%
 % minimal space between letters of different words. Makes sense to have
 % the same plus and minus as interwordspacenotes.
 %\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{scalable}%
@@ -14,3 +16,7 @@
 \grechangedim{interwordspacenotes@euouae}{0.13 cm plus 0.1 cm minus 0.05 cm}{scalable}%
 %\grechangedim{interwordspacetext@euouae}{0.27 cm plus 0.1 cm minus 0.05 cm}{scalable}%
 \grechangedim{interwordspacetext@euouae}{0.13 cm plus 0.1 cm minus 0.05 cm}{scalable}%
+% versions of note spaces when the first note of the second syllable is an alteration
+% those are used in euouae blocks
+%\grechangedim{interwordspacenotes@alteration}{0.1 cm plus 0.07 cm minus 0.01 cm}{scalable}%
+%\grechangedim{intersyllablespacenotes@alteration}{0.1 cm}{scalable}%
