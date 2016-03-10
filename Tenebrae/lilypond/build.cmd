@@ -2,7 +2,7 @@
 
 for %%f in (*.ly) DO (
   echo %%~nf
-  "C:\Program Files (x86)\LilyPond\usr\bin\lilypond.exe" -dno-point-and-click -dgui %%~nf.ly
+  "C:\Program Files (x86)\LilyPond\usr\bin\lilypond.exe" -dno-point-and-click -dgui --bigpdfs %%~nf.ly
 )
 
 goto end
