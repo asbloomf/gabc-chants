@@ -110,7 +110,7 @@ transcriber:Andrew Hinkley;
 \grevepisemus{f}{12}%
 }%
 }%
-]) con(f)tra(fg!hvGF'g) me.(gf..) (::) <sp>V/</sp>() A(f)li(f)é(f/g'h)ni(%ih__/iv_HG/h_g
+]) con(f)tra(fg!hvGF'g) me.(gf..) (::) <sp>V/</sp> A(f)li(f)é(f/g'h)ni(%ih__/iv_HG/h_g
 [ev:%
 {%
 \greglyph{\char 5121}{i}{i}{8}{}{%
@@ -147,7 +147,13 @@ transcriber:Andrew Hinkley;
 }%
 }%
 }%
-])re(j)xé(jh)runt(i) ad(gh)vér(f)sum(f!gwh_g) me,(gf..) (;) et(f) fór(df~)tes(f) quæ(f)si(f)é(fg)runt(f) á(ghf)ni(fe)mam(f/g'h) mé(%i.g!hwiHG
+])re(j)xé(jh)runt(i) ad(gh)vér(f)sum(f!gwh_g) me,(gf..) (;) et(f) fór(df~)tes(f) quæ(f)si(f)é(fg)runt(f) á(ghf)ni(fe)mam(f/%g'h
+[ev:%
+\greendofelement{0}{0}%
+\greglyph{\char 1025}{g}{i}{0}{}{%
+\grevepisemus{f}{0}%
+}%
+]) mé(%i.g!hwiHG
 [ev:%
 {%
 \greglyph{\char 5122}{i}{h}{1}{}{%
