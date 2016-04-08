@@ -258,7 +258,7 @@
 				\printnote{\vesperspropersaltnote}
 			\fi
 			\definevesperspropersalt
-			\ifx#2\undefined\else\label{#2}\fi
+			\ifx#2\undefined\else\oldneedspace{5\baselineskip}\label{#2}\fi
 	  	#4
 		}
 		\medskip
@@ -270,7 +270,7 @@
 				\printnote{\vesperspropersnote}
 			\fi
 			\definevesperspropers
-			\ifx#1\undefined\else\label{#1}\fi
+			\ifx#1\undefined\else\oldneedspace{5\baselineskip}\label{#1}\fi
 	  	#4
 		}
 		\fi

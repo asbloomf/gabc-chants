@@ -15,7 +15,7 @@
 }
 \newcommand{\afterant}{
 \ifx\note\undefined\else%
-\textit{\note}
+\noindent\textit{\note}
 
 \smallskip
 \fi
@@ -25,7 +25,7 @@
 \response{\rlatin}{\renglish}
 \colchunk{}
 \colplacechunks{}
-\colchunk{\hspace*{3em}Orémus.}\colchunk{\hspace*{3em}Let us pray,}
+\colchunk{\hspace*{3em}Orémus\label{\prayerlabel}.}\colchunk{\hspace*{3em}Let us pray,}
 \colplacechunks{}
 \prayer{\prayerlatin}{\prayerenglish}
 \end{columns}
@@ -33,7 +33,7 @@
 \medskip
 
 \needspace{2\baselineskip}
-\textit{\notetwo}
+\noindent\textit{\notetwo}
 
 \smallskip
 \begin{columns}
@@ -46,6 +46,39 @@
 \prayer{\prayerlatintwo}{\prayerenglishtwo}
 \end{columns}
 \fi
+}
+\newcommand{\shortafterant}{
+\ifx\note\undefined\else%
+\noindent\textit{\note}
+
+\smallskip
+\fi
+\sloppy
+%\begin{columns}
+%\colchunk{\selectlanguage{latin}\Vbar{}~\vlatin}
+%\colchunk{\selectlanguage{latin}\Rbar{}~\rlatin}
+%\end{columns}
+\selectlanguage{latin}\Vbar{}~\vlatin
+
+\selectlanguage{latin}\Rbar{}~\rlatin
+
+\ifx\notetwo\undefined\else%
+\medskip
+
+\needspace{2\baselineskip}
+\noindent\textit{\notetwo}
+
+\smallskip
+%\begin{columns}
+%\colchunk{\selectlanguage{latin}\Vbar{}~\vlatintwo}
+%\colchunk{\selectlanguage{latin}\Rbar{}~\rlatintwo}
+%\end{columns}
+\selectlanguage{latin}\Vbar{}~\vlatintwo
+
+\selectlanguage{latin}\Rbar{}~\rlatintwo
+\fi
+
+\noindent{}\textit{Prayer on page \pageref{\prayerlabel}}.
 }
 
 \def\gabcfolder{../MarianAntiphons}
@@ -85,11 +118,6 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 %Thou Virgin first and last, let us thy mercy see.%
 }\end{quote}
 
-\vfil
-
-\includelilypond{AlmaRedemptorisMater-systems}%
-
-\oldneedspace{4\baselineskip}
 {
 \newcommand{\note}{During Advent:}
 \newcommand{\vlatin}{Angelus Dómini nuntiávit Maríæ.}
@@ -106,6 +134,15 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 \newcommand{\renglishtwo}{Intercede for us, O Mother of God.}
 \newcommand{\prayerlatintwo}{Deus, qui salútis ætérnæ, beátæ Maríæ virginitáte f\oe cúnda, humáno géneri prǽmia præstitísti~:~\dag{} tríbue, quǽsumus; ut ipsam pro nobis intercédere sentiámus,~* per quam merúimus auctórem vitæ suscípere, Dóminum nostrum Jesum Christum Fílium tuum. \Rbar~Amen.}
 \newcommand{\prayerenglishtwo}{O God, who, by the fruitful virginity of blessed Mary, hast given to mankind the rewards of eternal salvation; grant, we beseech Thee, that we may experience her intercession for us, through whom we have deserved to receive the Author of life, our Lord Jesus Christ, Thy Son. \Rbar~Amen.}
+\def\prayerlabel{almaprayer}
+
+\shortafterant{}
+
+\vfil
+
+\includelilypond{AlmaRedemptorisMater-systems}%
+
+\oldneedspace{4\baselineskip}
 
 \afterant{}
 }
@@ -121,9 +158,6 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 \printgabc{Ant.}{6.}{A}{AveReginaSolemn}
 \begin{quote}{Hail, Queen of Heaven! Hail, Queen of Angels! Hail, blest Root and Gate, from which came light upon the world! Rejoice, O glorious Virgin, that surpassest all in beauty! Hail, O most lovely, and pray for us to Christ.}\end{quote}
 
-\includelilypond{AveReginaCaelorum-systems}%
-\pagebreak
-
 {
 \newcommand{\vlatin}{Dignáre me laudáre te Vírgo sacráta.}
 \newcommand{\venglish}{Voucshafe, O holy Virgin, that I may praise thee.}
@@ -131,6 +165,13 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 \newcommand{\renglish}{Give me power against thine enemies.}
 \newcommand{\prayerlatin}{Concéde, miséricors Deus, fragilitáti nostræ præ\-sí\-di\-um :~\gredagger{}~ut qui sanctæ Dei Genitrícis memóriam ágimus, * intercessiónis ejus auxílio a nostris iniquitátibus resurgámus. Per eúmdem Christum Dóminum nostrum. \Rbar~Amen.}
 \newcommand{\prayerenglish}{Grant, O merciful God, Thy protection to us in our weakness; that we, who celebrate the memory of the holy Mother of God, may, through the aid of her intercession, rise again from our sins. Through the same Christ our Lord. \Rbar~Amen.}
+\def\prayerlabel{avereginacaelorumprayer}
+
+\shortafterant{}
+
+\oldneedspace{5\baselineskip}
+\includelilypond{AveReginaCaelorum-systems}%
+\pagebreak
 
 \afterant{}
 }
@@ -148,10 +189,13 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 \printsolemntone{}
 \printgabc{Ant.}{6.}{R}{ReginaCaeliSolemn}
 
-\begin{quote}{O Queen of heaven, rejoice, alleluia.
-For He whom thou didst merit to bear, alleluia;
-Has risen as He said, alleluia.
-Pray for us to God, alleluia.}\end{quote}
+\def\reginacaelienglish{%
+\begin{quote}{O Queen of heaven, rejoice, alleluia.\\
+For He whom thou didst merit to bear, alleluia;\\
+Has risen as He said, alleluia.\\
+Pray for us to God, alleluia.}\end{quote}%
+}
+\reginacaelienglish{}
 
 \bigskip{}
 {
@@ -161,13 +205,19 @@ Pray for us to God, alleluia.}\end{quote}
 \newcommand{\renglish}{For the Lord is risen indeed, alleluia.}
 \newcommand{\prayerlatin}{Deus, qui per resurrectiónem Fílii tui Dómini nostri Jesu Christi mundum lætificáre dignátus es~:~\gredagger{} præsta, quǽsumus; ut per ejus Genitrícem Vírginem Maríam~* perpétuæ capiámus gáudia vitæ. Per eúmdem Christum Dóminum nostrum. \Rbar~Amen.}
 \newcommand{\prayerenglish}{O God, who didst vouchsafe to give joy to the world through the resurrection of Thy Son our Lord Jesus Christ; grant, we beseech Thee, that through His Mother, the Virgin Mary, we may obtain the joys of everlasing life. Through the same Christ our Lord. \Rbar~Amen.}
+\def\prayerlabel{reginacaeliprayer}
 
 \afterant{}
-}
 
+\oldneedspace{5\baselineskip}
 \includelilypond{ReginaCoeli-systems}%
+\vfil
+\reginacaelienglish{}
 
+\shortafterant{}
 
+\vfil
+}
 
 
 % Salve Regina
@@ -182,11 +232,6 @@ Pray for us to God, alleluia.}\end{quote}
 
 \begin{quote}{Hail, holy Queen, Mother of mercy; hail, our life, our sweetness, and our hope! To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this vale of tears.  Turn then, most gracious advocate, thine eyes of mercy towards us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.  O clement, O loving, O sweet Virgin Mary.}\end{quote}
 
-\includelilypond{SalveRegina-systems}%
-
-\begin{quote}{Hail, holy Queen, Mother of mercy; hail, our life, our sweetness, and our hope! To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this vale of tears.  Turn then, most gracious advocate, thine eyes of mercy towards us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.  O clement, O loving, O sweet Virgin Mary.}\end{quote}
-
-\bigskip{}
 {
 \newcommand{\vlatin}{Ora pro nóbis sáncta Déi Génitrix.}
 \newcommand{\venglish}{ Pray for us, O holy Mother of God.}
@@ -194,6 +239,15 @@ Pray for us to God, alleluia.}\end{quote}
 \newcommand{\renglish}{That we may be made worthy of the promises of Christ.}
 \newcommand{\prayerlatin}{Omnípotens sempitérne Deus, qui gloriósæ Vírginis Matris Maríæ corpus et ánimam, ut dignum Fílii tui habitáculum éffici mererétur, Spíritu Sancto cooperánte præparásti~:~\gredagger{} da, ut cujus commemoratióne lætámur,~* ejus pia intercessióne ab instántibus malis et a morte perpétua liberémur. Per eúmdem Christum Dóminum nostrum. \Rbar~Amen.}
 \newcommand{\prayerenglish}{Almighty, everlasting God, who with the cooperation of the Holy Ghost didst prepare the body and soul of the glorious Virgin Mary, to make it fit to be the worthy dwelling of Thy Son; grant that by the loving intercession of her in whose commemoration we rejoice, we may be delivered from present ills, and from everlasting death.  Through the same Christ our Lord. \Rbar~Amen.}
+\def\prayerlabel{salveprayer}
+
+\shortafterant{}
+
+\includelilypond{SalveRegina-systems}%
+
+\begin{quote}{Hail, holy Queen, Mother of mercy; hail, our life, our sweetness, and our hope! To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this vale of tears.  Turn then, most gracious advocate, thine eyes of mercy towards us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.  O clement, O loving, O sweet Virgin Mary.}\end{quote}
+
+\bigskip{}
 
 \afterant{}
 }
