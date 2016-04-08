@@ -880,12 +880,16 @@ five%
 %4 rtranslation
 % vrnospace optional
     {#1
+    \makeatletter
+    \ifx\vrlinebreak\undefined\def\vrlinebreak{F}\fi
+    \xdef\asb@vrtex{#2\if\vrlinebreak T.vrbr\else.vrnobr\fi}
     \gresetinitiallines{0}
 \ifx\gabcfolder\undefined
-    \gregorioscore{#2}
+    \gregorioscore{\asb@vrtex}
 \else
-    \gregorioscore{\gabcfolder/#2}
+    \gregorioscore{\gabcfolder/\asb@vrtex}
 \fi
+    \makeatother
     \greseteolcustos{auto}
     }
     \vspace{-4pt plus 4pt}

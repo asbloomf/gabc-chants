@@ -10,6 +10,8 @@ date: 2011;
 transcriber: Albert Bloomfield;
 transcription-date: 2011;
 style: modern;
+def-m1:\ifx\vrlinebreak\undefined\else;
+def-m2:\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -17,5 +19,5 @@ style: modern;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c3)<sp>V/</sp>~L{o}(h)que(h)bán(h)tur(h) vá(h)ri(h)is(h) lín(h)guis(h) A(h)pós(hi)to(h)li,(h'_) (,) al(h)le(fe)lú(f_h)ia.(hiH'G/hih./ghG'FE'fg/gf.) (::Z)
+(c3)<sp>V/</sp>~L{o}(h)que(h)bán(h)tur(h) vá(h)ri(h)is(h) lín(h)guis(h) A(h)pós(hi)to(h)li,(h'_) (,) al(h)le(fe)lú(f_h)ia.(hiH'G/hih./ghG'FE'fg/gf.) (::[em1]Z[em2])
 <sp>R/</sp>~Ma(h)gná(h)li(h)a(h) Dé(hi)i,(h'_) (,) al(h)le(fe)lú(f_h)ia.(hiH'G/hih./ghG'FE'fg/gf.) (::)

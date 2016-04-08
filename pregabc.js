@@ -10,8 +10,16 @@ function processGabcFiles(path) {
   var files = fs.readdirSync(".");
   for (i in files) {
     var stat = fs.statSync(files[i])
-    if(stat.isDirectory() && files[i][0] != "." && files[i] != "psalms") processGabcFiles(files[i]);
-    else if(stat.isFile() && files[i].indexOf(".noEuouae.") < 0 && files[i].indexOf(".gabc") > 0) processGabcFile(files[i]);
+    if(stat.isDirectory() && files[i][0] != "." && files[i] != "psalms") {
+      processGabcFiles(files[i]);
+    } else if(stat.isFile()
+        && files[i].indexOf(".noEuouae.") < 0
+        && files[i].indexOf(".vrbr.") < 0
+        && files[i].indexOf(".vrnobr.") < 0
+        && files[i].indexOf(".gabc") > 0
+    ) {
+      processGabcFile(files[i]);
+    }
   }
 
   process.chdir("..");
@@ -19,16 +27,35 @@ function processGabcFiles(path) {
 
 function processGabcFile(path) {
   var file = fs.readFileSync(path, {encoding:"utf8"});
-  var outPath = path.replace(".gabc", ".noEuouae.gabc");
+  var outPath = [];
+  if(file.indexOf("\\vrlinebreak") > 0) {
+    var outPath = path.replace(".gabc", ".vrbr.gabc");
+    var output = file.replace(/::\[em\d\][zZ]?(\[em\d\])?\)/, "::Z)");
 
-  var output = file.replace(/::\[em\d\][zZ]?(\[em\d\])?\)/, "::)");
-  var endIdx = output.indexOf("<eu>");
-  if(endIdx > 0) output = output.substring(0,endIdx);
+    if(!fs.existsSync(outPath) || (output != fs.readFileSync(outPath, {encoding:"utf8"}))) {
+      fs.writeFileSync(outPath, output);
+      console.log(outPath);
+    }
 
-  if(!fs.existsSync(outPath) || (output != fs.readFileSync(outPath, {encoding:"utf8"}))) {
-    fs.writeFileSync(outPath, output);
-    console.log(outPath);
+    outPath = path.replace(".gabc", ".vrnobr.gabc");
+    output = file.replace(/::\[em\d\][zZ]?(\[em\d\])?\)/, "::)");
+
+    if(!fs.existsSync(outPath) || (output != fs.readFileSync(outPath, {encoding:"utf8"}))) {
+      fs.writeFileSync(outPath, output);
+      console.log(outPath);
+    }
+  } else {
+    var outPath = path.replace(".gabc", ".noEuouae.gabc");
+    var output = file.replace(/::\[em\d\][zZ]?(\[em\d\])?\)/, "::)");
+    var endIdx = output.indexOf("<eu>");
+    if(endIdx > 0) output = output.substring(0,endIdx);
+
+    if(!fs.existsSync(outPath) || (output != fs.readFileSync(outPath, {encoding:"utf8"}))) {
+      fs.writeFileSync(outPath, output);
+      console.log(outPath);
+    }
   }
+
 }
 
 /*
