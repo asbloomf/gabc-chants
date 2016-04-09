@@ -299,7 +299,7 @@
 			\ifx\hymninput\undefined\else
 				\input{\hymninput}
 			\fi
-			\printbothversions[\hymnlabel][\hymnaltlabel]{\hymntex}{\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}}
+			\printbothversions{\hymntex}{\printhymn[\hymnlabel]{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}}
 			\printbothversions[\vrlabel][\vraltlabel]{\vrtex}{%
 		    \ifx\vrlinebreak\undefined\def\vrlinebreak{T}\fi
 		    \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
@@ -466,7 +466,7 @@
 			\ifx\hymninput\undefined\else
 				\input{\hymninput}
 			\fi
-			\printbothversions[\hymnlabel][\hymnaltlabel]{\hymntex}{\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}}
+			\printbothversions{\hymntex}{\printhymn[\hymnlabel]{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}}
 		\else
 			\printhymnnote
 		\fi

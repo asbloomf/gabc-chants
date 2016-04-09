@@ -854,23 +854,27 @@ five%
 }
 \fi
 
-\newcommand{\printhymn}[4]{
-% 1 hymnlinetwo
-% 2 hymninitial
-% 3 hymntex
-% 4 hymntranslation
-    \printgabc[\ifx\prehymn\undefined\else\prehymn\fi]{\small{Hymn.}}{\small{#1}}{#2}{#3} %
+\newcommand{\printhymn}[5][\undefined]{
+% 1 label
+% 2 hymnlinetwo
+% 3 hymninitial
+% 4 hymntex
+% 5 hymntranslation
+    \makeatother
+    \def\asb@line{Hymn.\ifx#1\undefined\else\label{#1}\fi}
+    \printgabc[\ifx\prehymn\undefined\else\prehymn\fi]{\small{\asb@line}}{\small{#2}}{#3}{#4} %
     \ifx\prehymntranslation\undefined\else\prehymntranslation\fi%
     \normalsize%\vspace{0pt minus 20pt}
     \selectlanguage{american}\vspace{-\baselineskip}
     \begin{multicols}{2}
     \begin{psalmverses}
-    {#4}
+    {#5}
     \end{psalmverses}
     \ifx\hymnnote\undefined\else%
       \begin{flushright}\emph{\hymnnote}\end{flushright}
     \fi
     \end{multicols}
+    \makeatletter
 }
 
 \newcommand{\printvr}[4][]{
