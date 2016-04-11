@@ -39,11 +39,12 @@
 	}
 	\def\vrlinebreak{T}
 	\newcommand{\printsundaysthroughtheyear}{
-		\printnote{Time after Epiphany, \emph{p.~\pageref{epiphany2} to \pageref{epiphany6}.}}
+		\def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
+		\printnote{Time after Epiphany,\dotting \emph{p.~\pageref{epiphany2} to \pageref{epiphany6}}}
 
-		\printnote{Shrovetide \& Lent, \emph{p.~\pageref{septuagesima} to \pageref{lent6}.}}
+		\printnote{Shrovetide \& Lent,\dotting \emph{p.~\pageref{septuagesima} to \pageref{lent6}}}
 
-		\printnote{Time after Pentecost, \emph{p.~\pageref{pentecost2} to \pageref{pentecost24}.}}
+		\printnote{Time after Pentecost,\dotting \emph{p.~\pageref{pentecost2} to \pageref{pentecost24}}}
 
 	}
 	\newcommand{\magreplacement}{\vspace{-\baselineskip}\noindent\begin{centering}
@@ -92,13 +93,14 @@
 	    }
 	}
 	\newcommand{\printsundaysaftereaster}{
+		\def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
 		\begin{multicols}{2}
-		\noindent\emph{Low Sunday}, p.~\pageref{easter1}.\\
-		\noindent\emph{\nth{2} Sunday after Easter}, p.~\pageref{easter2}.\\
-		\emph{\nth{3} Sunday after Easter}, p.~\pageref{easter3}.\\
-		\emph{\nth{4} Sunday after Easter}, p.~\pageref{easter4}.\\
-		\emph{\nth{5} Sunday after Easter}, p.~\pageref{easter5}.\\
-		\emph{Sunday after the Ascension}, p.~\pageref{easter6}.
+		\noindent\emph{Low Sunday},\dotting p.~\pageref{easter1}\\
+		\noindent\emph{\nth{2} Sunday after Easter},\dotting p.~\pageref{easter2}\\
+		\emph{\nth{3} Sunday after Easter},\dotting p.~\pageref{easter3}\\
+		\emph{\nth{4} Sunday after Easter},\dotting p.~\pageref{easter4}\\
+		\emph{\nth{5} Sunday after Easter},\dotting p.~\pageref{easter5}\\
+		\emph{Sunday after the Ascension},\dotting p.~\pageref{easter6}
 		\end{multicols}
 	}
 	\newcommand{\chapterreplacement}{\noindent\begin{centering}
