@@ -40,10 +40,19 @@
 \sectionmark{December 25: Nativity of our Lord \& Sunday within the Octave}
 \subtitle{\nth{2} Class, White}
 
-\def\definevesperspropersalt{\input{\gabcfolder/inc-Christmas-Vespers2}}
-\def\definevesperspropers{\input{\gabcfolder/inc-SundayWithinOctaveOfChristmas-Vespers2}}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-Christmas-Vespers2}
+  \let\oldthing\maganttranslation
+  \def\maganttranslation{\oldthing\vspace{-0.5\baselineskip}}
+}
+\def\definevesperspropers{\input{\gabcfolder/inc-SundayWithinOctaveOfChristmas-Vespers2}
+  \let\oldthing\maganttranslation
+  \def\maganttranslation{\oldthing\vspace{-0.5\baselineskip}}
+}
 \def\vesperspropersaltnote{At II Vespers of Christmas:}
 \def\vesperspropersnote{At II Vespers of the Sunday within the Octave of Christmas:}
+\def\prepsalmthree{\needspace{8\baselineskip}}
+\def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
+\def\prerepeatantiphonthree{\vspace{-0.85\baselineskip}}
 \def\premag{\def\noeuouae{T}}
 \def\premagverses{\greseteolcustos{manual}}
 \def\hymnlabel{hymn-jesuredemptoromnium}
@@ -91,13 +100,14 @@
 \def\definevesperspropers{\input{\gabcfolder/inc-HolyName-2Vespers}}
 %\def\vesperspropersaltnote{At I Vespers of the Most Holy Name of Jesus:}
 %\def\vesperspropersnote{At II Vespers of the Most Holy Name of Jesus:}
+\def\preantone{\needspace{8\baselineskip}}
 \def\hymnlabel{hymn-jesudulcismemoria}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.425\linewidth}]{2}}
 \def\prevespers{%
   \let\oldthing\antfivetranslation
   \def\antfivetranslation{\oldthing\vspace{\baselineskip}}%
 }
-\def\prehymn{\pagebreak}
+\def\prehymn{\needspace{12\baselineskip}}
 \printvespers[../HolyName]{inc-HolyName-common}
 
 \benedicamusdomino[2]{}
@@ -122,6 +132,7 @@
 \def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
 \def\prepsalmthreeverses{\vspace{-0.05\baselineskip}}
 \def\prerepeatantiphonthree{}
+\def\prevr{\needspace{8\baselineskip}}
 
 \printvespers[../Epiphany]{inc-Epiphany-Vespers}
 
@@ -138,13 +149,18 @@
 
 \def\prerepeatantiphontwo{\vspace{-0.5\baselineskip}}
 %\def\prerepeatantiphonthree{}
+%\def\prepsalmtitlethree{\vspace{-1.5\baselineskip}}
+%\def\prepsalmtitlefive{\vspace{-1.5\baselineskip}}
+\def\prepsalmfiveverses{\vspace{-0.05\baselineskip}}
+\def\prerepeatantiphonfive{\vspace{-0.8\baselineskip}}
 \def\prevespers{%
   \let\oldthing\anttwotranslation
   \def\anttwotranslation{\vspace{-0.7\baselineskip}\oldthing\vspace{-0.7\baselineskip}}%
   \let\oldthingb\antthreetranslation
-  \def\antthreetranslation{\oldthing\vspace{\baselineskip}}%
+  \def\antthreetranslation{\vspace{-0.7\baselineskip}\oldthingb\vspace{-1.3\baselineskip}}%
   \let\oldthingc\antfivetranslation
-  \def\antfivetranslation{\oldthing\vspace{\baselineskip}}%
+  \def\antfivetranslation{\vspace{-0.4\baselineskip}\oldthingc\vspace{-0.8\baselineskip}}%
+  \def\prehymntranslation{\vspace{-0.75\baselineskip}}
 }
 \printvespers[../HolyFamily]{inc-HolyFamily-Vespers2}
 

@@ -311,7 +311,6 @@
 \setlength\parsep{0pt}%
 \setlength\labelwidth{50pt}\setlength\leftmargin{0pt}\setlength\itemindent{6ex}}%
 \setcounter{vcounter}{#1}%
-\vspace{-\baselineskip}%
 }{\ifx\undefined\useparacol%
 \vspace{-12pt}%
 \fi%
@@ -351,6 +350,7 @@
 \gregorioscore{#2}
 \normalsize\smallskip\ifx\premagtexverses\undefined\else\premagtexverses\fi
 \begin{psalmverses}[#1]
+\vspace{-0.8\baselineskip plus 0.25\baselineskip}
 }{\end{psalmverses}}
 
 \newenvironment{boldnummagnificat}[2][2]{

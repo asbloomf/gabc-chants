@@ -134,7 +134,9 @@
 }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-StPhilipNeri-1Vespers}
 }
-\def\vesperspropersnote{At II Vespers:}
+\def\vesperspropersnote{\bigskip{}
+
+At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
 %\def\prehymn{\pagebreak}
 
@@ -175,7 +177,7 @@
 \def\vesperspsalmslabel{\label{june24-2vespers}}
 \def\prevesperspsalmsalt{\noindent\printnote{II Vespers psalms and antiphons, page \pageref{june24-2vespers}.}\medskip}
 \def\prechapter{\label{june24-chapter}}
-\def\premagnificat{\pagebreak}
+%\def\premagnificat{\pagebreak}
 
 \printvespers[../June24-BirthOfJohnTheBaptist]{inc-BirthOfJohnTheBaptist}
 
@@ -426,7 +428,7 @@
 \subtitle{\nth{1} Class, White or Gold}
 \subtitle{II Vespers}
 
-\def\postpsalmtitletwo{\pagebreak}
+\def\postpsalmtitletwo{\needspace{12\baselineskip}}
 \def\prerepeatantiphontwo{}
 \def\definevesperspropers{\input{\gabcfolder/inc-ChristTheKing-2Vespers}}
 \def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
@@ -446,12 +448,12 @@
 \subtitle{\nth{1} Class, White or Gold}
 \subtitle{I \& II Vespers}
 
-\def\postpsalmtitleone{\pagebreak}
+\def\postpsalmtitleone{\oldneedspace{12\baselineskip}}
 \def\prepsalmoneverses{\vspace{-0.2\baselineskip}}
 \def\prerepeatantiphonone{}
 \def\preanttwo{\vspace{-0.5\baselineskip}}
 \def\prepsalmtitletwo{\vspace{-0.3\baselineskip}}
-\def\postpsalmtitletwo{\pagebreak}
+\def\postpsalmtitletwo{\oldneedspace{12\baselineskip}}
 \def\prepsalmtitlethree{\vspace{-\baselineskip}}
 \def\prerepeatantiphontwo{}
 \def\prevespers{
@@ -459,7 +461,7 @@
   \def\anttwotranslation{\vspace{-0.5\baselineskip}\oldthing}
 }
 \def\definevesperspropers{\input{\gabcfolder/inc-AllSaints-2Vespers}
-  \def\prepsalmtitlefive{\bigskip}
+  %\def\prepsalmtitlefive{\bigskip}
 }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-AllSaints-1Vespers}
   \def\premag{\label{allsaints1-magnificat}}

@@ -2,7 +2,8 @@
 {
 \newcommand{\printcommonvespers}[1][2]{
 	\subtitle{\nth{#1} Class, \liturgicalcolor{}}
-	\printnote{From \emph{Vespers of Sundays throughout the year}, page \pageref{sundayvespers}.\\}
+	\deusinadjutorium{}
+	\printnote{\emph{Vespers of Sundays throughout the year}, p.~\pageref{sundayvespers}.\\}
 }
 \def\liturgicalcolor{Violet}
 \def\printcommemnote{\smallskip
@@ -30,13 +31,16 @@
 \let\oldthing=\printhymnnote
 \def\printhymnnote{\oldthing\bigskip}
 
+\def\premagverses{\oldneedspace{10\baselineskip}}
 \printvespersmag[../Lent]{inc-VespersMagnificatSeptuagesima}
 
 \bigskip
 \benedicamusdomino{}
+\vfil
 }
 
 {
+\pagebreak
 \section{Sexagesima}
 \label{sexagesima}
 \printcommonvespers{}
@@ -44,13 +48,16 @@
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
 \def\precollect{\printvrdirigatur}
 
+\def\premagverses{\oldneedspace{18\baselineskip}}
 \printvespersmag[../Lent]{inc-VespersMagnificatSexagesima}
 
 \bigskip
 \benedicamusdomino{}
+\vfil
 }
 
 {
+\pagebreak
 \section{Quinquagesima}
 \label{quinquagesima}
 \printcommonvespers{}
@@ -65,7 +72,8 @@
 {
 \renewcommand{\printcommonvespers}[1][2]{
 	\subtitle{\nth{#1} Class}
-	\printnote{From \emph{Vespers of Sundays throughout the year}, page \pageref{sundayvespers}.\\}
+	\deusinadjutorium{}
+	\printnote{\emph{Vespers of Sundays throughout the year}, page \pageref{sundayvespers}.\\}
 }
 
 \newcommand{\benedicamusdomino}[1][lent]{
@@ -80,7 +88,7 @@
 \def\vrlabel{vr-angelissuis}
 \def\hymninput{\gabcfolder/inc-hymn-AudiBenigneConditor}
 %\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
-\def\premagnificat{\pagebreak}
+%\def\premagnificat{\pagebreak}
 \printvespersmag[../Lent]{inc-VespersMagnificatLent1}
 
 \bigskip
@@ -128,6 +136,7 @@
 \medskip
 \hrule
 {
+\oldneedspace{12\baselineskip}
 \label{annunciation-commem}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43\linewidth}]{2}}
 
@@ -144,6 +153,7 @@
 \label{lent4}
 \def\liturgicalcolor{Violet or Rose}
 \printcommonvespers[1]
+\needspace{8\baselineskip}
 \printvespersmag[../Lent]{inc-VespersMagnificatLent4}
 
 \printcommemnote{}
@@ -157,10 +167,11 @@
 \label{lent5}\label{passionsunday}
 \printcommonvespers[1]
 \def\hymnlabel{hymn-vexillaregis}
+\def\prehymn{\needspace{20\baselineskip}}
 \def\vrlabel{vr-eripeme}
 \def\hymninput{\gabcfolder/inc-hymn-VexillaRegis}
 \def\premagnificat{\pagebreak}
-\def\precollect{\vspace{-1.5\baselineskip}}
+%\def\precollect{\vspace{-1.5\baselineskip}}
 \printvespersmag[../Lent]{inc-VespersMagnificatPassion1}
 
 \printcommemnote{}

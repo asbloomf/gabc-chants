@@ -109,7 +109,7 @@
 }\end{center}
 }
 
-\newcommand{\deusinadjutorium}{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, page \pageref{deusinadjutorium}.}}
+\newcommand{\deusinadjutorium}{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, p.~\pageref{deusinadjutorium}.}}
 \newcommand{\printcollect}[2]{
 	\ifx\undefined\begincollectcols\def\begincollectcols{\begin{parcolumns}[rulebetween]{2}}\fi
 	\ifx\printcollectheading\undefined\def\printcollectheading{T}\fi
@@ -171,7 +171,8 @@
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween]{2}}
 \fi
 \ifnum#1=147
-\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.465\linewidth}]{2}}
+%\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.465\linewidth}]{2}}
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
 \fi
 }
 \newcommand{\printvrcommem}{
@@ -482,6 +483,7 @@
 			\printnote{In Paschaltide:}
 			\ifx\vrlinebreak\undefined\def\vrlinebreak{T}\fi
 			\if\vrlinebreak T\greseteolcustos{manual}\fi
+			\gresetinitiallines{0}
 			\gregorioscore{\gabcfolder/\vrpttex}
 			\greseteolcustos{auto}
 		\fi

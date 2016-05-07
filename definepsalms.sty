@@ -707,6 +707,7 @@ five%
 \beginpsalmcols
 \colchunk{\vspace{-12pt}%
 \begin{psalmverses}[\if\psalmbeginversetwo T2\else 1\fi]
+\vspace{-\baselineskip}%
 \input{\psalmversestex}
 \end{psalmverses}
 }
@@ -716,6 +717,7 @@ five%
 \sloppy
 \if\psalmtranslationsmall T\small\fi
 \begin{psalmverses}
+\vspace{-\baselineskip}%
 \input{\psalmtranslationtex}
 \end{psalmverses}
 }
@@ -865,7 +867,7 @@ five%
     \printgabc[\ifx\prehymn\undefined\else\prehymn\fi]{\small{\asb@line}}{\small{#2}}{#3}{#4} %
     \ifx\prehymntranslation\undefined\else\prehymntranslation\fi%
     \normalsize%\vspace{0pt minus 20pt}
-    \selectlanguage{american}\vspace{-\baselineskip}
+    \selectlanguage{american}\vspace{-0.85\baselineskip plus 0.4\baselineskip}
     \begin{multicols}{2}
     \begin{psalmverses}
     {#5}
