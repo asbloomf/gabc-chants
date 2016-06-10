@@ -144,7 +144,7 @@
 \newcommand{\psalmcolsoverride}[1][0]{
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
 \ifnum#1=110
-\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.465\linewidth}]{2}}
 \fi
 \ifnum#1=111
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
@@ -158,9 +158,9 @@
 \ifnum#1=121
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
 \fi
-%\ifnum#1=125
-%\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.48\linewidth}]{2}}
-%\fi
+\ifnum#1=125
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.49\linewidth}]{2}}
+\fi
 \ifnum#1=129
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
 \fi
@@ -394,6 +394,7 @@
 	\fi
 
 	\deusinadjutorium{}
+
 	\ifx\postdeusinadjutorium\undefined\else\postdeusinadjutorium\fi
 	\medskip
 	\ifx\psalmonenum\undefined{
@@ -515,7 +516,7 @@
 			}
 			\definevesperspropersalt
   		\hrule
-  		\needspace{5\baselineskip}
+  		\needspace{7\baselineskip}
 			\ifx\premagnificat\undefined\else\premagnificat\fi
 	    \begin{center}{\large Magnificat.}\end{center}
     	\vspace{-1ex}
@@ -735,7 +736,7 @@ For Sundays in Paschaltide, \emph{p.~\pageref{sundayvespers-easter}}.}
 \include{inc-proper-of-saints}
 
 \chapter{Appendix}
-\include{inc-benediction}
+\input{inc-benediction}
 \include{inc-mag1D}
 \include{inc-mag7a}
 \include{inc-grassi}

@@ -98,10 +98,12 @@
 
 \def\definevesperspropers{\input{\gabcfolder/inc-StJosephWorker-2Vespers}
   \let\oldthing=\maganttranslation
-  \def\maganttranslation{\oldthing\pagebreak}
+  \def\maganttranslation{\oldthing\needspace{10\baselineskip}}
 }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-StJosephWorker-1Vespers}
   \def\vrlinebreak{T}
+  \let\oldthing=\maganttranslation
+  \def\maganttranslation{\oldthing\needspace{10\baselineskip}}
 }
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
@@ -137,7 +139,7 @@
 \def\vesperspropersnote{\bigskip{}
 
 At II Vespers:}
-\def\vesperspropersaltnote{At I Vespers:}
+\def\vesperspropersaltnote{\vspace{-1\baselineskip}At I Vespers:}
 %\def\prehymn{\pagebreak}
 
 \printvespers[../StPhilipNeri]{inc-StPhilipNeri}
@@ -157,7 +159,8 @@ At II Vespers:}
 
 \bigskip{}
 \benedicamusdomino{}
-\pagebreak
+%\vfil
+%\pagebreak
 }
 
 %June 24: Nativity of St John the Baptist (1st class)
@@ -168,11 +171,11 @@ At II Vespers:}
 
 \def\definevesperspropers{\input{\gabcfolder/inc-BirthOfJohnTheBaptist-2Vespers}
   \let\oldthing=\antonetranslation
-  \def\antonetranslation{\oldthing\pagebreak}
+  \def\antonetranslation{\oldthing\needspace{10\baselineskip}}
 }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-BirthOfJohnTheBaptist-1Vespers}}
 \def\vesperspropersnote{At II Vespers:}
-\def\vesperspropersaltnote{At I Vespers:}
+\def\vesperspropersaltnote{\vspace{-1\baselineskip}At I Vespers:}
 \def\prevesperspsalms{\noindent\printnote{Chapter and following, page \pageref{june24-chapter}.\\}}
 \def\vesperspsalmslabel{\label{june24-2vespers}}
 \def\prevesperspsalmsalt{\noindent\printnote{II Vespers psalms and antiphons, page \pageref{june24-2vespers}.}\medskip}
@@ -181,9 +184,8 @@ At II Vespers:}
 
 \printvespers[../June24-BirthOfJohnTheBaptist]{inc-BirthOfJohnTheBaptist}
 
-\medskip
 \printnote{\sundaycommemnote{}
-
+%\vspace{-\baselineskip}
 \begin{multicols}{2}
 \noindent\emph{\nth{2} Sunday after Pentecost}, p.~\pageref{pentecost2}.\\
 \emph{\nth{3} Sunday after Pentecost}, p.~\pageref{pentecost3}.\\
@@ -192,7 +194,6 @@ At II Vespers:}
 \emph{\nth{6} Sunday after Pentecost}, p.~\pageref{pentecost6}.
 \end{multicols}
 }
-\bigskip
 \benedicamusdomino{}
 }
 
@@ -200,7 +201,7 @@ At II Vespers:}
 {
 \section{June 29: Sts Peter \& Paul}
 \subtitle{\nth{1} Class, Red}
-%\vspace{-2\baselineskip}
+%\vspace{-\baselineskip}
 \subtitle{I \& II Vespers}
 %\vspace{-\baselineskip}
 
@@ -208,18 +209,22 @@ At II Vespers:}
   \let\oldthing=\antonetranslation
   \def\antonetranslation{\vspace{-0.5\baselineskip}\oldthing\vspace{-0.5\baselineskip}}
   \let\oldthingb=\antthreetranslation
-  \def\antthreetranslation{\vspace{-0.5\baselineskip}\oldthing\vspace{-0.6\baselineskip}}
+  \def\antthreetranslation{\vspace{-0.5\baselineskip}\oldthingb\vspace{-1.4\baselineskip}}
+  \let\oldthingc=\antfourtranslation
+  \def\antfourtranslation{\vspace{-0.5\baselineskip}\oldthingc\vspace{-0.6\baselineskip}}
   \def\prepsalmoneverses{\vspace{-0.1\baselineskip}}
 }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-StsPeterAndPaul-1Vespers}
-  \def\postpsalmtitleone{\pagebreak}
-  \def\postpsalmtitletwo{\pagebreak}
+  \let\oldthing=\antonetranslation
+  \def\antonetranslation{\vspace{-0.5\baselineskip}\oldthing\vspace{-0.5\baselineskip}}
+  \def\postpsalmtitleone{\oldneedspace{10\baselineskip}}
+  \def\postpsalmtitletwo{\oldneedspace{10\baselineskip}}
   \def\preanttwo{\vspace{-0.4\baselineskip}}
   \def\prepsalmtwoverses{\vspace{-0.1\baselineskip}}
-  %\let\oldthing=\antfourtranslation
-  %\def\antfourtranslation{\oldthing\pagebreak}
-  \let\oldthing=\maganttranslation
-  \def\maganttranslation{\oldthing\needspace{6\baselineskip}}
+  %\let\oldthingb=\antfourtranslation
+  %\def\antfourtranslation{\oldthingb\pagebreak}
+  \let\oldthingc=\maganttranslation
+  \def\maganttranslation{\oldthingc\needspace{6\baselineskip}}
 }
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
@@ -295,7 +300,10 @@ At II Vespers:}
 \subtitle{I \& II Vespers}
 
 \def\definevesperspropers{\input{\gabcfolder/inc-Assumption-2Vespers}}
-\def\definevesperspropersalt{\input{\gabcfolder/inc-Assumption-1Vespers}}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-Assumption-1Vespers}
+\let\oldthing=\maganttranslation
+\def\maganttranslation{\oldthing\needspace{10\baselineskip}}
+}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
 \def\printfullhymn{
@@ -349,6 +357,7 @@ At II Vespers:}
 \def\prerepeatantiphonthree{}
 \def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
 \def\prepsalmtitlefour{\oldneedspace{8\baselineskip}}
+\def\prepsalmtitlefive{\needspace{8\baselineskip}}
 \def\prepsalmfourverses{\oldneedspace{2\baselineskip}}
 \def\prehymntranslation{\oldneedspace{3\baselineskip}}
 %\def\precollect{\vspace{-0.5\baselineskip}}
@@ -365,7 +374,7 @@ At II Vespers:}
 \subtitle{\nth{1} Class, White or Gold}
 \vspace{-0.5\baselineskip}
 \subtitle{I \& II Vespers}
-\def\postdeusinadjutorium{\pagebreak}
+\def\postdeusinadjutorium{\needspace{10\baselineskip}}
 
 \def\definevesperspropers{\input{\gabcfolder/inc-DedicationStMichael-2Vespers}
   \def\prepsalmtitlefive{\bigskip}
@@ -414,8 +423,11 @@ At II Vespers:}
   }
 }
 \def\prepsalmtitleone{\vspace{-0.4\baselineskip}}
-\def\prepsalmtitletwo{\vspace{-0.6\baselineskip}}
-
+\def\prepsalmtitletwo{}
+\def\prevespers{
+  \let\oldthing=\anttwotranslation
+  \def\anttwotranslation{\vspace{-0.3\baselineskip}\oldthing\vspace{-0.7\baselineskip}}
+}
 \printvespers[../October11-MaternityOfBlessedVirginMary]{inc-MaternityOfBVM}
 
 \medskip
@@ -446,19 +458,25 @@ At II Vespers:}
 {
 \section{November 1: All Saints}
 \subtitle{\nth{1} Class, White or Gold}
+%\vspace{-2\baselineskip}
 \subtitle{I \& II Vespers}
 
+\def\postdeusinadjutorium{\pagebreak}
 \def\postpsalmtitleone{\oldneedspace{12\baselineskip}}
-\def\prepsalmoneverses{\vspace{-0.2\baselineskip}}
+%\def\prepsalmoneverses{\vspace{-0.2\baselineskip}}
+%\def\presalmtitleone{\vspace{-0.8\baselineskip}}
 \def\prerepeatantiphonone{}
-\def\preanttwo{\vspace{-0.5\baselineskip}}
-\def\prepsalmtitletwo{\vspace{-0.3\baselineskip}}
-\def\postpsalmtitletwo{\oldneedspace{12\baselineskip}}
+%\def\preanttwo{\vspace{-0.5\baselineskip}}
+%\def\prepsalmtitletwo{\vspace{-0.3\baselineskip}}
+\def\postpsalmtitletwo{\needspace{12\baselineskip}}
 \def\prepsalmtitlethree{\vspace{-\baselineskip}}
 \def\prerepeatantiphontwo{}
+\def\postpsalmtitlefour{\needspace{12\baselineskip}}
 \def\prevespers{
-  \let\oldthing=\anttwotranslation
-  \def\anttwotranslation{\vspace{-0.5\baselineskip}\oldthing}
+  \let\oldthinga=\antonetranslation
+  \def\antonetranslation{\vspace{-0.2\baselineskip}\oldthinga\vspace{-0.5\baselineskip}}
+  %\let\oldthing=\anttwotranslation
+  %\def\anttwotranslation{\vspace{-0.5\baselineskip}\oldthing}
 }
 \def\definevesperspropers{\input{\gabcfolder/inc-AllSaints-2Vespers}
   %\def\prepsalmtitlefive{\bigskip}
@@ -467,7 +485,7 @@ At II Vespers:}
   \def\premag{\label{allsaints1-magnificat}}
 }
 \def\vraltlabel{allsaints1-vr}
-\def\vesperspropersnote{At II Vespers:}
+\def\vesperspropersnote{\needspace{15\baselineskip}At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
 \def\prechapter{\needspace{6\baselineskip}}
 \def\begincollectcols{\label{allsaints-collect}\begin{parcolumns}[rulebetween]{2}}
@@ -495,17 +513,20 @@ At II Vespers:}
 \subtitle{I \& II Vespers}
 \printnote{All from the Common of the Dedication of a Church.}
 
-\def\postpsalmtitlethree{\pagebreak}
-\def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
-\def\prerepeatantiphonthree{}
+%\def\prepsalmtwoverses{\vspace{-0.1\baselineskip}}
+\def\prerepeatantiphontwo{}
+\def\postpsalmtitlethree{\medskip\needspace{10\baselineskip}}
+\def\prepsalmthreeverses{\medskip}
+%\def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
+%\def\prerepeatantiphonthree{}
 %\def\prerepeatantiphonfive{}
-\def\prepsalmtitlefive{\bigskip}
-\def\prepsalmfiveverses{\bigskip}
+%\def\prepsalmtitlefive{\bigskip}
+\def\prepsalmfiveverses{\smallskip}
 %\def\prevespers{
 %  \let\oldthing=\antfivetranslation
 %  \def\antfivetranslation{\vspace{-0.6\baselineskip}\oldthing\vspace{-1\baselineskip}}
 %}
-\def\prevr{\pagebreak}
+\def\prevr{\needspace{10\baselineskip}}
 \def\definevesperspropers{\input{\gabcfolder/inc-DedicationOfChurch-2Vespers}
   \let\oldthinga=\maganttranslation
   \def\maganttranslation{\oldthinga\oldneedspace{8\baselineskip}}
@@ -519,5 +540,4 @@ At II Vespers:}
 \bigskip
 \benedicamusdomino[2]{}
 }
-
 }

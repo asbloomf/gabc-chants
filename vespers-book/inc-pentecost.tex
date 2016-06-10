@@ -72,6 +72,7 @@
 	\section{\nth{#1} \ifnum#1=24{or Last }\fi Sunday after Pentecost}
 	\label{pentecost#1}
 \printcommonvespers{}
+\ifx\printaftercommonvespers\undefined\else\printaftercommonvespers{}\fi
 	\def\precollect{\printvrdirigatur}
 	\printvespersmag[../TimeAfterPentecost]{inc-VespersMagnificatPentecost#1}
 	\smallskip
@@ -99,6 +100,7 @@
 	}
 \printvespersafterpentecost{11}}
 {\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.455\linewidth}]{2}}
+\def\printaftercommonvespers{\needspace{6\baselineskip}}
 \printvespersafterpentecost{12}}
 {\def\prevespers{
 	\let\oldthing=\englishmagantiphon
@@ -113,6 +115,7 @@
 \printvespersafterpentecost{17}
 \printvespersafterpentecost{18}
 {\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}}
+\def\premagverses{\vspace{-0.7\baselineskip}}
 \printvespersafterpentecost{19}}
 \printvespersafterpentecost{20}
 \printvespersafterpentecost{21}
