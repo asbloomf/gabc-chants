@@ -41,6 +41,7 @@
 \newcommand{\printcommonvespers}[1][2]{
     \subtitle{\nth{#1} Class, \liturgicalcolor{}}
     \deusinadjutorium{}
+    \hfill
     \printnote{\emph{Vespers of Sundays in Paschaltide}, p.~\pageref{sundayvespers-easter}.\\}
 }
 \def\liturgicalcolor{White}
@@ -148,7 +149,9 @@
 \printcommonvespers{}
 %\let\printhymnnote=\undefined
 \renewcommand{\printhymnnote}{
+    \medskip
     \noindent\printnote{Hymn.~\emph{Salútis humánæ Sator}, page \pageref{hymn-salutishumanaesator}.}
+    \medskip
     \def\vrlinebreak{T}
     \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
 }
