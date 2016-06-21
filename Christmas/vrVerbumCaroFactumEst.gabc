@@ -7,6 +7,8 @@ date: 2011;
 transcriber: Albert Bloomfield;
 transcription-date: 2011;
 style: modern;
+def-m1:\ifx\vrlinebreak\undefined\else;
+def-m2:\fi;
 %%
-(c3)<sp>V/</sp>~V{é}r(h)bum(h) cá(h)ro(h) fá(h)ctum(h) est,(h) al(h)le(h)lú(h)ia.(g_'/hvGF'Efgf.) (::[ev:\ifx\vrlinebreak\undefined\else]Z[ev:\fi])
+(c3)<sp>V/</sp>~V{é}r(h)bum(h) cá(h)ro(h) fá(h)ctum(h) est,(h) al(h)le(h)lú(h)ia.(g_'/hvGF'Efgf.) (::[em1]Z[em2])
 <sp>R/</sp>~Et(h) ha(h)bi(h)tá(h)vit(h) in(h) nó(h)bis,(h) al(h)le(h)lú(h)ia.(g_'/hvGF'Efgf.) (::)
