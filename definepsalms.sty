@@ -693,7 +693,9 @@ five%
 {\ifx\prepsalm\undefined\else\prepsalm\fi
  \ifx\prepsalmtext\undefined\else\prepsalmtext\fi
   \gresetinitiallines{0}
+  \grechangedim{interwordspacetext}{0.15 cm plus 0.15 cm minus 0.10 cm}{scalable}%
   \gregorioscore{\psalmtex}
+  \input{../gsp-spaces}
   \greseteolcustos{auto}
 }
 %\medskip % do we need this?
