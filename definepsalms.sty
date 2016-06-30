@@ -326,6 +326,9 @@ five%
 \ifcsname postpsalmtitle\antnum\endcsname
     \def\postpsalmtitle{\csname postpsalmtitle\antnum\endcsname}
 \fi
+\ifcsname preanttranslation\antnum\endcsname
+    \def\preanttranslation{\csname preanttranslation\antnum\endcsname}
+\fi
 %set up variables
 \edef\anttex{#4}
 \edef\antinitial{#5}
@@ -680,6 +683,7 @@ five%
 \if\psalmtitleafterant T%
   \if\printantiphon T%
     \ifx\anttranslation\undefined\else%
+      \ifx\undefined\preanttranslation\else\preanttranslation\fi
       \translation[]{\normalsize \anttranslation \smallskip}
     \fi%
     %\vspace{-1ex plus 1ex}% maybe get rid of this
@@ -778,8 +782,11 @@ five%
 \global\let\prerepeatantiphon=\undefined
 \global\expandafter\let\csname prepsalmtitle\antnum\endcsname=\undefined
 \global\expandafter\let\csname postpsalmtitle\antnum\endcsname=\undefined
+\global\expandafter\let\csname preanttransaltion\antnum\endcsname=\undefined
 \global\let\prepsalmtitle=\undefined
 \global\let\postpsalmtitle=\undefined
+\global\let\preanttranslation=\undefined
+\global\let\prepsalmverses=\undefined
 % TODO: do we need to do pagebreak stuff?
 }
 
