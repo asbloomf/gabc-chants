@@ -10,11 +10,12 @@ date: 2011;
 transcriber: Albert Bloomfield;
 transcription-date: 2011;
 style: modern;
+def-m1:\pagebreak[2];
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
 %%
-(c4)1. M{a}(h)gní(gh)fi(h)cat(h.) <v>\greheightstar</v>(:) á(h)ni(h)<i>ma</i>(g) <i>mé</i>(h)<i>a</i>(ih) <b>Dó</b>(gr[ocba:1{])<b>mi</b>(gf[ocba:0}])num.(e.) (::Z)
+(c4)1. M{a}(h)gní(gh)fi(h)cat(h.) <v>\greheightstar</v>(:) á(h)ni(h)<i>ma</i>(g) <i>mé</i>(h)<i>a</i>(ih) <b>Dó</b>(gr[ocba:1{])<b>mi</b>(gf[ocba:0}])num.(e.) (::Z[em1])
 2. Et(h) ex(gh)sul(h)tá(h)vit(h) spí(h)<i>ri</i>(g)<i>tus</i>(h) <b>mé</b>(i hr)us(h.) <v>\greheightstar</v>(:) in(h) Dé(h)o(h) sa(h)<i>lu</i>(g)<i>tá</i>(h)<i>ri</i>(ih) (gr[ocba:1{]) <b>mé</b>(gf[ocba:0}])o.(e.) (::)
 
 %E(h) u(g) o(h) u(ih) a(gf) e.(e.) (::)

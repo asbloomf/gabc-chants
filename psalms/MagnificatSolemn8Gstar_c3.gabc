@@ -10,6 +10,7 @@ date: 2011;
 transcriber: Albert Bloomfield;
 transcription-date: 2011;
 style: modern;
+def-m1:\pagebreak[2];
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -17,7 +18,7 @@ style: modern;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c3)1. Ma(e)gní(fe)fi(eh)cat(h.) <v>\greheightstar</v>(:) á(h)ni(h)ma(h) <i>mé</i>(g)<i>a</i>(h) <b>Dó</b>(f)mi(er)num.(ef..) (::Z)
+(c3)1. Ma(e)gní(fe)fi(eh)cat(h.) <v>\greheightstar</v>(:) á(h)ni(h)ma(h) <i>mé</i>(g)<i>a</i>(h) <b>Dó</b>(f)mi(er)num.(ef..) (::Z[em1])
 2. Et(e) ex(fe)sul(eh)tá(h)vit(h) <i>spí</i>(hg)<i>ri</i>(hi)<i>tus</i>(i) <b>mé</b>(hi hr)us(h.) <v>\greheightstar</v>(:) in(h) Dé(h)o(h) sa(h)lu(h)<i>tá</i>(g)<i>ri</i>(h) <b>mé</b>(f er)o.(ef..) (::)
 
 %E(h) u(h) o(g) u(h) a(f) e.(ef..) (::)
