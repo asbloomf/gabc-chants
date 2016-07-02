@@ -158,7 +158,7 @@
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.5655\linewidth}]{2}}
 \fi
 \ifnum#1=121
-\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}}
 \fi
 \ifnum#1=125
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.49\linewidth}]{2}}
@@ -362,11 +362,13 @@
 			\ifx\definevesperspropersalt\undefined\else{
 				\definevesperspropersalt
 				\ifx\vesperspropersaltnote\undefined\else
-					\def\prepsalmtitle{
+					\let\oldprepsalmtitle=\prepsalmtitlefive
+					\def\prepsalmtitlefive{
 						\smallskip
 						\oldneedspace{3\baselineskip}
-						\noindent\printnote{\vesperspropersaltnote}\vspace{-0.7\baselineskip}
+						\noindent\printnote{\vesperspropersaltnote}\vspace{-0.5\baselineskip}
 
+						\ifx\oldprepsalmtitle\undefined\else\oldprepsalmtitle\fi
 					}
 				\fi
 				\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
@@ -378,7 +380,8 @@
 					\oldneedspace{5\baselineskip}
 					\noindent\printnote{\vesperspropersnote}\vspace{-1\baselineskip}
 				\fi
-				\def\prepsalmtitle{\def\onlyoneant{F}}
+				\let\oldprepsalmtitle=\prepsalmtitlefive
+				\def\prepsalmtitlefive{\def\onlyoneant{F}\ifx\oldprepsalmtitle\undefined\else\oldprepsalmtitle\fi}
 				\def\printrepeatantiphon{T}
 				\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
 			}\fi

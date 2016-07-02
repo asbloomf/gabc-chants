@@ -13,16 +13,15 @@
 	\noindent\printnote{Hymn.~\emph{Jesu Redémptor ómnium}, page \pageref{hymn-jesuredemptoromnium}.\\}
 }
 \def\definevesperspropers{\input{\gabcfolder/inc-Christmas-Vespers1}%
-  \let\oldthing\maganttranslation
-  \def\maganttranslation{\vspace{-0.5\baselineskip}\oldthing\vspace{-0.5\baselineskip}}%
 }
-\newcommand{\preantfour}{\needspace{5\baselineskip}}
-\def\prevespers{%
-  \let\oldthing\antfourtranslation
-  \def\antfourtranslation{\oldthing\vspace{-\baselineskip}}%
-}
-\def\prechapter{\vspace{-\baselineskip}}
-\def\precollect{\vspace{-0.2\baselineskip}}
+\def\prepsalmtitleone{\vspace{-0.5\baselineskip}}
+\def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
+\def\prepsalmtitlethree{\vspace{-0.5\baselineskip}}
+\def\preantfour{\needspace{10\baselineskip}}
+%\def\prepsalmtitlefour{\vspace{-\baselineskip}}
+\def\preantfive{\oldneedspace{10\baselineskip}}
+%\def\prechapter{\vspace{-\baselineskip}}
+%\def\precollect{\vspace{-0.2\baselineskip}}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 \printvespers[../Christmas-Vespers1]{inc-Christmas-Vespers1-psalms}
 
@@ -78,6 +77,7 @@
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Circumcision-Vespers1}}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
+\def\preantfive{\bigskip}
 %\def\precollect{\vspace{-2\baselineskip}}
 \def\prechapter{\printnote{For the Feast of the Purification \& Presentation, continue to \emph{Chapter}, p.~\pageref{purification-chapter}.}\vspace{-1\baselineskip}}
 \printvespers[../ChristmasOctave-Circumcision]{inc-Circumcision-Vespers-common}
@@ -100,13 +100,10 @@
 \def\definevesperspropers{\input{\gabcfolder/inc-HolyName-2Vespers}}
 %\def\vesperspropersaltnote{At I Vespers of the Most Holy Name of Jesus:}
 %\def\vesperspropersnote{At II Vespers of the Most Holy Name of Jesus:}
-\def\preantone{\needspace{8\baselineskip}}
+\def\prepsalmtitleone{\needspace{5\baselineskip}}
 \def\hymnlabel{hymn-jesudulcismemoria}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.425\linewidth}]{2}}
-\def\prevespers{%
-  \let\oldthing\antfivetranslation
-  \def\antfivetranslation{\oldthing\vspace{\baselineskip}}%
-}
+%\def\prepsalmtitlefive{\vspace{\baselineskip}}
 \def\prehymn{\needspace{12\baselineskip}}
 \printvespers[../HolyName]{inc-HolyName-common}
 
@@ -115,23 +112,30 @@
 
 {
 \chapter{Proper of the Time -- Epiphany Season}
+\vspace{-0.5\baselineskip}
 \label{epiphany}
 \section{January 6: The Epiphany of Our Lord}
 \subtitle{\nth{1} Class, White or Gold}
 
 \subtitle{I \& II Vespers}
 
-\def\definevesperspropersalt{\input{\gabcfolder/inc-Epiphany-Vespers1}}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-Epiphany-Vespers1}
+  \def\prepsalmtitlefive{\medskip}
+}
 \def\definevesperspropers{\input{\gabcfolder/inc-Epiphany-Vespers2}%
+  \def\prepsalmtitlefive{\medskip}
   \let\oldthing\maganttranslation
   \def\maganttranslation{\oldthing\vspace{-0.25\baselineskip}}
 }
 \def\vesperspropersaltnote{At I Vespers:}
 \def\vesperspropersnote{At II Vespers:}
-\def\prechapter{\vspace{-1\baselineskip}}
-\def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
+\def\preanttwo{\bigskip}
+\def\prepsalmthree{\needspace{5\baselineskip}}
 \def\prepsalmthreeverses{\vspace{-0.05\baselineskip}}
 \def\prerepeatantiphonthree{}
+\def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}
+\def\prechapter{\vspace{-1\baselineskip}}
+\def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
 \def\prevr{\needspace{8\baselineskip}}
 
 \printvespers[../Epiphany]{inc-Epiphany-Vespers}
@@ -152,15 +156,16 @@
 %\def\prepsalmtitlethree{\vspace{-1.5\baselineskip}}
 %\def\prepsalmtitlefive{\vspace{-1.5\baselineskip}}
 \def\prepsalmfiveverses{\vspace{-0.05\baselineskip}}
-\def\prerepeatantiphonfive{\vspace{-0.8\baselineskip}}
+\def\prerepeatantiphonfive{\vspace{-0.6\baselineskip}}
 \def\prevespers{%
   \let\oldthing\anttwotranslation
   \def\anttwotranslation{\vspace{-0.7\baselineskip}\oldthing\vspace{-0.7\baselineskip}}%
   \let\oldthingb\antthreetranslation
-  \def\antthreetranslation{\vspace{-0.7\baselineskip}\oldthingb\vspace{-1.3\baselineskip}}%
+  \def\antthreetranslation{\vspace{-0.1\baselineskip}\oldthingb\vspace{-1\baselineskip}}%
   \let\oldthingc\antfivetranslation
   \def\antfivetranslation{\vspace{-0.4\baselineskip}\oldthingc\vspace{-0.8\baselineskip}}%
-  \def\prehymntranslation{\vspace{-0.5\baselineskip}}
+  \def\prehymntranslation{\vspace{-0.3\baselineskip}}
+  \def\prehymn{\vfil}
 }
 \printvespers[../HolyFamily]{inc-HolyFamily-Vespers2}
 
