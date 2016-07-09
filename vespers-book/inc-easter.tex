@@ -7,6 +7,8 @@
 \chapter{Proper of the Time -- Easter}
 \section{Easter Sunday}
 \subtitle{\nth{1} Class, White or Gold}
+\def\prepsalmtitleone{\bigskip}
+\def\prepsalmtitlefive{\vspace{-0.5\baselineskip}}
 \def\printfullhymn{
     \vspace{-0.5\baselineskip}
     \emph{Chapter, Hymn, and Versicle are all omitted, but the following Antiphon is said :}
@@ -17,8 +19,7 @@
     \alsetinitialspacing{\chapterhymnversicleantiphoninitial}
     \gregorioscore{\gabcfolder/\chapterhymnversicleantiphontex}
     \translation[]{\chapterhymnversicleantiphontranslation}
-    \vspace{-0.5\baselineskip}
-    \bigskip
+    \vspace{-\baselineskip}
 }
 \def\chapterreplacement{\bigskip}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
@@ -42,15 +43,17 @@
     \subtitle{\nth{#1} Class, \liturgicalcolor{}}
     \deusinadjutorium{}
     \hfill
-    \printnote{\emph{Vespers of Sundays in Paschaltide}, p.~\pageref{sundayvespers-easter}.\\}
+    \emph{\emph{Vespers of Sundays in Paschaltide}, p.~\pageref{sundayvespers-easter}.}\par
 }
 \def\liturgicalcolor{White}
 {
 \newcommand{\benedicamusdomino}[1][easter]{
+  \smallskip
   \benedicamusdominomaster{#1}
 }
 
 \newcommand{\printhymnnote}{
+    \smallskip
     \noindent\printnote{Hymn.~\emph{Ad Régias Agni Dapes}, page \pageref{hymn-adregiasagnidapes}.
     \Vbar~\emph{Mane nobíscum}, page \pageref{vr-manenobiscum}.}
 }
@@ -100,6 +103,7 @@
 \section{\nth{4} Sunday after Easter}
 \label{easter4}
 \printcommonvespers{}
+%\def\premagnificat{\oldneedspace{10\baselineskip}}
 \def\precollect{\printvrmanenobiscum}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster4}
 \benedicamusdomino{}
@@ -109,6 +113,7 @@
 \section{\nth{5} Sunday after Easter}
 \label{easter5}
 \printcommonvespers{}
+\def\premagverses{\oldneedspace{12\baselineskip}}
 \def\precollect{\printvrmanenobiscum}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster5}
 \benedicamusdomino{}
@@ -122,6 +127,7 @@
 \subtitle{I \& II Vespers}
 \vspace{-0.5\baselineskip}
 
+\def\premagnificat{\oldneedspace{7\baselineskip}}
 \def\premagverses{\greseteolcustos{manual}}
 \def\begincollectcols{%\vspace{-0.5\baselineskip}
 \begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}

@@ -1,0 +1,77 @@
+\chapter{Proper of the Time -- Time After Pentecost}
+{
+\def\printcommonvespers{
+  \vspace{-0.5\baselineskip}
+  \subtitle{\nth{2} Class, Green}
+  \medskip
+  \deusinadjutorium{}
+  \hfill
+  \emph{\emph{Vespers of Sundays throughout the year,} p.~\pageref{sundayvespers}.\par}
+}
+\newcommand{\benedicamusdomino}[1][sunday]{
+  \benedicamusdominomaster{#1}
+}
+\def\premagtitle{
+  \needspace{8\baselineskip}  
+}
+
+\newcommand{\printhymnnote}{}
+\newcommand{\printvespersafterpentecost}[1]{
+  {
+  \section{\nth{#1} \ifnum#1=24{or Last }\fi Sunday after Pentecost}
+  \label{pentecost#1}
+\printcommonvespers{}
+\ifx\printaftercommonvespers\undefined\else\printaftercommonvespers{}\fi
+  \def\precollect{\printvrdirigatur}
+  \printvespersmag[../TimeAfterPentecost]{inc-VespersMagnificatPentecost#1}
+  \smallskip
+  \benedicamusdomino{}
+  }
+  
+}
+
+{\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.455\linewidth}]{2}}
+\printvespersafterpentecost{2}}
+\printvespersafterpentecost{3}
+\printvespersafterpentecost{4}
+{\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
+\printvespersafterpentecost{5}}
+\printvespersafterpentecost{6}
+\printvespersafterpentecost{7}
+{
+  \def\premagtitle{}
+  \def\postmagtitle{
+    \pagebreak[2]
+  }
+\printvespersafterpentecost{8}}
+\printvespersafterpentecost{9}
+\printvespersafterpentecost{10}
+\printvespersafterpentecost{11}
+{\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.455\linewidth}]{2}}
+%\def\printaftercommonvespers{\needspace{6\baselineskip}}
+\printvespersafterpentecost{12}}
+\printvespersafterpentecost{13}
+\printvespersafterpentecost{14}
+\printvespersafterpentecost{15}
+\printvespersafterpentecost{16}
+{
+  \def\premagtitle{}
+  \def\postmagtitle{
+    \pagebreak[2]
+  }
+\printvespersafterpentecost{17}}
+\printvespersafterpentecost{18}
+{\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}}
+%\def\premagverses{\vspace{-0.7\baselineskip}}
+\printvespersafterpentecost{19}}
+\printvespersafterpentecost{20}
+\printvespersafterpentecost{21}
+\printvespersafterpentecost{22}
+\printvespersafterpentecost{23}
+{%\def\prevespers{
+ % \let\oldthing=\englishmagantiphon
+ % \def\englishmagantiphon{\oldthing\pagebreak}  
+%}
+\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.455\linewidth}]{2}}
+\printvespersafterpentecost{24}}
+}

@@ -427,6 +427,7 @@ five%
 }\fi
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween]{2}}
 \def\endpsalmcols{\end{parcolumns}}
+\ifx\psalmcolsoverrideoverride\undefined
 \ifx\psalmcolsoverride\undefined
 \if\useevencolumns F%
 %\def\psalmcoloptions{rulebetween}
@@ -629,6 +630,9 @@ five%
 \else %\psalmcolsoverride not \undefined
   \psalmcolsoverride[#2]
 \fi %\psalmcolsoverride not \undefined
+\else %\psalmcolsoverrideoverride not undefined
+  \psalmcolsoverrideoverride[#2]
+\fi
 %
 \ifx\undefined\useparacol\else
 \def\beginpsalmcols{\begin{paracol}{2}}
@@ -1002,8 +1006,10 @@ five%
     \needspace{3\baselineskip}
     \ifx\nomagtitle\undefined\def\nomagtitle{F}\fi
     \if\nomagtitle F%
+    \ifx\premagtitle\undefined\else\premagtitle\fi
     \begin{center}{\large \canticle.}\end{center}
     \vspace{-1ex}
+    \ifx\postmagtitle\undefined\else\postmagtitle\fi
     \fi
 
     \edef\magstartpagenumber{\thepage}
@@ -1020,6 +1026,7 @@ five%
      \printantiphon
     }%
     %\vspace{-1ex}
+    \ifx\premaganttranslation\undefined\else\premaganttranslation\fi
     \translation[]{\anttranslation}
     %\smallskip
     \ifx\magnificatnote\undefined\else{

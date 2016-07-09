@@ -106,9 +106,10 @@
 	{\normalsize \emph{#1}}
 }
 \newcommand{\subtitle}[1]{
-\begin{center}{
-	{\addfontfeature{Numbers=Lining} \normalsize \emph{#1}}
-}\end{center}
+{
+	\centering
+	{\addfontfeature{Numbers=Lining} \normalsize \emph{#1}}\par
+}
 }
 
 \newcommand{\deusinadjutorium}{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, p.~\pageref{deusinadjutorium}.}}
@@ -366,7 +367,7 @@
 					\def\prepsalmtitlefive{
 						\smallskip
 						\oldneedspace{3\baselineskip}
-						\noindent\printnote{\vesperspropersaltnote}\vspace{-0.5\baselineskip}
+						\noindent\printnote{\vesperspropersaltnote}\vspace{0pt minus 0.5\baselineskip}
 
 						\ifx\oldprepsalmtitle\undefined\else\oldprepsalmtitle\fi
 					}
@@ -378,7 +379,7 @@
 				\definevesperspropers
 				\ifx\vesperspropersnote\undefined\else
 					\oldneedspace{5\baselineskip}
-					\noindent\printnote{\vesperspropersnote}\vspace{-1\baselineskip}
+					\noindent\printnote{\vesperspropersnote}\vspace{0pt minus 0.5\baselineskip}
 				\fi
 				\let\oldprepsalmtitle=\prepsalmtitlefive
 				\def\prepsalmtitlefive{\def\onlyoneant{F}\ifx\oldprepsalmtitle\undefined\else\oldprepsalmtitle\fi}
@@ -737,6 +738,7 @@ For Sundays in Paschaltide, \emph{p.~\pageref{sundayvespers-easter}}.}
 \include{inc-easter} % need to add St Joseph the Worker and the Ascension
 
 \include{inc-pentecost}
+\include{inc-timeafterpentecost}
 
 \include{inc-proper-of-saints}
 
