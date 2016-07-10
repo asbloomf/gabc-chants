@@ -1,0 +1,36 @@
+{
+\section{June 24: Nativity of St John the Baptist}
+\subtitle{\nth{1} Class, White or Gold}
+\subtitle{I \& II Vespers}
+\medskip
+
+\def\definevesperspropers{\input{\gabcfolder/inc-BirthOfJohnTheBaptist-2Vespers}
+  \def\preantone{\bigskip}
+  \def\prepsalmtitleone{\bigskip}
+}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-BirthOfJohnTheBaptist-1Vespers}
+  \def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
+  \def\preantthree{\needspace{8\baselineskip}}
+}
+\def\vesperspropersnote{At II Vespers:}
+\def\vesperspropersaltnote{At I Vespers:}
+\def\prevesperspsalms{\noindent\printnote{Chapter and following, page \pageref{june24-chapter}.\\}}
+\def\vesperspsalmslabel{\label{june24-2vespers}}
+\def\prevesperspsalmsalt{\noindent\printnote{II Vespers psalms and antiphons, page \pageref{june24-2vespers}.}\medskip}
+\def\prechapter{\label{june24-chapter}}
+%\def\premagnificat{\pagebreak}
+
+\printvespers[../June24-BirthOfJohnTheBaptist]{inc-BirthOfJohnTheBaptist}
+
+\printnote{\sundaycommemnote{}
+%\vspace{-\baselineskip}
+\begin{multicols}{2}
+\noindent\emph{\nth{2} Sunday after Pentecost}, p.~\pageref{pentecost2}.\\
+\emph{\nth{3} Sunday after Pentecost}, p.~\pageref{pentecost3}.\\
+\emph{\nth{4} Sunday after Pentecost}, p.~\pageref{pentecost4}.\\
+\emph{\nth{5} Sunday after Pentecost}, p.~\pageref{pentecost5}.\\
+\emph{\nth{6} Sunday after Pentecost}, p.~\pageref{pentecost6}.
+\end{multicols}
+}
+\benedicamusdomino{}
+}

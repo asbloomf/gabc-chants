@@ -3,6 +3,7 @@
 \section{March 25: Annunciation of the Blessed Virgin Mary}
 \subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
+\medskip
 
 \def\definevesperspropers{\input{\gabcfolder/inc-Annunciation-2Vespers}
   \def\prepsalmfive{\greseteolcustos{manual}}
@@ -11,6 +12,8 @@
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
 %\def\premag{\def\noeuouae{T}}
+\def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
+\def\prepsalmtitlefive{\vspace{-0.5\baselineskip}}
 \def\premagverses{\greseteolcustos{manual}}
 \def\printhymnnote{
   {
@@ -26,20 +29,18 @@
 }
 \def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43\linewidth}]{2}}
-\def\prepsalmthreeverses{\pagebreak}
+%\def\prepsalmthreeverses{\pagebreak}
 \def\prevespers{
-  \let\oldthing=\anttwotranslation  
-  \def\anttwotranslation{\oldthing\vspace{-\baselineskip}}
-  \let\oldthingb=\antfourtranslation  
-  \def\antfourtranslation{\oldthing\pagebreak}
+  %\let\oldthing=\anttwotranslation  
+  %\def\anttwotranslation{\oldthing\vspace{-\baselineskip}}
+  %\let\oldthingb=\antfourtranslation  
+  %\def\antfourtranslation{\oldthing\pagebreak}
 }
 
 \printvespers[../March25-Annunciation]{inc-Annunciation}
 }
 
 {
-\bigskip
-
 \bigskip
 \noindent
 \printnote{Then follows a Commemoration of the Lenten Feria.  Finally, \benedicamusdominoreference{1}}
@@ -80,12 +81,12 @@
   \printcollect{#7}{#8}
   \medskip
   \hrule
-  %\smallskip
+  \medskip
 }
 \newcommand{\printweektitle}[2][the ]{
   \edef\commemweek{#2}%
   \edef\beforecommemweek{#1}%
-  \subtitle{#2.}\vspace{-1.3\baselineskip}%
+  \subtitle{#2.}%
 }
 {
   \newcommand{\vrtitle}{Roráte cæli}

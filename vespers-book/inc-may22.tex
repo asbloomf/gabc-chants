@@ -1,0 +1,41 @@
+{
+\section{May 22: St Philip Neri}
+\subtitle{\nth{1} Class (proper to the Oratory), White or Gold}
+\subtitle{I \& II Vespers}
+\medskip
+
+\def\prepsalmtitleone{\needspace{8\baselineskip}}
+\def\prerepeatantiphonfour{}
+\def\preantfive{\vspace{-0.2\baselineskip}}
+\def\prepsalmtitlefive{\vspace{-0.3\baselineskip}}
+\def\prerepeatantiphonfive{}
+\def\definevesperspropers{\input{\gabcfolder/inc-StPhilipNeri-2Vespers}
+}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-StPhilipNeri-1Vespers}
+}
+\def\vesperspropersnote{
+\oldneedspace{8\baselineskip}
+At II Vespers:}
+\def\vesperspropersaltnote{At I Vespers:}
+\def\prehymn{\vfill}
+
+\printvespers[../StPhilipNeri]{inc-StPhilipNeri}
+%when can feast fall?
+%if feast falls from 2nd through 5th Sunday after Easter, it outranks the Sunday and the Sunday is commemorated
+\medskip
+\printnote{\sundaycommemnoteeasterpentecost{}
+
+\bigskip{}
+\emph{\nth{5} Sunday after Easter}, p.~\pageref{easter5}.
+
+\emph{Sunday after the Ascension}, p.~\pageref{easter6}.
+
+% pentecost and trinity sunday would outrank this feast
+\emph{\nth{2} Sunday after Pentecost}, p.~\pageref{pentecost2}.
+}
+
+\bigskip{}
+\benedicamusdomino{}
+%\vfil
+%\pagebreak
+}

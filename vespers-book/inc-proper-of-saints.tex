@@ -1,20 +1,26 @@
 \clearpage
 \chapter{Proper of the Saints}
+\vspace{-0.75\baselineskip}
 {
+\let\oldsection=\section
+\renewcommand{\section}[1]{
+  \oldsection{#1}
+  \vspace{-0.35\baselineskip}
+}
 \newcommand{\benedicamusdomino}[1][1]{
   \benedicamusdominomaster{#1}
 }
 \newcommand{\sundaycommemnote}{%
-  If today is Sunday, Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{}~Dirigátur},
+  If today is Sunday, \emph{Vespers of the Sunday} is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{}~Dirigátur},
   %in simple commemoration tone, p.~\pageref{vr-dirigatur},
   and \emph{Collect}.
 }
 \newcommand{\sundaycommemnoteeaster}{%
-  If today is Sunday, Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{}~Mane nobíscum}, %in simple commemoration tone, p.~\pageref{vr-manenobiscum},
+  If today is Sunday, \emph{Vespers of the Sunday} is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{}~Mane nobíscum}, %in simple commemoration tone, p.~\pageref{vr-manenobiscum},
   and \emph{Collect}.
 }
 \newcommand{\sundaycommemnoteeasterpentecost}{%
-  If today is Sunday, Vespers of the Sunday is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{}~Mane nobíscum.} in Paschaltide, %p.~\pageref{vr-manenobiscum},
+  If today is Sunday, \emph{Vespers of the Sunday} is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{}~Mane nobíscum.} in Paschaltide, %p.~\pageref{vr-manenobiscum},
   or \emph{\Vbar{}~Dirigátur.} after Pentecost, %p.~\pageref{vr-dirigatur}, in simple commemoration tone,
   and \emph{Collect}.
 }
@@ -24,523 +30,52 @@
 \input{inc-december8}
 
 %January 29, St Francis de Sales
-{
-\section{January 29: St Francis de Sales}
-\subtitle{\nth{1} Class (patron of the Archdiocese of Cincinnati), White or Gold}
-\vspace{-\baselineskip}
-\subtitle{I \& II Vespers}
-
-\def\definevesperspropers{\input{\gabcfolder/inc-CommonOfConfessorBishop-Vespers2}
-}
-\def\definevesperspropersalt{\input{\gabcfolder/inc-CommonOfConfessorBishop-Vespers1}
-}
-\def\vesperspropersnote{At II Vespers:}
-\def\vesperspropersaltnote{At I Vespers:}
-\def\premagverses{\vspace{-0.1\baselineskip}}
-\def\prevespers{%
-  %\let\oldthing=\maganttranslation
-  %\def\maganttranslation{\vspace{-0.25\baselineskip}\oldthing\vspace{-0.25\baselineskip}}
-  \def\premagtexverses{\smallskip}
-}
-\printvespers[../CommonOfConfessorBishop]{inc-StFrancisDeSales}
-\medskip
-\printnote{\sundaycommemnote{}
-
-\bigskip{}
-
-\emph{\nth{4} Sunday after Epiphany}, p.~\pageref{epiphany4}.
-
-\emph{Septuagesima}, p.~\pageref{septuagesima}.
-
-\emph{Sexagesima}, p.~\pageref{sexagesima}.
-}
-
-\bigskip{}
-\benedicamusdomino{}
-}
-
+\input{inc-january29}
 
 %Purification & Presentation (2nd class no commem of Sunday because it is a feast of the Lord)
-{
-\section{February 2: Purification \& Presentation}
-\subtitle{\nth{2} Class, White}
-\subtitle{I \& II Vespers}
-\printnote{At I Vespers, Psalms and Antiphons of the Circumcision, p.~\pageref{circumcision}, continuing with the chapter on p.~\pageref{purification-chapter}.}
-
-\def\definevesperspropers{\input{\gabcfolder/inc-purification-2Vespers}}
-\def\definevesperspropersalt{\input{\gabcfolder/inc-purification-1Vespers}}
-\def\vesperspropersnote{At II Vespers:}
-\def\vesperspropersaltnote{At I Vespers:}
-\def\prechapter{\label{purification-chapter}}
-\def\printhymnnote{
-  {
-    \oldneedspace{3\baselineskip}
-    \printnote{Hymn.~\emph{Ave Maris Stella}, p.~\pageref{hymn-avemarisstella}.\\}
-    %
-    % \def\vrlinebreak{T}
-    % \oldneedspace{3\baselineskip}
-    % \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
-  }
-}
-\printvespers[../February2-PurificationOfBlessedVirginMary]{inc-purification}
-\bigskip{}
-\benedicamusdomino[2]{}
-}
+\input{inc-february2}
 
 %March 25: Annunciation 
 \input{inc-march25}
 
 %May 1: St Joseph the Worker (1st class)
-{
-\section{May 1: St Joseph the Worker}
-\subtitle{\nth{1} Class, White or Gold}
-\subtitle{I \& II Vespers}
-
-\def\definevesperspropers{\input{\gabcfolder/inc-StJosephWorker-2Vespers}
-  \let\oldthing=\maganttranslation
-  \def\maganttranslation{\oldthing\needspace{10\baselineskip}}
-}
-\def\definevesperspropersalt{\input{\gabcfolder/inc-StJosephWorker-1Vespers}
-  \def\vrlinebreak{T}
-  \let\oldthing=\maganttranslation
-  \def\maganttranslation{\oldthing\needspace{10\baselineskip}}
-}
-\def\vesperspropersnote{At II Vespers:}
-\def\vesperspropersaltnote{At I Vespers:}
-\def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
-\def\prerepeatontiphonthree{}
-
-\printvespers[../May1-StJosephWorker]{inc-StJosephWorker}
-%if feast of St Joseph the worker falls from 2nd through 5th Sunday after Easter, it outranks the Sunday and the Sunday is commemorated
-\medskip
-\printnote{\sundaycommemnoteeaster{}
-
-\begin{multicols}{2}
-\noindent\emph{\nth{2} Sunday after Easter}, p.~\pageref{easter2}.\\
-\emph{\nth{3} Sunday after Easter}, p.~\pageref{easter3}.\\
-\emph{\nth{4} Sunday after Easter}, p.~\pageref{easter4}.\\
-\emph{\nth{5} Sunday after Easter}, p.~\pageref{easter5}.
-\end{multicols}
-}
-\bigskip
-\benedicamusdomino{}
-}
+\input{inc-may1}
 
 %May 22: St Philip Neri (1)
-{
-\section{May 22: St Philip Neri}
-\subtitle{\nth{1} Class (proper to the Oratory), White or Gold}
-\subtitle{I \& II Vespers}
-
-\def\definevesperspropers{\input{\gabcfolder/inc-StPhilipNeri-2Vespers}
-}
-\def\definevesperspropersalt{\input{\gabcfolder/inc-StPhilipNeri-1Vespers}
-}
-\def\vesperspropersnote{\bigskip{}
-
-At II Vespers:}
-\def\vesperspropersaltnote{\vspace{-1\baselineskip}At I Vespers:}
-%\def\prehymn{\pagebreak}
-
-\printvespers[../StPhilipNeri]{inc-StPhilipNeri}
-%when can feast fall?
-%if feast falls from 2nd through 5th Sunday after Easter, it outranks the Sunday and the Sunday is commemorated
-\medskip
-\printnote{\sundaycommemnoteeasterpentecost{}
-
-\bigskip{}
-\emph{\nth{5} Sunday after Easter}, p.~\pageref{easter5}.
-
-\emph{Sunday after the Ascension}, p.~\pageref{easter6}.
-
-% pentecost and trinity sunday would outrank this feast
-\emph{\nth{2} Sunday after Pentecost}, p.~\pageref{pentecost2}.
-}
-
-\bigskip{}
-\benedicamusdomino{}
-%\vfil
-%\pagebreak
-}
+\input{inc-may22}
 
 %June 24: Nativity of St John the Baptist (1st class)
-{
-\section{June 24: Nativity of St John the Baptist}
-\subtitle{\nth{1} Class, White or Gold}
-\subtitle{I \& II Vespers}
-
-\def\definevesperspropers{\input{\gabcfolder/inc-BirthOfJohnTheBaptist-2Vespers}
-  \let\oldthing=\antonetranslation
-  \def\antonetranslation{\oldthing\needspace{10\baselineskip}}
-}
-\def\definevesperspropersalt{\input{\gabcfolder/inc-BirthOfJohnTheBaptist-1Vespers}}
-\def\vesperspropersnote{At II Vespers:}
-\def\vesperspropersaltnote{At I Vespers:}
-\def\prevesperspsalms{\noindent\printnote{Chapter and following, page \pageref{june24-chapter}.\\}}
-\def\vesperspsalmslabel{\label{june24-2vespers}}
-\def\prevesperspsalmsalt{\noindent\printnote{II Vespers psalms and antiphons, page \pageref{june24-2vespers}.}\medskip}
-\def\prechapter{\label{june24-chapter}}
-%\def\premagnificat{\pagebreak}
-
-\printvespers[../June24-BirthOfJohnTheBaptist]{inc-BirthOfJohnTheBaptist}
-
-\printnote{\sundaycommemnote{}
-%\vspace{-\baselineskip}
-\begin{multicols}{2}
-\noindent\emph{\nth{2} Sunday after Pentecost}, p.~\pageref{pentecost2}.\\
-\emph{\nth{3} Sunday after Pentecost}, p.~\pageref{pentecost3}.\\
-\emph{\nth{4} Sunday after Pentecost}, p.~\pageref{pentecost4}.\\
-\emph{\nth{5} Sunday after Pentecost}, p.~\pageref{pentecost5}.\\
-\emph{\nth{6} Sunday after Pentecost}, p.~\pageref{pentecost6}.
-\end{multicols}
-}
-\benedicamusdomino{}
-}
+\input{inc-june24}
 
 %June 29: Sts Peter \& Paul (1st class)
-{
-\section{June 29: Sts Peter \& Paul}
-\subtitle{\nth{1} Class, Red}
-%\vspace{-\baselineskip}
-\subtitle{I \& II Vespers}
-%\vspace{-\baselineskip}
+\input{inc-june29}
 
-\def\definevesperspropers{\input{\gabcfolder/inc-StsPeterAndPaul-2Vespers}
-  \let\oldthing=\antonetranslation
-  \def\antonetranslation{\vspace{-0.5\baselineskip}\oldthing\vspace{-0.5\baselineskip}}
-  \let\oldthingb=\antthreetranslation
-  \def\antthreetranslation{\vspace{-0.5\baselineskip}\oldthingb\vspace{-1.4\baselineskip}}
-  \let\oldthingc=\antfourtranslation
-  \def\antfourtranslation{\vspace{-0.5\baselineskip}\oldthingc\vspace{-0.6\baselineskip}}
-  \def\prepsalmoneverses{\vspace{-0.1\baselineskip}}
-}
-\def\definevesperspropersalt{\input{\gabcfolder/inc-StsPeterAndPaul-1Vespers}
-  \let\oldthing=\antonetranslation
-  \def\antonetranslation{\vspace{-0.5\baselineskip}\oldthing\vspace{-0.5\baselineskip}}
-  \def\postpsalmtitleone{\oldneedspace{10\baselineskip}}
-  \def\postpsalmtitletwo{\oldneedspace{10\baselineskip}}
-  \def\preanttwo{\vspace{-0.4\baselineskip}}
-  \def\prepsalmtwoverses{\vspace{-0.1\baselineskip}}
-  %\let\oldthingb=\antfourtranslation
-  %\def\antfourtranslation{\oldthingb\pagebreak}
-  \let\oldthingc=\maganttranslation
-  \def\maganttranslation{\oldthingc\needspace{6\baselineskip}}
-}
-\def\vesperspropersnote{At II Vespers:}
-\def\vesperspropersaltnote{At I Vespers:}
-\def\prevesperspsalms{\noindent\printnote{Chapter and following, page \pageref{june29-chapter}.\\}}
-\def\vesperspsalmslabel{\label{june29-2vespers}}
-\def\prevesperspsalmsalt{\noindent\printnote{II Vespers psalms and antiphons, page \pageref{june29-2vespers}.}\medskip}
-\def\prechapter{\label{june29-chapter}}
-%\def\precollect{\vspace{-0.5\baselineskip}}
-
-\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
-\printvespers[../June29-StsPeterAndPaul]{inc-StsPeterAndPaul}
-
-\smallskip
-\printnote{\sundaycommemnote{}
-\vspace{-0.5\baselineskip}
-\begin{multicols}{2}
-\noindent\emph{\nth{3} Sunday after Pentecost}, p.~\pageref{pentecost3}.\\
-\emph{\nth{4} Sunday after Pentecost}, p.~\pageref{pentecost4}.\\
-\emph{\nth{5} Sunday after Pentecost}, p.~\pageref{pentecost5}.\\
-\emph{\nth{6} Sunday after Pentecost}, p.~\pageref{pentecost6}.\\
-\emph{\nth{7} Sunday after Pentecost}, p.~\pageref{pentecost7}.
-\end{multicols}
-}
-\benedicamusdomino{}
-}
-
+%\cleardoublepage
 %July 1: Most Precious Blood (1st class)
-{
-\global\let\psalmclefthree=\undefined
-\section{July 1: The Precious Blood of Our Lord Jesus Christ}
-\subtitle{\nth{1} Class, Red}
-\subtitle{I \& II Vespers}
-
-\def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}
-\def\definevesperspropers{\input{\gabcfolder/inc-MostPreciousBloodOfChrist-2Vespers}
-  \def\prepsalmtitlefive{\bigskip{}\medskip{}}
-}
-\def\definevesperspropersalt{\input{\gabcfolder/inc-MostPreciousBloodOfChrist-1Vespers}%
-  \def\postmagtitle{\vspace{-0.5\baselineskip}}%
-}
-\def\vesperspropersnote{At II Vespers:}
-\def\vesperspropersaltnote{At I Vespers:}
-
-\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
-\printvespers[../July1-MostPreciousBloodOfChrist]{inc-MostPreciousBloodOfChrist}
-\medskip
-\benedicamusdomino{}
-}
+\input{inc-july1}
 
 %Aug 6: Transfiguration (2nd class)
-{
-\section{August 6: Transfiguration of Our Lord Jesus Christ}
-\vspace{-0.5\baselineskip}
-\subtitle{\nth{2} Class, White}
-\vspace{-0.8\baselineskip}
-\subtitle{I \& II Vespers}
-\vspace{-0.5\baselineskip}
-
-\def\prepsalmtitleone{\oldneedspace{4\baselineskip}}
-\def\definevesperspropers{\input{\gabcfolder/inc-Transfiguration-2Vespers}}
-\def\definevesperspropersalt{\input{\gabcfolder/inc-Transfiguration-1Vespers}}
-\def\vesperspropersnote{At II Vespers:}
-\def\vesperspropersaltnote{At I Vespers:}
-
-\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
-\printvespers[../August6-TransfigurationOfOurLord]{inc-Transfiguration}
-\bigskip
-\benedicamusdomino[2]{}
-}
+\input{inc-august6}
 
 %Aug 15: Assumption (1st class)
-{
-\section{August 15: Assumption of the B.~V.~M.}
-\subtitle{\nth{1} Class, White or Gold}
-\subtitle{I \& II Vespers}
-
-\def\definevesperspropers{\input{\gabcfolder/inc-Assumption-2Vespers}}
-\def\definevesperspropersalt{\input{\gabcfolder/inc-Assumption-1Vespers}
-\let\oldthing=\maganttranslation
-\def\maganttranslation{\oldthing\needspace{10\baselineskip}}
-}
-\def\vesperspropersnote{At II Vespers:}
-\def\vesperspropersaltnote{At I Vespers:}
-\def\printfullhymn{
-  {
-    \oldneedspace{3\baselineskip}
-    \printnote{At II Vespers: Hymn.~\emph{Ave Maris Stella}, p.~\pageref{hymn-avemarisstella}. \Vbar{} \emph{Exaltata.} p.~\pageref{vr-assumption}.\\}
-
-    \printnote{\vesperspropersaltnote}
-    \definevesperspropersalt
-    \printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
-  }
-  {
-    \def\vrlinebreak{T}
-    \oldneedspace{3\baselineskip}
-    \label{vr-assumption}
-    \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
-  }
-}
-
-\printvespers[../August15-AssumptionOfTheBlessedVirginMary]{inc-Assumption}
-
-%     TODO Feast of Assumption (8/15) could have commem of Saturday before 3rd Sunday of August or 9th to 13th Sunday after Pentecost
-\medskip
-\printnote{\sundaycommemnote{}
-
-\begin{multicols}{2}
-\noindent\emph{\nth{9} Sunday after Pentecost}, p.~\pageref{pentecost9}.\\
-\emph{\nth{10} Sunday after Pentecost}, p.~\pageref{pentecost10}.\\
-\emph{\nth{11} Sunday after Pentecost}, p.~\pageref{pentecost11}.\\
-\emph{\nth{12} Sunday after Pentecost}, p.~\pageref{pentecost12}.\\
-\emph{\nth{13} Sunday after Pentecost}, p.~\pageref{pentecost13}.
-\end{multicols}
-}
-\bigskip
-\benedicamusdomino{}
-}
+\input{inc-august15}
 
 %Sep 14: Exaltation of Holy Cross (2nd class)
-{
-\section{September 14: Exaltation of the Holy Cross}
-\subtitle{\nth{2} Class, Red}
-\subtitle{I \& II Vespers}
-
-\def\definevesperspropers{\input{\gabcfolder/inc-ExaltationOfTheHolyCross-2Vespers}}
-\def\definevesperspropersalt{\input{\gabcfolder/inc-ExaltationOfTheHolyCross-1Vespers}%
-%\def\premagverses{\oldneedspace{4\baselineskip}}%
-}
-\def\vesperspropersnote{At II Vespers:}
-\def\vesperspropersaltnote{At I Vespers:}
-\def\postpsalmtitlethree{\oldneedspace{9\baselineskip}}
-\def\prerepeatantiphonthree{}
-\def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
-\def\prepsalmtitlefour{\oldneedspace{8\baselineskip}}
-\def\prepsalmtitlefive{\needspace{8\baselineskip}}
-\def\prepsalmfourverses{\oldneedspace{2\baselineskip}}
-\def\prehymn{\printnote{All kneel for the sixth verse of the following hymn.}}
-\def\prehymntranslation{\oldneedspace{3\baselineskip}}
-%\def\precollect{\vspace{-0.5\baselineskip}}
-
-\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
-\printvespers[../September14-ExaltationOfTheHolyCross]{inc-ExaltationOfTheHolyCross}
-\bigskip
-\benedicamusdomino[2]{}
-}
+\input{inc-september14}
 
 %Sep 29: Dedication of St Michael (1st class)
-{
-\section{September 29: Dedication of St Michael the Archangel}
-\subtitle{\nth{1} Class, White or Gold}
-\vspace{-0.5\baselineskip}
-\subtitle{I \& II Vespers}
-\def\postdeusinadjutorium{\needspace{10\baselineskip}}
+\input{inc-september29}
 
-\def\definevesperspropers{\input{\gabcfolder/inc-DedicationStMichael-2Vespers}
-  \def\prepsalmtitlefive{\bigskip}
-  \def\vrlinebreak{F}
-}
-\def\definevesperspropersalt{\input{\gabcfolder/inc-DedicationStMichael-1Vespers}}
-\def\vesperspropersnote{At II Vespers:\medskip}
-\def\vesperspropersaltnote{At I Vespers:\medskip}
-\def\prepsalmtitleone{\vspace{-0.5\baselineskip}}
-\def\prechapter{\vspace{-0.5\baselineskip}}
-
-\printvespers[../September29-DedicationOfChurchOfStMichaelArchangel]{inc-DedicationStMichael}
-
-\medskip
-\printnote{\sundaycommemnote{}
-
-\begin{multicols}{2}
-\noindent\emph{\nth{16} Sunday after Pentecost}, p.~\pageref{pentecost16}.\\
-\emph{\nth{17} Sunday after Pentecost}, p.~\pageref{pentecost17}.\\
-\emph{\nth{18} Sunday after Pentecost}, p.~\pageref{pentecost18}.\\
-\emph{\nth{19} Sunday after Pentecost}, p.~\pageref{pentecost19}.\\
-\emph{\nth{20} Sunday after Pentecost}, p.~\pageref{pentecost20}.
-\end{multicols}
-}
-\medskip
-\benedicamusdomino{}
-}
-
+%\cleardoublepage
 %Oct 11: Maternity of the BVM (2nd class)
-{
-\section{October 11: Maternity of the B.~V.~M.}
-\subtitle{\nth{2} Class, White}
-\vspace{-1.5\baselineskip}
-\subtitle{I \& II Vespers}
-\printnote{This feast is outranked by any Sunday and no commemoration is made.}
-
-\def\definevesperspropers{\input{\gabcfolder/inc-MaternityOfBVM-Vespers2}
-}
-\def\definevesperspropersalt{\input{\gabcfolder/inc-MaternityOfBVM-Vespers1}}
-\def\vesperspropersnote{At II Vespers:}
-\def\vesperspropersaltnote{At I Vespers:}
-\def\printhymnnote{
-  {
-    \oldneedspace{3\baselineskip}
-    \printnote{Hymn.~\emph{Ave Maris Stella}, p.~\pageref{hymn-avemarisstella}.\\}
-  }
-}
-\def\prepsalmtitleone{\vspace{-0.4\baselineskip}}
-\def\prepsalmtitletwo{}
-\def\prevespers{
-  \let\oldthing=\anttwotranslation
-  \def\anttwotranslation{\vspace{-0.3\baselineskip}\oldthing\vspace{-0.7\baselineskip}}
-}
-\printvespers[../October11-MaternityOfBlessedVirginMary]{inc-MaternityOfBVM}
-
-\medskip
-\benedicamusdomino[mary]{}
-}
+\input{inc-october11}
 
 %Last Sunday in October: Christ the King (1st class)
-{
-\section{Last Sunday in October: Jesus Christ, King}
-\subtitle{\nth{1} Class, White or Gold}
-\subtitle{II Vespers}
-
-\def\postpsalmtitletwo{\needspace{12\baselineskip}}
-\def\prerepeatantiphontwo{}
-\def\definevesperspropers{\input{\gabcfolder/inc-ChristTheKing-2Vespers}}
-\def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
-%\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
-
-\printvespers[../OctoberLastSunday-ChristTheKing]{inc-ChristTheKing}
-\noindent
-\printnote{If today is October 31, the First Vespers of All Saints is commemorated with \emph{Magnificat antiphon}, p.~\pageref{allsaints1-magnificat}; \emph{\Vbar{}~Lætámini}.~in simple commemoration tone, p.~\pageref{allsaints1-vr}; and \emph{Collect}, p.~\pageref{allsaints-collect}.}
-
-\bigskip
-\benedicamusdomino[1]{}
-}
+\input{inc-october-last-sunday}
 
 %Nov 1: All Saints (1st class)
-{
-\section{November 1: All Saints}
-\subtitle{\nth{1} Class, White or Gold}
-%\vspace{-2\baselineskip}
-\subtitle{I \& II Vespers}
-
-\def\postdeusinadjutorium{\pagebreak}
-\def\postpsalmtitleone{\oldneedspace{12\baselineskip}}
-%\def\prepsalmoneverses{\vspace{-0.2\baselineskip}}
-%\def\presalmtitleone{\vspace{-0.8\baselineskip}}
-\def\prerepeatantiphonone{}
-%\def\preanttwo{\vspace{-0.5\baselineskip}}
-%\def\prepsalmtitletwo{\vspace{-0.3\baselineskip}}
-\def\postpsalmtitletwo{\needspace{12\baselineskip}}
-\def\prepsalmtitlethree{\vspace{-\baselineskip}}
-\def\prerepeatantiphontwo{}
-\def\postpsalmtitlefour{\needspace{12\baselineskip}}
-\def\prevespers{
-  \let\oldthinga=\antonetranslation
-  \def\antonetranslation{\vspace{-0.2\baselineskip}\oldthinga\vspace{-0.5\baselineskip}}
-  %\let\oldthing=\anttwotranslation
-  %\def\anttwotranslation{\vspace{-0.5\baselineskip}\oldthing}
-}
-\def\definevesperspropers{\input{\gabcfolder/inc-AllSaints-2Vespers}
-  %\def\prepsalmtitlefive{\bigskip}
-}
-\def\definevesperspropersalt{\input{\gabcfolder/inc-AllSaints-1Vespers}
-  \def\premag{\label{allsaints1-magnificat}}
-}
-\def\vraltlabel{allsaints1-vr}
-\def\vesperspropersnote{\needspace{15\baselineskip}At II Vespers:}
-\def\vesperspropersaltnote{At I Vespers:}
-\def\prechapter{\needspace{6\baselineskip}}
-\def\begincollectcols{\label{allsaints-collect}\begin{parcolumns}[rulebetween]{2}}
-
-\printvespers[../November1-AllSaints]{inc-AllSaints}
-
-\medskip
-\printnote{\sundaycommemnote{}
-
-\begin{multicols}{2}
-\noindent\emph{\nth{21} Sunday after Pentecost}, p.~\pageref{pentecost21}.\\
-\emph{\nth{22} Sunday after Pentecost}, p.~\pageref{pentecost22}.\\
-\emph{\nth{23} Sunday after Pentecost}, p.~\pageref{pentecost23}.\\
-\emph{\nth{4} Sunday after Epiphany}, p.~\pageref{epiphany4}.
-\end{multicols}
-}
-\bigskip{}
-\benedicamusdomino{}
-}
+\input{inc-november1}
 
 %Nov 9: Dedication of Archbasilica of Holy Savior (2nd class)
-{
-\section{November 9: Dedication of Archbasilica of Holy Savior}
-\subtitle{\nth{2} Class, White}
-\subtitle{I \& II Vespers}
-\printnote{All from the Common of the Dedication of a Church.}
-
-\def\prepsalmtwoverses{\vspace{-0.05\baselineskip}}
-\def\prerepeatantiphontwo{}
-\def\postpsalmtitlethree{\medskip\needspace{10\baselineskip}}
-\def\prepsalmthreeverses{\medskip}
-%\def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
-%\def\prerepeatantiphonthree{}
-%\def\prerepeatantiphonfive{}
-%\def\prepsalmtitlefive{\bigskip}
-\def\prepsalmfiveverses{\smallskip}
-%\def\prevespers{
-%  \let\oldthing=\antfivetranslation
-%  \def\antfivetranslation{\vspace{-0.6\baselineskip}\oldthing\vspace{-1\baselineskip}}
-%}
-\def\prevr{\needspace{10\baselineskip}}
-\def\definevesperspropers{\input{\gabcfolder/inc-DedicationOfChurch-2Vespers}
-  \let\oldthinga=\maganttranslation
-  \def\maganttranslation{\oldthinga\oldneedspace{8\baselineskip}}
-}
-\def\definevesperspropersalt{\input{\gabcfolder/inc-DedicationOfChurch-1Vespers}
-}
-\def\vesperspropersnote{At II Vespers:}
-\def\vesperspropersaltnote{At I Vespers:}
-
-\printvespers[../CommonOfDedicationOfChurch]{inc-DedicationOfChurch}
-\bigskip
-\benedicamusdomino[2]{}
-}
+\input{inc-november9}
 }

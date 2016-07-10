@@ -1,0 +1,32 @@
+{
+\section{October 11: Maternity of the B.~V.~M.}
+\subtitle{\nth{2} Class, White}
+\subtitle{I \& II Vespers}
+\medskip
+
+\printnote{This feast is outranked by any Sunday and no commemoration is made.}
+
+\def\definevesperspropers{\input{\gabcfolder/inc-MaternityOfBVM-Vespers2}
+}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-MaternityOfBVM-Vespers1}}
+\def\vesperspropersnote{At II Vespers:}
+\def\vesperspropersaltnote{At I Vespers:}
+\def\printhymnnote{
+  {
+    \oldneedspace{3\baselineskip}
+    \printnote{Hymn.~\emph{Ave Maris Stella}, p.~\pageref{hymn-avemarisstella}.\\}
+  }
+}
+%\def\prepsalmtitleone{\vspace{-0.4\baselineskip}}
+\def\prepsalmtitletwo{}
+\def\prepsalmtitlefive{\vspace{-0.7\baselineskip}}
+\def\prevespers{
+  \let\oldthing=\anttwotranslation
+  \def\anttwotranslation{\vspace{-0.3\baselineskip}\oldthing\vspace{-0.7\baselineskip}}
+}
+\printvespers[../October11-MaternityOfBlessedVirginMary]{inc-MaternityOfBVM}
+
+%an--refulsit_sol--solesmes is for commem of saturday
+\medskip
+\benedicamusdomino[mary]{}
+}

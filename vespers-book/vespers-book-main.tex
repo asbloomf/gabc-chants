@@ -168,7 +168,7 @@
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
 \fi
 \ifnum#1=131
-\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.4875\linewidth},distance=1em]{2}}
 \fi
 \ifnum#1=137
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween]{2}}
@@ -367,7 +367,7 @@
 					\def\prepsalmtitlefive{
 						\smallskip
 						\oldneedspace{3\baselineskip}
-						\noindent\printnote{\vesperspropersaltnote}\vspace{0pt minus 0.5\baselineskip}
+						\noindent\printnote{\vesperspropersaltnote}
 
 						\ifx\oldprepsalmtitle\undefined\else\oldprepsalmtitle\fi
 					}
@@ -379,7 +379,7 @@
 				\definevesperspropers
 				\ifx\vesperspropersnote\undefined\else
 					\oldneedspace{5\baselineskip}
-					\noindent\printnote{\vesperspropersnote}\vspace{0pt minus 0.5\baselineskip}
+					\noindent\printnote{\vesperspropersnote}
 				\fi
 				\let\oldprepsalmtitle=\prepsalmtitlefive
 				\def\prepsalmtitlefive{\def\onlyoneant{F}\ifx\oldprepsalmtitle\undefined\else\oldprepsalmtitle\fi}
@@ -524,13 +524,14 @@
   		\hrule
   		\needspace{7\baselineskip}
 			\ifx\premagnificat\undefined\else\premagnificat\fi
+	    \ifx\premagtitle\undefined\else\premagtitle\fi
 	    \begin{center}{\large Magnificat.}\end{center}
     	\vspace{-1ex}
     	\ifx\postmagtitle\undefined\else\postmagtitle\fi
 
     	\ifx\vesperspropersaltnote\undefined\else
     		\oldneedspace{6\baselineskip}
-				\printnote{\vesperspropersaltnote\\\vspace{-0.5\baselineskip}}
+				\printnote{\vesperspropersaltnote\par}
 			\fi
 			\let\anttranslation=\maganttranslation
 			\let\preverses=\premagverses
@@ -552,7 +553,7 @@
 	    	\ifx\vesperspropersnote\undefined\else
 	    		\needspace{6\baselineskip}
 	    		\oldneedspace{4\baselineskip}
-				\printnote{\vesperspropersnote\\\vspace{-0.5\baselineskip}}
+				\printnote{\vesperspropersnote\par}
 			\fi
 			\def\nomagtitle{T}
 		\fi

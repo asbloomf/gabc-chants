@@ -1,0 +1,37 @@
+{
+\section{May 1: St Joseph the Worker}
+\subtitle{\nth{1} Class, White or Gold}
+\subtitle{I \& II Vespers}
+\medskip
+
+\def\definevesperspropers{\input{\gabcfolder/inc-StJosephWorker-2Vespers}
+  \let\oldthing=\maganttranslation
+  \def\maganttranslation{\oldthing\needspace{10\baselineskip}}
+}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-StJosephWorker-1Vespers}
+  \def\vrlinebreak{T}
+  \let\oldthing=\maganttranslation
+  \def\maganttranslation{\oldthing\needspace{10\baselineskip}}
+}
+\def\vesperspropersnote{At II Vespers:}
+\def\vesperspropersaltnote{At I Vespers:}
+\def\prepsalmtitleone{\vspace{-0.75\baselineskip}}
+%\def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
+%\def\prerepeatontiphonthree{}
+\def\prepsalmtitlefour{\needspace{8\baselineskip}}
+
+\printvespers[../May1-StJosephWorker]{inc-StJosephWorker}
+%if feast of St Joseph the worker falls from 2nd through 5th Sunday after Easter, it outranks the Sunday and the Sunday is commemorated
+\medskip
+\printnote{\sundaycommemnoteeaster{}
+
+\begin{multicols}{2}
+\noindent\emph{\nth{2} Sunday after Easter}, p.~\pageref{easter2}.\\
+\emph{\nth{3} Sunday after Easter}, p.~\pageref{easter3}.\\
+\emph{\nth{4} Sunday after Easter}, p.~\pageref{easter4}.\\
+\emph{\nth{5} Sunday after Easter}, p.~\pageref{easter5}.
+\end{multicols}
+}
+\bigskip
+\benedicamusdomino{}
+}

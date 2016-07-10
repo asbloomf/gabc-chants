@@ -1,0 +1,70 @@
+{
+\section{August 15: Assumption of the B.~V.~M.}
+\subtitle{\nth{1} Class, White or Gold}
+\subtitle{I \& II Vespers}
+\medskip
+
+%\def\prepsalmfivetitle{\vspace{-0.5\baselineskip}}
+%\def\preanttwo{\oldneedspace{12\baselineskip}}
+\def\definevesperspropers{\input{\gabcfolder/inc-Assumption-2Vespers}}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-Assumption-1Vespers}
+\let\oldthing=\maganttranslation
+\def\maganttranslation{\oldthing\needspace{10\baselineskip}}
+}
+\def\vesperspropersnote{At II Vespers:}
+\def\vesperspropersaltnote{At I Vespers:}
+\def\printfullhymn{
+  {
+    \oldneedspace{3\baselineskip}
+    \printnote{At II Vespers: Hymn.~\emph{Ave Maris Stella}, p.~\pageref{hymn-avemarisstella}. \Vbar{} \emph{Exaltata.} p.~\pageref{vr-assumption}.\\}
+
+    \printnote{\vesperspropersaltnote}
+    \definevesperspropersalt
+    \printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
+  }
+  {
+    \def\vrlinebreak{T}
+    \oldneedspace{3\baselineskip}
+    \label{vr-assumption}
+    \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
+  }
+}
+
+\printvespers[../August15-AssumptionOfTheBlessedVirginMary]{inc-Assumption}
+
+\medskip
+\printnote{
+  If today is Saturday, \emph{Vespers of the Saturday before 3rd Sunday of August} is commemorated as follows:\par
+}
+  \oldneedspace{4\baselineskip}
+  {
+  \def\noeuouae{T}
+  \printgabc{At Magn.}{\oldstylenums{Ant.~8.~G}}{O}{../August15-AssumptionOfTheBlessedVirginMary/an--omnis_sapientia--solesmes}
+  }
+  \translation[]{All wisdom is from the Lord God, and with Him it will always be, and has been before all time.}
+  \smallskip
+  {
+    \newcommand{\commvlatin}{Vespertína orátio ascéndat ad te \textbf{Dó}mine.}
+    \newcommand{\commrlatin}{Et descéndat super nos misericórdia \textbf{tú}a.}
+    \newcommand{\commvtranslation}{May the evening prayer ascend to Thee, O Lord.}
+    \newcommand{\commrtranslation}{And may Thy mercy descend upon us.}
+    \printvrcommem{}
+  }
+  \medskip
+  \printnote{The \emph{Collect} is taken from the respective Sunday, found below.}
+  \medskip
+  \hrule
+  \bigskip
+
+\printnote{\sundaycommemnote{}
+\begin{multicols}{2}
+\noindent\emph{\nth{9} Sunday after Pentecost}, p.~\pageref{pentecost9}.\\
+\emph{\nth{10} Sunday after Pentecost}, p.~\pageref{pentecost10}.\\
+\emph{\nth{11} Sunday after Pentecost}, p.~\pageref{pentecost11}.\\
+\emph{\nth{12} Sunday after Pentecost}, p.~\pageref{pentecost12}.\\
+\emph{\nth{13} Sunday after Pentecost}, p.~\pageref{pentecost13}.
+\end{multicols}
+}
+\bigskip
+\benedicamusdomino{}
+}

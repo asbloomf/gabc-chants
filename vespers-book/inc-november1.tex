@@ -1,0 +1,51 @@
+{
+\section{November 1: All Saints}
+\subtitle{\nth{1} Class, White or Gold}
+\subtitle{I \& II Vespers}
+\medskip
+
+\def\postdeusinadjutorium{\pagebreak}
+\def\postpsalmtitleone{\oldneedspace{12\baselineskip}}
+%\def\prepsalmoneverses{\vspace{-0.2\baselineskip}}
+%\def\presalmtitleone{\vspace{-0.8\baselineskip}}
+\def\prerepeatantiphonone{}
+%\def\preanttwo{\vspace{-0.5\baselineskip}}
+%\def\prepsalmtitletwo{\vspace{-0.3\baselineskip}}
+\def\postpsalmtitletwo{\needspace{12\baselineskip}}
+\def\prepsalmtitlethree{\vspace{-\baselineskip}}
+\def\prerepeatantiphontwo{}
+\def\postpsalmtitlefour{\needspace{12\baselineskip}}
+\def\prevespers{
+  \let\oldthinga=\antonetranslation
+  \def\antonetranslation{\vspace{-0.2\baselineskip}\oldthinga\vspace{-0.5\baselineskip}}
+  %\let\oldthing=\anttwotranslation
+  %\def\anttwotranslation{\vspace{-0.5\baselineskip}\oldthing}
+}
+\def\definevesperspropers{\input{\gabcfolder/inc-AllSaints-2Vespers}
+  %\def\prepsalmtitlefive{\bigskip}
+}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-AllSaints-1Vespers}
+  \def\premag{\label{allsaints1-magnificat}}
+}
+\def\vraltlabel{allsaints1-vr}
+\def\vesperspropersnote{\needspace{15\baselineskip}At II Vespers:}
+\def\vesperspropersaltnote{At I Vespers:}
+\def\prechapter{\needspace{6\baselineskip}}
+\def\begincollectcols{\label{allsaints-collect}\begin{parcolumns}[rulebetween]{2}}
+
+\printvespers[../November1-AllSaints]{inc-AllSaints}
+
+\medskip
+%an--vidi_dominum--solesmes is for commem of saturday
+\printnote{\sundaycommemnote{}
+
+\begin{multicols}{2}
+\noindent\emph{\nth{21} Sunday after Pentecost}, p.~\pageref{pentecost21}.\\
+\emph{\nth{22} Sunday after Pentecost}, p.~\pageref{pentecost22}.\\
+\emph{\nth{23} Sunday after Pentecost}, p.~\pageref{pentecost23}.\\
+\emph{\nth{4} Sunday after Epiphany}, p.~\pageref{epiphany4}.
+\end{multicols}
+}
+\bigskip{}
+\benedicamusdomino{}
+}
