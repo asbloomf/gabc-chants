@@ -32,7 +32,7 @@ done
 ./ly-build.sh $lyopts
 
 latexmk vespers-book-main.tex $latexmkopts
-if [ "$?" -eq "0" ]; then
+if [ "$?" -eq "0" ] || [ "$force" = "1" ]; then
 	if test `find "vespers-book-main.pdf" -mmin -1` || ! [ -f vespers-book.pdf ] || [ "$force" = "1" ]; then
 		gswin64c -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dCompatibilityLevel=1.3 -dEmbedAllFonts=true -dSubsetFonts=true -sOutputFile=vespers-book.pdf vespers-book-main.pdf &
 	fi
