@@ -1,0 +1,183 @@
+{
+\newcommand{\printcommemnote}[1][easter]{\smallskip
+    \noindent
+    \printnote{\commemorations{}  Otherwise \benedicamusdominoreference{#1}}
+}
+\newcommand{\printcommonvespers}[1][2]{
+    \subtitle{\nth{#1} Class, \liturgicalcolor{}}
+    \deusinadjutorium{}
+    \hfill
+    \emph{\emph{Vespers of Sundays in Paschaltide}, p.~\pageref{sundayvespers-easter}.}\par
+}
+\def\liturgicalcolor{White}
+\newcommand{\benedicamusdomino}[1][easter]{
+  \smallskip
+  \benedicamusdominomaster{#1}
+}
+
+\newcommand{\printhymnnote}{
+    \smallskip
+    \noindent\printnote{Hymn.~\emph{Ad Régias Agni Dapes}, page \pageref{hymn-adregiasagnidapes}.
+    \Vbar~\emph{Mane nobíscum}, page \pageref{vr-manenobiscum}.}
+}
+
+{
+    \let\dontrepeatantiphon=\undefined
+    \label{sundayvespers-easter}
+    \section{Sunday at Vespers in Paschaltide}
+    \def\printfullhymn{
+        {
+            \label{hymn-adregiasagnidapes}
+            \input{\gabcfolder/inc-hymn-AdRegiasAgniDapes}
+            \printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
+            \bigskip
+
+            \def\vrlinebreak{T}
+            \label{vr-manenobiscum}
+            \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
+        }
+    }
+    \newcommand{\printsundaysaftereaster}{
+        \def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
+        \begin{multicols}{2}
+        \noindent\emph{Low Sunday},\dotting p.~\pageref{easter1}\\
+        \noindent\emph{\nth{2} Sunday after Easter},\dotting p.~\pageref{easter2}\\
+        \emph{\nth{3} Sunday after Easter},\dotting p.~\pageref{easter3}\\
+        \emph{\nth{4} Sunday after Easter},\dotting p.~\pageref{easter4}\\
+        \emph{\nth{5} Sunday after Easter},\dotting p.~\pageref{easter5}\\
+        \emph{Sunday after the Ascension},\dotting p.~\pageref{easter6}
+        \end{multicols}
+    }
+    \newcommand{\chapterreplacement}{\noindent\begin{centering}
+
+        \emph{Chapter of the Sunday.}
+
+        \end{centering}%
+        \vspace{-\baselineskip}
+        \printsundaysaftereaster{}
+    }
+    \newcommand{\prehymn}{\vfil\pagebreak}
+    \newcommand{\magreplacement}{\noindent\begin{centering}
+
+        \emph{Magnificat \& Collect of the Sunday.}
+
+        \end{centering}
+        \vspace{-\baselineskip}
+        \printsundaysaftereaster{}
+        \benedicamusdominoreference{easter}
+    }
+    \newcommand{\collectreplacement}{\bigskip}
+    \def\prepsalmtitlefour{\vspace{-0.075\baselineskip}}
+    \def\prepsalmfive{\greseteolcustos{manual}}
+    \printvespers[../TimeAfterEaster]{inc-SundayAtVespers-PaschalTime}
+}
+
+{
+\section{Low Sunday}
+\label{easter1}
+\printcommonvespers[1]
+\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
+\printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster1}
+
+\def\commemorations{If the Feast of the Annunciation has been transferred to the Monday following Low Sunday, \emph{First Vespers} is commemorated as on page \pageref{annunciation-commem}.  If today is April 30, May 1, or May 2, \emph{First Vespers of St Joseph the Worker} is commemorated as follows.}
+\printcommemnote{}
+}
+
+\medskip
+\hrule
+{
+\label{stjoseph-worker-commem}
+\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43\linewidth}]{2}}
+\def\vrlinebreak{T}
+\printcommemoration[../May1-StJosephWorker]{commemorationStJosephWorker-Vespers1}
+
+\bigskip
+\benedicamusdomino{}
+}
+
+{
+\section{\nth{2} Sunday after Easter}
+\label{easter2}
+\printcommonvespers{}
+\def\precollect{\printvrmanenobiscum}
+\printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster2}
+\benedicamusdomino{}
+}
+{
+\section{\nth{3} Sunday after Easter}
+\label{easter3}
+\printcommonvespers{}
+\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
+\def\precollect{\printvrmanenobiscum}
+\printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster3}
+\benedicamusdomino{}
+}
+
+{
+\section{\nth{4} Sunday after Easter}
+\label{easter4}
+\printcommonvespers{}
+%\def\premagnificat{\oldneedspace{10\baselineskip}}
+\def\precollect{\printvrmanenobiscum}
+\printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster4}
+\benedicamusdomino{}
+}
+
+{
+\section{\nth{5} Sunday after Easter}
+\label{easter5}
+\printcommonvespers{}
+\def\premagverses{\oldneedspace{12\baselineskip}}
+\def\precollect{\printvrmanenobiscum}
+\printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster5}
+\benedicamusdomino{}
+}
+
+{
+\section{Ascension of Our Lord}
+\label{ascension}
+\subtitle{\nth{1} Class, White or Gold}
+\vspace{-0.5\baselineskip}
+\subtitle{I \& II Vespers}
+\vspace{-0.5\baselineskip}
+
+\def\premagnificat{\oldneedspace{7\baselineskip}}
+\def\premagverses{\greseteolcustos{manual}}
+\def\begincollectcols{%\vspace{-0.5\baselineskip}
+\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
+\def\definevesperspropers{\input{\gabcfolder/inc-Ascension-2Vespers}
+    \def\prepsalmfive{\greseteolcustos{manual}}
+}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-Ascension-1Vespers}
+    %\def\premagverses{\pagebreak}
+}
+\def\vesperspropersnote{At II Vespers:}
+\def\vesperspropersaltnote{At I Vespers:}
+\let\printhymnnote=\undefined
+\def\hymnlabel{hymn-salutishumanaesator}
+\printvespers[../Ascension]{inc-Ascension}
+
+\def\commemorations{If today is April 30 or May 1, \emph{First Vespers of St Joseph the Worker} is commemorated as on page \pageref{stjoseph-worker-commem}.}
+\printcommemnote[1]{}
+\medskip
+\hrule
+}
+
+{
+\section{Sunday after the Ascension}
+\label{easter6}\label{sundayafterascension}
+\printcommonvespers{}
+%\let\printhymnnote=\undefined
+\renewcommand{\printhymnnote}{
+    \medskip
+    \noindent\printnote{Hymn.~\emph{Salútis humánæ Sator}, page \pageref{hymn-salutishumanaesator}.}
+    \medskip
+    \def\vrlinebreak{T}
+    \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
+}
+\def\precollect{\printvrmanenobiscum}
+%\def\premagverses{\pagebreak}
+\printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatSundayAfterAscension}
+\benedicamusdomino{}
+}
+}
