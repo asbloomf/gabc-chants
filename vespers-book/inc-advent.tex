@@ -39,7 +39,7 @@
 \def\premagverses{\greseteolcustos{manual}}
 \def\printfullhymn{
 	\vfil
-	\needspace{20\baselineskip{}}
+	%\needspace{16\baselineskip{}}
 	\label{hymn-creatoralmesiderum}
 	{
 	\def\gabcfolder{../Advent}
@@ -86,8 +86,17 @@
 	}
 }
 %\def\prepsalmfive{\greseteolcustos{manual}}
-\def\prepsalmtitlefour{\vspace{-\baselineskip}}
-\def\prepsalmtitlefive{\vspace{-0.5\baselineskip}}
+\def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
+\def\preantthree{\vspace{-0.5\baselineskip}}
+\def\preantfour{\vspace{-0.5\baselineskip}}
+\def\prepsalmversesfour{}
+\def\prerepeatantiphonfour{}
+\def\preantfive{\vspace{-0.5\baselineskip}}
+%\def\prepsalmtitlefive{\vspace{-0.8\baselineskip}}
+%\def\prepsalmfive{\oldneedspace{6\baselineskip}}
+%\def\prepsalmfiveverses{}
+\def\prerepeatantiphonfive{}
+\def\prechapter{\vspace{-1.5\baselineskip}}
 
 \printvespers[../Advent1]{inc-Advent1}
 \bigskip
@@ -107,18 +116,22 @@
 \grechangedim{spacelinestext}{0.70617 cm}{scalable}%
 }
 \def\prepsalmthree{\needspace{5\baselineskip}}
-\def\prerepeatantiphonthree{\bigskip}
+%\def\prerepeatantiphonthree{\bigskip}
 %\def\prepsalmfive{\greseteolcustos{manual}}
+\def\preanttranslationfour{\vspace{-0.25\baselineskip}}
+\def\prepsalmtitlefour{\vspace{-0.25\baselineskip}}
 \def\prepsalmtitlefive{\vspace{-0.25\baselineskip}}
+\def\premagtitle{\needspace{18\baselineskip}}
 \def\premag{\def\noeuouae{T}}
 \def\premagverses{\greseteolcustos{manual}}
-\def\prechapter{\needspace{5\baselineskip}}
+\def\prechapter{\vspace{-0.5\baselineskip}\needspace{5\baselineskip}}
 \printvespers[../Advent2]{inc-Advent2-Vespers2}
 
 \noindent
 \printnote{If today is December 7, \emph{First Vespers of the Immaculate Conception} is commemorated as follows.  Otherwise \benedicamusdominoreference{advent}}
-\bigskip
+\medskip
 \hrule
+\medskip
 }
 
 
@@ -139,17 +152,18 @@
 \subtitle{\nth{1} Class, Violet or Rose}
 
 %\def\prepsalmfive{\greseteolcustos{manual}}
-\def\prepsalmoneverses{}
-\def\prerepeatantiphonone{}
-\def\preanttwo{\vspace{-4ex}}
-\def\preanttranslationtwo{\vspace{-3ex}}
-\def\prepsalmtitletwo{\vspace{-\baselineskip}}
-\def\prepsalmtwoverses{}
+%\def\prepsalmoneverses{}
+%\def\prerepeatantiphonone{}
+%\def\preanttwo{\vspace{-4ex}}
+%\def\preanttranslationtwo{\vspace{-3ex}}
+%\def\prepsalmtitletwo{\vspace{-\baselineskip}}
+%\def\prepsalmtwoverses{}
+\def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
 \def\preantfour{\needspace{15\baselineskip}}
 \def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}
 %\def\prepsalmtitlefive{\vspace{-\baselineskip}}
 \def\premag{\def\noeuouae{T}
-\printnote{When the third Sunday of Advent falls on December 17, the Antiphon \emph{O Sapiéntia} on page \pageref{osapientia} is sung in place of \emph{Beáta es}.}
+\printnote{\noindent{}On December 17, the Antiphon \emph{O Sapiéntia} on p.~\pageref{osapientia} is sung instead of \emph{Beáta es}.}
 \medskip
 
 \label{magant-beataes}
@@ -170,7 +184,8 @@
 	\def\preverses{\greseteolcustos{manual}}
 	\printmag{2D}{O}{December17-MagAntiphon}
 }
-%\def\prechapter{\vspace{-1.75\baselineskip}}
+\def\prechapter{\vspace{-1\baselineskip}}
+\def\premagtitle{\vspace{-0.5\baselineskip}}
 \def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.48\linewidth}]{2}}
 \printvespers[../Advent3]{inc-Advent3}
 \bigskip
@@ -181,13 +196,13 @@
 
 %Advent 4
 {
-\needspace{8\baselineskip}
 \section{Fourth Sunday of Advent}
 \subtitle{\nth{1} Class, Violet}
 \printnote{If today is December 24, \emph{First Vespers of Christmas} is used on page \pageref{christmas}.}
 \medskip
 
-\def\prepsalmtwoverses{\oldneedspace{2\baselineskip}}
+%\def\preantone{\needspace{12\baselineskip}}
+\def\prepsalmtwoverses{\bigskip}
 \def\preantfour{\grechangedim{spacelinestext}{0.60717 cm}{scalable}\oldneedspace{8\baselineskip}}
 %\def\prepsalmfive{\greseteolcustos{manual}}
 \def\magreplacement{

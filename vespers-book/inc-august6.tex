@@ -4,10 +4,18 @@
 \subtitle{I \& II Vespers}
 \medskip
 
-%\def\prepsalmtitleone{\oldneedspace{4\baselineskip}}
+%\def\prepsalmtitleone{\needspace{4\baselineskip}}
+\def\postpsalmtitleone{\needspace{4\baselineskip}}
+\def\prepsalmoneverses{}
+\def\prerepeatantiphonone{}
+\def\preanttwo{\vspace{-0.5\baselineskip}}
+\def\preanttranslationtwo{\vspace{-0.2\baselineskip}}
+\def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
 \def\prepsalmtwoverses{\vspace{-0.01\baselineskip}}
 \def\prerepeatantiphontwo{}
-\def\definevesperspropers{\input{\gabcfolder/inc-Transfiguration-2Vespers}}
+\def\definevesperspropers{\input{\gabcfolder/inc-Transfiguration-2Vespers}
+  \def\premagverses{\vspace{-0.5\baselineskip}}
+}
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Transfiguration-1Vespers}
   \def\premagverses{\vspace{-0.5\baselineskip}}
 }

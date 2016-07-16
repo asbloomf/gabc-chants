@@ -5,10 +5,13 @@
 }
 \def\printhymnnote{}
 \def\printcommonvespers{
+  \vspace{-0.5\baselineskip}
 	\subtitle{\nth{2} Class, Green}
+  \smallskip
   \deusinadjutorium{}
   \hfill
-	\printnote{\emph{Vespers of Sundays throughout the year}, p.~\pageref{sundayvespers}.\\}
+	\printnote{\emph{Vespers of Sundays throughout the year}, p.~\pageref{sundayvespers}.\par}
+
 }
 
 {
@@ -57,8 +60,8 @@
 \label{epiphany6}
 \printcommonvespers{}
 \def\prevespers{%
-  \let\oldthing=\englishmagantiphon
-  \def\englishmagantiphon{\oldthing\pagebreak}
+%  \let\oldthing=\englishmagantiphon
+%  \def\englishmagantiphon{\oldthing\pagebreak}
 }
 \printvespersmag[../TimeAfterEpiphany]{inc-VespersMagnificatEpiphany6}
 

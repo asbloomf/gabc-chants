@@ -1,10 +1,13 @@
 \chapter{Proper of the Time -- Shrovetide \& Lent}
 {
 \newcommand{\printcommonvespers}[1][2]{
+	\vspace{-0.3\baselineskip}
 	\subtitle{\nth{#1} Class, \liturgicalcolor{}}
+	\smallskip
 	\deusinadjutorium{}
 	\hfill
-	\printnote{\emph{Vespers of Sundays throughout the year}, p.~\pageref{sundayvespers}.\\}
+	\printnote{\emph{Vespers of Sundays throughout the year}, p.~\pageref{sundayvespers}.\par}
+	\smallskip
 }
 \def\liturgicalcolor{Violet}
 \def\printcommemnote{\smallskip
@@ -29,19 +32,17 @@
 \printnote{N.B.~From this Sunday until Palm Sunday inclusive, at the \emph{Deus, in adjutórium}, the \emph{Allelúia} is replaced by \emph{Laus tibi, Dómine, Rex æternæ glóriæ}.}
 \def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}}
 \def\precollect{\printvrdirigatur}
-\let\oldthing=\printhymnnote
-\def\printhymnnote{\oldthing\bigskip}
+%\let\oldthing=\printhymnnote
+%\def\printhymnnote{\oldthing\bigskip}
 
-\def\premagverses{\oldneedspace{10\baselineskip}}
+%\def\premagverses{\oldneedspace{10\baselineskip}}
 \printvespersmag[../Lent]{inc-VespersMagnificatSeptuagesima}
 
 \bigskip
 \benedicamusdomino{}
-\vfil
 }
 
 {
-\pagebreak
 \section{Sexagesima}
 \label{sexagesima}
 \printcommonvespers{}
@@ -49,16 +50,14 @@
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
 \def\precollect{\printvrdirigatur}
 
-\def\premagverses{\oldneedspace{18\baselineskip}}
+%\def\premagverses{\oldneedspace{18\baselineskip}}
 \printvespersmag[../Lent]{inc-VespersMagnificatSexagesima}
 
 \bigskip
 \benedicamusdomino{}
-\vfil
 }
 
 {
-\pagebreak
 \section{Quinquagesima}
 \label{quinquagesima}
 \printcommonvespers{}
@@ -72,10 +71,12 @@
 %lent
 {
 \renewcommand{\printcommonvespers}[1][2]{
+	\vspace{-0.3\baselineskip}
 	\subtitle{\nth{#1} Class}
+	\smallskip
 	\deusinadjutorium{}
 	\hfill
-	\printnote{\emph{Vespers of Sundays throughout the year}, page \pageref{sundayvespers}.\\}
+	\printnote{\emph{Vespers of Sundays throughout the year}, page \pageref{sundayvespers}.\par}
 }
 
 \newcommand{\benedicamusdomino}[1][lent]{
@@ -91,6 +92,7 @@
 \def\hymninput{\gabcfolder/inc-hymn-AudiBenigneConditor}
 %\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 %\def\premagnificat{\pagebreak}
+\def\premagnificat{\needspace{8\baselineskip}}
 \printvespersmag[../Lent]{inc-VespersMagnificatLent1}
 
 \bigskip
@@ -115,6 +117,7 @@
 
 \medskip
 \hrule
+\medskip
 {
 \label{stjoseph-commem}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
@@ -137,6 +140,7 @@
 
 \medskip
 \hrule
+\medskip
 {
 \oldneedspace{12\baselineskip}
 \label{annunciation-commem}
@@ -169,10 +173,10 @@
 \label{lent5}\label{passionsunday}
 \printcommonvespers[1]
 \def\hymnlabel{hymn-vexillaregis}
-\def\prehymn{\needspace{20\baselineskip}\printnote{All kneel for the sixth verse of the following hymn.}}
+\def\prehymn{\needspace{8\baselineskip}\printnote{All kneel for the sixth verse of the following hymn.}}
 \def\vrlabel{vr-eripeme}
 \def\hymninput{\gabcfolder/inc-hymn-VexillaRegis}
-\def\premagnificat{\pagebreak}
+\def\premagnificat{\needspace{14\baselineskip}}
 \def\precollect{\vspace{-1.5\baselineskip}}
 \printvespersmag[../Lent]{inc-VespersMagnificatPassion1}
 
@@ -181,6 +185,7 @@
 
 \medskip
 \hrule
+\medskip
 {
 \section{Palm Sunday}
 \label{lent6}\label{palmsunday}

@@ -23,14 +23,16 @@
 }
 \def\definevesperspropers{\input{\gabcfolder/inc-AllSaints-2Vespers}
   %\def\prepsalmtitlefive{\bigskip}
+  \def\prepsalmtitlefive{\vspace{-0.5\baselineskip}}
 }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-AllSaints-1Vespers}
+  \def\prepsalmtitlefive{\vspace{-0.5\baselineskip}}
   \def\premag{\label{allsaints1-magnificat}}
 }
 \def\vraltlabel{allsaints1-vr}
-\def\vesperspropersnote{\needspace{15\baselineskip}At II Vespers:}
+\def\vesperspropersnote{\oldneedspace{15\baselineskip}At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
-\def\prechapter{\needspace{6\baselineskip}}
+\def\prechapter{\vspace{-\baselineskip}}
 \def\begincollectcols{\label{allsaints-collect}\begin{parcolumns}[rulebetween]{2}}
 
 \printvespers[../November1-AllSaints]{inc-AllSaints}

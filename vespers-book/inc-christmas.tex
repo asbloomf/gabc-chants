@@ -32,12 +32,13 @@
 \section[December 25: Nativity of our Lord -- II Vespers]{December 25: Nativity of our Lord -- II Vespers\sectionmark{December 25: Nativity of our Lord \& Sunday within the Octave}}
 \sectionmark{December 25: Nativity of our Lord \& Sunday within the Octave}
 \subtitle{\nth{1} Class, White or Gold}
-\vspace{-1.5\baselineskip}
+\medskip
 \subtitle{\&}
-\vspace{-1.5\baselineskip}
+\vspace{-0.5\baselineskip}
 \section[Sunday within the Octave]{Sunday within the Octave\sectionmark{December 25: Nativity of our Lord \& Sunday within the Octave}}
 \sectionmark{December 25: Nativity of our Lord \& Sunday within the Octave}
 \subtitle{\nth{2} Class, White}
+\bigskip
 
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Christmas-Vespers2}
   \let\oldthing\maganttranslation
@@ -52,7 +53,9 @@
 \def\prepsalmthree{\needspace{8\baselineskip}}
 \def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
 \def\prerepeatantiphonthree{\vspace{-0.85\baselineskip}}
+\def\prechapter{\vspace{-1\baselineskip}}
 \def\premag{\def\noeuouae{T}}
+\def\premagtitle{\vspace{-0.3\baselineskip}}
 \def\premagverses{\greseteolcustos{manual}}
 \def\hymnlabel{hymn-jesuredemptoromnium}
 \input{../Christmas/inc-JesuRedemptorOmnium}
@@ -64,10 +67,12 @@
 
 {
 \section{January 1: Octave of the Nativity of our Lord}
+\vspace{-0.5\baselineskip}
 \subtitle{\nth{1} Class, White or Gold}
 
 \subtitle{I \& II Vespers}
 \label{circumcision}
+\medskip
 
 \def\definevesperspropers{\input{\gabcfolder/inc-Circumcision-Vespers2}}
 \def\preantthree{\needspace{10\baselineskip}}
@@ -77,9 +82,11 @@
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Circumcision-Vespers1}}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
+\def\prepsalmtitletwo{\needspace{6\baselineskip}}
 \def\preantfive{\bigskip}
 %\def\precollect{\vspace{-2\baselineskip}}
-\def\prechapter{\printnote{For the Feast of the Purification \& Presentation, continue to \emph{Chapter}, p.~\pageref{purification-chapter}.}\vspace{-1\baselineskip}}
+\def\prechapter{\printnote{For the Feast of the Purification \& Presentation, continue to \emph{Chapter}, p.~\pageref{purification-chapter}.}}
+\def\premagtitle{\oldneedspace{6\baselineskip}}
 \printvespers[../ChristmasOctave-Circumcision]{inc-Circumcision-Vespers-common}
 
 \benedicamusdomino{}
@@ -88,19 +95,26 @@
 {
 \needspace{5\baselineskip}
 \section{The Most Holy Name of Jesus}
+\vspace{-0.5\baselineskip}
 \subtitle{\nth{2} Class, White}
+\medskip
 %\subtitle{II Vespers}
 
 \printnote{This feast is celebrated on the Sunday between the Octave Day of the Nativity and the Epiphany of Our Lord.  If no Sunday occurs within that time, this feast is then celebrated on January 2.}
 
 \printnote{When the Feast of the Most Holy Name of Jesus occurs on January 5, \emph{First Vespers of the Epiphany} on page \pageref{epiphany} is sung without a commemoration of the Holy Name of Jesus.}
 
-\smallskip{}
+\medskip{}
 %\def\definevesperspropersalt{\input{\gabcfolder/inc-HolyName-1Vespers}}
 \def\definevesperspropers{\input{\gabcfolder/inc-HolyName-2Vespers}}
 %\def\vesperspropersaltnote{At I Vespers of the Most Holy Name of Jesus:}
 %\def\vesperspropersnote{At II Vespers of the Most Holy Name of Jesus:}
 \def\prepsalmtitleone{\needspace{5\baselineskip}}
+\def\preanttranslationthree{\vspace{-0.2\baselineskip}}
+\def\prepsalmtitlethree{\vspace{-0.1\baselineskip}}
+\def\prepsalmthreeverses{}
+\def\prerepeatantiphonthree{}
+\def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}
 \def\hymnlabel{hymn-jesudulcismemoria}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.425\linewidth}]{2}}
 %\def\prepsalmtitlefive{\vspace{\baselineskip}}
@@ -129,7 +143,6 @@
 }
 \def\vesperspropersaltnote{At I Vespers:}
 \def\vesperspropersnote{At II Vespers:}
-\def\preanttwo{\bigskip}
 \def\prepsalmthree{\needspace{5\baselineskip}}
 \def\prepsalmthreeverses{\vspace{-0.05\baselineskip}}
 \def\prerepeatantiphonthree{}
@@ -151,15 +164,14 @@
 \subtitle{I \& II Vespers}
 %\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43825\linewidth}]{2}}
 
+\def\preanttwo{\oldneedspace{8\baselineskip}}
 \def\prerepeatantiphontwo{\vspace{-0.5\baselineskip}}
 %\def\prerepeatantiphonthree{}
 %\def\prepsalmtitlethree{\vspace{-1.5\baselineskip}}
 %\def\prepsalmtitlefive{\vspace{-1.5\baselineskip}}
 \def\prepsalmfiveverses{\vspace{-0.05\baselineskip}}
-\def\prerepeatantiphonfive{\vspace{-0.6\baselineskip}}
+%\def\prerepeatantiphonfive{\vspace{-0.3\baselineskip}}
 \def\prevespers{%
-  \let\oldthing\anttwotranslation
-  \def\anttwotranslation{\vspace{-0.7\baselineskip}\oldthing\vspace{-0.7\baselineskip}}%
   \let\oldthingb\antthreetranslation
   \def\antthreetranslation{\vspace{-0.1\baselineskip}\oldthingb\vspace{-1\baselineskip}}%
   \let\oldthingc\antfivetranslation

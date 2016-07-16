@@ -7,6 +7,7 @@
 \printnote{All from the Common of the Dedication of a Church.}
 
 \def\prepsalmtitleone{\needspace{8\baselineskip}}
+\def\postpsalmtitletwo{\needspace{8\baselineskip}}
 \def\prepsalmtwoverses{\vspace{-0.05\baselineskip}}
 \def\prerepeatantiphontwo{}
 \def\postpsalmtitlethree{\medskip\needspace{10\baselineskip}}
@@ -22,8 +23,7 @@
 %}
 \def\prevr{\needspace{10\baselineskip}}
 \def\definevesperspropers{\input{\gabcfolder/inc-DedicationOfChurch-2Vespers}
-  \let\oldthinga=\maganttranslation
-  \def\maganttranslation{\oldthinga\oldneedspace{8\baselineskip}}
+  \def\premagverses{\oldneedspace{15\baselineskip}}
 }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-DedicationOfChurch-1Vespers}
 }

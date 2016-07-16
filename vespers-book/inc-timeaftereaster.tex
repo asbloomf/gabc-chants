@@ -48,7 +48,8 @@
         \emph{Sunday after the Ascension},\dotting p.~\pageref{easter6}
         \end{multicols}
     }
-    \newcommand{\chapterreplacement}{\noindent\begin{centering}
+    \newcommand{\chapterreplacement}{
+        \noindent\begin{centering}
 
         \emph{Chapter of the Sunday.}
 
@@ -56,8 +57,10 @@
         \vspace{-\baselineskip}
         \printsundaysaftereaster{}
     }
-    \newcommand{\prehymn}{\vfil\pagebreak}
-    \newcommand{\magreplacement}{\noindent\begin{centering}
+    \newcommand{\prehymn}{\needspace{18\baselineskip}}
+    \newcommand{\magreplacement}{
+        \oldneedspace{6\baselineskip}
+        \noindent\begin{centering}
 
         \emph{Magnificat \& Collect of the Sunday.}
 
@@ -67,9 +70,16 @@
         \benedicamusdominoreference{easter}
     }
     \newcommand{\collectreplacement}{\bigskip}
+    %\def\prepsalmtitletwo{}
+    \def\postpsalmtitletwo{\needspace{8\baselineskip}}
+    \def\prepsalmtwoverses{}
+    \def\prepsalmtitlethree{\vspace{-0.075\baselineskip}}
     \def\prepsalmtitlefour{\vspace{-0.075\baselineskip}}
+    \def\prepsalmtitlefive{\oldneedspace{12\baselineskip}}
     \def\prepsalmfive{\greseteolcustos{manual}}
     \printvespers[../TimeAfterEaster]{inc-SundayAtVespers-PaschalTime}
+    \medskip
+    \hrule
 }
 
 {
@@ -85,6 +95,7 @@
 
 \medskip
 \hrule
+\medskip
 {
 \label{stjoseph-worker-commem}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43\linewidth}]{2}}
@@ -137,9 +148,7 @@
 \section{Ascension of Our Lord}
 \label{ascension}
 \subtitle{\nth{1} Class, White or Gold}
-\vspace{-0.5\baselineskip}
 \subtitle{I \& II Vespers}
-\vspace{-0.5\baselineskip}
 
 \def\premagnificat{\oldneedspace{7\baselineskip}}
 \def\premagverses{\greseteolcustos{manual}}
