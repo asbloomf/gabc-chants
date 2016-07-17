@@ -29,7 +29,8 @@
 % to change the font to something better, you can install the kpfonts package (if not already installed). To do so
 % go open the "TeX Live Manager" in the Menu Start->All Programs->TeX Live 2010
 %\fontspec[Numbers=OldStyle]{Linux Libertine O}
-\input{../gsp-spaces}
+\gresetbarspacing{new}
+%\input{../gsp-spaces}
 \predocument
 %\def\greinitialformat#1{{\fontsize{37}{37}\selectfont #1}}
 %small > footnotesize > scriptsize > tiny
@@ -100,6 +101,7 @@
 {\fontsize{\solemninitialsize}{\solemninitialsize}\selectfont #1}%
 }
 
+\grechangedim{spacelinestext}{0.8 cm}{scalable}%
 % We set VII above the initial.
 {\def\annot{\small{Ant.}}
 \def\annottwo{\small\oldstylenums{{\secondlinesolemn}}}
@@ -109,7 +111,7 @@
 %\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
 
 % and finally we include the score. The file must be in the same directory as this one.
-\large \gregorioscore[a]{\antfilename Solemn-drone}}
+\large \gregorioscore[a]{\antfilename Solemn\ifx\withdrone\undefined\else\if\withdrone T-drone\fi\fi}}
 \if\usetwopages T
 \bigskip
 \afterant
@@ -126,7 +128,7 @@
 \begin{center}\textbf{Simple Tone.}\end{center}
 \selectlanguage{latin}
 
-\setsecondannotation
+%\setsecondannotation
 \presimple
 \def\greinitialformat#1{%
 {\fontsize{\simpleinitialsize}{\simpleinitialsize}\selectfont #1}%
