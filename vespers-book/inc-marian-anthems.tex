@@ -2,16 +2,16 @@
 {
 \def\nogabcbreaks{T}
 \newcommand{\printsimpletone}{
-\vspace{-1ex plus 1ex minus 1ex}
+\vspace{0ex plus 1ex minus 1ex}
 \oldneedspace{3\baselineskip}
-\begin{center}\textbf{Simple Tone.}\end{center}
-\vspace{-1ex plus 1ex minus 1ex}
+{\centering\textbf{Simple Tone.}\par}
+\vspace{0ex plus 1ex minus 1ex}
 }
 \newcommand{\printsolemntone}{
-\vspace{-1ex plus 1ex minus 1ex}
+\vspace{0ex plus 1ex minus 1ex}
 \oldneedspace{3\baselineskip}
-\begin{center}\textbf{Solemn Tone.}\end{center}
-\vspace{-1ex plus 1ex minus 1ex}
+{\centering\textbf{Solemn Tone.}\par}
+\vspace{0ex plus 1ex minus 1ex}
 }
 \newcommand{\afterant}{
 \ifx\note\undefined\else%
@@ -78,6 +78,7 @@
 \selectlanguage{latin}\Rbar{}~\rlatintwo
 \fi
 
+\smallskip
 \noindent{}\textit{Prayer on page \pageref{\prayerlabel}}.
 }
 
@@ -105,6 +106,7 @@
 \grechangenextscorelinedim{1}{spacelinestext}{0.65 cm}{scalable}%
 \printgabc{Ant.}{5.}{A}{AlmaSimple}
 }
+\medskip
 \printsolemntone{}
 \printgabc{Ant.}{5.}{A}{AlmaSolemn}
 
@@ -152,11 +154,14 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 
 
 % Ave Regina Cælorum
+\oldneedspace{8\baselineskip}
 \label{avereginacaelorum}
 \section{Ave Regina Cælorum}
 \printnote{From Compline of February \nth{2} (even if the Feast of the Purification be transferred) until Compline of Wednesday in Holy Week.}
+\smallskip
 \printsimpletone{}
 \printgabc{Ant.}{6.}{A}{AveReginaSimple}
+\bigskip
 \printsolemntone{}
 \printgabc{Ant.}{6.}{A}{AveReginaSolemn}
 \begin{quote}{Hail, Queen of Heaven! Hail, Queen of Angels! Hail, blest Root and Gate, from which came light upon the world! Rejoice, O glorious Virgin, that surpassest all in beauty! Hail, O most lovely, and pray for us to Christ.}\end{quote}
@@ -189,6 +194,7 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 \printsimpletone{}
 \printgabc{Ant.}{6.}{R}{ReginaCaeliSimple}
 \oldneedspace{12\baselineskip}
+\bigskip
 \printsolemntone{}
 \printgabc{Ant.}{6.}{R}{ReginaCaeliSolemn}
 
@@ -230,10 +236,14 @@ Pray for us to God, alleluia.}\end{quote}%
 \printnote{From \nth{1} Vespers of the Feast of the Blessed Trinity to None on Saturday before the \nth{1} Sunday of Advent.}
 \printsimpletone{}
 \printgabc{Ant.}{5.}{S}{SalveReginaSimple}
+  \bigskip{}
 \printsolemntone{}
-\printgabc{Ant.}{1.}{S}{SalveReginaSolemn-drone}
-
-\begin{quote}{Hail, holy Queen, Mother of mercy; hail, our life, our sweetness, and our hope! To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this vale of tears.  Turn then, most gracious advocate, thine eyes of mercy towards us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.  O clement, O loving, O sweet Virgin Mary.}\end{quote}
+  The puncta cava (open notes) indicate where a male chorus can sing a drone.  These drones are always a fifth apart on either the RE and the LA or the DO and the SOL.  Then for the sections with a brace above, instead of droning, the melody is sung in parallel, either a fifth above or below.  The drone should only be interrupted at the double bars.
+  \smallskip
+{
+  \grechangedim{spacelinestext}{0.62 cm}{scalable}%
+  \printgabc{Ant.}{1.}{S}{SalveReginaSolemn-drone}
+}
 
 {
 \newcommand{\vlatin}{Ora pro nóbis sáncta Déi Génitrix.}
@@ -244,15 +254,20 @@ Pray for us to God, alleluia.}\end{quote}%
 \newcommand{\prayerenglish}{Almighty, everlasting God, who with the cooperation of the Holy Ghost didst prepare the body and soul of the glorious Virgin Mary, to make it fit to be the worthy dwelling of Thy Son; grant that by the loving intercession of her in whose commemoration we rejoice, we may be delivered from present ills, and from everlasting death.  Through the same Christ our Lord. \Rbar~Amen.}
 \def\prayerlabel{salveprayer}
 
-\shortafterant{}
+\vfil
+\afterant{}
+\vfil
+%\begin{quote}{Hail, holy Queen, Mother of mercy; hail, our life, our sweetness, and our hope! To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this vale of tears.  Turn then, most gracious advocate, thine eyes of mercy towards us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.  O clement, O loving, O sweet Virgin Mary.}\end{quote}
 
+\oldneedspace{8\baselineskip}
 \includelilypond{SalveRegina-systems}%
 
 \begin{quote}{Hail, holy Queen, Mother of mercy; hail, our life, our sweetness, and our hope! To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this vale of tears.  Turn then, most gracious advocate, thine eyes of mercy towards us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.  O clement, O loving, O sweet Virgin Mary.}\end{quote}
 
 \bigskip{}
 
-\afterant{}
+\shortafterant{}
+
 }
 
 }
