@@ -64,6 +64,7 @@
   \oldneedspace{4\baselineskip}
   \sectionmark{#2 in \beforecommemweek{}\commemweek{}.}
   \subtitle{\small{#2.}}
+  \smallskip
   {
   \def\noeuouae{T}
   \printgabc{At Magn.}{\oldstylenums{Ant.~#3.}}{#4}{#1/#5}
@@ -75,13 +76,18 @@
     \label{\vrlabel}
     \printvrcommem{}
   }\else%
-  \printnote{\emph{\Vbar{}~\vrtitle}, page \pageref{\vrlabel}.}
+  \printnote{\emph{\Vbar{}~\vrtitle},
+  \ifnum\getpagerefnumber{\vrlabel}=\thepage
+  below%
+  \else
+  page \pageref{\vrlabel}%
+  \fi.}
   \fi
   \ifx\precollect\undefined\else\precollect\fi
   \printcollect{#7}{#8}
-  \medskip
+  \bigskip
   \hrule
-  \medskip
+  \bigskip
 }
 \newcommand{\printweektitle}[2][the ]{
   \edef\commemweek{#2}%
@@ -115,6 +121,7 @@
   % {And all ye are brethren, and call no man your father upon earth for One is your Father, Which is in heaven neither be ye called masters, for One is your Master, even Christ.}
   % {Propitiáre Dómine supplicatiónibus nostris, et animárum nostrárum medére languóribus~:~* ut remissióne percépta, in tua semper benedictióne lætémur. Per Dóminum.}
   % {Tend thy merciful ears, O Lord, we beseech thee, unto our supplications, and heal the sickness of our souls, that we, receiving thy pardon, may rejoice forever in thy blessing.}
+  \pageref{\vrlabel}
 
   \printcommem{Wednesday}{1}{T}{an--tradetur_enim_gentibus--solesmes}
   {He will be handed over to the gentiles to be mocked and scourged and crucified.}
@@ -202,11 +209,13 @@
   \newcommand{\vrlabel}{commvreripeme}
   \oldneedspace{7\baselineskip}
   \printweektitle[]{Passiontide}
+  {
+  \def\precollect{\vspace{-0.5\baselineskip}}
   \printcommem{Monday}{4}{S}{an--si_quis_sitit--solesmes}
-  {If anyone thirst, let him come and drink; and from his belly will flow living water.}
-  {Da, quǽsumus Dómine, pópulo tuo salútem mentis et córporis~:~* ut bonis opéribus inhæréndo, tua semper mereátur protectióne deféndi. Per Dóminum.}
-  {Grant unto Thy people, O Lord, we beseech Thee, soundness of mind and body, that they, cleaving unto good works, may evermore worthily be defended by Thy protection.}
-
+    {If anyone thirst, let him come and drink; and from his belly will flow living water.}
+    {Da, quǽsumus Dómine, pópulo tuo salútem mentis et córporis~:~* ut bonis opéribus inhæréndo, tua semper mereátur protectióne deféndi. Per Dóminum.}
+    {Grant unto Thy people, O Lord, we beseech Thee, soundness of mind and body, that they, cleaving unto good works, may evermore worthily be defended by Thy protection.}
+  }
   {%\newcommand{\vrtitle}{Eripe me}
   %\def\precollect{\vspace{-\baselineskip}}
   \printcommem{Tuesday}{1}{V}{an--vos_ascendite--solesmes}
@@ -215,11 +224,13 @@
   {Grant, we beseech Thee, Lord, to give us grace to endure to the end in doing Thy will, that in our days Thy people which serve Thee may have increase, both in merit and number.}
   }
 
+  {
+  \def\precollect{\vspace{-0.5\baselineskip}}
   \printcommem{Wednesday}{4}{M}{an--multa_bona_opera--solesmes}
-  {I have wrought many good works among you: on account of which work do you want to kill me?}
-  {Adésto supplicatiónibus nostris omnípotens Deus~:~* et quibus fidúciam sperándæ pietátis indúlges, consuétæ misericórdiæ tríbue benígnus efféctum. Per Dóminum.}
-  {Gratiously hear our prayers, Almighty God, and as Thou dost give us to look with confidence for Thy favour for which we hope, so grant us, in Thy goodness, Thine accustomed mercy.}
-
+    {I have wrought many good works among you: on account of which work do you want to kill me?}
+    {Adésto supplicatiónibus nostris omnípotens Deus~:~* et quibus fidúciam sperándæ pietátis indúlges, consuétæ misericórdiæ tríbue benígnus efféctum. Per Dóminum.}
+    {Gratiously hear our prayers, Almighty God, and as Thou dost give us to look with confidence for Thy favour for which we hope, so grant us, in Thy goodness, Thine accustomed mercy.}
+  }
   %\newcommand{\vrtitle}{Eripe me}
   \printcommem{Thursday}{4}{D}{an--desiderio_desideravi--solesmes}
   {With desire I have desired to eat this Pasch with you before I suffer.}
@@ -232,6 +243,7 @@
   {Concéde, quǽsumus omnípotens Deus~:~* ut qui protectiónis tuæ grátiam quǽrimus, liberáti a malis ómnibus, secúra tibi mente serviámus. Per Dóminum.}
   {Grant, we beseech Thee, Almighty God, that we who seek the proctection of Thy grace, freed from all evils, may serve Thee in peace and quietness of spirit.}
 }
+\vspace{-\baselineskip}
   % \bigskip
   % \benedicamusdomino{}
 }

@@ -22,7 +22,7 @@
   \label{pentecost#1}
 \printcommonvespers{}
 \ifx\printaftercommonvespers\undefined\else\printaftercommonvespers{}\fi
-  \def\precollect{\printvrdirigatur}
+  \def\precollect{\printvrdirigatur\smallskip}
   \printvespersmag[../TimeAfterPentecost]{inc-VespersMagnificatPentecost#1}
   \smallskip
   \benedicamusdomino{}
@@ -50,7 +50,9 @@
 {\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.455\linewidth}]{2}}
 %\def\printaftercommonvespers{\needspace{6\baselineskip}}
 \printvespersafterpentecost{12}}
-\printvespersafterpentecost{13}
+{
+\def\premagnificat{\bigskip}
+\printvespersafterpentecost{13}}
 \printvespersafterpentecost{14}
 \printvespersafterpentecost{15}
 \printvespersafterpentecost{16}
@@ -62,12 +64,21 @@
 \printvespersafterpentecost{17}}
 \printvespersafterpentecost{18}
 {\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}}
+\def\postbenedicamusdomino{\bigskip}
 %\def\premagverses{\vspace{-0.7\baselineskip}}
 \printvespersafterpentecost{19}}
+\bigskip\bigskip
 \printvespersafterpentecost{20}
 \printvespersafterpentecost{21}
+{
+\def\postmagtitle{\medskip}
 \printvespersafterpentecost{22}
+}
+{
+\def\postbenedicamusdomino{\bigskip}
 \printvespersafterpentecost{23}
+}
+\bigskip
 {%\def\prevespers{
  % \let\oldthing=\englishmagantiphon
  % \def\englishmagantiphon{\oldthing\pagebreak}  

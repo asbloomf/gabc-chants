@@ -30,12 +30,14 @@
 \printcommonvespers{}
 
 \printnote{N.B.~From this Sunday until Palm Sunday inclusive, at the \emph{Deus, in adjutórium}, the \emph{Allelúia} is replaced by \emph{Laus tibi, Dómine, Rex æternæ glóriæ}.}
+\bigskip\bigskip
 \def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}}
 \def\precollect{\printvrdirigatur}
 %\let\oldthing=\printhymnnote
 %\def\printhymnnote{\oldthing\bigskip}
 
 %\def\premagverses{\oldneedspace{10\baselineskip}}
+\def\premagtitle{\bigskip\bigskip}
 \printvespersmag[../Lent]{inc-VespersMagnificatSeptuagesima}
 
 \bigskip
@@ -46,11 +48,11 @@
 \section{Sexagesima}
 \label{sexagesima}
 \printcommonvespers{}
+\def\premagtitle{\bigskip}
 \def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.445\linewidth}]{2}}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
 \def\precollect{\printvrdirigatur}
 
-%\def\premagverses{\oldneedspace{18\baselineskip}}
 \printvespersmag[../Lent]{inc-VespersMagnificatSexagesima}
 
 \bigskip
@@ -60,6 +62,7 @@
 {
 \section{Quinquagesima}
 \label{quinquagesima}
+\def\postmagtitle{\oldneedspace{8\baselineskip}}
 \printcommonvespers{}
 \printvespersmag[../Lent]{inc-VespersMagnificatQuinquagesima}
 
@@ -95,7 +98,6 @@
 \def\premagnificat{\needspace{8\baselineskip}}
 \printvespersmag[../Lent]{inc-VespersMagnificatLent1}
 
-\bigskip
 \benedicamusdomino{}
 }
 
@@ -115,7 +117,7 @@
 \printcommemnote{}
 }
 
-\medskip
+\bigskip
 \hrule
 \medskip
 {
@@ -138,7 +140,7 @@
 \printcommemnote{}
 }
 
-\medskip
+\bigskip
 \hrule
 \medskip
 {
@@ -183,7 +185,7 @@
 \printcommemnote{}
 }
 
-\medskip
+\bigskip
 \hrule
 \medskip
 {

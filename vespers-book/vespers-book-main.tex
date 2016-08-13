@@ -17,6 +17,7 @@
 \usepackage{xparse}
 \usepackage{setspace}
 \usepackage{amsfonts}
+\usepackage{refcount}
 
 %\includeonly{inc-grassi}
 \LetLtxMacro{\oldnth}{\nth}
@@ -118,8 +119,9 @@
 	\ifx\printcollectheading\undefined\def\printcollectheading{T}\fi
 	\if\printcollectheading T
 	\oldneedspace{3\baselineskip}
-	\begin{center}{\large Collect.}\end{center}
-	\vspace{-0.4\baselineskip}
+	\medskip
+	{\centering\large Collect.\par}
+	\smallskip
 	\fi
 	\begincollectcols
 	\sloppy
@@ -135,11 +137,13 @@
 }
 \newcommand{\benedicamusdominomaster}[1]{
 	\noindent\printnote{\benedicamusdominoreference{#1}}
+	\ifx\postbenedicamusdomino\undefined\else\postbenedicamusdomino\fi
 	\bigskip
 	\hrule
 }
 \newcommand{\benedicamusdominolentoreaster}{
 	\noindent\printnote{\benedicamusdominoreferencelentoreaster}
+	\ifx\postbenedicamusdomino\undefined\else\postbenedicamusdomino\fi
 	\bigskip
 	\hrule
 }

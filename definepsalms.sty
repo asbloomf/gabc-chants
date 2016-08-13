@@ -837,8 +837,9 @@ five%
     \ifx\printchapterheading\undefined\def\printchapterheading{T}\fi
     \ifx\beginchaptercols\undefined\def\beginchaptercols{\begin{parcolumns}[rulebetween]{2}}\fi
     \if\printchapterheading T
-    \begin{center}{\large\textbf Chapter.}\end{center}
-    \vspace{-0.3\baselineskip}
+    \medskip
+    {\centering\large\textbf Chapter.\par}
+    \smallskip
     \fi
     % default width is 265pt
     % ,colwidths={1=253pt}
@@ -857,8 +858,9 @@ five%
 %TODO: optional no translation
     \ifx\printchapterheading\undefined\def\printchapterheading{T}\fi
     \if\printchapterheading T
-    \begin{center}{\large\textbf Chapter.}\end{center}
-    \vspace{-0.5\baselineskip}
+    \medskip
+    {\centering\large\textbf Chapter.\par}
+    \smallskip
     \fi
     % default width is 265pt
     % ,colwidths={1=253pt}
@@ -880,7 +882,7 @@ five%
     \printgabc[\ifx\prehymn\undefined\else\prehymn\fi]{\small{\asb@line}}{\small{#2}}{#3}{#4} %
     \ifx\prehymntranslation\undefined\else\prehymntranslation\fi%
     \normalsize%\vspace{0pt minus 20pt}
-    \selectlanguage{american}\vspace{-0.85\baselineskip plus 0.4\baselineskip}
+    \selectlanguage{american}\vspace{-0.5\baselineskip}
     \begin{multicols}{2}
     \begin{psalmverses}
     {#5}
@@ -1007,8 +1009,9 @@ five%
     \ifx\nomagtitle\undefined\def\nomagtitle{F}\fi
     \if\nomagtitle F%
     \ifx\premagtitle\undefined\else\premagtitle\fi
-    \begin{center}{\large \canticle.}\end{center}
-    \vspace{-1ex}
+    \medskip
+    {\centering\large \canticle.\par}
+    \smallskip
     \ifx\postmagtitle\undefined\else\postmagtitle\fi
     \fi
 

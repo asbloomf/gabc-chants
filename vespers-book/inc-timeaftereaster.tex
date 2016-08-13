@@ -37,35 +37,28 @@
             \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
         }
     }
-    \newcommand{\printsundaysaftereaster}{
-        \def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
-        \begin{multicols}{2}
-        \noindent\emph{Low Sunday},\dotting p.~\pageref{easter1}\\
+    \newcommand{\printsundaysaftereaster}{%
+        \def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}%
+        \vspace{-0.5\baselineskip}
+        \begin{multicols}{2}%
+        \noindent\emph{Low Sunday}\dotting p.~\pageref{easter1}\\
         \noindent\emph{\nth{2} Sunday after Easter},\dotting p.~\pageref{easter2}\\
-        \emph{\nth{3} Sunday after Easter},\dotting p.~\pageref{easter3}\\
-        \emph{\nth{4} Sunday after Easter},\dotting p.~\pageref{easter4}\\
-        \emph{\nth{5} Sunday after Easter},\dotting p.~\pageref{easter5}\\
-        \emph{Sunday after the Ascension},\dotting p.~\pageref{easter6}
+        \emph{\nth{3} Sunday after Easter}\dotting p.~\pageref{easter3}\\
+        \emph{\nth{4} Sunday after Easter}\dotting p.~\pageref{easter4}\\
+        \emph{\nth{5} Sunday after Easter}\dotting p.~\pageref{easter5}\\
+        \emph{Sunday after the Ascension}\dotting p.~\pageref{easter6}
         \end{multicols}
     }
     \newcommand{\chapterreplacement}{
-        \noindent\begin{centering}
-
-        \emph{Chapter of the Sunday.}
-
-        \end{centering}%
-        \vspace{-\baselineskip}
+        \bigskip
+        {\centering\emph{Chapter of the Sunday.}\par}%
         \printsundaysaftereaster{}
     }
-    \newcommand{\prehymn}{\needspace{18\baselineskip}}
+    \newcommand{\prehymn}{\needspace{24\baselineskip}}
     \newcommand{\magreplacement}{
         \oldneedspace{6\baselineskip}
-        \noindent\begin{centering}
-
-        \emph{Magnificat \& Collect of the Sunday.}
-
-        \end{centering}
-        \vspace{-\baselineskip}
+        \bigskip
+        {\centering\emph{Magnificat \& Collect of the Sunday.}\par}%
         \printsundaysaftereaster{}
         \benedicamusdominoreference{easter}
     }
@@ -78,7 +71,7 @@
     \def\prepsalmtitlefive{\oldneedspace{12\baselineskip}}
     \def\prepsalmfive{\greseteolcustos{manual}}
     \printvespers[../TimeAfterEaster]{inc-SundayAtVespers-PaschalTime}
-    \medskip
+    \bigskip
     \hrule
 }
 
@@ -93,7 +86,7 @@
 \printcommemnote{}
 }
 
-\medskip
+\bigskip
 \hrule
 \medskip
 {
@@ -150,8 +143,12 @@
 \subtitle{\nth{1} Class, White or Gold}
 \subtitle{I \& II Vespers}
 
+\def\postpsalmtitlethree{\needspace{18\baselineskip}}
+\def\prepsalmthreeverses{}
+\def\preantfive{\needspace{12\baselineskip}}
+\def\prevr{\needspace{12\baselineskip}}
 \def\premagnificat{\oldneedspace{7\baselineskip}}
-\def\premagverses{\greseteolcustos{manual}}
+\def\premagverses{\greseteolcustos{manual}\oldneedspace{18\baselineskip}}
 \def\begincollectcols{%\vspace{-0.5\baselineskip}
 \begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
 \def\definevesperspropers{\input{\gabcfolder/inc-Ascension-2Vespers}
@@ -168,7 +165,7 @@
 
 \def\commemorations{If today is April 30 or May 1, \emph{First Vespers of St Joseph the Worker} is commemorated as on page \pageref{stjoseph-worker-commem}.}
 \printcommemnote[1]{}
-\medskip
+\bigskip
 \hrule
 }
 
@@ -185,6 +182,7 @@
     \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
 }
 \def\precollect{\printvrmanenobiscum}
+\def\premagtitle{\bigskip\bigskip}
 %\def\premagverses{\pagebreak}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatSundayAfterAscension}
 \benedicamusdomino{}

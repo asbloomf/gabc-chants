@@ -49,13 +49,13 @@
   \def\maganttranslation{\oldthing\vspace{-0.5\baselineskip}}
 }
 \def\vesperspropersaltnote{At II Vespers of Christmas:}
-\def\vesperspropersnote{At II Vespers of the Sunday within the Octave of Christmas:}
+\def\vesperspropersnote{\needspace{4\baselineskip}At II Vespers of the Sunday within the Octave of Christmas:}
 \def\prepsalmthree{\needspace{8\baselineskip}}
 \def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
 \def\prerepeatantiphonthree{\vspace{-0.85\baselineskip}}
 \def\prechapter{\vspace{-1\baselineskip}}
 \def\premag{\def\noeuouae{T}}
-\def\premagtitle{\vspace{-0.3\baselineskip}}
+%\def\premagtitle{\vspace{-0.3\baselineskip}}
 \def\premagverses{\greseteolcustos{manual}}
 \def\hymnlabel{hymn-jesuredemptoromnium}
 \input{../Christmas/inc-JesuRedemptorOmnium}
@@ -119,7 +119,8 @@
 \def\hymnlabel{hymn-jesudulcismemoria}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.425\linewidth}]{2}}
 %\def\prepsalmtitlefive{\vspace{\baselineskip}}
-\def\prehymn{\needspace{12\baselineskip}}
+\def\prechapter{\vspace{-0.5\baselineskip}}
+\def\prehymn{\needspace{10\baselineskip}}
 \printvespers[../HolyName]{inc-HolyName-common}
 
 \benedicamusdomino[2]{}
@@ -165,9 +166,9 @@
 \subtitle{I \& II Vespers}
 %\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43825\linewidth}]{2}}
 
-\def\preanttwo{\oldneedspace{8\baselineskip}}
-\def\prepsalmtitletwo{\vspace{-0.1\baselineskip}}
-\def\prerepeatantiphontwo{}
+\def\preanttwo{\oldneedspace{12\baselineskip}}
+%\def\prepsalmtitletwo{\vspace{-0.1\baselineskip}}
+%\def\prerepeatantiphontwo{}
 %\def\prerepeatantiphonthree{}
 %\def\prepsalmtitlethree{\vspace{-1.5\baselineskip}}
 %\def\prepsalmtitlefive{\vspace{-1.5\baselineskip}}
@@ -178,7 +179,7 @@
   \def\antthreetranslation{\vspace{-0.1\baselineskip}\oldthingb\vspace{-1\baselineskip}}%
   \let\oldthingc\antfivetranslation
   \def\antfivetranslation{\vspace{-0.4\baselineskip}\oldthingc\vspace{-0.8\baselineskip}}%
-  \def\prehymntranslation{\vspace{-0.3\baselineskip}}
+  %\def\prehymntranslation{\vspace{-0.3\baselineskip}}
   \def\prehymn{\vfil}
 }
 \printvespers[../HolyFamily]{inc-HolyFamily-Vespers2}
