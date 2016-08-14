@@ -2,11 +2,39 @@
 	\label{sundayvespers}
 	\chapter{Sunday at Vespers}
 	\section{Sunday at Vespers throughout the year}
+\newcommand{\includelilypond}[1]{
+  \noindent
+  \import{../misc/}{#1}%
+}
+\def\betweenLilyPondSystem#1{
+  \ifnum#1>1
+    \vfil\noindent
+    %\linebreak
+    %\bigskip
+  \else
+    \linebreak
+  \fi
+  %\vspace{0.5\baselineskip}
+}
+\def\printvrdirigatur{
+  \def\vrlinebreak{T}
+  \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
+}
+\def\printvrdirigaturnote{
+	\Vbar{}~Dirigátur Dómine orátio mea.
+
+	\Rbar{}~Sicut incénsum in conspéctu tuo.
+
+	\emph{For chant, see page \pageref{vr-dirigatur}.}
+	\bigskip
+}
+
 	\def\printfullhymn{
 	    {
 	    	\oldneedspace{5\baselineskip}
 	    	\label{hymn-luciscreator}
 	        \printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
+			\printvrdirigaturnote{}
 	        \input{\gabcfolder/inc-hymn-LucisCreatorOptime2}
 			{
 				\def\annot{\small{Hymn.}}
@@ -14,8 +42,7 @@
 				\alsetinitialspacing{\hymninitial}
 				\normalsize
 				\oldneedspace{5\baselineskip}
-				\begin{center}\addfontfeature{Numbers=Lining}\textbf{2.~Another Chant (ad libitum).}\end{center}
-
+				{\centering\addfontfeature{Numbers=Lining}\textbf{2.~Another Chant (ad libitum).}\par}
 				\gregorioscore{\gabcfolder/\hymntex}
 			}
 			{
@@ -24,18 +51,46 @@
 				\alsetinitialspacing{\hymninitial}
 				\normalsize
 				\oldneedspace{5\baselineskip}
-				\begin{center}\addfontfeature{Numbers=Lining}\textbf{3.~Another Chant.}\end{center}
+				{\centering\addfontfeature{Numbers=Lining}\textbf{3.~Another Chant.}\par}
 
 				\gregorioscore{\gabcfolder/\hymntextwo}
 			}
-
-			\bigskip\bigskip
-				\oldneedspace{10\baselineskip}
-
-	        \def\vrlinebreak{T}
-	        \label{vr-dirigatur}
-	        \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
+			\bigskip
+		  \label{vr-dirigatur}
+		  \printvrdirigatur{}
 	    }
+	    \vfil\noindent
+	    {\centering\addfontfeature{Numbers=Lining}\textbf{4. Chant alternating with polyphony by Victoria.}\par}
+			\def\annot{\small{Hymn.}}
+			\def\annottwo{\small{8.}}
+			\alsetinitialspacing{L}
+	    \noindent\gabcsnippet{
+	    (c3)LU(e)cis(fh) Cre(h)á(hg)tor(fe) óp(h)ti(i)me,(gvFE.) (,)
+Lú(hi)cem(jh) di(i)é(hvGF')rum(g) pró(g')fe(f)rens,(e.) (;)
+Pri(e)mór(fh)di(h)is(hg) lú(fe)cis(h) nó(i)væ(gvFE.) (,)
+Mún(hi)di(jh) pá(i)rans(hf) o(g)rí(fg)gi(f)nem :(e.) (::) (e+)
+	    }
+	    \vfil\noindent
+\includelilypond{lucis-creator-optime-systems-v2}%
+\gresetinitiallines{0}
+\gabcsnippet{
+(c3)3. Ne(e) mens(fh) gra(h)vá(hg)ta(fe) crí(h)mi(i)ne,(gvFE.) (,)
+Ví(hi)tæ(jh) sit(i) éx(hvGF')sul(g) mú(g')ne(f)re,(e.) (;)
+Dum(e) nil(fh) per(h)én(hg)ne(fe) có(h)gi(i)tat,(gvFE.) (,)
+Se(hi)sé(jh)que(i) cúl(hf)pis(g) íl(fg)li(f)gat.(e.) (::) (e+)
+}
+\vfil\noindent
+\includelilypond{lucis-creator-optime-systems-v4}%
+\bigskip
+\gabcsnippet{
+	(c3)5. Præ(e)sta,(fh) Pá(h)ter(hg) pi(fe)ís(h)si(i)me,(gvFE.) (,)
+Pa(hi)trí(jh)que(i) cóm(hvGF')par(g) U(g')ni(f)ce,(e.) (;)
+Cum(e) Spí(fh)ri(h)tu(hg) Pa(fe)rá(h)cli(i)to,(gvFE.) (,)
+Ré(hi)gnans(jh) per(i) óm(hf)ne(g) s<sp>'ae</sp>(fg)cu(f)lum.(e.) (::) 
+A(efe)men.(d.e.) (::)
+}
+	\bigskip
+	\printvrdirigatur{}
 	}
 	\def\vrlinebreak{T}
 	\newcommand{\printsundaysthroughtheyear}{
