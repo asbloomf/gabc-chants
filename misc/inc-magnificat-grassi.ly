@@ -48,7 +48,7 @@ sopWords = \lyricmode {
 
 altoMusic = \relative c'' {
   \cadenzaOn
-  \relative c' { \stemOff \new CueVoice { f4 } \stemOn }
+  \relative c' { \stemOff \new CueVoice { s4 } \stemOn }
   a\breve \bar "|" \cadenzaOff
   g2 a4 bes4 |
   bes( a) bes2 | \cadenzaOn \bar "||"
@@ -56,7 +56,7 @@ altoMusic = \relative c'' {
   bes2 bes4( bes) |
   bes4( a g2) |
   a1 \bar "||"
-  \relative c' { \stemOff \new CueVoice { f4 } }
+  \relative c' { \stemOff \new CueVoice { s4 } }
 }
 
 tenorMusic = \relative c'' {
@@ -87,7 +87,7 @@ tenorAsBassMusic = \relative c'' {
 
 bassMusic = \relative c' {
   \cadenzaOn
-  \relative c { \stemOff \new CueVoice { f4 } \stemOn }
+  \relative c { \stemOff \new CueVoice { s4 } \stemOn } 
   f,\breve \bar "|" \cadenzaOff
   c2 f4 f |
   f2 bes\fermata | \cadenzaOn \bar "||"
@@ -95,7 +95,7 @@ bassMusic = \relative c' {
   bes'4( c8 d) g,4( bes) |
   c2( c2) |
   f,1\fermata  \bar "||"
-  \relative c { \stemOff \new CueVoice { f4 } }
+  \relative c { \stemOff \new CueVoice { s4 } }
 }
 
 hiddenMusic = \relative c'' {

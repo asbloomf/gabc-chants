@@ -50,7 +50,7 @@ sopWords = \lyricmode {
 
 altoMusic = \relative c' {
   \cadenzaOn
-  \relative c' { \stemOff \new CueVoice { e4 } \stemOn }
+  \relative c' { \stemOff \new CueVoice { s4 } \stemOn }
   e\breve \bar "|" \cadenzaOff
   g2 g4 |
   \set melismaBusyProperties = #'()
@@ -61,12 +61,12 @@ altoMusic = \relative c' {
   a4 d, e |
   e2 e4 |
   dis2. \bar "||"
-  \relative c'' { \stemOff \new CueVoice { g4 } }
+  \relative c'' { \stemOff \new CueVoice { s4 } }
 }
 
 tenorMusic = \relative c' {
   \cadenzaOn
-  \relative c { \stemOff \new CueVoice { e4 } \stemOn }
+  \relative c { \stemOff \new CueVoice { s4 } \stemOn }
   b\breve \bar "|" \cadenzaOff
   b2 b4 |
   \set melismaBusyProperties = #'()
@@ -77,7 +77,7 @@ tenorMusic = \relative c' {
   c4 b a |
   g2 g4 |
   b2. \bar "||"
-  \relative c' { \stemOff \new CueVoice { g4 } }
+  \relative c' { \stemOff \new CueVoice { s4 } }
 }
 
 bassMusic = \relative c'' {

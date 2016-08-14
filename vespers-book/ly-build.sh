@@ -1,4 +1,8 @@
+#!/bin/bash
+
 shopt -s nullglob
+
+dirs=( ../MarianAntiphons ../misc )
 
 function usage
 {
@@ -20,16 +24,22 @@ while [ "$1" != "" ]; do
 done
 
 
-pushd ../MarianAntiphons
+for dir in "${dirs[@]}";
+do
+  pushd $dir
 
-for i in *.ly; do
-    ext="${i##*.}"
-    fname="${i%.*}"
-    echo ${fname}
-    if [ "${fname}.pdf" -ot "${fname}.ly" ] || [ "$force" = "1" ]; then
-        lilypond -dno-point-and-click -dgui --bigpdfs "${fname}.ly" &
-    fi
+  for i in *.ly; do
+      ext="${i##*.}"
+      fname="${i%.*}"
+      if [[ $fname != inc* ]];
+      then
+        echo ${fname}
+        if [ "${fname}.pdf" -ot "${fname}.ly" ] || [ "$force" = "1" ]; then
+            lilypond -dno-point-and-click -dgui --bigpdfs "${fname}.ly" &
+        fi
+      fi
+  done
+
+  popd
 done
-
-popd
 wait

@@ -50,24 +50,24 @@ sopWords = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  \relative c' { \stemOff \new CueVoice { d4 } \stemOn }
+  \relative c' { \stemOff \new CueVoice { s4 } \stemOn }
   d d( f) | f1 | f2 f2 |
   \set melismaBusyProperties = #'()
   \slurDashed
   g2( g) | g2( f) | f( e) \bar "||"
   f1 | f2 f | g2( g)( | g) g ~ | g f( | f)( e) | f1 \bar "||"
-  \relative c' { \stemOff \new CueVoice { f4 } }
+  \relative c' { \stemOff \new CueVoice { s4 } }
 }
 
 tenorMusic = \relative c' {
-  \relative c { \stemOff \new CueVoice { d4 } \stemOn }
+  \relative c { \stemOff \new CueVoice { s4 } \stemOn }
   bes bes( c) | c1 | d2 c | bes4(
   \set melismaBusyProperties = #'()
   \slurDashed
   c)( d2) | c( c) | c( c) \bar "||"
   \slurSolid
   c1 | d2 c | bes4(\slurDashed c)( d2)( c1)( c) | c2( c2) | c1 \bar "||"
-  \relative c { \stemOff \new CueVoice { f4 } }
+  \relative c { \stemOff \new CueVoice { s4 } }
 }
 
 bassMusic = \relative c' {
