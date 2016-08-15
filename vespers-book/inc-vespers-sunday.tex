@@ -17,6 +17,7 @@
   %\vspace{0.5\baselineskip}
 }
 \def\printvrdirigatur{
+	\label{vr-dirigatur}
   \def\vrlinebreak{T}
   \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
 }
@@ -45,6 +46,8 @@
 				{\centering\addfontfeature{Numbers=Lining}\textbf{2.~Another Chant (ad libitum).}\par}
 				\gregorioscore{\gabcfolder/\hymntex}
 			}
+			\bigskip
+		  \printvrdirigaturnote{}
 			{
 				\def\annot{\small{Hymn.}}
 				\def\annottwo{\small{\hymntwolinetwo}}
@@ -56,10 +59,10 @@
 				\gregorioscore{\gabcfolder/\hymntextwo}
 			}
 			\bigskip
-		  \label{vr-dirigatur}
-		  \printvrdirigatur{}
+		  \printvrdirigaturnote{}
 	    }
 	    \vfil\noindent
+			\oldneedspace{8\baselineskip}
 	    {\centering\addfontfeature{Numbers=Lining}\textbf{4. Chant alternating with polyphony by Victoria.}\par}
 			\def\annot{\small{Hymn.}}
 			\def\annottwo{\small{8.}}
@@ -89,7 +92,16 @@ Cum(e) Spí(fh)ri(h)tu(hg) Pa(fe)rá(h)cli(i)to,(gvFE.) (,)
 Ré(hi)gnans(jh) per(i) óm(hf)ne(g) s<sp>'ae</sp>(fg)cu(f)lum.(e.) (::) 
 A(efe)men.(d.e.) (::)
 }
-	\bigskip
+    
+    {
+    	\normalsize%\vspace{0pt minus 20pt}
+      \selectlanguage{american}\vspace{-\baselineskip}
+      \begin{multicols}{2}
+      \begin{psalmverses}
+      {\hymntranslation}
+      \end{psalmverses}
+      \end{multicols}
+    }
 	\printvrdirigatur{}
 	}
 	\def\vrlinebreak{T}
