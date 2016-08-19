@@ -161,17 +161,17 @@ Tenebrae:
   - name: Tenebrae Thursday (no margins)
     url: pdfs/Tenebrae/tenebrae_thursday-crop.pdf
   - name: Tenebrae Friday
-    url: pdfs/Tenebrae/tenebrae_friday-crop.pdf
-  - name: Tenebrae Friday (no margins)
     url: pdfs/Tenebrae/tenebrae_friday.pdf
+  - name: Tenebrae Friday (no margins)
+    url: pdfs/Tenebrae/tenebrae_friday-crop.pdf
   - name: Tenebrae Saturday
-    url: pdfs/Tenebrae/tenebrae_saturday-crop.pdf
-  - name: Tenebrae Saturday (no margins)
     url: pdfs/Tenebrae/tenebrae_saturday.pdf
+  - name: Tenebrae Saturday (no margins)
+    url: pdfs/Tenebrae/tenebrae_saturday-crop.pdf
   - name: Prophecy Tone
-    url: pdfs/Tenebrae/tenebrae_prophecyTone-crop.pdf
-  - name: Prophecy Tone (no margins)
     url: pdfs/Tenebrae/tenebrae_prophecyTone.pdf
+  - name: Prophecy Tone (no margins)
+    url: pdfs/Tenebrae/tenebrae_prophecyTone-crop.pdf
 Easter:
   - name: Easter Vespers
     url: pdfs/Easter/EasterVespers.pdf
