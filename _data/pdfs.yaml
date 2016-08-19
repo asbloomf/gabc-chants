@@ -1,3 +1,12 @@
+Books:
+  - name: Vespers for Sundays & Holy Days
+    url: pdfs/vespers-book/vespers-book.pdf
+  - name: Vespers for Sundays & Holy Days (no margins)
+    url: pdfs/vespers-book/vespers-book-crop.pdf
+  - name: Tenebrae
+    url: pdfs/Tenebrae/tenebrae_full.pdf
+  - name: Tenebrae (no margins)
+    url: pdfs/Tenebrae/tenebrae_full-crop.pdf
 misc:
   - name: 02182012
     url: pdfs/misc/02182012.pdf
@@ -145,13 +154,23 @@ Lent:
 Tenebrae:
   - name: Tenebrae
     url: pdfs/Tenebrae/tenebrae_full.pdf
+  - name: Tenebrae (no margins)
+    url: pdfs/Tenebrae/tenebrae_full-crop.pdf
   - name: Tenebrae Thursday
     url: pdfs/Tenebrae/tenebrae_thursday.pdf
+  - name: Tenebrae Thursday (no margins)
+    url: pdfs/Tenebrae/tenebrae_thursday-crop.pdf
   - name: Tenebrae Friday
+    url: pdfs/Tenebrae/tenebrae_friday-crop.pdf
+  - name: Tenebrae Friday (no margins)
     url: pdfs/Tenebrae/tenebrae_friday.pdf
   - name: Tenebrae Saturday
+    url: pdfs/Tenebrae/tenebrae_saturday-crop.pdf
+  - name: Tenebrae Saturday (no margins)
     url: pdfs/Tenebrae/tenebrae_saturday.pdf
   - name: Prophecy Tone
+    url: pdfs/Tenebrae/tenebrae_prophecyTone-crop.pdf
+  - name: Prophecy Tone (no margins)
     url: pdfs/Tenebrae/tenebrae_prophecyTone.pdf
 Easter:
   - name: Easter Vespers
