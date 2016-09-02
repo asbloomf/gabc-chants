@@ -1,0 +1,114 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+
+\newcommand{\heading}{St Joseph the Worker at II Vespers.}
+\sloppy
+
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+\usepackage{../definepsalms}
+
+\newcommand{\predeusinadjutorium}{%
+\smallskip
+\large
+\grechangestaffsize{15}
+}
+\def\deusinadjutoriumsolemn{T}
+\def\includelaustibi{F}
+
+\newcommand{\preantone}{\grechangestaffsize{17}
+\large
+\def\breakbeforeEuouae{T}
+}
+\newcommand{\antoneinitialsize}{40}
+\newcommand{\prepsalmone}{%
+%\vspace{-1.5ex}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preanttwo}{\grechangestaffsize{17}
+%\greseteolcustos{manual}
+\large
+}
+\newcommand{\anttwoinitialsize}{40}
+\newcommand{\prepsalmtwo}{%
+\normalsize
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantthree}{\grechangestaffsize{17}
+\large
+%\greseteolcustos{manual}
+}
+\newcommand{\antthreeinitialsize}{40}
+\newcommand{\prepsalmthree}{%
+\normalsize
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantfour}{\grechangestaffsize{15}
+%\greseteolcustos{manual}
+%\large
+\normalsize
+}
+\newcommand{\antfourinitialsize}{34}
+\newcommand{\prepsalmfour}{%
+%\vspace{-1ex}
+%\grechangestaffsize{15}
+\normalsize
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\nopagebreakbeforepsalmfive{T}
+%\def\pagebreakafterpsalmfive{T}
+\newcommand{\preantfive}{\grechangestaffsize{15}
+%\greseteolcustos{manual}
+\normalsize
+}
+
+\newcommand{\antfiveinitialsize}{34}
+\newcommand{\psalmfivetranslationsmall}{T}
+\newcommand{\prepsalmfive}{%
+%\vspace{-1ex}
+%\grechangestaffsize{15}%
+\normalsize%
+}
+\newcommand{\prepsalmfiveverses}{\smallskip}
+\def\pagebreakafterpsalmfive{T}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\pagebreakbeforemagnificat}{F}
+
+%\def\vrnospace{T}
+%\def\prevr{\pagebreak}
+
+\newcommand{\premag}{
+\large
+\grechangestaffsize{17}
+}
+%\newcommand{\premagtwo}{
+%\grechangestaffsize{16}
+%}
+\newcommand{\magfontsize}{33}
+\def\magoneline{T}
+\newcommand{\premagverses}{
+  %\greseteolcustos{manual}
+  \grechangestaffsize{15}
+  \normalsize
+  %\pagebreak
+}
+
+\definebenedicamusdomino{1}{2}
+
+\input{inc-StJosephWorker}
+\input{inc-StJosephWorker-2Vespers}
+\input{../inc_header}
+\input{../FullVespers-test}

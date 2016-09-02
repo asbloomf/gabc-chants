@@ -97,25 +97,28 @@
     \bigskip
 
   \fi%
-  \ifx\hymntex\undefined
-    {\vspace{-1ex plus 1ex}
-    \emph{Hymn.} \hymn{}.%
-    \ifx\vrtex\undefined\else
-      \vfill
-    \fi}
-  \else{
-    {%
-    \ifx\pagebreakbeforehymn\undefined\def\pagebreakbeforehymn{F}\fi
-    \if\pagebreakbeforehymn T%
-      \pagebreak
-    \else%
-      \hrule
-      \bigskip
-    \fi
-    \printhymn{\hymnlinetwo}{\hymninitial}{\hymntex}{\hymntranslation}
-    \medskip
-    \selectlanguage{latin}
-  }\fi
+  \ifx\hymnreplacement\undefined
+    \ifx\hymntex\undefined
+      {\vspace{-1ex plus 1ex}
+      \emph{Hymn.} \hymn{}.%
+      \ifx\vrtex\undefined\else
+        \vfill
+      \fi}
+    \else{
+      {%
+      \ifx\pagebreakbeforehymn\undefined\def\pagebreakbeforehymn{F}\fi
+      \if\pagebreakbeforehymn T%
+        \pagebreak
+      \else%
+        \hrule
+        \bigskip
+      \fi
+      \printhymn{\hymnlinetwo}{\hymninitial}{\hymntex}{\hymntranslation}
+      \medskip
+      \selectlanguage{latin}
+    }\fi
+  \else\hymnreplacement
+  \fi
 %
 \ifx\vrtex\undefined%
     {\Vbar{}~\vr{}.\ifx\magantundefined\else
@@ -177,8 +180,6 @@
 
 \vfil
 \else%
-\hrule
-\smallskip
 \begin{center}{\large Collect.}\end{center}
 % default width is 265pt
 %\sloppy
@@ -225,8 +226,8 @@
 %\redlines
 
 % We set VII above the initial.
-{\gresetfirstlineaboveinitial{\annot}{\annot}
-\setsecondannotation{\annottwo}
+{\greannotation{\annot}
+\greannotation{\annottwo}
 
 % We type a text in the top right corner of the score:
 %\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
@@ -260,8 +261,6 @@
 %%%%%%%%%%%%%commemoration end
 %
 \bigskip
-\hrule
-\bigskip
 \fi
 \fi % end not only psalms
 %
@@ -269,12 +268,9 @@
 \ifx\benedicamusdominogrefactor\undefined\else\grechangestaffsize{\benedicamusdominogrefactor}\fi
 \ifx\benedicamusdominotex\undefined\else
 \def\annot{\small{\benedicamusdominotone}}
-%\def\annottwo{}
 \alsetinitialspacing{B}
-\gresetfirstlineaboveinitial{\annot}{\annot}
-\setsecondannotation{}
-\setspaceafterinitial{0mm}
-\setspacebeforeinitial{0mm}
+%\greannotation{\annot}
+%\greannotation{}
 \ifx\benedicamusdominointro\undefined\else
 \hspace{3ex}\emph{\benedicamusdominointro:}\\
 \fi
@@ -288,10 +284,7 @@
 \def\annot{\small{\benedicamusdominotonealt}}
 %\def\annottwo{}
 \alsetinitialspacing{B}
-\gresetfirstlineaboveinitial{\annot}{\annot}
-\setsecondannotation{}
-\setspaceafterinitial{0mm}
-\setspacebeforeinitial{0mm}
+%\greannotation{\annot}
 \greseteolcustos{manual}%
 \gregorioscore{\benedicamusdominotexalt}
 }
@@ -300,9 +293,10 @@
 
 \ifx\includefideliumanimae\undefined\else\if\includefideliumanimae T%
 \bigskip
+{\setlength{\parindent}{0pt}
 \begin{parcolumns}[rulebetween]{2}
 \selectlanguage{latin}%
-\colchunk{\Vbar{}~Fidélium ánimæ per misericórdiam Déi requiéscant in páce.}
+\colchunk{\Vbar{}~Fidélium ánimæ per misericórdiam Déi requiéscant in\\páce.}
 \selectlanguage{american}%
 \colchunk{\Vbar{}~May the souls of the faithful departed through the mercy of God rest in peace.}
 \selectlanguage{latin}%
@@ -310,6 +304,7 @@
 \colchunk{\Rbar{}~Amen.}
 \colchunk{\Rbar{}~Amen.}
 \end{parcolumns}
+}
 \fi\fi
 \vspace{-18pt} %this is really only needed if the benedicamus domino is a full line. so I should really put it in there!
 \end{document}
