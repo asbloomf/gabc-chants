@@ -1,0 +1,48 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\newcommand{\heading}{The Circumcision of Our Lord at 1st Vespers.}
+\sloppy
+
+\newcommand{\predeusinadjutorium}{%
+%\smallskip
+\large
+\grechangestaffsize{15}
+}
+\def\deusinadjutoriumsolemn{F}
+\def\includelaustibi{F}
+
+\input{Circumcision-psalms}
+
+\newcommand{\hymn}{Jesu Redémptor ómnium}
+\def\prevr{\pagebreak}
+%\newcommand{\vr}{Notum fecit Dóminus}
+%\def\vrnospace{T}
+
+\newcommand{\premag}{
+\large
+\grechangestaffsize{15}
+}
+%\newcommand{\premagtwo}{
+%\grechangestaffsize{16}
+%}
+\newcommand{\magfontsize}{33}
+\def\magoneline{T}
+\newcommand{\premagverses}{\greseteolcustos{manual}\grechangestaffsize{15}
+\normalsize
+%\pagebreak
+}
+
+\definebenedicamusdomino{1}{1}
+
+\input{inc-Circumcision-Vespers}
+\input{inc-Circumcision-Vespers1}
+\input{../inc_header}
+\input{../FullVespers-test}
+
+%\input{../FullVespers}
