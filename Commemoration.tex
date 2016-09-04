@@ -5,7 +5,10 @@
 %\usepackage{graphicx} % support the \includegraphics command and options
 \usepackage[dvips]{geometry} % See geometry.pdf to learn the layout options. There are lots.
 \geometry{letterpaper} % or letterpaper (US) or a5paper or....
-\usepackage{gregoriotex} % for gregorio score inclusion
+\usepackage[allowdeprecated=false]{gregoriotex} % for gregorio score inclusion
+\ifdefined\gresetcompilegabc
+    \gresetcompilegabc{auto}
+\fi
 
 % If you use usual TeX fonts, here is a starting point:
 %\usepackage{palatino}
@@ -75,8 +78,8 @@
 %\redlines
 
 % We set VII above the initial.
-{\gresetfirstlineaboveinitial{\annot}{\annot}
-\setsecondannotation{\annottwo}
+{%\greannotation{\annot}
+%\greannotation{\annottwo}
 
 % We type a text in the top right corner of the score:
 %\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
@@ -85,14 +88,17 @@
 %\normalsize
 %\fontsize{12.35}{12.35}\selectfont
 \large
-\gregorioscore{\commaganttex}}%
+\gregorioscore{\commaganttex}
+}%
 %\bigskip
 %\vspace{-4ex}
 \translation[]{\englishcommagantiphon}
 \bigskip
 \hrule
 \bigskip\bigskip
-{\large\greseteolcustos{manual}\gregorioscore{\commvrtex}}
+{
+\gresetinitiallines{0}
+\large\greseteolcustos{manual}\gregorioscore{\commvrtex}}
 \vspace{0pt minus 36pt}
 \translation[]{
 \Vbar{}~\commvtranslation{}\\
