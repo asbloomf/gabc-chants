@@ -1,0 +1,519 @@
+{
+\makeatletter  
+\newcounter{score}
+\newcounter{tabstop}[score]
+\newcommand{\grealign}{%
+  \@bsphack%
+  \ifgre@boxing\else%
+    \kern\gre@dimen@begindifference%
+    \stepcounter{tabstop}%
+    \expandafter\zsavepos{stop-\thescore-\thetabstop}%
+    \kern-\gre@dimen@begindifference%
+  \fi%
+  \@esphack%
+}
+
+\newcommand{\setstops}{%
+  \gdef\nstabbing@stops{%
+    \checkoddpage
+    \hspace*{-\ifoddpage\oddsidemargin\else\evensidemargin\fi}\hspace{-1in}%
+    \hspace*{\zposx{stop-\thescore-1} sp}\=%
+  }%
+  \count@=\@ne
+  \loop\ifnum\count@<\value{tabstop}%
+    \begingroup\edef\x{\endgroup
+      \noexpand\g@addto@macro\noexpand\nstabbing@stops{%
+        \noexpand\hspace{-\noexpand\zposx{stop-\thescore-\the\count@} sp}%
+        \noexpand\hspace{\noexpand\zposx{stop-\thescore-\the\numexpr\count@+1} sp}\noexpand\=%
+      }%
+    }\x
+    \advance\count@\@ne
+  \repeat
+  \nstabbing@stops\kill
+}
+\makeatother
+
+\newenvironment{nstabbing}
+  {\setlength{\topsep}{0pt}%
+   \setlength{\partopsep}{0pt}%
+   \tabbing%
+   \setstops}
+  {\endtabbing\stepcounter{score}}
+
+\section{Prayers for the Forty Hours}
+
+\emph{At the Exposition of the Blessed Sacrament~:}
+
+After Mass, the Celebrant, at the sedilia, having taken off the
+chasuble and maniple and put on a cope, puts incense into two
+thuribles, giving no blessing.
+
+Kneeling on the lowest step of the altar, he incenses the Blessed
+Sacrament. Then he receives the humeral veil.
+
+The Procession follows, while \emph{Pánge, lingua} is sung.
+
+After the Procession, the Deacon places the Blessed Sacrament on
+the throne, the Celebrant meanwhile putting off the humeral veil.
+\emph{Tántum ergo Sacraméntum} is then sung; at \emph{Genitóri} the Blessed
+Sacrament is incensed in the usual way.
+
+When \emph{Tántum ergo} is ended, \emph{Pánem de cælo} etc. is not said, but
+the Cantors at once begin the Litany of the Saints, which follows.
+
+\smallskip{}
+
+\emph{On the day of Deposition~:}
+
+After Mass, the Celebrant, at the sedilia, takes off chasuble and
+maniple, and puts on a cope. The Ministers lay aside their
+maniples; and all return to the altar.
+
+The Litany of the Saints is sung, and the following prayer as far
+as the \Vbar{}~\emph{Dómine exáudi oratiónem meam} inclusive.
+
+The Celebrant stands and puts incense into two thuribles, giving
+no blessing. He incenses the Blessed Sacrament, and receives the
+humeral veil.
+
+The Procession follows while \emph{Pánge, lingua} is sung.
+
+After the Procession the Blessed Sacrament is placed on the altar,
+and \emph{Tántum ergo} is sung. At \emph{Genitóri} the Celebrant puts incense
+into a thurible, and incenses the Blessed Sacrament.
+
+At the end of \emph{Tántum ergo} there follows \emph{Pánem de cælo} etc. The
+Celebrant stands, and (omitting \emph{Dóminus vobíscum}) sings all the
+prescribed prayers. Afterwards he again kneels down and sings the
+\Vbar{}~\emph{Dómine exáudi} etc.  The Cantors sing \emph{Exáudiat nos} etc., and the
+Celebrant adds \emph{Fidélium ánimæ} etc. on a lower note.
+
+Finally the Celebrant receives the humeral veil and gives
+Benediction in the usual way.
+
+%\def\gabcfolder{../litany}
+\oldneedspace{8\baselineskip}
+
+{
+\def\gabcfolder{../CorpusChristi}
+\printgabc{Hymn.}{3.}{P}{hymn-PangeLingua}
+}
+
+%\def\translationmargin{68pt}
+\translation[]{
+\begin{multicols}{2}
+\begin{psalmverses}
+{\item Sing, my tongue, the Saviour's glory
+Of His Flesh the mystery sing;
+Of His Blood all price exceeding,
+Shed by our immortal King,
+Destined for the world's redemption
+From a noble womb to spring.
+\item Of a pure and spotless Virgin,
+Born for us on earth below,
+He, as Man with man conversing,
+Stayed the seeds of truth to sow.
+Then He closed in solemn order
+Wondrously His life of woe.
+\item On the night of that last supper,
+Seated with His chosen band,
+He, the paschal victim eating,
+First fulfils the Law's command;
+Then as food to all His brethren
+Gives Himself with His own Hand.
+\item Word made Flesh the bread of nature
+By His word to Flesh He turns;
+Wine into His Blood He changes:
+What though sense no change discerns,
+Only be the heart in earnest,
+Faith her lesson quickly learns.
+\item Down in adoration falling,
+Lo, the sacred Host we hail,
+Lo, o'er ancient forms departing
+Newer rites of grace prevail:
+Faith for all defects supplying,
+Where the feeble senses fail.
+\item To the everlasting Father
+And the Son who reigns on high
+With the Holy Ghost proceeding
+Forth from each eternally,
+Be salvation, honour, blessing,
+Might and endless majesty.
+Amen.}
+\end{psalmverses}
+\end{multicols}
+}
+{
+\gresetinitiallines{1}
+%\printgabc{}{}{K}{../litany/litany-kyrie}
+\gregorioscore{../litany/litany-kyrie}
+}
+%\pagebreak
+
+\gresetinitiallines{0}
+\gregorioscore{../litany/Litany-I}%
+\begin{nstabbing}
+\>Fili Redémptor mundi \>\>\>\>\>\textbf{De}-\>us, \>mi\>se\>\textit{ré}\>\textit{re} \>no\>bis.\\
+\>Spí-\>ri-\>tus \>Sancte \>\>\textbf{De}-\>us, \>mi\>se\>\textit{ré}\>\textit{re} \>no\>bis.\\
+\>Sancta \>\>Trínitas \>\>unus \>\textbf{De}-\>us, \>mi\>se\>\textit{ré}\>\textit{re} \>no\>bis.\\
+\end{nstabbing}
+
+\vspace{-0.5\baselineskip}
+\gregorioscore{../litany/Litany-II}
+\begin{nstabbing}
+\>Sancta Dei \>\>\>\textbf{Gé}\>nitrix, \>\>ó\>\textit{ra} \>\textit{pro} \>no\>bis.\\
+\>Sancta Virgo \>\>\>\textbf{vír}gi-num, \>\>\>ó\>\textit{ra} \>\textit{pro} \>no\>bis.\\
+\>Sancte \>\>\>\textbf{Mí}cha-\>\>el, \>ó\>\textit{ra} \>\textit{pro} \>no\>bis.\\
+\>Sancte \>\>\>\textbf{Gá}bri-\>\>el, \>ó\>\textit{ra} \>\textit{pro} \>no\>bis.\\
+\>Sancte \>\>\>\textbf{Rá}pha-\>\>el, \>ó\>\textit{ra} \>\textit{pro} \>no\>bis.\\
+\end{nstabbing}
+
+\vspace{-0.5\baselineskip}
+\gregorioscore{../litany/Litany-III}
+\begin{nstabbing}
+\>Omnes \>sancti beatórum Spirítuum \>\>\>\textbf{ór}dines, \>\>\>o\>rá\>\textit{te} \>\textit{pro} \>no\>bis.\\
+\>Sancte \>Joánnes \>\>Ba-\>\textbf{ptí}-\>\>sta, \>\>o-\>\textit{ra} \>\textit{pro} \>no\>bis.\\
+\>Sancte \>\>\>\>\textbf{Jo}seph, \>\>\>\>o-\>\textit{ra} \>\textit{pro} \>no\>bis.\\
+\>Omnes \>sancti Patriárchæ et Proph-\>\>\>\textbf{é}tæ, \>\>\>o\>rá\>\textit{te} \>\textit{pro} \>no\>bis.\\
+\end{nstabbing}
+
+\vspace{-0.5\baselineskip}
+\gregorioscore{../litany/Litany-IV}%
+\vspace{-\baselineskip}
+\begin{multicols}{2}%
+\noindent
+Sancte \textbf{Pau}le, \hfill o\textit{ra pro} \textbf{nó}bis.\\
+Sancte And\textbf{ré}a, \hfill o\textit{ra}.\\
+Sancte Ja\textbf{có}be, \hfill o\textit{ra}.\\
+Sancte Jo\textbf{án}nes, \hfill o\textit{ra}.\\
+Sancte \textbf{Thó}ma, \hfill o\textit{ra}.\\
+Sancte Ja\textbf{có}be, \hfill o\textit{ra}.\\
+Sancte Phi\textbf{líp}pe, \hfill o\textit{ra}.\\
+Sancte Bartholo\textbf{mǽ}e, \hfill o\textit{ra}.\\
+Sancte Mat\textbf{thǽ}e, \hfill o\textit{ra}.\\
+Sancte \textbf{Sí}mon, \hfill o\textit{ra}.\\
+Sancte Thad\textbf{dǽ}e, \hfill o\textit{ra}.\\
+Sancte Ma\textbf{thí}a, \hfill o\textit{ra}.\\
+Sancte \textbf{Bár}naba, \hfill o\textit{ra}.\\
+Sancte \textbf{Lú}ca, \hfill o\textit{ra}.\\
+Sancte \textbf{Már}ce, \hfill o\textit{ra}.\\
+Omnes sancti Apóstoli et \\
+  \hspace*{1em}Evange\textbf{lí}stæ, \hfill orá\textit{te}.\\
+Omnes sancti Discípuli \\
+  \hspace*{1em}\textbf{Dó}mini, \hfill orá\textit{te}.\\
+Omnes sancti Inno\textbf{cén}tes, \hfill orá\textit{te}.\\
+Sancte \textbf{Sté}phane,  \hfill o\textit{ra}.\\
+Sancte Lau\textbf{rén}ti,  \hfill o\textit{ra}.\\
+Sancte Vin\textbf{cén}ti,  \hfill o\textit{ra}.\\
+Sancti Fabiáne et Sebasti\textbf{ǽ}ne, \hfill orá\textit{te}.\\
+Sancti Joánnes et \textbf{Páu}le, \hfill orá\textit{te}.\\
+Sancti Cósma et Dami\textbf{á}ne, \hfill orá\textit{te}.\\
+Sancti Gervási et Pro\textbf{tá}si, \hfill orá\textit{te}.\\
+Omnes sancti \textbf{Má}rtyres,  \hfill orá\textit{te}.\\
+Sancte Syl\textbf{vé}ster, \hfill o\textit{ra}.\\
+Sancte Gre\textbf{gó}ri,  \hfill o\textit{ra}.\\
+Sancte Am\textbf{bró}si, \hfill o\textit{ra}.\\
+Sancte Augu\textbf{stí}ne, \hfill o\textit{ra}.\\
+Sancte Hie\textbf{ró}nyme, \hfill o\textit{ra}.\\
+Sancte Mar\textbf{tí}ne, \hfill o\textit{ra}.\\
+Sancte Nico\textbf{lá}e, \hfill o\textit{ra}.\\
+Omnes sancti Pontífices et \\
+  \hspace*{1em}Confes\textbf{só}res, \hfill orá\textit{te}.\\
+Omnes sancti Do\textbf{ctó}res, \hfill orá\textit{te}.\\
+Sancte An\textbf{tó}ni, \hfill o\textit{ra}.\\
+Sancte Bene\textbf{dí}cte, \hfill o\textit{ra}.\\
+Sancte Ber\textbf{nár}de, \hfill o\textit{ra}.\\
+Sancte Do\textbf{mí}nice, \hfill o\textit{ra}.\\
+Sancte Fran\textbf{cí}sce, \hfill o\textit{ra}.\\
+Omnes sancti Sacerdótes et \\
+  \hspace*{1em}Le\textbf{ví}tæ, \hfill orá\textit{te}.\\
+Omnes sancti Mónachi et \\
+  \hspace*{1em}Ere\textbf{mí}tæ, \hfill orá\textit{te}.\\
+Sancta María Magde\textbf{lé}na, \hfill o\textit{ra}.\\
+Sancta \textbf{A}gatha, \hfill o\textit{ra}.\\
+Sancta \textbf{Lú}cia, \hfill o\textit{ra}.\\
+Sancta \textbf{A}gnes, \hfill o\textit{ra}.\\
+Sancta Cæ\textbf{cí}lia, \hfill o\textit{ra}.\\
+Sancta Catha\textbf{rí}na, \hfill o\textit{ra}.\\
+Sancta Anas\textbf{tá}sia, \hfill o\textit{ra}.\\
+Omnes sanctæ Vírgines et \\
+  \hspace*{1em}\textbf{Ví}duæ, \hfill orá\textit{te}.\\
+Omnes Sancti et Sanctæ \textbf{De}i, \\
+  \hspace*{1em}\hfill intercédi\textit{te pro} \textbf{nó}bis.
+\end{multicols}
+
+\gregorioscore{../litany/Litany-V}
+\begin{nstabbing}
+\>Pro\>pí-\>\textit{ti}-\>\textit{us} \>\textbf{és}-\>to, \>ex-\>au-\>di \>nos \>Dó\>mi\>ne.\\
+\>\>Ab \>\textit{ómni} \>\>\textbf{má}-\>lo, \>lí-\>be-\>ra \>nos \>Dó\>mi\>ne.
+\end{nstabbing}
+Ab om\textit{ni} \textit{pec}\textbf{cá}to, \hfill líbera nos Dómine.\\
+Ab \textit{i}\textit{ra} \textbf{tú}a, \hfill líbera nos Dómine.\\
+A subitánea et impro\textit{ví}\textit{sa} \textbf{mór}te, \hfill líbera nos Dómine.\\
+Ab insídi\textit{is} \textit{dí}\textbf{á}boli, \hfill líbera nos Dómine.\\
+Ab ira, et ódio, et ómnia mala \textit{vo}\textit{lun}\textbf{tá}te, \hfill líbera nos Dómine.\\
+A spíritu forni\textit{ca}\textit{tí}\textbf{ó}nis, \hfill líbera nos Dómine.\\
+A fúlgure et \textit{tem}\textit{pe}\textbf{stá}te, \hfill líbera nos Dómine.\\
+A flagéllo \textit{ter}\textit{ræ}\textbf{mó}tus, \hfill líbera nos Dómine.\\
+A peste, fa\textit{me}, \textit{et} \textbf{bél}lo, \hfill líbera nos Dómine.\\
+Ab imminénti\textit{bus} \textit{per}\textbf{í}culis, \hfill líbera nos Dómine.\\
+A mor\textit{te} \textit{per}\textbf{pé}tua, \hfill líbera nos Dómine.\\
+Per mystérium sanctæ Incarnatí\textit{ó}\textit{nis} \textbf{tú}æ, \hfill líbera nos Dómine.\\
+Per Ad\textit{vén}\textit{tum} \textbf{tú}um, \hfill líbera nos Dómine.\\
+Per Nativi\textit{tá}\textit{tem} \textbf{tú}am, \hfill líbera nos Dómine.\\
+Per Baptísmum et sanctum Jejú\textit{ni}\textit{um} \textbf{tú}um, \hfill líbera nos Dómine.\\
+Per Crucem et Passí\textit{ó}\textit{nem} \textbf{tú}am, \hfill líbera nos Dómine.\\
+Per Mortem et Sepul\textit{tú}\textit{ram} \textbf{tú}am, \hfill líbera nos Dómine.\\
+Per sanctam Resurrectí\textit{ó}\textit{nem} \textbf{tú}am, \hfill líbera nos Dómine.\\
+Per admirábilem Ascensí\textit{ó}\textit{nem} \textbf{tú}am, \hfill líbera nos Dómine.\\
+Per advéntum Spíritus San\textit{cti} \textit{Pa}\textbf{rá}cliti, \hfill líbera nos Dómine.\\
+In di\textit{e} \textit{ju}\textbf{dí}cii, \hfill líbera nos Dómine.
+
+\gregorioscore{../litany/Litany-VI}
+\noindent{}Ut no\textit{bis} \textbf{pár}cas, \hfill te rogámus audi nos.\\
+Ut nubis \textit{in}\textbf{dúl}geas, \hfill te rogámus audi nos.\\
+Ut ad véram pæniténtiam nos perdúcere \textit{di}\textbf{gné}ris, \hfill te rogámus audi nos.\\
+Ut Ecclésiam tuam sanctam~\textbf{'}~régere et conserváre \\
+  \hspace*{1em}\textit{di}\textbf{gné}ris, \hfill te rogámus audi nos.\\
+Ut Dómnum Apostólicum et omnes ecclesíásticos\\
+  \hspace*{1em}órdines~\textbf{'}~in sancta religíóne conserváre \textit{di}\textbf{gné}ris, \hfill te rogámus audi nos.\\
+Ut inimícos sanctæ Ecclésiæ~\textbf{'}~humilíáre \textit{di}\textbf{gné}ris, \hfill te rogámus audi nos.\\
+Ut régibus et princípibus christíánis~\textbf{'}~pacem et\\
+  \hspace*{1em}veram concórdiam donáre \textit{di}\textbf{gné}ris, \hfill te rogámus audi nos.\\
+Ut cuncto pópulo christíáno~\textbf{'}~pacem et unitátem\\
+  \hspace*{1em}largíri \textit{di}\textbf{gné}ris, \hfill te rogámus audi nos.\\
+Ut omnes errántes ad unitátem Ecclésiæ revocáre,~\textbf{'}~et\\
+  \hspace*{1em}infidéles univérsos ad Evangélii lumen perdúcere\\
+  \hspace*{1em}\textit{di}\textbf{gné}ris, \hfill te rogámus audi nos.\\
+Ut nosmetípsos in tuo sancto servítio~\textbf{'}~confortáre et\\
+  \hspace*{1em}conserváre \textit{di}\textbf{gné}ris, \hfill te rogámus audi nos.\\
+Ut mentes nostras~\textbf{'}~ad cæléstia desidéri\textit{a} \textbf{é}rigas, \hfill te rogámus audi nos.\\
+Ut ómnibus benefactóribus nostris~\textbf{'}~sempitérna bona\\
+  \hspace*{1em}\textit{re}\textbf{trí}buas, \hfill te rogámus audi nos.\\
+Ut ánimas nostras~\textbf{'}~fratrum, propinqúórum et bene-\\
+  \hspace*{1em}factórum nostrórum~\textbf{'}~ab ætérna damnatíóne \textit{e}\textbf{rí}pias, \hfill te rogámus audi nos.\\
+Ut fructus terræ~\textbf{'}~dare et conserváre \textit{di}\textbf{gné}ris, \hfill te rogámus audi nos.\\
+Ut ómnibus fidélibus defúnctis~\textbf{'}~réquiem ætérnam\\
+  \hspace*{1em}donáre \textit{di}\textbf{gné}ris, \hfill te rogámus audi nos.\\
+Ut nos exaudíre \textit{di}\textbf{gné}ris, \hfill te rogámus audi nos.\\
+Fi\textit{li} \textbf{Dé}i, \hfill te rogámus audi nos.
+
+\gregorioscore{../litany/Litany-VII}
+
+\bigskip
+\begin{centering}
+
+Psalm 69.
+
+\end{centering}
+
+{
+\gresetinitiallines{1}
+\gregorioscore{../litany/litany-psalm69}
+%\printgabc{}{}{D}{../litany/litany-psalm69}
+}
+
+{
+\setlength{\columnsep}{18pt}
+\setlength{\columnseprule}{.4pt}
+\begin{parcolumns}[rulebetween]{2}
+\colchunk{\vspace{-12pt}%
+\begin{psalmverses}[1]
+\vspace{-\baselineskip}%
+\input{../litany/litany-psalm69-verses}
+\end{psalmverses}
+}
+
+\selectlanguage{american}
+\colchunk{\vspace{-12pt}%
+\sloppy
+\begin{psalmverses}
+\vspace{-\baselineskip}%
+\input{../litany/litany-psalm69-verses-en}
+\end{psalmverses}
+}
+\selectlanguage{latin}
+\end{parcolumns}
+
+\smallskip
+
+\begin{parcolumns}[rulebetween]{2}
+\colchunk{\vspace{-12pt}%
+\begin{vrlist}
+\vspace{-\baselineskip}%
+\input{../litany/litany-vr}
+\end{vrlist}
+}
+
+\selectlanguage{american}
+\colchunk{\vspace{-12pt}%
+\sloppy
+\begin{vrlist}
+\vspace{-\baselineskip}%
+\input{../litany/litany-vr-en}
+\end{vrlist}
+}
+\selectlanguage{latin}
+\end{parcolumns}
+}
+
+\bigskip
+
+\emph{On the day of Deposition there follow here the incensing of the Blessed Sacrament, the Procession, and \emph{Tantum ergo}.  After the \emph{\Vbar{}~Panem de cælo} etc., the Celebrant (omitting \emph{Dóminus vobíscum}) stands and sings the following prayers.
+
+But on the day of Exposition, immediately after \emph{\Vbar{}~Dómine, exáudi} etc. the Celebrant stands and sings~:}
+
+\medskip
+
+\Vbar{}~Dóminus vo\textbf{bís}cum.  \Rbar{}~Et cum spíritu \textbf{tú}o.
+
+\hspace{2em}Orémus.
+\begin{parcolumns}[rulebetween]{2}
+\colchunk{\vspace{-12pt}%
+\lettrine[ante=1.]{D}{eus,} qui nobis sub Sacraménto mirábili passiónis tuæ memóriam reliquísti~:~\dag{} tríbue, quǽsumus, ita nos Córporis et Sánguinis tui sacra mystéria venerári;~* ut redemptiónis tuæ fructum in nobis júgiter sentiámus.
+}
+
+\selectlanguage{american}
+\colchunk{\vspace{-12pt}%
+\sloppy
+\lettrine{O}{ God,} who under a wonderful Sacrament hast left us a memorial of Thy Passion; grant us, we beseech Thee, so to venerate the sacred mysteries of Thy Body and Blood, that we may ever feel within us the fruit of Thy redemption.
+}
+\selectlanguage{latin}
+\end{parcolumns}
+
+\smallskip
+\emph{From Advent until Christmas :}
+\begin{parcolumns}[rulebetween]{2}
+\colchunk{\vspace{-12pt}%
+\lettrine[ante=2.]{D}{eus,} qui de beátæ Maríæ Vírginis útero Verbum tuum, Angelo nuntiánte, carnem suscípere voluísti~:~\dag{} præsta supplícibus tuis;~* ut, qui vere eam Genitrícem Dei crédimus, ejus apud te intercessiónibus adjuvémur.
+}
+
+\selectlanguage{american}
+\colchunk{\vspace{-12pt}%
+\sloppy
+\lettrine{O}{ God,} who wast pleased that, at the message of an Angel, Thy Word should take flesh in the womb of the blessed Virgin Mary, grant to us Thy suppliants, that we, who believe her to be truly the Mother of God, may be helped by her intercession with Thee.
+}
+\selectlanguage{latin}
+\end{parcolumns}
+
+\smallskip
+\emph{From Christmas to the Purification :}
+\begin{parcolumns}[rulebetween]{2}
+\colchunk{\vspace{-12pt}%
+\lettrine{D}{eus,} qui salútis ætérnæ, beátæ Maríæ virginitáte fecúnda, humáno géneri prǽmia præstitísti~:~\dag{} tríbue, quǽsumus; ut ipsam pro nobis intercédere sentiámus,~* per quam merúimus auctórem vitæ suscípere, Dóminum nostrum Jesum Christum Fílium tuum.
+}
+
+\selectlanguage{american}
+\colchunk{\vspace{-12pt}%
+\sloppy
+\lettrine{O}{ God,} who through the fruitful virginity of blessed Mary hast given to mankind the rewards of eternal salvation, grant, we beseech Thee, that we may experience her intercession for us through whom we were made worthy to receive the Author of life, our Lord Jesus Christ Thy Son.
+}
+\selectlanguage{latin}
+\end{parcolumns}
+
+\smallskip
+\emph{From the Purification until Advent, except during Paschal Time :}
+\begin{parcolumns}[rulebetween]{2}
+\colchunk{\vspace{-12pt}%
+\lettrine{C}{concede} nos fámulos tuos, quǽsumus, Dómine Deus, perpétua mentis et córporis sanitáte gaudére~:~\dag{} et gloriósa beátæ Maríæ semper Vírginis intercessióne,~* a præsénti liberári tristítia, et ætérna pérfrui lætítia.
+}
+
+\selectlanguage{american}
+\colchunk{\vspace{-12pt}%
+\sloppy
+\lettrine{G}{rant} to us Thy servants, we beseech Thee, O Lord God, that we may enjoy perpetual health of mind and body: and through the intercession of blessed Mary ever Virgin may be delivered from present sorrow and possess eternal joy.
+}
+\selectlanguage{latin}
+\end{parcolumns}
+
+\smallskip
+\emph{In Paschal Time :}
+\begin{parcolumns}[rulebetween]{2}
+\colchunk{\vspace{-12pt}%
+\lettrine{D}{eus,} qui per resurrectiónem Fílii tui, Dómini nostri Jesu Christi, mundum lætificáre dignátus es~:~\dag{} præsta, quǽsumus; ut, per ejus Genitrícem Vírginem Maríam~* perpétua capiámus gáudia vitæ.
+}
+
+\selectlanguage{american}
+\colchunk{\vspace{-12pt}%
+\sloppy
+\lettrine{O}{ God,} who didst vouchsafe to give joy to the world through the Resurrection of Thy Son our Lord Jesus Christ: grant, we beseech Thee, that, through His Mother, the Virgin Mary, we may obtain the joys of everlasting life.
+}
+\selectlanguage{latin}
+\end{parcolumns}
+
+
+\medskip
+\begin{parcolumns}[rulebetween]{2}
+\colchunk{\vspace{-12pt}%
+\lettrine[ante=3.]{O}{mnipotens,} sempitérne Deus, miserére fámulo tuo Pontífici nostro \emph{N}.,~\dag{} et dírige eum secúndum tuam cleméntiam in viam salútis ætérnæ~:~* ut, te donánte, tibi plácita cúpiat, et tota virtúte perfíciat.
+}
+
+\selectlanguage{american}
+\colchunk{\vspace{-12pt}%
+\sloppy
+\lettrine{A}{lmighty,} everlasting God, have mercy upon Thy servant \emph{N}., our Sovereign Pontiff, and direct him according to Thy clemency into the way of everlasting salvation, that by Thy grace he may both desire those things that are pleasing to Thee, and perform them with all his strength.
+}
+\selectlanguage{latin}
+\end{parcolumns}
+
+\medskip
+\begin{parcolumns}[rulebetween]{2}
+\colchunk{\vspace{-12pt}%
+\lettrine[ante=4.]{D}{eus,} refúgium nostrum, et virtus~:~\dag{} adésto piis Ecclésiæ tuæ précibus, auctor ipse pietátis, et præsta;~*  ut, quod fidéliter pétimus, efficáciter consequámur.
+}
+
+\selectlanguage{american}
+\colchunk{\vspace{-12pt}%
+\sloppy
+\lettrine{O}{ God,} our refuge and strength, Author of all devotedness, give ear to the devoted prayers of Thy Church, and grant: that we may obtain in deed what we ask with faith.
+}
+\selectlanguage{latin}
+\end{parcolumns}
+
+\medskip
+\begin{parcolumns}[rulebetween]{2}
+\colchunk{\vspace{-12pt}%
+\lettrine[ante=5.]{O}{mnipotens,} sempitérne Deus, qui vivórum domináris simul et mortuórum, omniúmque miseréris, quos tuos fide et ópere futúros esse prænóscis~:~\dag{} te súpplices exorámus; ut, pro quibus effúndere preces decrévimus, quosque vel præsens sǽculum adhuc in carne rétinet, vel futúrum jam exútos córpore suscépit,~* intercedéntibus ómnibus Sanctis tuis, pietátis tuæ cleméntia ómnium delictórum suórum véniam consequántur. Per Dóminum nostrum Jesum Christum, Fílium tuum~: Qui tecum vivit et regnat in unitáte Spíritus Sancti Deus, per ómnia sǽcula sæculórum. \Rbar{}~Amen.
+}
+
+\selectlanguage{american}
+\colchunk{\vspace{-12pt}%
+\sloppy
+\lettrine{A}{lmighty,} everlasting God, who hast dominion over the living and the dead, and art merciful to all, of whom Thou fore-knowest that they will be Thine by faith and good works: we humbly beseech Thee, that they for whom we intend to pour forth our prayers, whether this present world still detain them in the flesh, or the world to come hath already received them out of their bodies, may, through the intercession of all Thy Saints, by the clemency of Thy goodness, obtain the remission of all their sins.  Through our Lord Jesus Christ Thy Son, Who liveth and reigneth with Thee in the unity of The Holy Spirit, God, world without end. \Rbar{}~Amen.
+}
+\selectlanguage{latin}
+\end{parcolumns}
+
+\medskip
+\emph{The Celebrant kneels down and sings~:}
+
+\begin{vrlist}
+\vspace{-\baselineskip}%
+\item Dómine, exáudi oratiónem meam.
+\item Et clamor meus ad te véniat.
+\end{vrlist}
+
+\medskip
+\emph{The Cantors (where it is the custom) sing~:}
+
+\begin{vrlist}
+\vspace{-\baselineskip}%
+\item Exáudiat nos omnípotens et miséricors Dóminus.
+\item Et custódiat nos semper. Amen.
+\end{vrlist}
+
+\medskip
+\emph{The Celebrant sings on a lower note~:}
+
+\begin{vrlist}
+\vspace{-\baselineskip}%
+\item Fidélium ánimæ per misericórdiam Dei requiéscant in pace.
+\item Amen.
+\end{vrlist}
+
+\medskip
+\emph{On the day of Exposition, after a short prayer in silence, the Celebrant and Ministers withdraw.
+
+On the day of Deposition, Benediction follows.}
+}
+\pagebreak

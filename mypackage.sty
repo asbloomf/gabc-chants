@@ -316,6 +316,21 @@
 \fi%
 \end{list}}
 
+\newcounter{vrcounter}
+\newenvironment{vrlist}{
+  \begin{list}{\ifodd\value{vrcounter}\Vbar{}\else\Rbar{}\fi}{%
+    \setlength\itemsep{1pt}%
+    \usecounter{vrcounter}%
+    \setlength\parsep{0pt}%
+    \setlength\labelwidth{50pt}\setlength\leftmargin{0pt}\setlength\itemindent{6ex}
+  }%
+  \setcounter{vrcounter}{0}%
+}{\ifx\undefined\useparacol%
+  \vspace{-12pt}%
+  \fi%
+  \end{list}
+}
+
 
 \def\boldVerse{T}
 \newenvironment{boldnumpsalmverses}[1][0]{
