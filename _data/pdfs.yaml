@@ -1,23 +1,26 @@
 Books:
-  - name: Vespers for Sundays & Holy Days
+Vespers for Sundays & Holy Days:
+  - name: PDF
     url: pdfs/vespers-book/vespers-book.pdf
-  - name: Vespers for Sundays & Holy Days (no margins)
+  - name: PDF with no margins
     url: pdfs/vespers-book/vespers-book-crop.pdf
   - name: Purchase on Amazon
     url: https://www.amazon.com/Vespers-Gregorian-Chant-Sundays-Holy/dp/1507878818/
   - name: Purchase on Create Space
     note: use discount code 8568AH2F
     url: https://www.createspace.com/5302724
-  - name: Tenebrae
+Tenebræ:
+  - name: PDF
     url: pdfs/Tenebrae/tenebrae_full.pdf
-  - name: Tenebrae (no margins)
+  - name: PDF with no margins
     url: pdfs/Tenebrae/tenebrae_full-crop.pdf
   - name: Purchase on Amazon
     url: https://www.amazon.com/Tenebrae-Albert-S-Bloomfield/dp/1495364496/
   - name: Purchase on Create Space
     note: use discount code 8568AH2F
     url: https://www.createspace.com/4628385
-  - name: Christmas Matins
+Christmas Matins:
+  - name: PDF
     url: pdfs/christmas-matins/christmas-matins.pdf
   - name: Purchase on Lulu
     url: http://www.lulu.com/content/paperback-book/christmas-matins/17598146
