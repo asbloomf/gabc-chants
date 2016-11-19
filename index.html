@@ -42,6 +42,9 @@ descr: Some gabc chants, mostly vespers and tenebrae
     <a href="{{ d.url }}">
       {{ d.name }}
     </a>
+    {% if d.note %}
+    ({{ d.note }})
+    {% endif %}
   </li>
   {% endfor %}
 {% endfor %}
