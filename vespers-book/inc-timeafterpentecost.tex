@@ -22,7 +22,11 @@
   \label{pentecost#1}
 \printcommonvespers{}
 \ifx\printaftercommonvespers\undefined\else\printaftercommonvespers{}\fi
-  \def\precollect{\printvrdirigatur\smallskip}
+  \ifx\nocommemoration\undefined%
+    \def\precollect{\printvrdirigatur\smallskip}%
+  \fi
+  \ifx\postmagtitle\undefined\def\oldpostmagtitle{}\else\let\oldpostmagtitle=\postmagtitle\fi
+  \def\postmagtitle{\oldpostmagtitle\label{pentecost#1-mag}}
   \printvespersmag[../TimeAfterPentecost]{inc-VespersMagnificatPentecost#1}
   \smallskip
   \benedicamusdomino{}
