@@ -95,7 +95,14 @@
 \def\hymninput{\gabcfolder/inc-hymn-AudiBenigneConditor}
 %\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 %\def\premagnificat{\pagebreak}
-\def\premagnificat{\needspace{8\baselineskip}}
+\def\premagnificat{\bigskip{}
+\emph{On the \nth{2} Sunday of Lent, \emph{Magnificat}, p.~\pageref{lent2mag}}.
+
+\emph{On the \nth{3} Sunday of Lent, \emph{Magnificat}, p.~\pageref{lent3mag}}.
+
+\emph{On the \nth{4} Sunday of Lent, \emph{Magnificat}, p.~\pageref{lent4mag}}.
+
+\needspace{8\baselineskip}}
 \printvespersmag[../Lent]{inc-VespersMagnificatLent1}
 
 \benedicamusdomino{}
@@ -111,6 +118,7 @@
 \label{lent2}
 \printcommonvespers[1]
 \def\precollect{\vspace{-1.5\baselineskip}}
+\def\postmagtitle{\label{lent2mag}}
 \printvespersmag[../Lent]{inc-VespersMagnificatLent2}
 
 \def\commemorations{If today is March 18 or 19, \emph{First Vespers of St Joseph} is commemorated as follows.}
@@ -134,6 +142,7 @@
 \section{\nth{3} Sunday of Lent}
 \label{lent3}
 \printcommonvespers[1]
+\def\postmagtitle{\label{lent3mag}}
 \printvespersmag[../Lent]{inc-VespersMagnificatLent3}
 
 \def\commemorations{If today is March 18 or 19, \emph{First Vespers of St Joseph} is commemorated as on page \pageref{stjoseph-commem}.  If today is March 24 or 25, \emph{First Vespers of the Annunciation} is commemorated as follows.}
@@ -162,6 +171,7 @@
 \def\liturgicalcolor{Violet or Rose}
 \printcommonvespers[1]
 \needspace{8\baselineskip}
+\def\postmagtitle{\label{lent4mag}}
 \printvespersmag[../Lent]{inc-VespersMagnificatLent4}
 
 \printcommemnote{}
@@ -179,7 +189,9 @@
 \def\vrlabel{vr-eripeme}
 \def\hymninput{\gabcfolder/inc-hymn-VexillaRegis}
 \def\premagtitle{\vspace{-0.5\baselineskip}}
-\def\premagnificat{\needspace{14\baselineskip}}
+\def\premagnificat{%On Palm Sunday, continue to page \pageref{palmsunday}.
+%
+\needspace{14\baselineskip}}
 \printvespersmag[../Lent]{inc-VespersMagnificatPassion1}
 
 \printcommemnote{}

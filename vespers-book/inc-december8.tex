@@ -5,6 +5,7 @@
 \subtitle{I \& II Vespers}
 \smallskip
 
+\def\deusinadjutoriumsolemn{T}
 \def\preanttranslationone{\vspace{-0.35\baselineskip}}
 \def\prepsalmtitleone{\vspace{-0.15\baselineskip}}
 \def\prepsalmone{\vspace{-0.1\baselineskip}}
@@ -24,6 +25,18 @@
 \def\vesperspropersaltnote{At I Vespers:}
 \def\vesperspropersnote{At II Vespers:}
 \def\prehymn{\printnote{All kneel for the first stanza of the following hymn.}}
+\def\prevr{\printnote{%
+        \def\dotting{\hfill%\leaders\hbox to 1em{\hfil.\hfil}\hfill
+        }%
+        \vspace{-1.5\baselineskip}
+        \begin{multicols}{2}%
+        \noindent{}Feb.~1 \& 2,\dotting \emph{\Vbar{}~Respónsum}, p.~\pageref{vr-feb2}\\
+March 24 \& 25,\dotting \emph{\Vbar{}~Ave María}, p.~\pageref{vr-march25}\\
+August 15,\dotting \emph{\Vbar{}~Exaltáta est}, p.~\pageref{vr-assumption}\\
+Oct.~10 \& 11,\dotting \emph{\Vbar{}~Benedícta tu}, p.~\pageref{vr-october11}
+        \end{multicols}%
+        }}
+\def\postmagtitle{\vspace{-0.5\baselineskip}}
 \def\hymnlabel{hymn-avemarisstella}
 \def\vrlinebreak{F}
 %\def\prechapter{\vspace{-\baselineskip}}

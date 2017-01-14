@@ -9,6 +9,7 @@
 \section{December 24: Nativity of our Lord -- I Vespers}
 \subtitle{\nth{1} Class, White or Gold}
 
+\def\deusinadjutoriumsolemn{T}
 \newcommand{\printhymnnote}{
 	\noindent\printnote{Hymn.~\emph{Jesu Redémptor ómnium}, page \pageref{hymn-jesuredemptoromnium}.\\}
 }
@@ -23,6 +24,7 @@
 %\def\prechapter{\vspace{-\baselineskip}}
 %\def\precollect{\vspace{-0.2\baselineskip}}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
+\def\prevr{\label{vrcrastina}}
 \printvespers[../Christmas-Vespers1]{inc-Christmas-Vespers1-psalms}
 
 \benedicamusdomino{}
@@ -40,6 +42,7 @@
 \subtitle{\nth{2} Class, White}
 \bigskip
 
+\def\deusinadjutoriumsolemn{T}
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Christmas-Vespers2}
   \let\oldthing\maganttranslation
   \def\maganttranslation{\oldthing\vspace{-0.5\baselineskip}}
@@ -57,11 +60,20 @@
 \def\premag{\def\noeuouae{T}}
 \def\premagtitle{\vspace{-0.3\baselineskip}}
 \def\premagverses{\greseteolcustos{manual}}
+\def\prevr{On \emph{Dec.~24, \emph{\Vbar{}~Crástina die}, p.~\pageref{vrcrastina}}.
+
+\emph{On Dec.~31, \emph{\Vbar{}~Verbum} \& Jan.~1, \emph{\Vbar{}~Notum fecit}, p.~\pageref{vrverbumcarofactumest}}.
+\medskip
+}
 \def\hymnlabel{hymn-jesuredemptoromnium}
 \input{../Christmas/inc-JesuRedemptorOmnium}
+\def\prehymn{%
+  \grechangedim{spaceabovelines}{0.40 cm plus 0.36461 cm minus 0.09114 cm}{scalable}%
+}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
 \printvespers[../Christmas]{inc-Christmas-Vespers2-psalms}
 
+\grechangedim{spaceabovelines}{0.45576 cm plus 0.36461 cm minus 0.09114 cm}{scalable}%
 \benedicamusdomino{}
 }
 
@@ -74,6 +86,7 @@
 \label{circumcision}
 \medskip
 
+\def\deusinadjutoriumsolemn{T}
 \def\definevesperspropers{\input{\gabcfolder/inc-Circumcision-Vespers2}}
 \def\preantthree{\needspace{10\baselineskip}}
  \newcommand{\printhymnnote}{
@@ -87,6 +100,7 @@
 %\def\precollect{\vspace{-2\baselineskip}}
 \def\prechapter{\noindent\printnote{For the Feast of the Purification \& Presentation, continue to \emph{Chapter}, p.~\pageref{purification-chapter}.}\par}
 \def\premagtitle{\oldneedspace{6\baselineskip}}
+\def\prevr{\label{vrverbumcarofactumest}}
 \printvespers[../ChristmasOctave-Circumcision]{inc-Circumcision-Vespers-common}
 
 \benedicamusdomino{}
@@ -120,7 +134,7 @@
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.425\linewidth}]{2}}
 %\def\prepsalmtitlefive{\vspace{\baselineskip}}
 \def\prechapter{\vspace{-0.5\baselineskip}}
-\def\prehymn{\needspace{10\baselineskip}}
+\def\prehymn{\needspace{5\baselineskip}}
 \printvespers[../HolyName]{inc-HolyName-common}
 
 \benedicamusdomino[2]{}
@@ -135,6 +149,7 @@
 
 \subtitle{I \& II Vespers}
 
+\def\deusinadjutoriumsolemn{T}
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Epiphany-Vespers1}
   %\def\prepsalmtitlefive{\medskip}
 }

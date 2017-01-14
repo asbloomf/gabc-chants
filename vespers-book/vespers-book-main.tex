@@ -113,7 +113,8 @@
 }
 }
 
-\newcommand{\deusinadjutorium}{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, p.~\pageref{deusinadjutorium}.}}
+\newcommand{\deusinadjutorium}[1][F]{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, p.~\pageref{deusinadjutorium}\if#1T or \pageref{deusinadjutoriumsolemn}\fi.}}
+%\newcommand{\deusinadjutoriumsolemn}{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, p.~\pageref{deusinadjutoriumsolemn}.}}
 \newcommand{\printcollect}[2]{
 	\ifx\undefined\begincollectcols\def\begincollectcols{\begin{parcolumns}[rulebetween]{2}}\fi
 	\ifx\printcollectheading\undefined\def\printcollectheading{T}\fi
@@ -228,6 +229,18 @@
 		\def\commrlatin{Quóniam advesperáscit, alle\textbf{lú}ia.}
 		\def\commvtranslation{Stay with us O Lord, alleluia.}
 		\def\commrtranslation{Because it is towards evening, alleluia.}
+		\printvrcommem{}
+	}
+}
+\newcommand{\printvrdominusincaelo}{
+	\smallskip{}
+	\oldneedspace{3\baselineskip}
+	\noindent\printnote{If the Sunday is being commemorated:\\}\vspace{-0.5\baselineskip}
+	{
+		\def\commvlatin{Dóminus in cælo, alle\textbf{lú}ia.}
+		\def\commrlatin{Parávit sedem suam, alle\textbf{lú}ia.}
+		\def\commvtranslation{The Lord in heaven, alleluia.}
+		\def\commrtranslation{Has prepared His throne, alleluia.}
 		\printvrcommem{}
 	}
 }
@@ -403,7 +416,8 @@
 	\prevespers{}
 	\fi
 
-	\deusinadjutorium{}
+	\ifx\deusinadjutoriumsolemn\undefined\def\deusinadjutoriumsolemn{F}\fi
+	\deusinadjutorium[\deusinadjutoriumsolemn]
 
 	\ifx\postdeusinadjutorium\undefined\else\postdeusinadjutorium\fi
 	\medskip
@@ -488,6 +502,7 @@
 	    \printvr[\if\vrlinebreak T\greseteolcustos{manual}\fi]{\vrtex}{\vtranslation}{\rtranslation}
 	    \greseteolcustos{auto}
 		}
+		\ifx\postvr\undefined\else\postvr\fi
 		\ifx\vrpttex\undefined\else%
 			\smallskip
 			\noindent
@@ -649,7 +664,7 @@
 	}
 	% copyright page
 	\thispagestyle{empty}
-	\noindent{}Vespers with Gregorian Chant for Sundays \& Holy Days: \emph{newly tyseset, based on \emph{The Liber Usualis}, edited by the Benedictines of Solemnes (Desclee Company, 1961).}
+	\noindent{}Vespers with Gregorian Chant for Sundays \& Holy Days: \emph{newly tyseset, based on \emph{The Liber Usualis}, edited by the Benedictines of Solesmes (Desclee Company, 1961).}
 	
 
 	\bigskip{}\noindent{}First edition, 3 December 2015.
@@ -659,6 +674,8 @@
 
   \hangindent=1em % indent all subsequent lines
   \noindent{}Third edition, 6 December 2016.
+
+  \noindent{}Fourth edition, 13 January 2017.
 
 	\bigskip{}\noindent{}Many thanks to Elie Roux for creating Gregorio, to all the people answering questions on the Gregorio forums, to Olivier Berton for creating GregoBase (http://gregobase.selapa.net) which makes it much easier to find all the chant that Andrew Hinkley and others have contributed to the public domain.  Also many thanks to my brother Benjamin, whose website (http://bbloomf.github.io/jgabc) makes it incredibly easy to typeset the psalms and substantially easier than otherwise to typeset Gregorian chant with Gregorio.
 

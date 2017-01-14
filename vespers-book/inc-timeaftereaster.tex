@@ -143,6 +143,7 @@
 \subtitle{\nth{1} Class, White or Gold}
 \subtitle{I \& II Vespers}
 
+\def\deusinadjutoriumsolemn{T}
 \def\postpsalmtitlethree{\needspace{18\baselineskip}}
 \def\prepsalmthreeverses{}
 \def\preantfive{\needspace{12\baselineskip}}
@@ -161,6 +162,10 @@
 \def\vesperspropersaltnote{At I Vespers:}
 \let\printhymnnote=\undefined
 \def\hymnlabel{hymn-salutishumanaesator}
+\def\prevr{\bigskip{}
+\emph{On the Sunday after the Ascension, \emph{\Vbar{}~Dóminus in cælo}, p.~\pageref{vr-sundayafterascension}}.
+
+\bigskip}
 \printvespers[../Ascension]{inc-Ascension}
 
 \def\commemorations{If today is April 30 or May 1, \emph{First Vespers of St Joseph the Worker} is commemorated as on page \pageref{stjoseph-worker-commem}.}
@@ -179,9 +184,10 @@
     \noindent\printnote{Hymn.~\emph{Salútis humánæ Sator}, page \pageref{hymn-salutishumanaesator}.}
     \medskip
     \def\vrlinebreak{T}
+    \label{vr-sundayafterascension}
     \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
 }
-\def\precollect{\printvrmanenobiscum}
+\def\precollect{\printvrdominusincaelo}
 \def\premagtitle{\bigskip\bigskip}
 %\def\premagverses{\pagebreak}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatSundayAfterAscension}
