@@ -129,15 +129,17 @@ Holy Family:
   - name: "Holy Family: Vespers 2 1st class"
     url: pdfs/HolyFamily/HolyFamily-Vespers2_1st-class.pdf
 Time After Epiphany:
-  - name: Vespers Magnificat Epiphany 2
+  - name: Vespers Magnificat Antiphon for 2nd Sunday after Epiphany
     url: pdfs/TimeAfterEpiphany/VespersMagnificatEpiphany2.pdf
-  - name: Vespers Magnificat Epiphany 3
+  - name: Vespers Magnificat Antiphon for 3rd Sunday after Epiphany
     url: pdfs/TimeAfterEpiphany/VespersMagnificatEpiphany3.pdf
-  - name: Vespers Magnificat Epiphany 4
+  - name: Vespers Magnificat Antiphon for 4th Sunday after Epiphany
     url: pdfs/TimeAfterEpiphany/VespersMagnificatEpiphany4.pdf
-  - name: Vespers Magnificat Epiphany 5
+  - name: Vespers Commemoration of the 4th Sunday after Epiphany
+    url: pdfs/TimeAfterEpiphany/commemorationEpiphany4-main.pdf
+  - name: Vespers Magnificat Antiphon for 5th Sunday after Epiphany
     url: pdfs/TimeAfterEpiphany/VespersMagnificatEpiphany5.pdf
-  - name: Vespers Magnificat Epiphany 6
+  - name: Vespers Magnificat Antiphon for 6th Sunday after Epiphany
     url: pdfs/TimeAfterEpiphany/VespersMagnificatEpiphany6.pdf
 "February 2 : Purification Of Blessed Virgin Mary":
   - name: "Purification Of Blessed Virgin Mary: 1 Vespers"
