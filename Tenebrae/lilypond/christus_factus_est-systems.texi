@@ -3,5 +3,4 @@
 @image{/src/gabc-chants/Tenebrae/lilypond/christus_factus_est-3}
 @image{/src/gabc-chants/Tenebrae/lilypond/christus_factus_est-4}
 @image{/src/gabc-chants/Tenebrae/lilypond/christus_factus_est-5}
-@image{/src/gabc-chants/Tenebrae/lilypond/christus_factus_est-6}
 @c eof
