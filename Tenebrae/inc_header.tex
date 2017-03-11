@@ -23,9 +23,11 @@
 }
 %\renewcommand\headrulewidth{\oldheadrulewidth}
 \chead{
-  \ifnum\thepage>1
-    \addfontfeature{Numbers=Lining}%
-    \heading{} \ifx\matinsnocturn\undefined\else(\matinsnocturn)\fi
+  \ifx\heading\undefined\else
+    \ifnum\thepage>1
+      \addfontfeature{Numbers=Lining}%
+      \heading{} \ifx\matinsnocturn\undefined\else(\matinsnocturn)\fi
+    \fi
   \fi
 }
 
@@ -44,12 +46,11 @@
 }
 \newcommand{\alternatemusicintro}{\emph{Alternately, the following three part arrangement can be sung in place of the chant.}}
 \def\betweenLilyPondSystem#1{
-  \ifnum#1>1
+  %\ifnum#1>1
     \vfil\noindent
-  \else
-    \linebreak
-  \fi
-  %\vspace{0.5\baselineskip}
+  %\else
+  %  \linebreak
+  %\fi
 }
 \newcommand{\includelilypond}[1]{
   \noindent
