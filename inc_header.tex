@@ -9,8 +9,10 @@
 \else
     \geometry{papersize={\mywidth,\myheight}}
 \fi
-\usepackage{gregoriotex} % for gregorio score inclusion
 \usepackage{expl3}
+\let\luatexlocalrightbox\localrightbox
+\let\luatexlocalleftbox\localleftbox
+\usepackage{gregoriotex} % for gregorio score inclusion
 \usepackage{import}
 
 % If you use usual TeX fonts, here is a starting point:
