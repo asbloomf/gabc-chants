@@ -24,8 +24,10 @@
 %Second Vespers of Immaculate Conception
 \input{inc-december8}
 
-%January 29, St Francis de Sales
-\input{inc-january29}
+\ifthenelse{\boolean{includejan29}}{
+	%January 29, St Francis de Sales
+	\input{inc-january29}
+}{}
 
 %Purification & Presentation (2nd class no commem of Sunday because it is a feast of the Lord)
 \input{inc-february2}
@@ -33,11 +35,18 @@
 %March 25: Annunciation 
 \input{inc-march25}
 
-%May 1: St Joseph the Worker (1st class)
-\input{inc-may1}
+\ifthenelse{\boolean{includemay1}}{
+	%May 1: St Joseph the Worker (1st class)
+	\input{inc-may1}
+}{}
 
 %May 26: St Philip Neri (1)
 \input{inc-may26}
+
+\ifthenelse{\boolean{includejun22}}{
+	%June 22: Sts Thomas More & John Fisher
+	\input{inc-jun22}
+}{}
 
 %June 24: Nativity of St John the Baptist (1st class)
 \input{inc-june24}
@@ -65,8 +74,16 @@
 
 %\cleardoublepage
 \cleartoleftpage
-%Oct 11: Maternity of the BVM (2nd class)
-\input{inc-october11}
+
+\ifthenelse{\boolean{includeoct9}}{
+	%October 9: Blessed John Henry Newman
+	\input{inc-oct9}
+}{}
+
+\ifthenelse{\boolean{includeoct11}}{
+	%Oct 11: Maternity of the BVM (2nd class)
+	\input{inc-october11}
+}{}
 
 %Last Sunday in October: Christ the King (1st class)
 \input{inc-october-last-sunday}

@@ -1,0 +1,20 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\input{CommonOfMartyrs-Vespers2}
+
+\renewcommand{\heading}{Sts Thomas More \& John Fisher at 2nd Vespers.}
+%\let\oldbeginpsalmfivecols=\beginpsalmfivecols
+%\def\beginpsalmfivecols{\vspace{-8pt plus 8pt}\oldbeginpsalmfivecols}
+
+\definebenedicamusdomino{1}{2}
+
+%\def\includefideliumanimae{T}
+
+\input{inc-sts-thomas-more-and-john-fisher-2Vespers}
+\input{../FullVespers}

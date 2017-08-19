@@ -13,8 +13,17 @@
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
 %\def\premag{\def\noeuouae{T}}
+\ifthenelse{\boolean{birmingham}}{
+  \def\preantthree{\vspace{-0.75\baselineskip}}
+  \def\prepsalmtitlethree{\vspace{-0.25\baselineskip}}
+  \def\preantfive{\vspace{-0.75\baselineskip}}
+  \def\prepsalmtitlefive{\vspace{-0.75\baselineskip}}
+  \def\premagtitle{\oldneedspace{2\baselineskip}}
+  \def\precollect{\vspace{-0.5\baselineskip}}
+}{
+  \def\prepsalmtitlefive{\vspace{-0.5\baselineskip}}
+}
 \def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
-\def\prepsalmtitlefive{\vspace{-0.5\baselineskip}}
 \def\premagverses{\greseteolcustos{manual}}
 \def\printhymnnote{
   {
@@ -211,14 +220,20 @@
   \oldneedspace{7\baselineskip}
   \printweektitle[]{Passiontide}
   {
-  \def\precollect{\vspace{-0.5\baselineskip}}
+  \ifthenelse{\boolean{birmingham}}{
+    \def\precollect{\vspace{-0.75\baselineskip}}
+  }{
+    \def\precollect{\vspace{-0.5\baselineskip}}
+  }
   \printcommem{Monday}{4}{S}{an--si_quis_sitit--solesmes}
     {If anyone thirst, let him come and drink; and from his belly will flow living water.}
     {Da, quǽsumus Dómine, pópulo tuo salútem mentis et córporis~:~* ut bonis opéribus inhæréndo, tua semper mereátur protectióne deféndi. Per Dóminum.}
     {Grant unto Thy people, O Lord, we beseech Thee, soundness of mind and body, that they, cleaving unto good works, may evermore worthily be defended by Thy protection.}
   }
   {%\newcommand{\vrtitle}{Eripe me}
-  %\def\precollect{\vspace{-\baselineskip}}
+  \ifthenelse{\boolean{birmingham}}{
+    \def\precollect{\vspace{-0.75\baselineskip}}
+  }{}
   \printcommem{Tuesday}{1}{V}{an--vos_ascendite--solesmes}
   {Go ye up unto this Feast; I go not, for My time is not yet full come.}
   {Da nobis, quǽsumus Dómine, perseverántem in tua voluntáte famulátum~:~* ut in diébus nostris, et mérito et número pópulus tibi sérviens augeátur. Per Dóminum.}

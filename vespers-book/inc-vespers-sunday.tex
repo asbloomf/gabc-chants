@@ -34,7 +34,17 @@
 	    {
 	    	\oldneedspace{5\baselineskip}
 	    	\label{hymn-luciscreator}
-	        \printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
+	    	\ifthenelse{\boolean{includepolyphony}}{
+	        	\printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
+	        }{
+				\def\annot{\small{Hymn.}}
+				\def\annottwo{\small{\hymnlinetwo}}
+				\alsetinitialspacing{\hymninitial}
+				\normalsize
+				\oldneedspace{5\baselineskip}
+				\gregorioscore{\gabcfolder/\hymntex}
+			}
+			\bigskip
 			\printvrdirigaturnote{}
 	        \input{\gabcfolder/inc-hymn-LucisCreatorOptime2}
 			{
@@ -61,40 +71,42 @@
 			\bigskip
 		  \printvrdirigaturnote{}
 	    }
-	    \vfil\noindent
-			\oldneedspace{8\baselineskip}
-	    {\centering\addfontfeature{Numbers=Lining}\textbf{4. Chant alternating with polyphony by Victoria.}\par}
-			\def\annot{\small{Hymn.}}
-			\def\annottwo{\small{8.}}
-			\alsetinitialspacing{L}
-	    \noindent\gabcsnippet{
-	    (c3)LU(e)cis(fh) Cre(h)á(hg)tor(fe) óp(h)ti(i)me,(gvFE.) (,)
-Lú(hi)cem(jh) di(i)é(hvGF')rum(g) pró(g')fe(f)rens,(e.) (;)
-Pri(e)mór(fh)di(h)is(hg) lú(fe)cis(h) nó(i)væ(gvFE.) (,)
-Mún(hi)di(jh) pá(i)rans(hf) o(g)rí(fg)gi(f)nem :(e.) (::) (e+)
-	    }
-	    \vfil\noindent
-\includelilypond{lucis-creator-optime-systems-v2}%
-\gresetinitiallines{0}
-\gabcsnippet{
-(c3)3. Ne(e) mens(fh) gra(h)vá(hg)ta(fe) crí(h)mi(i)ne,(gvFE.) (,)
-Ví(hi)tæ(jh) sit(i) éx(hvGF')sul(g) mú(g')ne(f)re,(e.) (;)
-Dum(e) nil(fh) per(h)én(hg)ne(fe) có(h)gi(i)tat,(gvFE.) (,)
-Se(hi)sé(jh)que(i) cúl(hf)pis(g) íl(fg)li(f)gat.(e.) (::) (e+)
-}
-\vfil\noindent
-\includelilypond{lucis-creator-optime-systems-v4}%
-\bigskip
-\gabcsnippet{
-	(c3)5. Præ(e)sta,(fh) Pá(h)ter(hg) pi(fe)ís(h)si(i)me,(gvFE.) (,)
-Pa(hi)trí(jh)que(i) cóm(hvGF')par(g) U(g')ni(f)ce,(e.) (;)
-Cum(e) Spí(fh)ri(h)tu(hg) Pa(fe)rá(h)cli(i)to,(gvFE.) (,)
-Ré(hi)gnans(jh) per(i) óm(hf)ne(g) s<sp>'ae</sp>(fg)cu(f)lum.(e.) (::) 
-A(efe)men.(d.e.) (::)
-}
-    
+\ifthenelse{\boolean{includepolyphony}}{
+		    \vfil\noindent
+				\oldneedspace{8\baselineskip}
+		    {\centering\addfontfeature{Numbers=Lining}\textbf{4. Chant alternating with polyphony by Victoria.}\par}
+				\def\annot{\small{Hymn.}}
+				\def\annottwo{\small{8.}}
+				\alsetinitialspacing{L}
+		    \noindent\gabcsnippet{
+		    (c3)LU(e)cis(fh) Cre(h)á(hg)tor(fe) óp(h)ti(i)me,(gvFE.) (,)
+	Lú(hi)cem(jh) di(i)é(hvGF')rum(g) pró(g')fe(f)rens,(e.) (;)
+	Pri(e)mór(fh)di(h)is(hg) lú(fe)cis(h) nó(i)væ(gvFE.) (,)
+	Mún(hi)di(jh) pá(i)rans(hf) o(g)rí(fg)gi(f)nem :(e.) (::) (e+)
+		    }
+		    \vfil\noindent
+	\includelilypond{lucis-creator-optime-systems-v2}%
+	\gresetinitiallines{0}
+	\gabcsnippet{
+	(c3)3. Ne(e) mens(fh) gra(h)vá(hg)ta(fe) crí(h)mi(i)ne,(gvFE.) (,)
+	Ví(hi)tæ(jh) sit(i) éx(hvGF')sul(g) mú(g')ne(f)re,(e.) (;)
+	Dum(e) nil(fh) per(h)én(hg)ne(fe) có(h)gi(i)tat,(gvFE.) (,)
+	Se(hi)sé(jh)que(i) cúl(hf)pis(g) íl(fg)li(f)gat.(e.) (::) (e+)
+	}
+	\vfil\noindent
+	\includelilypond{lucis-creator-optime-systems-v4}%
+	\bigskip
+	\gabcsnippet{
+		(c3)5. Præ(e)sta,(fh) Pá(h)ter(hg) pi(fe)ís(h)si(i)me,(gvFE.) (,)
+	Pa(hi)trí(jh)que(i) cóm(hvGF')par(g) U(g')ni(f)ce,(e.) (;)
+	Cum(e) Spí(fh)ri(h)tu(hg) Pa(fe)rá(h)cli(i)to,(gvFE.) (,)
+	Ré(hi)gnans(jh) per(i) óm(hf)ne(g) s<sp>'ae</sp>(fg)cu(f)lum.(e.) (::) 
+	A(efe)men.(d.e.) (::)
+	}
+}{}
     {
     	\normalsize%\vspace{0pt minus 20pt}
+    	\oldneedspace{5\baselineskip}
       \selectlanguage{american}\vspace{-\baselineskip}
       \begin{multicols}{2}
       \begin{psalmverses}
@@ -116,13 +128,14 @@ A(efe)men.(d.e.) (::)
 	}
 	\newcommand{\magreplacement}{\vspace{-\baselineskip}\noindent\begin{centering}
 
+		\vfil
 		\emph{Magnificat \& Collect of the Sunday.}
 
 		\end{centering}
 		\medskip{}
 		%\vspace{-\baselineskip}
 		\printsundaysthroughtheyear{}
-		\bigskip{}
+		\vfil
 		\Vbar~\emph{Benedicámus Dómino \benedicamusdominonamesunday{}}, page \pageref{benedicamusdomino-sunday}; or in Lent, \emph{\benedicamusdominonamelent{}}, page \pageref{benedicamusdomino-lent}.
 	}
 	\newcommand{\collectreplacement}{\bigskip}

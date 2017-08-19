@@ -10,7 +10,12 @@
 %\def\prepsalmtitletwo{\needspace{12\baselineskip}}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
-\def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}
+\ifthenelse{\boolean{birmingham}}{
+	\def\prepsalmtitlethree{\vspace{-0.5\baselineskip}}
+	\def\prepsalmtitlefive{\vspace{-0.5\baselineskip}}	
+}{
+	\def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}	
+}
 \def\prerepeatantiphonfour{}
 \def\prepsalmfourverses{}
 \def\preantfive{\vspace{-0.5\baselineskip}}

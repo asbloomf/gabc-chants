@@ -20,6 +20,7 @@
 \smallskip
 \fi
 \sloppy
+
 \begin{columns}
 \versicle{\vlatin}{\venglish}
 \response{\rlatin}{\renglish}
@@ -78,14 +79,20 @@
 \selectlanguage{latin}\Rbar{}~\rlatintwo
 \fi
 
-\smallskip
+\ifx\postvr\undefined
+  \smallskip
+\else
+  \postvr
+\fi
 \noindent{}\textit{Prayer on page \pageref{\prayerlabel}}.
 }
 
 \def\gabcfolder{../MarianAntiphons}
 \newcommand{\includelilypond}[1]{
-  \noindent
-  \import{../MarianAntiphons/}{#1}%
+  \ifthenelse{\boolean{includepolyphony}}{
+    \noindent
+    \import{../MarianAntiphons/}{#1}%
+  }{}
 }
 \def\betweenLilyPondSystem#1{
   \ifnum#1>1
@@ -141,14 +148,15 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 \newcommand{\prayerenglishtwo}{O God, who, by the fruitful virginity of blessed Mary, hast given to mankind the rewards of eternal salvation; grant, we beseech Thee, that we may experience her intercession for us, through whom we have deserved to receive the Author of life, our Lord Jesus Christ, Thy Son. \Rbar~Amen.}
 \def\prayerlabel{almaprayer}
 
-\shortafterant{}
+\ifthenelse{\boolean{includepolyphony}}{
+  \shortafterant{}
 
-\vfil
+  \vfil
 
-\includelilypond{AlmaRedemptorisMater-systems}%
+  \includelilypond{AlmaRedemptorisMater-systems}%
 
-\oldneedspace{4\baselineskip}
-
+  \oldneedspace{4\baselineskip}
+}{}
 \afterant{}
 }
 
@@ -175,11 +183,13 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 \newcommand{\prayerenglish}{Grant, O merciful God, Thy protection to us in our weakness; that we, who celebrate the memory of the holy Mother of God, may, through the aid of her intercession, rise again from our sins. Through the same Christ our Lord. \Rbar~Amen.}
 \def\prayerlabel{avereginacaelorumprayer}
 
-\shortafterant{}
+\ifthenelse{\boolean{includepolyphony}}{
+  \shortafterant{}
 
-\oldneedspace{5\baselineskip}
-\includelilypond{AveReginaCaelorum-systems}%
-\pagebreak
+  \oldneedspace{5\baselineskip}
+  \includelilypond{AveReginaCaelorum-systems}%
+  \pagebreak
+}{}
 
 \afterant{}
 }
@@ -220,16 +230,30 @@ Pray for us to God, alleluia.}\end{quote}%
 
 \oldneedspace{5\baselineskip}
 \includelilypond{ReginaCoeli-systems}%
-\vfil
-\reginacaelienglish{}
+\ifthenelse{\boolean{includepolyphony}}{
+  \vfil
+  \def\postvr{\vfil}
+  \reginacaelienglish{}
 
-\shortafterant{}
+  \vfil
 
-\vfil
+  \shortafterant{}
+
+  \vfil
+}{
+  \reginacaelienglish{}
+}
 }
 
 
 % Salve Regina
+\def\salvereginaenglish{
+  % \ifthenelse{\boolean{includepolyphony}}
+  % {}
+  % {\vspace*{0cm plus 1fil}}
+  \begin{quote}{Hail, holy Queen, Mother of mercy; hail, our life, our sweetness, and our hope! To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this vale of tears.  Turn then, most gracious advocate, thine eyes of mercy towards us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.  O clement, O loving, O sweet Virgin Mary.}\end{quote}
+}
+
 \needspace{10\baselineskip}
 \label{salveregina}
 \section{Salve Regina}
@@ -238,11 +262,18 @@ Pray for us to God, alleluia.}\end{quote}%
 \printgabc{Ant.}{5.}{S}{SalveReginaSimple}
   \bigskip{}
 \printsolemntone{}
+\ifthenelse{\boolean{includesalvewithdrone}}{
   The puncta cava (open notes) indicate where a male chorus can sing a drone.  These drones are always a fifth apart on either the RE and the LA or the DO and the SOL.  Then for the sections with a brace above, instead of droning, the melody is sung in parallel, either a fifth above or below.  The drone should only be interrupted at the double bars.
-  \smallskip
-{
-  \grechangedim{spacelinestext}{0.62 cm}{scalable}%
-  \printgabc{Ant.}{1.}{S}{SalveReginaSolemn-drone}
+    \smallskip
+  {
+    \grechangedim{spacelinestext}{0.62 cm}{scalable}%
+    \printgabc{Ant.}{1.}{S}{SalveReginaSolemn-drone}
+  }
+}{
+  \printgabc{Ant.}{1.}{S}{SalveReginaSolemn}
+
+  \needspace{\baselineskip}
+  \salvereginaenglish
 }
 
 {
@@ -254,19 +285,22 @@ Pray for us to God, alleluia.}\end{quote}%
 \newcommand{\prayerenglish}{Almighty, everlasting God, who with the cooperation of the Holy Ghost didst prepare the body and soul of the glorious Virgin Mary, to make it fit to be the worthy dwelling of Thy Son; grant that by the loving intercession of her in whose commemoration we rejoice, we may be delivered from present ills, and from everlasting death.  Through the same Christ our Lord. \Rbar~Amen.}
 \def\prayerlabel{salveprayer}
 
-\vfil
+%\vfil
+\bigskip
 \afterant{}
-\vfil
-%\begin{quote}{Hail, holy Queen, Mother of mercy; hail, our life, our sweetness, and our hope! To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this vale of tears.  Turn then, most gracious advocate, thine eyes of mercy towards us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.  O clement, O loving, O sweet Virgin Mary.}\end{quote}
+%\vfil
+\bigskip
 
-\oldneedspace{8\baselineskip}
-\includelilypond{SalveRegina-systems}%
+\ifthenelse{\boolean{includepolyphony}}{
+  \oldneedspace{8\baselineskip}
+  \includelilypond{SalveRegina-systems}%
 
-\begin{quote}{Hail, holy Queen, Mother of mercy; hail, our life, our sweetness, and our hope! To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this vale of tears.  Turn then, most gracious advocate, thine eyes of mercy towards us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.  O clement, O loving, O sweet Virgin Mary.}\end{quote}
+  \salvereginaenglish
 
-\bigskip{}
+  \bigskip{}
 
-\shortafterant{}
+  \shortafterant{}
+}{}
 
 }
 

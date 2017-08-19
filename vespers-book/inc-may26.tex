@@ -7,6 +7,12 @@
 \def\deusinadjutoriumsolemn{T}
 \def\prepsalmtitleone{\needspace{8\baselineskip}}
 \def\prepsalmtwoverses{}
+\ifthenelse{\boolean{birmingham}}{
+	\def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
+	\def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}
+	\def\preantfive{\vspace{-0.5\baselineskip}}
+	\def\prepsalmtitlefive{\vspace{-0.5\baselineskip}}
+}{}
 %\def\prerepeatantiphonfour{}
 %\def\preantfive{\vspace{-0.2\baselineskip}}
 %\def\prepsalmtitlefive{\vspace{-0.3\baselineskip}}
