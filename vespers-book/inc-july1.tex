@@ -8,13 +8,27 @@
 \def\deusinadjutoriumsolemn{T}
 \def\prepsalmtitleone{\vspace{-0.5\baselineskip}}
 \def\prepsalmtitlethree{\vspace{-0.5\baselineskip}}
-\def\prerepeatantiphonthree{}
-\def\preantfour{\vspace{-0.5\baselineskip}}
-\def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}
 \def\premagtitle{\oldneedspace{8\baselineskip}}
-\def\definevesperspropers{\input{\gabcfolder/inc-MostPreciousBloodOfChrist-2Vespers}}
+\def\definevesperspropers{\input{\gabcfolder/inc-MostPreciousBloodOfChrist-2Vespers}
+	\ifthenelse{\boolean{birmingham}}{
+		\def\postpsalmtitlefive{\bigskip}
+	}{}
+}
 \def\definevesperspropersalt{\input{\gabcfolder/inc-MostPreciousBloodOfChrist-1Vespers}%
+	\ifthenelse{\boolean{birmingham}}{
+		\def\postpsalmtitlefive{\medskip}
+	}{}
   \def\postmagtitle{\vspace{-0.5\baselineskip}}%
+}
+\ifthenelse{\boolean{birmingham}}{
+	%\def\postpsalmtitlefive{\medskip}
+    %\def\chapterreplacement{}
+	%\def\prechapter{}
+	%\def\prehymn{\needspace{5\baselineskip}}
+}{
+	\def\prerepeatantiphonthree{}
+	\def\preantfour{\vspace{-0.5\baselineskip}}
+	\def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}
 }
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}

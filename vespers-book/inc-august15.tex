@@ -7,11 +7,16 @@
 %\def\prepsalmfivetitle{\vspace{-0.5\baselineskip}}
 %\def\preanttwo{\oldneedspace{12\baselineskip}}
 \def\deusinadjutoriumsolemn{T}
-\def\prepsalmoneverses{}
-\def\prerepeatantiphonone{}
-\def\preanttwo{\vspace{-0.5\baselineskip}}
-\def\preanttranslationtwo{\vspace{-0.2\baselineskip}}
-\def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
+\ifthenelse{\boolean{birmingham}}{
+  \def\prepsalmtitletwo{\needspace{8\baselineskip}}
+}{
+  \def\prepsalmoneverses{}
+  \def\prerepeatantiphonone{}
+  \def\preanttwo{\vspace{-0.5\baselineskip}}
+  \def\preanttranslationtwo{\vspace{-0.2\baselineskip}}
+  \def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}  
+}
+\def\precollect{\needspace{8\baselineskip}}
 
 \def\definevesperspropers{\input{\gabcfolder/inc-Assumption-2Vespers}}
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Assumption-1Vespers}

@@ -10,5 +10,5 @@ style: modern;
 def-m1:\ifx\vrlinebreak\undefined\else;
 def-m2:\fi;
 %%
-(c3)<sp>V/</sp>~A(h)má(h)vit(h) e(h)um(h) Dó(h)mi(h)nus,(h) et(h) or(h)ná(h)vit(h) e(h)um. <i>T. P.</i> Allelúia.(g_'hvGF'Efgf. ::[em1]Z[em2])
-<sp>R/</sp>~Sto(h)lam(h) gló(h)ri(h)æ(h) ín(h)du(h)it(h) e(h)um.(g_'hvGF'Efgf. ::) <i>T. P.</i> Allelúia.()
+(c3)<sp>V/</sp>~A(h)má(h)vit(h) e(h)um(h) Dó(h)mi(h)nus,(h) et(h) or(h)ná(h)vit(h) e(h)um.(g_'hvGF'Efgf. ::[em1]Z[em2]) %<i>T. P.</i> Allelúia.
+<sp>R/</sp>~Sto(h)lam(h) gló(h)ri(h)æ(h) ín(h)du(h)it(h) e(h)um.(g_'hvGF'Efgf. ::) %<i>T. P.</i> Allelúia.()

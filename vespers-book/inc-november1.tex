@@ -5,17 +5,26 @@
 \medskip
 
 \def\deusinadjutoriumsolemn{T}
-\def\postdeusinadjutorium{\pagebreak}
-\def\postpsalmtitleone{\oldneedspace{12\baselineskip}}
-%\def\prepsalmoneverses{\vspace{-0.2\baselineskip}}
-%\def\presalmtitleone{\vspace{-0.8\baselineskip}}
-\def\prerepeatantiphonone{}
-%\def\preanttwo{\vspace{-0.5\baselineskip}}
-%\def\prepsalmtitletwo{\vspace{-0.3\baselineskip}}
-\def\postpsalmtitletwo{\needspace{12\baselineskip}}
-\def\prepsalmtitlethree{\vspace{-\baselineskip}}
-\def\prerepeatantiphontwo{}
-\def\postpsalmtitlefour{\needspace{12\baselineskip}}
+\ifthenelse{\boolean{birmingham}}{
+	\def\prerepeatantiphonone{}	
+	\def\preanttwo{\vspace{-0.2\baselineskip}}
+	\def\prepsalmtitletwo{\vspace{-0.1\baselineskip}}
+	\def\postpsalmtitlethree{\needspace{8\baselineskip}}
+	\def\prepsalmthreeverses{\vspace{-0.05\baselineskip}}
+	\def\prerepeatantiphonthree{}
+}{
+	\def\postdeusinadjutorium{\pagebreak}
+	\def\postpsalmtitleone{\oldneedspace{12\baselineskip}}
+	%\def\prepsalmoneverses{\vspace{-0.2\baselineskip}}
+	%\def\presalmtitleone{\vspace{-0.8\baselineskip}}
+	\def\prerepeatantiphonone{}
+	%\def\preanttwo{\vspace{-0.5\baselineskip}}
+	%\def\prepsalmtitletwo{\vspace{-0.3\baselineskip}}
+	\def\postpsalmtitletwo{\needspace{12\baselineskip}}
+	\def\prepsalmtitlethree{\vspace{-\baselineskip}}
+	\def\prerepeatantiphontwo{}
+	\def\postpsalmtitlefour{\needspace{12\baselineskip}}
+}
 \def\prevespers{
   \let\oldthinga=\antonetranslation
   \def\antonetranslation{\vspace{-0.2\baselineskip}\oldthinga\vspace{-0.5\baselineskip}}
@@ -28,10 +37,16 @@
 }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-AllSaints-1Vespers}
   \def\prepsalmtitlefive{\vspace{-0.5\baselineskip}}
+  \def\prerepeatantiphonfive{}
   \def\premag{\label{allsaints1-magnificat}}
 }
 \def\vraltlabel{allsaints1-vr}
-\def\vesperspropersnote{\oldneedspace{15\baselineskip}At II Vespers:}
+\def\vesperspropersnote{%
+	\ifthenelse{\boolean{birmingham}}{%
+	}{%
+		\oldneedspace{15\baselineskip}At II Vespers:%
+	}%
+}
 \def\vesperspropersaltnote{At I Vespers:}
 \def\prechapter{\vspace{-\baselineskip}}
 \def\begincollectcols{\label{allsaints-collect}\begin{parcolumns}[rulebetween]{2}}

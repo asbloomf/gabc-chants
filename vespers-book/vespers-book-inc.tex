@@ -397,7 +397,7 @@
 			\ifx\definevesperspropers\undefined\else{
 				\definevesperspropers
 				\ifx\vesperspropersnote\undefined\else
-					\oldneedspace{5\baselineskip}
+					\oldneedspace{3\baselineskip}
 					\noindent\printnote{\vesperspropersnote}
 				\fi
 				\let\oldprepsalmtitle=\prepsalmtitlefive
@@ -449,7 +449,7 @@
 	\fi
 	%\medskip
 	%\vspace{-\baselineskip}
-	\needspace{3\baselineskip}
+	%\needspace{3\baselineskip}
 	\ifx\chapterreplacement\undefined{
 		\ifx\chaptertext\undefined
 			\ifx\prechapter\undefined\else\prechapter\fi
@@ -494,6 +494,9 @@
 			\ifx\hymninput\undefined\else
 				\input{\hymninput}
 			\fi
+			% \ifx\prehymn\undefined\else
+			% 	\prehymn
+			% \fi
 			\printbothversions{\hymntex}{\printhymn[\hymnlabel]{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}}
 		\else
 			\printhymnnote

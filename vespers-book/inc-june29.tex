@@ -1,4 +1,5 @@
 {
+\oldneedspace{10\baselineskip}
 \section{June 29: Sts Peter \& Paul}
 \subtitle{\nth{1} Class, Red}
 \subtitle{I \& II Vespers}
@@ -6,17 +7,29 @@
 
 \def\deusinadjutoriumsolemn{T}
 \def\definevesperspropers{\input{\gabcfolder/inc-StsPeterAndPaul-2Vespers}
-  \def\preanttranslationone{\vspace{-0.5\baselineskip}}
-  \def\prepsalmtitleone{\vspace{-0.3\baselineskip}}
   \def\prerepeatantiphonone{}
   \def\preantthree{\oldneedspace{8\baselineskip}}
-  \def\preantfive{\bigskip}
+  \ifthenelse{\boolean{birmingham}}{
+  	\def\prepsalmtitlethree{\vspace{-0.5\baselineskip}}
+  	\def\preantfour{\vspace{-0.3\baselineskip}}
+  	\def\prepsalmtitlefour{\vspace{-0.3\baselineskip}}
+  	\def\prepsalmtitlefive{\vspace{-0.6\baselineskip}}
+  }{
+  	\def\preanttranslationone{\vspace{-0.5\baselineskip}}
+  	\def\prepsalmtitleone{\vspace{-0.3\baselineskip}}
+	\def\preantfive{\bigskip}
+  }
 }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-StsPeterAndPaul-1Vespers}
   \def\postpsalmtitleone{\oldneedspace{10\baselineskip}}
-  \def\postpsalmtitletwo{\oldneedspace{10\baselineskip}}
+  \def\postpsalmtitletwo{\smallskip\oldneedspace{10\baselineskip}}
   \def\preanttwo{\vspace{-0.4\baselineskip}}
-  \def\prerepeatantiphontwo{}
+  \ifthenelse{\boolean{birmingham}}{
+  	\def\preanttranslationtwo{\vspace{-0.3\baselineskip}}
+  	\def\prepsalmtitletwo{\vspace{-0.3\baselineskip}}
+  }{
+  	\def\prerepeatantiphontwo{}
+  }
 }
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
@@ -25,6 +38,10 @@
 \def\prevesperspsalmsalt{\noindent\printnote{II Vespers psalms and antiphons, page \pageref{june29-2vespers}.}\medskip}
 \def\prechapter{\label{june29-chapter}}
 %\def\precollect{\vspace{-0.5\baselineskip}}
+
+\ifthenelse{\boolean{birmingham}}{
+	\def\premagtitle{\oldneedspace{10\baselineskip}}
+}{}
 
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
 \printvespers[../June29-StsPeterAndPaul]{inc-StsPeterAndPaul}
