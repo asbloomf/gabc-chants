@@ -913,19 +913,24 @@ five%
     \makeatother
     \greseteolcustos{auto}
     }
-    \vspace{-4pt plus 4pt}
-    \translation[\normalsize]{
-    \Vbar{}~#3{}%
-    \ifx\vrnospace\undefined
-      \def\vrnospace{F}
-    \fi
-    \if\vrnospace T%
-      \hspace{7ex minus 3ex}%
-    \else
-      \\
-    \fi%
-    \Rbar{}~#4{}%
-    }%
+    \StrLen{#3}[\MyStrLen]% we find the length of the string and store it in \MyStrLen
+    \ifthenelse{\equal{\MyStrLen}{0}}%
+    {}%TRUE
+    {
+      \vspace{-4pt plus 4pt}
+      \translation[\normalsize]{
+      \Vbar{}~#3{}%
+      \ifx\vrnospace\undefined
+        \def\vrnospace{F}
+      \fi
+      \if\vrnospace T%
+        \hspace{7ex minus 3ex}%
+      \else
+        \\
+      \fi%
+      \Rbar{}~#4{}%
+      }%
+    }
 }
 \makeatletter
 \define@key{mymag}{canticle}{

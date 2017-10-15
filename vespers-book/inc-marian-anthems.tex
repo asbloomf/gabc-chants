@@ -88,26 +88,16 @@
 }
 
 \def\gabcfolder{../MarianAntiphons}
-\newcommand{\includelilypond}[1]{
-  \ifthenelse{\boolean{includepolyphony}}{
-    \noindent
-    \import{../MarianAntiphons/}{#1}%
-  }{}
-}
-\def\betweenLilyPondSystem#1{
-  \ifnum#1>1
-    \vfil\noindent
-    %\linebreak
-    %\bigskip
-  \else
-    \linebreak
-  \fi
-  %\vspace{0.5\baselineskip}
-}
 
 \label{almaredemptorismater}
 \section{Alma Redemptoris Mater}
 \printnote{From Vespers of Saturday before the \nth{1} Sunday of Advent to \nth{2} Vespers of the Purification.}
+\ifthenelse{\boolean{includepolyphony}}{
+
+  \noindent
+  \emph{Polyphonic version by Palestrina is found on page \pageref{alma_poly}.}
+  \smallskip
+}{}
 \printsimpletone{}
 {
 \grechangenextscorelinedim{1}{spacelinestext}{0.65 cm}{scalable}%
@@ -148,25 +138,20 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 \newcommand{\prayerenglishtwo}{O God, who, by the fruitful virginity of blessed Mary, hast given to mankind the rewards of eternal salvation; grant, we beseech Thee, that we may experience her intercession for us, through whom we have deserved to receive the Author of life, our Lord Jesus Christ, Thy Son. \Rbar~Amen.}
 \def\prayerlabel{almaprayer}
 
-\ifthenelse{\boolean{includepolyphony}}{
-  \shortafterant{}
-
-  \vfil
-
-  \includelilypond{AlmaRedemptorisMater-systems}%
-
-  \oldneedspace{4\baselineskip}
-}{}
 \afterant{}
 }
-
 
 % Ave Regina Cælorum
 \oldneedspace{8\baselineskip}
 \label{avereginacaelorum}
 \section{Ave Regina Cælorum}
 \printnote{From Compline of February \nth{2} (even if the Feast of the Purification be transferred) until Compline of Wednesday in Holy Week.}
-\smallskip
+\ifthenelse{\boolean{includepolyphony}}{
+
+  \noindent
+  \emph{Polyphonic version by Soriano is found on page \pageref{averegina_poly}.}
+  \smallskip
+}{}
 \printsimpletone{}
 \printgabc{Ant.}{6.}{A}{AveReginaSimple}
 \bigskip
@@ -183,24 +168,21 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 \newcommand{\prayerenglish}{Grant, O merciful God, Thy protection to us in our weakness; that we, who celebrate the memory of the holy Mother of God, may, through the aid of her intercession, rise again from our sins. Through the same Christ our Lord. \Rbar~Amen.}
 \def\prayerlabel{avereginacaelorumprayer}
 
-\ifthenelse{\boolean{includepolyphony}}{
-  \shortafterant{}
-
-  \oldneedspace{5\baselineskip}
-  \includelilypond{AveReginaCaelorum-systems}%
-  \pagebreak
-}{}
-
 \afterant{}
 }
 
-
-
+\vspace{-0.5\baselineskip}
 % Regina Cæli
 \needspace{9\baselineskip}
 \label{reginacaeli}
 \section{Regina cæli}
 \printnote{From Compline of Easter Sunday to Compline of Friday after the Feast of Pentecost inclusively.}
+\ifthenelse{\boolean{includepolyphony}}{
+
+  \noindent
+  \emph{Polyphonic version by Palestrina is found on page \pageref{reginacaeli_poly}.}
+  \smallskip
+}{}
 \printsimpletone{}
 \printgabc{Ant.}{6.}{R}{ReginaCaeliSimple}
 \oldneedspace{12\baselineskip}
@@ -227,47 +209,57 @@ Pray for us to God, alleluia.}\end{quote}%
 \def\prayerlabel{reginacaeliprayer}
 
 \afterant{}
-
-\oldneedspace{5\baselineskip}
-\includelilypond{ReginaCoeli-systems}%
-\ifthenelse{\boolean{includepolyphony}}{
-  \vfil
-  \def\postvr{\vfil}
-  \reginacaelienglish{}
-
-  \vfil
-
-  \shortafterant{}
-
-  \vfil
-}{
-  \reginacaelienglish{}
-}
 }
 
 
 % Salve Regina
 \def\salvereginaenglish{
-  % \ifthenelse{\boolean{includepolyphony}}
-  % {}
-  % {\vspace*{0cm plus 1fil}}
   \begin{quote}{Hail, holy Queen, Mother of mercy; hail, our life, our sweetness, and our hope! To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this vale of tears.  Turn then, most gracious advocate, thine eyes of mercy towards us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.  O clement, O loving, O sweet Virgin Mary.}\end{quote}
 }
 
 \needspace{10\baselineskip}
 \label{salveregina}
 \section{Salve Regina}
+{
+\newcommand{\vlatin}{Ora pro nóbis sáncta Déi Génitrix.}
+\newcommand{\venglish}{Pray for us, O holy Mother of God.}
+\newcommand{\rlatin}{Ut dígni efficiámur promissiónibus Chrísti.}
+\newcommand{\renglish}{That we may be made worthy of the promises of Christ.}
+\newcommand{\prayerlatin}{Omnípotens sempitérne Deus, qui gloriósæ Vírginis Matris Maríæ corpus et ánimam, ut dignum Fílii tui habitáculum éffici mererétur, Spíritu Sancto cooperánte præparásti~:~\gredagger{} da, ut cujus commemoratióne lætámur,~* ejus pia intercessióne ab instántibus malis et a morte perpétua liberémur. Per eúmdem Christum Dóminum nostrum. \Rbar~Amen.}
+\newcommand{\prayerenglish}{Almighty, everlasting God, who with the cooperation of the Holy Ghost didst prepare the body and soul of the glorious Virgin Mary, to make it fit to be the worthy dwelling of Thy Son; grant that by the loving intercession of her in whose commemoration we rejoice, we may be delivered from present ills, and from everlasting death.  Through the same Christ our Lord. \Rbar~Amen.}
+\def\prayerlabel{salveprayer}
+
 \printnote{From \nth{1} Vespers of the Feast of the Blessed Trinity to None on Saturday before the \nth{1} Sunday of Advent.}
+\ifthenelse{\boolean{includepolyphony}}{
+
+  \medskip\noindent
+  \emph{Polyphonic version by Soriano is found on page \pageref{salveregina_poly}.}
+  \smallskip
+}{}
 \printsimpletone{}
 \printgabc{Ant.}{5.}{S}{SalveReginaSimple}
   \bigskip{}
+\ifthenelse{\boolean{includesalvewithdrone}}{
+  \salvereginaenglish
+  \medskip
+}{}
 \printsolemntone{}
 \ifthenelse{\boolean{includesalvewithdrone}}{
+  \emph{The solemn tone is found on the next page.}
+
+  \bigskip
+  \afterant{}
+  \bigskip
+
+  \printsolemntone{}
   The puncta cava (open notes) indicate where a male chorus can sing a drone.  These drones are always a fifth apart on either the RE and the LA or the DO and the SOL.  Then for the sections with a brace above, instead of droning, the melody is sung in parallel, either a fifth above or below.  The drone should only be interrupted at the double bars.
-    \smallskip
+  \smallskip
   {
     \grechangedim{spacelinestext}{0.62 cm}{scalable}%
     \printgabc{Ant.}{1.}{S}{SalveReginaSolemn-drone}
+
+    \bigskip
+    \shortafterant{}
   }
 }{
   \printgabc{Ant.}{1.}{S}{SalveReginaSolemn}
@@ -276,31 +268,14 @@ Pray for us to God, alleluia.}\end{quote}%
   \salvereginaenglish
 }
 
-{
-\newcommand{\vlatin}{Ora pro nóbis sáncta Déi Génitrix.}
-\newcommand{\venglish}{ Pray for us, O holy Mother of God.}
-\newcommand{\rlatin}{Ut dígni efficiámur promissiónibus Chrísti.}
-\newcommand{\renglish}{That we may be made worthy of the promises of Christ.}
-\newcommand{\prayerlatin}{Omnípotens sempitérne Deus, qui gloriósæ Vírginis Matris Maríæ corpus et ánimam, ut dignum Fílii tui habitáculum éffici mererétur, Spíritu Sancto cooperánte præparásti~:~\gredagger{} da, ut cujus commemoratióne lætámur,~* ejus pia intercessióne ab instántibus malis et a morte perpétua liberémur. Per eúmdem Christum Dóminum nostrum. \Rbar~Amen.}
-\newcommand{\prayerenglish}{Almighty, everlasting God, who with the cooperation of the Holy Ghost didst prepare the body and soul of the glorious Virgin Mary, to make it fit to be the worthy dwelling of Thy Son; grant that by the loving intercession of her in whose commemoration we rejoice, we may be delivered from present ills, and from everlasting death.  Through the same Christ our Lord. \Rbar~Amen.}
-\def\prayerlabel{salveprayer}
+%\vfil
+\ifthenelse{\boolean{includesalvewithdrone}}{}{
+  \bigskip
+  \afterant{}
+}
 
 %\vfil
 \bigskip
-\afterant{}
-%\vfil
-\bigskip
-
-\ifthenelse{\boolean{includepolyphony}}{
-  \oldneedspace{8\baselineskip}
-  \includelilypond{SalveRegina-systems}%
-
-  \salvereginaenglish
-
-  \bigskip{}
-
-  \shortafterant{}
-}{}
 
 }
 
