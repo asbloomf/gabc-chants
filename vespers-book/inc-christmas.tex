@@ -4,67 +4,89 @@
   \benedicamusdominomaster{#1}
 }
 
+\ifthenelse{\boolean{includechristmas}}
+{ % true
+  \label{christmas}
+  \section{December 24: Nativity of our Lord -- I Vespers}
+  \subtitle{\nth{1} Class, White or Gold}
+
+  \def\deusinadjutoriumsolemn{T}
+  \newcommand{\printhymnnote}{
+  	\noindent\printnote{Hymn.~\emph{Jesu Redémptor ómnium}, page \pageref{hymn-jesuredemptoromnium}.\\}
+  }
+  \def\definevesperspropers{\input{\gabcfolder/inc-Christmas-Vespers1}%
+  }
+  \def\prepsalmtitleone{\vspace{-0.5\baselineskip}}
+  \def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
+  \def\prepsalmtitlethree{\vspace{-0.5\baselineskip}}
+  \def\preantfour{\needspace{10\baselineskip}}
+  %\def\prepsalmtitlefour{\vspace{-\baselineskip}}
+  \def\preantfive{\oldneedspace{10\baselineskip}}
+  %\def\prechapter{\vspace{-\baselineskip}}
+  %\def\precollect{\vspace{-0.2\baselineskip}}
+  \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
+  \def\prevr{\label{vrcrastina}}
+  \printvespers[../Christmas-Vespers1]{inc-Christmas-Vespers1-psalms}
+
+  \benedicamusdomino{}
+}{} % false
+
 {
-\label{christmas}
-\section{December 24: Nativity of our Lord -- I Vespers}
-\subtitle{\nth{1} Class, White or Gold}
-
-\def\deusinadjutoriumsolemn{T}
-\newcommand{\printhymnnote}{
-	\noindent\printnote{Hymn.~\emph{Jesu Redémptor ómnium}, page \pageref{hymn-jesuredemptoromnium}.\\}
+\ifthenelse{\boolean{includechristmas}}{% true
+  \section[December 25: Nativity of our Lord -- II Vespers]{December 25: Nativity of our Lord -- II Vespers\sectionmark{December 25: Nativity of our Lord \& Sunday within the Octave}}
+  \sectionmark{December 25: Nativity of our Lord \& Sunday within the Octave}
+  \subtitle{\nth{1} Class, White or Gold}
+  \medskip
+  \subtitle{\&}
+  \vspace{-0.5\baselineskip}
+  \label{christmas2}
+  \section[Sunday within the Octave]{Sunday within the Octave\sectionmark{December 25: Nativity of our Lord \& Sunday within the Octave}}
+  \sectionmark{December 25: Nativity of our Lord \& Sunday within the Octave}
+}{% false
+  \label{christmas2}
+  \section{Sunday within the Octave of Christmas}
 }
-\def\definevesperspropers{\input{\gabcfolder/inc-Christmas-Vespers1}%
-}
-\def\prepsalmtitleone{\vspace{-0.5\baselineskip}}
-\def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
-\def\prepsalmtitlethree{\vspace{-0.5\baselineskip}}
-\def\preantfour{\needspace{10\baselineskip}}
-%\def\prepsalmtitlefour{\vspace{-\baselineskip}}
-\def\preantfive{\oldneedspace{10\baselineskip}}
-%\def\prechapter{\vspace{-\baselineskip}}
-%\def\precollect{\vspace{-0.2\baselineskip}}
-\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
-\def\prevr{\label{vrcrastina}}
-\printvespers[../Christmas-Vespers1]{inc-Christmas-Vespers1-psalms}
-
-\benedicamusdomino{}
-}
-
-{
-\section[December 25: Nativity of our Lord -- II Vespers]{December 25: Nativity of our Lord -- II Vespers\sectionmark{December 25: Nativity of our Lord \& Sunday within the Octave}}
-\sectionmark{December 25: Nativity of our Lord \& Sunday within the Octave}
-\subtitle{\nth{1} Class, White or Gold}
-\medskip
-\subtitle{\&}
-\vspace{-0.5\baselineskip}
-\section[Sunday within the Octave]{Sunday within the Octave\sectionmark{December 25: Nativity of our Lord \& Sunday within the Octave}}
-\sectionmark{December 25: Nativity of our Lord \& Sunday within the Octave}
 \subtitle{\nth{2} Class, White}
 \bigskip
 
 \def\deusinadjutoriumsolemn{T}
-\def\definevesperspropersalt{\input{\gabcfolder/inc-Christmas-Vespers2}
-  \let\oldthing\maganttranslation
-  \def\maganttranslation{\oldthing\vspace{-0.5\baselineskip}}
+\ifthenelse{\boolean{includechristmas}}{% true
+  \def\definevesperspropersalt{\input{\gabcfolder/inc-Christmas-Vespers2}
+    \let\oldthing\maganttranslation
+    \def\maganttranslation{\oldthing\vspace{-0.5\baselineskip}}
+  }
+  \def\vesperspropersaltnote{At II Vespers of Christmas:}
+  \def\vesperspropersnote{\needspace{4\baselineskip}At II Vespers of the Sunday within the Octave of Christmas:}
+  \def\prevr{\emph{On Dec.~24, \emph{\Vbar{}~Crástina die}, p.~\pageref{vrcrastina}}.
+
+  \emph{On Dec.~31, \emph{\Vbar{}~Verbum} \& Jan.~1, \emph{\Vbar{}~Notum fecit}, p.~\pageref{vrverbumcarofactumest}}.
+  \medskip
+  }
+  \def\prerepeatantiphonthree{\vspace{-0.85\baselineskip}}
+}{% false
+  \def\prevr{\emph{On Dec.~31 \& Jan.~1, return to p.~\pageref{vrverbumcarofactumest}}.
+  \medskip
+
+  \emph{On Sunday within the octave, continue:}
+
+  }
+}
+\ifthenelse{\boolean{includedec29}}{%true
+  \def\prechapter{
+    \noindent\emph{On December 29, continue with the chapter on page \emph{\pageref{dec29}}.}
+  }
+}{% false
+  \def\prechapter{\vspace{-1\baselineskip}}
 }
 \def\definevesperspropers{\input{\gabcfolder/inc-SundayWithinOctaveOfChristmas-Vespers2}
   \let\oldthing\maganttranslation
   \def\maganttranslation{\oldthing\vspace{-0.5\baselineskip}}
 }
-\def\vesperspropersaltnote{At II Vespers of Christmas:}
-\def\vesperspropersnote{\needspace{4\baselineskip}At II Vespers of the Sunday within the Octave of Christmas:}
 \def\prepsalmthree{\needspace{8\baselineskip}}
 \def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
-\def\prerepeatantiphonthree{\vspace{-0.85\baselineskip}}
-\def\prechapter{\vspace{-1\baselineskip}}
 \def\premag{\def\noeuouae{T}}
 \def\premagtitle{\vspace{-0.3\baselineskip}}
 \def\premagverses{\greseteolcustos{manual}}
-\def\prevr{\emph{On Dec.~24, \emph{\Vbar{}~Crástina die}, p.~\pageref{vrcrastina}}.
-
-\emph{On Dec.~31, \emph{\Vbar{}~Verbum} \& Jan.~1, \emph{\Vbar{}~Notum fecit}, p.~\pageref{vrverbumcarofactumest}}.
-\medskip
-}
 \def\hymnlabel{hymn-jesuredemptoromnium}
 \input{../Christmas/inc-JesuRedemptorOmnium}
 \def\prehymn{%
@@ -76,6 +98,15 @@
 \grechangedim{spaceabovelines}{0.45576 cm plus 0.36461 cm minus 0.09114 cm}{scalable}%
 \benedicamusdomino{}
 }
+
+\ifthenelse{\boolean{includedec29}}{% true
+  \section{December 29: St Thomas of Canterbury}
+  {
+    \label{dec29}
+    \def\psalmsreplacement{\noindent{}\emph{Antiphons and Psalms of the Nativity, page \emph{\pageref{christmas2}}.}}
+    \printvespers[../Christmas]{inc-dec29-thomas-of-canterbury}
+  }
+}{} %false
 
 {
 \section{January 1: Octave of the Nativity of our Lord}

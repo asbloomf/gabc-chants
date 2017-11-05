@@ -20,6 +20,7 @@
   If today is Sunday, \emph{Vespers of the Sunday} is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{}}, and \emph{Collect}.
 }
 
+\ifthenelse{\boolean{testrun}}{}{
 %December 8: Immaculate Conception
 %Second Vespers of Immaculate Conception
 \input{inc-december8}
@@ -35,6 +36,11 @@
 %March 25: Annunciation 
 \input{inc-march25}
 
+\ifthenelse{\boolean{includeapril23}}{
+	%April 23: St George
+	\input{inc-april23}
+}{}
+
 \ifthenelse{\boolean{includemay1}}{
 	%May 1: St Joseph the Worker (1st class)
 	\input{inc-may1}
@@ -42,11 +48,6 @@
 
 %May 26: St Philip Neri (1)
 \input{inc-may26}
-
-\ifthenelse{\boolean{includejun22}}{
-	%June 22: Sts Thomas More & John Fisher
-	\input{inc-jun22}
-}{}
 
 %June 24: Nativity of St John the Baptist (1st class)
 \input{inc-june24}
@@ -58,7 +59,15 @@
 %\cleartoleftpage
 %July 1: Most Precious Blood (1st class)
 \input{inc-july1}
+}{}
 
+\ifthenelse{\boolean{includejuly9}}{
+	%July 9: Ss Thomas More & John Fisher
+	\input{inc-july9}
+}{}
+
+
+\ifthenelse{\boolean{testrun}}{}{
 %Aug 6: Transfiguration (2nd class)
 \input{inc-august6}
 
@@ -75,6 +84,14 @@
 %\cleardoublepage
 \cleartoleftpage
 
+}
+
+\ifthenelse{\boolean{includeoct7}}{
+	%October 7: Our Lady of the Rosary
+	\input{inc-oct7}
+}{}
+
+\ifthenelse{\boolean{testrun}}{}{
 \ifthenelse{\boolean{includeoct9}}{
 	%October 9: Blessed John Henry Newman
 	\input{inc-oct9}
@@ -93,4 +110,5 @@
 
 %Nov 9: Dedication of Archbasilica of Holy Savior (2nd class)
 \input{inc-november9}
+}
 }

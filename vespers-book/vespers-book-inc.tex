@@ -423,30 +423,34 @@
 
 	\ifx\postdeusinadjutorium\undefined\else\postdeusinadjutorium\fi
 	\medskip
-	\ifx\psalmonenum\undefined{
-		\ifx\definevesperspropersalt\undefined\else{
-			\definevesperspropersalt
-			\ifx\prevesperspsalmsalt\undefined\else\prevesperspsalmsalt{}\fi
-			\ifx\vesperspropersaltnote\undefined\else
-				\oldneedspace{3\baselineskip}
-				\noindent\printnote{\vesperspropersaltnote}
-			\fi
-			\ifx\vesperspsalmsaltlabel\undefined\else\vesperspsalmsaltlabel{}\fi
+	\ifx\psalmsreplacement\undefined{
+		\ifx\psalmonenum\undefined{
+			\ifx\definevesperspropersalt\undefined\else{
+				\definevesperspropersalt
+				\ifx\prevesperspsalmsalt\undefined\else\prevesperspsalmsalt{}\fi
+				\ifx\vesperspropersaltnote\undefined\else
+					\oldneedspace{3\baselineskip}
+					\noindent\printnote{\vesperspropersaltnote}
+				\fi
+				\ifx\vesperspsalmsaltlabel\undefined\else\vesperspsalmsaltlabel{}\fi
+				\printpsalms{}
+			}\fi
+			\ifx\definevesperspropers\undefined\else{
+				\definevesperspropers
+				\ifx\prevesperspsalms\undefined\else\prevesperspsalms{}\fi
+				\ifx\vesperspropersnote\undefined\else
+					\oldneedspace{3\baselineskip}
+					\noindent\printnote{\vesperspropersnote}
+				\fi
+				\ifx\vesperspsalmslabel\undefined\else\vesperspsalmslabel{}\fi
+				\printpsalms{}
+			}\fi
+		}\else
 			\printpsalms{}
-		}\fi
-		\ifx\definevesperspropers\undefined\else{
-			\definevesperspropers
-			\ifx\prevesperspsalms\undefined\else\prevesperspsalms{}\fi
-			\ifx\vesperspropersnote\undefined\else
-				\oldneedspace{3\baselineskip}
-				\noindent\printnote{\vesperspropersnote}
-			\fi
-			\ifx\vesperspsalmslabel\undefined\else\vesperspsalmslabel{}\fi
-			\printpsalms{}
-		}\fi
-	}\else
-		\printpsalms{}
-	\fi
+		\fi
+	}\else{
+		\psalmsreplacement{}
+	}\fi
 	%\medskip
 	%\vspace{-\baselineskip}
 	%\needspace{3\baselineskip}
@@ -598,7 +602,7 @@
 	{\ifx\postmag\undefined\else\postmag\fi}
 
 	\vspace{-\baselineskip}
-	\ifx\precollect\undefined\else\precollect\fi
+%	\ifx\precollect\undefined\else\precollect\fi
 	\ifx\collectreplacement\undefined{
 		\ifx\collect\undefined
 			\def\printcollectheading{F}
@@ -646,31 +650,61 @@
 {
 	\thispagestyle{empty}
 	% title page
-	{\vspace*{5\baselineskip}
+	\ifthenelse{\boolean{birmingham}}{% birmingham
+		{\centering
 
-	\centering
+		\vspace*{0pt plus 0.75 fill}
 
-	{\Huge
-	Vespers with Gregorian Chant
+		\uppercase{
+		Vesperale
 
+		\medskip
+
+		Pro Dominicis \& Festis
+
+		}
+
+		\vfill
+		\vfill
+		\vfill
+
+		ad usum Oratorii Sancti Philippi Nerii
+
+		\medskip
+
+		apud Birminghamiensem
+
+		\vfill}
+	}{% general
+		\vspace*{5\baselineskip}
+
+		{\centering
+
+		{\Huge
+		Vespers with Gregorian Chant
+
+		}
+
+		{\Large\medskip
+		\emph{for}
+
+		\medskip}
+
+		{\Huge
+		Sundays \& Holy Days
+
+		}
+		\vfill}
 	}
-
-	{\Large\medskip
-	\emph{for}
-
-	\medskip}
-
-	{\Huge
-	Sundays \& Holy Days
-
-	}
-	\vfill
 	\pagebreak
-	}
 	% copyright page
 	\thispagestyle{empty}
-	\noindent{}Vespers with Gregorian Chant for Sundays \& Holy Days: \emph{newly typeset, based on \emph{The Liber Usualis}, edited by the Benedictines of Solesmes (Desclee Company, 1961).}
-	
+	\ifthenelse{\boolean{birmingham}}{
+		\noindent{}Vesperale pro dominicis et festis ad usum Oratorii Sancti Philippi Nerii apud Birminghamiensem: \emph{newly typeset, based on \emph{The Liber Usualis}, edited by the Benedictines of Solesmes (Desclee Company, 1961).}
+	}{
+		\noindent{}Vespers with Gregorian Chant for Sundays \& Holy Days: \emph{newly typeset, based on \emph{The Liber Usualis}, edited by the Benedictines of Solesmes (Desclee Company, 1961).}
+	}
+
 	\bigskip{}\noindent{}Many thanks to Elie Roux for creating Gregorio, to all the people answering questions on the Gregorio forums, to Olivier Berton for creating GregoBase (http://gregobase.selapa.net) which makes it much easier to find all the chant that Andrew Hinkley and others have contributed to the public domain.  Also many thanks to my brother Benjamin, whose website (http://bbloomf.github.io/jgabc) makes it incredibly easy to typeset the psalms and substantially easier than otherwise to typeset Gregorian chant with Gregorio.
 
 	\begin{flushright}
@@ -681,12 +715,12 @@
 	\bigskip{}\noindent{}http://asbloomf.github.io/gabc-chants
 
 	\vfill
-
 %editions
 	\bigskip{}\noindent{}%
 	\ifthenelse{\boolean{birmingham}}%
-	{} % true
-	{% false
+	{% true
+		Birmingham edition, 2017.
+	}{% false
 		First edition, 3 December 2015.
 
 		\hangindent=1em % indent all subsequent lines
@@ -707,8 +741,14 @@
 
 	\bigskip{}\noindent{}This work is free of known copyright restrictions.
 
-	\bigskip{}\noindent{}%CreateSpace
-	ISBN: 978-1-507-87881-1
+	\ifthenelse{\boolean{birmingham}}%
+	{% true
+		\bigskip{}\noindent{}%CreateSpace
+		ISBN: 978-1-507-87881-1
+	}{ % false
+		\bigskip{}\noindent{}%CreateSpace
+		ISBN: 978-1-507-87881-1
+	}%
 	%
   %\noindent{}Lulu ISBN: 978-1-329-59990-1
 }
@@ -723,12 +763,13 @@
 \include{inc-common-vespers}
 \include{inc-benedicamus-domino}
 
-\include{inc-marian-anthems}
-
-\clearpage
-\include{inc-vespers-sunday}
-
 \ifthenelse{\boolean{testrun}}{}{
+
+	\include{inc-marian-anthems}
+
+	\clearpage
+	\include{inc-vespers-sunday}
+
 	\include{inc-advent}
 
 	%christmas through Holy Family
@@ -743,14 +784,18 @@
 	\include{inc-timeaftereaster}
 
 	\include{inc-pentecost}
-	\include{inc-timeafterpentecost}
-
-	\include{inc-proper-of-saints}
 }
+
+\include{inc-timeafterpentecost}
+
+\include{inc-proper-of-saints}
 
 \ifthenelse{\boolean{includeappendix}}{
 	\cleardoublepage	
 	\chapter{Appendix}
+	\ifthenelse{\boolean{includevespersofdead}}{
+		\include{inc-vespersofdead}
+	}{}
 	\input{inc-40hours}
 	\input{inc-benediction}
 	\input{inc-lucis_creator_poly}
@@ -758,7 +803,13 @@
 	\include{inc-mag1D}
 	\include{inc-mag7a}
 	\include{inc-grassi}
-}{}
+}{
+	\ifthenelse{\boolean{includevespersofdead}}{
+		\cleardoublepage
+		\chapter{Appendix}
+		\include{inc-vespersofdead}
+	}{}
+}
 
 \end{document}
 

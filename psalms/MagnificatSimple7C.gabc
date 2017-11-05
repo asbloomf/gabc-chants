@@ -1,0 +1,20 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Magnificat Simple 7b;
+office-part: Magnificat;
+occasion: Vespers;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+def-m1:\pagebreak[2];
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+(c3)1. Ma(hg)gní(hi)fi(i)cat(i.) <v>\greheightstar</v>(:) á(i)ni(i)ma(i) <b>me</b>(j ir)a(i) <b>Dó</b>(h)mi(hr)num.(gh..) (::Z[em1])
+2. Et(hg) ex(hi)sul(i)tá(i)vit(i) <b>spí</b>(k)ri(jr)tus(j) <b>me</b>(i jr)us(j.) <v>\greheightstar</v>(:) in(i) De(i)o(i) sa(i)lu(i)<b>tá</b>(j ir)ri(i) <b>me</b>(h hr)o.(gh..) (::)

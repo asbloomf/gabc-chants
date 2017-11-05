@@ -34,8 +34,33 @@
   
 }
 
+
+\ifthenelse{\boolean{includecorpuschristi}}{% true
+{
+  \section{Corpus Christi}
+
+  \def\definevesperspropers{\input{\gabcfolder/inc-CorpusChristi-2Vespers}}
+
+  \printvespers[../CorpusChristi]{inc-CorpusChristi}
+  \medskip
+  \benedicamusdomino{}
+}
+}{}% false
+
 {\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.455\linewidth}]{2}}
 \printvespersafterpentecost{2}}
+\ifthenelse{\boolean{includesacredheart}}{% true
+{
+  \section{Sacred Heart of Jesus}
+
+  \def\definevesperspropers{\input{\gabcfolder/inc-SacredHeart-2Vespers}}
+
+  \printvespers[../SacredHeart]{inc-SacredHeart}
+  \medskip
+  \benedicamusdomino{}
+}
+}{}% false
+\ifthenelse{\boolean{testrun}}{}{
 \printvespersafterpentecost{3}
 \printvespersafterpentecost{4}
 {\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
@@ -89,4 +114,5 @@
 %}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.455\linewidth}]{2}}
 \printvespersafterpentecost{24}}
+}
 }

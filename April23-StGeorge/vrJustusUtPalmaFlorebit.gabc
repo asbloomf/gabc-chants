@@ -1,0 +1,8 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+name: versicle;
+def-m1:\ifx\vrlinebreak\undefined\else;
+def-m2:\fi;
+%%
+(c3)<sp>V/</sp>~Ju(h)stus(h) ut(h) pal(h)ma(h) flo(h)ré(h)bit.(g_'hvGF'Efgf.) (::[em1]Z[em2])
+<sp>R/</sp>~Si(h)cut(h) ce(h)drus(h) Lí(h)ba(h)ni(h) mul(h)ti(h)pli(h)cá(h)bi(h)tur.(g_'hvGF'Efgf.) (::)

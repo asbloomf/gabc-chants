@@ -1,0 +1,18 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+transcriber: Albert Bloomfield;
+style: modern;
+def-m1:\ifx\vrlinebreak\undefined\else\if\vrlinebreak T;
+def-m2:\fi\fi;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c3)<sp>V/</sp>~Hau(h)ri(h)é(hi)tis(h'_,) a(h)quas(f) in(e) gáu(f_h)di(h)o.(hiH'G/hih.ghG'FE'fg/gf.) (::[em1]Z[em2])
+<sp>R/</sp>~De(h) fón(hi)ti(h)bus(h'_,) Sal(f)va(e)tó(f_h)ris.(hiH'G/hih.ghG'FE'fg/gf.) (::)
