@@ -40,33 +40,35 @@
 			\normalsize
 			\oldneedspace{5\baselineskip}
 			\gregorioscore{\gabcfolder/\hymntex}
-			\bigskip
-			\printvrdirigaturshort{}
-	        \input{\gabcfolder/inc-hymn-LucisCreatorOptime2}
-			{
-				\def\annot{\small{Hymn.}}
-				\def\annottwo{\small{\hymnlinetwo}}
-				\alsetinitialspacing{\hymninitial}
-				\normalsize
-				\oldneedspace{5\baselineskip}
-				{\centering\addfontfeature{Numbers=Lining}\textbf{2.~Another Chant (ad libitum).}\par}
-				\gregorioscore{\gabcfolder/\hymntex}
-			}
-			\bigskip
-		  	\printvrdirigaturshort{}
-			{
-				\def\annot{\small{Hymn.}}
-				\def\annottwo{\small{\hymntwolinetwo}}
-				\alsetinitialspacing{\hymninitial}
-				\normalsize
-				\oldneedspace{5\baselineskip}
-				{\centering\addfontfeature{Numbers=Lining}\textbf{3.~Another Chant.}\par}
+			\ifthenelse{\boolean{birmingham}}{}{
+				\bigskip
+				\printvrdirigaturshort{}
+		        \input{\gabcfolder/inc-hymn-LucisCreatorOptime2}
+				{
+					\def\annot{\small{Hymn.}}
+					\def\annottwo{\small{\hymnlinetwo}}
+					\alsetinitialspacing{\hymninitial}
+					\normalsize
+					\oldneedspace{5\baselineskip}
+					{\centering\addfontfeature{Numbers=Lining}\textbf{2.~Another Chant (ad libitum).}\par}
+					\gregorioscore{\gabcfolder/\hymntex}
+				}
+				\bigskip
+			  	\printvrdirigaturshort{}
+				{
+					\def\annot{\small{Hymn.}}
+					\def\annottwo{\small{\hymntwolinetwo}}
+					\alsetinitialspacing{\hymninitial}
+					\normalsize
+					\oldneedspace{5\baselineskip}
+					{\centering\addfontfeature{Numbers=Lining}\textbf{3.~Another Chant.}\par}
 
-				\gregorioscore{\gabcfolder/\hymntextwo}
-			}
-			\bigskip
+					\gregorioscore{\gabcfolder/\hymntextwo}
+				}
+				\bigskip
+		    	%\printvrdirigaturshort{}
+		    }
 			\pagebreak
-		    %\printvrdirigaturshort{}
 	    }
 	    
     {
@@ -86,7 +88,7 @@
 		\def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
 		\printnote{Time after Epiphany,\dotting \emph{p.~\pageref{epiphany2} to \pageref{epiphany6}}}
 
-		\printnote{Shrovetide \& Lent,\dotting \emph{p.~\pageref{septuagesima} to \pageref{lent6}}}
+		\printnote{Septuagesima \& Lent,\dotting \emph{p.~\pageref{septuagesima} to \pageref{lent6}}}
 
 		\printnote{Time after Pentecost,\dotting \emph{p.~\pageref{pentecost2} to \pageref{pentecost24}}}
 
@@ -101,7 +103,9 @@
 		%\vspace{-\baselineskip}
 		\printsundaysthroughtheyear{}
 		\vfil
-		\Vbar~\emph{Benedicámus Dómino \benedicamusdominonamesunday{}}, page \pageref{benedicamusdomino-sunday}; or in Lent, \emph{\benedicamusdominonamelent{}}, page \pageref{benedicamusdomino-lent}.
+		\ifthenelse{\boolean{includebenedicamusdominoreferences}}{
+			\Vbar~\emph{Benedicámus Dómino \benedicamusdominonamesunday{}}, page \pageref{benedicamusdomino-sunday}; or in Lent, \emph{\benedicamusdominonamelent{}}, page \pageref{benedicamusdomino-lent}.
+		}{}
 	}
 	\newcommand{\collectreplacement}{\bigskip}
 	\def\prepsalmtitlethree{\vspace{-0.25\baselineskip}}
@@ -109,7 +113,7 @@
 	%\def\prepsalmfive{\greseteolcustos{manual}}
 	%\def\prechapter{\vspace{-\baselineskip}}
 	\def\beginchaptercols{
-		\noindent{}\printnote{In Shrovetide \& Lent, from the Sunday, \emph{p.~\pageref{septuagesima} to \pageref{lent6}.}}
+		\noindent{}\printnote{In Septuagesima \& Lent, from the Sunday, \emph{p.~\pageref{septuagesima} to \pageref{lent6}.}}
 
 		\bigskip{}
 		\noindent{}\printnote{Otherwise:}

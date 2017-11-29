@@ -1,5 +1,16 @@
 \chapter{Marian Anthems}
 {
+\ifthenelse{\boolean{birmingham}}{
+  \printnote{
+    \emph{Alma Redemptoris Mater} is sung from \nth{1} Vespers of the First Sunday of Advent until \nth{2} Vespers of \nth{2} February.
+
+    \emph{Ave Regina Cælorum} is sung from Compline of \nth{2} February until Compline of Holy Wednesday.
+
+    \emph{Regina Cæli} is sung from Compline of Holy Saturday until None of the Saturday within the Octave of Pentecost.
+
+    \emph{Salve Regina} is sung from \nth{1} Vespers of Trinity Sunday until None of the Saturday before the First Sunday of Advent.
+  }
+}{}
 \def\nogabcbreaks{T}
 \newcommand{\printsimpletone}{
 \vspace{0ex plus 1ex minus 1ex}
@@ -91,7 +102,9 @@
 
 \label{almaredemptorismater}
 \section{Alma Redemptoris Mater}
-\printnote{From Vespers of Saturday before the \nth{1} Sunday of Advent to \nth{2} Vespers of the Purification.}
+\ifthenelse{\boolean{birmingham}}{}{
+  \printnote{From Vespers of Saturday before the \nth{1} Sunday of Advent to \nth{2} Vespers of the Purification.}
+}
 \ifthenelse{\boolean{includepolyphony}}{
 
   \noindent
@@ -108,7 +121,7 @@
 \printgabc{Ant.}{5.}{A}{AlmaSolemn}
 
 \begin{quote}{
-Beloved Mother of the Savior, and wide open Gate of heaven,
+Beloved Mother of the Saviour, and wide open Gate of heaven,
 Star of the Sea, bring help to the people that weakens and wavers.
 O thou, whom marvelling Nature saw give birth to thy Creator;
 Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show pity, to us sinners.%
@@ -145,7 +158,9 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 \oldneedspace{8\baselineskip}
 \label{avereginacaelorum}
 \section{Ave Regina Cælorum}
-\printnote{From Compline of February \nth{2} (even if the Feast of the Purification be transferred) until Compline of Wednesday in Holy Week.}
+\ifthenelse{\boolean{birmingham}}{}{
+  \printnote{From Compline of February \nth{2} (even if the Feast of the Purification be transferred) until Compline of Wednesday in Holy Week.}
+}
 \ifthenelse{\boolean{includepolyphony}}{
 
   \noindent
@@ -176,7 +191,9 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 \needspace{9\baselineskip}
 \label{reginacaeli}
 \section{Regina cæli}
-\printnote{From Compline of Easter Sunday to Compline of Friday after the Feast of Pentecost inclusively.}
+\ifthenelse{\boolean{birmingham}}{}{
+  \printnote{From Compline of Easter Sunday to Compline of Friday after the Feast of Pentecost inclusively.}
+}
 \ifthenelse{\boolean{includepolyphony}}{
 
   \noindent
@@ -229,7 +246,9 @@ Pray for us to God, alleluia.}\end{quote}%
 \newcommand{\prayerenglish}{Almighty, everlasting God, who with the cooperation of the Holy Ghost didst prepare the body and soul of the glorious Virgin Mary, to make it fit to be the worthy dwelling of Thy Son; grant that by the loving intercession of her in whose commemoration we rejoice, we may be delivered from present ills, and from everlasting death.  Through the same Christ our Lord. \Rbar~Amen.}
 \def\prayerlabel{salveprayer}
 
-\printnote{From \nth{1} Vespers of the Feast of the Blessed Trinity to None on Saturday before the \nth{1} Sunday of Advent.}
+\ifthenelse{\boolean{birmingham}}{}{
+  \printnote{From \nth{1} Vespers of the Feast of the Blessed Trinity to None on Saturday before the \nth{1} Sunday of Advent.}
+}
 \ifthenelse{\boolean{includepolyphony}}{
 
   \medskip\noindent

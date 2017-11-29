@@ -61,7 +61,11 @@ Amen.%\grechangestaffsize{15}
 \def\hymnnote{Translated by Dr Roberto Lionello}
 
 \newcommand{\vrtex}{vrDeusVirtutum}
-\newcommand{\vrpttex}{vrDeusVirtutumPT}
+\ifthenelse{\boolean{birmingham}}{
+	\newcommand{\vrpttex}{vrDeusVirtutumPT_full}	
+}{
+	\newcommand{\vrpttex}{vrDeusVirtutumPT}
+}
 \newcommand{\vtranslation}{God of hosts, look down from heaven, and visit this vineyard.}
 \newcommand{\rtranslation}{And perfect the same which thy right hand hath planted.}
 

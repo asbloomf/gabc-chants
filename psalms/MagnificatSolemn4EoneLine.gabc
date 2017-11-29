@@ -17,8 +17,8 @@ style: modern;
 
 % The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
 
-(c4)1. M{a}(h)gní(gh)fi(h)cat(h.) <v>\greheightstar</v>(:) á(h)ni(h)<i>ma</i>(g) <i>mé</i>(h)<i>a</i>(ih) <b>Dó</b>(gr[ocba:1{])<b>mi</b>(gf[ocba:0}])num.(e.) (::)
-2. Et(h) ex(gh)sul(h)tá(h)vit(h) <i>spí</i>(hg)<i>ri</i>(gi)<i>tus</i>(i) <b>mé</b>(hi hr)us(h.) <v>\greheightstar</v>(:) in(h) Dé(h)o(h) sa(h)<i>lu</i>(g)<i>tá</i>(h)<i>ri</i>(ih) (gr[ocba:1{]) <b>mé</b>(gf[ocba:0}])o.(e.) (::)
+(c4)1. M{a}(h)gní(gh)fi(h)cat(h.) <v>\greheightstar</v>(:) á(h)ni(h)<i>ma</i>(g) <i>mé</i>(h)<i>a</i>(ih) <b>Dó</b>(gr[ocb:1{])<b>mi</b>(gf[ocb:0}])num.(e.) (::)
+2. Et(h) ex(gh)sul(h)tá(h)vit(h) <i>spí</i>(hg)<i>ri</i>(gi)<i>tus</i>(i) <b>mé</b>(hi hr)us(h.) <v>\greheightstar</v>(:) in(h) Dé(h)o(h) sa(h)<i>lu</i>(g)<i>tá</i>(h)<i>ri</i>(ih) (gr[ocb:1{]) <b>mé</b>(gf[ocb:0}])o.(e.) (::)
 
 %E(h) u(g) o(h) u(ih) a(gf) e.(e.) (::)
 

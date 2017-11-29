@@ -1,6 +1,6 @@
 {
 \section{June 24: Nativity of St John the Baptist}
-\subtitle{\nth{1} Class, White or Gold}
+\subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
 \medskip
 
@@ -30,11 +30,38 @@
 \def\vesperspropersaltnote{At I Vespers:}
 \def\prevesperspsalms{\noindent\printnote{Chapter and following, page \pageref{june24-chapter}.\\}}
 \def\vesperspsalmslabel{\label{june24-2vespers}}
-\def\prevesperspsalmsalt{\noindent\printnote{II Vespers psalms and antiphons, page \pageref{june24-2vespers}.}\medskip}
+\def\prevesperspsalmsalt{\noindent\printnote{II Vespers psalms and antiphons, page \pageref{june24-2vespers}.}\medskip\label{june24-1vespers}}
 \def\prechapter{\label{june24-chapter}}
 %\def\premagnificat{\pagebreak}
 
 \printvespers[../June24-BirthOfJohnTheBaptist]{inc-BirthOfJohnTheBaptist}
+
+\ifthenelse{\boolean{birmingham}}{
+  \printnote{If today is Sunday, 23 June then \emph{Second Vespers of the Dedication of a Church} is commemorated as follows.
+  \ifthenelse{\boolean{includebenedicamusdominoreferences}}{
+    %Otherwise \benedicamusdominoreference{}%
+  }{}
+  }
+  \medskip
+  \hrule
+  \medskip
+
+  % commemoration of Second Vespers of Dedication of Church
+  {
+  %\def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
+  \printcommemoration[../CommonOfDedicationOfChurch]{commemorationDedicationOfChurch-Vespers2}
+
+  \medskip
+  \hrule
+  \medskip
+  %\bigskip
+  \benedicamusdomino{}
+  }
+  \renewcommand{\sundaycommemnote}{
+    If today is Sunday, 24 June then \emph{Vespers of the Sunday} is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{}~Dirigátur}, and \emph{Collect}.
+  }
+
+}{}
 
 \printnote{\sundaycommemnote{}
 %\vspace{-\baselineskip}

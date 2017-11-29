@@ -33,7 +33,7 @@
 %1st sunday of advent
 {
 \section{First Sunday of Advent}
-\subtitle{\nth{1} Class, Violet}
+\subtitle{\nth{1} Class}
 
 \def\premag{\def\noeuouae{T}}
 \def\premagverses{\greseteolcustos{manual}}
@@ -116,7 +116,7 @@
 {
 \needspace{12\baselineskip}
 \section{Second Sunday of Advent}
-\subtitle{\nth{1} Class, Violet}
+\subtitle{\nth{1} Class}
 \printnote{If today is December 8, \emph{Second Vespers of the Immaculate Conception} is sung with a Commemoration of this Sunday, page \pageref{immaculateconception}.}
 \medskip
 %\def\prepsalmtitleone{\vspace{-0.75\baselineskip}}
@@ -138,7 +138,11 @@
 \printvespers[../Advent2]{inc-Advent2-Vespers2}
 
 \noindent
-\printnote{If today is December 7, \emph{First Vespers of the Immaculate Conception} is commemorated as follows.  Otherwise \benedicamusdominoreference{advent}}
+\printnote{If today is December 7, \emph{First Vespers of the Immaculate Conception} is commemorated as follows.
+\ifthenelse{\boolean{includebenedicamusdominoreferences}}{
+	Otherwise \benedicamusdominoreference{advent}%
+}{}
+}
 \medskip
 \hrule
 \medskip
@@ -159,7 +163,7 @@
 % 3rd Sunday of Advent
 {
 \section{Third Sunday of Advent}
-\subtitle{\nth{1} Class, Violet or Rose}
+\subtitle{\nth{1} Class}
 
 %\def\prepsalmfive{\greseteolcustos{manual}}
 %\def\prepsalmoneverses{}
@@ -187,7 +191,7 @@
 	\def\noeuouae{T}
 		%print o sapientia
 	%\printoant{17}{O Wisdom, which camest out of the mouth of the Most High, reaching from end to end and ordering all things mightily and sweetly: come and teach us the way of prudence.}
-	\renewcommand{\anttranslation}{O Wisdom, which camest out of the mouth of the Most High, reaching from end to end and ordering all things mightily and sweetly: come and teach us the way of prudence.}
+	\newcommand{\anttranslation}{O Wisdom, which camest out of the mouth of the Most High, reaching from end to end and ordering all things mightily and sweetly: come and teach us the way of prudence.}
 	\oldneedspace{5\baselineskip}
 	\subtitle{December 17.}
 	\label{osapientia}
@@ -209,7 +213,7 @@
 {
 \needspace{16\baselineskip}
 \section{Fourth Sunday of Advent}
-\subtitle{\nth{1} Class, Violet}
+\subtitle{\nth{1} Class}
 \printnote{If today is December 24, \emph{First Vespers of Christmas} is used on page \pageref{christmas}.}
 \medskip
 
@@ -231,9 +235,9 @@
 	\definemag{2}{D}
 	\def\gabcfolder{../Advent}
 	\def\noeuouae{T}
-	\printoant{18}{O Adonai, and Leader of the house of Israël, who didst appear to Moses in the flame of the burning bush and didst give unto him the law on Sinai: come and with an outstretched arm redeem us.}
+	\printoant{18}{O Adonai, and Leader of the house of Israel, who didst appear to Moses in the flame of the burning bush and didst give unto him the law on Sinai: come and with an outstretched arm redeem us.}
 	\printoant{19}{O Root of Jesse, which standest for an ensign of the people, before whom kings shall keep silence, whom the Gentiles shall beseech: come and deliver us, and tarry not.}
-	\printoant{20}{O Key of David, and Sceptre of the house of Israël, that openest and no man shutteth, and shuttest and no man openeth: come and bring the prisoner forth from the prison-house, and him that sitteth in darkness and in the shadow of death.}
+	\printoant{20}{O Key of David, and Sceptre of the house of Israel, that openest and no man shutteth, and shuttest and no man openeth: come and bring the prisoner forth from the prison-house, and him that sitteth in darkness and in the shadow of death.}
 	\printoant{21}{O Day-spring, Brightness of light eternal, and Sun of Justice, come and enlighten them that sit in darkness and in the shadow of death.}
 	\printoant{22}{O King of the Gentiles and the desire thereof, Thou cornerstone that makest both one, come and deliver mankind, whom Thou didst form out of clay.}
 	\printoant{23}{O Emmanuel, our King and Lawgiver, the desire of the nations and the Saviour thereof, come to save us, O Lord our God.}

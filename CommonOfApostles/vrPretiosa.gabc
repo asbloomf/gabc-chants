@@ -1,0 +1,13 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+office-part: versicle and response;
+occasion: Vespers;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+def-m1:\ifx\vrlinebreak\undefined\else;
+def-m2:\fi;
+%%
+(c3)<sp>V/</sp> Pre(h)ti(h)ó(h)sa(h) in(h) con(h)spé(h)ctu(h) Dó(h)mi(h)ni,(h) al(h)le(h)lú(h)ia.(g_'hvGF'Efgf.) (::[em1]Z[em2])
+<sp>R/</sp> Mors(h) san(h)ctó(h)rum(h) e(h)jus,(h) al(h)le(h)lú(h)ia.(g_'hvGF'Efgf.) (::)

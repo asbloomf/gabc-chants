@@ -12,16 +12,22 @@
 \printdeusinadjutorium{}
 \vfil
 
-\pagebreak
+\ifthenelse{\boolean{birmingham}}{}{
+  %false
+  \pagebreak
+}
 %\subtitle{Solemn Tone}
 \printnote{The Solemn Tone may only be sung on Feasts of the First or Second Class.}
 \printnote{From Septuagesima to Wednesday in Holy Week, the \emph{Laus tibi} is said instead of \emph{Allelúia}.}
 
 \bigskip
-\def\deusinadjutoriumsolemn{T}
-\label{deusinadjutoriumsolemn}
-\printdeusinadjutorium{}
-\let\deusinadjutoriumsolemn=\undefined
+{
+  \def\deusinadjutoriumsolemn{T}
+  \def\includetranslation{F}
+  \label{deusinadjutoriumsolemn}
+  \printdeusinadjutorium{}
+  \let\deusinadjutoriumsolemn=\undefined
+}
 
 \printnote{Vespers then proceed with the Proper Antiphons, Psalms, Chapter, Hymn, Versicle,
 Magnificat, and Collect given for the respective Sunday or Feast.
@@ -72,19 +78,22 @@ For Sundays in Paschaltide, \emph{p.~\pageref{sundayvespers-easter}}.}
   %\Vbar{}~Dóminus vobíscum.\\%\hspace{5em}
   %\Rbar{}~Et cum spíritu tuo.
 
-  \printnote{Or, in the absence of a priest or deacon:}\par
-  \def\vlatin{Dómine, exáudi oratiónem meam.}
-  \def\rlatin{Et clamor meus ad te véniat.}
-  \def\vtranslation{Lord, hear my prayer.}
-  \def\rtranslation{And let my cry come unto Thee.}
-  \printvrwithtranslation{}
+  \ifthenelse{\boolean{birmingham}}{% TRUE is empty
+  }{% False
+    \printnote{Or, in the absence of a priest or deacon:}\par
+    \def\vlatin{Dómine, exáudi oratiónem meam.}
+    \def\rlatin{Et clamor meus ad te véniat.}
+    \def\vtranslation{Lord, hear my prayer.}
+    \def\rtranslation{And let my cry come unto Thee.}
+    \printvrwithtranslation{}
+  }
 
   %\Vbar{}~Dómine, exáudi oratiónem meam.\\
   %\Rbar{}~Et clamor meus ad te véniat.
 
   \bigskip
 
-  \noindent\printnote{The ``Benedicámus Dómino'' is then sung in one of the tones on the next pages.}
+  \noindent\printnote{The ``Benedicámus Dómino'' is then sung\ifthenelse{\boolean{birmingham}}{}{in one of the tones on the next pages}.}
 
   \bigskip
 

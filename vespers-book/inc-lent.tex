@@ -1,8 +1,8 @@
-\chapter{Proper of the Time -- Shrovetide \& Lent}
+\chapter{Proper of the Time -- Septuagesima \& Lent}
 {
 \newcommand{\printcommonvespers}[1][2]{
 	\vspace{-0.3\baselineskip}
-	\subtitle{\nth{#1} Class, \liturgicalcolor{}}
+	\subtitle{\nth{#1} Class}
 	\smallskip
 	\deusinadjutorium{}
 	\hfill
@@ -11,7 +11,11 @@
 }
 \def\liturgicalcolor{Violet}
 \def\printcommemnote{\smallskip
-\noindent\printnote{\commemorations{}  Otherwise \benedicamusdominoreference{lent}}
+\noindent\printnote{\commemorations{}
+	\ifthenelse{\boolean{includebenedicamusdominoreferences}}{
+		Otherwise \benedicamusdominoreference{lent}%
+	}{}
+	}
 }
 {
 \newcommand{\benedicamusdomino}[1][sunday]{
@@ -77,7 +81,7 @@
 {
 \renewcommand{\printcommonvespers}[1][2]{
 	\vspace{-0.3\baselineskip}
-	\subtitle{\nth{#1} Class, \liturgicalcolor{}}
+	\subtitle{\nth{#1} Class}
 	\smallskip
 	\deusinadjutorium{}
 	\hfill

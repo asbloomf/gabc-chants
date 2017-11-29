@@ -2,7 +2,7 @@
 {
 \def\printcommonvespers{
   \vspace{-0.5\baselineskip}
-  \subtitle{\nth{2} Class, Green}
+  \subtitle{\nth{2} Class}
   \medskip
   \deusinadjutorium{}
   \hfill
@@ -37,7 +37,11 @@
 
 \ifthenelse{\boolean{includecorpuschristi}}{% true
 {
+  \let\printhymnnote=\undefined
   \section{Corpus Christi}
+  \subtitle{\nth{1} Class}
+
+  \subtitle{II Vespers}
 
   \def\definevesperspropers{\input{\gabcfolder/inc-CorpusChristi-2Vespers}}
 
@@ -51,7 +55,11 @@
 \printvespersafterpentecost{2}}
 \ifthenelse{\boolean{includesacredheart}}{% true
 {
+  \let\printhymnnote=\undefined
   \section{Sacred Heart of Jesus}
+  \subtitle{\nth{1} Class}
+
+  \subtitle{II Vespers}
 
   \def\definevesperspropers{\input{\gabcfolder/inc-SacredHeart-2Vespers}}
 

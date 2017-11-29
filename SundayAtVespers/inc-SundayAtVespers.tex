@@ -21,7 +21,11 @@
 \newcommand{\antfourtranslation}{Blessed be the name of the Lord forever.}
 \definepsalm{4}{112}{7}{c}
 
-\newcommand{\antfivetex}{Ant5-DeusAutemNoster}
+\ifthenelse{\boolean{birmingham}}{
+	\newcommand{\antfivetex}{Ant5-DeusAutemNoster_birmingham}	
+}{
+	\newcommand{\antfivetex}{Ant5-DeusAutemNoster}
+}
 \newcommand{\antfiveinitial}{D}
 \newcommand{\antfivetranslation}{But our God is in heaven; He hath done all things, whatsoever He would.}
 \definepsalm{5}{113}{p}{}

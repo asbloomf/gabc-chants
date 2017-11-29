@@ -1,7 +1,7 @@
 {
-\section{July 9: Sts Thomas More \& John Fisher}
+\section{July 9: Ss John Fisher \& Thomas More}
 \subtitle{\nth{1} Class}
-\subtitle{II Vespers}
+\subtitle{I \& II Vespers}
 \medskip
 
 \def\deusinadjutoriumsolemn{F}
@@ -14,17 +14,25 @@
 \def\prepsalmtitlefive{\vspace{-0.5\baselineskip}}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 \def\definevesperspropers{%\input{\gabcfolder/inc-StsThomasMoreAndJohnFisher-2Vespers}
-  \input{\gabcfolder/inc-CommonOfMartyrs-2Vespers}
+  \input{\gabcfolder/inc-CommonOfMartyrs-2Vespers-psalms}
   %\let\oldthing=\maganttranslation
   %\def\maganttranslation{\oldthing\needspace{10\baselineskip}}
 }
+\def\definevesperspropersalt{
+	%\input{\gabcfolder/inc-CommonOfMartyrs}
+	\input{\gabcfolder/inc-CommonOfMartyrs-1Vespers-psalms}
+}
+\def\vesperspropersnote{At II Vespers:}
+\def\vesperspropersaltnote{At I Vespers:}
+\def\prevesperspsalms{\noindent\printnote{Chapter and following, page \pageref{july9-chapter}.\\}}
+\def\vesperspsalmslabel{\label{july9-2vespers}}
+\def\prevesperspsalmsalt{\noindent\printnote{II Vespers psalms and antiphons, page \pageref{july9-2vespers}.}\medskip}
+\def\prechapter{\label{july9-chapter}}
 % \def\definevesperspropersalt{\input{\gabcfolder/inc-StJosephWorker-1Vespers}
 %   \def\vrlinebreak{T}
 %   \let\oldthing=\maganttranslation
 %   \def\maganttranslation{\oldthing\needspace{10\baselineskip}}
 % }
-% \def\vesperspropersnote{At II Vespers:}
-% \def\vesperspropersaltnote{At I Vespers:}
 % \def\prepsalmtitleone{\vspace{-0.75\baselineskip}}
 %\def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
 %\def\prerepeatontiphonthree{}

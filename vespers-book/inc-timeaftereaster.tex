@@ -1,10 +1,14 @@
 {
 \newcommand{\printcommemnote}[1][easter]{\smallskip
     \noindent
-    \printnote{\commemorations{}  Otherwise \benedicamusdominoreference{#1}}
+    \printnote{\commemorations{}
+        \ifthenelse{\boolean{includebenedicamusdominoreferences}}{
+            Otherwise \benedicamusdominoreference{#1}
+        }{}
+    }
 }
 \newcommand{\printcommonvespers}[1][2]{
-    \subtitle{\nth{#1} Class, \liturgicalcolor{}}
+    \subtitle{\nth{#1} Class}
     \deusinadjutorium{}
     \hfill
     \emph{\emph{Vespers of Sundays in Paschaltide}, p.~\pageref{sundayvespers-easter}.}\par
@@ -144,7 +148,7 @@
 {
 \section{Ascension of Our Lord}
 \label{ascension}
-\subtitle{\nth{1} Class, White or Gold}
+\subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
 
 \def\deusinadjutoriumsolemn{T}

@@ -6,9 +6,10 @@
 
 \ifthenelse{\boolean{includechristmas}}
 { % true
+  {
   \label{christmas}
   \section{December 24: Nativity of our Lord -- I Vespers}
-  \subtitle{\nth{1} Class, White or Gold}
+  \subtitle{\nth{1} Class}
 
   \def\deusinadjutoriumsolemn{T}
   \newcommand{\printhymnnote}{
@@ -29,13 +30,14 @@
   \printvespers[../Christmas-Vespers1]{inc-Christmas-Vespers1-psalms}
 
   \benedicamusdomino{}
+  }
 }{} % false
 
 {
 \ifthenelse{\boolean{includechristmas}}{% true
   \section[December 25: Nativity of our Lord -- II Vespers]{December 25: Nativity of our Lord -- II Vespers\sectionmark{December 25: Nativity of our Lord \& Sunday within the Octave}}
   \sectionmark{December 25: Nativity of our Lord \& Sunday within the Octave}
-  \subtitle{\nth{1} Class, White or Gold}
+  \subtitle{\nth{1} Class}
   \medskip
   \subtitle{\&}
   \vspace{-0.5\baselineskip}
@@ -46,7 +48,7 @@
   \label{christmas2}
   \section{Sunday within the Octave of Christmas}
 }
-\subtitle{\nth{2} Class, White}
+\subtitle{\nth{2} Class}
 \bigskip
 
 \def\deusinadjutoriumsolemn{T}
@@ -101,6 +103,9 @@
 
 \ifthenelse{\boolean{includedec29}}{% true
   \section{December 29: St Thomas of Canterbury}
+  \subtitle{\nth{1} Class}
+
+  \subtitle{II Vespers}
   {
     \label{dec29}
     \def\psalmsreplacement{\noindent{}\emph{Antiphons and Psalms of the Nativity, page \emph{\pageref{christmas2}}.}}
@@ -111,7 +116,7 @@
 {
 \section{January 1: Octave of the Nativity of our Lord}
 \vspace{-0.5\baselineskip}
-\subtitle{\nth{1} Class, White or Gold}
+\subtitle{\nth{1} Class}
 
 \subtitle{I \& II Vespers}
 \label{circumcision}
@@ -141,7 +146,7 @@
 \needspace{5\baselineskip}
 \section{The Most Holy Name of Jesus}
 \vspace{-0.5\baselineskip}
-\subtitle{\nth{2} Class, White}
+\subtitle{\nth{2} Class}
 \medskip
 %\subtitle{II Vespers}
 
@@ -176,7 +181,7 @@
 \vspace{-0.5\baselineskip}
 \label{epiphany}
 \section{January 6: The Epiphany of Our Lord}
-\subtitle{\nth{1} Class, White or Gold}
+\subtitle{\nth{1} Class}
 
 \subtitle{I \& II Vespers}
 
@@ -207,7 +212,7 @@
 {
 \section{Holy Family of Jesus, Mary \& Joseph}
 \subtitle{First Sunday after the Epiphany.}
-\subtitle{\nth{2} Class, White}
+\subtitle{\nth{2} Class}
 
 \subtitle{I \& II Vespers}
 %\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43825\linewidth}]{2}}

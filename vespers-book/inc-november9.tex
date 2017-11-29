@@ -1,37 +1,41 @@
 {
-\section{November 9: Dedication of Archbasilica of Holy Savior}
-\subtitle{\nth{2} Class, White}
+\section{November 9: Dedication of the Lateran Basilica}
+\subtitle{\nth{2} Class}
 \subtitle{I \& II Vespers}
 \medskip
 
-\printnote{All from the Common of the Dedication of a Church.}
+\ifthenelse{\boolean{includecommonofdedicationofchurch}}{
+	\printnote{All from the Common of the Dedication of a Church, page \pageref{commondedicationofchurch}.}
+}{
+	\printnote{All from the Common of the Dedication of a Church.}
 
-\def\prepsalmtitleone{\needspace{8\baselineskip}}
-\def\postpsalmtitletwo{\needspace{8\baselineskip}}
-\def\prepsalmtwoverses{\vspace{-0.05\baselineskip}}
-\def\prerepeatantiphontwo{}
-\def\postpsalmtitlethree{\medskip\needspace{10\baselineskip}}
-\def\prepsalmthreeverses{\medskip}
-%\def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
-%\def\prerepeatantiphonthree{}
-%\def\prerepeatantiphonfive{}
-%\def\prepsalmtitlefive{\bigskip}
-\def\prepsalmfiveverses{\smallskip}
-%\def\prevespers{
-%  \let\oldthing=\antfivetranslation
-%  \def\antfivetranslation{\vspace{-0.6\baselineskip}\oldthing\vspace{-1\baselineskip}}
-%}
-\def\prevr{\needspace{10\baselineskip}}
-\def\definevesperspropers{\input{\gabcfolder/inc-DedicationOfChurch-2Vespers}
-  \def\premagverses{\oldneedspace{15\baselineskip}}
-}
-\def\definevesperspropersalt{\input{\gabcfolder/inc-DedicationOfChurch-1Vespers}
-}
-\def\vesperspropersnote{At II Vespers:}
-\def\vesperspropersaltnote{At I Vespers:}
-\def\prehymntranslation{\vspace{-0.5\baselineskip}}
+	\def\prepsalmtitleone{\needspace{8\baselineskip}}
+	\def\postpsalmtitletwo{\needspace{8\baselineskip}}
+	\def\prepsalmtwoverses{\vspace{-0.05\baselineskip}}
+	\def\prerepeatantiphontwo{}
+	\def\postpsalmtitlethree{\medskip\needspace{10\baselineskip}}
+	\def\prepsalmthreeverses{\medskip}
+	%\def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
+	%\def\prerepeatantiphonthree{}
+	%\def\prerepeatantiphonfive{}
+	%\def\prepsalmtitlefive{\bigskip}
+	\def\prepsalmfiveverses{\smallskip}
+	%\def\prevespers{
+	%  \let\oldthing=\antfivetranslation
+	%  \def\antfivetranslation{\vspace{-0.6\baselineskip}\oldthing\vspace{-1\baselineskip}}
+	%}
+	\def\prevr{\needspace{10\baselineskip}}
+	\def\definevesperspropers{\input{\gabcfolder/inc-DedicationOfChurch-2Vespers}
+	  \def\premagverses{\oldneedspace{15\baselineskip}}
+	}
+	\def\definevesperspropersalt{\input{\gabcfolder/inc-DedicationOfChurch-1Vespers}
+	}
+	\def\vesperspropersnote{At II Vespers:}
+	\def\vesperspropersaltnote{At I Vespers:}
+	\def\prehymntranslation{\vspace{-0.5\baselineskip}}
 
-\printvespers[../CommonOfDedicationOfChurch]{inc-DedicationOfChurch}
-\bigskip
-\benedicamusdomino[2]{}
+	\printvespers[../CommonOfDedicationOfChurch]{inc-DedicationOfChurch}
+	\bigskip
+	\benedicamusdomino[2]{}
+}
 }

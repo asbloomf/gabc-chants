@@ -1,8 +1,13 @@
 \newcommand{\chaptertext}{\dropcap{latin}{Misit Heródes rex manus, ut afflígeret quosdam de} ec\-\textbf{clé}\-sia.~\dag{} Occídit autem Jacóbum fratrem Jo\-\emph{án\-nis} \textbf{glá}\-dio.~* Videns autem quia placéret Judǽis, appósuit ut apprehénderet et \textbf{Pe}trum.}
 \newcommand{\chaptertranslation}{Herod the King stretched forth his hands to afflict some of the Church: and he killed James, the brother of John, with the sword; and seeing that it pleased the Jews, he proceeded to take up Peter also.}
 
-\newcommand{\hymnlinetwo}{4.}
-\newcommand{\hymntex}{Hymn-DecoraLuxAeternitatis}
+\ifthenelse{\boolean{birmingham}}{
+	\newcommand{\hymnlinetwo}{1.}
+	\newcommand{\hymntex}{hy--decora_lux_aeternitatis_another_chant--solesmes}
+}{
+	\newcommand{\hymnlinetwo}{4.}
+	\newcommand{\hymntex}{Hymn-DecoraLuxAeternitatis}
+}
 \newcommand{\hymninitial}{D}
 \newcommand{\hymntranslation}{
 \item The beauteous light of God's eternal majesty

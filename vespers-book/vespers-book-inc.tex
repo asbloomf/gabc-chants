@@ -50,8 +50,13 @@
 
 \setcounter{secnumdepth}{-1}
 
-\def\mywidth{6in}
-\def\myheight{9in}
+\ifthenelse{\boolean{birmingham}}{
+	\def\mywidth{210mm}
+	\def\myheight{297mm}
+}{
+	\def\mywidth{6in}
+	\def\myheight{9in}
+}
 
 \input{../inc_header}
 \gresetbarspacing{new}
@@ -115,7 +120,9 @@
 }
 }
 
-\newcommand{\deusinadjutorium}[1][F]{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, p.~\pageref{deusinadjutorium}\if#1T or \pageref{deusinadjutoriumsolemn}\fi.}}
+\newcommand{\deusinadjutorium}[1][F]{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, p.~\pageref{deusinadjutorium}%
+%if birmingham, both are on the same page so, it doesn't matter if it's solemn
+\ifthenelse{\boolean{birmingham}}{}{\if#1T or \pageref{deusinadjutoriumsolemn}\fi}.}}
 %\newcommand{\deusinadjutoriumsolemn}{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, p.~\pageref{deusinadjutoriumsolemn}.}}
 \newcommand{\printcollect}[2]{
 	\ifx\undefined\begincollectcols\def\begincollectcols{\begin{parcolumns}[rulebetween]{2}}\fi
@@ -133,20 +140,28 @@
 	\let\begincollectcols=\undefined
 }
 \newcommand{\benedicamusdominoreference}[1]{%
-	\Vbar~\emph{Benedicámus Dómino \IfInteger{#1}{#1}{\csname benedicamusdominoname#1\endcsname}}, page \pageref{benedicamusdomino-#1}.
+	\ifthenelse{\boolean{includebenedicamusdominoreferences}}{
+		\Vbar~\emph{Benedicámus Dómino \IfInteger{#1}{#1}{\csname benedicamusdominoname#1\endcsname}}, page \pageref{benedicamusdomino-#1}.
+	}{}
 }
 \newcommand{\benedicamusdominoreferencelentoreaster}{%
-	In Lent, \Vbar~\emph{Benedicámus Dómino \benedicamusdominonamelent}, page \pageref{benedicamusdomino-lent}, or in Easter, \emph{\benedicamusdominonameeaster}, page \pageref{benedicamusdomino-easter}.
+	\ifthenelse{\boolean{includebenedicamusdominoreferences}}{
+		In Lent, \Vbar~\emph{Benedicámus Dómino \benedicamusdominonamelent}, page \pageref{benedicamusdomino-lent}, or in Easter, \emph{\benedicamusdominonameeaster}, page \pageref{benedicamusdomino-easter}.
+	}{}
 }
 \newcommand{\benedicamusdominomaster}[1]{
-	\noindent\printnote{\benedicamusdominoreference{#1}}
-	\ifx\postbenedicamusdomino\undefined\else\postbenedicamusdomino\fi
+	\ifthenelse{\boolean{includebenedicamusdominoreferences}}{
+		\noindent\printnote{\benedicamusdominoreference{#1}}
+		\ifx\postbenedicamusdomino\undefined\else\postbenedicamusdomino\fi
+	}{}
 	\bigskip
 	\hrule
 }
 \newcommand{\benedicamusdominolentoreaster}{
-	\noindent\printnote{\benedicamusdominoreferencelentoreaster}
-	\ifx\postbenedicamusdomino\undefined\else\postbenedicamusdomino\fi
+	\ifthenelse{\boolean{includebenedicamusdominoreferences}}{
+		\noindent\printnote{\benedicamusdominoreferencelentoreaster}
+		\ifx\postbenedicamusdomino\undefined\else\postbenedicamusdomino\fi
+	}{}
 	\bigskip
 	\hrule
 }
@@ -656,19 +671,24 @@
 		\vspace*{0pt plus 0.75 fill}
 
 		\uppercase{
+		{\large
 		Vesperale
 
 		\medskip
 
-		Pro Dominicis \& Festis
+		Pro Dominicis et Festis
 
-		}
+		}}
 
 		\vfill
-		\vfill
+		\begin{centering}
+
+		\noindent\includegraphics[width=\textwidth]{SPNcrest.png}
+
+		\end{centering}
 		\vfill
 
-		ad usum Oratorii Sancti Philippi Nerii
+		Ad usum Oratorii Sancti Philippi Nerii
 
 		\medskip
 
@@ -761,15 +781,26 @@
 %\mainmatter
 
 \include{inc-common-vespers}
-\include{inc-benedicamus-domino}
-
-\ifthenelse{\boolean{testrun}}{}{
+\ifthenelse{\boolean{birmingham}}{}{% false
+	\include{inc-benedicamus-domino}
 
 	\include{inc-marian-anthems}
 
 	\clearpage
-	\include{inc-vespers-sunday}
+}
 
+\include{inc-vespers-sunday}
+
+\ifthenelse{\boolean{birmingham}}{% true
+	\include{inc-benedicamus-domino}
+
+	\include{inc-marian-anthems}
+
+	\clearpage
+}{}
+
+
+\ifthenelse{\boolean{testrun}}{}{
 	\include{inc-advent}
 
 	%christmas through Holy Family
@@ -777,16 +808,17 @@
 
 	\include{inc-timeafterepiphany}
 
-	%from shrovetide through passiontide
+	%from Septuagesima through passiontide
 	\include{inc-lent}
 
 	\include{inc-easter} % need to add St Joseph the Worker and the Ascension
 	\include{inc-timeaftereaster}
 
 	\include{inc-pentecost}
-}
 
-\include{inc-timeafterpentecost}
+	\include{inc-timeafterpentecost}
+
+}
 
 \include{inc-proper-of-saints}
 
@@ -794,7 +826,7 @@
 	\cleardoublepage	
 	\chapter{Appendix}
 	\ifthenelse{\boolean{includevespersofdead}}{
-		\include{inc-vespersofdead}
+		\input{inc-vespersofdead}
 	}{}
 	\input{inc-40hours}
 	\input{inc-benediction}
@@ -807,7 +839,10 @@
 	\ifthenelse{\boolean{includevespersofdead}}{
 		\cleardoublepage
 		\chapter{Appendix}
-		\include{inc-vespersofdead}
+		\ifthenelse{\boolean{includecommonofdedicationofchurch}}{
+			\input{inc-commondedicationofchurch}
+		}{}
+		\input{inc-vespersofdead}
 	}{}
 }
 

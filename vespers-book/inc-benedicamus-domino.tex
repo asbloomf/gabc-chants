@@ -38,30 +38,34 @@
 %\vfil
 % TODO: add references for polyphony
 
-{\bigskip
-\def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
-\emph{Marian anthems can be found on the following pages:}\smallskip
+\ifthenelse{\boolean{birmingham}}{
+	\vfil	
+}{
+	{\bigskip
+	\def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
+	\emph{Marian anthems can be found on the following pages:}\smallskip
 
-\noindent{}Alma Redemptoris Mater \emph{(Advent through February 2)},\dotting p.~\pageref{almaredemptorismater}%
-\ifthenelse{\boolean{includepolyphony}}
-	{ \& \pageref{alma_poly}}
-	{}
-\\
-Ave Regina Cælorum \emph{(February 2 through Lent)},\dotting p.~\pageref{avereginacaelorum}%
-\ifthenelse{\boolean{includepolyphony}}
-	{ \& \pageref{averegina_poly}}
-	{}
-\\
-Regina Cæli \emph{(Easter through the Friday after Pentecost)},\dotting p.~\pageref{reginacaeli}%
-\ifthenelse{\boolean{includepolyphony}}
-	{ \& \pageref{reginacaeli_poly}}
-	{}
-\\
-Salve Regina \emph{(1st Vespers of Trinity Sunday until before Advent)},\dotting p.~\pageref{salveregina}%
-\ifthenelse{\boolean{includepolyphony}}
-	{ \& \pageref{salveregina_poly}}
-	{}
+	\noindent{}Alma Redemptoris Mater \emph{(Advent through February 2)},\dotting p.~\pageref{almaredemptorismater}%
+	\ifthenelse{\boolean{includepolyphony}}
+		{ \& \pageref{alma_poly}}
+		{}
+	\\
+	Ave Regina Cælorum \emph{(February 2 through Lent)},\dotting p.~\pageref{avereginacaelorum}%
+	\ifthenelse{\boolean{includepolyphony}}
+		{ \& \pageref{averegina_poly}}
+		{}
+	\\
+	Regina Cæli \emph{(Easter through the Friday after Pentecost)},\dotting p.~\pageref{reginacaeli}%
+	\ifthenelse{\boolean{includepolyphony}}
+		{ \& \pageref{reginacaeli_poly}}
+		{}
+	\\
+	Salve Regina \emph{(1st Vespers of Trinity Sunday until before Advent)},\dotting p.~\pageref{salveregina}%
+	\ifthenelse{\boolean{includepolyphony}}
+		{ \& \pageref{salveregina_poly}}
+		{}
 
+	}
 }
 \pagebreak
 

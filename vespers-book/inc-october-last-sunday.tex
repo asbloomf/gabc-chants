@@ -1,7 +1,19 @@
 {
-\section{Last Sunday in October: Jesus Christ, King}
-\subtitle{\nth{1} Class, White or Gold}
-\subtitle{II Vespers}
+\ifthenelse{\boolean{birmingham}}{
+  \def\mytitle{Last Sunday in October: Feast of the Kingship of Our Lord, Jesus Christ}
+}{
+  \def\mytitle{Last Sunday in October: Jesus Christ, King}
+}
+\section{\mytitle}
+\subtitle{\nth{1} Class}
+\ifthenelse{\boolean{includechristthekingfirstvespers}}{% true
+	\def\definevesperspropersalt{\input{\gabcfolder/inc-ChristTheKing-1Vespers}}
+	\def\vesperspropersnote{At II Vespers:}
+	\def\vesperspropersaltnote{At I Vespers:}
+	\subtitle{I \& II Vespers}
+}{% false
+	\subtitle{II Vespers}
+}
 \medskip
 
 \def\deusinadjutoriumsolemn{T}

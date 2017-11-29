@@ -54,7 +54,11 @@
 {
 \bigskip
 \noindent
-\printnote{Then follows a Commemoration of the Lenten Feria.  Finally, \benedicamusdominoreference{1}}
+\printnote{Then follows a Commemoration of the Lenten Feria.
+\ifthenelse{\boolean{includebenedicamusdominoreferences}}{
+  Finally, \benedicamusdominoreference{1}%
+}{}
+}
 \bigskip
 }
 
