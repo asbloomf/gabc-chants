@@ -1,10 +1,10 @@
 \version "2.14.2"
 
-\include "inc-SalveRegina.ly"
+\include "inc-ReginaCaeli.ly"
 
 \paper {
   %print-all-headers = ##t
-  line-width = 6\in - 1.25\in
+  line-width = 8.5\in - 1.25\in
   indent = 0\in
   %system-system-spacing = #'((basic-distance . 10) (padding . 0))
   system-system-spacing =

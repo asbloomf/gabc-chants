@@ -59,8 +59,13 @@
 	\def\mywidth{148mm}
 	\def\myheight{210mm}
 }{
-	\def\mywidth{6in}
-	\def\myheight{9in}
+	\ifthenelse{\boolean{lettersize}}{
+		\def\mywidth{8.5in}
+		\def\myheight{11in}
+	}{
+		\def\mywidth{6in}
+		\def\myheight{9in}
+	}
 }
 
 \input{../inc_header}
@@ -171,10 +176,10 @@
 	\hrule
 }
 
-%\ifthenelse{\boolean{birmingham}}{
-%	\newcommand{\psalmcolsoverride}[1][0]{
-%	}	
-%}{
+\ifthenelse{\boolean{lettersize}}{
+	\newcommand{\psalmcolsoverride}[1][0]{
+	}	
+}{
 	\newcommand{\psalmcolsoverride}[1][0]{
 		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
 		\ifnum#1=110
@@ -209,7 +214,7 @@
 		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
 		\fi
 	}
-%}
+}
 \newcommand{\printvrcommem}{
 		{\normalsize
 		\ifx\beginvrcols\undefined\def\beginvrcols{\begin{parcolumns}[rulebetween]{2}}\fi
@@ -771,14 +776,8 @@
 
 	\bigskip{}\noindent{}This work is free of known copyright restrictions.
 
-	\ifthenelse{\boolean{birmingham}}%
-	{% true
-		\bigskip{}\noindent{}%CreateSpace
-		ISBN: 978-1-507-87881-1
-	}{ % false
-		\bigskip{}\noindent{}%CreateSpace
-		ISBN: 978-1-507-87881-1
-	}%
+	\bigskip{}\noindent{}%CreateSpace
+	ISBN: \isbn{}
 	%
   %\noindent{}Lulu ISBN: 978-1-329-59990-1
 }
@@ -828,13 +827,15 @@
 
 	\include{inc-timeafterpentecost}
 
+	\include{inc-proper-of-saints}
 }
-
-\include{inc-proper-of-saints}
 
 \ifthenelse{\boolean{includeappendix}}{
 	\cleardoublepage	
 	\chapter{Appendix}
+	\ifthenelse{\boolean{includecommonofdedicationofchurch}}{
+		\input{inc-commondedicationofchurch}
+	}{}
 	\ifthenelse{\boolean{includevespersofdead}}{
 		\input{inc-vespersofdead}
 	}{}

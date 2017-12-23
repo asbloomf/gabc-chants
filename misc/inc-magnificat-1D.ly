@@ -37,7 +37,7 @@ sopMusic = \relative c' {
   \slurDashed
   a )(
   \set melismaBusyProperties = #'()
-  bes2) | bes( a) | g( g) \bar "||"
+  bes2) | bes( a) | g( g) \bar "||" \break
   a1 | f2 f | 
   \slurSolid \unset melismaBusyProperties
   g4(\slurDashed a)(

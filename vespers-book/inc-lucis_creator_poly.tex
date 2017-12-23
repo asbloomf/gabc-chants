@@ -12,9 +12,13 @@
 		\bigskip
 	}
 
-	\newcommand{\includelilypond}[1]{
+	\newcommand{\includelilypond}[2]{
 	  \noindent
-	  \import{../misc/}{#1}%
+	  \ifthenelse{\boolean{lettersize}}{
+	  	\import{../misc/}{#1_letter-systems-#2}%
+  	  }{
+  	  	\import{../misc/}{#1-systems-#2}%
+  	  }
 	}
 	\def\betweenLilyPondSystem#1{
 	  \ifnum#1>1
@@ -37,10 +41,10 @@
     (c3)LU(e)cis(fh) Cre(h)á(hg)tor(fe) óp(h)ti(i)me,(gvFE.) (,)
 	Lú(hi)cem(jh) di(i)é(hvGF')rum(g) pró(g')fe(f)rens,(e.) (;)
 	Pri(e)mór(fh)di(h)is(hg) lú(fe)cis(h) nó(i)væ(gvFE.) (,)
-	Mún(hi)di(jh) pá(i)rans(hf) o(g)rí(fg)gi(f)nem :(e.) (::) (e+)
+	Mún(hi)di(jh) pá(i)rans(hf) o(g)rí(fg)gi(f)nem :(e. :: e+)
     }
     \vfil\noindent
-	\includelilypond{lucis-creator-optime-systems-v2}%
+	\includelilypond{lucis-creator-optime}{v2}%
 	\gresetinitiallines{0}
 	\gabcsnippet{
 	(c3)3. Ne(e) mens(fh) gra(h)vá(hg)ta(fe) crí(h)mi(i)ne,(gvFE.) (,)
@@ -49,7 +53,7 @@
 	Se(hi)sé(jh)que(i) cúl(hf)pis(g) íl(fg)li(f)gat.(e.) (::) (e+)
 	}
 	\vfil\noindent
-	\includelilypond{lucis-creator-optime-systems-v4}%
+	\includelilypond{lucis-creator-optime}{v4}%
 	\bigskip
 	\gabcsnippet{
 	(c3)5. Præ(e)sta,(fh) Pá(h)ter(hg) pi(fe)ís(h)si(i)me,(gvFE.) (,)

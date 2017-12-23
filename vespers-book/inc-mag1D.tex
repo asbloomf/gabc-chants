@@ -49,7 +49,11 @@
 % \end{oddversesmagnificat}
 
 \vfill
-\includelilypond{magnificat-1D2-smc-small-systems-page1}
+\ifthenelse{\boolean{lettersize}}{
+	\includelilypond{magnificat-1D2-smc-systems}	
+}{
+	\includelilypond{magnificat-1D2-smc-small-systems-page1}
+}
 \pagebreak
 
 
@@ -74,5 +78,9 @@
 % \end{oddversesmagnificat}
 
 \vfill
-\includelilypond{magnificat-1D2-smc-small-systems-page2}
+\ifthenelse{\boolean{lettersize}}{
+	\includelilypond{magnificat-1D2-smc-systems}	
+}{
+	\includelilypond{magnificat-1D2-smc-small-systems-page2}
+}
 }

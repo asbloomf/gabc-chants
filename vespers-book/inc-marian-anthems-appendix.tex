@@ -4,7 +4,11 @@
     \textit{Prayer on page \pageref{\prayerlabel}}.
   }
   \newcommand{\afterant}[1][F]{
-    \vfil
+    \ifthenelse{\boolean{lettersize}}{
+      \bigskip
+    }{
+      \vfil
+    }
 
     \ifx\note\undefined\else%
     \noindent\textit{\note}
@@ -46,13 +50,19 @@
   \newcommand{\includelilypond}[1]{
     \ifthenelse{\boolean{includepolyphony}}{
       \noindent
-      \import{../MarianAntiphons/}{#1}%
+      \ifthenelse{\boolean{lettersize}}{
+        \import{../MarianAntiphons/}{#1_letter-systems}%
+      }{
+        \import{../MarianAntiphons/}{#1-systems}%
+      }
     }{}
   }
   \def\betweenLilyPondSystem#1{
     \ifnum#1>1
       \vfil\noindent
-      %\linebreak
+      \ifthenelse{\boolean{lettersize}}{
+        \linebreak
+      }{}
       %\bigskip
     \else
       \linebreak
@@ -62,7 +72,7 @@
 
   \section{Salve Regina}
   \label{salveregina_poly}
-  \includelilypond{SalveRegina-systems}%
+  \includelilypond{SalveRegina}%
 
   {
   \newcommand{\vlatin}{Ora pro nóbis sáncta Déi Génitrix.}
@@ -79,7 +89,7 @@
 
   \section{Alma Redemptoris Mater}
   \label{alma_poly}
-  \includelilypond{AlmaRedemptorisMater-systems}%
+  \includelilypond{AlmaRedemptorisMater}%
 
   {
     \newcommand{\note}{During Advent:}
@@ -97,7 +107,7 @@
 
   \section{Ave Regina Cælorum}
   \label{averegina_poly}
-  \includelilypond{AveReginaCaelorum-systems}%
+  \includelilypond{AveReginaCaelorum}%
 
   {
   \newcommand{\vlatin}{Dignáre me laudáre te Vírgo sacráta.}
@@ -109,7 +119,7 @@
 
   \section{Regina Cœli}
   \label{reginacaeli_poly}
-  \includelilypond{ReginaCoeli-systems}%
+  \includelilypond{ReginaCoeli}%
 
   {
   \newcommand{\vlatin}{Gáude et lætáre Virgo María, allelúia.}

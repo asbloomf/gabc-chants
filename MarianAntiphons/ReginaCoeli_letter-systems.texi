@@ -1,0 +1,9 @@
+@image{ReginaCoeli_letter-1}
+@image{ReginaCoeli_letter-2}
+@image{ReginaCoeli_letter-3}
+@image{ReginaCoeli_letter-4}
+@image{ReginaCoeli_letter-5}
+@image{ReginaCoeli_letter-6}
+@image{ReginaCoeli_letter-7}
+@image{ReginaCoeli_letter-8}
+@c eof

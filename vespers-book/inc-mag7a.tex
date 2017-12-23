@@ -49,7 +49,11 @@
 % \end{oddversesmagnificat}
 
 \vfill
-\includelilypond{magnificat-protodiogenes-7a-small-systems-page1}
+\ifthenelse{\boolean{lettersize}}{
+	\includelilypond{magnificat-protodiogenes-7a-systems}	
+}{
+	\includelilypond{magnificat-protodiogenes-7a-small-systems-page1}
+}
 \pagebreak
 
 
@@ -74,5 +78,9 @@
 % \end{oddversesmagnificat}
 
 \vfill
-\includelilypond{magnificat-protodiogenes-7a-small-systems-page2}
+\ifthenelse{\boolean{lettersize}}{
+	\includelilypond{magnificat-protodiogenes-7a-systems}	
+}{
+	\includelilypond{magnificat-protodiogenes-7a-small-systems-page2}
+}
 }
