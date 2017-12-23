@@ -129,6 +129,7 @@ five%
 \fi
 
 \ifx\psalmclef\undefined%
+\expandafter\xdef\csname psalmclef\antnum\endcsname{}
 \def\altclef{}%
 \else%
 \expandafter\xdef\csname psalmclef\antnum\endcsname{\psalmclef}

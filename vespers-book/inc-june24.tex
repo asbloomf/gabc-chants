@@ -28,7 +28,11 @@
 }
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
-\def\prevesperspsalms{\noindent\printnote{Chapter and following, page \pageref{june24-chapter}.\\}}
+\def\prevesperspsalms{\noindent\printnote{Chapter and following, page \pageref{june24-chapter}.}
+\medskip
+\hrule
+\medskip
+}
 \def\vesperspsalmslabel{\label{june24-2vespers}}
 \def\prevesperspsalmsalt{\noindent\printnote{II Vespers psalms and antiphons, page \pageref{june24-2vespers}.}\medskip\label{june24-1vespers}}
 \def\prechapter{\label{june24-chapter}}
@@ -51,11 +55,12 @@
   %\def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
   \printcommemoration[../CommonOfDedicationOfChurch]{commemorationDedicationOfChurch-Vespers2}
 
-  \medskip
-  \hrule
+  %\medskip
+  %\hrule
   \medskip
   %\bigskip
   \benedicamusdomino{}
+  \medskip
   }
   \renewcommand{\sundaycommemnote}{
     If today is Sunday, 24 June then \emph{Vespers of the Sunday} is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{}~Dirigátur}, and \emph{Collect}.
