@@ -1,18 +1,27 @@
 function usage
 {
-	echo "usage: build.sh [-f] [-l] [-t] [-g]"
+	echo "usage: build.sh [-f] [-l] [-t] [-g] [-letter|-birmingham]"
 	echo "       -f force all"
 	echo "       -l force lilypond"
 	echo "       -t force tex"
 	echo "       -g force ghostscript"
+	echo "       --birmingham build birmingham edition"
+	echo "       --letter build letter size"
 }
 
 force=
 latexmkopts=
 lyopts=
+filename=vespers-book
+suffix=-main
+suffix2=
 
 while [ "$1" != "" ]; do
 	case $1 in
+		--letter )              suffix2=-letter
+								;;
+		--birmingham )			suffix2=-birmingham
+								;;
 		-f | --force )			force=1
 								latexmkopts=-g
 								lyopts=-f
@@ -31,10 +40,10 @@ done
 
 ./ly-build.sh $lyopts
 
-latexmk vespers-book-main.tex $latexmkopts
-if [ "$?" -eq "0" ] || [ "$force" = "1" ]; then
-	if test `find "vespers-book-main.pdf" -mmin -1` || ! [ -f vespers-book.pdf ] || [ "$force" = "1" ]; then
-		gswin64c -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dEmbedAllFonts=true -dSubsetFonts=true -sOutputFile=vespers-book.pdf vespers-book-main.pdf &
+latexmk $filename$suffix$suffix2.tex $latexmkopts
+if [ "$?" -eq "0" ] || [ "$force" = "1" ] || [ "$suffix2" != ""]; then
+	if test `find "$filename$suffix$suffix2.pdf" -mmin -1` || ! [ -f $filename$suffix2.pdf ] || [ "$force" = "1" ]; then
+		gswin64c -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dEmbedAllFonts=true -dSubsetFonts=true -sOutputFile=$filename$suffix2.pdf $filename$suffix$suffix2.pdf &
 	fi
 fi
 

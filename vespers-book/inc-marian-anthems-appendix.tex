@@ -70,6 +70,10 @@
     %\vspace{0.5\baselineskip}
   }
 
+  \ifthenelse{\boolean{lettersize}}{
+    \vfil
+    \pagebreak
+  }{}
   \section{Salve Regina}
   \label{salveregina_poly}
   \includelilypond{SalveRegina}%
