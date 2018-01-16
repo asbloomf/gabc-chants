@@ -157,6 +157,8 @@ Time After Epiphany:
 Lent:
   - name: Vespers Magnificat Septuagesima
     url: pdfs/Lent/VespersMagnificatSeptuagesima.pdf
+  - name: Vespers Commemoration of Septuagesima
+    url: pdfs/Lent/commemorationSeptuagesima-main.pdf
   - name: Vespers Magnificat Sexagesima
     url: pdfs/Lent/VespersMagnificatSexagesima.pdf
   - name: Vespers Magnificat Quinquagesima
@@ -384,6 +386,8 @@ Common Of Confessor Bishop:
     url: pdfs/CommonOfConfessorBishop/StFrancisDeSales-Vespers2.original.pdf
   - name: "St Francis De Sales: Vespers 2"
     url: pdfs/CommonOfConfessorBishop/StFrancisDeSales-Vespers2.pdf
+  - name: "St Francis De Sales: Vespers 1"
+    url: pdfs/CommonOfConfessorBishop/StFrancisDeSales-Vespers1.pdf
 Common Of Dedication Of Church:
   - name: "Common Of Dedication Of Church: 2 Vespers"
     url: pdfs/CommonOfDedicationOfChurch/CommonOfDedicationOfChurch-2Vespers.pdf
