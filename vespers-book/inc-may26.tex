@@ -18,6 +18,9 @@
 %\def\prepsalmtitlefive{\vspace{-0.3\baselineskip}}
 %\def\prerepeatantiphonfive{}
 \def\definevesperspropers{\input{\gabcfolder/inc-StPhilipNeri-2Vespers}
+	\ifthenelse{\boolean{birmingham}}{}{%
+		\def\premagverses{\medskip}
+	}
 }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-StPhilipNeri-1Vespers}
 }

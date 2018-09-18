@@ -21,6 +21,10 @@
 %
 %\def\prepsalmtitleone{\vspace{-0.5\baselineskip}}
 %\def\prepsalmtitlethree{\vspace{-0.5\baselineskip}}
+\ifthenelse{\boolean{birmingham}}{}{
+	\def\prepsalmtitleone{\bigskip{}}
+	\def\postpsalmtitleone{\bigskip{}}
+}
 \def\preantthree{\bigskip}
 \def\prepsalmtitlefour{\needspace{4\baselineskip}}
 \def\vesperspropersnote{At II Vespers:}
@@ -68,6 +72,24 @@
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 \printvespers[../TrinitySunday]{inc-TrinitySunday-Vespers}
 \bigskip
+\noindent
+\printnote{If the feast of St Philip Neri is celebrated tomorrow, then \emph{First Vespers} is commemorated as follows.
+\ifthenelse{\boolean{includebenedicamusdominoreferences}}{
+	Otherwise \benedicamusdomino{}%
+}{}
+}
+\medskip
+%\hrule
+%\medskip
+}
+
+% commemoration of First Vespers of Immaculate Conception
+{
+\def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
+\def\vrlinebreak{T}
+\printcommemoration[../StPhilipNeri]{Commemoration-StPhilipNeri-Vespers1}
+
+%\bigskip
 \benedicamusdomino{}
 }
 

@@ -102,8 +102,10 @@
 %\def\prepsalmtitlefive{\vspace{-0.8\baselineskip}}
 %\def\prepsalmfive{\oldneedspace{6\baselineskip}}
 %\def\prepsalmfiveverses{}
-\def\prerepeatantiphonfive{}
-\def\prechapter{\vspace{-1.5\baselineskip}}
+\ifthenelse{\boolean{birmingham}}{}{
+	\def\prerepeatantiphonfive{}
+	\def\prechapter{\vspace{-1.5\baselineskip}}
+}
 
 \printvespers[../Advent1]{inc-Advent1}
 \bigskip
@@ -127,9 +129,11 @@
 \def\prepsalmthree{\needspace{5\baselineskip}}
 %\def\prerepeatantiphonthree{\bigskip}
 %\def\prepsalmfive{\greseteolcustos{manual}}
-\def\preanttranslationfour{\vspace{-0.25\baselineskip}}
-\def\prepsalmtitlefour{\vspace{-0.25\baselineskip}}
-\def\prepsalmtitlefive{\vspace{-0.25\baselineskip}}
+\ifthenelse{\boolean{birmingham}}{}{
+	\def\preanttranslationfour{\vspace{-0.25\baselineskip}}
+	\def\prepsalmtitlefour{\vspace{-0.25\baselineskip}}
+	%\def\prepsalmtitlefive{\vspace{-0.25\baselineskip}}
+}
 \def\premagtitle{\needspace{18\baselineskip}}
 \def\postmagtitle{\label{advent2-mag}}
 \def\premag{\def\noeuouae{T}}
@@ -174,7 +178,9 @@
 %\def\prepsalmtwoverses{}
 \def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
 \def\preantfour{\needspace{15\baselineskip}}
-\def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}
+\ifthenelse{\boolean{birmingham}}{}{
+	\def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}
+}
 %\def\prepsalmtitlefive{\vspace{-\baselineskip}}
 \def\premag{\def\noeuouae{T}
 \printnote{\noindent{}On December 17, the Antiphon \emph{O Sapiéntia} on p.~\pageref{osapientia} is sung instead of \emph{Beáta es}.}
@@ -222,12 +228,19 @@
 \def\prepsalmtitleone{\bigskip}
 \def\preantfour{\grechangenextscorelinedim{1}{spacelinestext}{0.60717 cm}{scalable}\oldneedspace{8\baselineskip}}
 \def\prepsalmtitlefour{\bigskip}
-\def\preantfive{\bigskip}
+\ifthenelse{\boolean{birmingham}}{
+	\def\preantfive{\oldneedspace{20\baselineskip}}
+}{
+	\def\preantfive{\bigskip}
+}
 %\def\prepsalmfive{\greseteolcustos{manual}}
 \def\magreplacement{
 	\printnote{The Magnificat antiphon is found on the following pages and is proper to the day of the month.}
-	\vfil
-	\pagebreak
+	\ifthenelse{\boolean{birmingham}}{}
+	{
+		\vfil
+		\pagebreak
+	}
 	%\bigskip
 	{
 	\label{advent4-mag}
@@ -244,8 +257,11 @@
 	\label{advent4-mag-lastpage}
 
 	\bigskip
-	\pagebreak
-	\vfil
+	\ifthenelse{\boolean{birmingham}}{}
+	{
+		\pagebreak
+		\vfil
+	}
 	{\greseteolcustos{manual}
 	\label{oantiphon-magnificat}
 	\begin{magnificat}{\magtex}

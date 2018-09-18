@@ -1,0 +1,23 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\input{SacredHeart-Vespers}
+%\input{inc-SacredHeart}
+
+\newcommand{\heading}{1 Vespers of the Sacred Heart.}
+
+\def\deusinadjutoriumsolemn{T}
+\definebenedicamusdomino{1}{1}
+
+\def\includefideliumanimae{T}
+
+\def\premag{}
+\def\premagverses{}
+
+\input{inc-SacredHeart-1Vespers}
+\input{../FullVespers}

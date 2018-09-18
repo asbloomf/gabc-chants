@@ -166,6 +166,9 @@
 \def\prepsalmthreeverses{}
 \def\prerepeatantiphonthree{}
 \def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}
+\ifthenelse{\boolean{birmingham}}{}{
+  \def\prepsalmtitlefive{\vspace{-0.5\baselineskip}}
+}
 \def\hymnlabel{hymn-jesudulcismemoria}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.425\linewidth}]{2}}
 %\def\prepsalmtitlefive{\vspace{\baselineskip}}
@@ -214,7 +217,7 @@
 \subtitle{First Sunday after the Epiphany.}
 \subtitle{\nth{2} Class}
 
-\subtitle{I \& II Vespers}
+\subtitle{II Vespers}
 %\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43825\linewidth}]{2}}
 
 \def\preanttwo{\oldneedspace{12\baselineskip}}

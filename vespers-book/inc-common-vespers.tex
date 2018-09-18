@@ -12,10 +12,10 @@
 \printdeusinadjutorium{}
 \vfil
 
-\ifthenelse{\boolean{birmingham}}{}{
+%\ifthenelse{\boolean{birmingham}}{}{
   %false
-  \pagebreak
-}
+%  \pagebreak
+%}
 %\subtitle{Solemn Tone}
 \printnote{The Solemn Tone may only be sung on Feasts of the First or Second Class.}
 \printnote{From Septuagesima to Wednesday in Holy Week, the \emph{Laus tibi} is said instead of \emph{Allelúia}.}
@@ -93,13 +93,13 @@ For Sundays in Paschaltide, \emph{p.~\pageref{sundayvespers-easter}}.}
 
   \bigskip
 
-  \noindent\printnote{The ``Benedicámus Dómino'' is then sung\ifthenelse{\boolean{birmingham}}{}{in one of the tones on the next pages}.}
+  \noindent\printnote{The ``Benedicámus Dómino'' is then sung\ifthenelse{\boolean{birmingham}}{}{ in one of the tones on the next pages}.}
 
   \bigskip
 
   \let\rlatin\undefined
   \let\rtranslation\undefined
-  \def\vlatin{Fidélium ánimæ per misericóridam Dei requiéscant in pace.\\\Rbar~Amen.}
+  \def\vlatin{Fidélium ánimæ per misericórdiam Dei requiéscant in pace.\\\Rbar~Amen.}
   %\def\rlatin{Amen.}
   \def\vtranslation{May the souls of the faithful departed through the mercy of God rest in peace.\hfill\Rbar~Amen.}
   %\def\rtranslation{Amen.}

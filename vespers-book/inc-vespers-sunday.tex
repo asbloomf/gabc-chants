@@ -108,10 +108,21 @@
 		}{}
 	}
 	\newcommand{\collectreplacement}{\bigskip}
-	\def\prepsalmtitlethree{\vspace{-0.25\baselineskip}}
+	\ifthenelse{\boolean{birmingham}}{}{%
+		\def\postpsalmtitletwo{
+			\bigskip
+		}
+	}
+	\def\prepsalmtitlethree{
+		\ifthenelse{\boolean{birmingham}}{
+			\oldneedspace{5\baselineskip}
+		}{
+			\vspace{-0.25\baselineskip}
+		}
+	}
 	\def\preantfour{\needspace{10\baselineskip}}
 	%\def\prepsalmfive{\greseteolcustos{manual}}
-	%\def\prechapter{\vspace{-\baselineskip}}
+	\def\prechapter{\oldneedspace{10\baselineskip}}
 	\def\beginchaptercols{
 		\noindent{}\printnote{In Septuagesima \& Lent, from the Sunday, \emph{p.~\pageref{septuagesima} to \pageref{lent6}.}}
 

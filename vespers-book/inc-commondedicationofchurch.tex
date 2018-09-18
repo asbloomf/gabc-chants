@@ -14,6 +14,10 @@
 %\def\prerepeatantiphonthree{}
 %\def\prerepeatantiphonfive{}
 %\def\prepsalmtitlefive{\bigskip}
+\ifthenelse{\boolean{birmingham}}{}{%
+	% not birmingham
+	\def\prepsalmfourverses{\oldneedspace{6\baselineskip}}
+}
 \def\prepsalmfiveverses{\smallskip}
 %\def\prevespers{
 %  \let\oldthing=\antfivetranslation

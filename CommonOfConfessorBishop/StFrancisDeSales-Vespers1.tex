@@ -1,0 +1,44 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+% page 1351 in liber (1552 in pdf)
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\input{CommonOfConfessorBishop-Vespers1}
+\newcommand{\premag}{
+\large
+\grechangestaffsize{17}
+%\greseteolcustos{manual}
+}
+%\newcommand{\premagtwo}{
+%\grechangestaffsize{16}
+%}
+\newcommand{\magfontsize}{33}
+%\newcommand{\magtone}{8}
+%\newcommand{\magend}{G}
+\newcommand{\premagverses}{\grechangestaffsize{15}
+\normalsize
+%\pagebreak
+}
+%\input{../psalms/definemag}
+\def\deusinadjutoriumsolemn{T}
+\def\heading{St Francis de Sales. I Vespers.}
+
+%\let\nopagebreakbeforepsalmfive\undefined
+
+\def\pagebreakbeforecommemoration{T}
+
+%\def\commemorationtex{../TimeAfterEpiphany/CommemorationEpiphany4}
+%\input{../TimeAfterEpiphany/CommemorationEpiphany4}
+
+\def\magsolemn{T}
+
+\definebenedicamusdomino{1}{1}
+
+\input{inc-CommonOfConfessorBishop-Vespers1}
+\input{inc-StFrancisDeSales}
+\input{../FullVespers}
