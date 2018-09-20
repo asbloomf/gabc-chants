@@ -1,4 +1,5 @@
 {
+% first is Sean's
 \cleartoleftpage{}
 \thispagestyle{empty}
 \newcommand{\printsimpletone}{
@@ -82,5 +83,92 @@
 	\includelilypond{magnificat-1D2-smc_letter-systems}	
 }{
 	\includelilypond{magnificat-1D2-smc-small-systems-page2}
+}
+}
+{
+% second is the otherone
+\cleartoleftpage{}
+\thispagestyle{empty}
+\newcommand{\printsimpletone}{
+\needspace{3\baselineskip}
+\begin{center}\textbf{Simple Tone.}\end{center}
+\vspace{0ex plus 0ex minus 2ex}
+}
+\newcommand{\printsolemntone}{
+%\vspace{0ex plus 0ex minus 0.5ex}
+\needspace{3\baselineskip}
+\begin{center}\textbf{Solemn Tone.}\end{center}
+\vspace{0ex plus 0ex minus 1ex}
+}
+
+\label{magnificat-1D-version2}
+\vspace*{-\headheight}
+\vspace*{-0.5\baselineskip}
+\section{Magnificat 1.~D, D2.}
+
+\def\betweenLilyPondSystem#1{
+  \ifnum#1>1
+    \vfil\noindent
+  \else
+    \linebreak
+  \fi
+  %\vspace{0.5\baselineskip}
+}
+\newcommand{\includelilypond}[1]{
+  \noindent
+  \import{../misc/}{#1}
+}
+\def\magsolemn{F}
+\def\magsmc{T}
+\definemag{1}{D}
+\def\annot{\magtone.~\magend}
+\alsetinitialspacing{M}
+\grechangestyle{initial}{\fontsize{50}{50}\selectfont}
+\greseteolcustos{manual}
+\printsimpletone{}
+\begin{oddversesmagnificat}{\magtex}
+\magverses
+\end{oddversesmagnificat}
+
+% \def\magoddverses{\input{../psalms/magnificat-\magtone\nostarendmag\if\magsolemn Tsolemn\else simple\fi-grassi-chant-verses}}
+% \global\def\magtex{../psalms/Magnificat\if\magsolemn Tsolemn\else simple\fi\magtone\nostarendmag}
+% \begin{oddversesmagnificat}{\magtex}
+% \magoddverses
+% \end{oddversesmagnificat}
+
+\vfill
+\ifthenelse{\boolean{lettersize}}{
+  \includelilypond{magnificat-1D_letter-systems}
+}{
+  \includelilypond{magnificat-1D-small-systems-page1}
+}
+\pagebreak
+
+
+\def\magsolemn{T}
+\let\magant=\undefined
+\let\magantlinetwo=\undefined
+\let\magtex=\undefined
+\let\magverses=\undefined
+\def\magsmc{T}
+\definemag{1}{D}
+\def\annot{\magtone.~\magend}
+\alsetinitialspacing{M}
+\grechangestyle{initial}{\fontsize{50}{50}\selectfont}
+\printsolemntone{}
+\begin{oddversesmagnificat}{\magtex}
+\magverses
+\end{oddversesmagnificat}
+
+% \global\def\magtex{../psalms/Magnificat\if\magsolemn Tsolemn\else simple\fi\magtone\nostarendmag}
+% \begin{oddversesmagnificat}{\magtex}
+% \magoddverses
+% \end{oddversesmagnificat}
+
+\vfill
+\ifthenelse{\boolean{lettersize}}{
+  \includelilypond{magnificat-1D_letter-systems} 
+}{
+  \includelilypond{magnificat-1D-small-systems-page2}
 }
 }
