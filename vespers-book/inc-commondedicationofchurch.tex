@@ -7,15 +7,17 @@
 \def\prepsalmtitleone{\needspace{8\baselineskip}}
 \def\postpsalmtitletwo{\needspace{8\baselineskip}}
 \def\prepsalmtwoverses{\vspace{-0.05\baselineskip}}
-\def\prerepeatantiphontwo{}
-\def\postpsalmtitlethree{\medskip\needspace{10\baselineskip}}
-\def\prepsalmthreeverses{\medskip}
 %\def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
 %\def\prerepeatantiphonthree{}
 %\def\prerepeatantiphonfive{}
 %\def\prepsalmtitlefive{\bigskip}
-\ifthenelse{\boolean{birmingham}}{}{%
+\ifthenelse{\boolean{birmingham}}{
+	\def\prepsalmtitlethree{\vspace{-0.5\baselineskip}}
+}{%
 	% not birmingham
+	\def\prerepeatantiphontwo{}
+	\def\postpsalmtitlethree{\medskip\needspace{10\baselineskip}}
+	\def\prepsalmthreeverses{\medskip}
 	\def\prepsalmfourverses{\oldneedspace{6\baselineskip}}
 }
 \def\prepsalmfiveverses{\smallskip}

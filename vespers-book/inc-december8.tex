@@ -1,6 +1,6 @@
 {
 \label{immaculateconception}
-\section{December 8: Immaculate Conception}
+\section{8 December: Immaculate Conception}
 \subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
 \smallskip
@@ -12,13 +12,18 @@
 \def\prepsalmoneverses{\vspace{-0.05\baselineskip}}
 \def\prerepeatantiphonone{}
 
-\def\prepsalmtitlethree{\vspace{-0.75\baselineskip}}
+\ifthenelse{\boolean{birmingham}}{
+  \def\prepsalmtitlethree{\vspace{-0.4\baselineskip}}
+  %\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.4\linewidth}]{2}}
+}{
+  \def\prepsalmtitlethree{\vspace{-0.75\baselineskip}}
+  \def\preanttranslationfive{\vspace{-0.35\baselineskip}}
+  \def\prepsalmtitlefive{\vspace{-\baselineskip}}
+  \def\prepsalmfive{\vspace{-0.2\baselineskip}}
+  \def\prepsalmfiveverses{\vspace{-0.025\baselineskip}}
+  \def\prerepeatantiphonfive{}
+}
 
-\def\preanttranslationfive{\vspace{-0.35\baselineskip}}
-\def\prepsalmtitlefive{\vspace{-\baselineskip}}
-\def\prepsalmfive{\vspace{-0.2\baselineskip}}
-\def\prepsalmfiveverses{\vspace{-0.025\baselineskip}}
-\def\prerepeatantiphonfive{}
 \def\premagverses{\greseteolcustos{manual}\oldneedspace{8\baselineskip}}
 \def\definevesperspropersalt{\def\noeuouae{T}\input{\gabcfolder/inc-ImmaculateConception-1Vespers}}
 \def\definevesperspropers{\def\noeuouae{T}\input{\gabcfolder/inc-ImmaculateConception-2Vespers}}
@@ -156,6 +161,11 @@ Aug.~14 \& 15,\dotting \emph{\Vbar{}~Exaltáta est}, p.~\pageref{vr-assumption}%
   \medskip
   \def\gabcfolder{../Advent2}
   \input{\gabcfolder/CommemorationAdvent2}
+  \ifthenelse{\boolean{birmingham}}{
+    \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.4275\linewidth}]{2}}
+  }{
+    %
+  }
   \printcollect{\latincomcollect}{\englishcomcollect}
   }
 

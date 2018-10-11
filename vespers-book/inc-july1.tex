@@ -1,39 +1,46 @@
 {
 \global\let\psalmclefthree=\undefined
-\section{July 1: The Precious Blood of Our Lord Jesus Christ}
+\section{1 July: The Precious Blood of Our Lord Jesus Christ}
 \subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
 \medskip
 
 \def\deusinadjutoriumsolemn{T}
-\def\prepsalmtitleone{\vspace{-0.5\baselineskip}}
 \def\prepsalmtitlethree{\vspace{-0.5\baselineskip}}
 \def\premagtitle{\oldneedspace{8\baselineskip}}
-\def\definevesperspropers{\input{\gabcfolder/inc-MostPreciousBloodOfChrist-2Vespers}
-	\ifthenelse{\boolean{birmingham}}{
-		\def\postpsalmtitlefive{\bigskip}
-	}{}
-}
-\def\definevesperspropersalt{\input{\gabcfolder/inc-MostPreciousBloodOfChrist-1Vespers}%
-	\ifthenelse{\boolean{birmingham}}{
-		\def\postpsalmtitlefive{\medskip}
-	}{}
-  \def\postmagtitle{\vspace{-0.5\baselineskip}}%
-}
 \ifthenelse{\boolean{birmingham}}{
+	\def\prepsalmtwoverses{\bigskip\bigskip}
+	\def\postpsalmtitlefour{\needspace{10\baselineskip}}
 	%\def\postpsalmtitlefive{\medskip}
     %\def\chapterreplacement{}
 	%\def\prechapter{}
 	%\def\prehymn{\needspace{5\baselineskip}}
+	\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43\linewidth}]{2}}
 }{
+	\def\prepsalmtitleone{\vspace{-0.5\baselineskip}}
 	\def\prerepeatantiphonthree{}
 	\def\preantfour{\vspace{-0.5\baselineskip}}
 	\def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}
+	\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
+}
+\def\definevesperspropers{\input{\gabcfolder/inc-MostPreciousBloodOfChrist-2Vespers}
+	\ifthenelse{\boolean{birmingham}}{
+		\def\prepsalmtitlefive{\medskip}
+		\def\postpsalmtitlefive{\bigskip}
+	}{
+		%
+	}
+}
+\def\definevesperspropersalt{\input{\gabcfolder/inc-MostPreciousBloodOfChrist-1Vespers}%
+	\ifthenelse{\boolean{birmingham}}{
+		\def\prepsalmtitlefive{\medskip}
+		\def\postpsalmtitlefive{\bigskip}
+	}{}
+  \def\postmagtitle{\vspace{-0.5\baselineskip}}%
 }
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
 
-\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
 \printvespers[../July1-MostPreciousBloodOfChrist]{inc-MostPreciousBloodOfChrist}
 \medskip
 \benedicamusdomino{}

@@ -45,6 +45,12 @@
 
   \def\definevesperspropers{\input{\gabcfolder/inc-CorpusChristi-2Vespers}}
 
+  \ifthenelse{\boolean{birmingham}}{
+    \def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
+    \def\prepsalmtitlethree{\vspace{-0.75\baselineskip}}
+    \def\prepsalmtitlefive{\vspace{-0.5\baselineskip}}
+  }{}
+
   \printvespers[../CorpusChristi]{inc-CorpusChristi}
   \medskip
   \benedicamusdomino{}
@@ -63,17 +69,30 @@
 
   \def\definevesperspropers{\input{\gabcfolder/inc-SacredHeart-2Vespers}}
 
+  \ifthenelse{\boolean{birmingham}}{
+    \def\prepsalmtitleone{\vspace{-0.5\baselineskip}}
+    \def\prepsalmtitletwo{\vspace{-0.25\baselineskip}}
+    \def\prepsalmtitlefour{\vspace{-0.75\baselineskip}}
+    \def\preantfive{\vspace{-0.25\baselineskip}}
+    \def\prepsalmtitlefive{\vspace{-0.25\baselineskip}}
+  }{}
+
   \printvespers[../SacredHeart]{inc-SacredHeart}
   \medskip
   \benedicamusdomino{}
 }
 }{}% false
-\ifthenelse{\boolean{testrun}}{}{
+\ifthenelse{\boolean{testrun}}{}{}
+%
 \printvespersafterpentecost{3}
 \printvespersafterpentecost{4}
 {\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 \printvespersafterpentecost{5}}
-\printvespersafterpentecost{6}
+{\ifthenelse{\boolean{birmingham}}{
+  \def\premag{\medskip}
+  \def\premagverses{\medskip}
+}{}
+\printvespersafterpentecost{6}}
 \printvespersafterpentecost{7}
 {
   \def\premagtitle{}
@@ -98,13 +117,24 @@
   \def\postmagtitle{
     \pagebreak[2]
   }
+  \ifthenelse{\boolean{birmingham}}{
+    \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43\linewidth}]{2}}
+  }{}
 \printvespersafterpentecost{17}}
 \printvespersafterpentecost{18}
 {\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}}
-\def\postbenedicamusdomino{\bigskip}
+\ifthenelse{\boolean{birmingham}}{
+  %
+}{
+  \def\postbenedicamusdomino{\bigskip}
+}
 %\def\premagverses{\vspace{-0.7\baselineskip}}
 \printvespersafterpentecost{19}}
-\bigskip\bigskip
+\ifthenelse{\boolean{birmingham}}{
+  %
+}{
+  \bigskip\bigskip
+}
 \printvespersafterpentecost{20}
 \printvespersafterpentecost{21}
 {
@@ -112,7 +142,14 @@
 \printvespersafterpentecost{22}
 }
 {
-\def\postbenedicamusdomino{\bigskip}
+\ifthenelse{\boolean{birmingham}}{
+  \def\premagtitle{}
+  \def\postmagtitle{
+    \pagebreak[2]
+  }
+}{
+  \def\postbenedicamusdomino{\bigskip}
+}
 \printvespersafterpentecost{23}
 }
 \bigskip
@@ -122,5 +159,6 @@
 %}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.455\linewidth}]{2}}
 \printvespersafterpentecost{24}}
+
 }
-}
+%

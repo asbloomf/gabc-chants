@@ -2,7 +2,10 @@
 \section{Vespers for the Dead}
 \medskip
 
-\ifthenelse{\boolean{birmingham}}{}{
+\ifthenelse{\boolean{birmingham}}{
+	\def\prepsalmtitleone{\bigskip\bigskip}
+	\def\postpsalmtitleone{\bigskip}
+}{
 	\let\oldpsalmcolsoverride=\psalmcolsoverride
 	\renewcommand{\psalmcolsoverride}[1][0]{
 		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
@@ -56,7 +59,7 @@
 
 	\bigskip
 
-	\printnote{The following Prayers are said kneeling~:}
+	\noindent\printnote{The following Prayers are said kneeling~:}
 
 	Pater noster. \emph{continued silently.}
 
@@ -98,7 +101,7 @@
 \printvespers[../VespersForTheDead]{inc-VespersForTheDead}
 \bigskip
 
-\printnote{The following \Vbar{} and \Rbar{} are always said in the plural~:}
+\noindent\printnote{The following \Vbar{} and \Rbar{} are always said in the plural~:}
 
 \Vbar{}~Réquiem ætérnam dona eis Dómine.
 

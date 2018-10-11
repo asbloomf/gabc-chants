@@ -2,7 +2,7 @@
 \ifthenelse{\boolean{birmingham}}{
 	\section{First Sunday in October: Rosary Sunday}	
 }{
-	\section{October 7: Our Lady of the Rosary}
+	\section{7 October: Our Lady of the Rosary}
 }
 \subtitle{\nth{2} Class}
 \subtitle{II Vespers}
@@ -14,6 +14,11 @@
   \def\vrlinebreak{T}
   %\let\oldthing=\maganttranslation
   %\def\maganttranslation{\oldthing\needspace{10\baselineskip}}
+}
+\ifthenelse{\boolean{birmingham}}{
+	\def\prepsalmtitleone{\vspace{-0.5\baselineskip}}
+}{
+	%
 }
 %\def\prepsalmtitleone{\vspace{-0.5\baselineskip}}
 %\def\preanttwo{\vspace{-0.3\baselineskip}}

@@ -1,5 +1,5 @@
 {
-\section{June 24: Nativity of St John the Baptist}
+\section{24 June: Nativity of St John the Baptist}
 \subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
 \medskip
@@ -13,14 +13,17 @@
   \ifthenelse{\boolean{birmingham}}{
     \def\prepsalmtitleone{\bigskip}
     \def\postpsalmtitlethree{\needspace{10\baselineskip}}
-    \def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
-    \def\prerepeatantiphonthree{}
+    %\def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
+    %\def\prerepeatantiphonthree{}
+    \def\preantfour{\vspace{-0.6\baselineskip}}
+    \def\prepsalmtitlefour{\vspace{-0.6\baselineskip}}
   }{}
 }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-BirthOfJohnTheBaptist-1Vespers}
   \def\preantthree{\needspace{8\baselineskip}}
-  \ifthenelse{\boolean{birmingham}}
-  {}
+  \ifthenelse{\boolean{birmingham}}{
+    \def\preantfive{\needspace{12\baselineskip}}  
+  }
   {
     \def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
     \def\preantfour{\bigskip}

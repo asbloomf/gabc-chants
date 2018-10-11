@@ -301,7 +301,11 @@
 	\oldneedspace{3\baselineskip}
 	\noindent\printnote{If the Sunday is being commemorated:\\}\vspace{-0.5\baselineskip}
 	{
-		\def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.51\linewidth}]{2}}
+		\ifthenelse{\boolean{birmingham}}{
+			\def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.53\linewidth}]{2}}
+		}{
+			\def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.51\linewidth}]{2}}
+		}
 		\def\commvlatin{Dirigátur Dómine orátio \textbf{mé}a.}
 		\def\commrlatin{Sicut incénsum in conspéctu \textbf{tú}o.}
 		\def\commvtranslation{\noindent{}Let my prayer be directed, O Lord.}
@@ -360,6 +364,7 @@
 			\greseteolcustos{auto}
 	\else
 	{
+		\oldneedspace{3\baselineskip}
 		\printvrcommem{}
 	}
 	\fi
@@ -580,7 +585,7 @@
 			\fi
 		\else
 			%\vspace{-\baselineskip}
-			\oldneedspace{3\baselineskip}
+			\oldneedspace{24pt}
 			\ifx\prechapter\undefined\else\prechapter\fi
 			\printchapter{\chaptertext}{\chaptertranslation}
 		\fi
@@ -655,7 +660,7 @@
     	\ifx\postmagtitle\undefined\else\postmagtitle\fi
 
     	\ifx\vesperspropersaltnote\undefined\else
-    		\oldneedspace{6\baselineskip}
+    		\oldneedspace{2\baselineskip}
 				\printnote{\vesperspropersaltnote\par}
 			\fi
 			\let\anttranslation=\maganttranslation

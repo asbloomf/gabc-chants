@@ -1,17 +1,21 @@
 {
-\section{November 1: All Saints}
+\section{1 November: All Saints}
 \subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
 \medskip
 
 \def\deusinadjutoriumsolemn{T}
 \ifthenelse{\boolean{birmingham}}{
-	\def\prerepeatantiphonone{}	
-	\def\preanttwo{\vspace{-0.2\baselineskip}}
-	\def\prepsalmtitletwo{\vspace{-0.1\baselineskip}}
-	\def\postpsalmtitlethree{\needspace{8\baselineskip}}
-	\def\prepsalmthreeverses{\vspace{-0.05\baselineskip}}
-	\def\prerepeatantiphonthree{}
+	\def\prepsalmtitleone{\needspace{12\baselineskip}}
+	\def\prepsalmtitlethree{\oldneedspace{12\baselineskip}}
+	%\def\prepsalmthreeverses{\bigskip\bigskip}
+	% \def\prerepeatantiphonone{}	
+	% \def\preanttwo{\vspace{-0.2\baselineskip}}
+	% \def\prepsalmtitletwo{\vspace{-0.1\baselineskip}}
+	% \def\postpsalmtitlethree{\needspace{8\baselineskip}}
+	% \def\prepsalmthreeverses{\vspace{-0.05\baselineskip}}
+	% \def\prerepeatantiphonthree{}
+	\def\postvesperspropersnotepsalmfive{\vspace{-0.6\baselineskip}}
 }{
 	\def\postdeusinadjutorium{\oldneedspace{15\baselineskip}}
 	\def\postpsalmtitleone{\oldneedspace{12\baselineskip}}
@@ -24,6 +28,7 @@
 	\def\prepsalmtitlethree{\vspace{-\baselineskip}}
 	\def\prerepeatantiphontwo{}
 	\def\postpsalmtitlefour{\needspace{12\baselineskip}}
+	\def\postvesperspropersnotepsalmfive{\oldneedspace{15\baselineskip}}
 }
 \def\prevespers{
   \let\oldthinga=\antonetranslation
@@ -42,10 +47,7 @@
 }
 \def\vraltlabel{allsaints1-vr}
 \def\vesperspropersnote{%
-	\ifthenelse{\boolean{birmingham}}{%
-	}{%
-		\oldneedspace{15\baselineskip}At II Vespers:%
-	}%
+	At II Vespers:%
 }
 \def\vesperspropersaltnote{At I Vespers:}
 \def\prechapter{\vspace{-\baselineskip}}

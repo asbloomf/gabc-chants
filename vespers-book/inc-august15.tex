@@ -1,5 +1,5 @@
 {
-\section{August 15: Assumption of the B.~V.~M.}
+\section{15 August: Assumption of the B.~V.~M.}
 \subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
 \medskip
@@ -9,6 +9,8 @@
 \def\deusinadjutoriumsolemn{T}
 \ifthenelse{\boolean{birmingham}}{
   \def\prepsalmtitletwo{\needspace{8\baselineskip}}
+  \def\postpsalmtitlefour{\needspace{12\baselineskip}}
+  \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.49\linewidth}]{2}}
 }{
   \def\prepsalmoneverses{}
   \def\prerepeatantiphonone{}
@@ -78,6 +80,10 @@
 \emph{\nth{13} Sunday after Pentecost}, p.~\pageref{pentecost13-mag}.
 \end{multicols}
 }
-\bigskip
+\ifthenelse{\boolean{birmingham}}{
+  \vspace{-0.5\baselineskip}
+}{
+  \bigskip
+}
 \benedicamusdomino{}
 }

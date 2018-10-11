@@ -8,7 +8,7 @@
 { % true
   {
   \label{christmas}
-  \section{December 24: Nativity of our Lord -- I Vespers}
+  \section{24 December: Nativity of our Lord -- I Vespers}
   \subtitle{\nth{1} Class}
 
   \def\deusinadjutoriumsolemn{T}
@@ -21,11 +21,17 @@
   \def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
   \def\prepsalmtitlethree{\vspace{-0.5\baselineskip}}
   \def\preantfour{\needspace{10\baselineskip}}
+  \ifthenelse{\boolean{birmingham}}{
+    \def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}
+    \def\precollect{\vspace{-0.5\baselineskip}}
+    \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
+  }{
+    \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
+  }
   %\def\prepsalmtitlefour{\vspace{-\baselineskip}}
   \def\preantfive{\oldneedspace{10\baselineskip}}
   %\def\prechapter{\vspace{-\baselineskip}}
   %\def\precollect{\vspace{-0.2\baselineskip}}
-  \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
   \def\prevr{\label{vrcrastina}}
   \printvespers[../Christmas-Vespers1]{inc-Christmas-Vespers1-psalms}
 
@@ -35,15 +41,19 @@
 
 {
 \ifthenelse{\boolean{includechristmas}}{% true
-  \section[December 25: Nativity of our Lord -- II Vespers]{December 25: Nativity of our Lord -- II Vespers\sectionmark{December 25: Nativity of our Lord \& Sunday within the Octave}}
-  \sectionmark{December 25: Nativity of our Lord \& Sunday within the Octave}
+  \section[25 December: Nativity of our Lord -- II Vespers]{25 December: Nativity of our Lord -- II Vespers\sectionmark{25 December: Nativity of our Lord \& Sunday within the Octave}}
+  \sectionmark{25 December: Nativity of our Lord \& Sunday within the Octave}
   \subtitle{\nth{1} Class}
-  \medskip
+  \ifthenelse{\boolean{birmingham}}{
+    %
+  }{
+    \medskip
+  }
   \subtitle{\&}
   \vspace{-0.5\baselineskip}
   \label{christmas2}
-  \section[Sunday within the Octave]{Sunday within the Octave\sectionmark{December 25: Nativity of our Lord \& Sunday within the Octave}}
-  \sectionmark{December 25: Nativity of our Lord \& Sunday within the Octave}
+  \section[Sunday within the Octave]{Sunday within the Octave\sectionmark{25 December: Nativity of our Lord \& Sunday within the Octave}}
+  \sectionmark{25 December: Nativity of our Lord \& Sunday within the Octave}
 }{% false
   \label{christmas2}
   \section{Sunday within the Octave of Christmas}
@@ -56,6 +66,9 @@
   \def\definevesperspropersalt{\input{\gabcfolder/inc-Christmas-Vespers2}
     \let\oldthing\maganttranslation
     \def\maganttranslation{\oldthing\vspace{-0.5\baselineskip}}
+    \ifthenelse{\boolean{birmingham}}{
+      \def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
+    }{}
   }
   \def\vesperspropersaltnote{At II Vespers of Christmas:}
   \def\vesperspropersnote{\needspace{4\baselineskip}At II Vespers of the Sunday within the Octave of Christmas:}
@@ -64,7 +77,14 @@
   \emph{On Dec.~31, \emph{\Vbar{}~Verbum} \& Jan.~1, \emph{\Vbar{}~Notum fecit}, p.~\pageref{vrverbumcarofactumest}}.
   \medskip
   }
-  \def\prerepeatantiphonthree{\vspace{-0.85\baselineskip}}
+  \ifthenelse{\boolean{birmingham}}{
+    \def\preantfour{\vspace{-0.35\baselineskip}}
+    \def\prepsalmtitlefour{\vspace{-0.25\baselineskip}}
+    \def\preantfive{\vspace{-0.35\baselineskip}}
+    \def\prepsalmtitlefive{\vspace{-0.35\baselineskip}}
+  }{
+    \def\prerepeatantiphonthree{\vspace{-0.85\baselineskip}}
+  }
 }{% false
   \def\prevr{\emph{On Dec.~31 \& Jan.~1, return to p.~\pageref{vrverbumcarofactumest}}.
   \medskip
@@ -75,7 +95,7 @@
 }
 \ifthenelse{\boolean{includedec29}}{%true
   \def\prechapter{
-    \noindent\emph{On December 29, continue with the chapter on page \emph{\pageref{dec29}}.}
+    \noindent\emph{On 29 December, continue with the chapter on page \emph{\pageref{dec29}}.}
   }
 }{% false
   \def\prechapter{\vspace{-1\baselineskip}}
@@ -94,7 +114,11 @@
 \def\prehymn{%
   \grechangedim{spaceabovelines}{0.40 cm plus 0.36461 cm minus 0.09114 cm}{scalable}%
 }
-\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
+\ifthenelse{\boolean{birmingham}}{
+  %
+}{
+  \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
+}
 \printvespers[../Christmas]{inc-Christmas-Vespers2-psalms}
 
 \grechangedim{spaceabovelines}{0.45576 cm plus 0.36461 cm minus 0.09114 cm}{scalable}%
@@ -102,7 +126,7 @@
 }
 
 \ifthenelse{\boolean{includedec29}}{% true
-  \section{December 29: St Thomas of Canterbury}
+  \section{29 December: St Thomas of Canterbury}
   \subtitle{\nth{1} Class}
 
   \subtitle{II Vespers}
@@ -132,9 +156,18 @@
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
 \def\prepsalmtitletwo{\needspace{6\baselineskip}}
-\def\preantfive{\bigskip}
+\ifthenelse{\boolean{birmingham}}{
+  \def\postmagtitle{\vspace{-0.5\baselineskip}}
+  \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
+}{
+  \def\preantfive{\bigskip}
+}
 %\def\precollect{\vspace{-2\baselineskip}}
-\def\prechapter{\printnote{On Feb.~1, \emph{Chapter} and following, p.~\pageref{purification-chapter}.}\par}
+\def\prechapter{\printnote{On Feb.~1, \emph{Chapter} and following, p.~\pageref{purification-chapter}.}\par
+  \ifthenelse{\boolean{birmingham}}{
+    \oldneedspace{8\baselineskip}
+  }{}
+}
 \def\premagtitle{\oldneedspace{6\baselineskip}}
 \def\prevr{\label{vrverbumcarofactumest}}
 \printvespers[../ChristmasOctave-Circumcision]{inc-Circumcision-Vespers-common}
@@ -161,16 +194,18 @@
 %\def\vesperspropersnote{At II Vespers of the Most Holy Name of Jesus:}
 \def\preantone{\bigskip}
 \def\prepsalmtitleone{\needspace{5\baselineskip}}
-\def\preanttranslationthree{\vspace{-0.2\baselineskip}}
-\def\prepsalmtitlethree{\vspace{-0.1\baselineskip}}
-\def\prepsalmthreeverses{}
-\def\prerepeatantiphonthree{}
-\def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}
-\ifthenelse{\boolean{birmingham}}{}{
-  \def\prepsalmtitlefive{\vspace{-0.5\baselineskip}}
+\ifthenelse{\boolean{birmingham}}{
+  \def\prepsalmtitlefour{\vspace{-\baselineskip}}
+}{
+  \def\preanttranslationthree{\vspace{-0.2\baselineskip}}
+  \def\prepsalmtitlethree{\vspace{-0.1\baselineskip}}
+  \def\prepsalmthreeverses{}
+  \def\prerepeatantiphonthree{}
+  \def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}
+  \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.425\linewidth}]{2}}
 }
+\def\prepsalmtitlefive{\vspace{-0.5\baselineskip}}
 \def\hymnlabel{hymn-jesudulcismemoria}
-\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.425\linewidth}]{2}}
 %\def\prepsalmtitlefive{\vspace{\baselineskip}}
 \def\prechapter{\vspace{-0.5\baselineskip}}
 \def\prehymn{\needspace{5\baselineskip}}
@@ -183,7 +218,7 @@
 \chapter{Proper of the Time -- Epiphany Season}
 \vspace{-0.5\baselineskip}
 \label{epiphany}
-\section{January 6: The Epiphany of Our Lord}
+\section{6 January: The Epiphany of Our Lord}
 \subtitle{\nth{1} Class}
 
 \subtitle{I \& II Vespers}
@@ -204,7 +239,12 @@
 \def\prerepeatantiphonthree{}
 \def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}
 %\def\prechapter{\vspace{-1\baselineskip}}
-\def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
+\ifthenelse{\boolean{birmingham}}{
+  \def\prechapter{\bigskip\bigskip}
+  \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
+}{
+  \def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
+}
 \def\prevr{\needspace{8\baselineskip}}
 
 \printvespers[../Epiphany]{inc-Epiphany-Vespers}
@@ -220,6 +260,16 @@
 \subtitle{II Vespers}
 %\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43825\linewidth}]{2}}
 
+\ifthenelse{\boolean{birmingham}}{
+  \def\preantfive{\oldneedspace{12\baselineskip}}
+  \def\prepsalmtitlethree{\needspace{12\baselineskip}}
+}{
+  \def\prepsalmtitlethree{\vspace{-0.1\baselineskip}}
+  \def\postpsalmtitlethree{\vspace{-1\baselineskip}}
+  \def\prepsalmtitlefive{\vspace{-0.4\baselineskip}}
+  \def\postpsalmtitlefive{\vspace{-0.8\baselineskip}}
+}
+%
 \def\preanttwo{\oldneedspace{12\baselineskip}}
 %\def\prepsalmtitletwo{\vspace{-0.1\baselineskip}}
 %\def\prerepeatantiphontwo{}
@@ -229,10 +279,6 @@
 \def\prepsalmfiveverses{\vspace{-0.05\baselineskip}}
 %\def\prerepeatantiphonfive{\vspace{-0.3\baselineskip}}
 \def\prevespers{%
-  \let\oldthingb\antthreetranslation
-  \def\antthreetranslation{\vspace{-0.1\baselineskip}\oldthingb\vspace{-1\baselineskip}}%
-  \let\oldthingc\antfivetranslation
-  \def\antfivetranslation{\vspace{-0.4\baselineskip}\oldthingc\vspace{-0.8\baselineskip}}%
   %\def\prehymntranslation{\vspace{-0.3\baselineskip}}
   \def\prehymn{\vfil}
 }
