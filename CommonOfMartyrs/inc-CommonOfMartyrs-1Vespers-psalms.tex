@@ -23,9 +23,15 @@
 \newcommand{\antfivetranslation}{Ye Choir of Martyrs, praise the Lord in the highest.}
 \definepsalm{5}{116}{8}{c}
 
-\newcommand{\vrtex}{vrLaetaminiInDomino}
-\newcommand{\vtranslation}{Be glad in the Lord, and rejoice, ye just.}
-\newcommand{\rtranslation}{And glory, all ye right of heart.}
+% \newcommand{\vrtex}{vrLaetaminiInDomino}
+% \newcommand{\vtranslation}{Be glad in the Lord, and rejoice, ye just.}
+% \newcommand{\rtranslation}{And glory, all ye right of heart.}
+
+\ifx\vrtex\undefined
+	\newcommand{\vrtex}{vrInPatientiaVestra}
+	\newcommand{\vtranslation}{In your patience.}
+	\newcommand{\rtranslation}{You shall possess your souls.}
+\fi
 
 \newcommand{\maganttex}{an--istorum_est_enim--solesmes}
 \newcommand{\magantinitial}{I}

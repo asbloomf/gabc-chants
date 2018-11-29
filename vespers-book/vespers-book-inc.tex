@@ -18,7 +18,7 @@
 \usepackage{amsfonts}
 \usepackage{refcount}
 \usepackage{metalogo}
-
+\nofiles
 %\includeonly{inc-grassi}
 \LetLtxMacro{\oldnth}{\nth}
 \renewcommand{\nth}[1]{\addfontfeature{Numbers=Lining}\oldnth{#1}}
@@ -746,6 +746,7 @@
 }
 
 \sloppy
+\nofiles
 \begin{document}
 \normalsize
 \grechangestaffsize{15}
@@ -775,11 +776,7 @@
 		\end{centering}
 		\vfill
 
-		Ad usum Oratorii Sancti Philippi Nerii
-
-		\medskip
-
-		apud Birminghamiensem
+		Ad Usum Oratorii
 
 		\vfill}
 	}{% general
@@ -875,6 +872,8 @@
 \include{inc-vespers-sunday}
 
 \ifthenelse{\boolean{birmingham}}{% true
+	\grechangeglyph{Porrectus*}{*}{.alt} % this is really just for september 14 as far as I know
+
 	\include{inc-benedicamus-domino}
 
 	\include{inc-marian-anthems}

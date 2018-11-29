@@ -47,10 +47,11 @@
 
 \printvespers[../August15-AssumptionOfTheBlessedVirginMary]{inc-Assumption}
 
-\medskip
-\printnote{
-  If today is Saturday, \emph{Vespers of the Saturday before 3rd Sunday of August} is commemorated as follows:\par
-}
+\ifthenelse{\boolean{includesaturdaycommems}}{
+  \medskip
+  \printnote{
+    If today is Saturday, \emph{Vespers of the Saturday before 3rd Sunday of August} is commemorated as follows:\par
+  }
   \oldneedspace{4\baselineskip}
   {
   \def\noeuouae{T}
@@ -70,6 +71,9 @@
   \medskip
   \hrule
   \bigskip
+}{
+  % no saturday commems
+}
 
 \printnote{\sundaycommemnote{}
 \begin{multicols}{2}
