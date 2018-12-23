@@ -95,6 +95,7 @@
 \ifx\antonetranslation\undefined\else%
 \translation[]{\normalsize \antonetranslation}
 \fi%
+\medskip
 %\vspace{-1ex plus 1ex}%
 \begin{center}{\Large \psalmone}\end{center}
 \fi
@@ -479,18 +480,9 @@
 \emph{Per annum:}
 
 \fi %vrpttex
-{\greseteolcustos{manual}\gresetinitiallines{0}\gregorioscore{\vrtex}}\vspace{-4pt plus 4pt}
-\translation[]{
-\Vbar{}~\vtranslation{}%
-\ifx\vrnospace\undefined
-
-\else\if\vrnospace T%
-\hspace{7ex minus 3ex}%
-\else
-
-\fi\fi%
-\Rbar{}~\rtranslation{}%
-}%
+{\printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
+  \greseteolcustos{auto}
+}
 }%
 \fi%
 \else% if the chapter, hymn, and antiphon are replaced by an antiphon
