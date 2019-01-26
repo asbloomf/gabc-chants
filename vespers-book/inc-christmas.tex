@@ -4,8 +4,8 @@
   \benedicamusdominomaster{#1}
 }
 
-\ifthenelse{\boolean{includechristmas}}
-{ % true
+%\ifthenelse{\boolean{includechristmas}}
+%{ % true
   {
   \label{christmas}
   \section{24 December: Nativity of our Lord -- I Vespers}
@@ -37,7 +37,7 @@
 
   \benedicamusdomino{}
   }
-}{} % false
+%}{} % false
 
 {
 \ifthenelse{\boolean{includechristmas}}{% true
@@ -86,12 +86,19 @@
     \def\prerepeatantiphonthree{\vspace{-0.85\baselineskip}}
   }
 }{% false
-  \def\prevr{\emph{On Dec.~31 \& Jan.~1, return to p.~\pageref{vrverbumcarofactumest}}.
+  \def\prevr{\emph{On Dec.~24, \emph{\Vbar{}~Crástina die}, p.~\pageref{vrcrastina}}.
+
+  \emph{On Dec.~31, \emph{\Vbar{}~Verbum} \& Jan.~1, \emph{\Vbar{}~Notum fecit}, p.~\pageref{vrverbumcarofactumest}}.
   \medskip
 
   \emph{On Sunday within the octave, continue:}
-
   }
+  % \def\prevr{\emph{On Dec.~31 \& Jan.~1, return to p.~\pageref{vrverbumcarofactumest}}.
+  % \medskip
+
+  % \emph{On Sunday within the octave, continue:}
+
+  % }
 }
 \ifthenelse{\boolean{includedec29}}{%true
   \def\prechapter{
@@ -154,7 +161,7 @@
  }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Circumcision-Vespers1}}
 \def\vesperspropersnote{At II Vespers:}
-\def\vesperspropersaltnote{At I Vespers:}
+\def\vesperspropersaltnote{\needspace{9\baselineskip}At I Vespers:}
 \def\prepsalmtitletwo{\needspace{6\baselineskip}}
 \ifthenelse{\boolean{birmingham}}{
   \def\postmagtitle{\vspace{-0.5\baselineskip}}

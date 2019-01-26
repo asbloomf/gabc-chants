@@ -4,6 +4,7 @@
 \usepackage{xstring}
 \usepackage{needspace}
 \usepackage{xkeyval}
+\usepackage{ifthen}
 
 \newcommand{\numbertoword}[1]{%
 \ifnum1=#1%
@@ -400,7 +401,12 @@ five%
 \edef\expandedend{\psalmend}
 \edef\nostarend{\psalmend}
 \edef\mytempa{\psalmend}
-\StrSubstitute{\mytempa}{*}{star}[\expandedend]
+\provideboolean{ignoreasterisk}
+\ifthenelse{\boolean{ignoreasterisk}}{
+  \StrSubstitute{\mytempa}{*}{}[\expandedend]
+}{
+  \StrSubstitute{\mytempa}{*}{star}[\expandedend]
+}
 \StrSubstitute{\mytempa}{*}{}[\nostarend]
 \ifx\canticleof\undefined
   \def\filename{Psalm#2}

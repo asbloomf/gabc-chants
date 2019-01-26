@@ -19,14 +19,14 @@
     \vss
   }\vskip2\baselineskip
 \ifthenelse{\boolean{birmingham}}{
-	\oldneedspace{15\baselineskip}
+	\oldneedspace{10\baselineskip}
 }{}
 \subtitle{December #1.}
 \printgabc{\small At Magn.}{\small \oldstylenums{Ant.~2.~D}}{O}{December#1-MagAntiphon}
 \translation[]{#2}
 \medskip
 \emph{\emph{Magnificat}.~page \pageref{oantiphon-magnificat}.}
-\bigskip
+\medskip
 }
 }
 
@@ -106,6 +106,8 @@
 %\def\prepsalmfive{\oldneedspace{6\baselineskip}}
 %\def\prepsalmfiveverses{}
 \ifthenelse{\boolean{birmingham}}{
+	\def\prepsalmtitlethree{\bigskip}
+	\def\postpsalmtitlethree{\bigskip}
 	\def\postpsalmtitlefive{\oldneedspace{10\baselineskip}}
 }{
 	\def\prerepeatantiphonfive{}
@@ -242,7 +244,7 @@
 \def\preantfour{\grechangenextscorelinedim{1}{spacelinestext}{0.60717 cm}{scalable}\oldneedspace{8\baselineskip}}
 \def\prepsalmtitlefour{\bigskip}
 \ifthenelse{\boolean{birmingham}}{
-	\def\postpsalmtitlethree{\oldneedspace{12\baselineskip}}
+	\def\prepsalmtitlethree{\oldneedspace{12\baselineskip}}
 	\def\postpsalmtitlefive{\oldneedspace{15\baselineskip}}
 }{
 	\def\preantfive{\bigskip}
