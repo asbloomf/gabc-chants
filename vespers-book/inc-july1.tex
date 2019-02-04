@@ -9,8 +9,8 @@
 \def\prepsalmtitlethree{\vspace{-0.5\baselineskip}}
 \def\premagtitle{\oldneedspace{8\baselineskip}}
 \ifthenelse{\boolean{birmingham}}{
-	\def\prepsalmtwoverses{\bigskip\bigskip}
-	\def\postpsalmtitlefour{\needspace{10\baselineskip}}
+	%\def\prepsalmtwoverses{\bigskip\bigskip}
+	%\def\postpsalmtitlefour{\needspace{10\baselineskip}}
 	%\def\postpsalmtitlefive{\medskip}
     %\def\chapterreplacement{}
 	%\def\prechapter{}
@@ -26,7 +26,7 @@
 \def\definevesperspropers{\input{\gabcfolder/inc-MostPreciousBloodOfChrist-2Vespers}
 	\ifthenelse{\boolean{birmingham}}{
 		\def\prepsalmtitlefive{\medskip}
-		\def\postpsalmtitlefive{\bigskip}
+		\def\postpsalmtitlefive{\medskip}
 	}{
 		%
 	}
@@ -34,7 +34,7 @@
 \def\definevesperspropersalt{\input{\gabcfolder/inc-MostPreciousBloodOfChrist-1Vespers}%
 	\ifthenelse{\boolean{birmingham}}{
 		\def\prepsalmtitlefive{\medskip}
-		\def\postpsalmtitlefive{\bigskip}
+		\def\postpsalmtitlefive{\medskip}
 	}{}
   \def\postmagtitle{\vspace{-0.5\baselineskip}}%
 }
