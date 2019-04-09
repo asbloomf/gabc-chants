@@ -313,11 +313,6 @@ Time After Pentecost:
     url: pdfs/TimeAfterPentecost/commemorationPentecost23-main.pdf
   - name: Vespers Magnificat Pentecost 24
     url: pdfs/TimeAfterPentecost/VespersMagnificatPentecost24.pdf
-St Philip Neri:
-  - name: "St Philip Neri: 1 Vespers"
-    url: pdfs/StPhilipNeri/StPhilipNeri-1Vespers.pdf
-  - name: "commemoration: St Philip Neri: Vespers 1"
-    url: pdfs/StPhilipNeri/commemoration-StPhilipNeri-Vespers1-main.pdf
 "March 25 : Annunciation":
   - name: "Annunciation: 1 Vespers"
     url: pdfs/March25-Annunciation/Annunciation-1Vespers.pdf
@@ -331,6 +326,13 @@ St Philip Neri:
     url: pdfs/May1-StJosephWorker/StJosephWorker-vespers1.pdf
   - name: "St Joseph the Worker: 2 Vespers"
     url: pdfs/May1-StJosephWorker/StJosephWorker-vespers2.pdf
+"May 26 : St Philip Neri":
+  - name: "St Philip Neri: 1 Vespers"
+    url: pdfs/StPhilipNeri/StPhilipNeri-1Vespers.pdf
+  - name: "St Philip Neri: 2 Vespers"
+    url: pdfs/StPhilipNeri/StPhilipNeri-2Vespers.pdf
+  - name: "commemoration: St Philip Neri: Vespers 1"
+    url: pdfs/StPhilipNeri/commemoration-StPhilipNeri-Vespers1-main.pdf
 "June 24 : Birth Of John The Baptist":
   - name: "Birth Of John The Baptist: 1 Vespers"
     url: pdfs/June24-BirthOfJohnTheBaptist/BirthOfJohnTheBaptist-1Vespers.pdf
