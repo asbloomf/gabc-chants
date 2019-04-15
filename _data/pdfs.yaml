@@ -23,9 +23,22 @@ Tenebræ:
     url: pdfs/Tenebrae/tenebrae_full-crop.pdf
   - name: Purchase on Amazon
     url: https://www.amazon.com/Tenebrae-Albert-S-Bloomfield/dp/1495364496/
-  - name: Purchase on Create Space
-    note: use discount code 8568AH2F
-    url: https://www.createspace.com/4628385
+  - name: Thursday
+    url: pdfs/Tenebrae/tenebrae_thursday.pdf
+  - name: Thursday (no margins)
+    url: pdfs/Tenebrae/tenebrae_thursday-crop.pdf
+  - name: Friday
+    url: pdfs/Tenebrae/tenebrae_friday.pdf
+  - name: Friday (no margins)
+    url: pdfs/Tenebrae/tenebrae_friday-crop.pdf
+  - name: Saturday
+    url: pdfs/Tenebrae/tenebrae_saturday.pdf
+  - name: Saturday (no margins)
+    url: pdfs/Tenebrae/tenebrae_saturday-crop.pdf
+  - name: Prophecy Tone
+    url: pdfs/Tenebrae/tenebrae_prophecyTone.pdf
+  - name: Prophecy Tone (no margins)
+    url: pdfs/Tenebrae/tenebrae_prophecyTone-crop.pdf
 Christmas Matins:
   - name: Download PDF
     url: pdfs/christmas-matins/christmas-matins.pdf
@@ -183,29 +196,8 @@ Lent:
     url: pdfs/Lent/CommemorationFeriaTertiaPassion1-main.pdf
   - name: Vespers Magnificat Passion 2
     url: pdfs/Lent/VespersMagnificatPassion2.pdf
-Tenebrae:
-  - name: Tenebrae
-    url: pdfs/Tenebrae/tenebrae_full.pdf
-  - name: Tenebrae (no margins)
-    url: pdfs/Tenebrae/tenebrae_full-crop.pdf
-  - name: Tenebrae (purchase on Amazon)
-    url: https://www.amazon.com/Tenebrae-Albert-S-Bloomfield/dp/1495364496/
-  - name: Tenebrae Thursday
-    url: pdfs/Tenebrae/tenebrae_thursday.pdf
-  - name: Tenebrae Thursday (no margins)
-    url: pdfs/Tenebrae/tenebrae_thursday-crop.pdf
-  - name: Tenebrae Friday
-    url: pdfs/Tenebrae/tenebrae_friday.pdf
-  - name: Tenebrae Friday (no margins)
-    url: pdfs/Tenebrae/tenebrae_friday-crop.pdf
-  - name: Tenebrae Saturday
-    url: pdfs/Tenebrae/tenebrae_saturday.pdf
-  - name: Tenebrae Saturday (no margins)
-    url: pdfs/Tenebrae/tenebrae_saturday-crop.pdf
-  - name: Prophecy Tone
-    url: pdfs/Tenebrae/tenebrae_prophecyTone.pdf
-  - name: Prophecy Tone (no margins)
-    url: pdfs/Tenebrae/tenebrae_prophecyTone-crop.pdf
+Tenebræ :
+  - name: See above.
 Easter:
   - name: Easter Vespers
     url: pdfs/Easter/EasterVespers.pdf
