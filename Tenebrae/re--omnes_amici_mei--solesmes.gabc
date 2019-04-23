@@ -4,161 +4,18 @@ mode:3;
 book:The Liber Usualis, 1961, p. 693;
 transcriber:Andrew Hinkley;
 %%
-(c4) Om(g_i)nes(i') <v>\greheightstar</v>() a(i)mí(j')ci(h) mé(%h!iwjI'_HG
-[ev:%
-{%
-\greglyph{\char 17}{h}{i}{0}{}{}%
-\greendofglyph{1}%
-\greglyph{\char 2561}{i}{i}{4}{}{}%
-\greendofglyph{9}%
-\greglyph{\char 19}{i}{g}{6}{}{%
-\adjustbox{scale={0.75}{1},trim=01pt 0pt}{%
-\grehepisemus{k}{12}{1}{k}%
-}%
-\grevepisemus{h}{12}%
-}%
-\greendofglyph{3}%
-\greglyph{\char 19}{h}{g}{6}{}{}%
-\greendofglyph{3}%
-\greglyph{\char 19}{g}{g}{6}{}{}%
-}%
-])i(g.h!iwjIH/ijgg/efe.) (,) de(h)re(ghg')li(g)qué(gf/gff)runt(fv.df!gvFE'f) me,(fe..) (;) et(iij) præ(h!iwjjvIH'h)va(g)lu(h')é(i/j'k/ikjj)runt(ji..) (,) in(g)si(h')di(j)án(jijg~)tes(h!iwj) mí(ikjj)hi~:(ji..) (:) trá(i)di(k)dit(jk!lvlkl~) me(i.) (,) quem(jj jg~) di(h')li(j)gé(%jh__/iv_HG'h
-[ev:%
-{%
-\greglyph{\char 6146}{j}{i}{1}{}{%
-\adjustbox{scale={0.85}{1},trim=0.7pt 0pt}{%
-\grehepisemus{k}{2}{2}{k}%
-\grehepisemus{k}{0}{0}{k}%
-}%
-}%
-\greendofelement{0}{0}%
-\greglyph{\char 23}{i}{h}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
-\grehepisemus{k}{0}{0}{k}%
-}%
-}%
-\greendofglyph{9}%
-\greglyph{\char 19}{h}{h}{6}{}{}%
-\greendofglyph{3}%
-\greglyph{\char 19}{g}{h}{6}{}{%
-\grevepisemus{f}{12}%
-}%
-\greendofglyph{0}%
-\greglyph{\char 17}{h}{h}{0}{}{}%
-}%
-])bam~:(hg..) (:z) <v>\greheightstar</v>() Et(g) ter(g')ri(h)bí(j')li(i)bus(hg) ó(%h_j_h_!iwj
-[ev:%
-{%
-\greglyph{\char 15372}{h}{i}{0}{}{%
-\adjustbox{scale={0.9}{1},trim=0.4pt 0pt}{%
-\grehepisemus{k}{6}{-2}{k}%
-\grehepisemus{k}{2}{2}{k}%
-\grehepisemus{k}{0}{0}{k}%
-}%
-}%
-\greendofglyph{1}%
-\greglyph{\char 2561}{i}{g}{4}{}{}%
-}%
-])cu(%gh_G'FE'f
-[ev:%
-{%
-\greglyph{\char 1025}{g}{g}{0}{}{%
-\adjustbox{scale={1.4}{1},lap=2.7pt}{%
-\grehepisemus{i}{18}{0}{i}%
-}%
-}%
-\greendofglyph{9}%
-\greglyph{\char 19}{g}{f}{6}{}{%
-\grevepisemus{f}{12}%
-}%
-\greendofglyph{3}%
-\greglyph{\char 19}{f}{f}{6}{}{}%
-\greendofglyph{3}%
-\greglyph{\char 19}{e}{f}{6}{}{%
-\grevepisemus{d}{12}%
-}%
-\greendofglyph{0}%
-\greglyph{\char 17}{f}{f}{0}{}{}%
-}%
-])lis(fe..) (;) plá(%e!fwg_/hi
-[ev:%
-{%
-\greglyph{\char 17}{e}{f}{0}{}{}%
-\greendofglyph{1}%
-\greglyph{\char 2561}{f}{h}{4}{}{%
-\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
-\grehepisemus{h}{18}{0}{h}%
-}%
-}%
-\greendofelement{0}{0}%
-\greglyph{\char 1025}{h}{h}{0}{}{}%
-}%
-])ga(h') cru(h)dé(h!iwj)li(g') per(g)cu(%gf/g_h
-[ev:%
-{%
-\greglyph{\char 5121}{g}{g}{8}{}{}%
-\greendofelement{0}{0}%
-\greglyph{\char 1025}{g}{f}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
-\grehepisemusbottom{f}{0}{-1}%
-}%
-}%
-}%
-])ti(f)én(e)tes,(eef.) (;) a(d_e)cé(g_h//g.h!iwj)to(%jj//jv/H'_GF'/ghhg.
-[ev:%
-{%
-\greglyph{\char 17}{j}{j}{0}{}{}%
-\greendofglyph{0}%
-\greglyph{\char 17}{j}{j}{0}{}{}%
-\greendofelement{1}{0}%
-\greglyph{\char 22}{j}{h}{0}{}{}%
-\greendofelement{0}{0}%
-\greglyph{\char 19}{h}{g}{6}{}{%
-\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
-\grehepisemus{i}{12}{1}{i}%
-}%
-\grevepisemus{g}{12}%
-}%
-\greendofglyph{3}%
-\greglyph{\char 19}{g}{g}{6}{}{}%
-\greendofglyph{3}%
-\greglyph{\char 19}{f}{g}{6}{}{%
-\grevepisemus{e}{12}%
-}%
-\greendofelement{0}{0}%
-\greglyph{\char 1025}{g}{h}{0}{}{}%
-\greendofglyph{0}%
-\greglyph{\char 6145}{h}{h}{8}{}{%
-\grepunctummora{g}{0}{0}{0}%
-}%
-}%
-]) po(h)tá(hg/hff)bant(fv.df!gvFE'f) me.(fe..) <sp>V/</sp>(::) In(ikjj)ter(h!iwj_i/hhg) in(i)í(ij)quos(hg) pro(h')je(j)cé(i)runt(ikjj) me,(ji..) (;) et(hg~) non(hi) pe(i)per(i)cé(ij)runt(i.z) á(i_k_j'_/%jv_I_H'/iwj_i
-[ev:%
-{%
-\greglyph{\char 15367}{i}{j}{0}{}{%
-\grehepisemus{l}{6}{-2}{l}%
-\grehepisemus{l}{17}{1}{l}%
-\grehepisemus{l}{0}{0}{l}%
-\grevepisemus{i}{0}%
-}%
-\greendofelement{0}{0}%
-\greglyph{\char 22}{j}{i}{0}{}{%
-\adjustbox{scale={1.2}{1},lap=1.7pt}{%
-\grehepisemusbridge{k}{}{}%
-\grehepisemus{k}{0}{0}{k}%
-}%
-}%
-\greendofglyph{9}%
-\greglyph{\char 19}{i}{i}{6}{}{%
-%\grehepisemus{k}{12}{1}{k}%
-}%
-\greendofglyph{3}%
-\greglyph{\char 19}{h}{i}{6}{}{%
-\grevepisemus{g}{12}%
-}%
-\greendofelement{0}{0}%
-\greglyph{\char 19462}{i}{h}{4}{}{%
-\grehepisemus{k}{17}{1}{k}%
-}%
-}%
-])ni(hg)mæ(g.h!iwj) mé(ji'ih/iv_HG'h)æ.(hg..) <v>\greheightstar</v>(::) Et(g) ter(g')ri(h)bí(j')li(i)bus.(hg) (::)
+(c4) Om(g_i)nes(i') <v>\greheightstar</v>() a(i)mí(j')ci(h) mé(h!iwjI'_4HG)i(g.h!iwjIH/ijgg/efe.) (,)
+de(h)re(ghg')li(g)qué(gf/gff)runt(fv.df!gvFE'f) me,(fe..) (;)
+et(iij) præ(h!iwjjvIH'h)va(g)lu(h')é(i/j'k/ikjj)runt(ji..) (,)
+in(g)si(h')di(j)án(jijg~)tes(h!iwj) mí(ikjj)hi~:(ji..) (:)
+trá(i)di(k)dit(jk!lvlkl~) me(i.) (,)
+quem(jj jg~) di(h')li(j)gé(j[oh:{]_h_2/iv_[oh:}]HG'h)bam~:(hg..) (:z)
+
+<v>\greheightstar</v>~Et(g) ter(g')ri(h)bí(j')li(i)bus(hg) ó(h_j_h_!iwj)cu(gh_G'_3FE'f)lis(fe..) (;)
+plá(e!fwg_/hi)ga(h') cru(h)dé(h!iwj)li(g') per(g)cu(gf/g_h)ti(f)én(e)tes,(eef.) (;)
+a(d_e)cé(g_h//g.h!iwj)to(jj//jv/H'_4GF'/ghhg.) po(h)tá(hg/hff)bant(fv.df!gvFE'f) me.(fe..) (::)
+
+<sp>V/</sp>~In(ikjj)ter(h!iwj_i/hhg) in(i)í(ij)quos(hg) pro(h')je(j)cé(i)runt(ikjj) me,(ji..) (;)
+et(hg~) non(hi) pe(i)per(i)cé(ij)runt(i.z) á(i_k_j'_/jv_I_H'/iwj_i)ni(hg)mæ(g.h!iwj) mé(ji'ih/iv_HG'h)æ.(hg..) (::)
+
+<v>\greheightstar</v>~Et(g) ter(g')ri(h)bí(j')li(i)bus.(hg) (::)

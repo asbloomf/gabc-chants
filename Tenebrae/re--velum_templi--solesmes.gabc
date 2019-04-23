@@ -4,146 +4,18 @@ mode:2;
 book:The Liber Usualis, 1961, p. 695;
 transcriber:Andrew Hinkley;
 %%
-(f3) VE(f)lum(%e_fE'C
-[ev:%
-{%
-\greglyph{\char 1025}{e}{e}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
-\grehepisemusbottom{d}{0}{-1}%
-}%
-}%
-\greendofglyph{9}%
-\greglyph{\char 19}{e}{e}{6}{}{%
-\grevepisemus{d}{12}%
-}%
-\greendofglyph{10}%
-\greglyph{\char 19}{c}{e}{6}{}{}%
-}%
-]) tém(ef~)pli(f.) <v>\greheightstar</v>() scís(%hg/h_i
-[ev:%
-{%
-\greglyph{\char 6145}{h}{h}{8}{}{}%
-\greendofelement{0}{0}%
-\greglyph{\char 1025}{h}{f}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
-\grehepisemusbottom{g}{0}{-1}%
-}%
-}%
-}%
-])sum(%f!gwhG'_FE'f
-[ev:%
-{%
-\greglyph{\char 17}{f}{g}{0}{}{}%
-\greendofglyph{1}%
-\greglyph{\char 2561}{g}{g}{4}{}{}%
-\greendofglyph{9}%
-\greglyph{\char 19}{g}{f}{6}{}{%
-\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
-\grehepisemus{i}{12}{1}{i}%
-}%
-\grevepisemus{f}{12}%
-}%
-\greendofglyph{3}%
-\greglyph{\char 19}{f}{f}{6}{}{}%
-\greendofglyph{3}%
-\greglyph{\char 19}{e}{f}{6}{}{%
-\grevepisemus{d}{12}%
-}%
-\greendofglyph{0}%
-\greglyph{\char 17}{f}{f}{0}{}{}%
-}%
-]) est,(fe..) <v>\greheightstar</v>(;) Et(e) óm(f)nis(h) tér(%hv_G_F'Ef
-[ev:%
-{%
-\greglyph{\char 22}{h}{g}{0}{}{%
-\adjustbox{scale={1.2}{1},lap=1.7pt}{%
-\grehepisemusbridge{i}{}{}%
-\grehepisemus{i}{0}{0}{i}%
-}%
-}%
-\greendofglyph{9}%
-\greglyph{\char 19}{g}{f}{6}{}{%
-%\grehepisemus{i}{12}{1}{i}%
-}%
-\greendofglyph{3}%
-\greglyph{\char 19}{f}{f}{6}{}{%
-\grevepisemus{e}{12}%
-}%
-\greendofglyph{3}%
-\greglyph{\char 19}{e}{f}{6}{}{}%
-\greendofglyph{0}%
-\greglyph{\char 17}{f}{f}{0}{}{}%
-}%])ra(f!gwh/ih'hg') tré(f)mu(fg!hvGF'g)it~:(gf..) (:) lá(f_i)tro(ih'hg) de(fe) crú(f!gwhGF/gv_FEf)ce(fe__) (,) cla(e)má(g')bat,(ihh) dí(%f!gwhG'_FE'f
-[ev:%
-{%
-\greglyph{\char 17}{f}{g}{0}{}{}%
-\greendofglyph{1}%
-\greglyph{\char 2561}{g}{g}{4}{}{}%
-\greendofglyph{9}%
-\greglyph{\char 19}{g}{f}{6}{}{%
-\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
-\grehepisemus{i}{12}{1}{i}%
-}%
-\grevepisemus{f}{12}%
-}%
-\greendofglyph{3}%
-\greglyph{\char 19}{f}{f}{6}{}{}%
-\greendofglyph{3}%
-\greglyph{\char 19}{e}{f}{6}{}{%
-\grevepisemus{d}{12}%
-}%
-\greendofglyph{0}%
-\greglyph{\char 17}{f}{f}{0}{}{}%
-}%
-])cens~:(fe..) (;) Me(e)mén(f)to(h) mé(hg)i,(ef) Dó(f)mi(fg!hvGF'g)ne,(gf..) (;) dum(fc~) vé(e_0!fg)ne(fz)ris(f_0//%ghf'_/g_f'fe.
-[ev:%
-{%
-%\greglyph{\char 17}{f}{g}{0}{}{%
-%\grehepisemusbottom{e}{0}{0}%
-%}%
-%\greendofelement{1}{0}%
-\greglyph{\char 15371}{g}{g}{0}{}{%
-\adjustbox{scale={1.3}{1},lap=2.6pt}{%
-\grehepisemus{i}{0}{1}{i}%
-}%
-\grevepisemus{e}{0}%
-}%
-\greendofelement{0}{0}%
-\greglyph{\char 5121}{g}{f}{8}{}{%
-\adjustbox{scale={1.3}{1},lap=2.6pt}{%
-\grehepisemus{i}{17}{1}{i}%
-}%
-\grevepisemus{e}{0}%
-}%
-\greendofglyph{0}%
-\greglyph{\char 6145}{f}{e}{8}{}{%
-\grepunctummora{e}{0}{0}{0}%
-}%
-}%
-]) (,) in(e_f) ré(h_i)gnum(%g!hi_/jh/iv_H_G
-[ev:%
-{%
-\greglyph{\char 17}{g}{h}{0}{}{}%
-\greendofglyph{1}%
-\greglyph{\char 1025}{h}{j}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
-\grehepisemus{j}{18}{0}{j}%
-}%
-}%
-\greendofelement{0}{0}%
-\greglyph{\char 6146}{j}{i}{1}{}{}%
-\greendofelement{0}{0}%
-\greglyph{\char 23}{i}{h}{0}{}{%
-\adjustbox{scale={1.2}{1},lap=1.7pt}{%
-\grehepisemusbridge{j}{}{}%
-\grehepisemus{j}{0}{0}{j}%
-}%
-}%
-\greendofglyph{9}%
-\greglyph{\char 19}{h}{f}{6}{}{%
-%\grehepisemus{j}{12}{1}{j}%
-}%
-\greendofglyph{3}%
-\greglyph{\char 19}{g}{f}{6}{}{}%
-}%
-]) tú(f!gwhgh)um.(gf..) <sp>V/</sp>(::) Pé(e.f!gwhhi)træ(h) scís(ij)sæ(i) sunt,(h.) (,) et(h) mo(h)nu(h)mén(hg~)ta(hi) a(gh)pér(f)ta(f!gwh_g) sunt,(gf..) (;) et(f) múl(ef~)ta(f) cór(f)po(f)ra(f) san(f)ctó(fg)rum,(f'_) (,) qui(f) dor(f)mí(f)e(f)rant,(f!gwhGF'E) sur(f)re(hg/hih)xé(hv_GF'g)runt.(ffe.) (::) <v>\greheightstar</v>() Et(e) óm(f)nis.(h) (::)
+(f3) VE(f)lum(e_fE'C) tém(ef~)pli(f.) <v>\greheightstar</v>() scís(hg/h_i)sum(f!gwhG'_4FE'f) est,(fe..) <v>\greheightstar</v>(;)
+
+Et(e) óm(f)nis(h) tér(hv_G_F'_3Ef)ra(f!gwh/ih'hg') tré(f)mu(fg!hvGF'g)it~:(gf..) (:)
+lá(f_i)tro(ih'hg) de(fe) crú(f!gwhGF/gv_FEf)ce(fe__) (,)
+cla(e)má(g')bat,(ihh) dí(f!gwhG'_4FE'f)cens~:(fe..) (;)
+Me(e)mén(f)to(h) mé(hg)i,(ef) Dó(f)mi(fg!hvGF'g)ne,(gf..) (;)
+dum(fc~) vé(e_0!fg)ne(fz)ris(f_0//ghf'[oh:{]_1/g_[oh:}]f'fe.) (,)
+in(e_f) ré(h_i)gnum(g!hi_/jh/iv_H_G) tú(f!gwhgh)um.(gf..) (::)
+
+<sp>V/</sp>~Pé(e.f!gwhhi)træ(h) scís(ij)sæ(i) sunt,(h.) (,)
+et(h) mo(h)nu(h)mén(hg~)ta(hi) a(gh)pér(f)ta(f!gwh_g) sunt,(gf..) (;)
+et(f) múl(ef~)ta(f) cór(f)po(f)ra(f) san(f)ctó(fg)rum,(f'_) (,)
+qui(f) dor(f)mí(f)e(f)rant,(f!gwhGF'E) sur(f)re(hg/hih)xé(hv_GF'g)runt.(ffe.) (::)
+
+<v>\greheightstar</v>~Et(e) óm(f)nis.(h) (::)
