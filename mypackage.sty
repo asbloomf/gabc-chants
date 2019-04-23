@@ -322,7 +322,7 @@
 \newenvironment{magnificat}[2][2]{
 % 1 - number to start on
 % 2 - name of magnificat to include
-\includescore{#2}
+\gregorioscore{#2}
 \normalsize
 \begin{psalmverses}[#1]
 }{\end{psalmverses}}
@@ -330,7 +330,7 @@
 \newenvironment{boldnummagnificat}[2][2]{
 % 1 - number to start on
 % 2 - name of magnificat to include
-\includescore{#2}
+\gregorioscore{#2}
 \normalsize
 \begin{boldnumpsalmverses}[#1]
 }{\end{boldnumpsalmverses}}
@@ -338,7 +338,7 @@
 \newenvironment{oddversesmagnificat}[2][2]{
 % 1 - number to start on
 % 2 - name of magnificat to include
-\includescore{#2}
+\gregorioscore{#2}
 \normalsize
 \begin{oddnumpsalmverses}[#1]
 }{\end{oddnumpsalmverses}}
@@ -352,7 +352,7 @@
 \newlength{\initwidth}
 \newlength{\alsinitialsize}
 % grefactor must be set before calling!
-\newcommand{\setinitialspacing}[1]{%
+\newcommand{\alsoldsetinitialspacing}[1]{%
 % 1 - initial, e.g., I
 \settowidth{\annotwidth}{\annot\hspace{0.5pc}}
 \settoheight{\Etextheight}{E}
@@ -393,4 +393,14 @@
 \ifx\annottwo\undefined\else%
 \setsecondannotation{\annottwo}
 \fi
+}
+\newcommand{\setinitialspacing}[1]{%
+\greannotation{\annot}
+\ifx\annottwo\undefined\else%
+\greannotation{\annottwo}
+\fi
+%\def\greinitialformat##1{%
+%{\fontsize{32pt}{32pt}\selectfont ##1}%
+%}
+\grechangestyle{initial}{\fontsize{32pt}{32pt}\selectfont}%
 }
