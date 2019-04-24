@@ -4,131 +4,17 @@ mode:5;
 book:The Liber Usualis, 1961, p. 761;
 transcriber:Andrew Hinkley;
 %%
-(c3) PLán(g)ge(gi//hh/fgf.) <v>\greheightstar</v>(,) qua(hg)si(h) vír(i)go,(%hg__/hv_GFg_f
-[ev:%
-{%
-\greglyph{\char 6145}{h}{h}{8}{}{%
-\adjustbox{scale={0.85}{1},trim=0.7pt 0pt}{%
-\grehepisemus{i}{17}{1}{i}%
-\grehepisemus{i}{0}{0}{i}%
-}%
-}%
-\greendofelement{0}{0}%
-\greglyph{\char 22}{h}{g}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
-\grehepisemus{i}{0}{0}{i}%
-}%
-}%
-\greendofglyph{9}%
-\greglyph{\char 19}{g}{g}{6}{}{}%
-\greendofglyph{3}%
-\greglyph{\char 19}{f}{g}{6}{}{}%
-\greendofglyph{0}%
-\greglyph{\char 5121}{g}{h}{8}{}{%
-\grehepisemus{h}{17}{1}{h}%
-}%
-}%
-]) (,) plebs(%h.f!gwhGF
-[ev:%
-\greglyph{\char 6146}{h}{g}{1}{}{%
-\adjustbox{raise=1pt,lap=-0.4pt}{%
-\grepunctummora{h}{2}{0}{0}%
-}%
-}%
-\greendofglyph{1}%
-\greglyph{\char 2561}{g}{g}{4}{}{}%
-\greendofglyph{9}%
-\greglyph{\char 19}{g}{e}{6}{}{}%
-\greendofglyph{3}%
-\greglyph{\char 19}{f}{e}{6}{}{}%
-]) mé(ef!gvFE'f)a~:(fe..) (:) u(i)lu(i)lá(%k.i!jwkJI'j
-[ev:%
-\greglyph{\char 5122}{k}{j}{1}{}{%
-\adjustbox{lap=-0.4pt}{%
-\grepunctummora{k}{2}{0}{0}%
-}%
-}%
-\greendofglyph{1}%
-\greglyph{\char 2561}{j}{j}{4}{}{}%
-\greendofglyph{9}%
-\greglyph{\char 19}{j}{j}{6}{}{}%
-\greendofglyph{3}%
-\greglyph{\char 19}{i}{j}{6}{}{%
-\grevepisemus{h}{12}%
-}%
-\greendofglyph{0}%
-\greglyph{\char 17}{j}{j}{0}{}{}%
-])te,(j_i) pa(ih'hg)stó(%h.f!gwhG'_FE'f
-[ev:%
-\greglyph{\char 6146}{h}{g}{1}{}{%
-\adjustbox{raise=1pt,lap=-0.4pt}{%
-\grepunctummora{h}{2}{0}{0}%
-}%
-}%
-\greendofglyph{1}%
-\greglyph{\char 2561}{g}{g}{4}{}{}%
-\greendofglyph{9}%
-\greglyph{\char 19}{g}{f}{6}{}{%
-\grehepisemus{i}{12}{1}{i}%
-\grevepisemus{f}{12}%
-}%
-\greendofglyph{3}%
-\greglyph{\char 19}{f}{f}{6}{}{}%
-\greendofglyph{3}%
-\greglyph{\char 19}{e}{f}{6}{}{%
-\grevepisemus{d}{12}%
-}%
-\greendofglyph{0}%
-\greglyph{\char 17}{f}{f}{0}{}{}%
-])res,(fe..) (;) in(i) cí(i')ne(i)re(ikiih) et(i') ci(k)lí(kv_JI/j_i)ci(h!iwkJI'j)o~:(ji..) <v>\greheightstar</v>(:) Qui(i)a(k) vé(kkki)nit(i) dí(i')es(k) Dó(kjk)mi(i)ni(hhg) má(h.f!gwhghe~z)gna,(fe/fgf.) (;) et(e) a(f)má(h_i_h_/g'hFE'ed/%f'_h_f_!gwh
-[ev:%
-\greendofelement{0}{0}%
-\greglyph{\char 15372}{f}{g}{0}{}{%
-\adjustbox{scale={0.9}{1},lap=-0.7pt}{%
-\grehepisemus{i}{6}{-2}{i}%
-}%
-\grevepisemus{e}{6}%
-\adjustbox{scale={0.9}{1},lap=-0.7pt}{%
-\grehepisemus{i}{2}{2}{i}%
-\grehepisemus{i}{0}{0}{i}%
-}%
-}%
-\greendofglyph{1}%
-\greglyph{\char 2561}{g}{i}{4}{}{}%
-])ra(if'fe) val(de!fvED'e)de.(ed..) (::) <sp>V/</sp>~Ac(h)cín(h)gi(h)te(h) vos,(hi//hh/fgf) sa(h)cer(h)dó(hi)tes,(h'_) (,) et(h) plán(hi~)gi(h)te,(h) mi(h)ní(hf)stri(fi) al(gh)tá(%h.g!hwihi
-[ev:%
-\greglyph{\char 6145}{h}{h}{8}{}{%
-\adjustbox{raise=1pt,lap=-0.4pt}{%
-\grepunctummora{h}{3}{0}{0}%
-}%
-}%
-\greendofglyph{1}%
-\greglyph{\char 26}{h}{i}{4}{}{}%
-\greglyph{\char 13318}{i}{i}{2}{}{}%
-])ris,(ih..) (;) a(h)spér(h)gi(h)te(hg/hg) vos(gf) cí(h_i)ne(%h.g!hwiH'_GF'g
-[ev:%
-{%
-\greglyph{\char 6145}{h}{h}{8}{}{%
-\adjustbox{raise=1pt,lap=-0.4pt}{%
-\grepunctummora{h}{3}{0}{0}%
-}%
-}%
-\greendofglyph{1}%
-\greglyph{\char 2561}{h}{h}{4}{}{}%
-\greendofglyph{9}%
-\greglyph{\char 19}{h}{g}{6}{}{%
-\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
-\grehepisemus{i}{12}{1}{i}%
-}%
-\grevepisemus{g}{12}%
-}%
-\greendofglyph{3}%
-\greglyph{\char 19}{g}{g}{6}{}{}%
-\greendofglyph{3}%
-\greglyph{\char 19}{f}{g}{6}{}{%
-\grevepisemus{e}{12}%
-}%
-\greendofglyph{0}%
-\greglyph{\char 17}{g}{g}{0}{}{}%
-}%
-])re.(gf..) <v>\greheightstar</v>(::) Qui(i)a.(k) (::) <sp>R/</sp>~Plán(g)ge.(gi//hh/fgf.) (::)
+(c3) PLán(g)ge(gi//hh/fgf.) <v>\greheightstar</v>(,) qua(hg)si(h) vír(i)go,(h_g_2/hv_GFg_f) (,)
+plebs(h.f!gwhGF) mé(ef!gvFE'f)a~:(fe..) (:)
+u(i)lu(i)lá(k.i!jwkJI'j)te,(j_i) pa(ih'hg)stó(h.f!gwhG'_4FE'f)res,(fe..) (;)
+in(i) cí(i')ne(i)re(ikiih) et(i') ci(k)lí(kv_JI/j_i)ci(h!iwkJI'j)o~:(ji..)
+<v>\greheightstar</v>(:) Qui(i)a(k) vé(kkki)nit(i) dí(i')es(k) Dó(kjk)mi(i)ni(hhg) má(h.f!gwhghe~z)gna,(fe/fgf.) (;)
+et(e) a(f)má(h_i_h_/g'hFE'ed/f'_h_f_!gwh)ra(if'fe) val(de!fvED'e)de.(ed..) (::)
+
+<sp>V/</sp>~Ac(h)cín(h)gi(h)te(h) vos,(hi//hh/fgf) sa(h)cer(h)dó(hi)tes,(h'_) (,)
+et(h) plán(hi~)gi(h)te,(h) mi(h)ní(hf)stri(fi) al(gh)tá(h.g!hwihi)ris,(ih..) (;)
+a(h)spér(h)gi(h)te(hg/hg) vos(gf) cí(h_i)ne(h.g!hwiH'_4GF'g)re.(gf..) (::)
+
+<v>\greheightstar</v>~Qui(i)a.(k) (::)
+
+<sp>R/</sp>~Plán(g)ge.(gi//hh/fgf.) (::)

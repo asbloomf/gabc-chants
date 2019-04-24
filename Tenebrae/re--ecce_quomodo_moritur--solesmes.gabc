@@ -4,71 +4,20 @@ mode:4;
 book:The Liber Usualis, 1961, p. 767;
 transcriber:Andrew Hinkley;
 %%
-(c4) EC(cd/fef)ce(e.) <v>\greheightstar</v>() quó(ef)mo(e)do(e) mó(f)ri(d)tur(fvv) jú(egff)stus,(fe..) (;) et(c) né(ded/ef)mo(e) pér(ff//fd~)ci(f)pit(gf/ghg) cór(egff)de~:(eef.) (:) et(d) ví(g)ri(h) jú(hi)sti(h) tol(hg~)lún(h_0//igh)tur,(hgg/efe.) (;) et(e) né(%e!fw!g_h
-[ev:%
-{%
-\greglyph{\char 17}{e}{f}{0}{}{}%
-\greendofglyph{1}%
-\greglyph{\char 26}{f}{g}{4}{}{}%
-\greendofglyph{1}%
-\greglyph{\char 1025}{g}{g}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt,raise=-1pt}{%
-\grehepisemusbottom{f}{0}{-1}%
-}%
-}%
-}%
-])mo(ggf) con(h_0//ji'j)sí(h_0//jg'h)de(%g.f!gwhgh
-[ev:%
-{%
-\greglyph{\char 5121}{g}{g}{8}{}{%
-\adjustbox{raise=1pt,lap=-0.4pt}{%
-\grepunctummora{g}{3}{0}{0}%
-}%
-}%
-\greendofglyph{1}%
-\greglyph{\char 26}{g}{g}{4}{}{}%
-\greglyph{\char 13318}{h}{g}{2}{}{}%
-}%
-])rat~:(g_h/ih..) (:) a(e) fá(g)ci(gh)e(h') in(h)i(h)qui(hg)tá(h_0//ighz)tis(hgg/efe.) (,) su(e)blá(e!fwgFE')tus(g) est(gh_gh'GF) jú(ef/gef)stus~:(ed..) <v>\greheightstar</v>(:) Et(d_f) é(ixh_i)rit(g_h_g_) in(e_f) pá(%g.f!gwhgh
-[ev:%
-{%
-\greglyph{\char 5121}{g}{g}{8}{}{%
-\adjustbox{raise=1pt,lap=-0.4pt}{%
-\grepunctummora{g}{3}{0}{0}%
-}%
-}%
-\greendofglyph{1}%
-\greglyph{\char 26}{g}{h}{4}{}{}%
-\greglyph{\char 13318}{h}{h}{2}{}{}%
-}%
-])ce(hg..) (,) me(gh)mó(hhg)ri(g)a(g.d!ewf) é(egff)jus.(fe..) (::z) <sp>V/</sp>~Tam(h)quam(h) á(h)gnus(%g.f!gwh_g_/hv_GE/f_e
-[ev:%
-{%
-\greglyph{\char 5121}{g}{g}{8}{}{%
-\adjustbox{raise=1pt,lap=-0.4pt}{%
-\grepunctummora{g}{3}{0}{0}%
-}%
-}%
-\greendofglyph{1}%
-\greglyph{\char 19462}{g}{h}{4}{}{%
-\adjustbox{scale={0.85}{1},trim=0.6pt 0pt}{%
-\grehepisemus{i}{17}{1}{i}%
-\grehepisemus{i}{0}{0}{i}%
-}%
-}%
-\greendofelement{0}{0}%
-\greglyph{\char 22}{h}{g}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
-\grehepisemus{i}{0}{0}{i}%
-}%
-}%
-\greendofglyph{9}%
-\greglyph{\char 19}{g}{f}{6}{}{}%
-\greendofglyph{10}%
-\greglyph{\char 19}{e}{f}{6}{}{}%
-\greendofelement{0}{0}%
-\greglyph{\char 6145}{f}{g}{8}{}{%
-\grehepisemus{g}{17}{1}{g}%
-}%
-}%
-]) co(g)ram(g') ton(g)dén(gh~)te(g) se(g') o(g)bmú(gh)tu(g)it,(g.) (,) et(g) non(g) a(g)pé(g)ru(gf)it(gh) os(gf) sú(e!fwg_f)um~:(fe..) (;z) de(f) an(de~)gú(ef)sti(e)a,(e'_) et(e) de(e) ju(e)dí(e')ci(e)o(e!fwgFE) su(g)blá(gh_gh'GF)tus(ef/gef) est(ed..) <v>\greheightstar</v>(::) Et(d_f) é(ixh_i)rit.(g_h_g_) <sp>R/</sp>(::) Ec(cd/fef)ce.(e.) (::)
+(c4) EC(cd/fef)ce(e.) <v>\greheightstar</v>() quó(ef)mo(e)do(e) mó(f)ri(d)tur(fvv) jú(egff)stus,(fe..) (;)
+et(c) né(ded/ef)mo(e) pér(ff//fd~)ci(f)pit(gf/ghg) cór(egff)de~:(eef.) (:)
+et(d) ví(g)ri(h) jú(hi)sti(h) tol(hg~)lún(h_0//igh)tur,(hgg/efe.) (;)
+et(e) né(%
+e!fw!g_[uh:m]h)mo(ggf) con(h_0//ji'j)sí(h_0//jg'h)de(g.f!gwhgh)rat~:(g_h/ih..) (:)
+a(e) fá(g)ci(gh)e(h') in(h)i(h)qui(hg)tá(h_0//ighz)tis(hgg/efe.) (,)
+su(e)blá(e!fwgFE')tus(g) est(gh_gh'GF) jú(ef/gef)stus~:(ed..)
+<v>\greheightstar</v>(:) Et(d_f) é(ixh_i)rit(g_h_g_) in(e_f) pá(g.f!gwhgh)ce(hg..) (,)
+me(gh)mó(hhg)ri(g)a(g.d!ewf) é(egff)jus.(fe..) (::z)
+
+<sp>V/</sp>~Tam(h)quam(h) á(h)gnus(g.f!gwh_g_2/hv_GE/f_e) co(g)ram(g') ton(g)dén(gh~)te(g) se(g') o(g)bmú(gh)tu(g)it,(g.) (,)
+et(g) non(g) a(g)pé(g)ru(gf)it(gh) os(gf) sú(e!fwg_f)um~:(fe..) (;z)
+de(f) an(de~)gú(ef)sti(e)a,(e'_) et(e) de(e) ju(e)dí(e')ci(e)o(e!fwgFE) su(g)blá(gh_gh'GF)tus(ef/gef) est(ed..) (::)
+
+<v>\greheightstar</v>~Et(d_f) é(ixh_i)rit.(g_h_g_) (::)
+
+<sp>R/</sp>~Ec(cd/fef)ce.(e.) (::)

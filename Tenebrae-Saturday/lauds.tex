@@ -62,14 +62,14 @@
 %\printseparation
 \pagebreak
 {
-\def\greblockcustos{%
-% the regular greblockcustos is global which messes us up here, so redefine it without the \global
-  \greblockcusto=1\relax %
-  \grelocalrightbox{}%
-  \relax %
-}
+% \def\greblockcustos{%
+% % the regular greblockcustos is global which messes us up here, so redefine it without the \global
+%   \greblockcusto=1\relax %
+%   \grelocalrightbox{}%
+%   \relax %
+% }
 \def\preant{\grechangestaffsize{17}\large}
-\def\prepsalm{\grechangestaffsize{15}\normalsize\greblockcustos}
+\def\prepsalm{\grechangestaffsize{15}\normalsize\greseteolcustos{manual}}
 \def\psalmtranslationsmall{T}
 \def\anttranslation{O all ye that pass by, attend and see if there be any sorrow like unto my sorrow.}
 \def\psalmclef{2}
@@ -100,7 +100,7 @@
 %\bigskip%\bigskip
 %\smallskip
 \grechangestaffsize{17}
-\printgabc{Ant.}{5.}{C}{../Tenebrae/an--christus_factus_est--solesmes_saturday_edited}
+\printgabc{Ant.}{5.}{C}{../Tenebrae/an--christus_factus_est--solesmes_saturday}
 
 \medskip
 
