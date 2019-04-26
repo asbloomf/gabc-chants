@@ -106,7 +106,7 @@ tenorMusic = \relative c' {
 
 tenorWords = \lyricmode {
   Re -- gí -- na cæ -- li læ -- tá -- re, al -- le --
-  lu --  ia, al -- le -- lú -- ia, al -- le -- lú -- ia; Qui -- a quem
+  lú --  ia, al -- le -- lú -- ia, al -- le -- lú -- ia; Qui -- a quem
   me -- ru -- í -- sti __ por -- tá -- re,
 
   al -- le -- lú -- ia, al -- le -- lú -- ia.
@@ -139,7 +139,7 @@ bassMusic = \relative c' {
 }
 bassWords = \lyricmode {
   Re -- gí -- na cæ -- li læ --
-  ta -- re, al -- le -- lú --  ia;
+  tá -- re, al -- le -- lú --  ia;
   Qui -- a quem me -- ru -- í -- sti por -- tá -- re,
 
   al -- le -- lú -- ia.
