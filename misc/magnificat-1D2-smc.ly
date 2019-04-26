@@ -1,6 +1,6 @@
 ﻿\version "2.18.2"
 
-\include "inc-magnificat-1D.ly"
+\include "inc-magnificat-1D-SMC.ly"
 
 \paper {
   %myStaffSize = #19

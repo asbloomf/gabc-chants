@@ -1,5 +1,5 @@
 {
-\section{September 29: Dedication of St Michael the Archangel}
+\section{29 September: Dedication of St Michael the Archangel}
 \subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
 \medskip
@@ -13,18 +13,24 @@
 \def\definevesperspropersalt{\input{\gabcfolder/inc-DedicationStMichael-1Vespers}}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
-%\def\prepsalmtitleone{\vspace{-0.5\baselineskip}}
-\def\preanttwo{\bigskip\bigskip}
-\def\prepsalmtitletwo{\bigskip}
+\ifthenelse{\boolean{birmingham}}{
+	\def\prepsalmtitleone{\bigskip\bigskip}
+	\def\postpsalmtitleone{\bigskip}
+	\def\preantfour{\vspace{-0.2\baselineskip}}
+	\def\prepsalmtitlefour{\vspace{-0.3\baselineskip}}
+}{
+	%\def\prepsalmtitleone{\vspace{-0.5\baselineskip}}
+	\def\preanttwo{\bigskip\bigskip}
+	\def\prepsalmtitletwo{\bigskip}
+	\def\prerepeatantiphonthree{}
+	\def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
+	%\def\prepsalmtitlefour{\needspace{8\baselineskip}}
+	%\def\prepsalmfour{\needspace{8\baselineskip}}
+	\def\prechapter{\vspace{-\baselineskip}}
+	\def\postmagtitle{\vspace{-\baselineskip}}
+}
 \def\postpsalmtitlethree{\oldneedspace{9\baselineskip}}
-\def\prerepeatantiphonthree{}
-\def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
-%\def\prepsalmtitlefour{\needspace{8\baselineskip}}
-%\def\prepsalmfour{\needspace{8\baselineskip}}
-\def\prechapter{\vspace{-\baselineskip}}
-\def\postmagtitle{\vspace{-\baselineskip}}
 \def\premagverses{\oldneedspace{8\baselineskip}}
-
 \printvespers[../September29-DedicationOfChurchOfStMichaelArchangel]{inc-DedicationStMichael}
 %an--domine_rex_omipotens--solesmes is for the commemoration of the saturday
 
@@ -39,6 +45,10 @@
 \emph{\nth{20} Sunday after Pentecost}, p.~\pageref{pentecost20-mag}.
 \end{multicols}
 }
-\medskip
+\ifthenelse{\boolean{birmingham}}{
+	%
+}{
+	\medskip
+}
 \benedicamusdomino{}
 }

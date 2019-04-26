@@ -1,0 +1,145 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+\usepackage{../definepsalms}
+
+\sloppy
+
+\newcommand{\predeusinadjutorium}{%
+%\smallskip
+\large
+\grechangestaffsize{15}
+}
+\def\deusinadjutoriumsolemn{F}
+
+\newcommand{\preantone}{\grechangestaffsize{17}
+\large
+%\greseteolcustos{manual}
+}
+% perhaps even a little less space before the mag antiphon translation
+% get rid of custos on second line of magnificat
+%p1932
+%1. Dixit Dominus   8c  p133 (109)
+%2. Laudate pueri   6F  p151 (112)
+%3. Laetatus sum    1f  p169 (121)
+%4. Nisi Dominus    7c2 p176 (126)
+%5. Lauda Jerusalem 7a  p206 (147)
+
+
+\newcommand{\antoneinitialsize}{40}
+\newcommand{\prepsalmone}{%
+%\vspace{-1.5ex}
+}
+%\newenvironment{psalmonecols}{\begin{parcolumns}[rulebetween]{2}}{\end{parcolumns}}
+%\input{../psalms/definepsalmone}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preanttwo}{\grechangestaffsize{17}
+%\greseteolcustos{manual}
+\large
+}
+\newcommand{\anttwoinitialsize}{40}
+\newcommand{\prepsalmtwo}{%
+\normalsize
+%\greseteolcustos{manual}
+}
+%\newenvironment{psalmtwocols}{\begin{parcolumns}[rulebetween]{2}}{\end{parcolumns}}
+%\input{../psalms/definepsalmtwo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantthree}{\grechangestaffsize{17}
+\large
+%\greseteolcustos{manual}
+}
+\newcommand{\antthreeinitialsize}{40}
+\newcommand{\prepsalmthree}{%
+\normalsize
+}
+%\newenvironment{psalmthreecols}{\begin{parcolumns}[rulebetween,colwidths={1=252pt}]{2}}{\end{parcolumns}}
+%\input{../psalms/definepsalmthree}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantfour}{\grechangestaffsize{17}
+\greseteolcustos{manual}
+\large
+%\normalsize
+}
+\newcommand{\antfourinitialsize}{40}
+\newcommand{\prepsalmfour}{%
+%\vspace{-1ex}
+%\grechangestaffsize{15}
+\normalsize
+}
+%\newenvironment{psalmfourcols}{\begin{parcolumns}[rulebetween,colwidths={1=290pt}]{2}}{\end{parcolumns}}
+%\input{../psalms/definepsalmfour}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\def\nopagebreakbeforepsalmfive{T}
+%\def\pagebreakafterpsalmfive{T}
+\newcommand{\preantfive}{\grechangestaffsize{17}
+\greseteolcustos{manual}
+\large
+}
+%\newcommand{\preantfivetwo}{\preantfive}
+\newcommand{\antfivefontsizetwo}{40}
+
+\newcommand{\antfiveinitialsize}{40}
+\newcommand{\prepsalmfive}{%
+\vspace{-12pt plus 12pt}
+%\grechangestaffsize{15}%
+%\normalsize%
+}
+%\newenvironment{psalmfivecols}{\begin{parcolumns}[rulebetween%,colwidths={1=266pt}]{2}}{\end{parcolumns}}
+%\input{../psalms/definepsalmfive}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\pagebreakbeforehymn{T}
+\newcommand{\prehymn}{\large
+\grechangestaffsize{16}
+}
+
+%\newcommand{\hymn}{O lux beata caelitum}
+%mode 2
+%\newcommand{\vr}{Notum fecit Dóminus}
+%\newcommand{\vrtex}{Hymn-VeniCreatorSpiritusvr}
+%\newcommand{\vtranslation}{The apostles spoke in divers tongues.}
+%\newcommand{\rtranslation}{The wonderful works of God.}
+%\def\vrnospace{T}
+
+%\newcommand{\premag}{
+%\large
+%\grechangestaffsize{17}
+%\greseteolcustos{manual}
+%}
+%\newcommand{\premagtwo}{
+%\grechangestaffsize{16}
+%}
+%\newcommand{\maganttex}{MagnificatAntiphon2}
+%\newcommand{\magfontsize}{37}
+\def\pagebreakbeforemagnificat{T}
+%\newcommand{\magantinitial}{H}
+%\newcommand{\maganttranslation}{Today the days of Pentecost are complete, alleluia; today the Holy Ghost appeared in fire to the disciples, gave them gifts and graces, sent them into all the world to preach and to bear witness; whoever believes and is baptised shall be saved, alleluia.}
+%\def\magsolemn{T}
+%\def\magoneline{T}
+%\definemag{4}{E}
+%\newcommand{\magtone}{8}
+%\newcommand{\magend}{G}
+%\newcommand{\premagverses}{%
+%\greseteolcustos{manual}
+%\normalsize
+%\grechangestaffsize{14}
+%\pagebreak
+%}
+%\input{../psalms/definemag}
+
+%\definebenedicamusdomino{1}{2}
+
+
+\input{inc-SacredHeart}
+%\input{../FullVespers}

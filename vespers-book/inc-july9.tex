@@ -1,5 +1,5 @@
 {
-\section{July 9: Ss John Fisher \& Thomas More}
+\section{9 July: Ss John Fisher \& Thomas More}
 \subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
 \medskip
@@ -8,20 +8,40 @@
 \def\vrlinebreak{F}
 \def\preanttwo{\vspace{-0.5\baselineskip}}
 %\def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
-\def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
-\def\prerepeatantiphonthree{}
-\def\prepsalmtitlefour{\vspace{-0.3\baselineskip}}
-\def\prepsalmtitlefive{\vspace{-0.5\baselineskip}}
+\ifthenelse{\boolean{birmingham}}{
+	%
+}{
+	% I'm not sure why these are defined for both, since there are different 1st and 2nd vespers psalms
+	\def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
+	\def\prerepeatantiphonthree{}
+	\def\prepsalmtitlefour{\vspace{-0.3\baselineskip}}
+	\def\prepsalmtitlefive{\vspace{-0.5\baselineskip}}
+}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 \def\definevesperspropers{%\input{\gabcfolder/inc-StsThomasMoreAndJohnFisher-2Vespers}
   \input{\gabcfolder/inc-CommonOfMartyrs-2Vespers-psalms}
+  \ifthenelse{\boolean{birmingham}}{
+  	\def\prepsalmtitletwo{\bigskip\bigskip\bigskip}
+  	\def\postpsalmtitletwo{\bigskip}
+  	\def\postpsalmtitlethree{\needspace{10\baselineskip}}
+  	\def\postpsalmtitlefive{\bigskip}
+  }{
+  	%
+  }
   %\let\oldthing=\maganttranslation
   %\def\maganttranslation{\oldthing\needspace{10\baselineskip}}
 }
 \def\definevesperspropersalt{
 	%\input{\gabcfolder/inc-CommonOfMartyrs}
-	\input{\gabcfolder/inc-CommonOfMartyrs-1Vespers-psalms}
+	\input{\gabcfolder/inc-Sts-John-Fisher-and-Thomas-More-1Vespers-psalms}
 	\def\vrlinebreak{T}
+	\ifthenelse{\boolean{birmingham}}{
+		\def\prepsalmtitletwo{\bigskip\bigskip}
+		\def\postpsalmtitletwo{\bigskip}
+		\def\postpsalmtitlethree{\needspace{10\baselineskip}}
+	}{
+		%
+	}
 }
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}

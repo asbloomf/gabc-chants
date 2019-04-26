@@ -1,6 +1,9 @@
+\provideboolean{birmingham}
+\provideboolean{lettersize}
+
 \newcommand{\antonetex}{Ant1-DeExcelso}
 \newcommand{\antoneinitial}{D}
-\newcommand{\antonetranslation}{From above hath he sent fire into my bones, and it prevaileth against them.}
+\newcommand{\antonetranslation}{From above hath He sent fire into my bones, and it prevaileth against them.}
 \definepsalm{1}{109}{7}{c}
 
 \newcommand{\anttwotex}{Ant2-Concaluit}
@@ -61,10 +64,14 @@ Amen.%\grechangestaffsize{15}
 \def\hymnnote{Translated by Dr Roberto Lionello}
 
 \newcommand{\vrtex}{vrDeusVirtutum}
-\ifthenelse{\boolean{birmingham}}{
-	\newcommand{\vrpttex}{vrDeusVirtutumPT_full}	
+\ifthenelse{\boolean{lettersize}}{
+		\newcommand{\vrpttex}{vrDeusVirtutumPT_full_oneline}	
 }{
-	\newcommand{\vrpttex}{vrDeusVirtutumPT}
+	\ifthenelse{\boolean{birmingham}}{
+		\newcommand{\vrpttex}{vrDeusVirtutumPT_full}	
+	}{
+		\newcommand{\vrpttex}{vrDeusVirtutumPT}
+	}
 }
 \newcommand{\vtranslation}{God of hosts, look down from heaven, and visit this vineyard.}
 \newcommand{\rtranslation}{And perfect the same which thy right hand hath planted.}

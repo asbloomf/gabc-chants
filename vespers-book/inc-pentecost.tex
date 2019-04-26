@@ -21,8 +21,14 @@
 %
 %\def\prepsalmtitleone{\vspace{-0.5\baselineskip}}
 %\def\prepsalmtitlethree{\vspace{-0.5\baselineskip}}
-\def\preantthree{\bigskip}
-\def\prepsalmtitlefour{\needspace{4\baselineskip}}
+\ifthenelse{\boolean{birmingham}}{
+	\def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}
+}{
+	\def\prepsalmtitleone{\bigskip{}}
+	\def\postpsalmtitleone{\bigskip{}}
+	\def\preantthree{\bigskip}
+	\def\prepsalmtitlefour{\needspace{4\baselineskip}}
+}
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
 
@@ -50,16 +56,20 @@
 %\def\premag{\def\noeuouae{T}}
 %\def\prepsalmtwoverses{\vspace{-0.05\baselineskip}}
 %\def\prepsalmtitleone{\needspace{10\baselineskip}}
+\ifthenelse{\boolean{birmingham}}{
+	\def\postpsalmtitlefive{\needspace{12\baselineskip}}
+}{
+	\newcommand{\psalmcolsoverrideoverride}[1][0]{
+		\psalmcolsoverride[#1]
+		\ifnum#1=110
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.49\linewidth},distance=1.3em]{2}}
+		\fi
+	}
+}
 \def\prepsalmone{\needspace{10\baselineskip}}
 
 \def\prerepeatantiphontwo{}
 \def\preantfive{\bigskip}
-\newcommand{\psalmcolsoverrideoverride}[1][0]{
-	\psalmcolsoverride[#1]
-	\ifnum#1=110
-		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.49\linewidth},distance=1.3em]{2}}
-	\fi
-}
 %\def\prepsalmtitlethree{\vspace{-0.5\baselineskip}}
 %\def\prerepeatantiphonthree{\vspace{-0.25\baselineskip}}
 \def\premagnificat{\needspace{12\baselineskip}}
@@ -68,6 +78,24 @@
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 \printvespers[../TrinitySunday]{inc-TrinitySunday-Vespers}
 \bigskip
+\noindent
+\printnote{If the feast of St Philip Neri is celebrated tomorrow, then \emph{First Vespers} is commemorated as follows.
+\ifthenelse{\boolean{includebenedicamusdominoreferences}}{
+	Otherwise \benedicamusdomino{}%
+}{}
+}
+\medskip
+\hrule
+\medskip
+}
+
+% commemoration of First Vespers of Immaculate Conception
+{
+\def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
+\def\vrlinebreak{T}
+\printcommemoration[../StPhilipNeri]{Commemoration-StPhilipNeri-Vespers1}
+
+%\bigskip
 \benedicamusdomino{}
 }
 

@@ -1,5 +1,5 @@
 {
-\section{August 15: Assumption of the B.~V.~M.}
+\section{15 August: Assumption of the B.~V.~M.}
 \subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
 \medskip
@@ -9,6 +9,8 @@
 \def\deusinadjutoriumsolemn{T}
 \ifthenelse{\boolean{birmingham}}{
   \def\prepsalmtitletwo{\needspace{8\baselineskip}}
+  \def\postpsalmtitlefour{\needspace{12\baselineskip}}
+  \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.48\linewidth}]{2}}
 }{
   \def\prepsalmoneverses{}
   \def\prerepeatantiphonone{}
@@ -45,10 +47,11 @@
 
 \printvespers[../August15-AssumptionOfTheBlessedVirginMary]{inc-Assumption}
 
-\medskip
-\printnote{
-  If today is Saturday, \emph{Vespers of the Saturday before 3rd Sunday of August} is commemorated as follows:\par
-}
+\ifthenelse{\boolean{includesaturdaycommems}}{
+  \medskip
+  \printnote{
+    If today is Saturday, \emph{Vespers of the Saturday before 3rd Sunday of August} is commemorated as follows:\par
+  }
   \oldneedspace{4\baselineskip}
   {
   \def\noeuouae{T}
@@ -68,6 +71,9 @@
   \medskip
   \hrule
   \bigskip
+}{
+  % no saturday commems
+}
 
 \printnote{\sundaycommemnote{}
 \begin{multicols}{2}
@@ -78,6 +84,10 @@
 \emph{\nth{13} Sunday after Pentecost}, p.~\pageref{pentecost13-mag}.
 \end{multicols}
 }
-\bigskip
+\ifthenelse{\boolean{birmingham}}{
+  \vspace{-0.5\baselineskip}
+}{
+  \bigskip
+}
 \benedicamusdomino{}
 }

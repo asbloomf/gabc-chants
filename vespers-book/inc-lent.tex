@@ -85,7 +85,7 @@
 	\smallskip
 	\deusinadjutorium{}
 	\hfill
-	\printnote{\emph{Vespers of Sundays throughout the year}, p. \pageref{sundayvespers}.\par}
+	\printnote{\emph{Vespers of Sundays throughout the year}, p.~\pageref{sundayvespers}.\par}
 }
 
 \newcommand{\benedicamusdomino}[1][lent]{
@@ -178,6 +178,9 @@
 \printcommonvespers[1]
 \needspace{8\baselineskip}
 \def\postmagtitle{\label{lent4mag}}
+\ifthenelse{\boolean{birmingham}}{
+	\def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
+}{}
 \printvespersmag[../Lent]{inc-VespersMagnificatLent4}
 
 \printcommemnote{}

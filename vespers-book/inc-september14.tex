@@ -1,5 +1,5 @@
 {
-\section{September 14: Exaltation of the Holy Cross}
+\section{14 September: Exaltation of the Holy Cross}
 \subtitle{\nth{2} Class}
 \subtitle{I \& II Vespers}
 \medskip
@@ -9,11 +9,16 @@
 %\def\premagverses{\oldneedspace{4\baselineskip}}%
 }
 \def\vesperspropersnote{At II Vespers:}
-\def\vesperspropersaltnote{At I Vespers:}
-\def\prepsalmtitleone{\vspace{-0.3\baselineskip}}
+\def\vesperspropersaltnote{\oldneedspace{15\baselineskip}At I Vespers:}
+\ifthenelse{\boolean{birmingham}}{
+	\def\prepsalmtitleone{\vspace{-0.7\baselineskip}}
+	\def\prepsalmtwoverses{\bigskip\bigskip}
+}{
+	\def\prepsalmtitleone{\vspace{-0.3\baselineskip}}
+	\def\prerepeatantiphonthree{}
+	\def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
+}
 \def\postpsalmtitlethree{\oldneedspace{9\baselineskip}}
-\def\prerepeatantiphonthree{}
-\def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
 \def\prepsalmtitlefour{\needspace{8\baselineskip}}
 %\def\prepsalmfourverses{\oldneedspace{2\baselineskip}}
 \def\prepsalmtitlefive{\needspace{8\baselineskip}}

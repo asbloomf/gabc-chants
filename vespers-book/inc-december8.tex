@@ -1,6 +1,6 @@
 {
 \label{immaculateconception}
-\section{December 8: Immaculate Conception}
+\section{8 December: Immaculate Conception}
 \subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
 \smallskip
@@ -12,13 +12,18 @@
 \def\prepsalmoneverses{\vspace{-0.05\baselineskip}}
 \def\prerepeatantiphonone{}
 
-\def\prepsalmtitlethree{\vspace{-0.75\baselineskip}}
+\ifthenelse{\boolean{birmingham}}{
+  \def\prepsalmtitlethree{\vspace{-0.4\baselineskip}}
+  %\def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.4\linewidth}]{2}}
+}{
+  \def\prepsalmtitlethree{\vspace{-0.75\baselineskip}}
+  \def\preanttranslationfive{\vspace{-0.35\baselineskip}}
+  \def\prepsalmtitlefive{\vspace{-\baselineskip}}
+  \def\prepsalmfive{\vspace{-0.2\baselineskip}}
+  \def\prepsalmfiveverses{\vspace{-0.025\baselineskip}}
+  \def\prerepeatantiphonfive{}
+}
 
-\def\preanttranslationfive{\vspace{-0.35\baselineskip}}
-\def\prepsalmtitlefive{\vspace{-\baselineskip}}
-\def\prepsalmfive{\vspace{-0.2\baselineskip}}
-\def\prepsalmfiveverses{\vspace{-0.025\baselineskip}}
-\def\prerepeatantiphonfive{}
 \def\premagverses{\greseteolcustos{manual}\oldneedspace{8\baselineskip}}
 \def\definevesperspropersalt{\def\noeuouae{T}\input{\gabcfolder/inc-ImmaculateConception-1Vespers}}
 \def\definevesperspropers{\def\noeuouae{T}\input{\gabcfolder/inc-ImmaculateConception-2Vespers}}
@@ -45,120 +50,177 @@ Aug.~14 \& 15,\dotting \emph{\Vbar{}~Exaltáta est}, p.~\pageref{vr-assumption}%
 \printvespers[../December8-ImmaculateConception]{inc-ImmaculateConceptionVespers}
 }
 
-{
-\bigskip
+  \ifthenelse{\boolean{includeferiacommems}}{
+  {
+  \bigskip
 
-\bigskip
-\noindent
-\printnote{Then follows a Commemoration of the Advent Sunday or Feria according to the day of the week.  The antiphon is followed by \emph{\Vbar{} Roráte cæli}, page \pageref{vr-rorate-dec8}, and then the appropriate Collect, page \pageref{collect-dec8}.}
-\bigskip
+  \bigskip
+  \noindent
+  \printnote{Then follows a Commemoration of the Advent Sunday or Feria according to the day of the week.  The antiphon is followed by \emph{\Vbar{} Roráte cæli}, page \pageref{vr-rorate-dec8}, and then the appropriate Collect, page \pageref{collect-dec8}.}
+  \bigskip
+  }
+
+  {
+    \oldneedspace{5\baselineskip}
+    \subtitle{First Week of Advent.}
+    \subtitle{\small{Thursday.}}
+    {
+    \def\noeuouae{T}
+    \printgabc{At Magn.}{\oldstylenums{Ant.~4.}}{E}{../Advent1/MagAntThursday-Exspectabo}
+    }
+    \translation[]{I will look for the Lord my Saviour, and await Him, while He is near, alleluia.}
+    \medskip
+
+    \oldneedspace{5\baselineskip}
+    \subtitle{\small{Friday.}}
+    {
+    \def\noeuouae{T}
+    \printgabc{At Magn.}{\oldstylenums{Ant.~4.}}{E}{../Advent1/MagAntFriday-ExAegypto}
+    }
+    \translation[]{Out of Egypt I have called my Son; he shall come to save His people.}
+    \medskip
+
+    \oldneedspace{5\baselineskip}
+    \subtitle{Second Week of Advent.}
+    \subtitle{\small{Saturday.}}
+    {
+    \def\noeuouae{T}
+    \printgabc{At Magn.}{\oldstylenums{Ant.~7.}}{V}{../Advent1/MagAntSaturday-VeniDomine}
+    }
+    \translation[]{Come, Lord, to visit us in peace, that we may rejoice before Thee with a perfect heart.}
+    \medskip
+
+    \oldneedspace{5\baselineskip}
+    \subtitle{\small{Sunday.}}
+    {
+    \def\noeuouae{T}
+    \printgabc{At Magn.}{\oldstylenums{Ant.~8.~G}}{T}{../Advent2/MagnificatAntiphon-noEuouae}
+    }
+    \translation[]{Art Thou He that art to come, or look we for another? Relate to John what you have seen: The blind recover their sight, the dead rise again, the poor have the Gospel preached to them, alleluia.}
+    \medskip
+
+    \oldneedspace{5\baselineskip}
+    \subtitle{\small{Monday.}}
+    {
+    \def\noeuouae{T}
+    \printgabc{At Magn.}{\oldstylenums{Ant.~4.}}{E}{../Advent2/MagAntMonday-EcceRexVeniet}
+    }
+    \translation[]{Behold, the King shall come, the Lord of the land; and He shall take away the yoke of our captivity.}
+    \medskip
+
+    \oldneedspace{5\baselineskip}
+    \subtitle{\small{Tuesday.}}
+    {
+    \def\noeuouae{T}
+    \printgabc{At Magn.}{\oldstylenums{Ant.~5.}}{V}{../Advent2/MagAntTuesday-VoxClamantis}
+    }
+    \translation[]{A voice of one crying in the desert, Prepare ye the way of the Lord, make straight His paths}
+    \medskip
+
+    \oldneedspace{5\baselineskip}
+    \subtitle{\small{Wednesday.}}
+    {
+    \def\noeuouae{T}
+    \printgabc{At Magn.}{\oldstylenums{Ant.~4.}}{S}{../Advent2/MagAntWednesday-Sion}
+    }
+    \translation[]{Sion, thou shalt be restored, and shalt see the Just One who shall appear in thee.}
+    \medskip
+
+    \oldneedspace{5\baselineskip}
+    \subtitle{\small{Thursday.}}
+    {
+    \def\noeuouae{T}
+    \printgabc{At Magn.}{\oldstylenums{Ant.~4.}}{Q}{../Advent2/MagAntThursday-QuiPostMeVenit}
+    }
+    \translation[]{He that shall come after me is preferred before me; whose shoes I am not worthy to loose.}
+    \medskip
+    \hrule
+    \medskip
+    {
+        \label{vr-rorate-dec8}
+        \newcommand{\commvlatin}{Roráte cæli désuper, et nubes pluant \textbf{ju}stum.}
+        \newcommand{\commrlatin}{Aperiátur terra, et gérminet Salva\textbf{tó}rem.}
+        \newcommand{\commvtranslation}{Ye heavens, drop down dew from above, and let the clouds rain down the Just One.}
+        \newcommand{\commrtranslation}{Let the earth open and bud forth the Saviour.}
+    \printvrcommem{}
+    }
+
+    \oldneedspace{3\baselineskip}
+    \label{collect-dec8}
+    \bigskip
+    {\centering\large Collect.\par}
+    \def\printcollectheading{F}
+    {
+    {\centering{}First Week of Advent.\par}
+    \def\gabcfolder{../Advent1}
+    \input{\gabcfolder/inc-Advent1}
+    \printcollect{\collect}{\collecttranslation}
+    }
+    {
+    \bigskip
+    {\centering{}Second Week of Advent.\par}
+    \medskip
+    \def\gabcfolder{../Advent2}
+    \input{\gabcfolder/CommemorationAdvent2}
+    \ifthenelse{\boolean{birmingham}}{
+      \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.4275\linewidth}]{2}}
+    }{
+      %
+    }
+    \printcollect{\latincomcollect}{\englishcomcollect}
+    }
+
+  } 
+}{
+  % no feria commems, but still sunday commem
+  {
+  \bigskip
+
+  \bigskip
+  \noindent
+  \printnote{Then follows a Commemoration of the Advent Sunday or Feria with \emph{Magnificat} antiphon, \emph{\Vbar{} Roráte cæli}, and then the Collect.}
+  \bigskip
+  }
+
+  {
+    \oldneedspace{5\baselineskip}
+    \subtitle{Second Sunday of Advent.}
+    {
+    \def\noeuouae{T}
+    \printgabc{At Magn.}{\oldstylenums{Ant.~8.~G}}{T}{../Advent2/MagnificatAntiphon-noEuouae}
+    }
+    \translation[]{Art Thou He that art to come, or look we for another? Relate to John what you have seen: The blind recover their sight, the dead rise again, the poor have the Gospel preached to them, alleluia.}
+    \medskip
+    \hrule
+    \medskip
+    {
+        \label{vr-rorate-dec8}
+        \newcommand{\commvlatin}{Roráte cæli désuper, et nubes pluant \textbf{ju}stum.}
+        \newcommand{\commrlatin}{Aperiátur terra, et gérminet Salva\textbf{tó}rem.}
+        \newcommand{\commvtranslation}{Ye heavens, drop down dew from above, and let the clouds rain down the Just One.}
+        \newcommand{\commrtranslation}{Let the earth open and bud forth the Saviour.}
+    \printvrcommem{}
+    }
+
+    \oldneedspace{3\baselineskip}
+    \label{collect-dec8}
+    \bigskip
+    {\centering\large Collect.\par}
+    \def\printcollectheading{F}
+    {
+    \bigskip
+    \def\gabcfolder{../Advent2}
+    \input{\gabcfolder/CommemorationAdvent2}
+    \ifthenelse{\boolean{birmingham}}{
+      \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.4275\linewidth}]{2}}
+    }{
+      %
+    }
+    \printcollect{\latincomcollect}{\englishcomcollect}
+    }
+
+  }
 }
 
-{
-  \oldneedspace{5\baselineskip}
-  \subtitle{First Week of Advent.}
-  \subtitle{\small{Thursday.}}
-  {
-  \def\noeuouae{T}
-  \printgabc{At Magn.}{\oldstylenums{Ant.~4.}}{E}{../Advent1/MagAntThursday-Exspectabo}
-  }
-  \translation[]{I will look for the Lord my Saviour, and await Him, while He is near, alleluia.}
-  \medskip
-
-  \oldneedspace{5\baselineskip}
-  \subtitle{\small{Friday.}}
-  {
-  \def\noeuouae{T}
-  \printgabc{At Magn.}{\oldstylenums{Ant.~4.}}{E}{../Advent1/MagAntFriday-ExAegypto}
-  }
-  \translation[]{Out of Egypt I have called my Son; he shall come to save His people.}
-  \medskip
-
-  \oldneedspace{5\baselineskip}
-  \subtitle{Second Week of Advent.}
-  \subtitle{\small{Saturday.}}
-  {
-  \def\noeuouae{T}
-  \printgabc{At Magn.}{\oldstylenums{Ant.~7.}}{V}{../Advent1/MagAntSaturday-VeniDomine}
-  }
-  \translation[]{Come, Lord, to visit us in peace, that we may rejoice before Thee with a perfect heart.}
-  \medskip
-
-  \oldneedspace{5\baselineskip}
-  \subtitle{\small{Sunday.}}
-  {
-  \def\noeuouae{T}
-  \printgabc{At Magn.}{\oldstylenums{Ant.~8.~G}}{T}{../Advent2/MagnificatAntiphon-noEuouae}
-  }
-  \translation[]{Art Thou He that art to come, or look we for another? Relate to John what you have seen: The blind recover their sight, the dead rise again, the poor have the Gospel preached to them, alleluia.}
-  \medskip
-
-  \oldneedspace{5\baselineskip}
-  \subtitle{\small{Monday.}}
-  {
-  \def\noeuouae{T}
-  \printgabc{At Magn.}{\oldstylenums{Ant.~4.}}{E}{../Advent2/MagAntMonday-EcceRexVeniet}
-  }
-  \translation[]{Behold, the King shall come, the Lord of the land; and He shall take away the yoke of our captivity.}
-  \medskip
-
-  \oldneedspace{5\baselineskip}
-  \subtitle{\small{Tuesday.}}
-  {
-  \def\noeuouae{T}
-  \printgabc{At Magn.}{\oldstylenums{Ant.~5.}}{V}{../Advent2/MagAntTuesday-VoxClamantis}
-  }
-  \translation[]{A voice of one crying in the desert, Prepare ye the way of the Lord, make straight His paths}
-  \medskip
-
-  \oldneedspace{5\baselineskip}
-  \subtitle{\small{Wednesday.}}
-  {
-  \def\noeuouae{T}
-  \printgabc{At Magn.}{\oldstylenums{Ant.~4.}}{S}{../Advent2/MagAntWednesday-Sion}
-  }
-  \translation[]{Sion, thou shalt be restored, and shalt see the Just One who shall appear in thee.}
-  \medskip
-
-  \oldneedspace{5\baselineskip}
-  \subtitle{\small{Thursday.}}
-  {
-  \def\noeuouae{T}
-  \printgabc{At Magn.}{\oldstylenums{Ant.~4.}}{Q}{../Advent2/MagAntThursday-QuiPostMeVenit}
-  }
-  \translation[]{He that shall come after me is preferred before me; whose shoes I am not worthy to loose.}
-  \medskip
-  \hrule
-  \medskip
-  {
-      \label{vr-rorate-dec8}
-      \newcommand{\commvlatin}{Roráte cæli désuper, et nubes pluant \textbf{ju}stum.}
-      \newcommand{\commrlatin}{Aperiátur terra, et gérminet Salva\textbf{tó}rem.}
-      \newcommand{\commvtranslation}{Ye heavens, drop down dew from above, and let the clouds rain down the Just One.}
-      \newcommand{\commrtranslation}{Let the earth open and bud forth the Saviour.}
-  \printvrcommem{}
-  }
-
-  \oldneedspace{3\baselineskip}
-  \label{collect-dec8}
-  \bigskip
-  {\centering\large Collect.\par}
-  \def\printcollectheading{F}
-  {
-  {\centering{}First Week of Advent.\par}
-  \def\gabcfolder{../Advent1}
-  \input{\gabcfolder/inc-Advent1}
-  \printcollect{\collect}{\collecttranslation}
-  }
-  {
-  \bigskip
-  {\centering{}Second Week of Advent.\par}
-  \medskip
-  \def\gabcfolder{../Advent2}
-  \input{\gabcfolder/CommemorationAdvent2}
-  \printcollect{\latincomcollect}{\englishcomcollect}
-  }
-
-  \bigskip
-  \benedicamusdomino{}
-}
+\bigskip
+\benedicamusdomino{}

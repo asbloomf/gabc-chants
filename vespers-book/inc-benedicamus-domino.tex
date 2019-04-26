@@ -7,7 +7,19 @@
   \greseteolcustos{auto}
 }
 
-\pagebreak
+\ifthenelse{\boolean{birmingham}}{	
+}{
+	\pagebreak
+}
+\ifthenelse{\boolean{birmingham}}{
+	\bigskip
+	{\begin{centering}
+
+	\Large Benedicámus Dómino
+
+	\end{centering}}
+	\bigskip
+}{}
 \phantomsection
 \label{benedicamusdomino}
 \sectionmark{Benedicámus Dómino}
@@ -34,7 +46,15 @@
 
 \smallskip
 \def\breakbeforeresp{T}
-\printbenedicamusdomino{5.}{../BenedicamusDomino/BenedicamusDomino_1class2ndVespersAlt}}
+\printbenedicamusdomino{5.}{../BenedicamusDomino/BenedicamusDomino_1class2ndVespersAlt}
+\ifthenelse{\boolean{birmingham}}{
+	\medskip
+	\emph{\normalsize or from \emph{Mass II}:}
+
+	\smallskip
+	\printbenedicamusdomino{5.}{../BenedicamusDomino/ky--benedicamus_ii--solesmes}
+}{}
+}
 %\vfil
 % TODO: add references for polyphony
 
@@ -67,7 +87,11 @@
 
 	}
 }
-\pagebreak
+\ifthenelse{\boolean{birmingham}}{
+	
+}{
+	\pagebreak
+}
 
 \label{benedicamusdomino-2}
 {{\centering \bfseries 2.~On feasts of the II class.\\}
@@ -76,7 +100,7 @@
 {\def\breakbeforeresp{T}
 \printbenedicamusdomino{2.}{../BenedicamusDomino/BenedicamusDomino_2class1stvespers}
 }
-\bigskip
+\bigskip\oldneedspace{5\baselineskip}
 {\centering \normalsize At \nth{2} Vespers.\\}
 {%\def\breakbeforeresp{T}
 \printbenedicamusdomino{8.}{../BenedicamusDomino/BenedicamusDomino_2class2ndvespers}}
@@ -111,7 +135,15 @@
 {{\centering \bfseries 5.~On Sundays of Advent and Lent.\\}
 \smallskip
 %\def\breakbeforeresp{T}
-\printbenedicamusdomino{6.}{../BenedicamusDomino/BenedicamusDomino_SundaysOfAdventAndLent}}
+\printbenedicamusdomino{6.}{../BenedicamusDomino/BenedicamusDomino_SundaysOfAdventAndLent}
+\ifthenelse{\boolean{birmingham}}{
+	\medskip
+	\emph{\normalsize or from \emph{Mass XVII}:}
+
+	\smallskip
+	\printbenedicamusdomino{6.}{../BenedicamusDomino/ky--benedicamus_xviia--solesmes}
+}{}
+}
 \bigskip\bigskip
 
 \label{benedicamusdomino-easter}

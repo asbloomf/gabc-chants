@@ -2,6 +2,38 @@
 \section{Vespers for the Dead}
 \medskip
 
+\ifthenelse{\boolean{birmingham}}{
+	\def\prepsalmtitleone{\bigskip\bigskip}
+	\def\postpsalmtitleone{\bigskip}
+}{
+	\let\oldpsalmcolsoverride=\psalmcolsoverride
+	\renewcommand{\psalmcolsoverride}[1][0]{
+		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
+		\ifnum#1=114
+		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.455\linewidth}]{2}}
+		\fi
+		\ifnum#1=119
+		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
+		\fi
+		\ifnum#1=120
+		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
+		\fi
+		\ifnum#1=129
+		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.465\linewidth}]{2}}
+		\fi
+		\ifnum#1=137
+		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.4525\linewidth}]{2}}
+		\fi		
+	}
+	\def\prepsalmtwo{\vspace{-0.35\baselineskip}}
+	\def\prepsalmtitletwo{\vspace{-0.15\baselineskip}}
+	\def\prepsalmthree{\vspace{-0.35\baselineskip}}
+	\def\prepsalmtitlethree{\vspace{-0.05\baselineskip}}
+	\def\prepsalmtitlefour{\vspace{-0.05\baselineskip}}
+	\def\prepsalmfive{\vspace{-0.5\baselineskip}}
+	%\def\prepsalmfiveverses{\vspace{-0.5\baselineskip}}
+}
+
 %\printnote{If Vespers are said on the day of the burial, the Office begins directly by the first Antiphon, after the Responsory \emph{Subveníte}, or after the Vespers of the day.  On all other occasions, \emph{Pater} and \emph{Ave} are first said silently.}
 
 \def\deusinadjutoriumsolemn{F}
@@ -27,7 +59,7 @@
 
 	\bigskip
 
-	\printnote{The following Prayers are said kneeling~:}
+	\noindent\printnote{The following Prayers are said kneeling~:}
 
 	Pater noster. \emph{continued silently.}
 
@@ -69,7 +101,7 @@
 \printvespers[../VespersForTheDead]{inc-VespersForTheDead}
 \bigskip
 
-\printnote{The following \Vbar{} and \Rbar{} are always said in the plural~:}
+\noindent\printnote{The following \Vbar{} and \Rbar{} are always said in the plural~:}
 
 \Vbar{}~Réquiem ætérnam dona eis Dómine.
 
@@ -80,4 +112,7 @@
 \gresetinitiallines{0}
 \gregorioscore{\gabcfolder/vrRequiescantInPace}
 % Requiescant in pace
+\ifthenelse{\boolean{birmingham}}{}{
+	\let\psalmcolsoverride=\oldpsalmcolsoverride
+}
 }

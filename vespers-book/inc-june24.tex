@@ -1,5 +1,5 @@
 {
-\section{June 24: Nativity of St John the Baptist}
+\section{24 June: Nativity of St John the Baptist}
 \subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
 \medskip
@@ -8,26 +8,35 @@
 \def\definevesperspropers{\input{\gabcfolder/inc-BirthOfJohnTheBaptist-2Vespers}
   %  \def\preantone{\bigskip}
   %  \def\prepsalmtitleone{\bigskip}
-  \def\preantfour{\bigskip}
-  \def\prepsalmtitlefour{\needspace{14\baselineskip}}
   \ifthenelse{\boolean{birmingham}}{
-    \def\prepsalmtitleone{\bigskip}
+    \def\preanttranslationone{\vspace{-0.3\baselineskip}}
+    \def\prepsalmtitleone{\vspace{-0.2\baselineskip}}
+    %\def\prepsalmtitlethree{\vspace{-0.2\baselineskip}}
     \def\postpsalmtitlethree{\needspace{10\baselineskip}}
-    \def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
-    \def\prerepeatantiphonthree{}
-  }{}
+    %\def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
+    %\def\prerepeatantiphonthree{}
+    %\def\preanttranslationfour{\vspace{-0.4\baselineskip}}
+    %\def\preantfour{\vspace{-0.8\baselineskip}}
+    %\def\prepsalmtitlefour{\vspace{-0.6\baselineskip}}
+  }{
+    \def\preantfour{\bigskip}
+    \def\prepsalmtitlefour{\needspace{14\baselineskip}}
+  }
 }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-BirthOfJohnTheBaptist-1Vespers}
   \def\preantthree{\needspace{8\baselineskip}}
-  \ifthenelse{\boolean{birmingham}}
-  {}
+  \ifthenelse{\boolean{birmingham}}{
+    \def\prepsalmtwoverses{\oldneedspace{6\baselineskip}}
+    \def\prepsalmtitlethree{\vspace{-0.5\baselineskip}}
+    \def\preantfive{\needspace{12\baselineskip}}  
+  }
   {
     \def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
     \def\preantfour{\bigskip}
   }
 }
 \def\vesperspropersnote{At II Vespers:}
-\def\vesperspropersaltnote{At I Vespers:}
+\def\vesperspropersaltnote{\needspace{15\baselineskip}At I Vespers:}
 \def\prevesperspsalms{\noindent\printnote{Chapter and following, page \pageref{june24-chapter}.}
 \medskip
 \hrule
@@ -51,6 +60,7 @@
   \medskip
 
   % commemoration of Second Vespers of Dedication of Church
+  \oldneedspace{15\baselineskip}
   {
   %\def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
   \printcommemoration[../CommonOfDedicationOfChurch]{commemorationDedicationOfChurch-Vespers2}

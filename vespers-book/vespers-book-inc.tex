@@ -18,7 +18,7 @@
 \usepackage{amsfonts}
 \usepackage{refcount}
 \usepackage{metalogo}
-
+%\nofiles
 %\includeonly{inc-grassi}
 \LetLtxMacro{\oldnth}{\nth}
 \renewcommand{\nth}[1]{\addfontfeature{Numbers=Lining}\oldnth{#1}}
@@ -132,7 +132,7 @@
 
 \newcommand{\deusinadjutorium}[1][F]{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, p.~\pageref{deusinadjutorium}%
 %if birmingham, both are on the same page so, it doesn't matter if it's solemn
-\ifthenelse{\boolean{birmingham}}{}{\if#1T or \pageref{deusinadjutoriumsolemn}\fi}.}}
+\ifthenelse{\boolean{birmingham}\OR\pageref{deusinadjutorium}=\pageref{deusinadjutoriumsolemn}}{}{\if#1T or \pageref{deusinadjutoriumsolemn}\fi}.}}
 %\newcommand{\deusinadjutoriumsolemn}{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, p.~\pageref{deusinadjutoriumsolemn}.}}
 \newcommand{\printcollect}[2]{
 	\ifx\undefined\begincollectcols\def\begincollectcols{\begin{parcolumns}[rulebetween]{2}}\fi
@@ -180,39 +180,96 @@
 	\newcommand{\psalmcolsoverride}[1][0]{
 	}	
 }{
-	\newcommand{\psalmcolsoverride}[1][0]{
-		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
-		\ifnum#1=110
-		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.465\linewidth}]{2}}
-		\fi
-		\ifnum#1=111
-		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
-		\fi
-		%\ifnum#1=112
-		%\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.445\linewidth}]{2}}
-		%\fi
-		\ifnum#1=116
-		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.5655\linewidth}]{2}}
-		\fi
-		\ifnum#1=121
-		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}}
-		\fi
-		\ifnum#1=125
-		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.49\linewidth}]{2}}
-		\fi
-		\ifnum#1=129
-		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
-		\fi
-		\ifnum#1=131
-		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.4875\linewidth},distance=1em]{2}}
-		\fi
-		\ifnum#1=137
-		\def\beginpsalmcols{\begin{parcolumns}[rulebetween]{2}}
-		\fi
-		\ifnum#1=147
-		%\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.465\linewidth}]{2}}
-		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
-		\fi
+	\ifthenelse{\boolean{birmingham}}{
+		\newcommand{\psalmcolsoverride}[1][0]{
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
+			\ifnum#1=110
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.454\linewidth}]{2}}
+			\fi
+			\ifnum#1=111
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.465\linewidth}]{2}}
+			\fi
+			\ifnum#1=112 % was blank so it was using 0.44
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.445\linewidth}]{2}}
+			\fi
+			\ifnum#1=113 % was blank so it was using 0.44
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.465\linewidth},distance=1.5em]{2}}
+			\fi
+			\ifnum#1=114 % was blank so it was using 0.44
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
+			\fi
+			\ifnum#1=116
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.564\linewidth},distance=1.5em]{2}}
+			\fi
+			\ifnum#1=119
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}}
+			\fi
+			\ifnum#1=120
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}}
+			\fi
+			\ifnum#1=121
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
+			\fi
+			\ifnum#1=125
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.51\linewidth},distance=1.5em]{2}}
+			\fi
+			\ifnum#1=126
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.465\linewidth},distance=1.5em]{2}}
+			\fi
+			\ifnum#1=127
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
+			\fi
+			\ifnum#1=129
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}}
+			\fi
+			\ifnum#1=131
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.487\linewidth},distance=1em]{2}}
+			\fi
+			\ifnum#1=137
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth},distance=1.5em]{2}}
+			\fi
+			\ifnum#1=138
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.465\linewidth},distance=1.5em]{2}}
+			\fi
+			\ifnum#1=147
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.48\linewidth},distance=1.5em]{2}}
+			\fi
+		}
+	}{
+		\newcommand{\psalmcolsoverride}[1][0]{
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
+			\ifnum#1=110
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.465\linewidth}]{2}}
+			\fi
+			\ifnum#1=111
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
+			\fi
+			%\ifnum#1=112
+			%\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.445\linewidth}]{2}}
+			%\fi
+			\ifnum#1=116
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.5655\linewidth}]{2}}
+			\fi
+			\ifnum#1=121
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}}
+			\fi
+			\ifnum#1=125
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.49\linewidth}]{2}}
+			\fi
+			\ifnum#1=129
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
+			\fi
+			\ifnum#1=131
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.4875\linewidth},distance=1em]{2}}
+			\fi
+			\ifnum#1=137
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween]{2}}
+			\fi
+			\ifnum#1=147
+			%\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.465\linewidth}]{2}}
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
+			\fi
+		}
 	}
 }
 \newcommand{\printvrcommem}{
@@ -244,7 +301,11 @@
 	\oldneedspace{3\baselineskip}
 	\noindent\printnote{If the Sunday is being commemorated:\\}\vspace{-0.5\baselineskip}
 	{
-		\def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.51\linewidth}]{2}}
+		\ifthenelse{\boolean{birmingham}}{
+			\def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.53\linewidth}]{2}}
+		}{
+			\def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.51\linewidth}]{2}}
+		}
 		\def\commvlatin{Dirigátur Dómine orátio \textbf{mé}a.}
 		\def\commrlatin{Sicut incénsum in conspéctu \textbf{tú}o.}
 		\def\commvtranslation{\noindent{}Let my prayer be directed, O Lord.}
@@ -282,8 +343,18 @@
 	\subtitle{\comheadingtext}
 	\sectionmark{\comheadingtext}
 	{
-	\def\noeuouae{T}
-	\printgabc{At Magn.}{\oldstylenums{\commagantlinetwo}}{\commagantinitial}{\commaganttex}
+	\def\noeuouae{F}
+	%\printgabc{At Magn.}{\oldstylenums{\commagantlinetwo}}{\commagantinitial}{\commaganttex}
+		{%
+			\gresetinitiallines{0}
+			\ifx\gabcfolder\undefined
+		        \gregorioscore{\commaganttex}
+		    \else
+		        \gregorioscore{\gabcfolder/\commaganttex}
+		    \fi
+
+			\greseteolcustos{auto}%
+		}
 	}
 	\translation[]{\englishcommagantiphon}
 
@@ -293,6 +364,7 @@
 			\greseteolcustos{auto}
 	\else
 	{
+		\oldneedspace{3\baselineskip}
 		\printvrcommem{}
 	}
 	\fi
@@ -513,7 +585,7 @@
 			\fi
 		\else
 			%\vspace{-\baselineskip}
-			\oldneedspace{3\baselineskip}
+			\oldneedspace{24pt}
 			\ifx\prechapter\undefined\else\prechapter\fi
 			\printchapter{\chaptertext}{\chaptertranslation}
 		\fi
@@ -588,7 +660,7 @@
     	\ifx\postmagtitle\undefined\else\postmagtitle\fi
 
     	\ifx\vesperspropersaltnote\undefined\else
-    		\oldneedspace{6\baselineskip}
+    		\oldneedspace{2\baselineskip}
 				\printnote{\vesperspropersaltnote\par}
 			\fi
 			\let\anttranslation=\maganttranslation
@@ -674,6 +746,7 @@
 }
 
 \sloppy
+%\nofiles
 \begin{document}
 \normalsize
 \grechangestaffsize{15}
@@ -703,11 +776,7 @@
 		\end{centering}
 		\vfill
 
-		Ad usum Oratorii Sancti Philippi Nerii
-
-		\medskip
-
-		apud Birminghamiensem
+		ad usum Oratorii Sancti Philippi Nerii
 
 		\vfill}
 	}{% general
@@ -754,7 +823,9 @@
 	\bigskip{}\noindent{}%
 	\ifthenelse{\boolean{birmingham}}%
 	{% true
-		Birmingham edition, 2017.
+		Birmingham edition, February 2019.
+
+		\bigskip{}
 	}{% false
 		First edition, 3 December 2015.
 
@@ -798,11 +869,14 @@
 	\clearpage
 }
 
-\include{inc-vespers-sunday}
+\input{inc-vespers-sunday}
 
 \ifthenelse{\boolean{birmingham}}{% true
-	\include{inc-benedicamus-domino}
+	\grechangeglyph{Porrectus*}{*}{.alt} % this is really just for september 14 as far as I know
 
+	\input{inc-benedicamus-domino}
+
+	\cleartoleftpage
 	\include{inc-marian-anthems}
 
 	\clearpage
@@ -841,6 +915,7 @@
 	}{}
 	\input{inc-40hours}
 	\input{inc-benediction}
+	\cleartoleftpage{}
 	\input{inc-lucis_creator_poly}
 	\input{inc-marian-anthems-appendix}
 	\include{inc-mag1D}

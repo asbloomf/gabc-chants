@@ -1,5 +1,5 @@
 {
-\section{May 1: St Joseph the Worker}
+\section{1 May: St Joseph the Worker}
 \subtitle{\nth{1} Class}
 \subtitle{I \& II Vespers}
 \medskip
@@ -16,11 +16,19 @@
 }
 \def\vesperspropersnote{At II Vespers:}
 \def\vesperspropersaltnote{At I Vespers:}
+\ifthenelse{\boolean{birmingham}}{
+	%\def\postpsalmtitletwo{\needspace{12\baselineskip}}
+	\def\preanttwo{\vspace{-0.3\baselineskip}}
+	\def\preantfive{\vspace{-0.4\baselineskip}}
+	\def\postpsalmtitlethree{\needspace{15\baselineskip}}
+	\def\prepsalmtitlefive{\vspace{-0.1\baselineskip}}
+}{
+	\def\premagtitle{\bigskip}
+}
 \def\prepsalmtitleone{\vspace{-0.75\baselineskip}}
 %\def\prepsalmthreeverses{\vspace{-0.1\baselineskip}}
 %\def\prerepeatontiphonthree{}
 \def\prepsalmtitlefour{\needspace{8\baselineskip}}
-\def\premagtitle{\bigskip}
 
 \printvespers[../May1-StJosephWorker]{inc-StJosephWorker}
 %if feast of St Joseph the worker falls from 2nd through 5th Sunday after Easter, it outranks the Sunday and the Sunday is commemorated
@@ -34,6 +42,10 @@
 \emph{\nth{5} Sunday after Easter}, p.~\pageref{easter5-mag}.
 \end{multicols}
 }
-\bigskip
+\ifthenelse{\boolean{birmingham}}{
+	%
+}{
+	\bigskip
+}
 \benedicamusdomino{}
 }

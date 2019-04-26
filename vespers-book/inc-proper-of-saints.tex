@@ -20,9 +20,12 @@
   If today is Sunday, \emph{Vespers of the Sunday} is commemorated with \emph{Magnificat antiphon}, \emph{\Vbar{}}, and \emph{Collect}.
 }
 
-\ifthenelse{\boolean{testrun}}{}{
 %December 8: Immaculate Conception
 %Second Vespers of Immaculate Conception
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\boolean{testrun}}{
+	\cleartoleftpage
+}{
 \input{inc-december8}
 
 \ifthenelse{\boolean{includejan29}}{
@@ -31,10 +34,14 @@
 }{}
 
 %Purification & Presentation (2nd class no commem of Sunday because it is a feast of the Lord)
-\input{inc-february2}
-
+\input{inc-february2} % starts on odd page in birmingham
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\boolean{testrun}}{
+	%
+}{
 %March 25: Annunciation 
-\input{inc-march25}
+\input{inc-march25} % starts on left page in birmingham
 
 \ifthenelse{\boolean{includeapril23}}{
 	%April 23: St George
@@ -48,10 +55,13 @@
 
 %May 26: St Philip Neri (1)
 \input{inc-may26}
+}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\boolean{testrun}}{}{
 \ifthenelse{\boolean{birmingham}}{
 	%June 23: Dedication of Oratory Church
-	\input{inc-june23}
+	\input{inc-june23} % starts on left page
 }{}
 
 %June 24: Nativity of St John the Baptist (1st class)
@@ -64,17 +74,19 @@
 %\cleartoleftpage
 %July 1: Most Precious Blood (1st class)
 \input{inc-july1}
-}{}
 
 \ifthenelse{\boolean{includejuly9}}{
 	%July 9: Ss Thomas More & John Fisher
 	\input{inc-july9}
-}{}
+}{
+	%
+}
+}
 
-
-\ifthenelse{\boolean{testrun}}{}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\boolean{testrun}}{\cleardoublepage}{}
 %Aug 6: Transfiguration (2nd class)
-\input{inc-august6}
+\input{inc-august6}	% starts on right page in birmingham
 
 %Aug 15: Assumption (1st class)
 \input{inc-august15}
@@ -87,8 +99,10 @@
 \input{inc-september29}
 
 %\cleardoublepage
-\cleartoleftpage
-
+\ifthenelse{\boolean{birmingham}}{
+	%
+}{
+	\cleartoleftpage
 }
 
 \ifthenelse{\boolean{includeoct7}}{
@@ -96,7 +110,6 @@
 	\input{inc-oct7}
 }{}
 
-\ifthenelse{\boolean{testrun}}{}{
 \ifthenelse{\boolean{includeoct9}}{
 	%October 9: Blessed John Henry Newman
 	\input{inc-oct9}
@@ -115,5 +128,7 @@
 
 %Nov 9: Dedication of Archbasilica of Holy Saviour (2nd class)
 \input{inc-november9}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\boolean{testrun}}{}{
 }
 }

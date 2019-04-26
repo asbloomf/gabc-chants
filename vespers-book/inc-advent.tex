@@ -18,12 +18,15 @@
     \hrule width\linewidth
     \vss
   }\vskip2\baselineskip
+\ifthenelse{\boolean{birmingham}}{
+	\oldneedspace{10\baselineskip}
+}{}
 \subtitle{December #1.}
 \printgabc{\small At Magn.}{\small \oldstylenums{Ant.~2.~D}}{O}{December#1-MagAntiphon}
 \translation[]{#2}
 \medskip
 \emph{\emph{Magnificat}.~page \pageref{oantiphon-magnificat}.}
-\bigskip
+\medskip
 }
 }
 
@@ -78,10 +81,10 @@
 
 	{
 		\def\vrlinebreak{T}
-		\label{vr-rorate}
 		\printvr[\greseteolcustos{manual}]{vr}
 		{Ye heavens, drop down dew from above, and let the clouds rain down the Just One.}
 		{Let the earth open and bud forth the Saviour.}
+		\label{vr-rorate}
 
 		\medskip{}
 		\emph{On the \nth{2} Sunday of Advent, \emph{Magnificat}, p.~\pageref{advent2-mag}}.
@@ -102,8 +105,14 @@
 %\def\prepsalmtitlefive{\vspace{-0.8\baselineskip}}
 %\def\prepsalmfive{\oldneedspace{6\baselineskip}}
 %\def\prepsalmfiveverses{}
-\def\prerepeatantiphonfive{}
-\def\prechapter{\vspace{-1.5\baselineskip}}
+\ifthenelse{\boolean{birmingham}}{
+	\def\prepsalmtitlethree{\bigskip}
+	\def\postpsalmtitlethree{\bigskip}
+	\def\postpsalmtitlefive{\oldneedspace{10\baselineskip}}
+}{
+	\def\prerepeatantiphonfive{}
+	\def\prechapter{\vspace{-1.5\baselineskip}}
+}
 
 \printvespers[../Advent1]{inc-Advent1}
 \bigskip
@@ -114,7 +123,11 @@
 
 % Advent 2
 {
-\needspace{12\baselineskip}
+\ifthenelse{\boolean{birmingham}}{
+	\def\postdeusinadjutorium{\needspace{12\baselineskip}}
+}{
+	\needspace{12\baselineskip}
+}
 \section{Second Sunday of Advent}
 \subtitle{\nth{1} Class}
 \printnote{If today is December 8, \emph{Second Vespers of the Immaculate Conception} is sung with a Commemoration of this Sunday, page \pageref{immaculateconception}.}
@@ -127,9 +140,13 @@
 \def\prepsalmthree{\needspace{5\baselineskip}}
 %\def\prerepeatantiphonthree{\bigskip}
 %\def\prepsalmfive{\greseteolcustos{manual}}
-\def\preanttranslationfour{\vspace{-0.25\baselineskip}}
-\def\prepsalmtitlefour{\vspace{-0.25\baselineskip}}
-\def\prepsalmtitlefive{\vspace{-0.25\baselineskip}}
+\ifthenelse{\boolean{birmingham}}{
+	\def\preantfour{\vspace{-0.5\baselineskip}}
+}{
+	\def\preanttranslationfour{\vspace{-0.25\baselineskip}}
+	\def\prepsalmtitlefour{\vspace{-0.25\baselineskip}}
+	%\def\prepsalmtitlefive{\vspace{-0.25\baselineskip}}
+}
 \def\premagtitle{\needspace{18\baselineskip}}
 \def\postmagtitle{\label{advent2-mag}}
 \def\premag{\def\noeuouae{T}}
@@ -175,6 +192,10 @@
 \def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
 \def\preantfour{\needspace{15\baselineskip}}
 \def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}
+\ifthenelse{\boolean{birmingham}}{
+	\def\postpsalmtitlethree{\needspace{12\baselineskip}}
+	\def\prepsalmtitlefive{\vspace{-0.5\baselineskip}}
+}{}
 %\def\prepsalmtitlefive{\vspace{-\baselineskip}}
 \def\premag{\def\noeuouae{T}
 \printnote{\noindent{}On December 17, the Antiphon \emph{O Sapiéntia} on p.~\pageref{osapientia} is sung instead of \emph{Beáta es}.}
@@ -222,12 +243,20 @@
 \def\prepsalmtitleone{\bigskip}
 \def\preantfour{\grechangenextscorelinedim{1}{spacelinestext}{0.60717 cm}{scalable}\oldneedspace{8\baselineskip}}
 \def\prepsalmtitlefour{\bigskip}
-\def\preantfive{\bigskip}
+\ifthenelse{\boolean{birmingham}}{
+	\def\prepsalmtitlethree{\oldneedspace{12\baselineskip}}
+	\def\postpsalmtitlefive{\oldneedspace{15\baselineskip}}
+}{
+	\def\preantfive{\bigskip}
+}
 %\def\prepsalmfive{\greseteolcustos{manual}}
 \def\magreplacement{
 	\printnote{The Magnificat antiphon is found on the following pages and is proper to the day of the month.}
-	\vfil
-	\pagebreak
+	\ifthenelse{\boolean{birmingham}}{}
+	{
+		\vfil
+		\pagebreak
+	}
 	%\bigskip
 	{
 	\label{advent4-mag}
@@ -244,11 +273,14 @@
 	\label{advent4-mag-lastpage}
 
 	\bigskip
-	\pagebreak
-	\vfil
+	\ifthenelse{\boolean{birmingham}}{}
+	{
+		\pagebreak
+		\vfil
+	}
 	{\greseteolcustos{manual}
-	\label{oantiphon-magnificat}
 	\begin{magnificat}{\magtex}
+	\label{oantiphon-magnificat}
 	\magverses
 	\end{magnificat}
 	\noindent\emph{Repeat antiphon.}

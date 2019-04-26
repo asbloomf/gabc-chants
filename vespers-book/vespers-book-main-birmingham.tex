@@ -4,47 +4,30 @@
 \documentclass[letterpaper,12pt]{book} % use larger type; default would be 10pt
 
 \usepackage{ifthen}
-\newboolean{birmingham}
+\input{define-booleans}
 \setboolean{birmingham}{true}
-\newboolean{lettersize}
 \setboolean{lettersize}{false}
-\newboolean{includepolyphony}
 \setboolean{includepolyphony}{false}
-\newboolean{includesalvewithdrone}
 \setboolean{includesalvewithdrone}{false}
-\newboolean{includeappendix}
 \setboolean{includeappendix}{false}
-\newboolean{includechristmas}
-\setboolean{includechristmas}{true}
-\newboolean{includedec29}
-\newboolean{includejan29}
-\newboolean{includeapril23}
-\newboolean{includemay1}
-\newboolean{includeoct11}
-\setboolean{includedec29}{true} % st thomas of canterbury
+\setboolean{includechristmas}{false}
+\setboolean{includedec29}{false} % st thomas of canterbury
 \setboolean{includejan29}{false} % st francis de sales
 \setboolean{includeapril23}{true} % st george
 \setboolean{includemay1}{true} % st joseph the worker
 \setboolean{includeoct11}{false} % maternity of bvm
-\newboolean{includeoct9} % blessed john henry newman
 \setboolean{includeoct9}{true}
-\newboolean{includecorpuschristi}
 \setboolean{includecorpuschristi}{true}
-\newboolean{includesacredheart}
 \setboolean{includesacredheart}{true}
-\newboolean{includejuly9}
 \setboolean{includejuly9}{true} % ss thomas more & john fisher
-\newboolean{includeoct7}
 \setboolean{includeoct7}{true} % our lady of the rosary
-\newboolean{includevespersofdead}
 \setboolean{includevespersofdead}{true}
-\newboolean{includebenedicamusdominoreferences}
 \setboolean{includebenedicamusdominoreferences}{false}
-\newboolean{includechristthekingfirstvespers}
 \setboolean{includechristthekingfirstvespers}{true}
-\newboolean{includecommonofdedicationofchurch}
 \setboolean{includecommonofdedicationofchurch}{true}
-\newboolean{testrun}
+\setboolean{includesaturdaycommems}{true}
+\setboolean{includeferiacommems}{true}
+\setboolean{ignoreasterisk}{true}
 \setboolean{testrun}{false}
 
 \def\isbn{?-?-?-?-?}

@@ -73,7 +73,11 @@
 	    
     {
     	\normalsize%\vspace{0pt minus 20pt}
-    	\oldneedspace{5\baselineskip}
+		\ifthenelse{\boolean{birmingham}}{
+			%\oldneedspace{20\baselineskip}
+		}{
+    		\oldneedspace{5\baselineskip}
+    	}
       \selectlanguage{american}\vspace{-\baselineskip}
       \begin{multicols}{2}
       \begin{psalmverses}
@@ -108,10 +112,34 @@
 		}{}
 	}
 	\newcommand{\collectreplacement}{\bigskip}
-	\def\prepsalmtitlethree{\vspace{-0.25\baselineskip}}
+	\ifthenelse{\boolean{birmingham}}{
+		\newcommand{\psalmcolsoverrideoverride}[1][0]{
+			\psalmcolsoverride[#1]
+			\ifnum#1=109
+			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43\linewidth}]{2}}
+			\fi
+		}
+		\def\prepsalmtitleone{
+			\vspace{-\baselineskip}
+		}
+		\def\prepsalmtitletwo{
+			\vspace{-\baselineskip}
+		}
+	}{%
+		\def\postpsalmtitletwo{
+			\bigskip
+		}
+	}
+	\def\prepsalmtitlethree{
+		\ifthenelse{\boolean{birmingham}}{
+			\oldneedspace{5\baselineskip}
+		}{
+			\vspace{-0.25\baselineskip}
+		}
+	}
 	\def\preantfour{\needspace{10\baselineskip}}
 	%\def\prepsalmfive{\greseteolcustos{manual}}
-	%\def\prechapter{\vspace{-\baselineskip}}
+	\def\prechapter{\oldneedspace{10\baselineskip}}
 	\def\beginchaptercols{
 		\noindent{}\printnote{In Septuagesima \& Lent, from the Sunday, \emph{p.~\pageref{septuagesima} to \pageref{lent6}.}}
 
@@ -119,7 +147,9 @@
 		\noindent{}\printnote{Otherwise:}
 		\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}
 	}
+
 	\printvespers[../SundayAtVespers]{inc-SundayAtVespers}
+	\let\psalmcolsoverrideoverride=\undefined
 	\bigskip
 	\bigskip
 	\hrule

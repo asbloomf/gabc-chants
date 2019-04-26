@@ -10,6 +10,8 @@ date: 2011;
 transcriber: Albert Bloomfield;
 transcription-date: 2011;
 style: modern;
+def-m1:\ifx\vrlinebreak\undefined\else;
+def-m2:\fi;
 
 % Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
 
@@ -23,5 +25,5 @@ style: modern;
 % God of hosts, look down from heaven, and visit this vineyard.
 % And perfect the same which thy right hand hath planted.
 
-(c3)<sp>V/</sp>~Dé(h)us(h) vir(h)tú(h)tum,(h) ré(h)spi(h)ce(h) de(h) cæ(h)lo,(h) et(h) ví(h)si(h)ta(h) ví(h)ne(h)am(h) í(h)stam.(f.) (::Z)
+(c3)<sp>V/</sp>~Dé(h)us(h) vir(h)tú(h)tum,(h) ré(h)spi(h)ce(h) de(h) cæ(h)lo,(h) et(h) ví(h)si(h)ta(h) ví(h)ne(h)am(h) í(h)stam.(f.) (::[em1]Z[em2])
 <sp>R/</sp>~Et(h) pér(h)fi(h)ce(h) é(h)am,(h) quam(h) plan(h)tá(h)vit(h) déx(h)te(h)ra(h) tú(h)a.(f.) (::)

@@ -31,7 +31,7 @@
     \section{Sunday at Vespers in Paschaltide}
     \def\printfullhymn{
         {
-            \label{hymn-adregiasagnidapes}
+            %\label{hymn-adregiasagnidapes} label is now inside gabc file
             \input{\gabcfolder/inc-hymn-AdRegiasAgniDapes}
             \printhymn{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}
             \bigskip
@@ -68,11 +68,18 @@
     }
     \newcommand{\collectreplacement}{\bigskip}
     %\def\prepsalmtitletwo{}
-    \def\postpsalmtitletwo{\needspace{8\baselineskip}}
-    \def\prepsalmtwoverses{}
+    \ifthenelse{\boolean{birmingham}}{
+        \def\prepsalmtitleone{\bigskip}
+        \def\prepsalmtitlefive{\vspace{-0.1\baselineskip}}
+        \def\postpsalmtitlefive{\vspace{-0.1\baselineskip}}
+        \def\prepsalmfiveverses{}
+    }{
+        \def\postpsalmtitletwo{\needspace{8\baselineskip}}
+        \def\prepsalmtwoverses{}
+        \def\prepsalmtitlefive{\oldneedspace{12\baselineskip}}
+    }
     \def\prepsalmtitlethree{\vspace{-0.075\baselineskip}}
     \def\prepsalmtitlefour{\vspace{-0.075\baselineskip}}
-    \def\prepsalmtitlefive{\oldneedspace{12\baselineskip}}
     \def\prepsalmfive{\greseteolcustos{manual}}
     \printvespers[../TimeAfterEaster]{inc-SundayAtVespers-PaschalTime}
     \bigskip
@@ -152,22 +159,29 @@
 \subtitle{I \& II Vespers}
 
 \def\deusinadjutoriumsolemn{T}
-\def\postpsalmtitlethree{\needspace{18\baselineskip}}
+\ifthenelse{\boolean{birmingham}}{
+    \def\postpsalmtitletwo{\needspace{12\baselineskip}}
+    \def\premagverses{\greseteolcustos{manual}}
+}{
+    \def\postpsalmtitlethree{\needspace{18\baselineskip}}
+    \def\preantfive{\needspace{12\baselineskip}}
+    \def\premagverses{\greseteolcustos{manual}\oldneedspace{18\baselineskip}}
+}
 \def\prepsalmthreeverses{}
-\def\preantfive{\needspace{12\baselineskip}}
 \def\prevr{\needspace{12\baselineskip}}
 \def\premagnificat{\oldneedspace{7\baselineskip}}
-\def\premagverses{\greseteolcustos{manual}\oldneedspace{18\baselineskip}}
 \def\begincollectcols{%\vspace{-0.5\baselineskip}
 \begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
 \def\definevesperspropers{\input{\gabcfolder/inc-Ascension-2Vespers}
-    \def\prepsalmfive{\greseteolcustos{manual}}
+    %\def\prepsalmfive{\greseteolcustos{manual}}
 }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Ascension-1Vespers}
     %\def\premagverses{\pagebreak}
 }
-\def\vesperspropersnote{At II Vespers:}
-\def\vesperspropersaltnote{At I Vespers:}
+\def\vesperspropersnote{At II Vespers:
+\medskip}
+\def\vesperspropersaltnote{At I Vespers:
+\medskip}
 \let\printhymnnote=\undefined
 \def\hymnlabel{hymn-salutishumanaesator}
 \def\prevr{\bigskip{}

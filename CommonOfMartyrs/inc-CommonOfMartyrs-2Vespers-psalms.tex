@@ -25,9 +25,11 @@
 \definepsalm{5}{115}{8}{G}
 \let\psalmclef=\undefined
 
-\newcommand{\vrtex}{vrInPatientiaVestra}
-\newcommand{\vtranslation}{In your patience.}
-\newcommand{\rtranslation}{You shall possess your souls.}
+\ifx\vrtex\undefined
+	\newcommand{\vrtex}{vrInPatientiaVestra}
+	\newcommand{\vtranslation}{In your patience.}
+	\newcommand{\rtranslation}{You shall possess your souls.}
+\fi
 
 \newcommand{\maganttex}{an--isti_sunt_duae_olivae--solesmes}
 \newcommand{\magantinitial}{I}
