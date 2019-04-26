@@ -431,78 +431,78 @@ bassus={
 
 textocantus=\lyricmode{
 \set stanza = "2."
-Qui ma -- _ _ ne iun -- ctum ve -- _ _ _ _ spe -- ri
-qui ma -- _ _ ne iun -- ctum ve -- _ _ _ _ _ _ _ _ spe -- ri
-Di -- _ _ em _ vo -- ca -- ri præ -- _ _ _ _ _ _ _ _ _ ci -- pis: _ _ 
-Te -- trum cha -- os __ _ _ il -- la -- _ _ bi -- tur,
-te -- _ trum cha -- os il -- la -- _ _ _ _ bi -- tur,
-Au -- _ di pre -- _ ces cum fle -- _ _ ti -- bus,
-au -- _ di pre -- ces cum fle -- _ _ _ _ _ _ _ _ _ _ _ _ _ ti -- bus.
+Qui ma -- _ _ ne jun -- ctum vé -- _ _ _ _ spe -- ri
+qui ma -- _ _ ne jun -- ctum vé -- _ _ _ _ _ _ _ _ spe -- ri
+Di -- _ _ em _ vo -- cá -- ri præ -- _ _ _ _ _ _ _ _ _ ci -- pis: _ _ 
+Te -- trum cha -- os __ _ _ il -- lá -- _ _ bi -- tur,
+te -- _ trum cha -- os il -- lá -- _ _ _ _ bi -- tur,
+Au -- _ di pre -- _ ces cum flé -- _ _ ti -- bus,
+au -- _ di pre -- ces cum flé -- _ _ _ _ _ _ _ _ _ _ _ _ _ ti -- bus.
 \set stanza = "4."
-Cæ -- lo -- _ _ rum pul -- _ set __ _
-in -- _ _ _ _ _ _ _ ti -- mum
-vi -- _ ta -- le tol -- _ _ lat præ -- mi -- um
-Vi -- te -- _ _ mus o -- _ mne __ _ no -- _ xi -- um
-Pur -- _ ge -- mus o -- _ _ _ mne pes -- _ _ _ si -- mum.
+Cæ -- ló -- _ _ rum pul -- _ set __ _
+ín -- _ _ _ _ _ _ _ ti -- mum
+vi -- _ tá -- le tol -- _ _ lat præ -- mi -- um
+Vi -- té -- _ _ mus o -- _ mne __ _ nó -- _ xi -- um
+Pur -- _ gé -- mus o -- _ _ _ mne pés -- _ _ _ si -- mum.
 }
 
 textoaltus=\lyricmode{
 \set stanza = "2."
-Qui ma -- ne iun -- _ _ ctum ve -- _ _ _ _ _ _ _ spe -- _ ri
-qui ma -- _ _ ne iun -- ctum ve -- _ _ _ _ spe -- ri, 
-Di -- _ em vo -- ca -- ri præ -- _ _ _ _ _ _ _ _ _ ci -- pis:
-Te -- trum cha -- os __ _ _ il -- la -- _ _ _ _ bi -- tur,
-il -- la -- _ bi -- tur
-te -- trum cha -- os il -- la -- _ _ bi -- tur
-Au -- _ _ di pre -- _ _ _ _ ces cum fle -- _ _ _ _ _ _ _ _ _ _ _ _ _ ti -- bus. _
+Qui ma -- ne jun -- _ _ ctum vé -- _ _ _ _ _ _ _ spe -- _ ri
+qui ma -- _ _ ne jun -- ctum vé -- _ _ _ _ spe -- ri, 
+Di -- _ em vo -- cá -- ri præ -- _ _ _ _ _ _ _ _ _ ci -- pis:
+Te -- trum cha -- os __ _ _ il -- lá -- _ _ _ _ bi -- tur,
+il -- lá -- _ bi -- tur
+te -- trum cha -- os il -- lá -- _ _ bi -- tur
+Au -- _ _ di pre -- _ _ _ _ ces cum flé -- _ _ _ _ _ _ _ _ _ _ _ _ _ ti -- bus. _
 \set stanza = "4."
-Cæ -- lo -- rum pul -- set in -- _ _ _ _ _ ti -- mum
-cæ -- lo -- _ _ rum pul -- set in -- ti -- mum
-Vi -- ta -- le tol -- lat præ -- _ _ _ _ mi -- um
-\italicas vi -- ta -- le tol -- lat præ -- _ _ _ _ _ mi -- um \rectas
-Vi -- te -- _ _ mus o -- mne no -- xi -- um __ _ _ _ _ 
-vi -- te -- mus o -- mne no -- _ _ _ _ _ xi -- um,
-Pur -- ge -- _ mus o -- mne pes -- _ _ _ si -- mum
-pur -- ge -- _ mus o -- mne __ _ pes -- _ si -- mum.
+Cæ -- ló -- rum pul -- set ín -- _ _ _ _ _ ti -- mum
+cæ -- ló -- _ _ rum pul -- set ín -- ti -- mum
+Vi -- tá -- le tol -- lat præ -- _ _ _ _ mi -- um
+\italicas vi -- tá -- le tol -- lat præ -- _ _ _ _ _ mi -- um \rectas
+Vi -- té -- _ _ mus o -- mne nó -- xi -- um __ _ _ _ _ 
+vi -- té -- mus o -- mne nó -- _ _ _ _ _ xi -- um,
+Pur -- gé -- _ mus o -- mne pés -- _ _ _ si -- mum
+pur -- gé -- _ mus o -- mne __ _ pés -- _ si -- mum.
 }
 
 textotenor=\lyricmode{
 \set stanza = "2."
-Qui _ ma -- _ ne iun -- _ ctum __ _
-ve -- _ spe -- _ ri,
-Di -- _ em vo -- ca -- _ _ ri præ -- _ ci -- pis: _
-Te -- trum __ _ _ cha -- os _ il -- la -- _ _ _ bi -- _ tur
-Au -- _ _ di _ pre -- _ ces cum fle -- _ _ _ _ _ _ ti -- bus.
+Qui _ ma -- _ ne jun -- _ ctum __ _
+vé -- _ spe -- _ ri,
+Di -- _ em vo -- cá -- _ _ ri præ -- _ ci -- pis: _
+Te -- trum __ _ _ cha -- os _ il -- lá -- _ _ _ bi -- _ tur
+Au -- _ _ di _ pre -- _ ces cum flé -- _ _ _ _ _ _ ti -- bus.
 \set stanza = "4."
-Cæ -- lo -- _ _ rum pul -- set in -- _ _ _ _ _ _ _ _ ti -- mum,
-cæ -- lo -- _ _ rum pul -- _ set in -- _ _ _ ti -- mum
-Vi -- ta -- le tol -- lat præ -- mi -- um,
-vi -- ta -- le tol -- _ _ _ _ lat præ -- mi -- um
-Vi -- _ te -- mus o -- _ _ _ mne no -- _ _ _ xi -- um
-vi -- _ te -- mus o -- mne no -- _ _ _ _ _ xi -- um,
-Pur -- ge -- mus o -- mne __ _ _ _ pes -- si -- mum,
-\italicas pur -- ge -- mus o -- _ mne pes -- _ _ _ _ si -- mum, \rectas
-pur -- ge -- mus o -- mne pes -- _ _ _ _ _ _ si -- mum.
+Cæ -- ló -- _ _ rum pul -- set ín -- _ _ _ _ _ _ _ _ ti -- mum,
+cæ -- ló -- _ _ rum pul -- _ set ín -- _ _ _ ti -- mum
+Vi -- tá -- le tol -- lat præ -- mi -- um,
+vi -- tá -- le tol -- _ _ _ _ lat præ -- mi -- um
+Vi -- _ te -- mus o -- _ _ _ mne nó -- _ _ _ xi -- um
+vi -- _ te -- mus o -- mne nó -- _ _ _ _ _ xi -- um,
+Pur -- gé -- mus o -- mne __ _ _ _ pés -- si -- mum,
+\italicas pur -- gé -- mus o -- _ mne pés -- _ _ _ _ si -- mum, \rectas
+pur -- gé -- mus o -- mne pés -- _ _ _ _ _ _ si -- mum.
 }
 
 textobassus=\lyricmode{
 \set stanza = "2."
-Qui ma -- ne iun -- _ _ ctum ve -- _ _ _ _ _ _ _ _ _ _ spe -- ri
-Di -- em vo -- ca -- ri præ -- ci -- pis:
-Te -- trum cha -- os __ _ _ il -- la -- _ _ _ _ _ _ _ _ _ bi -- tur
-te -- trum cha -- os __ _ _ il -- la -- _ _ bi -- tur,
-te -- trum cha -- os il -- la -- _ _ bi -- tur,
-Au -- _ di pre -- _ ces cum fle -- _ _ ti -- bus
-au -- di __ _ pre -- ces cum fle -- _ _ _ ti -- bus.
+Qui ma -- ne jun -- _ _ ctum vé -- _ _ _ _ _ _ _ _ _ _ spe -- ri
+Di -- em vo -- cá -- ri præ -- ci -- pis:
+Te -- trum cha -- os __ _ _ il -- lá -- _ _ _ _ _ _ _ _ _ bi -- tur
+te -- trum cha -- os __ _ _ il -- lá -- _ _ bi -- tur,
+te -- trum cha -- os il -- lá -- _ _ bi -- tur,
+Au -- _ di pre -- _ ces cum flé -- _ _ ti -- bus
+au -- di __ _ pre -- ces cum flé -- _ _ _ ti -- bus.
 \set stanza = "4."
-Cæ -- lo -- rum pul -- set in -- _ _ _ _ _ ti -- mum __ _ _ _ _ 
-cæ -- lo -- rum pul -- set in -- _ _ _ _ ti -- mum
-Vi -- ta -- le tol -- lat præ -- _ _ _ _ _ mi -- um
-vi -- ta -- le tol -- lat præ -- _ mi -- um,
-Vi -- te -- mus o -- mne no -- _ _ _ _ xi -- um,
-vi -- te -- mus o -- mne no -- _ _ _ _ _ _ _ xi -- um
-Pur -- ge -- mus o -- _ mne pes -- _ _ _ _ _ si -- mum,
-pur -- ge -- mus o -- _ mne pes -- si -- mum.
+Cæ -- ló -- rum pul -- set ín -- _ _ _ _ _ ti -- mum __ _ _ _ _ 
+cæ -- ló -- rum pul -- set ín -- _ _ _ _ ti -- mum
+Vi -- tá -- le tol -- lat præ -- _ _ _ _ _ mi -- um
+vi -- tá -- le tol -- lat præ -- _ mi -- um,
+Vi -- té -- mus o -- mne nó -- _ _ _ _ xi -- um,
+vi -- té -- mus o -- mne nó -- _ _ _ _ _ _ _ xi -- um
+Pur -- gé -- mus o -- _ mne pés -- _ _ _ _ _ si -- mum,
+pur -- gé -- mus o -- _ mne pés -- si -- mum.
 }
 
 

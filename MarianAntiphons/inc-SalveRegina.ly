@@ -48,17 +48,17 @@ sopMusic = \relative c'' {
  \bar"|."
 }
 sopWords = \lyricmode {
-  Re -- gi -- na, ma -- ter mi -- se -- ri -- cor -- di --
-  æ, vi -- ta, dul -- ce -- do, et spes no -- stra sal --
-  ve. Ad te cla -- ma -- mus e -- xu -- les fi -- lii E -- væ.
+  Re -- gí -- na, ma -- ter mi -- se -- ri -- cór -- di --
+  æ, vi -- ta, dul -- cé -- do, et spes no -- stra sal --
+  ve. Ad te cla -- má -- mus éx -- u -- les fí -- lii E -- væ.
 
-  Ad te su -- spi -- ra -- mus ge -- men -- tes et flen -- tes in hac la -- cry -- ma --
-  rum val -- le. E -- ia er -- go ad -- vo -- ca -- ta no --
-  stra, no -- stra, il -- los tu -- os mi -- se -- ri -- cor -- des o -- cu -- los __
+  Ad te su -- spi -- rá -- mus ge -- mén -- tes et flen -- tes in hac la -- cri -- má --
+  rum val -- le. E -- ia er -- go ad -- vo -- cá -- ta no --
+  stra, no -- stra, il -- los tu -- os mi -- se -- ri -- cór -- des ó -- cu -- los __
 
-  ad nos con -- ver -- te. Et Je -- sum be -- ne -- di -- ctum fru --
-  ctum __ ven -- tris __ tu -- i, no -- bis post hoc ex -- i -- li --
-  um o -- sten -- de. O pi -- a, O dul -- cis Vir -- go, Ma -- ri -- a.
+  ad nos con -- vér -- te. Et Je -- sum be -- ne -- díc -- tum fruc --
+  tum __ ven -- tris __ tu -- i, no -- bis post hoc ex -- í -- li --
+  um os -- tén -- de. O pi -- a, O dul -- cis Vir -- go, Ma -- rí -- a.
 }
 
 altoMusic = \relative c'' {
@@ -80,17 +80,17 @@ altoMusic = \relative c'' {
   \bar"|."
 }
 altoWords = \lyricmode {
-  Re -- gi -- na, ma -- ter mi -- se -- ri -- cor --
-  di -- æ, vi -- ta, dul -- ce -- do, et spes no -- stra sal --
-  ve. Ad te cla -- ma -- mus e -- xu -- les fi -- lii E -- væ, e -- xu -- les fi -- lii E --
+  Re -- gí -- na, ma -- ter mi -- se -- ri -- cór --
+  di -- æ, vi -- ta, dul -- cé -- do, et spes no -- stra sal --
+  ve. Ad te cla -- má -- mus éx -- u -- les fí -- lii E -- væ, éx -- u -- les fí -- lii E --
 
-  væ. Ad te su -- spi -- ra -- mus ge -- men -- tes, et flen -- tes, in hac la -- cry -- ma --
+  væ. Ad te su -- spi -- rá -- mus ge -- mén -- tes, et flen -- tes, in hac la -- cri -- má --
   rum val -- le. E -- ia er -- go ad -- vo --
-  ca -- ta no -- stra, il -- los tu -- os mi -- se -- ri -- cor -- des o -- cu -- los
+  cá -- ta no -- stra, il -- los tu -- os mi -- se -- ri -- cór -- des ó -- cu -- los
 
-  ad nos con -- ver -- te. Et Je -- sum be -- ne -- di -- ctum fru --
-  ctum_ ven -- tris_ tu -- i, no -- bis post hoc ex -- i -- li --
-  um o -- sten -- de. O cle -- mens, O pi -- a, O dul -- cis Vir -- go, Ma -- ri -- a.
+  ad nos con -- vér -- te. Et Je -- sum be -- ne -- díc -- tum fruc --
+  tum_ ven -- tris_ tu -- i, no -- bis post hoc ex -- í -- li --
+  um os -- tén -- de. O cle -- mens, O pi -- a, O dul -- cis Vir -- go, Ma -- rí -- a.
 }
 
 tenorMusic = \relative c'' {
@@ -114,17 +114,17 @@ tenorMusic = \relative c'' {
 }
 
 tenorWords = \lyricmode {
-  Sal -- ve Re -- gi -- na, ma -- ter __ mi -- se -- ri --
-  cor -- di -- æ, vi -- ta, dul -- ce -- do, et spes no -- stra sal --
-  ve. Ad te cla -- ma -- mus e -- xu -- les fi -- lii E --
+  Sal -- ve Re -- gí -- na, ma -- ter __ mi -- se -- ri --
+  cór -- di -- æ, vi -- ta, dul -- cé -- do, et spes no -- stra sal --
+  ve. Ad te cla -- má -- mus éx -- u -- les fí -- lii E --
 
-  væ. Ad te su -- spi -- ra -- mus ge -- men -- tes et flen -- tes __ in hac la -- cry -- ma --
+  væ. Ad te su -- spi -- rá -- mus ge -- mén -- tes et flen -- tes __ in hac la -- cri -- má --
   rum val -- le. E -- ia er -- go __ ad -- vo --
-  ca -- ta no -- stra, il -- los tu -- os mi -- se -- ri -- cor -- des o -- cu -- los __
+  cá -- ta no -- stra, il -- los tu -- os mi -- se -- ri -- cór -- des ó -- cu -- los __
 
-  ad nos con -- ver -- te. Et Je -- sum be -- ne -- di -- ctum fru -- ctum
-  ven -- tris_ tu -- i, fru -- ctum ven -- tris tu -- i, no -- bis post hoc ex -- i -- li --
-  um o -- sten -- de. O cle -- mens, O pi -- a, O dul -- cis Vir -- go, Ma -- ri -- a.
+  ad nos con -- vér -- te. Et Je -- sum be -- ne -- díc -- tum fruc -- tum
+  ven -- tris_ tu -- i, fruc -- tum ven -- tris tu -- i, no -- bis post hoc ex -- í -- li --
+  um os -- tén -- de. O cle -- mens, O pi -- a, O dul -- cis Vir -- go, Ma -- rí -- a.
 }
 
 bassMusic = \relative c'' {
@@ -147,17 +147,17 @@ bassMusic = \relative c'' {
   \bar"|."
 }
 bassWords = \lyricmode {
-  Re -- gi -- na, ma -- ter mi -- se -- ri -- cor -- di --
-  æ, vi -- ta, dul -- ce -- do, et spes no -- stra sal --
-  ve. Ad te cla -- ma -- mus e -- xu -- les fi -- lii E --
+  Re -- gí -- na, ma -- ter mi -- se -- ri -- cór -- di --
+  æ, vi -- ta, dul -- cé -- do, et spes no -- stra sal --
+  ve. Ad te cla -- má -- mus éx -- u -- les fí -- lii E --
 
-  væ. Ad te su -- spi -- ra -- mus ge -- men -- tes et flen -- tes_ in hac la -- cry -- ma -- rum
-  val -- le._ E -- ia er -- go ad -- vo -- ca --
-  ta no -- stra, il -- los tu -- os mi -- se -- ri -- cor -- des o -- cu -- los __
+  væ. Ad te su -- spi -- rá -- mus ge -- mén -- tes et flen -- tes_ in hac la -- cri -- má -- rum
+  val -- le._ E -- ia er -- go ad -- vo -- cá --
+  ta no -- stra, il -- los tu -- os mi -- se -- ri -- cór -- des ó -- cu -- los __
 
-  ad nos con -- ver -- te. Et Je -- sum be -- ne -- di -- ctum
-  no -- bis post hoc ex -- i -- li --
-  um o -- sten -- de. O cle -- mens, O pi -- a, O dul -- cis Vir -- go, Ma -- ri -- a.
+  ad nos con -- vér -- te. Et Je -- sum be -- ne -- díc -- tum
+  no -- bis post hoc ex -- í -- li --
+  um os -- tén -- de. O cle -- mens, O pi -- a, O dul -- cis Vir -- go, Ma -- rí -- a.
 }
 
 pianoRH = \relative c' {
