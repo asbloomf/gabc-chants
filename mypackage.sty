@@ -57,8 +57,8 @@
 \def\Rbar{{\versiculum{r}}}
 \def\Abar{{\versiculum{a}}}
 
-\lhead{}\rhead{}
-\lfoot{}\cfoot{}\rfoot{}
+%\lhead{}\rhead{}
+%\lfoot{}\cfoot{}\rfoot{}
 
 \renewcommand*\bf{\bfseries}
 \renewcommand*\it{\itshape}
@@ -91,6 +91,14 @@
 \end{multicols}
 \selectlanguage{latin}
 }
+\newcommand{\translationcolumnsindent}[2][\relax]{%
+\selectlanguage{american}
+#1
+\begin{multicols}{2}%
+{#2}
+\end{multicols}
+\selectlanguage{latin}
+}
 
 \newcommand{\medianttermination}[2]{
 % 1 - Mediant of 2 accents
@@ -112,6 +120,22 @@
 % 3 - text
 %\noindent%
 \vspace*{-1ex}%
+\StrPosition{#3}{ }[\mypos]%
+\ifnum\mypos=2
+% find the next space then
+\StrPosition[2]{#3}{ }[\mypos]%
+\fi
+\setcounter{dropcapcounter}{\mypos - 1}
+\lettrine{\StrLeft{#3}{1}}%
+   {#1\StrMid{#3}{2}{\thedropcapcounter}} 
+\foreignlanguage{#2}{#1\StrGobbleLeft{#3}{\mypos}}%
+}
+
+\newcommand{\dropcapnospace}[3][]{%
+% 1 - optional command
+% 2 - language
+% 3 - text
+%\noindent%
 \StrPosition{#3}{ }[\mypos]%
 \ifnum\mypos=2
 % find the next space then
@@ -157,7 +181,7 @@
 \colchunk{\dropcap{american}{#2}} \selectlanguage{latin}
 }
 
-\newcommand{\lesson}[4][\normalsize]{
+\newcommand{\lesson}[4][]{
 % 1 - optional for english translation
 % 2 - latin first few words
 % 3 - latin bulk
@@ -280,17 +304,33 @@
 \newcounter{vcounter}
 \newenvironment{psalmverses}[1][0]{
 % 1 - number to start on
-\begin{list}{\arabic{vcounter}.}{
-\setlength\baselineskip{0pt}
-\setlength\itemsep{1pt}
-\usecounter{vcounter}
-\setlength\parsep{0pt}
-\setlength\labelwidth{50pt}\setlength\leftmargin{0pt}\setlength\itemindent{6ex}}
-\setcounter{vcounter}{#1}
+\begin{list}{\arabic{vcounter}.}{%
+%\setlength\baselineskip{0pt}
+\setlength\itemsep{1pt}%
+\usecounter{vcounter}%
+\setlength\parsep{0pt}%
+\setlength\labelwidth{50pt}\setlength\leftmargin{0pt}\setlength\itemindent{6ex}}%
+\setlength{\parfillskip}{0pt plus\dimexpr\linewidth-2\parindent}
+\setcounter{vcounter}{#1}%
 }{\ifx\undefined\useparacol%
 \vspace{-12pt}%
 \fi%
 \end{list}}
+
+\newcounter{vrcounter}
+\newenvironment{vrlist}{
+  \begin{list}{\ifodd\value{vrcounter}\Vbar{}\else\Rbar{}\fi}{%
+    \setlength\itemsep{1pt}%
+    \usecounter{vrcounter}%
+    \setlength\parsep{0pt}%
+    \setlength\labelwidth{50pt}\setlength\leftmargin{0pt}\setlength\itemindent{6ex}
+  }%
+  \setcounter{vrcounter}{0}%
+}{\ifx\undefined\useparacol%
+  \vspace{-12pt}%
+  \fi%
+  \end{list}
+}
 
 
 \def\boldVerse{T}
@@ -322,24 +362,28 @@
 \newenvironment{magnificat}[2][2]{
 % 1 - number to start on
 % 2 - name of magnificat to include
+\gresetinitiallines{0}
 \gregorioscore{#2}
-\normalsize
+%\normalsize
+\smallskip\ifx\premagtexverses\undefined\else\premagtexverses\fi
 \begin{psalmverses}[#1]
 }{\end{psalmverses}}
 
 \newenvironment{boldnummagnificat}[2][2]{
 % 1 - number to start on
 % 2 - name of magnificat to include
+\gresetinitiallines{1}
 \gregorioscore{#2}
-\normalsize
+%\normalsize
 \begin{boldnumpsalmverses}[#1]
 }{\end{boldnumpsalmverses}}
 
 \newenvironment{oddversesmagnificat}[2][2]{
 % 1 - number to start on
 % 2 - name of magnificat to include
+\gresetinitiallines{1}
 \gregorioscore{#2}
-\normalsize
+%\normalsize
 \begin{oddnumpsalmverses}[#1]
 }{\end{oddnumpsalmverses}}
 
@@ -352,7 +396,7 @@
 \newlength{\initwidth}
 \newlength{\alsinitialsize}
 % grefactor must be set before calling!
-\newcommand{\alsoldsetinitialspacing}[1]{%
+\newcommand{\aloldsetinitialspacing}[1]{%
 % 1 - initial, e.g., I
 \settowidth{\annotwidth}{\annot\hspace{0.5pc}}
 \settoheight{\Etextheight}{E}
@@ -374,9 +418,10 @@
 %grefactor is: \the\grefactor
 %Annot height is: \the\annotheight
 \setlength{\alsinitialsize}{\grefactor pt * \real{3.7} - 30pt + \annotheight}% \annotheight * \real{1.6}} % + \Etextheight - \annotheight}
-\def\greinitialformat##1{%
-{\fontsize{\alsinitialsize}{\alsinitialsize}\selectfont ##1}%
-}
+%\def\greinitialformat##1{%
+%{\fontsize{\alsinitialsize}{\alsinitialsize}\selectfont ##1}%
+%}
+\grechangestyle{initial}{\fontsize{\alsinitialsize}{\alsinitialsize}\selectfont}%
 %
 \settowidth{\initwidth}{\greinitialformat{#1}}
 \settowidth{\spacewidth}{\greinitialformat{#1}\hspace{1pc}}
@@ -384,17 +429,17 @@
     \setlength{\spacewidth}{\annotwidth}
 \fi
 \addtolength{\spacewidth}{-\initwidth}
-\setlength{\spacewidth}{0.5\spacewidth}
+\setlength{\spacewidth}{0.25\spacewidth}
 %
-\setspaceafterinitial{\spacewidth}
-\setspacebeforeinitial{\spacewidth}
+\setspaceafterinitial{\spacewidth}{0}
+\setspacebeforeinitial{\spacewidth}{0}
 %
-\gresetfirstlineaboveinitial{\annot}{\annot}
+\greannotation{\annot}
 \ifx\annottwo\undefined\else%
-\setsecondannotation{\annottwo}
+\greannotation{\annottwo}
 \fi
 }
-\newcommand{\setinitialspacing}[1]{%
+\newcommand{\alsetinitialspacing}[1]{%
 \greannotation{\annot}
 \ifx\annottwo\undefined\else%
 \greannotation{\annottwo}

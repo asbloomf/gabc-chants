@@ -5,6 +5,7 @@
 \newcommand{\ifnotbook}[1]{}
 %
 \documentclass[12pt]{article} % use larger type; default would be 10pt
+\usepackage{metalogo}
 %\usepackage{hyperref}
 \input{../tenebrae/inc_header}
 
@@ -29,6 +30,9 @@ First edition, 5 April 2014.
 \noindent
 Second edition, 10 March 2017.
 
+\noindent
+Third edition, ?? ??? 2019.
+
 \bigskip
 
 \noindent
@@ -46,7 +50,12 @@ Many thanks to Elie Roux for creating Gregorio and to all the people who contrib
 http://asbloomf.github.io/gabc-chants
 
 
-\vfill\noindent
+\vfill
+\makeatletter
+	\noindent{}Typeset using \LuaLaTeX{}, Lilypond version 2.19.64, and Gregorio version %\gre@gregoriotexversion{}
+\makeatother
+
+\bigskip\noindent
 This work is free of known copyright restrictions.
 
 \bigskip
@@ -143,6 +152,9 @@ ISBN: 978-1-495-36449-5
 \begin{document}
 \mytitlepage
 \mycopyrightpage
+\makeatletter
+\gre@gregoriotexversion{}
+\makeatother
 \mytoc
 %\mytitlepage % filler page
 

@@ -4,6 +4,7 @@
 \usepackage{xstring}
 \usepackage{needspace}
 \usepackage{xkeyval}
+\usepackage{ifthen}
 
 \newcommand{\numbertoword}[1]{%
 \ifnum1=#1%
@@ -42,7 +43,11 @@ five%
 % printsolemnorfestaltone T or F
 % deusinadjutoriumsolemn T or F
 % includelaustibi T or F
+% includetranslation T or F
 % predeusinadjutorium - tex preceding gabc
+    \ifx\deusinadjutoriumsolemn\undefined%
+        \def\deusinadjutoriumsolemn{F}
+    \fi
     \ifx\printsolemnorfestaltone\undefined%
         \def\printsolemnorfestaltone{F}%
     \fi
@@ -51,6 +56,9 @@ five%
     \fi
     \ifx\includelaustibi\undefined
         \def\includelaustibi{T}
+    \fi
+    \ifx\includetranslation\undefined
+        \def\includetranslation{T}
     \fi
     {%
     \if\printsolemnorfestaltone T%
@@ -67,13 +75,16 @@ five%
     %\vspace{0pt plus 4pt minus 12pt}%
     \predeusinadjutorium%
     \def\annot{\small \Vbar{}}
-    \setinitialspacing{D}
+    \alsetinitialspacing{D}
+    \gresetinitiallines{1}
     \gregorioscore{../DeusInAdjutorium\if\deusinadjutoriumsolemn T%
     _solemn\fi\if\includelaustibi T%
     _laustibi\fi%
     }
     }%
-    \translation[]{\Vbar{}~O God, come to my assistance. \Rbar{}~O Lord, make haste to help me. Glory be \ldots}
+    \if\includetranslation T%
+      \translation[]{\Vbar{}~O God, come to my assistance. \Rbar{}~O Lord, make haste to help me. Glory be \ldots}
+    \fi
     \bigskip
 %    \if\deusinadjutoriumsolemn T\else
 %        \if\includelaustibi T%
@@ -111,14 +122,15 @@ five%
 \expandafter\edef\csname psalm\antnum end\endcsname{#4} % only used internally
 %\def\emptypsalmend{per}
 \if\csname psalm\antnum tone\endcsname p % must be T. Per.
-  \expandafter\def\csname ant\antnum linetwo\endcsname{T. Per.}
+  \expandafter\def\csname ant\antnum linetwo\endcsname{T.~Per.}
   \expandafter\def\csname psalm\antnum tone\endcsname{per} % only used internally
   \expandafter\def\csname psalm\antnum end\endcsname{} % only used internally
 \else
-  \expandafter\edef\csname ant\antnum linetwo\endcsname{\csname psalm\antnum tone\endcsname. #4}
+  \expandafter\edef\csname ant\antnum linetwo\endcsname{\csname psalm\antnum tone\endcsname.~#4}
 \fi
 
 \ifx\psalmclef\undefined%
+\expandafter\xdef\csname psalmclef\antnum\endcsname{}
 \def\altclef{}%
 \else%
 \expandafter\xdef\csname psalmclef\antnum\endcsname{\psalmclef}
@@ -234,16 +246,22 @@ five%
 % 3 - annotation line two
 % 4 - first letter (big initial)
 % 5 - tex filename of gabc
-    {#1
+    {#1%
+    \gresetinitiallines{1}
     \def\annot{\small{#2}}
     \def\annottwo{\small{#3}}
-    \setinitialspacing{#4}
+    \alsetinitialspacing{#4}
+    \ifx\noeuouae\undefined\def\noeuouae{F}\fi
+    \if\noeuouae T\def\mygabcscore{#5.noEuouae}
+    \else\def\mygabcscore{#5}
+    \fi
 
     \ifx\gabcfolder\undefined
-        \gregorioscore{#5}
+        \gregorioscore{\mygabcscore}
     \else
-        \gregorioscore{\gabcfolder/#5}
+        \gregorioscore{\gabcfolder/\mygabcscore}
     \fi
+    \greseteolcustos{auto}
     }
 }
 
@@ -307,7 +325,18 @@ five%
 \ifcsname prepsalm\antnum verses\endcsname
     \def\prepsalmverses{\csname prepsalm\antnum verses\endcsname}
 \fi
-
+\ifcsname prerepeatantiphon\antnum\endcsname
+    \def\prerepeatantiphon{\csname prerepeatantiphon\antnum\endcsname}
+\fi
+\ifcsname prepsalmtitle\antnum\endcsname
+    \def\prepsalmtitle{\csname prepsalmtitle\antnum\endcsname}
+\fi
+\ifcsname postpsalmtitle\antnum\endcsname
+    \def\postpsalmtitle{\csname postpsalmtitle\antnum\endcsname}
+\fi
+\ifcsname preanttranslation\antnum\endcsname
+    \def\preanttranslation{\csname preanttranslation\antnum\endcsname}
+\fi
 %set up variables
 \edef\anttex{#4}
 \edef\antinitial{#5}
@@ -332,11 +361,11 @@ five%
 \StrLeft{#3}{1}[\psalmtone]
 \StrGobbleLeft{#3}{1}[\psalmend]
 \if\psalmtone p % must be T. Per.
-  \def\antlinetwo{T. Per.}
+  \def\antlinetwo{T.~Per.}
   \def\psalmtone{per} % only used internally
   \def\psalmend{} % only used internally
 \else
-  \edef\antlinetwo{\psalmtone. \psalmend}
+  \edef\antlinetwo{\psalmtone.~\psalmend}
 \fi
 \def\printantiphon{T}
 \if\onlyoneant T%
@@ -345,7 +374,7 @@ five%
     \def\printantiphon{F}
   \fi
 \else%
-  \edef\antlineone{#1. Ant.}
+  \edef\antlineone{#1.~Ant.}
 \fi%
 %TODO: format mode and ending properly into antlinetwo
 
@@ -353,13 +382,13 @@ five%
 % TODO: figure out how to do this without letting it run greblockcustos
 {
 \ifx\prepsalm\undefined\else
-\def\greblockcustos{%
+%now it is \greseteolcustos{manual} so I don't know if we need to do anything special, I still need to look at the definition of it (ASB 2015-08-05)
+%\def\greblockcustos{%
 % the regular greblockcustos is global which messes us up here, so redefine it without the \global
-% TODO: will this cause problems???? 2019-04-22 ASB
-  %\greblockcusto=1\relax%
-  %\grelocalrightbox{}%
-  \relax%
-}
+%  \greblockcusto=1\relax%
+%  \grelocalrightbox{}%
+%  \relax%
+%}
 \prepsalm
 \fi
 }
@@ -372,7 +401,12 @@ five%
 \edef\expandedend{\psalmend}
 \edef\nostarend{\psalmend}
 \edef\mytempa{\psalmend}
-\StrSubstitute{\mytempa}{*}{star}[\expandedend]
+\provideboolean{ignoreasterisk}
+\ifthenelse{\boolean{ignoreasterisk}}{
+  \StrSubstitute{\mytempa}{*}{}[\expandedend]
+}{
+  \StrSubstitute{\mytempa}{*}{star}[\expandedend]
+}
 \StrSubstitute{\mytempa}{*}{}[\nostarend]
 \ifx\canticleof\undefined
   \def\filename{Psalm#2}
@@ -406,6 +440,7 @@ five%
 }\fi
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween]{2}}
 \def\endpsalmcols{\end{parcolumns}}
+\ifx\psalmcolsoverrideoverride\undefined
 \ifx\psalmcolsoverride\undefined
 \if\useevencolumns F%
 %\def\psalmcoloptions{rulebetween}
@@ -608,6 +643,9 @@ five%
 \else %\psalmcolsoverride not \undefined
   \psalmcolsoverride[#2]
 \fi %\psalmcolsoverride not \undefined
+\else %\psalmcolsoverrideoverride not undefined
+  \psalmcolsoverrideoverride[#2]
+\fi
 %
 \ifx\undefined\useparacol\else
 \def\beginpsalmcols{\begin{paracol}{2}}
@@ -616,14 +654,16 @@ five%
 %TODO: psalmtitle properly when canticleof defined
 \ifx\canticleof\undefined
   \def\printpsalmtitle{%
-    \ifx\prepsalmtitle\undefined\else
+    \ifx\prepsalmtitle\undefined\medskip\else
       \prepsalmtitle
     \fi
-    \medskip
-    \needspace{\baselineskip}
+    %\needspace{\baselineskip}
+
     {\large \hfill\psalmtitle\hfill}
-    \medskip
-    
+
+    \ifx\postpsalmtitle\undefined\medskip\else
+      \postpsalmtitle
+    \fi
   }
 \else
   \def\printpsalmtitle{%
@@ -660,7 +700,8 @@ five%
 \if\psalmtitleafterant T%
   \if\printantiphon T%
     \ifx\anttranslation\undefined\else%
-      \translation[]{\normalsize \anttranslation \smallskip}
+      \ifx\undefined\preanttranslation\else\preanttranslation\fi
+      \translation[]{\anttranslation \smallskip}
     \fi%
     %\vspace{-1ex plus 1ex}% maybe get rid of this
   \fi
@@ -671,19 +712,25 @@ five%
 \fi
 {
 {\ifx\prepsalm\undefined\else\prepsalm\fi
+ \ifx\prepsalmtext\undefined\else\prepsalmtext\fi
+  \gresetinitiallines{0}
+  \grechangedim{interwordspacetext}{0.15 cm plus 0.15 cm minus 0.10 cm}{scalable}%
   \gregorioscore{\psalmtex}
+  \input{../gsp-spaces}
+  \greseteolcustos{auto}
 }
 %\medskip % do we need this?
 {\ifx\prepsalmverses\undefined\medskip\else\prepsalmverses\fi
 }
 
-\normalsize
+%\normalsize
 %\vspace{-20pt}
 \setlength{\columnsep}{18pt}
 \setlength{\columnseprule}{.4pt}
 \beginpsalmcols
 \colchunk{\vspace{-12pt}%
 \begin{psalmverses}[\if\psalmbeginversetwo T2\else 1\fi]
+\vspace{-\baselineskip}%
 \input{\psalmversestex}
 \end{psalmverses}
 }
@@ -693,14 +740,18 @@ five%
 \sloppy
 \if\psalmtranslationsmall T\small\fi
 \begin{psalmverses}
+\vspace{-\baselineskip}%
 \input{\psalmtranslationtex}
 \end{psalmverses}
 }
 \selectlanguage{latin}
 \endpsalmcols
+
 \ifx\dontrepeatantiphon\undefined
   \ifnum\thepage=\psalmstartpagenumber
+    \ifx\preantafter\undefined
       \let\preantafter=\undefined
+    \fi
   \else\ifx\preantafter\undefined
       \let\preantafter=\preant
   \fi\fi
@@ -712,11 +763,20 @@ five%
     \let\preantafter=\undefined
   \fi
 \fi
+\ifx\alwaysrepeatantiphon\undefined\else
+  \ifx\preantafter\undefined
+    \let\preantafter=\preant
+  \fi
+\fi
 
 \ifx\preantafter\undefined % if preantafter undefined, we don't reprint the antiphon
-    \if\onlyoneant T\else% if there is only one antiphon for all the psalms (like during Paschaltide), we don't print Repeat antiphon
-        \medskip
-        \ifx\prerepeatantiphon\undefined\else\prerepeatantiphon\fi
+    \ifx\printrepeatantiphon\undefined%
+      \if\onlyoneant T\def\printrepeatantiphon{F}%
+      \else\def\printrepeatantiphon{T}%
+      \fi
+    \fi
+    \if\printrepeatantiphon T% if there is only one antiphon for all the psalms (like during Paschaltide), we don't print Repeat antiphon
+        \ifx\prerepeatantiphon\undefined\smallskip\else\prerepeatantiphon\fi
         {\noindent\emph{Repeat antiphon.}\par\medskip}% \vspace{0ex minus 1ex}}
     \fi
 \else
@@ -735,6 +795,15 @@ five%
 \global\expandafter\let\csname psalmclef\antnum\endcsname=\undefined
 \global\expandafter\let\csname psalm\antnum translationsmall\endcsname=\undefined
 \global\expandafter\let\csname prepsalm\antnum verses\endcsname=\undefined
+\global\expandafter\let\csname prerepeatantiphon\antnum\endcsname=\undefined
+\global\let\prerepeatantiphon=\undefined
+\global\expandafter\let\csname prepsalmtitle\antnum\endcsname=\undefined
+\global\expandafter\let\csname postpsalmtitle\antnum\endcsname=\undefined
+\global\expandafter\let\csname preanttransaltion\antnum\endcsname=\undefined
+\global\let\prepsalmtitle=\undefined
+\global\let\postpsalmtitle=\undefined
+\global\let\preanttranslation=\undefined
+\global\let\prepsalmverses=\undefined
 % TODO: do we need to do pagebreak stuff?
 }
 
@@ -747,7 +816,7 @@ five%
 \edef\magtone{#1}
 \edef\magend{#2}
 \newcommand{\magant}{MagnificatAntiphon}
-\newcommand{\magantlinetwo}{Ant. \magtone. \magend}
+\newcommand{\magantlinetwo}{Ant.~\magtone.~\magend}
 \ifx\maggrassi\undefined\def\maggrassi{F}\fi
 \ifx\magprotodiogenes\undefined\def\magprotodiogenes{F}\fi
 \ifx\magsmc\undefined\def\magsmc{F}\fi
@@ -781,8 +850,9 @@ five%
     \ifx\printchapterheading\undefined\def\printchapterheading{T}\fi
     \ifx\beginchaptercols\undefined\def\beginchaptercols{\begin{parcolumns}[rulebetween]{2}}\fi
     \if\printchapterheading T
-    \begin{center}{\large\textbf Chapter.}\end{center}
-    \vspace{-0.3\baselineskip}
+    \medskip
+    {\centering\large\textbf Chapter.\par}
+    \smallskip
     \fi
     % default width is 265pt
     % ,colwidths={1=253pt}
@@ -801,8 +871,9 @@ five%
 %TODO: optional no translation
     \ifx\printchapterheading\undefined\def\printchapterheading{T}\fi
     \if\printchapterheading T
-    \begin{center}{\large\textbf Chapter.}\end{center}
-    \vspace{-0.5\baselineskip}
+    \medskip
+    {\centering\large\textbf Chapter.\par}
+    \smallskip
     \fi
     % default width is 265pt
     % ,colwidths={1=253pt}
@@ -813,51 +884,67 @@ five%
 }
 \fi
 
-\newcommand{\printhymn}[4]{
-% 1 hymnlinetwo
-% 2 hymninitial
-% 3 hymntex
-% 4 hymntranslation
-    \printgabc[\ifx\prehymn\undefined\else\prehymn\fi]{\small{Hymn.}}{\small{#1}}{#2}{#3} %
-%
+\newcommand{\printhymn}[5][\undefined]{
+% 1 label
+% 2 hymnlinetwo
+% 3 hymninitial
+% 4 hymntex
+% 5 hymntranslation
+    \makeatother
+    \def\asb@line{Hymn.\ifx#1\undefined\else\label{#1}\fi}
+    \printgabc[\ifx\prehymn\undefined\else\prehymn\fi]{\small{\asb@line}}{\small{#2}}{#3}{#4} %
+    \ifx\prehymntranslation\undefined\else\prehymntranslation\fi%
     \normalsize%\vspace{0pt minus 20pt}
-    \selectlanguage{american}
+    \selectlanguage{american}\vspace{-0.5\baselineskip}
     \begin{multicols}{2}
     \begin{psalmverses}
-    {#4}
+    {#5}
     \end{psalmverses}
     \ifx\hymnnote\undefined\else%
       \begin{flushright}\emph{\hymnnote}\end{flushright}
     \fi
     \end{multicols}
+    \makeatletter
 }
 
 \newcommand{\printvr}[4][]{
-%1 optional - pre something like \greblockcustos
+%1 optional - pre something like \greseteolcustos{manual}
 %2 vrtex
 %3 vtranslation
 %4 rtranslation
 % vrnospace optional
     {#1
+    \makeatletter
+    %\ifx\vrlinebreak\undefined\def\vrlinebreak{F}\fi
+    %\xdef\asb@vrtex{#2\if\vrlinebreak T.vrbr\else.vrnobr\fi}
+    \xdef\asb@vrtex{#2}
+    \gresetinitiallines{0}
 \ifx\gabcfolder\undefined
-    \gregorioscore{#2}
+    \gregorioscore{\asb@vrtex}
 \else
-    \gregorioscore{\gabcfolder/#2}
+    \gregorioscore{\gabcfolder/\asb@vrtex}
 \fi
+    \makeatother
+    \greseteolcustos{auto}
     }
-    \vspace{-4pt plus 4pt}
-    \translation[\normalsize]{
-    \Vbar{}~#3{}%
-    \ifx\vrnospace\undefined
-      \def\vrnospace{F}
-    \fi
-    \if\vrnospace T%
-      \hspace{7ex minus 3ex}%
-    \else
-      \\
-    \fi%
-    \Rbar{}~#4{}%
-    }%
+    \StrLen{#3}[\MyStrLen]% we find the length of the string and store it in \MyStrLen
+    \ifthenelse{\equal{\MyStrLen}{0}}%
+    {}%TRUE
+    {
+      \vspace{-4pt plus 4pt}
+      \translation[]{
+      \Vbar{}~#3{}%
+      \ifx\vrnospace\undefined
+        \def\vrnospace{F}
+      \fi
+      \if\vrnospace T%
+        \hspace{7ex minus 3ex}%
+      \else
+        \\
+      \fi%
+      \Rbar{}~#4{}%
+      }%
+    }
 }
 \makeatletter
 \define@key{mymag}{canticle}{
@@ -881,7 +968,7 @@ five%
 \edef\anttex{#4}
 \StrLeft{#2}{1}[\anttone]
 \StrGobbleLeft{#2}{1}[\antend]
-\edef\antlinetwo{Ant. \anttone. \antend}
+\edef\antlinetwo{Ant.~\anttone.~\antend}
 \ifx\magpsalmclef\undefined\else\let\psalmclef=\magpsalmclef\fi
 \ifx\maggrassi\undefined\def\maggrassi{F}\fi
 \ifx\magprotodiogenes\undefined\def\magprotodiogenes{F}\fi
@@ -924,20 +1011,27 @@ five%
       \def\versenum{1}
     }
     \def\annottwo{\small{\antlinetwo}}
-    \setinitialspacing{\antinitial}
+    \alsetinitialspacing{\antinitial}
     \ifx\anttex\undefined\def\anttex{MagnificatAntiphon}\fi
+      \ifx\noeuouae\undefined\def\noeuouae{F}\fi
+      \if\noeuouae T\edef\anttex{\anttex.noEuouae}\fi
+      \gresetinitiallines{1}
 \ifx\gabcfolder\undefined
     \gregorioscore{\anttex}
 \else
     \gregorioscore{\gabcfolder/\anttex}
 \fi
+    \greseteolcustos{auto}
 }
 
     \needspace{3\baselineskip}
     \ifx\nomagtitle\undefined\def\nomagtitle{F}\fi
     \if\nomagtitle F%
-    \begin{center}{\large \canticle.}\end{center}
-    \vspace{-1ex}
+    \ifx\premagtitle\undefined\else\premagtitle\fi
+    \medskip
+    {\centering\large \canticle.\par}
+    \smallskip
+    \ifx\postmagtitle\undefined\else\postmagtitle\fi
     \fi
 
     \edef\magstartpagenumber{\thepage}
@@ -954,6 +1048,7 @@ five%
      \printantiphon
     }%
     %\vspace{-1ex}
+    \ifx\premaganttranslation\undefined\else\premaganttranslation\fi
     \translation[]{\anttranslation}
     %\smallskip
     \ifx\magnificatnote\undefined\else{
@@ -975,6 +1070,7 @@ five%
     %\vspace{-1ex}
     \magverses
     \end{magnificat}
+    \greseteolcustos{auto}%
     }
     \ifx\dontrepeatantiphon\undefined
       \ifnum\thepage=\magstartpagenumber

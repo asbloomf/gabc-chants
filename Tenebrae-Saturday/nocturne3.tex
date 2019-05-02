@@ -6,48 +6,40 @@
 \writeheading{In the 3rd Nocturn}
 %
 \large
+\def\psalmtranslationsmall{F}
+\def\preant{\myantsize}
+\def\prepsalm{\mypsalmsize}
 %\printgabc{1. Ant.}{8. c.}{Z}{an--zelus_domus_tuae--solesmes}
 {
-\def\preant{\grechangestaffsize{17}\large}
-\def\prepsalm{\normalsize\grechangestaffsize{15}}
 \def\anttranslation{God is my helper, and the Lord is the protector of my soul.}
-\def\psalmtranslationsmall{T}
 \printpsalm{1}{53}{8G}{an--deus_adjuvat_me--solesmes}{D}
-\let\prepsalm=\undefined
 }
 %
 %\medskip
 %\hfill\rule{3in}{0.5pt}\hfill
 \printseparation
-\bigskip
+\pagebreak
 {
-\def\preant{\grechangestaffsize{17}\large}
-\def\prepsalm{\normalsize\grechangestaffsize{15}}
-\def\psalmtranslationsmall{T}
 \def\anttranslation{His place is in peace and His dwelling-place in Zion.}
 %\def\lalinebreakafterverse{3}
 %\def\lalinebreakafterthree\undefined{T}
-\vspace{-12pt}
+%\vspace{-12pt}
 \printpsalm{2}{75}{7a}{an--in_pace_factus_est--solesmes}{I}
-\let\prepsalm=\undefined
 }
 %
 \printseparation{}
-\vspace{-3pt}
+\pagebreak
+%\vspace{-3pt}
 {
-\def\preant{\grechangestaffsize{17}\large}
-\def\preantafter{\grechangestaffsize{15}\normalsize}
-\def\prepsalm{\normalsize\grechangestaffsize{15}}
-\def\psalmtranslationsmall{T}
 \def\anttranslation{I am become as a man without help, free among the dead.}
 %\def\lalinebreakafterseven{T}
-\def\prepsalmverses{\vspace{-9pt}}
+%\def\prepsalmverses{\vspace{-9pt}}
 \printpsalm{3}{87}{4d}{an--factus_sum--solesmes}{F}
 }
 
 \bigskip%\bigskip
-{\grechangestaffsize{15}\normalsize
-\printvr{vr-inPaceFactusEst}
+{
+\printvr[\myvrsize]{vr-inPaceFactusEst}
 {His place is in peace.}
 {And His dwelling-place in Sion.}
 }
@@ -55,90 +47,94 @@
 \bigskip
 Pater noster. \emph{in silence.}
 
+\pagebreak
+{\mylessonsize
 \begin{center}
 De Epístola beáti Pauli Apóstoli ad Hebrǽos
 %\translation{From the letter of the blessed Apostle Paul to the Jews}
 \end{center}
-{
+
 \hspace{10ex}\textsc{lesson vii}\hfill\emph{Chap. 9, 11-22}\hspace{10ex}
-\begin{parcolumns}[rulebetween,colwidths={1=.51\linewidth}]{2}
-\lesson[\normalsize]{Christus assístens Póntifex futurórum bonórum, per ámplius et perféctius tabernáculum, non manufáctum, id est, non hujus creatiónis~:
+%\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}
+\tenebraelesson{Christus}{assístens Póntifex futurórum bonórum, per ámplius et perféctius tabernáculum, non manufáctum, id est, non hujus creatiónis~:
 neque per sánguinem hircórum, aut vitulórum, sed per próprium sánguinem introívit semel in Sancta, ætérna redemptióne invénta.
 Si enim sanguis hircórum et taurórum, et cínis vítulæ aspérsus inquinátos sanctíficat ad emundatiónem carnis~:
-quanto magis sanguis Christi, qui per Spíritum Sanctum semetípsum óbtulit immaculátum Deo, emundábit consciéntiam nostram ab opéribus mórtuis, ad}{serviéndum \textbf{De}o vi\textbf{vén}ti?}
+quanto magis sanguis Christi, qui per Spíritum Sanctum semetípsum óbtulit immaculátum Deo, emundábit consciéntiam nostram ab opéribus mórtuis, ad serviéndum \textbf{De}o vi\textbf{vén}ti?}
 {Christ, being come a high priest of the good things to come, by a greater and more perfect tabernacle not made with hands, that is, not of this creation:
 Neither by the blood of goats, nor of calves, but by His own blood, entered once into the holies, having obtained eternal redemption.
 For if the blood of goats and of oxen, and the ashes of a heifer being sprinkled, sanctify such as are defiled, to the cleansing of the flesh:
 How much more shall the Blood of Christ, who by the Holy Ghost offered Himself spotless unto God, cleanse our conscience from dead works, to serve the living God?}
-\end{parcolumns}
-\grechangestaffsize{14}
+%\end{parcolumns}
+%\grechangestaffsize{14}
 \medskip
-
+}
 %\bigskip\bigskip
 %\pagebreak
 
-\grechangestaffsize{17}
+{\myrespsize
 \label{resp7_astiterunt_reges}
 \printgabc{Resp. 7}{4.}{A}{re--astiterunt_reges--solesmes}
-
+}
 {
-\translationcolumns[\normalsize]{\Rbar{}~The kings of the earth stood up, and the princes met together:
+\translationcolumns[\mytranslationsize]{\Rbar{}~The kings of the earth stood up, and the princes met together:
 * Against the Lord, and against His Anointed.
 \Vbar{}~Why have the gentiles raged and the people devised vain things?
 \Rbar{}~Against the Lord, and against His Anointed.}
 }
 
-\vspace{-9pt}
+%\vspace{-9pt}
 \needspace{2\baselineskip}
-\begin{center}{\textsc{lesson viii}}\end{center}
-\vspace{-5pt}
-\begin{parcolumns}[rulebetween,colwidths={1=255pt}]{2}
-\lesson[\normalsize]{Et ídeo novi testaménti mediátor est~: ut, morte intercedénte, in redemptiónem eárum prævaricatiónum, quæ erant sub prióri testaménto, repromissiónem accípiant, qui vocáti sunt ætérnæ hereditátis.
+{\begin{center}{\textsc{lesson viii}}\end{center}
+%\vspace{-5pt}
+%\begin{parcolumns}[rulebetween,colwidths={1=0.435\linewidth}]{2}
+\tenebraelesson{Et}{ídeo novi testaménti mediátor est~: ut, morte intercedénte, in redemptiónem eárum prævaricatiónum, quæ erant sub prióri testaménto, repromissiónem accípiant, qui vocáti sunt ætérnæ hereditátis.
 Ubi enim testaméntum est~: mors necésse est intercédat testatóris.
 Testaméntum enim in mórtuis confirmátum est~: alióquin nondum valet, dum vivit qui testátus est.
-Unde nec primum quidem sine}{sánguine \textbf{de}di\textbf{cá}tum est.}
+Unde nec primum quidem sine sánguine \textbf{de}di\textbf{cá}tum est.}
 {And therefore He is the Mediator of the New Testament: that by means of His Death, for the redemption of those transgressions, which were under the former Testament, they that are called may receive the promise of eternal inheritance.
 For where there is a testament, the death of the testator must of necessity intervene.
 For a testament comes into force through death: otherwise it is as yet of no strength, whilst the testator liveth.
 Whereupon neither was the first indeed dedicated without blood.}
-\end{parcolumns}
+}%\end{parcolumns}
 
 \bigskip\bigskip
 %\pagebreak
 
 \needspace{8\baselineskip}
+{\myrespsize
 \label{resp8_aestimatus_sum}
 \printgabc{Resp. 8}{4.}{Æ}{re--aestimatus_sum--solesmes}
-
+}
 {
-\translationcolumns[\normalsize]{\Rbar{}~I am counted with them that go down into the pit:
+\translationcolumns[\mytranslationsize]{\Rbar{}~I am counted with them that go down into the pit:
 * I am become as a man without help, free among the dead.
 \Vbar{}~They laid me in the lowest pit, in darkness, and in the shadow of death.
 \Rbar{}~I am become as a man~\dots}
 }
 
-%\pagebreak
-\begin{center}{\textsc{lesson ix}}\end{center}
+\pagebreak
+{\begin{center}{\textsc{lesson ix}}\end{center}
 
-\begin{parcolumns}[rulebetween,colwidths={1=255pt}]{2}
-\lesson[\normalsize]{Lecto enim omni mandáto legis a Móyse univérso pópulo~: accípiens sánguinem vitulórum, et hircórum, cum aqua et lana coccínea, et hyssópo~: ipsum quoque librum, et omnem populum aspérsit dicens~: Hic sanguis testaménti, quod mandávit ad vos Deus.
+%\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}
+\tenebraelesson{Lecto}{enim omni mandáto legis a Móyse univérso pópulo~: accípiens sánguinem vitulórum, et hircórum, cum aqua et lana coccínea, et hyssópo~: ipsum quoque librum, et omnem populum aspérsit dicens~: Hic sanguis testaménti, quod mandávit ad vos Deus.
 Etiam tabernáculum, et ómnia vasa ministérii sánguine simíliter aspérsit~:
-et ómnia pene in sánguine secúndum legem mundántur~: et sine sánguinis}{effusióne non \textbf{fit} re\textbf{mís}sio.}
+et ómnia pene in sánguine secúndum legem mundántur~: et sine sánguinis effusióne non \textbf{fit} re\textbf{mís}sio.}
 {For when every commandment of the law had been read by Moses to all the people, he took the blood of calves and goats, with water, and scarlet wool and hyssop, and sprinkled both the book itself and all the people,
 Saying: This is the blood of the Testament, which God hath enjoined upon you.
 The tabernacle also and all the vessels of the ministry, in like manner, he sprinkled with blood.
 And almost all things, according to the law, are cleansed with blood: and without shedding of blood there is no remission.}
-\end{parcolumns}
+}% \end{parcolumns}
 
 \bigskip\bigskip
 \bigskip\bigskip
 %\pagebreak
 
 \label{resp9_sepulto_domino}
+{\myrespsize
 \printgabc{Resp. 9}{2.}{S}{re--sepulto_domino--solesmes}
-
+}
 {
-\translationcolumns[\normalsize]{\Rbar{}~When the Lord was buried, they sealed the sepulchre, rolling a stone to the door of the sepulchre:
+\translationcolumns[\mytranslationsize]{\Rbar{}~When the Lord was buried, they sealed the sepulchre, rolling a stone to the door of the sepulchre:
 * Setting a watch to guard Him.
 \Vbar{}~The chief priests came together unto Pilate, and made that request unto him.
 \Rbar{}~Setting a watch to guard Him.
