@@ -1,0 +1,25 @@
+% !TEX TS-program = gregorio
+% !TEX encoding = UTF-8
+
+% The first part of the score is called the header, you can input some useful informations here:
+
+name: Benedicamus Domino;
+office-part: end;
+mode: 5;
+occasion: feasts of the I class at 2nd vespers alternative.;
+date: 2011;
+transcriber: Albert Bloomfield;
+transcription-date: 2011;
+style: modern;
+annotation: 5.;
+def-m1:\ifx\breakbeforeresp\undefined\else;
+def-m2:\fi;
+
+% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
+
+%%
+
+% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
+
+(c4)<sp>V/</sp>~Be(g)ne(g)di(h')cá(g)mus(jj) Dó(jkJ'IG'/hfgg/,/ghgjjkJ'IG'/hfg./,/gvFE'DC.c!de!fvEC)mi(dc)no.(c.) (::[em1]Z[em2])
+<sp>R/</sp>~Dé(ghgj)o(j.) grá(jkJ'IG'/hfgg/,/ghgjjkJ'IG'/hfg./,/gvFE'DC.c!de!fvEC)ti(dc)as.(c.) (::)

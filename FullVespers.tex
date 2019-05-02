@@ -550,6 +550,7 @@
 }
 \ifx\premagtwo\undefined
 {%\vspace{-1ex}
+\medskip
 \noindent\emph{Repeat antiphon.}\\}
 \else
 {\premagtwo
@@ -679,6 +680,11 @@
 %\setspaceafterinitial{0mm}
 %\setspacebeforeinitial{0mm}
 \greseteolcustos{manual}%
+\ifx\benedicamusnobiginitial\undefined\else
+	\if\benedicamusnobiginitial T
+		\gresetinitiallines{0}
+	\fi
+\fi
 \gregorioscore{\benedicamusdominotexalt}
 }
 \fi
@@ -688,9 +694,9 @@
 \bigskip
 \begin{parcolumns}[rulebetween]{2}
 \selectlanguage{latin}%
-\colchunk{\Vbar{}~Fidélium ánimæ per misericórdiam Déi requiéscant in páce.}
+\colchunk{\Vbar{}~Fidélium ánimæ per misericórdiam Déi requiéscant in páce.}%\hfill{}\Rbar{}~Amen.}
 \selectlanguage{american}%
-\colchunk{\Vbar{}~May the souls of the faithful departed through the mercy of God rest in peace.}
+\colchunk{\Vbar{}~May the souls of the faithful departed through the mercy of God rest in peace.}%\hfill{}\Rbar{}~Amen.}
 \selectlanguage{latin}%
 \colplacechunks{}
 \colchunk{\Rbar{}~Amen.}

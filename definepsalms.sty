@@ -1156,6 +1156,12 @@ five%
 }
 \edef\benedicamusdominotex{../BenedicamusDomino/BenedicamusDomino_\append}
 \ifx\benedicamusdominotonealt\undefined\else
-\edef\benedicamusdominotexalt{\benedicamusdominotex Alt}
+  \def\append{Alt}
+  \ifx\benedicamusnobiginitial\undefined\else
+    \if\benedicamusnobiginitial T
+      \def\append{Alt_nobiginitial}
+    \fi
+  \fi
+  \edef\benedicamusdominotexalt{\benedicamusdominotex\append}
 \fi
 }
