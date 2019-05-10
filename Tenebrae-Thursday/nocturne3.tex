@@ -1,22 +1,23 @@
 ﻿%\bigskip
-\pagebreak
-\def\matinsnocturn{3rd Nocturn}
+%\pagebreak
+\gdef\matinsnocturn{3rd Nocturn}
 \label{thursday-3}
 \writeheading[]{In the 3rd Nocturn}
 %
-\large
+\myantsize
 \def\nogloriapatri{T}
 \def\psalmtranslationsmall{F}
-\def\preant{\myantsize}
+%\def\preant{\myantsize}
 \let\preantafter=\undefined
 %\def\prepsalmverses{\vspace{-0.5\baselineskip}}
-{\def\prepsalm{\mypsalmsize\vspace{-0.5\baselineskip}}
+{%\def\prepsalm{\vspace{-0.5\baselineskip}}
+\def\dontrepeatantiphon{T}
 \def\anttranslation{I said unto the wicked: Speak not wickedness against God.\vspace{-0.5\baselineskip}}
 \printpsalm{1}{74}{7c}{an--dixi_iniquis--solesmes}{D}
 }%
 \printseparation
 %\pagebreak
-{\def\prepsalm{\mypsalmsize\vspace{-0.5\baselineskip}}
+{%\def\prepsalm{\vspace{-0.5\baselineskip}}
 %\def\prerepeatantiphon{}
 \def\dontrepeatantiphon{T}
 \def\anttranslation{The earth trembled and was still, when God arose in judgment.\vspace{-0.5\baselineskip}}
@@ -31,22 +32,24 @@
 
 \bigskip%\pagebreak
 \bigskip
+
+%\def\vrnospace{T}
+\myvrsize
 {
-	%\def\vrnospace{T}
-	\myvrsize
 	\printvr{vr-ExsurgeDomine}{Arise, O Lord.}{And judge my cause.}
 }
 
 \bigskip
 Pater noster. \emph{in silence.}
 
+\bigskip
 \pagebreak
 \mylessonsize
-\begin{center}
+{\begin{center}
 De Epístola prima beáti Pauli Apóstoli ad Corínthios
 %\translation{From the first epistle of St Paul the Apostle to the Corinthians}
 \end{center}
-{
+
 \hspace{10ex}\textsc{lesson vii}\hfill\emph{Chap. 11, 17-34}\hspace{10ex}
 %\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}
 \tenebraelesson{Hoc}{autem præcípio~: non laudans quod non in mélius, sed in detérius convenítis.
@@ -63,12 +66,13 @@ For every one taketh before his own supper to eat. And one indeed is hungry and 
 What, have you not houses to eat and to drink in? Or despise ye the church of God; and put them to shame that have not? What shall I say to you? Do I praise you? In this I praise you not.}
 %\end{parcolumns}
 %14
+}
 \medskip
 
 \bigskip\bigskip
 
 \myrespsize
-\label{resp7_eram_quasi_agnus}
+{\label{resp7_eram_quasi_agnus}
 \printgabc{Resp. 7}{7.}{E}{re--eram_quasi_agnus--solesmes}
 
 \translationcolumns[\mytranslationsize]{\Rbar{}~I was like an innocent lamb: I was led to the sacrifice and I knew it not; mine enemies conspired against me, saying
@@ -77,7 +81,7 @@ What, have you not houses to eat and to drink in? Or despise ye the church of Go
 \Rbar{}~Come, let us put (poison of a deadly) tree into his bread, and root him out of the land of the living.}
 }
 
-%\bigskip%\bigskip
+\bigskip\bigskip
 \mylessonsize
 \begin{center}{\textsc{lesson viii}}\end{center}
 %\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}
@@ -92,10 +96,9 @@ For as often as you shall eat this bread, and drink the chalice, you shall show 
 %\end{parcolumns}
 
 \bigskip\bigskip
-{
-\needspace{12\baselineskip}
+
 \myrespsize
-\label{resp8_una_hora}
+{\label{resp8_una_hora}
 \printgabc{Resp. 8}{7.}{U}{re--una_hora--solesmes}
 
 \translationcolumns[\mytranslationsize]{\Rbar{}~Could ye not watch with Me one hour, ye that called one on the other to die for Me?
@@ -105,7 +108,7 @@ For as often as you shall eat this bread, and drink the chalice, you shall show 
 }%
 \vspace{-6pt}
 %\pagebreak
-%\bigskip%\bigskip
+\bigskip\bigskip
 \mylessonsize
 \begin{center}{\textsc{lesson ix}}\end{center}
 %\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}
@@ -128,15 +131,18 @@ If any man be hungry, let him eat at home; that you come not together unto judgm
 %\end{parcolumns}\vspace*{-20pt}
 %\pagebreak
 \bigskip\bigskip
-{
+
 \needspace{4\baselineskip}
 \myrespsize
-\label{resp9_seniores}
+{\label{resp9_seniores}
 \printgabc{Resp. 9}{1.}{S}{re--seniores--solesmes}
-
+}
+\vspace{-0.5\baselineskip}
+{
 \translationcolumns[\mytranslationsize]{\Rbar{}~The elders of the people consulted
 * That they might take Jesus by subtlety, and kill Him: they came out, as against a thief, with swords and clubs.
 \Vbar{}~The chief Priests and the Pharisees gathered a council.
 \Rbar{}~That they might take Jesus by subtlety, and kill Him: they came out, as against a thief, with swords and clubs.
 \Rbar{}~The elders of the people~\dots}
 }
+\myantsize

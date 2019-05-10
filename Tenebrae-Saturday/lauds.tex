@@ -2,17 +2,17 @@
 %!TEX root = Saturday.tex
 %\pagebreak
 %\bigskip\bigskip
-\let\matinsnocturn=\undefined
-\needspace{6\baselineskip}
+\global\let\matinsnocturn=\undefined
+%\needspace{6\baselineskip}
 \label{saturday-lauds}
 \writeheading{At Lauds}
-\def\officehour{Lauds}
+\gdef\officehour{Lauds}
 %
-\large
+\myantsize
 \def\nogloriapatri{T}
 \def\psalmtranslationsmall{F}
-\def\preant{\myantsize}
-\def\prepsalm{\mypsalmsize}
+%\def\preant{\myantsize}
+%\def\prepsalm{\mypsalmsize}
 {
 %\def\preantafter{\grechangestaffsize{17}\large}
 \def\anttranslation{O death, I will be thy death; I will be thy destruction, O hell.\needspace{4\baselineskip}}
@@ -22,34 +22,41 @@
 }
 %
 \printseparation{}
-\bigskip\bigskip
-%\pagebreak
+%\bigskip\bigskip
+%\bigskip
+\pagebreak
 {
-\def\anttranslation{They shall mourn for Him as one mourneth for an only son, for the innocent Lord hath been slain.}
+%\def\dontrepeatantiphon{T}
+\def\anttranslation{They shall mourn for Him as one mourneth for an only son, for the innocent Lord hath been slain.\vspace{-0.5\baselineskip}}
 \printpsalm{2}{91}{4A}{an--plangent_eum--solesmes}{P}
 }
 %
 \printseparation{}
+\bigskip
 %\pagebreak
 {
+\def\dontrepeatantiphon{T}
 \def\anttranslation{Give heed, all ye people, and see my grief.}
+%\def\prepsalmverses{}
 \printpsalm{3}{63}{7b}{an--attendite_universi--solesmes}{A}
 }%
 \printseparation{}
+%\bigskip\bigskip
 %\pagebreak
 {
 %\def\prepsalmverses{\vspace{-10pt}}
-\def\anttranslation{From the gate of hell, O Lord, deliver my soul.}
+\def\anttranslation{From the gate of hell, O Lord, deliver my soul.}%\bigskip\bigskip}
+%\def\prepsalmverses{\bigskip}
 \def\canticleof{Ezechias}
 \def\canticleverses{Is. 38, 10-20}
-\needspace{4\baselineskip}
+%\def\dontrepeatantiphon{T}
 \printpsalm{4}{ezechias38}{2D}{an--a_porta_inferi--solesmes}{A}
 \let\canticleof=\undefined
 \let\canticleverses=\undefined
 \let\prepsalm=\undefined
 }
 %
-%\printseparation
+\printseparation
 \pagebreak
 {
 % \def\greblockcustos{%
@@ -64,7 +71,8 @@
 }
 
 \bigskip
-{\printvr[\myvrsize]{vr-caroMea}
+\myvrsize
+{\printvr{vr-caroMea}
 {My flesh shall rest in hope.}
 {And Thou wilt not give Thy Holy One to see corruption.}
 }
@@ -73,7 +81,7 @@
 %\needspace{4\baselineskip}
 {
 \def\magsolemn{T}
-\def\preverses{\mypsalmsize}
+%\def\preverses{\mypsalmsize}
 \def\anttranslation{\mytranslationsize The women sitting at the sepulchre mourned, weeping for the Lord.%\vspace{-4pt}
 }
 \printmag[Benedictus]{1g}{M}{an--mulieres--solesmes}
@@ -83,8 +91,9 @@
 %\emph{The candles on the triangular candlestick having been extinguished as has already been explained, the one at the top of the triangle alone remains lighted.  During the Canticle \emph{Benedíctus.} the candles on the altar are likewise extinguished one by one, from each side alternately, at every second verse, so that by the last verse all are extinguished.  All other lights and lamps in the church are also put out.}
 %\bigskip%\bigskip
 %\smallskip
-{\myrespsize
-\printgabc{Ant.}{5.}{C}{../Tenebrae/an--christus_factus_est--solesmes_saturday}
+\pagebreak
+\myrespsize
+{\printgabc{Ant.}{5.}{C}{../Tenebrae/an--christus_factus_est--solesmes_saturday}
 }
 \medskip
 
@@ -94,9 +103,16 @@
 
 \medskip
 
-\begin{parcolumns}[rulebetween]{2}
-\colchunk{\dropcap{latin}{Concéde, quǽsumus, } omnípotens Deus~:~† ut qui Fílii tui resurrectiónem devóta exspectatióne prævenímus;~* ejúsdem resurrectiónis glóriam consequámur.
-\emph{And in silence~:}
-Per eúmdem Dóminum~\dots{}}
-\selectlanguage{american}
-\colchunk{\dropcap{american}{Grant, we beseech thee, } O Almighty God: that we who anticipate the resurrection of thy Son with pious expectation, may obtain the glory of the same resurrection.}\end{parcolumns}
+{\columnratio{0.5}
+\begin{paracol}{2}
+\begin{leftcolumn}%
+	\mydropcap[latin]{Concéde,}{quǽsumus, omnípotens Deus~:~† ut qui Fílii tui resurrectiónem devóta exspectatióne prævenímus;~* ejúsdem resurrectiónis glóriam consequámur.}
+	\emph{And in silence~:}
+	Per eúmdem Dóminum~\dots{}
+\end{leftcolumn}
+\begin{rightcolumn}%
+  \mydropcap[american]{Grant,}{we beseech thee, O Almighty God: that we who anticipate the resurrection of thy Son with pious expectation, may obtain the glory of the same resurrection.}
+\end{rightcolumn}
+\end{paracol}
+}
+\myantsize

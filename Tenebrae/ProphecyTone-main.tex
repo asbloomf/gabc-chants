@@ -5,12 +5,10 @@
 \label{prophecytone}
 \huge{Tone for the Prophecy.}
 }\end{center}
-\large\grechangestaffsize{17}
+\myantsize
 {
-\def\greabovelinestextstyle#1{%
-  \adjustbox{padding=0pt 0pt 0pt 3pt,raise=-1pt}{\small\emph{#1}}%
-  \relax %
-}
+\grechangestyle{abovelinestext}{\begin{small}\begin{itshape}} %
+[\end{itshape}\end{small}]
 \gresetinitiallines{0}%
 \gregorioscore{prophecyTone}
 }
@@ -20,10 +18,8 @@
 \medskip
 %\let\oldgreabovelinestextstyle=\greabovelinestextstyle
 {
-\def\greabovelinestextstyle#1{%
-  \adjustbox{padding=0pt 0pt 0pt 3pt,raise=-1pt}{\small{#1}}%
-  \relax %
-}
+\grechangestyle{abovelinestext}{\begin{small}} %
+[\end{small}]
 \greseteolcustos{manual}
 \gresetinitiallines{0}%
 \gregorioscore{prophecyToneFlex}

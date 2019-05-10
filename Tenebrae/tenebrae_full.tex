@@ -18,6 +18,12 @@
 All the chants found herein have been typeset based on those found in the Liber Usualis from 1961.
 }
 
+\makeatletter
+\def\greversion{
+	\gre@gregoriotexversion{}
+}
+\makeatother
+
 \def\mycopyrightpage{
 \thispagestyle{empty}
 Tenebrae: \emph{newly typeset, based on \emph{The Liber Usualis}, edited by the Benedictines of Solesmes (Desclee Company, 1961). }
@@ -51,9 +57,7 @@ http://asbloomf.github.io/gabc-chants
 
 
 \vfill
-\makeatletter
-	\noindent{}Typeset using \LuaLaTeX{}, Lilypond version 2.19.64, and Gregorio version %\gre@gregoriotexversion{}
-\makeatother
+	\noindent{}Typeset using \LuaLaTeX{}, Lilypond version 2.19.64, and Gregorio version \greversion{}
 
 \bigskip\noindent
 This work is free of known copyright restrictions.
@@ -152,9 +156,6 @@ ISBN: 978-1-495-36449-5
 \begin{document}
 \mytitlepage
 \mycopyrightpage
-\makeatletter
-\gre@gregoriotexversion{}
-\makeatother
 \mytoc
 %\mytitlepage % filler page
 
@@ -164,22 +165,22 @@ ISBN: 978-1-495-36449-5
 %\input{lilypond/in_monte_oliveti-systems}
 
 %\ifnum 1=2{
-\input{../Tenebrae-Thursday/nocturne1}
-\input{../Tenebrae-Thursday/nocturne2}
-\input{../Tenebrae-Thursday/nocturne3}
-\input{../Tenebrae-Thursday/lauds}
+{\input{../Tenebrae-Thursday/nocturne1}}
+{\input{../Tenebrae-Thursday/nocturne2}}
+{\input{../Tenebrae-Thursday/nocturne3}}
+{\input{../Tenebrae-Thursday/lauds}}
 %}\fi
 %\ifnum 1=2{
-\input{../Tenebrae-Friday/nocturne1}
-\input{../Tenebrae-Friday/nocturne2}
-\input{../Tenebrae-Friday/nocturne3}
-\input{../Tenebrae-Friday/lauds}
+{\input{../Tenebrae-Friday/nocturne1}}
+{\input{../Tenebrae-Friday/nocturne2}}
+{\input{../Tenebrae-Friday/nocturne3}}
+{\input{../Tenebrae-Friday/lauds}}
 %}\fi
 %\ifnum 1=2{
-\input{../Tenebrae-Saturday/nocturne1}
-\input{../Tenebrae-Saturday/nocturne2}
-\input{../Tenebrae-Saturday/nocturne3}
-\input{../Tenebrae-Saturday/lauds}
+{\input{../Tenebrae-Saturday/nocturne1}}
+{\input{../Tenebrae-Saturday/nocturne2}}
+{\input{../Tenebrae-Saturday/nocturne3}}
+{\input{../Tenebrae-Saturday/lauds}}
 %}\fi
 
 \pagebreak

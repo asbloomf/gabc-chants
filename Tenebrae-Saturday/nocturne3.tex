@@ -1,14 +1,14 @@
 ﻿%!TEX root = Saturday.tex
-%\pagebreak
-\bigskip\bigskip\needspace{4\baselineskip}
+\pagebreak
+%\bigskip\bigskip\needspace{4\baselineskip}
 \label{saturday-3}
-\def\matinsnocturn{3rd Nocturn}
+\gdef\matinsnocturn{3rd Nocturn}
 \writeheading{In the 3rd Nocturn}
 %
-\large
+\myantsize
 \def\psalmtranslationsmall{F}
-\def\preant{\myantsize}
-\def\prepsalm{\mypsalmsize}
+%\def\preant{\myantsize}
+%\def\prepsalm{\mypsalmsize}
 %\printgabc{1. Ant.}{8. c.}{Z}{an--zelus_domus_tuae--solesmes}
 {
 \def\anttranslation{God is my helper, and the Lord is the protector of my soul.}
@@ -20,26 +20,27 @@
 \printseparation
 \pagebreak
 {
-\def\anttranslation{His place is in peace and His dwelling-place in Zion.}
+\def\anttranslation{\vspace{-0.5\baselineskip}His place is in peace and His dwelling-place in Zion.\vspace{-0.2\baselineskip}}
 %\def\lalinebreakafterverse{3}
 %\def\lalinebreakafterthree\undefined{T}
 %\vspace{-12pt}
+\def\prepsalmverses{}
 \printpsalm{2}{75}{7a}{an--in_pace_factus_est--solesmes}{I}
 }
 %
 \printseparation{}
-\pagebreak
+%\pagebreak
 %\vspace{-3pt}
 {
-\def\anttranslation{I am become as a man without help, free among the dead.}
+\def\anttranslation{I am become as a man without help, free among the dead.\bigskip}
 %\def\lalinebreakafterseven{T}
 %\def\prepsalmverses{\vspace{-9pt}}
 \printpsalm{3}{87}{4d}{an--factus_sum--solesmes}{F}
 }
 
 \bigskip%\bigskip
-{
-\printvr[\myvrsize]{vr-inPaceFactusEst}
+\myvrsize
+{\printvr{vr-inPaceFactusEst}
 {His place is in peace.}
 {And His dwelling-place in Sion.}
 }
@@ -48,8 +49,8 @@
 Pater noster. \emph{in silence.}
 
 \pagebreak
-{\mylessonsize
-\begin{center}
+\mylessonsize
+{\begin{center}
 De Epístola beáti Pauli Apóstoli ad Hebrǽos
 %\translation{From the letter of the blessed Apostle Paul to the Jews}
 \end{center}
@@ -66,13 +67,12 @@ For if the blood of goats and of oxen, and the ashes of a heifer being sprinkled
 How much more shall the Blood of Christ, who by the Holy Ghost offered Himself spotless unto God, cleanse our conscience from dead works, to serve the living God?}
 %\end{parcolumns}
 %\grechangestaffsize{14}
-\medskip
 }
-%\bigskip\bigskip
+\bigskip\bigskip
 %\pagebreak
 
-{\myrespsize
-\label{resp7_astiterunt_reges}
+\myrespsize
+{\label{resp7_astiterunt_reges}
 \printgabc{Resp. 7}{4.}{A}{re--astiterunt_reges--solesmes}
 }
 {
@@ -101,8 +101,8 @@ Whereupon neither was the first indeed dedicated without blood.}
 %\pagebreak
 
 \needspace{8\baselineskip}
-{\myrespsize
-\label{resp8_aestimatus_sum}
+\myrespsize
+{\label{resp8_aestimatus_sum}
 \printgabc{Resp. 8}{4.}{Æ}{re--aestimatus_sum--solesmes}
 }
 {
@@ -112,7 +112,8 @@ Whereupon neither was the first indeed dedicated without blood.}
 \Rbar{}~I am become as a man~\dots}
 }
 
-\pagebreak
+%\pagebreak
+\vspace{-0.5\baselineskip}
 {\begin{center}{\textsc{lesson ix}}\end{center}
 
 %\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}
@@ -125,13 +126,13 @@ The tabernacle also and all the vessels of the ministry, in like manner, he spri
 And almost all things, according to the law, are cleansed with blood: and without shedding of blood there is no remission.}
 }% \end{parcolumns}
 
-\bigskip\bigskip
-\bigskip\bigskip
+%\bigskip\bigskip
+\bigskip
 %\pagebreak
 
 \label{resp9_sepulto_domino}
-{\myrespsize
-\printgabc{Resp. 9}{2.}{S}{re--sepulto_domino--solesmes}
+\myrespsize
+{\printgabc{Resp. 9}{2.}{S}{re--sepulto_domino--solesmes}
 }
 {
 \translationcolumns[\mytranslationsize]{\Rbar{}~When the Lord was buried, they sealed the sepulchre, rolling a stone to the door of the sepulchre:
@@ -140,3 +141,4 @@ And almost all things, according to the law, are cleansed with blood: and withou
 \Rbar{}~Setting a watch to guard Him.
 \Rbar{}~When the Lord~\dots}
 }
+\myantsize

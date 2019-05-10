@@ -1,30 +1,33 @@
 ﻿%!TEX root = Saturday.tex
 \needspace{4\baselineskip}
-\def\matinsnocturn{2nd Nocturn}
+\gdef\matinsnocturn{2nd Nocturn}
 \label{saturday-2}
-\writeheading{In the 2nd Nocturn}
+\writeheading[]{In the 2nd Nocturn}
+%\vspace{-0.5\baselineskip}
 %
-\large
+\myantsize
 %\printgabc{1. Ant.}{8. c.}{Z}{an--zelus_domus_tuae--solesmes}
 \def\nogloriapatri{T}
-\def\preant{\myantsize}
+%\def\preant{\myantsize}
 \def\psalmtranslationsmall{F}
-\def\prepsalm{\mypsalmsize}
+%\def\prepsalm{\mypsalmsize}
 {
 %\def\preantafter{\myantsize}
 %\def\lalinebreakafterverse{2}
 %\def\lalinebreakaftersix{T}
 \def\dontrepeatantiphon{T}
-\def\anttranslation{Be ye lifted up, O eternal gates, and the King of glory shall enter in.}
+\def\anttranslation{Be ye lifted up, O eternal gates, and the King of glory shall enter in.\pagebreak}
 \printpsalm{1}{23}{5a}{an--elevamini--solesmes}{E}
 }%
-%\printseparation
+\printseparation
 {
 %\def\dontrepeatantiphon{T}
 \def\anttranslation{I believe that I see the good things of the Lord in the land of the living.}
+\def\lalinebreakafterverse{15}
 \printpsalm{2}{26}{4E}{an--credo_videre_holy_saturday--solesmes}{C}
 }%
-%\printseparation
+\printseparation
+\bigskip\bigskip
 {
 %\def\lalinebreakafterverse{5}
 \def\anttranslation{O Lord, Thou hast brought my soul out of hell.}
@@ -33,16 +36,17 @@
 %psalm 70 - In te, Domine, speravi
 
 \bigskip
-{\printvr[\myvrsize]{vr-tuAutem}
+\pagebreak
+\myvrsize
+{\printvr{vr-tuAutem}
 {But Thou, O Lord, have mercy on me.}
 {And raise me, and I will repay them.}
 }
 \bigskip
 Pater noster. \emph{in silence.}
 
-{
 \mylessonsize
-\begin{center}
+{\begin{center}
 Ex Tractátu sancti Augustíni Epíscopi super Psalmos
 %\translation{From the treatise of St Augustine, Bishop, upon the psalms}
 \end{center}
@@ -56,11 +60,10 @@ Ex Tractátu sancti Augustíni Epíscopi super Psalmos
 }
 \medskip
 %
-\bigskip\bigskip
-\bigskip\bigskip
+\pagebreak
 
-{\myrespsize
-\label{resp4_recessit_pastor}
+\myrespsize
+{\label{resp4_recessit_pastor}
 \printgabc{Resp. 4}{7.}{R}{re--recessit_pastor--solesmes}
 }
 {
@@ -90,8 +93,8 @@ Pilate said to them: Ye have a guard; go, and guard him as ye know. So they went
 
 \bigskip\bigskip
 
-{\myrespsize
-\label{o_vos_omnes}
+\myrespsize
+{\label{o_vos_omnes}
 \printgabc{Resp. 5}{8.}{O}{re--o_vos_omnes--solesmes}
 }
 {
@@ -101,7 +104,13 @@ Pilate said to them: Ye have a guard; go, and guard him as ye know. So they went
 \Rbar{}~If there be any sorrow like unto My sorrow.}
 }
 
-\emph{Alternately, the four part arrangement found after the page turn can be sung in place of the chant.}
+\alternatemusicintrobreak[four]
+
+\pagebreak
+
+\label{o_vos_omnes_poly}
+\includelilypond{o_vos_omnes-systems}
+\pagebreak
 
 %\bigskip\bigskip
 {\begin{center}{\textsc{lesson vi}}\end{center}
@@ -126,20 +135,11 @@ Wast thou indeed so utterly void of the light of godly wisdom, and confounded in
 Thou callest upon sleeping witnesses: surely thou wast asleep thyself, who has failed in searching out so notable a matter.}
 }%\end{parcolumns}
 
-\pagebreak
-\emph{Here is found the polyphonic arrangement for responsory 5 referred to above.}
-\vfil
-
-\label{o_vos_omnes_poly}
-\includelilypond{o_vos_omnes-systems}
-\pagebreak
-
 %\bigskip\bigskip
 %\needspace{2\baselineskip}
-%\pagebreak
-
-{\myrespsize
-\label{resp6_ecce_quomodo_moritur}
+\pagebreak
+\myrespsize
+{\label{resp6_ecce_quomodo_moritur}
 \printgabc{Resp. 6}{4.}{E}{re--ecce_quomodo_moritur--solesmes}
 }
 {
@@ -149,3 +149,4 @@ Thou callest upon sleeping witnesses: surely thou wast asleep thyself, who has f
 \Rbar{}~And his memory shall be in peace.
 \Rbar{}~Behold how the Just~\dots}
 }
+\myantsize

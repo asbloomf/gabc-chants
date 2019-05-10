@@ -1,16 +1,16 @@
-﻿\pagebreak
+﻿%\pagebreak
 %\bigskip\bigskip
-\def\matinsnocturn{3rd Nocturn}
+\gdef\matinsnocturn{3rd Nocturn}
 \label{friday-3}
 \writeheading{In the 3rd Nocturn}
 %
-\large
+\myantsize
 \def\psalmtranslationsmall{F}
-\def\preant{\myantsize}
+%\def\preant{\myantsize}
 %\def\preantafter{\grechangestaffsize{17}\normalsize}
 %\def\dontrepeatantiphon{T}
 %\def\prerepeatantiphon{\vspace{-12pt}}
-\def\prepsalm{\mypsalmsize}
+%\def\prepsalm{\mypsalmsize}
 \def\anttranslation{From them that rise up against me deliver me, O Lord: for they have seized my soul.}
 %\def\lalinebreakaftereighteen{T}
 %\def\lalinebreakafterverse{18}
@@ -24,28 +24,33 @@
 \pagebreak
 %\def\prepsalmverses{\vspace{-8pt}}
 %\def\prerepeatantiphon{\vspace{-20pt}}
-\def\anttranslation{Thou hast put away mine acquaintance far from me; I was delivered up, and came not forth.}
+\def\anttranslation{Thou hast put away mine acquaintance far from me; I was delivered up, and came not forth.\bigskip}
 %\def\enlinebreakaftertwelve{T}
-{\def\dontrepeatantiphon{T}
+{%\def\dontrepeatantiphon{T}
+%\def\lalinebreakafterverse{12}
 \printpsalm{2}{87}{8G}{an--longe_fecisti--solesmes}{L}}
 %
 \printseparation{}
+\bigskip
 %\def\dontrepeatantiphon{T}
 \def\anttranslation{They shall conspire against the soul of the just, and condemn the innocent blood.}
-{\printpsalm{3}{93}{8G}{an--captabunt--solesmes}{C}}
+{
+\def\lalinebreakafterverse{20}
+\printpsalm{3}{93}{8G}{an--captabunt--solesmes}{C}}
 %
 \printseparation
 \greseteolcustos{manual}
-{\printvr[\myvrsize]{vr-locutiSunt}
+\myvrsize
+{\printvr{vr-locutiSunt}
 {They have spoken against me with a deceitful tongue.}
 {And with words of hatred they encompassed me, and fought against me without cause.}}
 
 \bigskip
 Pater noster. \emph{in silence.}
 
-\pagebreak
-{\mylessonsize
-\begin{center}
+%\pagebreak
+\mylessonsize
+{\begin{center}
 De Epístola beáti Pauli Apóstoli ad Hebrǽos
 %\translation{From the letter of the blessed Apostle Paul to the Jews}
 \end{center}
@@ -63,13 +68,10 @@ Having therefore a great high priest that hath passed into the heavens, Jesus th
 For we have not a high priest, who cannot have compassion on our infirmities: but one tempted in all things like as we are, yet without sin.}
 }%\end{parcolumns}
 
-\medskip
-
 \bigskip\bigskip
-%\pagebreak
 
-{\myrespsize
-\label{resp7_tradiderunt}
+\myrespsize
+{\label{resp7_tradiderunt}
 \printgabc{Resp. 7}{5.}{T}{re--tradiderunt--solesmes}}
 
 {
@@ -79,7 +81,7 @@ For we have not a high priest, who cannot have compassion on our infirmities: bu
 \Rbar{}~And stood up against Me like giants.}
 }
 
-%\pagebreak
+\pagebreak
 \printseparation
 \needspace{2\baselineskip}
 \begin{center}{\textsc{lesson viii}}\end{center}
@@ -96,10 +98,10 @@ And therefore he ought, as for the people, so also for himself, to offer for sin
 }%\end{parcolumns}
 
 \bigskip\bigskip
-{\myrespsize
-\pagebreak
+\myrespsize
+%\pagebreak
 
-\label{resp8_jesum_tradidit}
+{\label{resp8_jesum_tradidit}
 \printgabc{Resp. 8}{8.}{J}{re--jesum_tradidit--solesmes}}
 
 {
@@ -110,7 +112,7 @@ And therefore he ought, as for the people, so also for himself, to offer for sin
 }
 
 %\pagebreak
-\printseparation
+%\printseparation
 \begin{center}{\textsc{lesson ix}}\end{center}
 
 %\begin{parcolumns}[rulebetween,colwidths={1=0.455\linewidth}]{2}
@@ -132,8 +134,9 @@ Called by God a high priest according to the order of Melchisedech.}
 
 \bigskip
 
-{\myrespsize
-\label{resp9_caligaverunt}
+\pagebreak
+\myrespsize
+{\label{resp9_caligaverunt}
 \printgabc{Resp. 9}{5.}{C}{re--caligaverunt--solesmes}}
 
 \translationcolumns[\mytranslationsize]{\Rbar{}~Mine eyes do fail with tears, for He is far from Me that comforted Me. Behold, all ye peoples
@@ -142,3 +145,4 @@ Called by God a high priest according to the order of Melchisedech.}
 \Rbar{}~If there be~\dots{}
 \Rbar{}~Mine eyes~\dots}
 %\pagebreak
+\myantsize

@@ -255,6 +255,17 @@
 \ifnum\value{vcounter}=\lalinebreakafterversexx\\\fi%
 \fi
 }
+\newcommand{\enminipageitem}[1]{\item #1 %
+\ifx\enlinebreakafterverse\undefined\else
+\ifnum\value{vcounter}=\enlinebreakafterverse\\\fi%
+\fi
+\ifx\enlinebreakafterversex\undefined\else
+\ifnum\value{vcounter}=\enlinebreakafterversex\\\fi%
+\fi
+\ifx\enlinebreakafterversexx\undefined\else
+\ifnum\value{vcounter}=\enlinebreakafterversexx\\\fi%
+\fi
+}
 %
 \else%
 %
@@ -365,7 +376,7 @@
 \gresetinitiallines{0}
 \gregorioscore{#2}
 %\normalsize
-\smallskip\ifx\premagtexverses\undefined\else\premagtexverses\fi
+\ifx\premagtexverses\undefined\else\premagtexverses\fi
 \begin{psalmverses}[#1]
 }{\end{psalmverses}}
 

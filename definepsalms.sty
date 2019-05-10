@@ -667,10 +667,9 @@ five%
   }
 \else
   \def\printpsalmtitle{%
-    \ifx\prepsalmtitle\undefined\else
+    \ifx\prepsalmtitle\undefined\medskip\else
       \prepsalmtitle
     \fi
-    \medskip
     {\needspace{2\baselineskip}
     \large
     \hspace{1pc}
@@ -678,8 +677,9 @@ five%
     \hfill
     \emph{\canticleverses{}}
     \hspace{1pc}}
-    \medskip
-    
+    \ifx\postpsalmtitle\undefined\medskip\else
+      \postpsalmtitle
+    \fi
   }
 \fi
 \if\psalmtitleafterant F%
@@ -714,9 +714,9 @@ five%
 {\ifx\prepsalm\undefined\else\prepsalm\fi
  \ifx\prepsalmtext\undefined\else\prepsalmtext\fi
   \gresetinitiallines{0}
-  \grechangedim{interwordspacetext}{0.15 cm plus 0.15 cm minus 0.10 cm}{scalable}%
+  %\grechangedim{interwordspacetext}{0.15 cm plus 0.15 cm minus 0.10 cm}{scalable}%
   \gregorioscore{\psalmtex}
-  \input{../gsp-spaces}
+  %\input{../gsp-spaces}
   \greseteolcustos{auto}
 }
 %\medskip % do we need this?
@@ -1064,7 +1064,6 @@ five%
     \fi
     {\preverses
     %\ifx\magoneline\undefined\else\if\magoneline T%
-    \greseteolcustos{manual}%
     %\fi\fi
     \begin{magnificat}[\versenum]{\magtex}
     %\vspace{-1ex}

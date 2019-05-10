@@ -12,11 +12,29 @@
 %\let\oldRbar=\Rbar
 %\def\Rbar{\oldRbar\hspace*{-2pt}}
 
-\def\myantsize{\grechangestaffsize{17}\large}
-\def\mypsalmsize{\grechangestaffsize{17}\large}
-\def\myvrsize{\grechangestaffsize{17}\large}
-\def\mylessonsize{\grechangestaffsize{23}\Large}
-\def\myrespsize{\grechangestaffsize{23}\Large}
+\makeatletter
+
+
+\def\mylargesize{%
+  \ifnum\gre@factor<23%
+    \greloadspaceconf{large}\grechangestaffsize{23}%
+  \fi%
+  \Large%
+}
+\def\mynormalsize{%
+  \ifnum\gre@factor>17%
+    \grechangestaffsize{17}\greloadspaceconf{normal}%
+  \fi%
+  \large
+}
+
+\makeatother
+
+\def\myantsize{\mynormalsize}
+\def\mypsalmsize{\mynormalsize}
+\def\myvrsize{\mynormalsize}
+\def\mylessonsize{\mylargesize}
+\def\myrespsize{\mylargesize}
 \def\mytranslationsize{\large}
 
 \newcommand*{\IsInteger}[3]{%
@@ -56,6 +74,7 @@
 % 3 - latin rest of text
 % 4 - english text
 %\noindent%
+\columnratio{0.56}
 \begin{paracol}{2}
 \begin{leftcolumn}%
   \mylessonsize
@@ -149,7 +168,7 @@
       \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.435\linewidth}]{2}}
     \fi
     \ifnum#1=87
-      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.433\linewidth}]{2}}
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth},distance=1.5em]{2}}
     \fi
     \ifnum#1=89
       \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43\linewidth}]{2}}
@@ -189,6 +208,7 @@
 }
 
 \ifbook{
+\cfoot{}
 \lfoot[\thepage]{}
 \rfoot[]{\thepage}
 }
@@ -222,7 +242,9 @@
   \bigskip
   %\smallskip
 }
-\newcommand{\alternatemusicintro}{\emph{Alternately, the following three part arrangement can be sung in place of the chant.}}
+\newcommand{\alternatemusicintro}[1][three]{\emph{Alternately, the following #1 part arrangement can be sung in place of the chant.}}
+\newcommand{\alternatemusicintrobreak}[1][three]{\emph{Alternately, the #1 part arrangement found after the page turn can be sung in place of the chant.}}
+
 \def\betweenLilyPondSystem#1{
   %\ifnum#1>1
     \vfil\noindent
@@ -235,20 +257,20 @@
   \import{lilypond/}{#1}
 }
 
-\newcommand{\startday}[2]{
+\newcommand{\startday}[3][\medskip]{
 %
 % The title page:
 \pagebreak
 \thispagestyle{empty}
 \cleardoublepage
 \thispagestyle{empty}
-\gdef\heading{#1 At \officehour}
+\gdef\heading{#2 At \officehour}
 \begin{center}{\addfontfeature{Numbers=Lining}%
 \thispagestyle{empty}
 \vspace*{\stretch{1}}
-\Huge \textsc{#1}
+\Huge \textsc{#2}
 \vspace{\stretch{2}}
-\label{#2}
+\label{#3}
 
 \pagebreak
 \thispagestyle{empty}
@@ -262,7 +284,7 @@
 
 \gdef\officehour{Matins}
 \gdef\matinsnocturn{1st Nocturn}
-\writeheading{In the 1st Nocturn}
+\writeheading[#1]{In the 1st Nocturn}
 }
 
 \def\nogloriapatri{T}
