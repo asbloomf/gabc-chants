@@ -720,7 +720,8 @@ five%
   \greseteolcustos{auto}
 }
 %\medskip % do we need this?
-{\ifx\prepsalmverses\undefined\medskip\else\prepsalmverses\fi
+% had had \medskip if prepsalmverses wasn't defined -- let's try it without
+{\ifx\prepsalmverses\undefined\else\prepsalmverses\fi
 }
 
 %\normalsize

@@ -14,16 +14,19 @@
 
 \makeatletter
 
-
+\greloadspaceconf{normal}%
+\grechangestyle{initial}{\fontsize{36pt}{36pt}\selectfont}%
 \def\mylargesize{%
   \ifnum\gre@factor<23%
     \greloadspaceconf{large}\grechangestaffsize{23}%
+    \grechangestyle{initial}{\fontsize{48pt}{48pt}\selectfont}%
   \fi%
   \Large%
 }
 \def\mynormalsize{%
   \ifnum\gre@factor>17%
     \grechangestaffsize{17}\greloadspaceconf{normal}%
+    \grechangestyle{initial}{\fontsize{32pt}{32pt}\selectfont}%
   \fi%
   \large
 }
