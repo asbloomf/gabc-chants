@@ -2,6 +2,7 @@
 \usepackage{adjustbox}
 \usepackage{xstring}
 \usepackage{paracol,blindtext,setspace}
+\usepackage{xcolor}
 \sloppy
 \input{../inc_header} %
 
@@ -15,7 +16,7 @@
 \makeatletter
 
 \greloadspaceconf{normal}%
-\grechangestyle{initial}{\fontsize{36pt}{36pt}\selectfont}%
+\grechangestyle{initial}{\fontsize{34pt}{34pt}\selectfont}%
 \def\mylargesize{%
   \ifnum\gre@factor<23%
     \greloadspaceconf{large}\grechangestaffsize{23}%
@@ -26,12 +27,25 @@
 \def\mynormalsize{%
   \ifnum\gre@factor>17%
     \grechangestaffsize{17}\greloadspaceconf{normal}%
-    \grechangestyle{initial}{\fontsize{32pt}{32pt}\selectfont}%
+    \grechangestyle{initial}{\fontsize{34pt}{34pt}\selectfont}%
   \fi%
   \large
 }
 
 \makeatother
+
+\fboxrule1pt
+\newcommand{\highlight}[1]{%
+  %\colorbox{yellow}{#1}
+  \fcolorbox{black}{white}{#1}
+}
+\newcommand{\highlightsymbol}[1]{%
+  \highlight{#1}
+}
+\def\greheightstarh{\highlightsymbol{\greheightstar}}
+%\def\greheightstarh{\greheightstar}
+\def\Vbarh{\highlightsymbol{\Vbar}}
+\def\Rbarh{\highlightsymbol{\Rbar}}
 
 \def\myantsize{\mynormalsize}
 \def\mypsalmsize{\mynormalsize}
