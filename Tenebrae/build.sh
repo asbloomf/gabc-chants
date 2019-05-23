@@ -5,26 +5,39 @@ error_exit()
 	exit 1
 }
 
-if latexmk tenebrae_full.tex && mv tenebrae_full.pdf tenebrae_original.pdf; then
-	gswin64c -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dCompatibilityLevel=1.3 -dEmbedAllFonts=true -dSubsetFonts=true -sOutputFile=tenebrae_full.pdf tenebrae_original.pdf &
-else
-	echo Failed somewhere!
-	read -p "Press a key to continue..." -n1 -s
-fi
+error_message=""
 
-if latexmk tenebrae_thursday.tex && mv tenebrae_thursday.pdf tenebrae_thursday_original.pdf; then
-	gswin64c -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dCompatibilityLevel=1.3 -dEmbedAllFonts=true -dSubsetFonts=true -sOutputFile=tenebrae_thursday.pdf tenebrae_thursday_original.pdf &
-fi
+process_file()
+{
+	filename=$1
+	ofilename=$2
 
-if latexmk tenebrae_friday.tex && mv tenebrae_friday.pdf tenebrae_friday_original.pdf; then
-	gswin64c -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dCompatibilityLevel=1.3 -dEmbedAllFonts=true -dSubsetFonts=true -sOutputFile=tenebrae_friday.pdf tenebrae_friday_original.pdf &
-fi
+	#echo $ofilename $filename
+	if latexmk $filename.tex && [ $(stat -c%s $filename.pdf) -gt $maxsize ] && mv $filename.pdf $ofilename.pdf; then
+		gswin64c -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dCompatibilityLevel=1.3 -dEmbedAllFonts=true -dSubsetFonts=true -sOutputFile=$filename.pdf $ofilename.pdf &
+	else
+		error_message="${error_message}${filename} was not processed.\n"
+		#echo $error_message
+		#printf $error_message
+		#read -p "Press a key to continue..." -n1 -s
+	fi
+}
 
-if latexmk tenebrae_saturday.tex mv tenebrae_saturday.pdf tenebrae_saturday_original.pdf; then
-	gswin64c -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dCompatibilityLevel=1.3 -dEmbedAllFonts=true -dSubsetFonts=true -sOutputFile=tenebrae_saturday.pdf tenebrae_saturday_original.pdf &
-fi
+maxsize=1500000 # 1.5MB
+
+# tenebrae_full.pdf should be newer than _original
+
+process_file tenebrae_full tenebrae_original
+
+process_file tenebrae_thursday tenebrae_thursday_original
+
+process_file tenebrae_friday tenebrae_friday_original
+
+process_file tenebrae_saturday tenebrae_saturday_original
 
 latexmk tenebrae_prophecyTone.tex
+
+printf "$error_message"
 exit 0
 
 mv tenebrae_prophecyTone.pdf tenebrae_prophecyTone_original.pdf

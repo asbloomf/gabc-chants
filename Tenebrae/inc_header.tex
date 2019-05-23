@@ -85,13 +85,13 @@
     \StrGobbleLeft{#2}{\mypos} #3
   }%
 }
-\newcommand{\tenebraelesson}[4][]{%
+\newcommand{\tenebraelesson}[4][\columnratio{0.56}]{%
 % 1 - optional
 % 2 - latin first word
 % 3 - latin rest of text
 % 4 - english text
 %\noindent%
-\columnratio{0.56}
+#1
 \begin{paracol}{2}
 \begin{leftcolumn}%
   \mylessonsize
