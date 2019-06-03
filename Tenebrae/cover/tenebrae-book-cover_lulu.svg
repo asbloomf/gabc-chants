@@ -9,13 +9,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="17.56978in"
+   width="17.25in"
    height="11.25in"
-   viewBox="0 0 1581.2803 1012.5"
+   viewBox="0 0 1552.5001 1012.5"
    id="svg2"
    version="1.1"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="tenebrae-book-cover.svg">
+   sodipodi:docname="tenebrae-book-cover_lulu.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="740.48865"
+     inkscape:cx="984.06008"
      inkscape:cy="810.03153"
      inkscape:document-units="in"
      inkscape:current-layer="layer1"
@@ -97,7 +97,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -149,7 +149,7 @@
        xml:space="preserve"
        id="flowRoot3391"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:60.00000381px;line-height:104.99999523%;font-family:'Garamond Premier Pro';-inkscape-font-specification:'Garamond Premier Pro';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="translate(265.97692,-35.55293)"><flowRegion
+       transform="translate(237.17695,-35.55293)"><flowRegion
          id="flowRegion3393"><rect
            id="rect3395"
            width="540.00195"
@@ -206,19 +206,5 @@
            height="148.57143"
            x="11.250001"
            y="73.928574" /></flowRegion><flowPara
-         id="flowPara3395" /></flowRoot>    <flowRoot
-       xml:space="preserve"
-       id="flowRoot3391-3"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:60.00000381px;line-height:100%;font-family:'Garamond Premier Pro';-inkscape-font-specification:'Garamond Premier Pro';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="rotate(90,789.45104,271.68529)"><flowRegion
-         id="flowRegion3393-8"
-         style="line-height:100%"><rect
-           id="rect3395-3"
-           width="540.00195"
-           height="292.85715"
-           x="657.70581"
-           y="234.64285"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:60.00000381px;line-height:100%;font-family:'Garamond Premier Pro';-inkscape-font-specification:'Garamond Premier Pro';text-align:center;text-anchor:middle;fill:#ffffff;stroke:#ffffff" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:33.75px;line-height:100%;font-family:'Garamond Premier Pro';-inkscape-font-specification:'Garamond Premier Pro, Normal';font-variant-ligatures:normal;font-variant-caps:all-small-caps;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke:none"
-         id="flowPara4542-0">Tenebræ</flowPara></flowRoot>  </g>
+         id="flowPara3395" /></flowRoot>  </g>
 </svg>
