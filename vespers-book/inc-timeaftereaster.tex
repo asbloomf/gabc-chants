@@ -41,7 +41,7 @@
             \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
         }
     }
-    \newcommand{\printsundaysaftereaster}{%
+    \newcommand{\printsundaysaftereaster}[1][1]{%
         \def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}%
         \vspace{-0.5\baselineskip}
         \begin{multicols}{2}%
@@ -50,7 +50,7 @@
         \emph{\nth{3} Sunday after Easter}\dotting p.~\pageref{easter3}\\
         \emph{\nth{4} Sunday after Easter}\dotting p.~\pageref{easter4}\\
         \emph{\nth{5} Sunday after Easter}\dotting p.~\pageref{easter5}\\
-        \emph{Sunday after the Ascension}\dotting p.~\pageref{easter6}
+        \ifnum#1=1\emph{Sunday after the Ascension}\dotting p.~\pageref{easter6}\fi
         \end{multicols}
     }
     \newcommand{\chapterreplacement}{
@@ -63,7 +63,7 @@
         \oldneedspace{6\baselineskip}
         \bigskip
         {\centering\emph{Magnificat \& Collect of the Sunday.}\par}%
-        \printsundaysaftereaster{}
+        \printsundaysaftereaster[0]
         \benedicamusdominoreference{easter}
     }
     \newcommand{\collectreplacement}{\bigskip}
