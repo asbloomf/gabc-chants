@@ -1,43 +1,31 @@
 ﻿\startday{Maundy Thursday}{thursday-1}
 %
-\large
+\def\psalmtranslationsmall{F}
+\myantsize
+%\def\preant{\myantsize}
+%\def\preantafter{\myantsize} %14
+%\def\prepsalm{\mypsalmsize} %15
 %\printgabc{1. Ant.}{8. c.}{Z}{an--zelus_domus_tuae--solesmes}
-{
-\def\preant{\grechangestaffsize{17}\large}
+
 %\def\lalinebreakafterverse{11}
-\def\preantafter{\grechangestaffsize{14}\normalsize}
-
-\def\psalmtranslationsmall{T}
-\def\prepsalm{\grechangestaffsize{15}\normalsize\greseteolcustos{manual}}
-\def\anttranslation{The zeal of Thy house hath consumed me, and the reproaches of them that reproach Thee, fell upon me.}
+{\def\anttranslation{The zeal of Thy house hath consumed me, and the reproaches of them that reproach Thee, fell upon me.}
+\def\lalinebreakafterverse{41}
+\def\enlinebreakafterverse{41}
 \printpsalm{1}{68}{8c}{an--zelus_domus_tuae--solesmes}{Z}
-}
-%
+}%
 \printseparation{}
-\def\preant{\grechangestaffsize{17}\large}
-\def\prepsalm{\grechangestaffsize{15}\normalsize}
-%\def\lalinebreakafterverse{4}
-
-\def\psalmtranslationsmall{T}
-\def\anttranslation{Let them be turned back, and blush for shame: that think evil against me.}
+{\def\anttranslation{Let them be turned back, and blush for shame: that think evil against me.}
 \printpsalm{2}{69}{8c}{an--avertantur_retrorsum--solesmes}{A}
-%
+}%
 \printseparation{}
-{
-\def\preant{\grechangestaffsize{17}\large}
-%\def\preantafter{\grechangestaffsize{15}\normalsize}
-\def\psalmtranslationsmall{T}
-\def\anttranslation{O my God, deliver me out of the hand of the sinner.}
-\def\prepsalm{\grechangestaffsize{15}\normalsize}
-\def\lalinebreakafterverse{16}
-
-%\def\lalinebreakaftertwentyone{T}
+\pagebreak
+{\def\anttranslation{O my God, deliver me out of the hand of the sinner.}
+\def\lalinebreakafterverse{25}
 \printpsalm{3}{70}{8c}{an--deus_meus_eripe_me--solesmes}{D}
-\let\prepsalm=\undefined
-}
+}%
 \printseparation
+\myvrsize %15
 {
-    \normalsize\grechangestaffsize{15}
  %   \def\vrnospace{T}
     \printvr{vr-avertanturRetrorsum}{Let them be turned back and put to shame.}{That intend evil against me.}
 }
@@ -45,14 +33,13 @@
 \printseparation{}
 Pater noster. \emph{in silence.}
 
-\grechangestaffsize{14}
 \medskip
 \hspace{10ex}\textsc{lesson i}\hfill\emph{Chap. 1, 1-14}\hspace{10ex}
 
-{\normalsize
-\printgabc{}{}{I}{lesson1-thursday-IncipitLamentatioJeremiae}
+\mylessonsize
+{\printgabc{}{}{I}{lesson1-thursday-IncipitLamentatioJeremiae}
 
-\translationcolumns[\normalsize]{\emph{Aleph}. How doth the city sit solitary that was full of people! how is the mistress of the Gentiles become as a widow: the princess of provinces made tributary!
+\translationcolumns[\mytranslationsize]{\emph{Aleph}. How doth the city sit solitary that was full of people! how is the mistress of the Gentiles become as a widow: the princess of provinces made tributary!
 \emph{Beth}. Weeping she hath wept in the night, and her tears are on her cheeks: there is none to comfort her among all them that were dear to her: all her friends have despised her, and are become her enemies.
 \emph{Ghimel}. Juda hath removed her dwelling place because of her affliction, and the greatness of her bondage: she hath dwelt among the nations, and she hath found no rest: all her persecutors have taken her in the midst of straits.
 \emph{Daleth}. The ways of Sion mourn, because there are none that come to the solemn feast: all her gates are broken down: her priests sigh: her virgins are in affliction, and she is oppressed with bitterness.
@@ -61,18 +48,21 @@ Jerusalem, Jerusalem, return to the Lord thy God.}
 
 \bigskip\bigskip
 }
-{\grechangestaffsize{17}
+\myrespsize
+{\label{in_monte_oliveti}
 \printgabc{Resp. 1}{8.}{I}{re--in_monte_oliveti--solesmes}
 
-\translationcolumns[\normalsize]{\Rbar{}~At the Mount of Olives He prayed unto the Father: Father, if it be possible, let this cup pass from Me!
+\translationcolumns[\mytranslationsize]{\Rbar{}~At the Mount of Olives He prayed unto the Father: Father, if it be possible, let this cup pass from Me!
 * The spirit indeed is willing, but the flesh is weak.
 \Vbar{}~Watch and pray, that ye enter not into temptation.
-\Rbar{}~The spirit~\dots{}}
+\Rbar{}~The spirit indeed is willing, but the flesh is weak.}
 }
 \bigskip\bigskip
+\pagebreak
 \alternatemusicintro{}
 
-\pagebreak
+\vfil
+\label{in_monte_oliveti_poly}
 \includelilypond{in_monte_oliveti-systems}
 
 \pagebreak
@@ -80,57 +70,75 @@ Jerusalem, Jerusalem, return to the Lord thy God.}
 %\needspace{8\baselineskip}
 \begin{center}{\textsc{lesson ii}}\end{center}
 
-{\normalsize\grechangestaffsize{14}
-\printgabc{}{}{V}{lesson2-thursday-Vau}
+\mylessonsize %14
+{\printgabc{}{}{V}{lesson2-thursday-Vau}
 
-\translationcolumns[\normalsize]{\emph{Vau}. And from the daughter of Sion all her beauty is departed: her princes are become like rams that find no pastures: and they are gone away without strength before the face of the pursuer.
+\translationcolumns[\mytranslationsize]{\emph{Vau}. And from the daughter of Sion all her beauty is departed: her princes are become like rams that find no pastures: and they are gone away without strength before the face of the pursuer.
 \emph{Zain}. Jerusalem hath remembered the days of her affliction, and prevarication of all her desirable things which she had from the days of old, when her people fell in the enemy's hand, and there was no helper: the enemies have seen her, and have mocked at her sabbaths.
 \emph{Heth}. Jerusalem hath grievously sinned, therefore is she become unstable: all that honoured her have despised her, because they have seen her shame: but she sighed and turned backward.
 \emph{Teth}. Her filthiness is on her feet, and she hath not remembered her end: she is wonderfully cast down, not having a comforter: behold, O Lord, my affliction, because the enemy is lifted up.
 Jerusalem, Jerusalem, return to the Lord thy God.}
-
+}
 \bigskip\bigskip
 
-\needspace{4\baselineskip}
-\large\grechangestaffsize{17}
+\pagebreak
+\myrespsize
+{\label{tristis_est_anima_mea}
 \printgabc{Resp. 2}{8.}{I}{re--tristis_est--solesmes}
 
-\translationcolumns[\normalsize]{\Rbar{}~My soul is sorrowful even unto death: stay here and watch with me: now shall ye see the crowd that shall surround me: *
-Ye shall take flight, and I will go to be offered up for you.
+\translationcolumns[\mytranslationsize]{\Rbar{}~My soul is sorrowful even unto death: stay here and watch with me: now shall ye see the crowd that shall surround me:
+* Ye shall take flight, and I will go to be offered up for you.
 \Vbar{}~Behold, the hour draweth nigh, and the Son of man shall be delivered into the hands of sinners.
-\Rbar{}~Ye shall flee~\dots}
+\Rbar{}~Ye shall take flight, and I will go to be offered up for you.}
 }
 
-\bigskip\bigskip
+\bigskip
 \alternatemusicintro{}
 
-%\bigskip\bigskip
-\pagebreak
-\includelilypond{tristis_est_anima_mea-systems}
-
+\bigskip%\bigskip%\vfil\bigskip\bigskip
 %\pagebreak
+
+\label{tristis_est_anima_mea_poly}
+{	
+	% \def\betweenLilyPondSystem#1{
+	%   %\ifnum#1>1
+	%     \vfil\bigskip\bigskip\noindent
+	%   %\else
+	%   %  \linebreak
+	%   %\fi
+	% }
+	\includelilypond{tristis_est_anima_mea-systems}
+}
+
+\pagebreak
 %\bigskip%\bigskip
 \begin{center}{\textsc{lesson iii}}\end{center}
 
-{\normalsize\grechangestaffsize{14}
-\printgabc{}{}{J}{lesson3-thursday-Jod}
+\mylessonsize %14
+\greloadspaceconf{large-alt}
+{\printgabc{}{}{J}{lesson3-thursday-Jod}
 
-\translationcolumns[\normalsize]{\emph{Jod}. The enemy hath put out his hand to all her desirable things: for she hath seen the Gentiles enter into her sanctuary, of whom thou gavest commandment that they should not enter into thy church.
+\translationcolumns[\mytranslationsize]{\emph{Jod}. The enemy hath put out his hand to all her desirable things: for she hath seen the Gentiles enter into her sanctuary, of whom thou gavest commandment that they should not enter into thy church.
 \emph{Caph}. All her people sigh, they seek bread: they have given all their precious things for food to relieve the soul: see, O Lord, and consider, for I am become vile.
 \emph{Lamed}. O all ye that pass by the way, attend, and see if there be any sorrow like to my sorrow: for he hath made a vintage of me, as the Lord spoke in the day of his fierce anger.
 \emph{Mem}. From above he hath sent fire into my bones, and hath chastised me: he hath spread a net for my feet, he hath turned me back: he hath made me desolate, wasted with sorrow all the day long.
 \emph{Nun}. The yoke of my iniquities hath watched: they are folded together in his hand, and put upon my neck: my strength is weakened: the Lord hath delivered me into their hand out of which I am not able to rise.
 Jerusalem, Jerusalem, return to the Lord thy God.}
+}
+%\bigskip\bigskip
+\pagebreak
 
-\bigskip\bigskip
-
-\large\grechangestaffsize{17}
-%\needspace{4\baselineskip}
+\greloadspaceconf{large}
+\myrespsize
+{%\needspace{4\baselineskip}
+\label{resp3_ecce_vidimus}
 \printgabc{Resp. 3}{5.}{E}{re--ecce_vidimus--solesmes}
-\translationcolumns[\normalsize]{\Rbar{}~Behold, we have seen Him without comeliness or beauty: His look is gone from Him: He hath borne our sins and suffered for us:
+%\vspace{-0.5\baselineskip}
+\translationcolumns[\mytranslationsize]{\Rbar{}~Behold, we have seen Him without comeliness or beauty: His look is gone from Him: He hath borne our sins and suffered for us:
 * By His stripes are we healed.
 \Vbar{}~Truly He hath borne our infirmities, and carried our sorrows:
 \Rbar{}~By His stripes are we healed.
-\Rbar{}~Behold, we have seen~\dots}
+\Rbar{}~Behold, we~\dots}
 }
-\pagebreak
+%\pagebreak
+\myantsize

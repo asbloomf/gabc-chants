@@ -1,97 +1,86 @@
 ﻿%\pagebreak
-\bigskip\bigskip
-\let\matinsnocturn=\undefined
-\def\officehour{Lauds}
+\global\let\matinsnocturn=\undefined
+\gdef\officehour{Lauds}
 \label{friday-lauds}
-\writeheading{At Lauds}
+\vspace{-0.5\baselineskip}
+\writeheading[]{At Lauds}
 %
-\large
+\myantsize
 \def\nogloriapatri{T}
-{
-\def\preant{\grechangestaffsize{17}\large}
-\def\preantafter{\grechangestaffsize{15}\normalsize}
-\def\lalinebreakafterverse{15}
+\def\psalmtranslationsmall{F}
+%\def\preant{\myantsize}
+%\def\preantafter{\myantsize}
+%\def\lalinebreakafterverse{15}
 %\def\dontrepeatantiphon{T}
-\def\prepsalm{\grechangestaffsize{15}\normalsize}
-\def\anttranslation{God spared not His own Son but delivered Him up for us all.\vspace{-6pt}\needspace{5\baselineskip}}
-\def\psalmtranslationsmall{T}
+%\def\prepsalm{\mypsalmsize}
+\def\anttranslation{God spared not His own Son but delivered Him up for us all.%\vspace{-6pt}
+\needspace{5\baselineskip}}
+{\def\prepsalmverses{}
 \printpsalm{1}{50}{7c}{an--proprio_filio_suo--solesmes}{P}
-}
-%
+}%
 \printseparation{}
+\bigskip\bigskip
+\bigskip\bigskip
+\smallskip
 %\pagebreak
-{
-\def\preant{\grechangestaffsize{17}\large}
 %\def\preantafter{\grechangestaffsize{15}\normalsize}
-\def\dontrepeatantiphon
-\def\prepsalm{\normalsize}
-%\def\dontrepeatantiphon{T}
-\def\psalmtranslationsmall{T}
+%\def\dontrepeatantiphon
+{%\def\dontrepeatantiphon{T}
 \def\anttranslation{My spirit is overwhelmed within me; my heart within me is troubled.}
+%\def\preverses{\vspace{-\baselineskip}}
 \printpsalm{2}{142}{4E}{an--anxiatus_est--solesmes}{A}
-\let\prepsalm=\undefined
-}
-%
+}%
 \printseparation{}
-{
-\def\preant{\grechangestaffsize{17}\large}
-\def\preantafter{\grechangestaffsize{15}\normalsize}
-%\def\dontrepeatantiphon{T}
-\def\psalmtranslationsmall{T}
+\pagebreak
 %\def\lalinebreakafterverse{6}
-\def\anttranslation{One thief said unto the other: We indeed receive the due reward of our deeds, but what hath this Man done? Lord, remember me, when Thou comest into Thy kingdom.}
-\def\prepsalm{\normalsize}
+\def\anttranslation{One thief said unto the other: We indeed receive the due reward of our deeds, but what hath this Man done? Lord, remember me, when Thou comest into Thy kingdom.\bigskip{}}
+{\def\dontrepeatantiphon{T}
 \printpsalm{3}{84}{1f}{an--ait_latro--solesmes}{A}
 }%
 \printseparation{}
-{
-\def\preant{\grechangestaffsize{15}\large}
-\def\preantafter{\grechangestaffsize{15}\normalsize}
-\def\prepsalm{\grechangestaffsize{15}\normalsize}
-\def\prepsalmverses{\vspace{-2pt}}
-\def\psalmtranslationsmall{T}
-\def\lalinebreakafterverse{29}
-\def\anttranslation{\vspace{-4pt}Lord, when my soul is troubled, Thou wilt remember mercy.\vspace{-8pt}}
-\def\canticleof{Habacuc}
+\bigskip
+%\def\prepsalmverses{\vspace{-2pt}}
+%\def\lalinebreakafterverse{29}
+\def\anttranslation{%\vspace{-4pt}
+Lord, when my soul is troubled, Thou wilt remember mercy.\bigskip%
+%\vspace{-8pt}
+}
+%\printseparation{}
+%\bigskip
+{\def\canticleof{Habacuc}
 \def\canticleverses{Chap. 3, 2-19}
 %\def\lalinebreakafternineteen{T}
 %\def\enlinebreakafternineteen{T}
 \printpsalm{4}{habacuc3}{1f}{an--dum_conturbata--solesmes}{D}
-}
 \let\canticleof=\undefined
 \let\canticleverses=\undefined
 \let\prepsalm=\undefined
-%
+}%
 \printseparation
-%\pagebreak
-{
-\def\preant{\grechangestaffsize{17}\large}
-\def\prepsalm{\grechangestaffsize{15}\normalsize}
-\def\psalmtranslationsmall{T}
-\def\anttranslation{Remember me, Lord, when Thou comest into Thy kingdom.}
-\def\prepsalm{\normalsize}
+\pagebreak
+\def\anttranslation{\vspace{-0.6\baselineskip}Remember me, Lord, when Thou comest into Thy kingdom.\vspace{-0.3\baselineskip}}
+{\def\dontrepeatantiphon{T}
 \printpsalm{5}{147}{8G}{an--memento_mei--solesmes}{M}
-\let\prepsalm=\undefined
 }
-
 \bigskip
+
+\myvrsize
 {
-\def\vrnospace{T}
-\printvr[\grechangestaffsize{15}\normalsize]{vr-collocavit}
-{He hath placed me in dark places.}
-{As those that have been long dead.}
+	%\def\vrnospace{T}
+	\printvr{vr-collocavit}
+	{He hath placed me in dark places.}
+	{As those that have been long dead.}
 }
 
 %\bigskip
 \needspace{4\baselineskip}
 {
-\def\preant{\grechangestaffsize{17}\large}
-\def\prerepeatantiphon{\normalsize\medskip}
+%\def\preant{\myantsize}
+%\def\prerepeatantiphon{}
 \def\magsolemn{T}
-\def\preverses{
-  \grechangestaffsize{15}\normalsize
+%\def\preverses{\mypsalmsize}
+\def\anttranslation{\mytranslationsize They set up over His head His accusation written: Jesus of Nazareth, King of the Jews.%\vspace{-12pt}
 }
-\def\anttranslation{\normalsize They set up over His head His accusation written: Jesus of Nazareth, King of the Jews.\vspace{-12pt}}
 \needspace{6\baselineskip}
 \printmag[Benedictus]{1g}{P}{an--posuerunt--solesmes}
 }%
@@ -101,14 +90,16 @@
 %
 %\bigskip
 %
-{\normalsize
+\bigskip\bigskip
+\pagebreak
+\myantsize
+{
 \emph{After the repetition of the Antiphon at the \emph{Benedíctus}, all kneel and sing :}
 }
 \medskip
-\grechangestaffsize{17}
-\printgabc{Ant.}{5.}{C}{../Tenebrae/an--christus_factus_est--solesmes_friday_edited}
-\normalsize
-%
+\myrespsize
+{\printgabc{Ant.}{5.}{C}{../Tenebrae/an--christus_factus_est--solesmes_friday}
+}%
 \bigskip
 %
 \emph{When the antiphon \emph{Christus fáctus est} is finished, \emph{Páter nóster} is said, in silence throughout.}
@@ -118,9 +109,22 @@
 \bigskip
 %\medskip
 %
-\begin{columns}
-\colchunk{\dropcap{latin}{Respice, quǽsumus, } Dómine, super hanc famíliam tuam,~† pro qua Dóminus noster Jesus Christus non dubitávit mánibus tradi nocéntium,~* et crucis subíre torméntum.
+
+{\columnratio{0.5}
+\begin{paracol}{2}
+\begin{leftcolumn}%
+  \mydropcap[latin]{Respice,}{quǽsumus, Dómine, super hanc famíliam tuam,~† pro qua Dóminus noster Jesus Christus non dubitávit mánibus tradi nocéntium,~* et crucis subíre torméntum.}
 \emph{And in silence~:}
-Qui tecum vivit et regnat\dots{}}
-\selectlanguage{american}
-\colchunk{\dropcap{american}{Look down, we beseech thee, } O Lord, on this thy family, for which our Lord Jesus Christ did not hesitate to be delivered up into the hands of wicked men, and to suffer the torment of the Cross.}\end{columns}
+Qui tecum vivit et regnat\dots{}
+\end{leftcolumn}
+\begin{rightcolumn}%
+  \mydropcap[american]{Look}{down, we beseech thee, O Lord, on this thy family, for which our Lord Jesus Christ did not hesitate to be delivered up into the hands of wicked men, and to suffer the torment of the Cross.}
+\end{rightcolumn}
+\end{paracol}
+}
+
+\bigskip
+
+\emph{All then rise and retire in silence.}
+
+\myantsize

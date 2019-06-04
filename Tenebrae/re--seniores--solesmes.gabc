@@ -4,80 +4,17 @@ mode:1;
 book:The Liber Usualis, 1961, p. 651;
 transcriber:Andrew Hinkley;
 %%
-(c4) SE(d!ewf/gf)ni(fd)ó(fgf)res(g) <v>\greheightstar</v>() pó(%g_hGF
-[ev:%
-{%
-\greglyph{\char 1025}{g}{g}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
-\grehepisemusbottom{f}{0}{-1}%
-}%
-}%
-\greendofglyph{9}%
-\greglyph{\char 19}{g}{g}{6}{}{}%
-\greendofglyph{3}%
-\greglyph{\char 19}{f}{g}{6}{}{}%
-}%
-])pu(%ixghg/h_i
-[ev:%
-{%
-\greflat{i}{0}%
-\greglyph{\char 15366}{g}{h}{0}{}{}%
-\greendofelement{0}{0}%
-\greglyph{\char 1025}{h}{h}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
-\grehepisemusbottom{g}{0}{-1}%
-}%
-}%
-}%
-])li(h.) (,) con(f)sí(f/g'h)li(h)um(hg'ge~) fe(fg)cé(f_g_e'_/fvED'e)runt,(ed..) <v>\greheightstar</v>(;) Ut(d) Jé(f_0!gh)sum(g') dó(g)lo(g') te(g)né(gfg)rent,(d!ewf.) (,) et(%f_gF'__E
-[ev:%
-{%
-\greglyph{\char 1025}{f}{f}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
-\grehepisemusbottom{e}{0}{-1}%
-}%
-\grehepisemus{h}{18}{0}{h}%
-}%
-\greendofglyph{9}%
-\greglyph{\char 19}{f}{f}{6}{}{%
-\grehepisemus{h}{12}{1}{h}%
-\grevepisemus{e}{12}%
-}%
-\greendofglyph{3}%
-\greglyph{\char 19}{e}{f}{6}{}{}%
-}%
-]) oc(f!g'h)cí(hg/hfg)de(f.e!fwgfg)rent~:(gf..) (:) cum(f) glá(h')di(g)is(h') et(f) fú(g_h)sti(fe)bus(d.) (,) ex(fe)i(f_g)é(%d_eDC'd
-[ev:%
-{%
-\greglyph{\char 1025}{d}{d}{0}{}{%
-\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
-\grehepisemusbottom{c}{0}{-1}%
-}%
-}%
-\greendofglyph{9}%
-\greglyph{\char 19}{d}{d}{6}{}{}%
-\greendofglyph{3}%
-\greglyph{\char 19}{c}{d}{6}{}{%
-\grevepisemus{b}{12}%
-}%
-\greendofglyph{0}%
-\greglyph{\char 17}{d}{c}{0}{}{}%
-}%
-])runt(c_d/e_d_) (,) tam(c')quam(d) ad(f_g) la(g_h)tró(%efc__/e_d_
-[ev:%
-{%
-\greglyph{\char 15376}{e}{e}{0}{}{%
-\adjustbox{scale={1.25}{1},lap=-1.5pt}{%
-\grehepisemus{g}{2}{3}{g}%
-\grehepisemus{g}{0}{0}{g}%
-}%
-}%
-\greendofelement{0}{0}%
-\greglyph{\char 5121}{e}{d}{8}{}{%
-\adjustbox{scale={0.85}{1},trim=0.7pt 0pt}{%
-\grehepisemus{g}{17}{1}{g}%
-\grehepisemus{g}{0}{0}{g}%
-}%
-}%
-}%
-])nem.(d.) <sp>V/</sp>(::) Col(h)le(h)gé(h)runt(hg/hg'gf~) pon(g)tí(gh)fi(g)ces(g) et(g) pha(g)ri(g)s<sp>'ae</sp>(hf)i(gh) con(gh)cí(h)li(ixh/iih//)um.(h.) (::z) <v>\greheightstar</v>(////) Ut(d) Jé(f_0!gh)sum.(g') (::) <sp>R/</sp>(////) Se(d!ewf/gf)ni(fd)ó(fgf)res.(g) (::)
+(c4) SE(d!ewf/gf)ni(fd)ó(fgf)res(g) <v>\greheightstar</v>() pó(g_hGF)pu(ixghg/h_i)li(h.) (,)
+con(f)sí(f/g'h)li(h)um(hg'ge~) fe(fg)cé(f_g_e'_/fvED'e)runt,(ed..) (;)
+
+<v>\greheightstarh</v>~Ut(d) Jé(f_0!gh)sum(g') dó(g)lo(g') te(g)né(gfg)rent,(d!ewf.) (,)
+et(f_gF'__E) oc(f!g'h)cí(hg/hfg)de(f.e!fwgfg)rent~:(gf..) (:)
+cum(f) glá(h')di(g)is(h') et(f) fú(g_h)sti(fe)bus(d.) (,)
+ex(fe)i(f_g)é(d_eDC'd)runt(c_d/e_d_) (,)
+tam(c')quam(d) ad(f_g) la(g_h)tró([oh:{]e_f_c_2/e_d_[oh:}])nem.(d.) (::)
+
+<sp>V/</sp>~Col(h)le(h)gé(h)runt(hg/hg'gf~) pon(g)tí(gh)fi(g)ces(g) et(g) pha(g)ri(g)s<sp>'ae</sp>(hf)i(gh) con(gh)cí(h)li(ixh/iih//)um.(h.) (::)%z
+
+<v>\greheightstarh</v>~Ut(d) Jé(f_0!gh)sum.(g') (::)
+
+<sp>R/</sp>~Se(d!ewf/gf)ni(fd)ó(fgf)res.(g) (::)

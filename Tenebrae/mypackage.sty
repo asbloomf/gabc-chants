@@ -1,0 +1,462 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mypackage}
+\usepackage{ifthen}
+\usepackage{calc}
+
+\newboolean{libertine}
+\DeclareOption{libertine}{
+\setboolean{libertine}{true}
+}
+\DeclareOption{garamond}{
+\setboolean{libertine}{false}
+}
+\ExecuteOptions{garamond}
+\ProcessOptions\relax
+
+%\usepackage{fullpage} % to reduce the margins
+%\usepackage{anysize} % for marginsize
+\usepackage{multicol} % for columns
+\usepackage{lettrine} % for drop caps
+\usepackage{fancyhdr} % for headers and footers
+\usepackage{xstring}
+%\usepackage{pdfcolparallel} % for parallel columns
+\ifx\undefined\useparacol
+  \usepackage{parcolumns}
+\else
+  \usepackage{paracol}
+\fi
+%\usepackage{wrapfig} % for wrapping figures -- can't get it to work with gregorio
+
+% choose the language of the document here
+\usepackage[latin,american]{babel}
+
+\ifthenelse{\boolean{libertine}}
+{
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{luainputenc}
+\usepackage{libertine}
+\renewcommand*\oldstylenums[1]{{\fontfamily{fxlj}\selectfont #1}}
+\newcommand*\addfontfeature[1]{}
+}{
+\usepackage{fontspec}
+\renewcommand*\oldstylenums[1]{#1}
+\AtBeginDocument{\fontspec[Ligatures=TeX,Numbers=OldStyle]{Garamond Premier Pro}}
+\newcommand\garamond[1]{\fontspec[Ligatures=TeX,Numbers=OldStyle]{Garamond Premier Pro}#1}
+\let\oldchead\chead
+\renewcommand\chead[1]{\oldchead{\garamond{#1}}}
+\let\oldcfoot\cfoot
+\let\oldlfoot\lfoot
+\let\oldrfoot\rfoot
+\renewcommand\cfoot[1]{\oldcfoot{\garamond{#1}}}
+\renewcommand\lfoot[2][]{\oldlfoot[\garamond{#1}]{\garamond{#2}}}
+\renewcommand\rfoot[2][]{\oldrfoot[\garamond{#1}]{\garamond{#2}}}
+}
+
+\newcommand{\versiculum}[1]{{\fontspec{versiculum}#1}}
+\def\Vbar{{\versiculum{v}}}
+\def\Rbar{{\versiculum{r}}}
+\def\Abar{{\versiculum{a}}}
+
+%\lhead{}\rhead{}
+%\lfoot{}\cfoot{}\rfoot{}
+
+\renewcommand*\bf{\bfseries}
+\renewcommand*\it{\itshape}
+
+\setlength{\columnsep}{18pt}
+\setlength{\columnseprule}{.4pt}
+
+\newcommand{\translation}[2][\em]{{\selectlanguage{american}%
+% 1 - set size and style - defaults to italics
+% 2 - english text
+% 
+{
+%\vspace{-10pt}
+\medskip
+\ifx\translationmargin\undef\def\translationmargin{18pt}\fi
+\begin{list}{}{\setlength\leftmargin{\translationmargin}\setlength\rightmargin{\leftmargin}\setlength\topsep{0pt}}
+\item #1#2%\medskip
+\end{list}%
+}%
+\selectlanguage{latin}%
+%\vspace{-6pt}
+}}
+
+\newcommand{\translationcolumns}[2][\relax]{%
+\selectlanguage{american}
+#1
+\noindent%
+\begin{multicols}{2}%
+{\noindent#2}
+\end{multicols}
+\selectlanguage{latin}
+}
+\newcommand{\translationcolumnsindent}[2][\relax]{%
+\selectlanguage{american}
+#1
+\begin{multicols}{2}%
+{#2}
+\end{multicols}
+\selectlanguage{latin}
+}
+
+\newcommand{\medianttermination}[2]{
+% 1 - Mediant of 2 accents
+% 2 - Termination of 1 accent with 2 preperatory syllables
+\selectlanguage{american}
+\setlength{\columnseprule}{0pt}
+\begin{multicols}{2}
+\oldstylenums{#1}\columnbreak
+\oldstylenums{\begin{flushright}#2\end{flushright}}%
+\end{multicols}
+\setlength{\columnseprule}{.4pt}
+\selectlanguage{latin}
+}
+
+\newcounter{dropcapcounter}
+\newcommand{\dropcap}[3][]{%
+% 1 - optional command
+% 2 - language
+% 3 - text
+%\noindent%
+\vspace*{-1ex}%
+\StrPosition{#3}{ }[\mypos]%
+\ifnum\mypos=2
+% find the next space then
+\StrPosition[2]{#3}{ }[\mypos]%
+\fi
+\setcounter{dropcapcounter}{\mypos - 1}
+\lettrine{\StrLeft{#3}{1}}%
+   {#1\StrMid{#3}{2}{\thedropcapcounter}} 
+\foreignlanguage{#2}{#1\StrGobbleLeft{#3}{\mypos}}%
+}
+
+\newcommand{\dropcapnospace}[3][]{%
+% 1 - optional command
+% 2 - language
+% 3 - text
+%\noindent%
+\StrPosition{#3}{ }[\mypos]%
+\ifnum\mypos=2
+% find the next space then
+\StrPosition[2]{#3}{ }[\mypos]%
+\fi
+\setcounter{dropcapcounter}{\mypos - 1}
+\lettrine{\StrLeft{#3}{1}}%
+   {#1\StrMid{#3}{2}{\thedropcapcounter}} 
+\foreignlanguage{#2}{#1\StrGobbleLeft{#3}{\mypos}}%
+}
+
+\newcommand{\olderprayer}[2]{
+% 1 - latin
+% 2 - english
+{\setlength{\columnsep}{18pt}
+\setlength{\columnseprule}{.4pt}
+\begin{multicols}{2}
+\selectlanguage{latin}
+\dropcap{latin}{#1}%
+\columnbreak
+\selectlanguage{american}
+\dropcap{american}{#2}
+\selectlanguage{latin}
+\end{multicols}
+}
+}
+
+\newcommand{\oldprayer}[2]{
+% 1 - latin
+% 2 - english
+% requires columns environment
+\noindent%\selectlanguage{latin}
+\dropcap{latin}{#1} &% \selectlanguage{american}
+\dropcap{american}{#2} \selectlanguage{latin}
+}
+
+\newcommand{\prayer}[2]{
+% 1 - latin
+% 2 - english
+% requires columns environment
+%\noindent%\selectlanguage{latin}
+\colchunk{\dropcap{latin}{#1}} % \selectlanguage{american}
+\colchunk{\dropcap{american}{#2}} \selectlanguage{latin}
+}
+
+\newcommand{\lesson}[4][]{
+% 1 - optional for english translation
+% 2 - latin first few words
+% 3 - latin bulk
+% 4 - english
+% requires columns environment
+%\noindent%\selectlanguage{latin}
+\colchunk{\dropcap{latin}{#2} #3} % \selectlanguage{american}
+\colchunk{\dropcap[#1]{american}{#4}} \selectlanguage{latin}
+}
+
+\newcommand{\paracolprayer}[2]{
+% 1 - latin
+% 2 - english
+% requires columns environment
+%\noindent%\selectlanguage{latin}
+\begin{column}{\dropcap{latin}{#1}}\end{column}
+\begin{column}{\dropcap{american}{#2}}\end{column} \selectlanguage{latin}
+}
+
+\newcommand{\newprayer}[3][\null]{
+% 1 - format
+% 2 - latin
+% 3 - english
+% requires columns environment
+%\noindent%\selectlanguage{latin}
+\colchunk{#1 \dropcap{latin}{#2}} % \selectlanguage{american}
+\colchunk{#1 \dropcap{american}{#3}} \selectlanguage{latin}
+}
+
+\newlength{\mycolwidth}%
+
+\renewcommand{\emph}[1]{{\em #1}}
+\renewcommand{\textbf}[1]{{\bfseries #1}}
+\def\greitalic#1{%
+  {\itshape #1}%
+  \relax %
+}
+\def\gresmallcaps#1{%
+  {\scshape #1}%
+  \relax %
+}
+\def\greboldfont#1{%
+  {\bfseries #1}%
+  \relax %
+}
+
+\newenvironment{oldcolumns}{
+	\setlength\mycolwidth{.5\linewidth}%
+	%\setlength\arraystretch{0pt}%
+	\addtolength\mycolwidth{-\tabcolsep}%
+	\noindent\begin{tabular}{@{}p{\mycolwidth}|p{\mycolwidth} @{}}%
+}{
+	\end{tabular}
+}
+
+\ifx\undefined\useparacol
+\newenvironment{columns}{
+	\begin{parcolumns}[rulebetween]{2}
+}{
+	\end{parcolumns}
+}
+%\let\minipageitem=\item
+\newcommand{\minipageitem}[1]{\item #1 %
+\ifx\lalinebreakafterverse\undefined\else
+\ifnum\value{vcounter}=\lalinebreakafterverse\\\fi%
+\fi
+\ifx\lalinebreakafterversex\undefined\else
+\ifnum\value{vcounter}=\lalinebreakafterversex\\\fi%
+\fi
+\ifx\lalinebreakafterversexx\undefined\else
+\ifnum\value{vcounter}=\lalinebreakafterversexx\\\fi%
+\fi
+}
+\newcommand{\enminipageitem}[1]{\item #1 %
+\ifx\enlinebreakafterverse\undefined\else
+\ifnum\value{vcounter}=\enlinebreakafterverse\\\fi%
+\fi
+\ifx\enlinebreakafterversex\undefined\else
+\ifnum\value{vcounter}=\enlinebreakafterversex\\\fi%
+\fi
+\ifx\enlinebreakafterversexx\undefined\else
+\ifnum\value{vcounter}=\enlinebreakafterversexx\\\fi%
+\fi
+}
+%
+\else%
+%
+\newenvironment{columns}{
+    \begin{paracol}{2}
+}{
+    \end{paracol}
+}
+\newcommand{\colchunk}[1]{
+\begin{column}#1\end{column}
+}
+%\let\minipageitem=\item
+\def\minipageitem#1{\parbox{\hsize}{\item#1\vspace{1.5pt}}}
+%\def\minipageitem#1{\parbox{\hsize}{\item #1}}
+\fi
+
+\newcommand{\versicle}[2]{
+% 1 - latin
+% 2 - english
+\colchunk{\selectlanguage{latin}\Vbar{}~#1}
+\colchunk{\selectlanguage{american}\Vbar{}~#2}
+\colplacechunks{}
+}
+
+\newcommand{\response}[2]{
+% 1 - latin
+% 2 - english
+\colchunk{\selectlanguage{latin}\Rbar{}~#1}
+\colchunk{\selectlanguage{american}\Rbar{}~#2}
+\colplacechunks{}
+}
+
+\newcommand{\oldversicle}[2]{
+% 1 - latin
+% 2 - english
+\foreignlanguage{latin}{\Vbar{}~#1} & \foreignlanguage{american}{\Vbar{}~#2}\\
+}
+
+\newcommand{\oldresponse}[2]{
+% 1 - latin
+% 2 - english
+\foreignlanguage{latin}{\Rbar{}~#1} & \foreignlanguage{american}{\Rbar{}~#2}\\
+}
+
+%\let\originalitem=\item
+%\def\item{\originalitem}
+\newcounter{vcounter}
+\newenvironment{psalmverses}[1][0]{
+% 1 - number to start on
+\begin{list}{\arabic{vcounter}.}{%
+%\setlength\baselineskip{0pt}
+\setlength\itemsep{1pt}%
+\usecounter{vcounter}%
+\setlength\parsep{0pt}%
+\setlength\labelwidth{50pt}\setlength\leftmargin{0pt}\setlength\itemindent{6ex}}%
+\setlength{\parfillskip}{0pt plus\dimexpr\linewidth-2\parindent}
+\setcounter{vcounter}{#1}%
+}{\ifx\undefined\useparacol%
+\vspace{-12pt}%
+\fi%
+\end{list}}
+
+\newcounter{vrcounter}
+\newenvironment{vrlist}{
+  \begin{list}{\ifodd\value{vrcounter}\Vbar{}\else\Rbar{}\fi}{%
+    \setlength\itemsep{1pt}%
+    \usecounter{vrcounter}%
+    \setlength\parsep{0pt}%
+    \setlength\labelwidth{50pt}\setlength\leftmargin{0pt}\setlength\itemindent{6ex}
+  }%
+  \setcounter{vrcounter}{0}%
+}{\ifx\undefined\useparacol%
+  \vspace{-12pt}%
+  \fi%
+  \end{list}
+}
+
+
+\def\boldVerse{T}
+\newenvironment{boldnumpsalmverses}[1][0]{
+% 1 - number to start on
+\begin{list}{% bold every other verse
+\if\boldVerse T\textbf{\arabic{vcounter}}\global\def\boldVerse{F}%
+\else\arabic{vcounter}\global\def\boldVerse{T}%
+\fi.}{
+\setlength\baselineskip{0pt}
+\setlength\itemsep{1pt}
+\usecounter{vcounter}
+\setlength\parsep{0pt}
+\setlength\labelwidth{50pt}\setlength\leftmargin{0pt}\setlength\itemindent{6ex}}
+\setcounter{vcounter}{#1}
+}{\end{list}}
+
+\newenvironment{oddnumpsalmverses}[1][2]{
+% 1 - number to start on
+\begin{list}{\arabic{vcounter}.\addtocounter{vcounter}{1}}{
+\setlength\baselineskip{0pt}
+\setlength\itemsep{1pt}
+\usecounter{vcounter}
+\setlength\parsep{0pt}
+\setlength\labelwidth{50pt}\setlength\leftmargin{0pt}\setlength\itemindent{6ex}}
+\setcounter{vcounter}{#1}
+}{\end{list}}
+
+\newenvironment{magnificat}[2][2]{
+% 1 - number to start on
+% 2 - name of magnificat to include
+\gresetinitiallines{0}
+\gregorioscore{#2}
+%\normalsize
+\ifx\premagtexverses\undefined\else\premagtexverses\fi
+\begin{psalmverses}[#1]
+}{\end{psalmverses}}
+
+\newenvironment{boldnummagnificat}[2][2]{
+% 1 - number to start on
+% 2 - name of magnificat to include
+\gresetinitiallines{1}
+\gregorioscore{#2}
+%\normalsize
+\begin{boldnumpsalmverses}[#1]
+}{\end{boldnumpsalmverses}}
+
+\newenvironment{oddversesmagnificat}[2][2]{
+% 1 - number to start on
+% 2 - name of magnificat to include
+\gresetinitiallines{1}
+\gregorioscore{#2}
+%\normalsize
+\begin{oddnumpsalmverses}[#1]
+}{\end{oddnumpsalmverses}}
+
+\newlength{\annotwidth}
+\newlength{\annottwowidth}
+\newlength{\annotheight}%
+\newlength{\annottwoheight}% unused
+\newlength{\Etextheight}% unused
+\newlength{\spacewidth}
+\newlength{\initwidth}
+\newlength{\alsinitialsize}
+% grefactor must be set before calling!
+\newcommand{\aloldsetinitialspacing}[1]{%
+% 1 - initial, e.g., I
+\settowidth{\annotwidth}{\annot\hspace{0.5pc}}
+\settoheight{\Etextheight}{E}
+\ifx\annottwo\undefined
+    %\settoheight{\annotheight}{\annot}
+    \setlength{\annotheight}{13pt}
+\else%
+    \setlength{\annotheight}{0pt}
+    \settowidth{\annottwowidth}{\annottwo\hspace{0.5pc}}
+    %\settoheight{\annottwoheight}{\annottwo}
+    %\addtolength{\annotheight}{\annottwoheight}
+    \ifdim\annottwowidth>\annotwidth%
+        \setlength{\annotwidth}{\annottwowidth}
+    \fi
+\fi
+%
+%text height is: \the\textheight
+%E text height is: \the\Etextheight
+%grefactor is: \the\grefactor
+%Annot height is: \the\annotheight
+\setlength{\alsinitialsize}{\grefactor pt * \real{3.7} - 30pt + \annotheight}% \annotheight * \real{1.6}} % + \Etextheight - \annotheight}
+%\def\greinitialformat##1{%
+%{\fontsize{\alsinitialsize}{\alsinitialsize}\selectfont ##1}%
+%}
+\grechangestyle{initial}{\fontsize{\alsinitialsize}{\alsinitialsize}\selectfont}%
+%
+\settowidth{\initwidth}{\greinitialformat{#1}}
+\settowidth{\spacewidth}{\greinitialformat{#1}\hspace{1pc}}
+\ifdim\spacewidth<\annotwidth%
+    \setlength{\spacewidth}{\annotwidth}
+\fi
+\addtolength{\spacewidth}{-\initwidth}
+\setlength{\spacewidth}{0.25\spacewidth}
+%
+\setspaceafterinitial{\spacewidth}{0}
+\setspacebeforeinitial{\spacewidth}{0}
+%
+\greannotation{\annot}
+\ifx\annottwo\undefined\else%
+\greannotation{\annottwo}
+\fi
+}
+\newcommand{\alsetinitialspacing}[1]{%
+\greannotation{\annot}
+\ifx\annottwo\undefined\else%
+\greannotation{\annottwo}
+\fi
+%\def\greinitialformat##1{%
+%{\fontsize{32pt}{32pt}\selectfont ##1}%
+%}
+%\grechangestyle{initial}{\fontsize{32pt}{32pt}\selectfont}%
+}

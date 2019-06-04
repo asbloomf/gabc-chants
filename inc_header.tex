@@ -9,6 +9,9 @@
 \else
     \geometry{papersize={\mywidth,\myheight}}
 \fi
+\usepackage{expl3}
+\let\luatexlocalrightbox\localrightbox
+\let\luatexlocalleftbox\localleftbox
 \usepackage[allowdeprecated=false]{gregoriotex} % for gregorio score inclusion
 \usepackage{import}
 \ifdefined\gresetcompilegabc

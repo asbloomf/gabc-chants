@@ -4,6 +4,7 @@ name: canticle of moses;
 occasion: Matins;
 date: 2013;
 style: modern;
+initial-style: 0;
 %%
-(c3)1. C{a}n(i)té(hi)mus(i) Dó(i)mi(i)no :(i) glo(i)ri(i)ó(i)se(i) e(i)nim(i) ma(i)<i>gni</i>(h)<i>fi</i>(i)<b>cá</b>(j)tus(ir) est,(i.) <v>\greheightstar</v>(:) e(i)quum(i) et(i) a(i)scen(i)só(i)rem(i) de(i)<i>jé</i>(h)<i>cit</i>(i) <i>in</i>(j) <b>ma</b>(h fr)re.(f.) (::)
-<i>Flex:</i>()  pu(i)gná(i)tor,(h.) †(i i i  ::)
+(c3)1. C{a}n(i)té(hi)mus(i) Dó(i)mi(i)no :(i) glo(i)ri(i)ó(i)se(i) e(i)nim(i) ma(i)<i>gni</i>(h)<i>fi</i>(i)<b>cá</b>(j)tus(ir) est,(i.) <v>\greheightstar</v>(:) e(i)quum(i) et(i) a(i)scen(i)só(i)rem(i) <nlba>de(i)<i>jé</i>(h)<i>cit</i>(i) <i>in</i>(j) <b>ma</b>(h fr)re.</nlba>(f.) (::)
+<clear><i>Flex~:</i>~p{u}(i)gná(i)tor,(h.) †(i i i  ::)

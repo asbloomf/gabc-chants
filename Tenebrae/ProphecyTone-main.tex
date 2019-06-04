@@ -1,52 +1,62 @@
 ﻿%\vspace*{-50pt plus 20pt}
 \selectlanguage{american}
-\chapter{Tone for the Prophecy.}
-%\begin{center}{%\addfontfeature{Numbers=Lining}%
-%%\textsc
-%\label{prophecytone}
-%\huge{Tone for the Prophecy.}
-%}\end{center}
-\large\grechangestaffsize{17}
+\begin{center}{%\addfontfeature{Numbers=Lining}%
+%\textsc
+\label{prophecytone}
+\huge{Tone for the Prophecy.}
+}\end{center}
+\mylessonsize
 {
-\def\greabovelinestextstyle#1{%
-  \adjustbox{padding=0pt 0pt 0pt 3pt,raise=-1pt}{\small\emph{#1}}%
-  \relax %
-}
-\printgabc{}{}{L}{prophecyTone}
+\grechangestyle{abovelinestext}{\begin{normalsize}\begin{itshape}} %
+[\end{itshape}\end{normalsize}]
+\gresetinitiallines{0}%
+\gregorioscore{prophecyTone}
 }
 
-\bigskip\bigskip
-\emph{Examples of the flex in the case of a monosyllable or of a Hebrew word.}
-\medskip
+\bigskip%\bigskip
+{\emph{Examples of the flex in the case of a monosyllable or of a Hebrew word.}}
+\bigskip
 %\let\oldgreabovelinestextstyle=\greabovelinestextstyle
 {
-\def\greabovelinestextstyle#1{%
-  \adjustbox{padding=0pt 0pt 0pt 3pt,raise=-1pt}{\small{#1}}%
-  \relax %
-}
+\grechangestyle{abovelinestext}{\begin{normalsize}} %
+[\end{normalsize}]
 \greseteolcustos{manual}
-\printgabc{}{}{}{prophecyToneFlex}
+\gresetinitiallines{0}%
+\gregorioscore{prophecyToneFlex}
 
-\bigskip\bigskip
-\emph{Examples of the full stop in the case of a monosyllable or of a Hebrew word.}
-\medskip
+\bigskip%\bigskip
+{\emph{Examples of the full stop in the case of a monosyllable or of a Hebrew word.}}
+\bigskip
 \greseteolcustos{manual}
-\printgabc{}{}{}{prophecyToneFullStop}
+\gresetinitiallines{0}%
+\gregorioscore{prophecyToneFullStop}
 }
 \let\greabovelinestextstle=\oldgreabovelinestextstyle
-\bigskip\bigskip
+%\bigskip%\bigskip
+\needspace{8\baselineskip}
 \begin{multicols}{2}%
-\emph{The flex is made towards the middle of each sentence; it is omitted only if the sentence is very short.  In the longer sentences, the flex may be repeated several times if the sense allows this being done.  The metrum does not occur in this tone.
+{\emph{The flex is made towards the middle of each sentence; it is omitted only if the sentence is very short.  In the longer sentences, the flex may be repeated several times if the sense allows this being done.  The metrum does not occur in this tone.
 
 The flex is made by lowering the voice on the last syllable only, even if the penultimate syllable be not accented.  At the full stop, the voice is lowered on the penultimate syllable, if this be short.
 
-The interrogation has only one modulation, that which has already been indicated for the Prophecy.  It is the same for the Epistle, the Gospel, and the Lessons.  Very short interrogative sentences are sung as follows:}
+% from page 121* in Graduale Romanum
+At colons that introduce speech, whether quoted or indirect, a flex is not made, but instead the last syllable is lengthened, and a slight pause added:}}
 \end{multicols}
 
-\large
-\medskip
-\printgabc{}{}{}{ShortInterrogatives}
+%\large
 \bigskip
+\gresetinitiallines{0}%
+\gregorioscore{IntroducingSpeech}
+%\bigskip
 \begin{multicols}{2}%
-\emph{However, the interrogatory formula must never be used at the end, unless the \emph{Tu autem}. is to follow.  If an interrogation occurs at the end of the text to which the \emph{Tu autem}. is not to be added, the ordinary cadential formula must be used.}
+{\emph{The interrogation has only one modulation, that which has already been indicated for the Prophecy.  It is the same for the Epistle, the Gospel, and the Lessons.  Very short interrogative sentences are sung as follows:}}
+\end{multicols}
+
+%\large
+\bigskip
+\gresetinitiallines{0}%
+\gregorioscore{ShortInterrogatives}
+%\bigskip
+\begin{multicols}{2}%
+{\emph{However, the interrogatory formula must never be used at the end, unless the \emph{Tu autem}. is to follow.  If an interrogation occurs at the end of the text to which the \emph{Tu autem}. is not to be added, the ordinary cadential formula must be used.}}
 \end{multicols}

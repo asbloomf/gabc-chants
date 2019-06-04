@@ -1,7 +1,10 @@
-\usepackage{../definepsalms}
+\usepackage{definepsalms}
 \usepackage{adjustbox}
+\usepackage{xstring}
+\usepackage{paracol,blindtext,setspace}
+\usepackage{xcolor}
 \sloppy
-\input{../inc_header} %
+\input{inc_header_main} % this had been in the root directory
 
 \hyphenation{mi-se-ri-cór-dia}
 
@@ -10,7 +13,219 @@
 %\let\oldRbar=\Rbar
 %\def\Rbar{\oldRbar\hspace*{-2pt}}
 
+\makeatletter
+
+\greloadspaceconf{normal}%
+\grechangestyle{initial}{\fontsize{34pt}{34pt}\selectfont}%
+\def\mylargesize{%
+  \ifnum\gre@factor<23%
+    \greloadspaceconf{large}\grechangestaffsize{23}%
+    \grechangestyle{initial}{\fontsize{48pt}{48pt}\selectfont}%
+  \fi%
+  \Large%
+}
+\def\mynormalsize{%
+  \ifnum\gre@factor>17%
+    \grechangestaffsize{17}\greloadspaceconf{normal}%
+    \grechangestyle{initial}{\fontsize{34pt}{34pt}\selectfont}%
+  \fi%
+  \large
+}
+
+\makeatother
+
+\fboxrule2pt
+\newcommand{\highlight}[1]{%
+  %\colorbox{yellow}{#1}
+  \fcolorbox{black}{white}{#1}
+}
+\newcommand{\highlightsymbol}[1]{%
+  \highlight{#1}
+}
+\def\greheightstarh{\highlightsymbol{\greheightstar}}
+%\def\greheightstarh{\greheightstar}
+\def\Vbarh{\highlightsymbol{\Vbar}}
+\def\Rbarh{\highlightsymbol{\Rbar}}
+
+\def\myantsize{\mynormalsize}
+\def\mypsalmsize{\mynormalsize}
+\def\myvrsize{\mynormalsize}
+\def\mylessonsize{\mylargesize}
+\def\myrespsize{\mylargesize}
+\def\mytranslationsize{\large}
+
+\newcommand*{\IsInteger}[3]{%
+    \IfStrEq{#1}{ }{%
+        #3% is a blank string
+    }{%
+        \IfInteger{#1}{#2}{#3}%
+    }%
+}%
+
+\newcounter{mydccounter}
+\newcommand{\mydropcap}[3][latin]{%
+% 1 language
+% 2 first word or most of text
+% 3 rest of text
+  \StrPosition{#2}{ }[\mypos]%
+  \ifnum\mypos=2
+  % find the next space then
+    \StrPosition[2]{#2}{ }[\mypos]%
+  \fi
+  \ifnum\mypos=0
+    \StrLen{#2}[\mypos]
+    \setcounter{mydccounter}{\mypos}
+  \else
+    \setcounter{mydccounter}{\mypos - 1}
+  \fi
+  \lettrine{\StrLeft{#2}{1}}%
+     {\StrMid{#2}{2}{\themydccounter}}%
+  {%
+    \selectlanguage{#1}
+    \StrGobbleLeft{#2}{\mypos} #3
+  }%
+}
+\newcommand{\tenebraelesson}[4][\columnratio{0.56}]{%
+% 1 - optional
+% 2 - latin first word
+% 3 - latin rest of text
+% 4 - english text
+%\noindent%
+#1
+\begin{paracol}{2}
+\begin{leftcolumn}%
+  \mylessonsize
+  \mydropcap[latin]{#2}{#3}
+\end{leftcolumn}
+\begin{rightcolumn}%
+  \mytranslationsize
+  \mydropcap[american]{#4}{}
+\end{rightcolumn}
+\end{paracol}
+}
+\columnratio{0.56}
+
+
+\newcommand{\psalmcolsoverride}[1][0]{
+  \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
+  \IfInteger{#1}{
+    % \ifnum#1=2
+    %   \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
+    % \fi
+    \ifnum#1=4
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.435\linewidth}]{2}}
+    \fi
+    % \ifnum#1=14
+    %   \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
+    % \fi
+    \ifnum#1=15
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.425\linewidth}]{2}}
+    \fi
+    \ifnum#1=21
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
+    \fi
+    \ifnum#1=23
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.4375\linewidth}]{2}}
+    \fi
+    \ifnum#1=26
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.456\linewidth}]{2}}
+    \fi
+    \ifnum#1=29
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.4\linewidth}]{2}}
+    \fi
+    \ifnum#1=35
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
+    \fi
+    \ifnum#1=37
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.4695\linewidth}]{2}}
+    \fi
+    \ifnum#1=39
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.455\linewidth}]{2}}
+    \fi
+    \ifnum#1=50
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.435\linewidth}]{2}}
+    \fi
+    % \ifnum#1=53
+    %   \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
+    % \fi
+    \ifnum#1=58
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
+    \fi
+    \ifnum#1=63
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
+    \fi
+    \ifnum#1=68
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.455\linewidth}]{2}}
+    \fi
+    \ifnum#1=69
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
+    \fi
+    \ifnum#1=70
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.445\linewidth}]{2}}
+    \fi
+    \ifnum#1=71
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43\linewidth}]{2}}
+    \fi
+    \ifnum#1=72
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
+    \fi
+    \ifnum#1=73
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.431\linewidth}]{2}}
+    \fi
+    \ifnum#1=74
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.4525\linewidth}]{2}}
+    \fi
+    \ifnum#1=75
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.425\linewidth}]{2}}
+    \fi
+    \ifnum#1=76
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.4385\linewidth}]{2}}
+    \fi
+    \ifnum#1=84
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.435\linewidth}]{2}}
+    \fi
+    \ifnum#1=87
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth},distance=1.5em]{2}}
+    \fi
+    \ifnum#1=89
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43\linewidth}]{2}}
+    \fi
+    \ifnum#1=91
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
+    \fi
+    \ifnum#1=93
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.4575\linewidth}]{2}}
+    \fi
+    \ifnum#1=142
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.4475\linewidth}]{2}}
+    \fi
+    \ifnum#1=146
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.46\linewidth}]{2}}
+    \fi
+    \ifnum#1=147
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.425\linewidth}]{2}}
+    \fi
+    \ifnum#1=150
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.435\linewidth}]{2}}
+    \fi
+  }{
+    \IfStrEq{\canticleof}{Moses}
+    {
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}%262
+    }{}
+    \IfStrEq{\canticleof}{Habacuc}
+    {
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.417\linewidth}]{2}}%262
+    }{}
+    \IfStrEq{\canticleof}{Ezechias}
+    {
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.445\linewidth}]{2}}%262
+    }{}
+  }
+}
+
 \ifbook{
+\cfoot{}
 \lfoot[\thepage]{}
 \rfoot[]{\thepage}
 }
@@ -23,53 +238,56 @@
 }
 %\renewcommand\headrulewidth{\oldheadrulewidth}
 \chead{
-  \ifnum\thepage>1
-    \addfontfeature{Numbers=Lining}%
-    \heading{} \ifx\matinsnocturn\undefined\else(\matinsnocturn)\fi
+  \ifx\heading\undefined\else
+    \ifnum\thepage>1
+      \addfontfeature{Numbers=Lining}%
+      \heading{} \ifx\matinsnocturn\undefined\else(\matinsnocturn)\fi
+    \fi
   \fi
 }
 
-\newcommand{\writeheading}[1]{
+\newcommand{\writeheading}[2][\medskip]{
   \large
   \begin{center}{
   \addfontfeature{Numbers=Lining}
-  \textsc{#1}
+  \textsc{#2}
   }\end{center}
-  \medskip
+  #1
 }
 \newcommand{\printseparation}{
   %\hfil\rule{3in}{0.5pt}\hfil
   \bigskip
-  \smallskip
+  %\smallskip
 }
-\newcommand{\alternatemusicintro}{\emph{Alternately, the following three part arrangement can be sung in place of the chant.}}
+\newcommand{\alternatemusicintro}[1][three]{\emph{Alternately, the following #1 part arrangement can be sung in place of the chant.}}
+\newcommand{\alternatemusicintrobreak}[1][three]{\emph{Alternately, the #1 part arrangement found after the page turn can be sung in place of the chant.}}
+
 \def\betweenLilyPondSystem#1{
-  \ifnum#1>1
+  %\ifnum#1>1
     \vfil\noindent
-  \else
-    \linebreak
-  \fi
-  %\vspace{0.5\baselineskip}
+  %\else
+  %  \linebreak
+  %\fi
 }
 \newcommand{\includelilypond}[1]{
   \noindent
   \import{lilypond/}{#1}
 }
 
-\newcommand{\startday}[2]{
+\newcommand{\startday}[3][\medskip]{
 %
 % The title page:
 \pagebreak
 \thispagestyle{empty}
 \cleardoublepage
 \thispagestyle{empty}
-\gdef\heading{#1 At \officehour}
+\gdef\heading{#2 At \officehour}
 \begin{center}{\addfontfeature{Numbers=Lining}%
 \thispagestyle{empty}
 \vspace*{\stretch{1}}
-\Huge \textsc{#1}
+\Huge \textsc{#2}
 \vspace{\stretch{2}}
-\label{#2}
+\label{#3}
 
 \pagebreak
 \thispagestyle{empty}
@@ -83,7 +301,7 @@
 
 \gdef\officehour{Matins}
 \gdef\matinsnocturn{1st Nocturn}
-\writeheading{In the 1st Nocturn}
+\writeheading[#1]{In the 1st Nocturn}
 }
 
 \def\nogloriapatri{T}

@@ -10,15 +10,16 @@ global = {
   \key f \major
   \time 3/2
   \tempo "Lento"
+  \override Script.avoid-slur = #'around
 }
 
 sopMusic = \relative c' {
   \clef "treble"
-  f1_\pp^\<( g2\!) | f1.^\> | f2^\<( g\!) f^\> | f1\! g2 | a( c f | e) d c-^^\< ~ c\! b4( a) b2 | c1. | \break
-  c1.^\< | bf?1^\> bf2^\< | a-^\!( f^\< e\!) | d1. |
+  f1_\pp^\<( g2) | f1.^\> | f2^\<( g) f^\> | << f1 { s2 s2\! } >> g2 | a( c f | e) d c-^^\< ~ << c { s4 s4\! } >> b4( a) b2 | c1. | \break
+  c1.^\< | << bf?1 { s2^\> s4 s4^\< } >> bf2 | a-^\!( f^\< e\!) | d1. |
   % 1st or 2nd night
-  e1.^\< | f1. | g1.\! | af1. | bf2 c df | \break
-  c1. | c1.\fermata \bar "||" f,1^\<^\markup \italic { Tertia nocte additur: } g2 | f1\> f2 | f\<( g\! f) | f1.^\> | a2^\<( c) f\! | e(-^ d) c ~ c b4(-^ a-^ b2-^) | c1. | \break
+  e1.^\< | f1. | g1.\! | af1. | bf2^\< c df\! | \break
+  c1. | c1.\fermata \bar "||" f,1^\<^\markup \italic { Tertia nocte additur: } g2 | f1\> f2 | f\<( g\! f) | f1.^\> | a2^\<( c) f\! | e(-^ d) c ~ c b4_(-^ a-^ b2-^) | c1. | \break
   bf?2 bf bf | a( d) a | g1. | a1. | bf2^\< bf^\markup \italic "allarg." bf4 bf | a2\!( d) c | f( e d | c f, bf | a1 g2) | a1.^\fermata \bar "|."
 }
 % hiddenMusic = \relative c' {
@@ -28,7 +29,7 @@ sopMusic = \relative c' {
 %   f1. f2 f f4 f f1 f2 f1.( f1. f1.) f1.
 % }
 sopWords = \lyricmode {
-  \set fontSize = #0.5
+  \set fontSize = #1.0
   %\set vocalName = "2. "
   %\set shortVocalName = "2. "
   %Chri -- stus fa -- ctus est pro | no -- bis
@@ -49,12 +50,12 @@ altoMusic = \relative c' {
   f1. | d1 d2 | d1( cs2) | a1. |
   % 1st or 2nd night
   c?1. | c1. | ef1. | ef1. | ef2 ef f |
-  f( e?4-^^\< d?-^ e2-^\!) | f1. \bar "||" f1 e2 | d1 d2 | d1. | c1. | f2( g) f | g( f) g | d1. | e1. |
+  f( e?4^^^\< d^^ e2^^\!) | f1. \bar "||" f1 e2 | d1 d2 | d1. | c1. | f2( g) f | g( f) g | d1. | e1. |
   d2 d d | d( f) d | d1. | e1. | g2 d d4 d | d2( f) g | f1.( f1.)( | f2)( e4 d e2) | f1. \bar "|."
 }
 
 altoWords = \lyricmode {
-  \set fontSize = #0.5
+  \set fontSize = #1.0
   Chri -- stus fa -- ctus est pro | no -- bis o -- bé -- di -- ens |
   us -- que ad | mor -- tem, o -- bé -- di -- ens || us -- que ad |
   mor -- tem. | Pro -- pter quod et | De -- us, | ex -- al -- tá -- vit | il -- lum, |
@@ -86,7 +87,7 @@ raiseLyrics = {
 }
 
 tenorWords = \lyricmode {
-  \set fontSize = #0.5
+  \set fontSize = #1.0
   Chri -- stus fa -- ctus est pro | no -- bis o -- bé -- di -- ens |
   \dropLyrics
   us -- que ad | mor -- tem,
@@ -94,14 +95,16 @@ tenorWords = \lyricmode {
   <<
         %\once \override LyricText.self-alignment-X = #RIGHT
         % \markup {\italic { \tiny{1a nocte: }} o } --
-        { \set stanza = #"1a nocte:"
+        { %\set stanza = #"1a nocte:"
+        \set stanza = \markup \medium \italic \concat { " (1" \lower#0.5 \normal-size-super"a" " nocte)" }
         o -- bé -- di -- ens || us -- que ad | mor -- tem. }
         \new Lyrics = "secondNight"
         \with { alignBelowContext = #"tenor" } {
           \set associatedVoice = "tenor"
+          \set fontSize = #1.0
           % \once \override LyricText.self-alignment-X = #RIGHT
           % \markup {\italic { \tiny{2a nocte additur: }} mor } --
-          \set stanza = #"2a nocte:"
+          \set stanza = \markup \medium \italic \concat { " (2" \lower#0.5 \normal-size-super"a" " nocte)" }
           mor -- tem au -- tem cru -- _  _  _  cis.
         }
   >>
@@ -122,7 +125,7 @@ bassMusic = \relative a {
 }
 
 bassWords = \lyricmode {
-  \set fontSize = #0.5
+  \set fontSize = #1.0
   Chri -- stus fa -- ctus est pro | no -- bis o -- bé -- di -- ens |
   us -- que ad | mor -- tem, o -- bé -- di -- ens || us -- que ad |
   mor -- tem. | Pro -- pter quod et | De -- us, | ex -- al -- tá -- vit | il -- lum, |

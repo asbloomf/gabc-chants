@@ -4,9 +4,10 @@ name: canticle of Habacuc chap 3, 2-19;
 occasion: Lauds;
 date: 2013;
 style: modern;
+initial-style: 0;
 %%
-(c4)1. D{ó}(f)mi(gh)ne,(h) au(h)dí(h)vi(h) au(h)di(h)ti(h)<b>ó</b>(ixi hr)nem(h) <b>tu</b>(g hr)am,(h.) <v>\greheightstar</v>(:) <i>et</i>(f) <b>tí</b>(gh)mu(gr)i. <i>Flex:</i>(gf..   ::)
-%<i>Flex:</i>()
-ter(h)ræ : † <v>\hspace{3ex}</v><i>End of</i> <sp>V/</sp> 2 :(g. h h h   ::)
+(c4)1. D{ó}(f)mi(gh)ne,(h) au(h)dí(h)vi(h) au(h)di(h)ti(h)<b>ó</b>(ixi hr)nem(h) <b>tu</b>(g hr)am,(h.) <v>\greheightstar</v>(:) <i>et</i>(f) <b>tí</b>(gh)mu(gr)i.(gf..) (::)
+%<i>Flex :</i>()
+<clear><i>Flex~:</i>~t{e}r(h)ræ : †(g. h h h) (::)
 %<v>\hspace{-40pt}</v><i>Ending of</i> <sp>V/</sp> 2 : 
-v{i}(h)ví(h)<i>fi</i>(g)<i>ca</i>(f) <b>il</b>(gh gr)lud :(gf..) (::)
+<nlba><i>End of</i> <sp>V/</sp> 2 : v{i}</nlba>(h)ví(h)<i>fi</i>(g)<i>ca</i>(f) <b>il</b>(gh gr)lud :(gf..) (::)

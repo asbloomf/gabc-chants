@@ -2,96 +2,88 @@
 %!TEX root = Saturday.tex
 %\pagebreak
 %\bigskip\bigskip
-\let\matinsnocturn=\undefined
-\needspace{6\baselineskip}
+\global\let\matinsnocturn=\undefined
+%\needspace{6\baselineskip}
 \label{saturday-lauds}
 \writeheading{At Lauds}
-\def\officehour{Lauds}
+\gdef\officehour{Lauds}
 %
-\large
+\myantsize
 \def\nogloriapatri{T}
+\def\psalmtranslationsmall{F}
+%\def\preant{\myantsize}
+%\def\prepsalm{\mypsalmsize}
 {
-\def\preant{\grechangestaffsize{17}\large}
 %\def\preantafter{\grechangestaffsize{17}\large}
-\def\prepsalm{\grechangestaffsize{15}\normalsize}
 \def\anttranslation{O death, I will be thy death; I will be thy destruction, O hell.\needspace{4\baselineskip}}
 %\def\lalinebreakafterthree{T}
-\def\lalinebreakafterverse{10}
-\def\psalmtranslationsmall{T}
+%\def\lalinebreakafterverse{10}
 \printpsalm{1}{50}{4c}{an--o_mors--solesmes}{O}
 }
 %
 \printseparation{}
-%\pagebreak
+%\bigskip\bigskip
+%\bigskip
+\pagebreak
 {
-\def\preant{\grechangestaffsize{17}\large}
-\def\prepsalm{\grechangestaffsize{15}\normalsize}
-\def\psalmtranslationsmall{T}
-\def\anttranslation{They shall mourn for Him as one mourneth for an only son, for the innocent Lord hath been slain.}
+%\def\dontrepeatantiphon{T}
+\def\anttranslation{They shall mourn for Him as one mourneth for an only son, for the innocent Lord hath been slain.\bigskip}
 \printpsalm{2}{91}{4A}{an--plangent_eum--solesmes}{P}
-\let\prepsalm=\undefined
 }
 %
 \printseparation{}
+\bigskip
 %\pagebreak
 {
-\def\preant{\grechangestaffsize{17}\large}
-\def\prepsalm{\grechangestaffsize{15}\normalsize}
-\def\psalmtranslationsmall{T}
+\def\dontrepeatantiphon{T}
 \def\anttranslation{Give heed, all ye people, and see my grief.}
+%\def\prepsalmverses{}
 \printpsalm{3}{63}{7b}{an--attendite_universi--solesmes}{A}
 }%
 \printseparation{}
-\bigskip\bigskip
+%\bigskip%\bigskip
 %\pagebreak
 {
-\def\preant{\grechangestaffsize{17}\large}
-\def\prepsalm{\grechangestaffsize{15}\normalsize}
-\def\prepsalmverses{\vspace{-10pt}}
-\def\psalmtranslationsmall{T}
-\def\anttranslation{From the gate of hell, O Lord, deliver my soul.}
+%\def\prepsalmverses{\vspace{-10pt}}
+\def\anttranslation{From the gate of hell, O Lord, deliver my soul.}%\bigskip\bigskip}
+%\def\prepsalmverses{\bigskip}
 \def\canticleof{Ezechias}
 \def\canticleverses{Is. 38, 10-20}
-\needspace{4\baselineskip}
+%\def\dontrepeatantiphon{T}
 \printpsalm{4}{ezechias38}{2D}{an--a_porta_inferi--solesmes}{A}
 \let\canticleof=\undefined
 \let\canticleverses=\undefined
 \let\prepsalm=\undefined
 }
 %
-%\printseparation
+\printseparation
 \pagebreak
 {
-\def\greseteolcustos{manual}{%
-% the regular greblockcustos is global which messes us up here, so redefine it without the \global
-  \greblockcusto=1\relax %
-  \grelocalrightbox{}%
-  \relax %
-}
-\def\preant{\grechangestaffsize{17}\large}
-\def\prepsalm{\grechangestaffsize{15}\normalsize\greseteolcustos{manual}}
-\def\psalmtranslationsmall{T}
+% \def\greblockcustos{%
+% % the regular greblockcustos is global which messes us up here, so redefine it without the \global
+%   \greblockcusto=1\relax %
+%   \grelocalrightbox{}%
+%   \relax %
+% }
 \def\anttranslation{O all ye that pass by, attend and see if there be any sorrow like unto my sorrow.}
 \def\psalmclef{2}
 \printpsalm{5}{150}{8c}{an--o_vos_omnes--solesmes}{O}
 }
 
 \bigskip
-\printvr[\grechangestaffsize{14}\normalsize]{vr-caroMea}
+\myvrsize
+{\printvr{vr-caroMea}
 {My flesh shall rest in hope.}
 {And Thou wilt not give Thy Holy One to see corruption.}
-
+}
 \bigskip\bigskip
 \pagebreak
 %\needspace{4\baselineskip}
 {
-\def\preant{\grechangestaffsize{17}\large}
-\def\prerepeatantiphon{\normalsize\bigskip}
 \def\magsolemn{T}
-\def\preverses{
-  \grechangestaffsize{15}\normalsize
+%\def\preverses{\mypsalmsize}
+\def\anttranslation{\mytranslationsize The women sitting at the sepulchre mourned, weeping for the Lord.%\vspace{-4pt}
 }
-\def\anttranslation{\normalsize The women sitting at the sepulchre mourned, weeping for the Lord.\vspace{-4pt}}
 \printmag[Benedictus]{1g}{M}{an--mulieres--solesmes}
 }
 %{1g}{an--traditor_autem--solesmes}{T}
@@ -99,21 +91,33 @@
 %\emph{The candles on the triangular candlestick having been extinguished as has already been explained, the one at the top of the triangle alone remains lighted.  During the Canticle \emph{Benedíctus.} the candles on the altar are likewise extinguished one by one, from each side alternately, at every second verse, so that by the last verse all are extinguished.  All other lights and lamps in the church are also put out.}
 %\bigskip%\bigskip
 %\smallskip
-\grechangestaffsize{17}
-\printgabc{Ant.}{5.}{C}{../Tenebrae/an--christus_factus_est--solesmes_saturday_edited}
-
+\pagebreak
+\myrespsize
+{\printgabc{Ant.}{5.}{C}{../Tenebrae/an--christus_factus_est--solesmes_saturday}
+}
 \medskip
 
-\normalsize
 \emph{When the antiphon \emph{Christus fáctus est} is finished, \emph{Páter nóster} is said, in silence throughout.}
 
 \emph{Then is sung, without \emph{Orémus}, to the ferial tone \emph{B} (or the ancient simple tone) :}
 
 \medskip
 
-\begin{parcolumns}[rulebetween]{2}
-\colchunk{\dropcap{latin}{Concéde, quǽsumus, } omnípotens Deus~:~† ut qui Fílii tui resurrectiónem devóta exspectatióne prævenímus;~* ejúsdem resurrectiónis glóriam consequámur.
-\emph{And in silence~:}
-Per eúmdem Dóminum~\dots{}}
-\selectlanguage{american}
-\colchunk{\dropcap{american}{Grant, we beseech thee, } O Almighty God: that we who anticipate the resurrection of thy Son with pious expectation, may obtain the glory of the same resurrection.}\end{parcolumns}
+{\columnratio{0.5}
+\begin{paracol}{2}
+\begin{leftcolumn}%
+	\mydropcap[latin]{Concéde,}{quǽsumus, omnípotens Deus~:~† ut qui Fílii tui resurrectiónem devóta exspectatióne prævenímus;~* ejúsdem resurrectiónis glóriam consequámur.}
+	\emph{And in silence~:}
+	Per eúmdem Dóminum~\dots{}
+\end{leftcolumn}
+\begin{rightcolumn}%
+  \mydropcap[american]{Grant,}{we beseech thee, O Almighty God: that we who anticipate the resurrection of thy Son with pious expectation, may obtain the glory of the same resurrection.}
+\end{rightcolumn}
+\end{paracol}
+}
+
+\bigskip
+
+\emph{All then rise and retire in silence.}
+
+\myantsize

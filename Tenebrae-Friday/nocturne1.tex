@@ -1,78 +1,70 @@
 ﻿\startday{Good Friday}{friday-1}
 
-\large
+\myantsize
+\def\psalmtranslationsmall{F}
 %\printgabc{1. Ant.}{8. c.}{Z}{an--zelus_domus_tuae--solesmes}
-{
-\def\preant{\grechangestaffsize{17}\large}
-\def\prepsalm{\normalsize}
+%\def\preant{\myantsize}
+%\def\prepsalm{\mypsalmsize}
 \def\anttranslation{The kings of the earth stood up, and the princes met together, against the Lord, and against His Anointed.}
-\def\psalmtranslationsmall{T}
 %\def\prerepeatantiphon{\vspace{-20pt}}
-\printpsalm{1}{2}{8G}{an--astiterunt_reges--solesmes}{A}
-}
-%
-{
-\def\preant{\grechangestaffsize{17}\large}
-\def\prepsalm{\normalsize\grechangestaffsize{15}}
-\def\psalmtranslationsmall{T}
-\def\anttranslation{They parted my garments amongst them, and upon my vesture they cast lots.}
-\printpsalm{2}{21}{8G}{an--diviserunt_sibi--solesmes}{D}
-\let\prepsalm=\undefined
-}
+{\def\dontrepeatantiphon{T}
+\printpsalm{1}{2}{8G}{an--astiterunt_reges--solesmes}{A}}
+\bigskip\bigskip
 \bigskip
 %
-{
-\def\preant{\grechangestaffsize{17}\large}
+{\def\anttranslation{They parted my garments amongst them, and upon my vesture they cast lots.}
+\def\prepsalmverses{\medskip}
+\printpsalm{2}{21}{8G}{an--diviserunt_sibi--solesmes}{D}}
+%
 %\def\preantafter{\grechangestaffsize{15}\normalsize}
 %\def\dontrepeatantiphon{T}
-\def\psalmtranslationsmall{T}
+\pagebreak
 \def\anttranslation{False witnesses are risen up against me, and iniquity hath belied itself.}
-\def\prepsalm{\grechangestaffsize{16}\normalsize}
-\printpsalm{3}{26}{8G}{an--insurrexerunt_in_me--solesmes}{I}
-\let\prepsalm=\undefined
-}
+{
+\def\lalinebreakafterverse{13}
+\printpsalm{3}{26}{8G}{an--insurrexerunt_in_me--solesmes}{I}}
 
 \bigskip
-{
 %\def\vrnospace{T}
-\printvr[\normalsize]{vr-diviserunt}
+\myvrsize
+{\printvr{vr-diviserunt}
 {They parted my garments among them.}
-{And upon my vesture they cast lots.}
-}
+{And upon my vesture they cast lots.}}
 
 \bigskip
 Pater noster. \emph{in silence.}
 
 \bigskip\bigskip
+\pagebreak
 \hspace{10ex}\textsc{lesson i}\hfill\emph{Chap. 2, 8-15}\hspace{10ex}
 
-{\normalsize\grechangestaffsize{14}
-\printgabc{}{}{D}{lesson1-friday-DeLamentationeJeremiae}
+\mylessonsize
+{\printgabc{}{}{D}{lesson1-friday-DeLamentationeJeremiae}}
 
-\translationcolumns[\normalsize]{\emph{Heth}. The Lord hath purposed to destroy the wall of the daughter of Sion: He hath stretched out His line, and hath not withdrawn His hand from destroying: and the bulwark hath mourned, and the wall hath been destroyed together.
+\translationcolumns[\mytranslationsize]{\emph{Heth}. The Lord hath purposed to destroy the wall of the daughter of Sion: He hath stretched out His line, and hath not withdrawn His hand from destroying: and the bulwark hath mourned, and the wall hath been destroyed together.
 \emph{Teth}. Her gates are sunk into the ground: He hath destroyed, and broken her bars: her king and her princes are among the Gentiles: the law is no more, and her prophets have found no vision from the Lord.
 \emph{Jod}. The ancients of the daughter of Sion sit upon the ground, they have held their peace: they have sprinkled their heads with dust, they are girded with haircloth, the virgins of Jerusalem hang down their heads to the ground.
 \emph{Caph}. Mine eyes have failed with weeping, my bowels are troubled: my liver is poured out upon the earth, for the destruction of the daughter of my people, when the children, and the sucklings fainted away in the streets of the city.
 Jerusalem, Jerusalem, return to the Lord thy God.}
-}
 
 \printseparation
 %\bigskip
+\pagebreak
 
-{
-\grechangestaffsize{17}
-\printgabc{Resp. 1}{3.}{O}{re--omnes_amici_mei--solesmes}
+\myrespsize
+{\label{omnes_amici_mei}
+\printgabc{Resp. 1}{3.}{O}{re--omnes_amici_mei--solesmes}}
 
-\translationcolumns[\normalsize]{\Rbar{}~All my friends have forsaken me, and they that lay wait for me have prevailed against me; he whom I loved hath betrayed me.
+\translationcolumns[\mytranslationsize]{\Rbar{}~All my friends have forsaken me, and they that lay wait for me have prevailed against me; he whom I loved hath betrayed me.
 * And men of terrible countenance, piercing me with a cruel wound, have given me vinegar to drink.
 \Vbar{}~They cast me out among the wicked, and spared not my soul.
 \Rbar{}~And men of terrible countenance~\dots{}}
-}
 
 %\bigskip\bigskip
 \alternatemusicintro{}
 
 \pagebreak
+\label{omnes_amici_mei_poly}
 \includelilypond{omnes_amici_mei-systems}
 
 \pagebreak
@@ -80,42 +72,39 @@ Jerusalem, Jerusalem, return to the Lord thy God.}
 %\bigskip
 \begin{center}{\textsc{lesson ii}}\end{center}
 
-{\normalsize\grechangestaffsize{14}
-\printgabc{}{}{L}{lesson2-friday-Lamed}
+\mylessonsize
+{\printgabc{}{}{L}{lesson2-friday-Lamed}}
 
-\translationcolumns[\normalsize]{\emph{Lamed}. They said to their mothers: Where is corn and wine? when they fainted away as the wounded in the streets of the city: when they breathed out their souls in the bosoms of their mothers.
+\vspace{-0.8\baselineskip}
+
+\translationcolumns[\mytranslationsize]{\emph{Lamed}. They said to their mothers: Where is corn and wine? when they fainted away as the wounded in the streets of the city: when they breathed out their souls in the bosoms of their mothers.
 \emph{Mem}. To what shall I compare thee? or to what shall I liken thee, O daughter of Jerusalem? to what shall I equal thee, that I may comfort thee, O virgin daughter of Sion? for great as the sea is thy destruction: who shall heal thee?
-\emph{Nun}. thy prophets have seen false and foolish things for thee: and they have not laid open thine iniquity, to excite thee to penance: but they have seen for thee false revelations and banishments.
+\emph{Nun}. Thy prophets have seen false and foolish things for thee: and they have not laid open thine iniquity, to excite thee to penance: but they have seen for thee false revelations and banishments.
 \emph{Samech}. All they that passed by the way have clapped their hands at thee: they have hissed and wagged their heads at the daughter of Jerusalem, saying: Is this the city of perfect beauty, the joy of all the earth?
 Jerusalem, Jerusalem, return to the Lord thy God.}
-}
 
-%\bigskip\bigskip
-\pagebreak
+%\printseparation
+%\pagebreak
 
-{\grechangestaffsize{17}
-\printgabc{Resp. 2}{2.}{V}{re--velum_templi--solesmes}
+\myrespsize
+{\label{velum_templi_scissum_est}
+\printgabc{Resp. 2}{2.}{V}{re--velum_templi--solesmes}}
 
-\translationcolumns[\normalsize]{\Rbar{}~The veil of the Temple was rent,
+\translationcolumns[\mytranslationsize]{\Rbar{}~The veil of the Temple was rent,
 * And all the earth did quake: the thief on the cross cried, saying: Lord, remember me when Thou comest into Thy kingdom!
 \Vbar{}~The rocks were rent and the graves opened, and many bodies of the saints, which slept, arose.
-\Rbar{}~And all the earth~\dots}
-}
+\Rbar{}~And all~\dots}
 
 %\bigskip\bigskip
-\alternatemusicintro{}
+\alternatemusicintrobreak{}
 
-\pagebreak
-\includelilypond{velum_templi_scissum_est-systems}
-
-\bigskip
-\pagebreak
+%\bigskip
 \hspace{10ex}\textsc{lesson iii}\hfill\emph{Chap. 3, 1-9}\hspace{10ex}
 
-{\normalsize\grechangestaffsize{14}
-\printgabc{}{}{A}{lesson3-friday-Aleph}
+\mylessonsize
+{\printgabc{}{}{A}{lesson3-friday-Aleph}}
 
-\translationcolumns[\normalsize]{\emph{Aleph}. I am the man that see my poverty by the rod of his indignation.
+\translationcolumns[\mytranslationsize]{\emph{Aleph}. I am the man that see my poverty by the rod of his indignation.
 \emph{Aleph}. He hath led me, and brought me into darkness, and not into light.
 \emph{Aleph}. Only against me he hath turned, and turned again his hand all the day.
 \emph{Beth}. My skin and my flesh he hath made old, he hath broken my bones.
@@ -123,19 +112,28 @@ Jerusalem, Jerusalem, return to the Lord thy God.}
 \emph{Beth}. He hath set me in dark places as those that are dead for ever.
 \emph{Ghimel}. He hath built against me round about, that I may not get out: he hath made my fetters heavy.
 \emph{Ghimel}. Yea, and when I have cried and entreated, he hath shut out my prayer.
-\emph{Ghimel}. He hath shut up my ways with square stones, he hath turned my paths upside down
+\emph{Ghimel}. He hath shut up my ways with square stones, he hath turned my paths upside down.
 Jerusalem, Jerusalem, return to the Lord thy God.}
-}
 %
 %\bigskip\bigskip
 %\bigskip%\bigskip
-\bigskip
+%\bigskip
 %
-{\grechangestaffsize{17}
+\pagebreak
+
+\label{velum_templi_scissum_est_poly}
+\includelilypond{velum_templi_scissum_est-systems}
+
+\pagebreak
+
+\myrespsize
+{\label{resp3_vinea_mea}
 \printgabc{Resp. 3}{8.}{V}{re--vinea_mea--solesmes}
-\translationcolumns[\normalsize]{\Rbar{}~O my chosen vine, I planted thee:
+\translationcolumns[\mytranslationsize]{\Rbar{}~O my chosen vine, I planted thee:
 * How then art thou turned to bitterness, that thou shouldst crucify me, and release Barabbas?
 \Vbar{}~I fenced thee, and gathered out the stones from thee, and built a tower.
 \Rbar{}~How then art thou~\dots{}
 \Rbar{}~O my chosen vine~\dots}
 }
+%\bigskip
+\myantsize

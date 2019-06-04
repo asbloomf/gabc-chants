@@ -1,52 +1,46 @@
-﻿\startday{Holy Saturday}{saturday-1}
+﻿\startday[]{Holy Saturday}{saturday-1}
 
-\large
+\myantsize
 %\printgabc{1. Ant.}{8. c.}{Z}{an--zelus_domus_tuae--solesmes}
+%\def\preant{\myantsize}
+%\def\prepsalm{\mypsalmsize}
+\def\psalmtranslationsmall{F}
 {
-\def\preant{\grechangestaffsize{17}\large}
-\def\prepsalm{\grechangestaffsize{15}\normalsize\greseteolcustos{manual}}
-\def\anttranslation{In peace in the selfsame, I will sleep and rest.}
-\def\psalmtranslationsmall{T}
+\def\anttranslation{In peace in the selfsame, I will sleep and rest.\bigskip}
+\def\prepsalmverses{\medskip}
 \printpsalm{1}{4}{8G}{an--in_pace_in_idipsum--solesmes}{I}
-\let\prepsalm=\undefined
 }
 \printseparation
 %
 {
-\def\preant{\grechangestaffsize{17}\large}
-\def\prepsalm{\grechangestaffsize{15}\normalsize\greseteolcustos{manual}}
-\def\psalmtranslationsmall{T}
 \def\anttranslation{He shall dwell in Thy tabernacle, He shall rest on Thy holy hill.}
 \printpsalm{2}{14}{4E}{an--habitabit--solesmes}{H}
-\let\prepsalm=\undefined
 }
-\bigskip
+\printseparation
+\pagebreak
 %
 {
-\def\preant{\grechangestaffsize{17}\large}
-\def\psalmtranslationsmall{T}
 \def\anttranslation{My flesh shall rest in hope.}
-\def\prepsalm{\grechangestaffsize{15}\normalsize}
 \printpsalm{3}{15}{7c}{an--caro_mea--solesmes}{C}
-\let\prepsalm=\undefined
 }
-\bigskip
-\printvr{vr-inPaceInIdipsum}
+\printseparation
+\myvrsize
+{\printvr{vr-inPaceInIdipsum}
 {In peace in the selfsame.}
 {I will sleep and rest.}
-
+}
 \bigskip
 Pater noster. \emph{in silence.}
 
-\grechangestaffsize{14}
 \medskip
 \pagebreak
 \hspace{10ex}\textsc{lesson i}\hfill\emph{Chap. 3, 22-30}\hspace{10ex}
 
-{\normalsize\grechangestaffsize{15}
-\printgabc{}{}{D}{lesson1-saturday-DeLamentationeJeremiae}
+\mylessonsize
+{\printgabc{}{}{D}{lesson1-saturday-DeLamentationeJeremiae}
 
-\translationcolumns[\normalsize]{\emph{Heth}. It is by the mercies of the Lord that we are not consumed: because His commiserations have not failed.
+\vspace{-0.5\baselineskip}
+\translationcolumns[\mytranslationsize]{\emph{Heth}. It is by the mercies of the Lord that we are not consumed: because His commiserations have not failed.
 \emph{Heth}. They are new every morning, great is thy faithfulness.
 \emph{Heth}. The Lord is my portion, said my soul: therefore will I wait for Him.
 \emph{Teth}. The Lord is good to them that hope in Him, to the soul that seeketh Him.
@@ -57,29 +51,31 @@ Pater noster. \emph{in silence.}
 \emph{Jod}. He shall give his cheek to him that striketh him, he shall be filled with reproaches.
 Jerusalem! Jerusalem! Return unto the Lord thy God.}
 }
-\bigskip\bigskip
-\pagebreak
+%\bigskip
+%\pagebreak
 
-{\grechangestaffsize{17}
+\myrespsize
+{\label{resp1_sicut_ovis}
 \printgabc{Resp. 1}{4.}{S}{re--sicut_ovis--solesmes}
-}
-{
-\translationcolumns[\normalsize]{\Rbar{}~As a sheep was He led to the slaughter, and whilst He was evilly treated, He opened not His mouth: He was delivered up to death
+
+\vspace{-0.5\baselineskip}
+\translationcolumns[\mytranslationsize]{\Rbar{}~As a sheep was He led to the slaughter, and whilst He was evilly treated, He opened not His mouth: He was delivered up to death
 * That He might give life to His people.
 \Vbar{}~He hath poured out his soul unto death, and was numbered with the transgressors.
-\Rbar{}~That He might give life to His people.
+\Rbar{}~That He might give life~\dots{}
 }
 }
 
 %\begin{center}{\textsc{lesson ii}}\end{center}
-\bigskip\bigskip
-%\pagebreak
+%\bigskip\bigskip
+\pagebreak
 \hspace{10ex}\textsc{lesson ii}\hfill\emph{Chap. 4, 1-6}\hspace{10ex}
 
-{\normalsize\grechangestaffsize{15}
-\printgabc{}{}{A}{lesson2-saturday-Aleph}
+\mylessonsize
+{\printgabc{}{}{A}{lesson2-saturday-Aleph}
 
-\translationcolumns[\normalsize]{\emph{Aleph}. How is the gold become dim, the finest colour is changed, the stones of the sanctuary are scattered in the top of every street?
+\vspace{-0.8\baselineskip}
+\translationcolumns[\mytranslationsize]{\emph{Aleph}. How is the gold become dim, the finest colour is changed, the stones of the sanctuary are scattered in the top of every street?
 \emph{Beth}. The noble sons of Sion and they that were clothed with the best gold: how are they esteemed as earthen vessels, the work of the potter's hands?
 \emph{Ghimel}. Even the sea monsters have drawn out the breast, they have given suck to their young: the daughter of my people is cruel, like the ostrich in the desert.
 \emph{Daleth}. The tongue of the sucking child hath stuck to the roof of his mouth for thirst: the little ones have asked for bread, and there was none to break it unto them.
@@ -87,27 +83,28 @@ Jerusalem! Jerusalem! Return unto the Lord thy God.}
 \emph{Vau}. And the iniquity of the daughter of my people is made greater than the sin of Sodom, which was overthrown in a moment, and hands took nothing in her.
 Jerusalem! Jerusalem! Return unto the Lord thy God.}
 }
-\bigskip\bigskip
-\bigskip\bigskip
+%\bigskip\bigskip
+%\bigskip\bigskip
 
-{\grechangestaffsize{17}
+\myrespsize
+{\label{resp2_jerusalem}
 \printgabc{Resp. 2}{5.}{J}{re--jerusalem--solesmes}
-}
-{
-\translationcolumns[\normalsize]{\Rbar{}~Arise, O Jerusalem, and put off thy garments of joy: put on ashes and sack-cloth:
+
+\vspace{-0.8\baselineskip}
+\translationcolumns[\mytranslationsize]{\Rbar{}~Arise, O Jerusalem, and put off thy garments of joy: put on ashes and sack-cloth:
 * For in thee was slain the Saviour of Israel.
 \Vbar{}~Shed thy tears like a torrent day and night, and let not the apple of thine eye be dry.
 \Rbar{}~For in thee was slain the Saviour of Israel.}
 }
 
+\bigskip
 \pagebreak
-\vspace*{-30pt}
 \hspace{10ex}\textsc{lesson iii}\hfill\emph{Chap. 5, 1-11}\hspace{10ex}
 
-{\normalsize\grechangestaffsize{15}
-\printgabc{}{}{A}{lesson3-saturday-IncipitOratioJermiaeProphetae}
+\mylessonsize
+{\printgabc{}{}{A}{lesson3-saturday-IncipitOratioJermiaeProphetae}
 
-\translationcolumns[\normalsize]{Remember, O Lord, what is come upon us: consider and behold our reproach.
+\translationcolumns[\mytranslationsize]{Remember, O Lord, what is come upon us: consider and behold our reproach.
 Our inheritance is turned to aliens: our houses to strangers.
 We are become orphans without a father, our mothers are as widows.
 We have drunk our water for money: we have bought our wood for a price.
@@ -122,12 +119,14 @@ Jerusalem! Jerusalem! Return unto the Lord thy God.}
 }
 \bigskip\bigskip
 
-\needspace{6\baselineskip}
-{\grechangestaffsize{17}
+\pagebreak
+\myrespsize
+{\label{resp3_plange}
 \printgabc{Resp. 3}{5.}{P}{re--plange--solesmes}
-\translationcolumns[\normalsize]{\Rbar{}~Mourn as a virgin, O my people: howl, ye shepherds, in ashes and sack-cloth:
+\translationcolumns[\mytranslationsize]{\Rbar{}~Mourn as a virgin, O my people: howl, ye shepherds, in ashes and sack-cloth:
 * For the day of the Lord cometh, great and exceeding bitter.
 \Vbar{}~Gird yourselves, ye Priests, and mourn, ye ministers of the altar; sprinkle yourselves with ashes.
 \Rbar{}~For the day~\dots{}
-\Rbar{}~Mourn as a virgin, O my people~\dots{}}
+\Rbar{}~Mourn as a virgin~\dots{}}
 }
+\myantsize

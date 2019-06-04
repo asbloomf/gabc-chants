@@ -1,6 +1,6 @@
-@image{/src/gabc-chants/Tenebrae/lilypond/christus_factus_est-1}
-@image{/src/gabc-chants/Tenebrae/lilypond/christus_factus_est-2}
-@image{/src/gabc-chants/Tenebrae/lilypond/christus_factus_est-3}
-@image{/src/gabc-chants/Tenebrae/lilypond/christus_factus_est-4}
-@image{/src/gabc-chants/Tenebrae/lilypond/christus_factus_est-5}
+@image{christus_factus_est-1}
+@image{christus_factus_est-2}
+@image{christus_factus_est-3}
+@image{christus_factus_est-4}
+@image{christus_factus_est-5}
 @c eof

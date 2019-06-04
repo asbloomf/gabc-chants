@@ -58,7 +58,7 @@ altoWords = \lyricmode {
   \set fontSize = #0.5
   Om -- nes a -- mí -- ci __ me -- i de -- re -- li -- que -- runt me, __ | et præ -- | va -- lu -- é -- runt in -- si -- di -- án -- tes | mi -- hi_: trá -- di -- dit | me quem | di -- li -- gé -- bam_: | Et ter -- ri -- bí -- li -- bus ó -- cu -- lis pla -- ga cru -- dé -- li per -- cu -- ti -- én -- tes,
   a -- cé -- to po -- tá -- bant | me. \break
-  In -- ter in -- í -- quos pro -- je -- cé -- runt me, et non per -- pe -- cé -- runt á -- ni -- mæ me -- æ.
+  In -- ter in -- í -- quos pro -- je -- cé -- runt me, et non pe -- per -- cé -- runt á -- ni -- mæ me -- æ.
   Et
 }
 
@@ -96,7 +96,7 @@ chantMusic = \relative c {
 
 
 chantWords = \lyricmode {
-  In -- ter in -- í -- quos pro -- je -- cé -- runt me, et non per -- pe -- cé -- runt á -- ni -- mæ me -- æ.
+  In -- ter in -- í -- quos pro -- je -- cé -- runt me, et non pe -- per -- cé -- runt á -- ni -- mæ me -- æ.
   Et
 }
 
