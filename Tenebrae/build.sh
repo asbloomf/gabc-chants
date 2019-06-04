@@ -28,11 +28,8 @@ maxsize=1500000 # 1.5MB
 # tenebrae_full.pdf should be newer than _original
 
 process_file tenebrae_full tenebrae_original
-
 process_file tenebrae_thursday tenebrae_thursday_original
-
 process_file tenebrae_friday tenebrae_friday_original
-
 process_file tenebrae_saturday tenebrae_saturday_original
 
 latexmk tenebrae_prophecyTone.tex
