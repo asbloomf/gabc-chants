@@ -98,11 +98,12 @@ five%
 }
 
 %this is deprecated -- now \printpsalm should be used instead
-\newcommand{\definepsalm}[4]{
-% 1 - antiphon number, 1-5
-% 2 - psalm number, e.g., 109
-% 3 - psalm tone, e.g., 8
-% 4 - psalm tone variation, e.g., G
+\newcommand{\definepsalm}[5][\undefined]{
+% 1 - partial of psalm
+% 2 - antiphon number, 1-5
+% 3 - psalm number, e.g., 109
+% 4 - psalm tone, e.g., 8
+% 5 - psalm tone variation, e.g., G
 % \psalmclef can be used to append -clef{\psalmclef}
 % \psalmbeginversetwo can be defined as T to append -verse2
 
@@ -112,21 +113,21 @@ five%
 %maybe instead of setting up different environments, just define the options and have it expand them!
 
 % define macro names
-%\def\psalmMASTERend{\psalmoneend} % this is #4, but how will we deal with peregrinus?
+%\def\psalmMASTERend{\psalmoneend} % this is #5, but how will we deal with peregrinus?
 %\def\psalmMASTERcols{psalmonecols}
-\edef\antnum{\numbertoword{#1}}
+\edef\antnum{\numbertoword{#2}}
 
-\expandafter\edef\csname psalm\antnum\endcsname{Psalm #2.}
-\expandafter\edef\csname psalm\antnum num\endcsname{#2}
-\expandafter\edef\csname psalm\antnum tone\endcsname{#3} % only used internally
-\expandafter\edef\csname psalm\antnum end\endcsname{#4} % only used internally
+\expandafter\edef\csname psalm\antnum\endcsname{Psalm #3.}
+\expandafter\edef\csname psalm\antnum num\endcsname{#3}
+\expandafter\edef\csname psalm\antnum tone\endcsname{#4} % only used internally
+\expandafter\edef\csname psalm\antnum end\endcsname{#5} % only used internally
 %\def\emptypsalmend{per}
 \if\csname psalm\antnum tone\endcsname p % must be T. Per.
   \expandafter\def\csname ant\antnum linetwo\endcsname{T.~Per.}
   \expandafter\def\csname psalm\antnum tone\endcsname{per} % only used internally
   \expandafter\def\csname psalm\antnum end\endcsname{} % only used internally
 \else
-  \expandafter\edef\csname ant\antnum linetwo\endcsname{\csname psalm\antnum tone\endcsname.~#4}
+  \expandafter\edef\csname ant\antnum linetwo\endcsname{\csname psalm\antnum tone\endcsname.~#5}
 \fi
 
 \ifx\psalmclef\undefined%
@@ -138,21 +139,23 @@ five%
 \fi
 
 \ifx\psalmbeginversetwo\undefined\else\if\psalmbeginversetwo T
-\expandafter\edef\csname psalm\antnum beginversetwo\endcsname{\psalmbeginversetwo}
+    \expandafter\edef\csname psalm\antnum beginversetwo\endcsname{\psalmbeginversetwo}
 \fi\fi
 
-\edef\expandedend{#4}
-\edef\nostarend{#4}
-\edef\mytempa{#4}
+\edef\expandedend{#5}
+\edef\nostarend{#5}
+\edef\mytempa{#5}
 \StrSubstitute{\mytempa}{*}{star}[\expandedend]
 \StrSubstitute{\mytempa}{*}{}[\nostarend]
-\expandafter\edef\csname psalm\antnum texbeg\endcsname{../psalms/Psalm#2-\csname psalm\antnum tone\endcsname}
+\expandafter\edef\csname psalmpart\antnum\endcsname{\ifx#1\undefined\else .#1\fi}
+\expandafter\edef\csname psalm\antnum texbeg\endcsname{../psalms/Psalm#3-\csname psalm\antnum tone\endcsname}
+%\errmessage{\csname psalm\antnum texbeg\endcsname}
 \expandafter\edef\csname psalm\antnum tex\endcsname{\csname psalm\antnum texbeg\endcsname\expandedend\ifx\psalmbeginversetwo\undefined\else\if\psalmbeginversetwo T-verse2\fi\fi\altclef}
 \expandafter\edef\csname psalm\antnum versestex\endcsname{%
 \csname psalm\antnum texbeg\endcsname\nostarend-verses\ifx\psalmbeginversetwo\undefined\else\if\psalmbeginversetwo T2\fi\fi
 }
 \expandafter\edef\csname psalm\antnum translationtex\endcsname{%
-../psalms/psalm#2-verses-en%
+../psalms/psalm#3-verses-en%
 }
 
 % define the parcolumn options
@@ -166,14 +169,14 @@ five%
 \if\useevencolumns F%
 %\expandafter\def\csname psalm\antnum coloptions\endcsname{rulebetween}
 %109 & 110 are just rulebetween
-\ifnum#2=109
+\ifnum#3=109
 \expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=272pt}]{2}}%262
 \fi
-\ifnum#2=111
+\ifnum#3=111
 \expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=252pt}]{2}}
 %\expandafter\def\csname psalm\antnum coloptions\endcsname{rulebetween,colwidths={1=252pt}}
 \fi
-\ifnum#2=112
+\ifnum#3=112
 \ifx\csname psalm\antnum translationsmall\endcsname\undefined
 \expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=278pt}]{2}}
 \else\if\csname psalm\antnum translationsmall\endcsname T%
@@ -183,7 +186,7 @@ five%
 \fi\fi
 %\expandafter\def\csname psalm\antnum coloptions\endcsname{rulebetween,colwidths={1=278pt}} %278 or 285 or 290
 \fi
-\ifnum#2=113
+\ifnum#3=113
 \ifx\csname psalm\antnum translationsmall\endcsname\undefined
 \expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=267pt}]{2}} % had been 266
 \else\if\csname psalm\antnum translationsmall\endcsname T%
@@ -195,28 +198,28 @@ five%
 \fi
 %116 is just rulebetween
 %121 is just rulebetween
-\ifnum#2=125
+\ifnum#3=125
 \ifx\csname psalm\antnum translationsmall\endcsname\undefined\else\if\csname psalm\antnum translationsmall\endcsname T%
 \expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=290pt}]{2}}
 \fi\fi
 \fi
 %129 & 131 ???g? % I should at least do something for translation small
-\ifnum#2=126
+\ifnum#3=126
 \expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=253pt}]{2}}
 %\expandafter\def\csname psalm\antnum coloptions\endcsname{rulebetween,colwidths={1=260pt}}
 \fi
 %129 & 131 ???g? % I should at least do something for translation small
-\ifnum#2=129
+\ifnum#3=129
 \ifx\csname psalm\antnum translationsmall\endcsname\undefined\else\if\csname psalm\antnum translationsmall\endcsname T%
 \expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=292pt}]{2}} %292 if small
 \fi\fi
 \fi
-\ifnum#2=131
+\ifnum#3=131
 \ifx\csname psalm\antnum translationsmall\endcsname\undefined\else\if\csname psalm\antnum translationsmall\endcsname T%
 \expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=292pt}]{2}} %292 if small
 \fi\fi
 \fi
-\ifnum#2=138
+\ifnum#3=138
 \ifx\csname psalm\antnum translationsmall\endcsname\undefined
 \expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=260pt}]{2}}
 \else\if\csname psalm\antnum translationsmall\endcsname T%
@@ -225,7 +228,7 @@ five%
 \expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=260pt}]{2}}
 \fi\fi
 \fi
-\ifnum#2=147
+\ifnum#3=147
 \expandafter\def\csname beginpsalm\antnum cols\endcsname{\begin{parcolumns}[rulebetween,colwidths={1=285pt}]{2}}
 %\expandafter\def\csname psalm\antnum coloptions\endcsname{rulebetween,colwidths={1=285pt}}
 \fi
@@ -337,6 +340,9 @@ five%
 \ifcsname preanttranslation\antnum\endcsname
     \def\preanttranslation{\csname preanttranslation\antnum\endcsname}
 \fi
+\ifcsname psalmpart\antnum\endcsname
+    \def\psalmpart{\csname psalmpart\antnum\endcsname}
+\fi
 %set up variables
 \edef\anttex{#4}
 \edef\antinitial{#5}
@@ -409,7 +415,7 @@ five%
 }
 \StrSubstitute{\mytempa}{*}{}[\nostarend]
 \ifx\canticleof\undefined
-  \def\filename{Psalm#2}
+  \def\filename{Psalm#2\ifx\psalmpart\undefined\else\psalmpart\fi}
 \else
   \def\filename{#2}
 \fi

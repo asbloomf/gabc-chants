@@ -1,0 +1,155 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\newcommand{\heading}{1st Sunday of Advent at 1st Vespers.}
+
+\newcommand{\predeusinadjutorium}{%
+\smallskip
+\large
+\grechangestaffsize{16}
+}
+\def\deusinadjutoriumsolemn{F}
+\def\includelaustibi{F}
+
+\newcommand{\preantone}{\grechangestaffsize{17}
+\large
+\def\breakbeforeEuouae{T}
+\greseteolcustos{manual}
+}
+\newcommand{\antoneinitialsize}{33}
+\newcommand{\prepsalmone}{%
+%\vspace{-1.5ex}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preanttwo}{\grechangestaffsize{17}
+\greseteolcustos{manual}
+\def\breakbeforeEuouae{T}
+\large
+}
+\newcommand{\anttwoinitialsize}{40}
+\newcommand{\prepsalmtwo}{%
+\normalsize
+\greseteolcustos{manual}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantthree}{\grechangestaffsize{17}
+\large
+}
+\newcommand{\antthreeinitialsize}{40}
+\newcommand{\prepsalmthree}{%
+\normalsize
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantfour}{\grechangestaffsize{17}
+\large
+}
+\newcommand{\antfourinitialsize}{40}
+\newcommand{\prepsalmfour}{%
+%\vspace{-1ex}
+%\grechangestaffsize{15}
+\normalsize
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantfive}{\grechangestaffsize{17}
+\greseteolcustos{manual}
+\def\breakbeforeEuouae{T}
+\large
+}
+%\newcommand{\preantfivetwo}{\preantfive}
+\newcommand{\antfivefontsizetwo}{38}
+
+\newcommand{\antfiveinitialsize}{40}
+%\def\nopagebreakbeforepsalmfive{T}
+\newcommand{\prepsalmfive}{%
+\vspace{-1ex}
+%\grechangestaffsize{15}%
+\normalsize%
+}
+%\def\pagebreakafterpsalmfive{T}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newcommand{\hymn}{Créator alme síderum}
+%\newcommand{\vr}{Roráte}
+
+\def\pagebreakbeforehymn{T}
+\def\hymnlinetwo{\oldstylenums{4.}}
+\def\hymntex{../Advent/hymn-CreatorAlmeSiderum}
+\def\hymninitial{C}
+\def\hymntranslation{\item Creator of the stars of night
+Thy people's everlasting light,
+Jesu, Redeemer, save us all,
+And hear Thy servants when they call.
+
+\item Thou, lest the demon's ancient curse
+Should doom to death a universe,
+In love wast made, Thyself alone,
+The means to save a world undone.
+
+\item Towards the Cross Thou wentest forth,
+That Thou might'st heal the crimes of earth;
+Proceeding from a virgin shrine,
+The spotless Victim all divine.
+
+\item At whose dread Name, majestic now,
+All knees must bend, all hearts must bow;
+And things celestial Thee shall own,
+And things terrestrial, Lord alone.
+
+\item O Thou, whose coming is with dread,
+To judge and doom the quick and dead.
+Thy heavenly grace on us bestow,
+To shield us from our ghostly foe.
+
+\item To God the Father, God the Son,
+And God the Spirit, Three in One,
+Laud, honour, might, and glory be
+From age to age eternally.
+Amen.\grechangestaffsize{17}}
+\def\prehymn{\large\grechangestaffsize{17}}
+
+\def\vrtex{../Advent/vr}
+\def\vrnospace{F}
+\def\vtranslation{Ye heavens, drop down dew from above, and let the clouds rain down the Just One.}
+\def\rtranslation{Let the earth open and bud forth the Saviour.}
+
+
+\newcommand{\premag}{
+\large
+\grechangestaffsize{17}
+}
+%\newcommand{\premagtwo}{
+%\grechangestaffsize{16}
+%}
+\newcommand{\magfontsize}{38}
+\def\pagebreakbeforemagnificat{T}
+\newcommand{\premagverses}{\greseteolcustos{manual}\grechangestaffsize{17}
+\normalsize
+%\pagebreak
+}
+
+\definebenedicamusdomino{advent}{2}
+%\newcommand{\benedicamusdominotex}{../BenedicamusDomino/BenedicamusDomino_SundaysOfAdventAndLent}
+%\newcommand{\benedicamusdominotexalt}{../BenedicamusDomino/BenedicamusDomino_1class2ndvespersAlt}
+
+\input{inc-Advent1_1}
+\input{../inc_header}
+
+\grechangedim{spacelinestext}{0.70617 cm}{scalable}%
+\grechangedim{spaceabovelines}{0.4 cm}{scalable}%
+
+\input{../FullVespers-test}
+%\input{../FullVespers}
