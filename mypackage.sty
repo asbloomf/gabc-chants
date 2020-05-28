@@ -127,9 +127,12 @@
 \StrPosition[2]{#3}{ }[\mypos]%
 \fi
 \setcounter{dropcapcounter}{\mypos - 1}
-\lettrine{\StrLeft{#3}{1}}%
-   {#1\StrMid{#3}{2}{\thedropcapcounter}} 
-\foreignlanguage{#2}{#1\StrGobbleLeft{#3}{\mypos}}%
+\StrLeft{#3}{1}[\asbdropcapletter]
+\StrMid{#3}{2}{\thedropcapcounter}[\asbdropcapword]
+\StrGobbleLeft{#3}{\mypos}[\asbdropcappar]
+\lettrine{\asbdropcapletter}%
+   {#1\asbdropcapword} 
+\foreignlanguage{#2}{#1\asbdropcappar}%
 }
 
 \newcommand{\dropcapnospace}[3][]{%
@@ -143,9 +146,12 @@
 \StrPosition[2]{#3}{ }[\mypos]%
 \fi
 \setcounter{dropcapcounter}{\mypos - 1}
-\lettrine{\StrLeft{#3}{1}}%
-   {#1\StrMid{#3}{2}{\thedropcapcounter}} 
-\foreignlanguage{#2}{#1\StrGobbleLeft{#3}{\mypos}}%
+\StrLeft{#3}{1}[\asbdropcapletter]
+\StrMid{#3}{2}{\thedropcapcounter}[\asbdropcapword]
+\StrGobbleLeft{#3}{\mypos}[\asbdropcappar]
+\lettrine{\asbdropcapletter}%
+   {#1\asbdropcapword} 
+\foreignlanguage{#2}{#1\asbdropcappar}%
 }
 
 \newcommand{\olderprayer}[2]{
