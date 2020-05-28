@@ -81,7 +81,7 @@ misc:
   - name: "Magnificat: 1D "
     url: pdfs/misc/magnificat-1D_letter_full.pdf
   - name: "Magnificat: 1D transposed"
-    url: pdfs/misc/magnificat-1D_letter_full_transposed.pdf
+    url: pdfs/misc/magnificat-1D_letter_full_transpose.pdf
   - name: "magnificat: 1D smc-solemn"
     url: pdfs/misc/magnificat-1D-smc-solemn.pdf
   - name: "magnificat: 1D2 smc-solemn"
