@@ -1,0 +1,129 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+%TODO: attributions (Grassi)
+%      put Solemn & Simple somewhere
+\documentclass[letterpaper,12pt]{book} % use larger type; default would be 10pt
+%\usepackage{../definepsalms}
+\input{header.inc}
+
+\usepackage{multicol} % for columns
+\usepackage{lettrine} % for drop caps
+\usepackage{parcolumns}
+\usepackage{xstring}
+\usepackage{ifthen}
+
+%\geometry{letterpaper,outer=0.3in,inner=0.8in,top=0.8in,bottom=0.6in}
+\geometry{letterpaper,outer=1in,inner=1in,top=0.8in,bottom=0.6in}
+
+\newcommand{\definemag}[2]{
+% defines \magtone, \magend, \magant, \magantlinetwo, \altclef, \magverses
+%1 - psalm tone, e.g., 8
+%2 - ending, e.g., G
+\edef\magtone{#1}
+\edef\magend{#2}
+%\newcommand{\magant}{MagnificatAntiphon}
+\newcommand{\magantlinetwo}{Ant.~\magtone.~\magend}
+\StrSubstitute{\magend}{*}{star}[\expandedendmag]
+\StrSubstitute{\magend}{*}{}[\nostarendmag]
+\edef\magtex{Magnificat\if\magsolemn Tsolemn\else simple\fi\magtone\expandedendmag%
+\ifx\magoneline\undefined\else\if\magoneline ToneLine\fi\fi}
+\newcommand{\magversesodd}{%
+%\ifx\magoneline\undefined\else\if\magoneline T\vspace{-15pt}\fi\fi
+\input{magnificat-\magtone\nostarendmag\if\magsolemn Tsolemn\else simple\fi-verses-odd}%
+}
+\let\psalmclef=\undefined
+}
+
+\newcounter{vcounter}
+\def\boldVerse{T}
+\newenvironment{boldnumpsalmverses}[1][0]{
+% 1 - number to start on
+\begin{list}{% bold every other verse
+\if\boldVerse T\textbf{\arabic{vcounter}}\global\def\boldVerse{F}%
+\else\arabic{vcounter}\global\def\boldVerse{T}%
+\fi.}{
+\setlength\baselineskip{0pt}
+\setlength\itemsep{1pt}
+\usecounter{vcounter}
+\setlength\parsep{0pt}
+\setlength\labelwidth{50pt}\setlength\leftmargin{0pt}\setlength\itemindent{6ex}}
+\setcounter{vcounter}{#1}
+}{\end{list}}
+
+\newenvironment{boldnummagnificat}[2][2]{
+% 1 - number to start on
+% 2 - name of magnificat to include
+\gresetinitiallines{0}
+\gregorioscore{#2}
+\normalsize
+\begin{boldnumpsalmverses}[#1]
+}{\end{boldnumpsalmverses}}
+
+\newenvironment{oddnumpsalmverses}[1][2]{
+% 1 - number to start on
+\begin{list}{\arabic{vcounter}.\addtocounter{vcounter}{1}}{
+\setlength\baselineskip{0pt}
+\setlength\itemsep{1pt}
+\usecounter{vcounter}
+\setlength\parsep{0pt}
+\setlength\labelwidth{50pt}\setlength\leftmargin{0pt}\setlength\itemindent{6ex}}
+\setcounter{vcounter}{#1}
+}{\end{list}}
+
+
+
+
+\grechangestyle{initial}{\fontsize{50}{50}\selectfont}
+\grechangestaffsize{19}
+
+
+\pagestyle{empty} % no header or footers
+%\chead{\addfontfeature{Numbers=Lining}Magnificat Solemn Tone 1. D.}
+%\let\oldheadrulewidth\headrulewidth
+%\renewcommand\headrulewidth{0pt}
+%\cfoot{\thepage}
+
+% here we begin the document
+\begin{document}
+%\marginsize{72pt}{72pt}{36pt}{36pt}
+%\cfoot{}
+
+% The title:
+%\vspace*{-11ex}
+%\begin{center}{\huge Magnificat.}\end{center}
+%\vspace{-2ex}
+
+%
+%
+% We type a text in the top right corner of the score:
+%\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
+%
+% and finally we include the score. The file must be in the same directory as this one.
+\large
+\addfontfeature{Numbers=Lining}
+\def\magsolemn{T}
+\def\maggrassi{T}
+\definemag{1}{D}
+\def\annot{\magtone. \magend}
+
+\greseteolcustos{manual}
+\gresetinitiallines{1}
+\gregorioscore{\magtex-v1}
+
+\noindent%\begin{center}%
+\includegraphics{magnificat-1D_letter.pdf}%
+
+\bigskip
+\bigskip
+
+\gresetinitiallines{0}
+\gregorioscore{\magtex-v2}
+\vspace{-0.5\baselineskip}
+\begin{oddnumpsalmverses}
+\magversesodd
+\end{oddnumpsalmverses}
+
+%\end{center}
+\end{document}
