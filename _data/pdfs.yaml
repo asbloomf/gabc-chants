@@ -236,6 +236,8 @@ Time After Easter:
   - name: commemoration Easter 5
     url: pdfs/TimeAfterEaster/commemorationEaster5-main.pdf
 Corpus Christi:
+  - name: "2nd Vespers"
+    url: pdfs/CorpusChristi/CorpusChristi-vespers2.pdf
   - name: "hymn: Pange Lingua"
     url: pdfs/CorpusChristi/hymn-PangeLingua-main.pdf
 Ascension:
