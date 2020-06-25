@@ -40,7 +40,7 @@
 			\normalsize
 			\oldneedspace{5\baselineskip}
 			\gregorioscore{\gabcfolder/\hymntex}
-			\ifthenelse{\boolean{birmingham}}{}{
+			\ifthenelse{\boolean{birmingham} \or \boolean{onlysundaycommon}}{}{
 				\bigskip
 				\printvrdirigaturshort{}
 		        \input{\gabcfolder/inc-hymn-LucisCreatorOptime2}
@@ -103,9 +103,11 @@
 		\emph{Magnificat \& Collect of the Sunday.}
 
 		\end{centering}
-		\medskip{}
-		%\vspace{-\baselineskip}
-		\printsundaysthroughtheyear{}
+		\ifthenelse{\boolean{onlysundaycommon}}{}{%false
+			\medskip{}
+			%\vspace{-\baselineskip}
+			\printsundaysthroughtheyear{}
+		}
 		\vfil
 		\ifthenelse{\boolean{includebenedicamusdominoreferences}}{
 			\Vbar~\emph{Benedicámus Dómino \benedicamusdominonamesunday{}}, page \pageref{benedicamusdomino-sunday}; or in Lent, \emph{\benedicamusdominonamelent{}}, page \pageref{benedicamusdomino-lent}.
@@ -141,7 +143,7 @@
 	%\def\prepsalmfive{\greseteolcustos{manual}}
 	\def\prechapter{\oldneedspace{10\baselineskip}}
 	\def\beginchaptercols{
-		\noindent{}\printnote{In Septuagesima \& Lent, from the Sunday, \emph{p.~\pageref{septuagesima} to \pageref{lent6}.}}
+		\noindent{}\printnote{In Septuagesima \& Lent, from the Sunday\ifthenelse{\boolean{onlysundaycommon}}{.}{, \emph{p.~\pageref{septuagesima} to \pageref{lent6}.}}}
 
 		\bigskip{}
 		\noindent{}\printnote{Otherwise:}

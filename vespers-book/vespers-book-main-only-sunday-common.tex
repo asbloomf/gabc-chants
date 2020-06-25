@@ -1,0 +1,51 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[letterpaper,12pt]{book} % use larger type; default would be 10pt
+
+\usepackage{ifthen}
+\input{define-booleans}
+\setboolean{birmingham}{false}
+\setboolean{lettersize}{false}
+\setboolean{includepolyphony}{false}
+\setboolean{includesalvewithdrone}{false}
+\setboolean{includeappendix}{true}
+\setboolean{includechristmas}{false}
+\setboolean{includedec29}{false} % st thomas of canterbury
+\setboolean{includejan29}{false} % st francis de sales
+\setboolean{includeapril23}{false} % st george
+\setboolean{includemay1}{false} % st joseph the worker
+\setboolean{includeoct11}{false} % maternity of bvm
+\setboolean{includeoct9}{false}
+\setboolean{includecorpuschristi}{false}
+\setboolean{includesacredheart}{false}
+\setboolean{includejuly9}{false} % ss thomas more & john fisher
+\setboolean{includeoct7}{false} % our lady of the rosary
+\setboolean{includevespersofdead}{false}
+\setboolean{includebenedicamusdominoreferences}{false}
+\setboolean{includechristthekingfirstvespers}{false}
+\setboolean{includecommonofdedicationofchurch}{false}
+\setboolean{includesaturdaycommems}{false}
+\setboolean{includeferiacommems}{false}
+\setboolean{ignoreasterisk}{true}
+\setboolean{testrun}{false}
+\setboolean{onlysundaycommon}{true}
+
+\def\isbn{?-?-?-?-?}
+
+\input{vespers-book-inc}
+
+% need st thomas of canterbury 29 december
+% commem for st joseph march 19?
+% need st george 23 april
+% need corpus christi after trinity
+% need sacred heart after 1st sunday after trinity
+% need our lady of the rosary 7 october
+
+% after vespers for 23rd sunday after pentecost, list of remaining sundays after epiphany
+
+% move star in antiphon Deus autem noster
+
+% dedication of oratory church on 23 June (move dedication to appendix and just have dedication vespers reference that)
+% if 23 June is Sunday, no dedication vespers, but 1st vespers of nativity of S John the Baptist with commem of dedication
+% if 22 June is Sunday, 1st vespers of dedication with commemo of Sunday
