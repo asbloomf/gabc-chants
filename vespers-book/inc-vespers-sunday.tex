@@ -1,7 +1,9 @@
 {
-	\label{sundayvespers}
-	\chapter{Sunday at Vespers}
-	\section{Sunday at Vespers throughout the year}
+	\ifthenelse{\boolean{onlysundaycommon}}{}{% false
+		\label{sundayvespers}
+		\chapter{Sunday at Vespers}
+		\section{Sunday at Vespers throughout the year}
+	}
 \def\printvrdirigatur{
 	\label{vr-dirigatur}
   \def\vrlinebreak{T}
@@ -114,7 +116,7 @@
 		}{}
 	}
 	\newcommand{\collectreplacement}{\bigskip}
-	\ifthenelse{\boolean{birmingham}}{
+	\ifthenelse{\boolean{birmingham} \or \boolean{onlysundaycommon}}{
 		\newcommand{\psalmcolsoverrideoverride}[1][0]{
 			\psalmcolsoverride[#1]
 			\ifnum#1=109
@@ -124,8 +126,12 @@
 		\def\prepsalmtitleone{
 			\vspace{-\baselineskip}
 		}
-		\def\prepsalmtitletwo{
-			\vspace{-\baselineskip}
+		\ifthenelse{\boolean{onlysundaycommon}}{
+			\def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
+		}{% false
+			\def\prepsalmtitletwo{
+				\vspace{-\baselineskip}
+			}
 		}
 	}{%
 		\def\postpsalmtitletwo{
@@ -136,10 +142,18 @@
 		\ifthenelse{\boolean{birmingham}}{
 			\oldneedspace{5\baselineskip}
 		}{
-			\vspace{-0.25\baselineskip}
+			\ifthenelse{\boolean{onlysundaycommon}}{
+				\medskip
+			}{
+				\vspace{-0.25\baselineskip}
+			}
 		}
 	}
 	\def\preantfour{\needspace{10\baselineskip}}
+	\ifthenelse{\boolean{onlysundaycommon}}{
+		\def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}
+		\def\postpsalmtitlefour{\vspace{-0.5\baselineskip}}
+	}{}
 	%\def\prepsalmfive{\greseteolcustos{manual}}
 	\def\prechapter{\oldneedspace{10\baselineskip}}
 	\def\beginchaptercols{
@@ -153,6 +167,30 @@
 	\printvespers[../SundayAtVespers]{inc-SundayAtVespers}
 	\let\psalmcolsoverrideoverride=\undefined
 	\bigskip
+\ifthenelse{\boolean{onlysundaycommon}}{%
+  \printnote{All Vespers conclude with the following:}\par
+  \def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.48\linewidth}]{2}}
+  \def\vlatin{Dóminus vobíscum.}
+  \def\rlatin{Et cum spíritu tuo.}
+  \def\vtranslation{The Lord be with you.}
+  \def\rtranslation{And with thy spirit.}
+  \printvrwithtranslation{}
+
+  \bigskip
+
+  \noindent\printnote{The ``Benedicámus Dómino'' is then sung\ifthenelse{\boolean{birmingham}}{}{ in one of the tones on the next pages}.}
+
+  \bigskip
+
+  \let\rlatin\undefined
+  \let\rtranslation\undefined
+  \def\vlatin{Fidélium ánimæ per misericórdiam Dei requiéscant in pace.\\\Rbar~Amen.}
+  %\def\rlatin{Amen.}
+  \def\vtranslation{May the souls of the faithful departed through the mercy of God rest in peace.\hfill\Rbar~Amen.}
+  %\def\rtranslation{Amen.}
+  \printvrwithtranslation{}
+  \bigskip
+}%
 	\bigskip
 	\hrule
 	\bigskip

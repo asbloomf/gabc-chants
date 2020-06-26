@@ -1,9 +1,15 @@
-\chapter{Common of Festal Vespers}
+\ifthenelse{\boolean{onlysundaycommon}}{
+  \label{sundayvespers}
+  \chapter{Sunday at Vespers}
+  \section{Sunday at Vespers throughout the year}
+}{
+  \chapter{Common of Festal Vespers}
 
+  \sectionmark{Deus in adjutórium}
+  \addcontentsline{toc}{section}{Deus in adjutórium}
+}
 %\subtitle{Festal Tone}
 \label{deusinadjutorium}
-\sectionmark{Deus in adjutórium}
-\addcontentsline{toc}{section}{Deus in adjutórium}
 \printnote{The Festal Tone may be sung on any Sunday or Feast.}
 \printnote{From Septuagesima to Wednesday in Holy Week, the \emph{Laus tibi} is said instead of \emph{Allelúia}.}
 
@@ -17,27 +23,27 @@
 %  \pagebreak
 %}
 %\subtitle{Solemn Tone}
-\printnote{The Solemn Tone may only be sung on Feasts of the First or Second Class.}
-\printnote{From Septuagesima to Wednesday in Holy Week, the \emph{Laus tibi} is said instead of \emph{Allelúia}.}
+\ifthenelse{\boolean{onlysundaycommon}}{}{% false
+  \printnote{The Solemn Tone may only be sung on Feasts of the First or Second Class.}
+  \printnote{From Septuagesima to Wednesday in Holy Week, the \emph{Laus tibi} is said instead of \emph{Allelúia}.}
 
-\bigskip
-{
-  \def\deusinadjutoriumsolemn{T}
-  \def\includetranslation{F}
-  \label{deusinadjutoriumsolemn}
-  \printdeusinadjutorium{}
-  \let\deusinadjutoriumsolemn=\undefined
+  \bigskip
+  {
+    \def\deusinadjutoriumsolemn{T}
+    \def\includetranslation{F}
+    \label{deusinadjutoriumsolemn}
+    \printdeusinadjutorium{}
+    \let\deusinadjutoriumsolemn=\undefined
+  }
+
+  \printnote{Vespers then proceed with the Proper Antiphons, Psalms, Chapter, Hymn, Versicle,
+  Magnificat, and Collect given for the respective Sunday or Feast.
+
+  For Sundays throughout the year, \emph{p.~\pageref{sundayvespers}}.
+
+  For Sundays in Paschaltide, \emph{p.~\pageref{sundayvespers-easter}}.
+  }
 }
-
-\printnote{Vespers then proceed with the Proper Antiphons, Psalms, Chapter, Hymn, Versicle,
-Magnificat, and Collect given for the respective Sunday or Feast.
-
-For Sundays throughout the year, \emph{p.~\pageref{sundayvespers}}.
-\ifthenelse{\boolean{onlysundaycommon}}{}{
-  
-For Sundays in Paschaltide, \emph{p.~\pageref{sundayvespers-easter}}.}
-}
-
 \bigskip
 
 \newcommand{\printvrwithtranslation}{
@@ -68,7 +74,8 @@ For Sundays in Paschaltide, \emph{p.~\pageref{sundayvespers-easter}}.}
     }
 }
 
-{
+\ifthenelse{\boolean{onlysundaycommon}}{}
+{% false
   \printnote{All Vespers conclude with the following:}\par
   \def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.48\linewidth}]{2}}
   \def\vlatin{Dóminus vobíscum.}

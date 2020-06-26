@@ -20,45 +20,52 @@ In Fatherland to spend with thee. Amen.
 \let\translationmargin=\undefined
 \bigskip
 
-\printgabc{7.}{}{O}{OSalutaris_v2}
+\ifthenelse{\boolean{onlysundaycommon}}{
+	\vfil
+	\pagebreak
+}{% false
+	\printgabc{7.}{}{O}{OSalutaris_v2}
+}
 
 
 \oldneedspace{4\baselineskip}
 \printgabc{3.}{}{T}{TantumErgo}
 
-\needspace{4\baselineskip}
-\bigskip
-{\centering
-2.~\emph{Another Chant.}
-%\vspace{-1ex}
-\par
+\ifthenelse{\boolean{onlysundaycommon}}{}{% false
+	\needspace{4\baselineskip}
+	\bigskip
+	{\centering
+	2.~\emph{Another Chant.}
+	%\vspace{-1ex}
+	\par
+	}
+	\medskip
+	\printgabc{1.}{}{T}{TantumErgo_v2}
+
+	\needspace{4\baselineskip}
+
+	\oldneedspace{4\baselineskip}
+	\bigskip
+	{\centering
+	3.~\emph{Modern Chant.}
+	\par
+	}
+	\medskip
+
+	\needspace{4\baselineskip}
+	\printgabc{5.}{}{T}{TantumErgo_v3}
+
+	\needspace{4\baselineskip}
+	\bigskip
+	{\centering
+	4.~\emph{Spanish Chant.}
+	\par
+	}
+	\medskip
+
+	\needspace{4\baselineskip}
+	\printgabc{5.}{}{T}{TantumErgo-Spanish}
 }
-\medskip
-\printgabc{1.}{}{T}{TantumErgo_v2}
-
-\needspace{4\baselineskip}
-
-\oldneedspace{4\baselineskip}
-\bigskip
-{\centering
-3.~\emph{Modern Chant.}
-\par
-}
-\medskip
-
-\needspace{4\baselineskip}
-\printgabc{5.}{}{T}{TantumErgo_v3}
-
-\needspace{4\baselineskip}
-\bigskip
-{\centering
-4.~\emph{Spanish Chant.}
-\par
-}
-\medskip
-
-\needspace{4\baselineskip}
-\printgabc{5.}{}{T}{TantumErgo-Spanish}
 
 \begin{multicols}{2}
 \selectlanguage{american}

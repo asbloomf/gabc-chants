@@ -50,7 +50,7 @@
 
 \setcounter{secnumdepth}{-1}
 
-\ifthenelse{\boolean{birmingham}}{
+\ifthenelse{\boolean{birmingham} \or \boolean{onlysundaycommon}}{
 	%a4
 	%\def\mywidth{210mm}
 	%\def\myheight{297mm}
@@ -180,7 +180,7 @@
 	\newcommand{\psalmcolsoverride}[1][0]{
 	}	
 }{
-	\ifthenelse{\boolean{birmingham}}{
+	\ifthenelse{\boolean{birmingham} \or \boolean{onlysundaycommon}}{
 		\newcommand{\psalmcolsoverride}[1][0]{
 			\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 			\ifnum#1=110
@@ -520,11 +520,13 @@
 	\prevespers{}
 	\fi
 
-	\ifx\deusinadjutoriumsolemn\undefined\def\deusinadjutoriumsolemn{F}\fi
-	\deusinadjutorium[\deusinadjutoriumsolemn]
+	\ifthenelse{\boolean{onlysundaycommon}}{}{% false
+		\ifx\deusinadjutoriumsolemn\undefined\def\deusinadjutoriumsolemn{F}\fi
+		\deusinadjutorium[\deusinadjutoriumsolemn]
 
-	\ifx\postdeusinadjutorium\undefined\else\postdeusinadjutorium\fi
-	\medskip
+		\ifx\postdeusinadjutorium\undefined\else\postdeusinadjutorium\fi
+		\medskip
+	}
 	\ifx\psalmsreplacement\undefined{
 		\ifx\psalmonenum\undefined{
 			\ifx\definevesperspropersalt\undefined\else{
@@ -795,7 +797,7 @@
 		\medskip}
 
 		{\Huge
-		Sunday\ifthenelse{\boolean{onlysundaycommon}}{}{s \& Holy Days}
+		Sundays\ifthenelse{\boolean{onlysundaycommon}}{}{ \& Holy Days}
 
 		}
 		\vfill}
@@ -806,7 +808,7 @@
 	\ifthenelse{\boolean{birmingham}}{
 		\noindent{}Vesperale pro dominicis et festis ad usum Oratorii Sancti Philippi Nerii apud Birminghamiensem: \emph{newly typeset, based on \emph{The Liber Usualis}, edited by the Benedictines of Solesmes (Desclee Company, 1961).}
 	}{
-		\noindent{}Vespers with Gregorian Chant for Sunday\ifthenelse{\boolean{onlysundaycommon}}{}{s \& Holy Days}: \emph{newly typeset, based on \emph{The Liber Usualis}, edited by the Benedictines of Solesmes (Desclee Company, 1961).}
+		\noindent{}Vespers with Gregorian Chant for Sundays\ifthenelse{\boolean{onlysundaycommon}}{}{ \& Holy Days}: \emph{newly typeset, based on \emph{The Liber Usualis}, edited by the Benedictines of Solesmes (Desclee Company, 1961).}
 	}
 
 	\bigskip{}\noindent{}Many thanks to Elie Roux for creating Gregorio, to all the people answering questions on the Gregorio forums, to Olivier Berton for creating GregoBase (http://gregobase.selapa.net) which makes it much easier to find all the chant that Andrew Hinkley and others have contributed to the public domain.  Also many thanks to my brother Benjamin, whose website (http://bbloomf.github.io/jgabc) makes it incredibly easy to typeset the psalms and substantially easier than otherwise to typeset Gregorian chant with Gregorio.
@@ -861,7 +863,9 @@
 %\frontmatter
 %\pagenumbering{roman}
 
-\tableofcontents
+\ifthenelse{\boolean{onlysundaycommon}}{}{%
+\tableofcontents%
+}
 
 %\pagenumbering{arabic}
 %\mainmatter
@@ -877,7 +881,7 @@
 
 \input{inc-vespers-sunday}
 
-\ifthenelse{\boolean{birmingham} \or \boolean{onlysundaycommon}}{% true
+\ifthenelse{\boolean{birmingham}}{% true
 	\grechangeglyph{Porrectus*}{*}{.alt} % this is really just for september 14 as far as I know
 
 	\cleartoleftpage
@@ -888,7 +892,12 @@
 
 	\clearpage
 }{}
+\ifthenelse{\boolean{onlysundaycommon}}{% true
+	\cleartoleftpage
+	\input{inc-benedicamus-domino}
 
+	\clearpage
+}{}
 
 \ifthenelse{\boolean{testrun} \or \boolean{onlysundaycommon}}{}{
 	\include{inc-advent}
@@ -914,24 +923,20 @@
 \ifthenelse{\boolean{includeappendix}}{
 	\cleardoublepage	
 	\chapter{Appendix}
-	\ifthenelse{\boolean{onlysundaycommon}}{
-		\input{inc-benediction}
-	}{
-		\ifthenelse{\boolean{includecommonofdedicationofchurch}}{
-			\input{inc-commondedicationofchurch}
-		}{}
-		\ifthenelse{\boolean{includevespersofdead}}{
-			\input{inc-vespersofdead}
-		}{}
-		\input{inc-40hours}
-		\input{inc-benediction}
-		\cleartoleftpage{}
-		\input{inc-lucis_creator_poly}
-		\input{inc-marian-anthems-appendix}
-		\include{inc-mag1D}
-		\include{inc-mag7a}
-		\include{inc-grassi}
-	}
+	\ifthenelse{\boolean{includecommonofdedicationofchurch}}{
+		\input{inc-commondedicationofchurch}
+	}{}
+	\ifthenelse{\boolean{includevespersofdead}}{
+		\input{inc-vespersofdead}
+	}{}
+	\input{inc-40hours}
+	\input{inc-benediction}
+	\cleartoleftpage{}
+	\input{inc-lucis_creator_poly}
+	\input{inc-marian-anthems-appendix}
+	\include{inc-mag1D}
+	\include{inc-mag7a}
+	\include{inc-grassi}
 }{
 	\ifthenelse{\boolean{includevespersofdead}}{
 		\cleardoublepage
@@ -942,6 +947,12 @@
 		\input{inc-vespersofdead}
 	}{}
 }
+\ifthenelse{\boolean{onlysundaycommon}}{% true
+	\input{inc-benediction}
+
+	\cleartoleftpage
+	\include{inc-marian-anthems}
+}{}
 
 \end{document}
 

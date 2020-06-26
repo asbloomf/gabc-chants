@@ -6,12 +6,41 @@
 	\gregorioscore{#2}
   \greseteolcustos{auto}
 }
+\newcommand{\printmariananthemnote}{
+	{\bigskip
+	\def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
+	\emph{Marian anthems can be found on the following pages:}\smallskip
+
+	\noindent{}Alma Redemptoris Mater \emph{(Advent through February 2)},\dotting p.~\pageref{almaredemptorismater}%
+	\ifthenelse{\boolean{includepolyphony}}
+		{ \& \pageref{alma_poly}}
+		{}
+	\\
+	Ave Regina Cælorum \emph{(February 2 through Lent)},\dotting p.~\pageref{avereginacaelorum}%
+	\ifthenelse{\boolean{includepolyphony}}
+		{ \& \pageref{averegina_poly}}
+		{}
+	\\
+\ifthenelse{\boolean{onlysundaycommon}}{}{% false
+	Regina Cæli \emph{(Easter through the Friday after Pentecost)},\dotting p.~\pageref{reginacaeli}%
+	\ifthenelse{\boolean{includepolyphony}}
+		{ \& \pageref{reginacaeli_poly}}
+		{}
+	\\
+}%
+	Salve Regina \emph{(1st Vespers of Trinity Sunday until before Advent)},\dotting p.~\pageref{salveregina}%
+	\ifthenelse{\boolean{includepolyphony}}
+		{ \& \pageref{salveregina_poly}}
+		{}
+
+	}	
+}
 
 \ifthenelse{\boolean{birmingham}}{	
-}{
+}{% false
 	\pagebreak
 }
-\ifthenelse{\boolean{birmingham}}{
+\ifthenelse{\boolean{birmingham} \or \boolean{onlysundaycommon}}{
 	\bigskip
 	{\begin{centering}
 
@@ -27,98 +56,72 @@
 
 %\vfil
 \grechangestaffsize{15}
-\label{benedicamusdomino-1}
-{{\centering \bfseries 1.~On feasts of the I class.\\}
-\smallskip
-{\centering \normalsize At \nth{1} Vespers.\\}
-\smallskip
-\def\breakbeforeresp{T}
-\printbenedicamusdomino{2.}{../BenedicamusDomino/BenedicamusDomino_1class1stvespers}
-\bigskip\needspace{8\baselineskip}
-%\vfil
-{\centering \normalsize At \nth{2} Vespers.\\}
-\smallskip
-{\def\breakbeforeresp{T}
-\printbenedicamusdomino{6.}{../BenedicamusDomino/BenedicamusDomino_1class2ndvespers}
-}
-\medskip
-\emph{\normalsize or more commonly:}
-
-\smallskip
-\def\breakbeforeresp{T}
-\printbenedicamusdomino{5.}{../BenedicamusDomino/BenedicamusDomino_1class2ndVespersAlt}
-\ifthenelse{\boolean{birmingham}}{
+\ifthenelse{\boolean{onlysundaycommon}}{}{% false
+	\label{benedicamusdomino-1}
+	{{\centering \bfseries 1.~On feasts of the I class.\\}
+	\smallskip
+	{\centering \normalsize At \nth{1} Vespers.\\}
+	\smallskip
+	\def\breakbeforeresp{T}
+	\printbenedicamusdomino{2.}{../BenedicamusDomino/BenedicamusDomino_1class1stvespers}
+	\bigskip\needspace{8\baselineskip}
+	%\vfil
+	{\centering \normalsize At \nth{2} Vespers.\\}
+	\smallskip
+	{\def\breakbeforeresp{T}
+	\printbenedicamusdomino{6.}{../BenedicamusDomino/BenedicamusDomino_1class2ndvespers}
+	}
 	\medskip
-	\emph{\normalsize or from \emph{Mass II}:}
+	\emph{\normalsize or more commonly:}
 
 	\smallskip
-	\printbenedicamusdomino{5.}{../BenedicamusDomino/ky--benedicamus_ii--solesmes}
-}{}
-}
-%\vfil
-% TODO: add references for polyphony
+	\def\breakbeforeresp{T}
+	\printbenedicamusdomino{5.}{../BenedicamusDomino/BenedicamusDomino_1class2ndVespersAlt}
+	\ifthenelse{\boolean{birmingham}}{
+		\medskip
+		\emph{\normalsize or from \emph{Mass II}:}
 
-\ifthenelse{\boolean{birmingham}}{
-	\vfil	
-}{
-	{\bigskip
-	\def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
-	\emph{Marian anthems can be found on the following pages:}\smallskip
-
-	\noindent{}Alma Redemptoris Mater \emph{(Advent through February 2)},\dotting p.~\pageref{almaredemptorismater}%
-	\ifthenelse{\boolean{includepolyphony}}
-		{ \& \pageref{alma_poly}}
-		{}
-	\\
-	Ave Regina Cælorum \emph{(February 2 through Lent)},\dotting p.~\pageref{avereginacaelorum}%
-	\ifthenelse{\boolean{includepolyphony}}
-		{ \& \pageref{averegina_poly}}
-		{}
-	\\
-	Regina Cæli \emph{(Easter through the Friday after Pentecost)},\dotting p.~\pageref{reginacaeli}%
-	\ifthenelse{\boolean{includepolyphony}}
-		{ \& \pageref{reginacaeli_poly}}
-		{}
-	\\
-	Salve Regina \emph{(1st Vespers of Trinity Sunday until before Advent)},\dotting p.~\pageref{salveregina}%
-	\ifthenelse{\boolean{includepolyphony}}
-		{ \& \pageref{salveregina_poly}}
-		{}
-
+		\smallskip
+		\printbenedicamusdomino{5.}{../BenedicamusDomino/ky--benedicamus_ii--solesmes}
+	}{}
 	}
-}
-\ifthenelse{\boolean{birmingham}}{
-	
-}{
-	\pagebreak
-}
+	%\vfil
+	% TODO: add references for polyphony
+	\ifthenelse{\boolean{birmingham}}{
+		\vfil
 
-\label{benedicamusdomino-2}
-{{\centering \bfseries 2.~On feasts of the II class.\\}
-\smallskip
-{\centering \normalsize At \nth{1} Vespers.\\}
-{\def\breakbeforeresp{T}
-\printbenedicamusdomino{2.}{../BenedicamusDomino/BenedicamusDomino_2class1stvespers}
-}
-\bigskip\oldneedspace{5\baselineskip}
-{\centering \normalsize At \nth{2} Vespers.\\}
-{%\def\breakbeforeresp{T}
-\printbenedicamusdomino{8.}{../BenedicamusDomino/BenedicamusDomino_2class2ndvespers}}
-}
-\bigskip
+	}{
+		\printmariananthemnote{}
+		\pagebreak
+	}
 
-%{{\centering \bfseries On feasts of the III class.\\}
-%\printbenedicamusdomino{2.}{../BenedicamusDomino/BenedicamusDomino_3class}}
-%\bigskip\vfill
+	\label{benedicamusdomino-2}
+	{{\centering \bfseries 2.~On feasts of the II class.\\}
+	\smallskip
+	{\centering \normalsize At \nth{1} Vespers.\\}
+	{\def\breakbeforeresp{T}
+	\printbenedicamusdomino{2.}{../BenedicamusDomino/BenedicamusDomino_2class1stvespers}
+	}
+	\bigskip\oldneedspace{5\baselineskip}
+	{\centering \normalsize At \nth{2} Vespers.\\}
+	{%\def\breakbeforeresp{T}
+	\printbenedicamusdomino{8.}{../BenedicamusDomino/BenedicamusDomino_2class2ndvespers}}
+	}
+	\bigskip
 
-\needspace{3\baselineskip}
-\label{benedicamusdomino-mary}
-\gdef\benedicamusdominonamemary{3}
-{{\centering \bfseries 3.~On feasts of the Blessed Virgin.\\}
-\smallskip
-%\def\breakbeforeresp{T}
-\printbenedicamusdomino{1.}{../BenedicamusDomino/BenedicamusDomino_blessedVirgin}}
-\bigskip\bigskip
+	%{{\centering \bfseries On feasts of the III class.\\}
+	%\printbenedicamusdomino{2.}{../BenedicamusDomino/BenedicamusDomino_3class}}
+	%\bigskip\vfill
+
+	\needspace{3\baselineskip}
+	\label{benedicamusdomino-mary}
+	\gdef\benedicamusdominonamemary{3}
+	{{\centering \bfseries 3.~On feasts of the Blessed Virgin.\\}
+	\smallskip
+	%\def\breakbeforeresp{T}
+	\printbenedicamusdomino{1.}{../BenedicamusDomino/BenedicamusDomino_blessedVirgin}}
+	\bigskip\bigskip
+}
 
 \needspace{6\baselineskip}
 \label{benedicamusdomino-sunday}
@@ -146,11 +149,13 @@
 }
 \bigskip\bigskip
 
-\label{benedicamusdomino-easter}
-\gdef\benedicamusdominonameeaster{6}
-{{\centering \bfseries 6.~On Sundays of Paschal Time.\\}
-\smallskip
-%\def\breakbeforeresp{T}
-\printbenedicamusdomino{7.}{../BenedicamusDomino/BenedicamusDomino_SundaysOfPaschalTime}}
+\ifthenelse{\boolean{onlysundaycommon}}{}{% false
+	\label{benedicamusdomino-easter}
+	\gdef\benedicamusdominonameeaster{6}
+	{{\centering \bfseries 6.~On Sundays of Paschal Time.\\}
+	\smallskip
+	%\def\breakbeforeresp{T}
+	\printbenedicamusdomino{7.}{../BenedicamusDomino/BenedicamusDomino_SundaysOfPaschalTime}}
+}
 
 }

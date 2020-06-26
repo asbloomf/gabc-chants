@@ -13,10 +13,12 @@
 }{}
 \def\nogabcbreaks{T}
 \newcommand{\printsimpletone}{
-\vspace{0ex plus 1ex minus 1ex}
-\oldneedspace{3\baselineskip}
-{\centering\textbf{Simple Tone.}\par}
-\vspace{0ex plus 1ex minus 1ex}
+\ifthenelse{\boolean{onlysundaycommon}}{}{% false
+    \vspace{0ex plus 1ex minus 1ex}
+    \oldneedspace{3\baselineskip}
+    {\centering\textbf{Simple Tone.}\par}
+    \vspace{0ex plus 1ex minus 1ex}
+  }
 }
 \newcommand{\printsolemntone}{
 \vspace{0ex plus 1ex minus 1ex}
@@ -118,8 +120,10 @@
 \printgabc{Ant.}{5.}{A}{AlmaSimple}
 }
 \medskip
-\printsolemntone{}
-\printgabc{Ant.}{5.}{A}{AlmaSolemn}
+\ifthenelse{\boolean{onlysundaycommon}}{}{% false
+  \printsolemntone{}
+  \printgabc{Ant.}{5.}{A}{AlmaSolemn}
+}
 
 \begin{quote}{
 Beloved Mother of the Saviour, and wide open Gate of heaven,
@@ -134,6 +138,7 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 %Thou Virgin first and last, let us thy mercy see.%
 }\end{quote}
 
+\ifthenelse{\boolean{onlysundaycommon}}{\vfil\pagebreak}{}
 {
 \newcommand{\note}{During Advent:}
 \newcommand{\vlatin}{Angelus Dómini nuntiávit Maríæ.}
@@ -170,9 +175,11 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 }{}
 \printsimpletone{}
 \printgabc{Ant.}{6.}{A}{AveReginaSimple}
-\bigskip
-\printsolemntone{}
-\printgabc{Ant.}{6.}{A}{AveReginaSolemn}
+\ifthenelse{\boolean{onlysundaycommon}}{}{% false
+  \bigskip
+  \printsolemntone{}
+  \printgabc{Ant.}{6.}{A}{AveReginaSolemn}
+}
 \begin{quote}{Hail, Queen of Heaven! Hail, Queen of Angels! Hail, blest Root and Gate, from which came light upon the world! Rejoice, O glorious Virgin, that surpassest all in beauty! Hail, O most lovely, and pray for us to Christ.}\end{quote}
 
 {
@@ -187,48 +194,49 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 \afterant{}
 }
 
-\vspace{-0.5\baselineskip}
-% Regina Cæli
-\needspace{9\baselineskip}
-\label{reginacaeli}
-\section{Regina cæli}
-\ifthenelse{\boolean{birmingham}}{}{
-  \printnote{From Compline of Easter Sunday to Compline of Friday after the Feast of Pentecost inclusively.}
+\ifthenelse{\boolean{onlysundaycommon}}{}{% false
+  \vspace{-0.5\baselineskip}
+  % Regina Cæli
+  \needspace{9\baselineskip}
+  \label{reginacaeli}
+  \section{Regina cæli}
+  \ifthenelse{\boolean{birmingham}}{}{
+    \printnote{From Compline of Easter Sunday to Compline of Friday after the Feast of Pentecost inclusively.}
+  }
+  \ifthenelse{\boolean{includepolyphony}}{
+
+    \noindent
+    \emph{Polyphonic version by Palestrina is found on page \pageref{reginacaeli_poly}.}
+    \smallskip
+  }{}
+  \printsimpletone{}
+  \printgabc{Ant.}{6.}{R}{ReginaCaeliSimple}
+  \oldneedspace{12\baselineskip}
+  \bigskip
+  \printsolemntone{}
+  \printgabc{Ant.}{6.}{R}{ReginaCaeliSolemn}
+
+  \def\reginacaelienglish{%
+  \begin{quote}{O Queen of heaven, rejoice, alleluia.\\
+  For He whom thou didst merit to bear, alleluia;\\
+  Has risen as He said, alleluia.\\
+  Pray for us to God, alleluia.}\end{quote}%
+  }
+  \reginacaelienglish{}
+
+  \bigskip{}
+  {
+  \newcommand{\vlatin}{Gáude et lætáre Virgo María, allelúia.}
+  \newcommand{\venglish}{Rejoice and be glad, O Virgin Mary, alleluia.}
+  \newcommand{\rlatin}{Quia surréxit Dóminus vere, allelúia.}
+  \newcommand{\renglish}{For the Lord is risen indeed, alleluia.}
+  \newcommand{\prayerlatin}{Deus, qui per resurrectiónem Fílii tui Dómini nostri Jesu Christi mundum lætificáre dignátus es~:~\gredagger{} præsta, quǽsumus; ut per ejus Genitrícem Vírginem Maríam~* perpétuæ capiámus gáudia vitæ. Per eúmdem Christum Dóminum nostrum. \Rbar~Amen.}
+  \newcommand{\prayerenglish}{O God, who didst vouchsafe to give joy to the world through the resurrection of Thy Son our Lord Jesus Christ; grant, we beseech Thee, that through His Mother, the Virgin Mary, we may obtain the joys of everlasing life. Through the same Christ our Lord. \Rbar~Amen.}
+  \def\prayerlabel{reginacaeliprayer}
+
+  \afterant{}
+  }
 }
-\ifthenelse{\boolean{includepolyphony}}{
-
-  \noindent
-  \emph{Polyphonic version by Palestrina is found on page \pageref{reginacaeli_poly}.}
-  \smallskip
-}{}
-\printsimpletone{}
-\printgabc{Ant.}{6.}{R}{ReginaCaeliSimple}
-\oldneedspace{12\baselineskip}
-\bigskip
-\printsolemntone{}
-\printgabc{Ant.}{6.}{R}{ReginaCaeliSolemn}
-
-\def\reginacaelienglish{%
-\begin{quote}{O Queen of heaven, rejoice, alleluia.\\
-For He whom thou didst merit to bear, alleluia;\\
-Has risen as He said, alleluia.\\
-Pray for us to God, alleluia.}\end{quote}%
-}
-\reginacaelienglish{}
-
-\bigskip{}
-{
-\newcommand{\vlatin}{Gáude et lætáre Virgo María, allelúia.}
-\newcommand{\venglish}{Rejoice and be glad, O Virgin Mary, alleluia.}
-\newcommand{\rlatin}{Quia surréxit Dóminus vere, allelúia.}
-\newcommand{\renglish}{For the Lord is risen indeed, alleluia.}
-\newcommand{\prayerlatin}{Deus, qui per resurrectiónem Fílii tui Dómini nostri Jesu Christi mundum lætificáre dignátus es~:~\gredagger{} præsta, quǽsumus; ut per ejus Genitrícem Vírginem Maríam~* perpétuæ capiámus gáudia vitæ. Per eúmdem Christum Dóminum nostrum. \Rbar~Amen.}
-\newcommand{\prayerenglish}{O God, who didst vouchsafe to give joy to the world through the resurrection of Thy Son our Lord Jesus Christ; grant, we beseech Thee, that through His Mother, the Virgin Mary, we may obtain the joys of everlasing life. Through the same Christ our Lord. \Rbar~Amen.}
-\def\prayerlabel{reginacaeliprayer}
-
-\afterant{}
-}
-
 
 % Salve Regina
 \def\salvereginaenglish{
@@ -259,42 +267,43 @@ Pray for us to God, alleluia.}\end{quote}%
 \printsimpletone{}
 \printgabc{Ant.}{5.}{S}{SalveReginaSimple}
   \bigskip{}
-\ifthenelse{\boolean{includesalvewithdrone}}{
+\ifthenelse{\boolean{includesalvewithdrone} \or \boolean{onlysundaycommon}}{
   \salvereginaenglish
   \medskip
 }{}
-\printsolemntone{}
-\ifthenelse{\boolean{includesalvewithdrone}}{
-  \emph{The solemn tone is found on the next page.}
-
-  \bigskip
-  \afterant{}
-  \bigskip
-  \needspace{15\baselineskip}
-
+\ifthenelse{\boolean{onlysundaycommon}}{}{% false
   \printsolemntone{}
-  The puncta cava (open notes) indicate where a male chorus can sing a drone.  These drones are always a fifth apart on either the RE and the LA or the DO and the SOL.  Then for the sections with a brace above, instead of droning, the melody is sung in parallel, either a fifth above or below.  The drone should only be interrupted at the double bars.
-  \smallskip
-  {
-    \grechangedim{spacelinestext}{0.62 cm}{scalable}%
-    \printgabc{Ant.}{1.}{S}{SalveReginaSolemn-drone}
+  \ifthenelse{\boolean{includesalvewithdrone}}{
+    \emph{The solemn tone is found on the next page.}
 
     \bigskip
-    \shortafterant{}
+    \afterant{}
+    \bigskip
+    \needspace{15\baselineskip}
+
+    \printsolemntone{}
+    The puncta cava (open notes) indicate where a male chorus can sing a drone.  These drones are always a fifth apart on either the RE and the LA or the DO and the SOL.  Then for the sections with a brace above, instead of droning, the melody is sung in parallel, either a fifth above or below.  The drone should only be interrupted at the double bars.
+    \smallskip
+    {
+      \grechangedim{spacelinestext}{0.62 cm}{scalable}%
+      \printgabc{Ant.}{1.}{S}{SalveReginaSolemn-drone}
+
+      \bigskip
+      \shortafterant{}
+    }
+  }{ % not salve with drone
+    \printgabc{Ant.}{1.}{S}{SalveReginaSolemn}
+
+    \oldneedspace{8\baselineskip}
+    \salvereginaenglish
   }
-}{ % not salve with drone
-  \printgabc{Ant.}{1.}{S}{SalveReginaSolemn}
 
-  \oldneedspace{8\baselineskip}
-  \salvereginaenglish
+  %\vfil
+  \ifthenelse{\boolean{includesalvewithdrone}}{}{
+    \bigskip
+    \afterant{}
+  }
 }
-
-%\vfil
-\ifthenelse{\boolean{includesalvewithdrone}}{}{
-  \bigskip
-  \afterant{}
-}
-
 %\vfil
 \bigskip
 
