@@ -36,19 +36,10 @@
 	}	
 }
 
-\ifthenelse{\boolean{birmingham}}{	
+\ifthenelse{\boolean{birmingham} \or \boolean{onlysundaycommon}}{
 }{% false
 	\pagebreak
 }
-\ifthenelse{\boolean{birmingham} \or \boolean{onlysundaycommon}}{
-	\bigskip
-	{\begin{centering}
-
-	\Large Benedicámus Dómino
-
-	\end{centering}}
-	\bigskip
-}{}
 \phantomsection
 \label{benedicamusdomino}
 \sectionmark{Benedicámus Dómino}
@@ -56,7 +47,7 @@
 
 %\vfil
 \grechangestaffsize{15}
-\ifthenelse{\boolean{onlysundaycommon}}{}{% false
+\ifthenelse{\not \boolean{onlysundaycommon}}{
 	\label{benedicamusdomino-1}
 	{{\centering \bfseries 1.~On feasts of the I class.\\}
 	\smallskip
@@ -121,35 +112,40 @@
 	%\def\breakbeforeresp{T}
 	\printbenedicamusdomino{1.}{../BenedicamusDomino/BenedicamusDomino_blessedVirgin}}
 	\bigskip\bigskip
-}
 
-\needspace{6\baselineskip}
-\label{benedicamusdomino-sunday}
-\gdef\benedicamusdominonamesunday{4}
-{{\centering \bfseries 4.~On Sundays during the Year\\and Septuagesima, Sexagesima, and Quinquagesima.\\}
-\smallskip
-%\def\breakbeforeresp{T}
-\printbenedicamusdomino{1.}{../BenedicamusDomino/BenedicamusDomino_Sundays}}
-\bigskip\bigskip
-
-\label{benedicamusdomino-lent}\label{benedicamusdomino-advent}
-\gdef\benedicamusdominonamelent{5}
-\gdef\benedicamusdominonameadvent{\benedicamusdominonamelent}
-{{\centering \bfseries 5.~On Sundays of Advent and Lent.\\}
-\smallskip
-%\def\breakbeforeresp{T}
-\printbenedicamusdomino{6.}{../BenedicamusDomino/BenedicamusDomino_SundaysOfAdventAndLent}
-\ifthenelse{\boolean{birmingham}}{
-	\medskip
-	\emph{\normalsize or from \emph{Mass XVII}:}
-
+	\needspace{6\baselineskip}
+	\label{benedicamusdomino-sunday}
+	\gdef\benedicamusdominonamesunday{4}
+	{{\centering \bfseries 4.~On Sundays during the Year\\and Septuagesima, Sexagesima, and Quinquagesima.\\}
 	\smallskip
-	\printbenedicamusdomino{6.}{../BenedicamusDomino/ky--benedicamus_xviia--solesmes}
-}{}
+	%\def\breakbeforeresp{T}
+	\printbenedicamusdomino{1.}{../BenedicamusDomino/BenedicamusDomino_Sundays}}
+}{% only sunday common
+	\label{benedicamusdomino-sunday}
+	\gdef\benedicamusdominonamesunday{4}
+	{\printbenedicamusdomino{1.}{../BenedicamusDomino/BenedicamusDomino_Sundays}}
+	\bigskip
 }
-\bigskip\bigskip
 
 \ifthenelse{\boolean{onlysundaycommon}}{}{% false
+	\bigskip\bigskip
+	\label{benedicamusdomino-lent}\label{benedicamusdomino-advent}
+	\gdef\benedicamusdominonamelent{5}
+	\gdef\benedicamusdominonameadvent{\benedicamusdominonamelent}
+	{{\centering \bfseries 5.~On Sundays of Advent and Lent.\\}
+	\smallskip
+	%\def\breakbeforeresp{T}
+	\printbenedicamusdomino{6.}{../BenedicamusDomino/BenedicamusDomino_SundaysOfAdventAndLent}
+	\ifthenelse{\boolean{birmingham}}{
+		\medskip
+		\emph{\normalsize or from \emph{Mass XVII}:}
+
+		\smallskip
+		\printbenedicamusdomino{6.}{../BenedicamusDomino/ky--benedicamus_xviia--solesmes}
+	}{}
+	}
+	\bigskip\bigskip
+
 	\label{benedicamusdomino-easter}
 	\gdef\benedicamusdominonameeaster{6}
 	{{\centering \bfseries 6.~On Sundays of Paschal Time.\\}

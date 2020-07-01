@@ -100,17 +100,21 @@
 
 	}
 	\newcommand{\magreplacement}{\vspace{-\baselineskip}\noindent\begin{centering}
+		\ifthenelse{\boolean{onlysundaycommon}}{
+			\medskip
+		}{%false
+			\vfil
+		}
 
-		\vfil
 		\emph{Magnificat \& Collect of the Sunday.}
 
 		\end{centering}
+		\medskip{}
 		\ifthenelse{\boolean{onlysundaycommon}}{}{%false
-			\medskip{}
 			%\vspace{-\baselineskip}
 			\printsundaysthroughtheyear{}
+			\vfil
 		}
-		\vfil
 		\ifthenelse{\boolean{includebenedicamusdominoreferences}}{
 			\Vbar~\emph{Benedicámus Dómino \benedicamusdominonamesunday{}}, page \pageref{benedicamusdomino-sunday}; or in Lent, \emph{\benedicamusdominonamelent{}}, page \pageref{benedicamusdomino-lent}.
 		}{}
@@ -166,32 +170,19 @@
 
 	\printvespers[../SundayAtVespers]{inc-SundayAtVespers}
 	\let\psalmcolsoverrideoverride=\undefined
-	\bigskip
-\ifthenelse{\boolean{onlysundaycommon}}{%
-  \printnote{All Vespers conclude with the following:}\par
-  \def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.48\linewidth}]{2}}
-  \def\vlatin{Dóminus vobíscum.}
-  \def\rlatin{Et cum spíritu tuo.}
-  \def\vtranslation{The Lord be with you.}
-  \def\rtranslation{And with thy spirit.}
-  \printvrwithtranslation{}
+	\ifthenelse{\boolean{onlysundaycommon}}{%
+	  \def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.48\linewidth}]{2}}
+	  \def\vlatin{Dóminus vobíscum.}
+	  \def\rlatin{Et cum spíritu tuo.}
+	  \def\vtranslation{The Lord be with you.}
+	  \def\rtranslation{And with thy spirit.}
+	  \printvrwithtranslation{}
 
-  \bigskip
-
-  \noindent\printnote{The ``Benedicámus Dómino'' is then sung\ifthenelse{\boolean{birmingham}}{}{ in one of the tones on the next pages}.}
-
-  \bigskip
-
-  \let\rlatin\undefined
-  \let\rtranslation\undefined
-  \def\vlatin{Fidélium ánimæ per misericórdiam Dei requiéscant in pace.\\\Rbar~Amen.}
-  %\def\rlatin{Amen.}
-  \def\vtranslation{May the souls of the faithful departed through the mercy of God rest in peace.\hfill\Rbar~Amen.}
-  %\def\rtranslation{Amen.}
-  \printvrwithtranslation{}
-  \bigskip
-}%
-	\bigskip
-	\hrule
-	\bigskip
+	  \bigskip
+	}{
+		\bigskip
+		\bigskip
+		\hrule
+		\bigskip
+	}
 }

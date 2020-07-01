@@ -893,8 +893,18 @@
 	\clearpage
 }{}
 \ifthenelse{\boolean{onlysundaycommon}}{% true
-	\cleartoleftpage
 	\input{inc-benedicamus-domino}
+
+	{
+	  \let\rlatin\undefined
+	  \let\rtranslation\undefined
+	  \def\vlatin{Fidélium ánimæ per misericórdiam Dei requiéscant in pace.\\\Rbar~Amen.}
+	  %\def\rlatin{Amen.}
+	  \def\vtranslation{May the souls of the faithful departed through the mercy of God rest in peace.\hfill\Rbar~Amen.}
+	  %\def\rtranslation{Amen.}
+	  \printvrwithtranslation{}
+	  \bigskip
+	}
 
 	\clearpage
 }{}
@@ -950,7 +960,7 @@
 \ifthenelse{\boolean{onlysundaycommon}}{% true
 	\input{inc-benediction}
 
-	\cleartoleftpage
+	%\cleartoleftpage
 	\include{inc-marian-anthems}
 }{}
 

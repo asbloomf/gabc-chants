@@ -21,8 +21,8 @@ In Fatherland to spend with thee. Amen.
 \bigskip
 
 \ifthenelse{\boolean{onlysundaycommon}}{
-	\vfil
-	\pagebreak
+	%\vfil
+	%\pagebreak
 }{% false
 	\printgabc{7.}{}{O}{OSalutaris_v2}
 }
@@ -99,7 +99,11 @@ equal laud to thee be done. Amen.
 
 %TODO: we could add the Divine Praises might be nice...
 
-\needspace{4\baselineskip}
+\ifthenelse{\boolean{onlysundaycommon}}{
+	\needspace{8\baselineskip}
+}{
+	\needspace{4\baselineskip}
+}
 {
 \bigskip
 \printgabc{5.}{}{A}{AdoremusInAeternum}}%

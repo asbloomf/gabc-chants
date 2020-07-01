@@ -45,7 +45,11 @@
 \prayer{\prayerlatin}{\prayerenglish}
 \end{columns}
 \ifx\notetwo\undefined\else%
-\medskip
+\ifthenelse{\boolean{onlysundaycommon}}{
+  \bigskip
+}{
+  \medskip
+}
 
 \needspace{2\baselineskip}
 \noindent\textit{\notetwo}
@@ -175,7 +179,9 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 }{}
 \printsimpletone{}
 \printgabc{Ant.}{6.}{A}{AveReginaSimple}
-\ifthenelse{\boolean{onlysundaycommon}}{}{% false
+\ifthenelse{\boolean{onlysundaycommon}}{
+  \vspace{-0.1\baselineskip}
+}{% false
   \bigskip
   \printsolemntone{}
   \printgabc{Ant.}{6.}{A}{AveReginaSolemn}
@@ -270,6 +276,7 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 \ifthenelse{\boolean{includesalvewithdrone} \or \boolean{onlysundaycommon}}{
   \salvereginaenglish
   \medskip
+  \afterant{}
 }{}
 \ifthenelse{\boolean{onlysundaycommon}}{}{% false
   \printsolemntone{}
