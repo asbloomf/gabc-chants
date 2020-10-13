@@ -37,17 +37,17 @@ sopMusic = \relative c'' {
   \bar"|."
 }
 sopWords = \lyricmode {
-  Re -- gi -- na cæ -- li læ -- ta -- re, al -- le -- lu --
-  ia, læ -- ta -- re, al -- le -- lu -- ia; Qui -- a
-  quem me -- ru -- i -- sti por -- ta -- re, al -- le --
+  Re -- gí -- na cæ -- li læ -- tá -- re, al -- le -- lú --
+  ia, læ -- tá -- re, al -- le -- lú -- ia; Qui -- a
+  quem me -- ru -- í -- sti por -- tá -- re, al -- le --
 
-  lu -- ia, al -- le -- lu -- ia, __ al -- le -- lu -- ia.
-  Re -- sur -- re -- xit, si -- cut di -- xit, re -- sur -- re -- xit, __ sic -- ut di --
-  xit, al -- le -- lu -- ia; __
+  lú -- ia, al -- le -- lú -- ia, __ al -- le -- lú -- ia.
+  Re -- sur -- ré -- xit, si -- cut di -- xit, re -- sur -- ré -- xit, __ sic -- ut di --
+  xit, al -- le -- lú -- ia; __
 
   O -- ra pro no -- bis De -- um,
-  al -- le -- lu -- ia, __ al -- le -- lu --
-  ia, al -- le -- lu -- ia, __ al -- le -- lu -- ia.
+  al -- le -- lú -- ia, __ al -- le -- lú --
+  ia, al -- le -- lú -- ia, __ al -- le -- lú -- ia.
 }
 
 altoMusic = \relative c' {
@@ -70,17 +70,17 @@ altoMusic = \relative c' {
   \bar"|."
 }
 altoWords = \lyricmode {
-  Re -- gi -- na cæ -- li læ -- ta -- re, al -- le -- lu --
-  ia, læ -- ta -- re, al -- le -- lu -- ia; __ Qui -- a
-  quem me -- ru -- i -- sti por -- ta -- re, al --
+  Re -- gí -- na cæ -- li læ -- tá -- re, al -- le -- lú --
+  ia, læ -- tá -- re, al -- le -- lú -- ia; __ Qui -- a
+  quem me -- ru -- í -- sti por -- tá -- re, al --
 
-  le -- lu -- ia, __ al -- le -- lu -- ia, al -- le -- lu -- ia.
-  Re -- sur -- re -- xit, si -- cut di -- xit, re -- sur -- re -- xit, sic -- ut di --
-  xit, al -- le -- lu -- ia; __
+  le -- lú -- ia, __ al -- le -- lú -- ia, al -- le -- lú -- ia.
+  Re -- sur -- ré -- xit, si -- cut di -- xit, re -- sur -- ré -- xit, sic -- ut di --
+  xit, al -- le -- lú -- ia; __
 
   O -- ra pro no -- bis De -- um,
-  al -- le -- lu -- ia, al -- le -- lu --
-  ia, __ al -- le -- lu -- ia, al -- le -- lu -- ia. __
+  al -- le -- lú -- ia, al -- le -- lú --
+  ia, __ al -- le -- lú -- ia, al -- le -- lú -- ia. __
 }
 
 tenorMusic = \relative c' {
@@ -105,17 +105,17 @@ tenorMusic = \relative c' {
 }
 
 tenorWords = \lyricmode {
-  Re -- gi -- na cæ -- li læ -- ta -- re, al -- le --
-  lu --  ia, al -- le -- lu -- ia, al -- le -- lu -- ia; Qui -- a quem
-  me -- ru -- i -- sti __ por -- ta -- re,
+  Re -- gí -- na cæ -- li læ -- tá -- re, al -- le --
+  lú --  ia, al -- le -- lú -- ia, al -- le -- lú -- ia; Qui -- a quem
+  me -- ru -- í -- sti __ por -- tá -- re,
 
-  al -- le -- lu -- ia, al -- le -- lu -- ia.
-  Re -- sur -- re -- xit, si -- cut di --
-  xit, al -- le -- lu -- ia; __ O --
+  al -- le -- lú -- ia, al -- le -- lú -- ia.
+  Re -- sur -- ré -- xit, si -- cut di --
+  xit, al -- le -- lú -- ia; __ O --
 
-  ra pro no -- bis De -- um, al -- le -- lu --
-  ia, __ al -- le -- lu -- ia, al -- le -- lu -- ia, al -- le -- lu -- ia, __
-  al -- le -- lu -- ia, al -- le -- lu -- ia.
+  ra pro no -- bis De -- um, al -- le -- lú --
+  ia, __ al -- le -- lú -- ia, al -- le -- lú -- ia, al -- le -- lú -- ia, __
+  al -- le -- lú -- ia, al -- le -- lú -- ia.
 }
 
 bassMusic = \relative c' {
@@ -138,17 +138,17 @@ bassMusic = \relative c' {
   \bar"|."
 }
 bassWords = \lyricmode {
-  Re -- gi -- na cæ -- li læ --
-  ta -- re, al -- le -- lu --  ia;
-  Qui -- a quem me -- ru -- i -- sti por -- ta -- re,
+  Re -- gí -- na cæ -- li læ --
+  tá -- re, al -- le -- lú --  ia;
+  Qui -- a quem me -- ru -- í -- sti por -- tá -- re,
 
-  al -- le -- lu -- ia.
-  Re -- sur -- re -- xit, si -- cut di -- xit,
-  al -- le -- lu -- ia; __
+  al -- le -- lú -- ia.
+  Re -- sur -- ré -- xit, si -- cut di -- xit,
+  al -- le -- lú -- ia; __
 
-  O -- ra pro no -- bis De -- um, al -- le -- lu --
-  ia,_ al -- le -- lu -- ia, al -- le -- lu -- ia, __
-  al -- le -- lu -- ia, al -- le -- lu -- ia.
+  O -- ra pro no -- bis De -- um, al -- le -- lú --
+  ia,_ al -- le -- lú -- ia, al -- le -- lú -- ia, __
+  al -- le -- lú -- ia, al -- le -- lú -- ia.
 }
 
 pianoRH = \relative c' {
