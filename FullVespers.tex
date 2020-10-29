@@ -26,6 +26,9 @@
 
 \grechangestaffsize{17}
 
+\newcommand{\printnote}[1]{
+	{\normalsize \emph{#1}}
+}
 
 %\marginsize{25pt}{25pt}{25pt}{30pt}
 \usepackage{calc}
@@ -408,9 +411,9 @@
 \fi
 \normalsize%
 \ifx\chapterhymnversicleantiphontex\undefined%
-\ifx\chaptertranslation\undefined%
+\ifx\chaptertranslation\undefined\ifx\nochapter\undefined%
 \emph{Chapter. }%
-\else%
+\fi\else%
 %\pagebreak[3]
 \begin{center}{\large\textbf Chapter.}\end{center}
 % default width is 265pt
@@ -424,13 +427,13 @@
 %\pagebreak[3]
 
 \fi%
-\ifx\hymntex\undefined
+\ifx\hymntex\undefined\ifx\hymn\undefined\else
 {\vspace{-1ex plus 1ex}
 \emph{Hymn.} \hymn{}.%
 \ifx\vrtex\undefined\else
 \vfill
-\fi}
-\else{
+\fi}\fi
+\else{% hymntex defined
 {%
 \ifx\pagebreakbeforehymn\undefined\def\pagebreakbeforehymn{F}\fi
 \if\pagebreakbeforehymn T%
@@ -571,9 +574,13 @@
 
 \vfill
 \else%
+\ifx\precollect\undefined\else\precollect\fi
+\ifx\printcollectheading\undefined\def\printcollectheading{T}\fi
+\if\printcollectheading T%
 \hrule
 \smallskip
 \begin{center}{\large Collect.}\end{center}
+\fi
 % default width is 265pt
 %\sloppy
 %,colwidths={1=220pt}
@@ -689,6 +696,8 @@
 }
 \fi
 \fi
+
+\ifx\benedicamusdominoreplacement\undefined\else\benedicamusdominoreplacement\fi
 
 \ifx\includefideliumanimae\undefined\else\if\includefideliumanimae T%
 \bigskip
