@@ -447,12 +447,18 @@
 \fi
 }
 \newcommand{\alsetinitialspacing}[1]{%
-\greannotation{\annot}
-\ifx\annottwo\undefined\else%
-\greannotation{\annottwo}
+\ifx\annot\undefined%
+  \grechangestyle{initial}{\fontsize{55pt}{55pt}\selectfont}%
+\else%
+  \greannotation{\annot}
+  \ifx\annottwo\undefined%
+    \grechangestyle{initial}{\fontsize{43pt}{43pt}\selectfont}%
+  \else%
+    \greannotation{\annottwo}
+    \grechangestyle{initial}{\fontsize{28pt}{28pt}\selectfont}%
+  \fi
 \fi
 %\def\greinitialformat##1{%
 %{\fontsize{32pt}{32pt}\selectfont ##1}%
 %}
-\grechangestyle{initial}{\fontsize{32pt}{32pt}\selectfont}%
 }

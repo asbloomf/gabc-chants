@@ -251,8 +251,16 @@ five%
 % 5 - tex filename of gabc
     {#1%
     \gresetinitiallines{1}
-    \def\annot{\small{#2}}
-    \def\annottwo{\small{#3}}
+    \StrLen{#2}[\len]
+    \ifnum\len=0%
+    \else%
+      \def\annot{\small{#2}}
+      \StrLen{#3}[\len]
+      \ifnum\len=0%
+      \else%
+        \def\annottwo{\small{#3}}
+      \fi
+    \fi
     \alsetinitialspacing{#4}
     \ifx\noeuouae\undefined\def\noeuouae{F}\fi
     \if\noeuouae T\def\mygabcscore{#5.noEuouae}
