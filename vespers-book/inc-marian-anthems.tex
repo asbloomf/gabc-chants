@@ -2,15 +2,20 @@
 {
 \ifthenelse{\boolean{birmingham}}{
   \printnote{
-    \emph{Alma Redemptoris Mater} is sung from \nth{1} Vespers of the First Sunday of Advent until \nth{2} Vespers of \nth{2} February.
+    \emph{Alma Redemptoris Mater} is sung from \nth{1} Vespers of the First Sunday of Advent until \nth{2} Vespers of 2 February.
 
-    \emph{Ave Regina Cælorum} is sung from Compline of \nth{2} February until Compline of Holy Wednesday.
+    \emph{Ave Regina Cælorum} is sung from Compline of 2 February until Compline of Holy Wednesday.
 
     \emph{Regina Cæli} is sung from Compline of Holy Saturday until None of the Saturday within the Octave of Pentecost.
 
     \emph{Salve Regina} is sung from \nth{1} Vespers of Trinity Sunday until None of the Saturday before the First Sunday of Advent.
   }
-}{}
+}{
+  \def\printalmanote{\printnote{From \nth{1} Vespers of the First Sunday of Advent until 2 February at Vespers.}}
+  \def\printavereginanote{\printnote{From Compline of 2 February (even if the Feast of the Purification be transferred) until Compline of Wednesday in Holy Week.}}
+  \def\printreginacaelinote{\printnote{From Compline of Holy Saturday until None of the Saturday within the octave of Pentecost.}}
+  \def\printsalvenote{\printnote{From \nth{1} Vespers of Trinity Sunday until None of the Saturday before the First Sunday of Advent.}}
+}
 \def\nogabcbreaks{T}
 \newcommand{\printsimpletone}{
 \ifthenelse{\boolean{onlysundaycommon}}{}{% false
@@ -34,7 +39,7 @@
 \fi
 \sloppy
 
-\oldneedspace{3\baselineskip}
+\needspace{3\baselineskip}
 \begin{columns}
 \versicle{\vlatin}{\venglish}
 \response{\rlatin}{\renglish}
@@ -110,7 +115,7 @@
 \label{almaredemptorismater}
 \section{Alma Redemptoris Mater}
 \ifthenelse{\boolean{birmingham}}{}{
-  \printnote{From Vespers of Saturday before the \nth{1} Sunday of Advent to \nth{2} Vespers of the Purification.}
+  \printalmanote{}
 }
 \ifthenelse{\boolean{includepolyphony}}{
 
@@ -169,7 +174,7 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 \label{avereginacaelorum}
 \section{Ave Regina Cælorum}
 \ifthenelse{\boolean{birmingham}}{}{
-  \printnote{From Compline of February \nth{2} (even if the Feast of the Purification be transferred) until Compline of Wednesday in Holy Week.}
+  \printavereginanote{}
 }
 \ifthenelse{\boolean{includepolyphony}}{
 
@@ -207,7 +212,7 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
   \label{reginacaeli}
   \section{Regina cæli}
   \ifthenelse{\boolean{birmingham}}{}{
-    \printnote{From Compline of Easter Sunday to Compline of Friday after the Feast of Pentecost inclusively.}
+    \printreginacaelinote{}
   }
   \ifthenelse{\boolean{includepolyphony}}{
 
@@ -262,7 +267,7 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 \def\prayerlabel{salveprayer}
 
 \ifthenelse{\boolean{birmingham}}{}{
-  \printnote{From \nth{1} Vespers of the Feast of the Blessed Trinity to None on Saturday before the \nth{1} Sunday of Advent.}
+  \printsalvenote{}
 }
 \ifthenelse{\boolean{includepolyphony}}{
 
@@ -276,9 +281,10 @@ Virgin before and after, taking up that ``Hail'' from the mouth of Gabriel, show
 \ifthenelse{\boolean{includesalvewithdrone} \or \boolean{onlysundaycommon}}{
   \salvereginaenglish
   \medskip
-  \afterant{}
 }{}
-\ifthenelse{\boolean{onlysundaycommon}}{}{% false
+\ifthenelse{\boolean{onlysundaycommon}}{
+    \afterant{}
+}{% false
   \printsolemntone{}
   \ifthenelse{\boolean{includesalvewithdrone}}{
     \emph{The solemn tone is found on the next page.}

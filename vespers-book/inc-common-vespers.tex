@@ -18,12 +18,11 @@
 \printdeusinadjutorium{}
 \vfil
 
-%\ifthenelse{\boolean{birmingham}}{}{
-  %false
-%  \pagebreak
-%}
 %\subtitle{Solemn Tone}
 \ifthenelse{\boolean{onlysundaycommon}}{}{% false
+  \ifthenelse{\boolean{birmingham}}{}{%false
+    \pagebreak
+  }
   \printnote{The Solemn Tone may only be sung on Feasts of the First or Second Class.}
   \printnote{From Septuagesima to Wednesday in Holy Week, the \emph{Laus tibi} is said instead of \emph{Allelúia}.}
 
@@ -74,6 +73,7 @@
     }
 }
 
+{
 \ifthenelse{\boolean{onlysundaycommon}}{}
 {% false
   \printnote{All Vespers conclude with the following:}\par
@@ -113,6 +113,7 @@
   \def\vtranslation{May the souls of the faithful departed through the mercy of God rest in peace.\hfill\Rbar~Amen.}
   %\def\rtranslation{Amen.}
   \printvrwithtranslation{}
+}
 }
 %\noindent\Vbar{}~Fidélium ánimæ per misericóridam Dei requiéscant in pace.\\
 %\Rbar{}~Amen.

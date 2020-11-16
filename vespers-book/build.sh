@@ -40,9 +40,12 @@ done
 
 ./ly-build.sh $lyopts
 
+cp -fu $filename$suffix$suffix2.pdf $filename$suffix$suffix2-old.pdf
+
 latexmk $filename$suffix$suffix2.tex $latexmkopts
 if [ "$?" -eq "0" ] || [ "$force" = "1" ] || [ "$suffix2" != ""]; then
 	if test `find "$filename$suffix$suffix2.pdf" -mmin -1` || ! [ -f $filename$suffix2.pdf ] || [ "$force" = "1" ]; then
+		cp -fu $filename$suffix2.pdf $filename$suffix2-old.pdf
 		gswin64c -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dEmbedAllFonts=true -dSubsetFonts=true -sOutputFile=$filename$suffix2.pdf $filename$suffix$suffix2.pdf &
 	fi
 fi

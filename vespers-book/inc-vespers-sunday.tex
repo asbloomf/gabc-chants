@@ -33,7 +33,7 @@
 	    	\label{hymn-luciscreator}
 		    \ifthenelse{\boolean{includepolyphony}}{
 		    
-		    	\noindent\emph{Polyphonic version of \emph{Lucis Creátor óptime} by Palestrina is found on page \pageref{luciscreator_poly}.}
+		    	\noindent\emph{Polyphonic version of \emph{Lucis Creátor óptime} by Victoria is found on page \pageref{luciscreator_poly}.}
 		    	\smallskip
 		    }{}
 			\def\annot{\small{Hymn.}}
@@ -157,7 +157,9 @@
 	\ifthenelse{\boolean{onlysundaycommon}}{
 		\def\prepsalmtitlefour{\vspace{-0.5\baselineskip}}
 		\def\postpsalmtitlefour{\vspace{-0.5\baselineskip}}
-	}{}
+	}{\ifthenelse{\boolean{birmingham}}{}{% false
+		\def\prepsalmtitlefour{\bigskip}
+	}}
 	%\def\prepsalmfive{\greseteolcustos{manual}}
 	\def\prechapter{\oldneedspace{10\baselineskip}}
 	\def\beginchaptercols{

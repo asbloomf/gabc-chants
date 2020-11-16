@@ -77,25 +77,25 @@
 \def\prehymn{\oldneedspace{16\baselineskip}}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 \printvespers[../TrinitySunday]{inc-TrinitySunday-Vespers}
-\bigskip
+\medskip
 \noindent
 \printnote{If the feast of St Philip Neri is celebrated tomorrow, then \emph{First Vespers} is commemorated as follows.
 \ifthenelse{\boolean{includebenedicamusdominoreferences}}{
 	Otherwise \benedicamusdomino{}%
 }{}
 }
-\medskip
-\hrule
+%\medskip
+%\hrule
 \medskip
 }
 
-% commemoration of First Vespers of Immaculate Conception
+% commemoration of First Vespers of St Philip Neri
 {
 \def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
 \def\vrlinebreak{T}
 \printcommemoration[../StPhilipNeri]{Commemoration-StPhilipNeri-Vespers1}
 
-%\bigskip
+\medskip
 \benedicamusdomino{}
 }
 

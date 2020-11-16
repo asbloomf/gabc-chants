@@ -653,16 +653,17 @@
 			\fi
 			}
 			\definevesperspropersalt
-  		\hrule
-  		\needspace{7\baselineskip}
-			\ifx\premagnificat\undefined\else\premagnificat\fi
-	    \ifx\premagtitle\undefined\else\premagtitle\fi
-	    \begin{center}{\large Magnificat.}\end{center}
-    	\vspace{-1ex}
-    	\ifx\postmagtitle\undefined\else\postmagtitle\fi
+	  		\hrule
+	  		\needspace{7\baselineskip}
+				\ifx\premagnificat\undefined\else\premagnificat\fi
+		    \ifx\premagtitle\undefined\else\premagtitle\fi
+		    \begin{center}{\large Magnificat.}\end{center}
+	    	\vspace{-1ex}
+	    	\ifx\postmagtitle\undefined\else\postmagtitle\fi
 
-    	\ifx\vesperspropersaltnote\undefined\else
-    		\oldneedspace{2\baselineskip}
+	    	\ifx\vesperspropersaltnote\undefined\else
+	    		\oldneedspace{2\baselineskip}
+	    		\ifx\premagnificat\undefined\else\premagnificat\fi
 				\printnote{\vesperspropersaltnote\par}
 			\fi
 			\let\anttranslation=\maganttranslation
@@ -677,14 +678,15 @@
 		    }\else{
 				\printmag{\magtone\magend}{\magantinitial}{\maganttex}
 			}\fi
-	    \hrule
-	    \medskip
+		    \hrule
+		    \medskip
 		}\fi
 		\ifx\definevesperspropers\undefined\else
 			\definevesperspropers
 	    	\ifx\vesperspropersnote\undefined\else
 	    		\needspace{6\baselineskip}
 	    		\oldneedspace{4\baselineskip}
+	    		\ifx\premagnificat\undefined\else\premagnificat\fi
 				\printnote{\vesperspropersnote\par}
 			\fi
 			\def\nomagtitle{T}
@@ -833,7 +835,7 @@
 	  		Simple edition, 1 July 2020.
 
 	  		\bigskip{}
-	  	}{ %false
+	  	}{%false
 			First edition, 3 December 2015.
 
 			\hangindent=1em % indent all subsequent lines
@@ -845,12 +847,14 @@
 
 		    \noindent{}Fifth edition, 15 October 2017.
 
+		    \noindent{}Sixth edition, 11 November 2020.
+
 		    \bigskip
 	   	}
     }
 
 \makeatletter
-	\noindent{}Typeset using \LuaLaTeX{},\ifthenelse{\boolean{birmingham} \or \boolean{onlysundaycommon}}{}{Lilypond version 2.19.64,} and Gregorio version \gre@gregoriotexversion{}
+	\noindent{}Typeset using \LuaLaTeX{},\ifthenelse{\boolean{birmingham} \or \boolean{onlysundaycommon}}{}{ Lilypond version 2.20.0,} and Gregorio version \gre@gregoriotexversion{}
 \makeatother
 
 	\bigskip{}\noindent{}This work is free of known copyright restrictions.
@@ -879,6 +883,11 @@
 	\clearpage
 }
 
+\ifthenelse{\boolean{testrun}}{
+	\input{inc-40hours}
+	\input{inc-benediction}
+	\include{inc-grassi}
+}{
 \input{inc-vespers-sunday}
 
 \ifthenelse{\boolean{birmingham}}{% true
@@ -963,6 +972,6 @@
 	%\cleartoleftpage
 	\include{inc-marian-anthems}
 }{}
-
+}
 \end{document}
 
