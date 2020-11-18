@@ -24,7 +24,7 @@
 \printvespers[../Easter]{inc-EasterVespers}
 \newcommand{\printbenedicamusdomino}[2]{
 	\def\annot{\small{#1}}
-	\def\annottwo{}
+	\let\annottwo=\undefined
 	\alsetinitialspacing{B}
     \greseteolcustos{manual}
 	\gregorioscore{#2}

@@ -243,6 +243,19 @@ five%
 % change the standard vespers file to use \psalmXXXcoloptions
 %\newenvironment\expandafter{\psalmMASTERcols}{\begin{parcolumns}\parcolumnsoptions}{\end{parcolumns}}
 }
+\def\foreverunspace{%
+  \ifnum\lastnodetype=11
+    \unskip\foreverunspace
+  \else
+    \ifnum\lastnodetype=12
+      \unkern\foreverunspace
+    \else
+      \ifnum\lastnodetype=13
+        \unpenalty\foreverunspace
+      \fi
+    \fi
+  \fi
+}
 \newcommand{\printgabc}[5][]{
 % 1 - any extra tex to run before the chant - optional
 % 2 - annotation line one
@@ -251,13 +264,13 @@ five%
 % 5 - tex filename of gabc
     {#1%
     \gresetinitiallines{1}
-    \StrLen{#2}[\len]
-    \ifnum\len=0%
-    \else%
+    \setbox0=\hbox{#2\foreverunspace}\ifdim\wd0=0pt
+    \else
+      %<NOT EMPTY>%
       \def\annot{\small{#2}}
-      \StrLen{#3}[\len]
-      \ifnum\len=0%
-      \else%
+      \setbox0=\hbox{#3\foreverunspace}\ifdim\wd0=0pt
+      \else
+        %<NOT EMPTY>%
         \def\annottwo{\small{#3}}
       \fi
     \fi
@@ -906,7 +919,7 @@ five%
 % 5 hymntranslation
     \makeatother
     \def\asb@line{Hymn.\ifx#1\undefined\else\label{#1}\fi}
-    \printgabc[\ifx\prehymn\undefined\else\prehymn\fi]{\small{\asb@line}}{\small{#2}}{#3}{#4} %
+    \printgabc[\ifx\prehymn\undefined\else\prehymn\fi]{\asb@line}{#2}{#3}{#4} %
     \ifx\prehymntranslation\undefined\else\prehymntranslation\fi%
     \normalsize%\vspace{0pt minus 20pt}
     \selectlanguage{american}\vspace{-0.5\baselineskip}

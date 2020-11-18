@@ -29,7 +29,9 @@
   \bigskip
   {
     \def\deusinadjutoriumsolemn{T}
-    \def\includetranslation{F}
+    \ifthenelse{\boolean{birmingham}}{
+      \def\includetranslation{F}
+    }{}
     \label{deusinadjutoriumsolemn}
     \printdeusinadjutorium{}
     \let\deusinadjutoriumsolemn=\undefined
