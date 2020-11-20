@@ -9,6 +9,10 @@ Vespers for Sundays & Holy Days:
     url: pdfs/vespers-book-only-sunday-common.pdf
   - name: Download PDF with no margins
     url: pdfs/vespers-book/vespers-book-crop.pdf
+  - name: Download PDF with no polyphony
+    url: pdfs/vespers-book/vespers-book-stlouis.pdf
+  - name: Download PDF with no polyphony and no margins
+    url: pdfs/vespers-book/vespers-book-stlouis-crop.pdf
   - name: Download 8.5 x 11" PDF
     url: pdfs/vespers-book/vespers-book-letter.pdf
   - name: Download 8.5 x 11" PDF with no margins
