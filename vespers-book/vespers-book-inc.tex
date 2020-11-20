@@ -21,7 +21,7 @@
 %\nofiles
 %\includeonly{inc-grassi}
 \LetLtxMacro{\oldnth}{\nth}
-\renewcommand{\nth}[1]{\addfontfeature{Numbers=Lining}\oldnth{#1}}
+\renewcommand{\nth}[1]{{\addfontfeature{Numbers=Lining}\oldnth{#1}}}
 \LetLtxMacro{\oldneedspace}{\needspace}
 \renewcommand{\needspace}[1]{
 	\checkoddpage\ifoddpage\oldneedspace{#1}\else\fi
@@ -825,36 +825,42 @@
 	\vfill
 %editions
 	\bigskip{}\noindent{}%
-	\ifthenelse{\boolean{birmingham}}%
-	{% true
-		Birmingham edition, February 2019.
+	\ifthenelse{\boolean{stlouis}}{%
+		St Louis edition, November 2020
 
 		\bigskip{}
-	}{% false
-	  \ifthenelse{\boolean{onlysundaycommon}}{
-	  		Simple edition, 1 July 2020.
+	}{%
+		\ifthenelse{\boolean{birmingham}}%
+		{% true
+			Birmingham edition, February 2019.
 
-	  		\bigskip{}
-	  	}{%false
-			First edition, 3 December 2015.
+			\bigskip{}
+		}{% false
+		  \ifthenelse{\boolean{onlysundaycommon}}{
+		  		Simple edition, 1 July 2020.
 
-			\hangindent=1em % indent all subsequent lines
-			\noindent{}Second edition, 15 August 2016.
+		  		\bigskip{}
+		  	}{%false
+				First edition, 3 December 2015.
 
-		    \noindent{}Third edition, 6 December 2016.
+				\hangindent=1em % indent all subsequent lines
+				\noindent{}Second edition, 15 August 2016.
 
-		    \noindent{}Fourth edition, 28 January 2017.
+			    \noindent{}Third edition, 6 December 2016.
 
-		    \noindent{}Fifth edition, 15 October 2017.
+			    \noindent{}Fourth edition, 28 January 2017.
 
-		    \noindent{}Sixth edition, 11 November 2020.
+			    \noindent{}Fifth edition, 15 October 2017.
 
-		    \bigskip
-	   	}
+			    \noindent{}Sixth edition, 19 November 2020.
+
+			    \bigskip
+		   	}
+	    }
     }
 
 \makeatletter
-	\noindent{}Typeset using \LuaLaTeX{},\ifthenelse{\boolean{birmingham} \or \boolean{onlysundaycommon}}{}{ Lilypond version 2.20.0,} and Gregorio version \gre@gregoriotexversion{}
+	\noindent{}Typeset using \LuaLaTeX{}\ifthenelse{\boolean{includepolyphony}}{, Lilypond version 2.20.0,}{} and Gregorio version \gre@gregoriotexversion{}
 \makeatother
 
 	\bigskip{}\noindent{}This work is free of known copyright restrictions.
@@ -884,7 +890,9 @@
 }
 
 \ifthenelse{\boolean{testrun}}{
-	\input{inc-marian-anthems-appendix}
+	%\input{inc-marian-anthems-appendix}
+	\include{inc-easter}
+	\include{inc-timeaftereaster}
 }{
 \input{inc-vespers-sunday}
 
@@ -927,7 +935,7 @@
 	%from Septuagesima through passiontide
 	\include{inc-lent}
 
-	\include{inc-easter} % need to add St Joseph the Worker and the Ascension
+	\include{inc-easter}
 	\include{inc-timeaftereaster}
 
 	\include{inc-pentecost}
@@ -947,13 +955,17 @@
 		\input{inc-vespersofdead}
 	}{}
 	\input{inc-40hours}
-	\input{inc-benediction}
-	\cleartoleftpage{}
-	\input{inc-lucis_creator_poly}
-	\input{inc-marian-anthems-appendix}
-	\include{inc-mag1D}
-	\include{inc-mag7a}
-	\include{inc-grassi}
+	\ifthenelse{\boolean{includebenediction}}{
+		\input{inc-benediction}
+	}{}
+	\ifthenelse{\boolean{includepolyphony}}{
+		\cleartoleftpage{}
+		\input{inc-lucis_creator_poly}
+		\input{inc-marian-anthems-appendix}
+		\include{inc-mag1D}
+		\include{inc-mag7a}
+		\include{inc-grassi}
+	}{}
 }{
 	\ifthenelse{\boolean{includevespersofdead}}{
 		\cleardoublepage

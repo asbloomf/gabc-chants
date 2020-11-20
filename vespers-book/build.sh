@@ -7,6 +7,9 @@ function usage
 	echo "       -g force ghostscript"
 	echo "       --birmingham build birmingham edition"
 	echo "       --letter build letter size"
+	echo " 	     --stlouis build St Louis edition"
+	echo " 	     --common build only Sunday common edition"
+	echo "		 --all build all editions"
 }
 
 force=
@@ -14,13 +17,19 @@ latexmkopts=
 lyopts=
 filename=vespers-book
 suffix=-main
-suffix2=
+suffix2=("")
 
 while [ "$1" != "" ]; do
 	case $1 in
-		--letter )              suffix2=-letter
+		--letter )              suffix2=("-letter")
 								;;
-		--birmingham )			suffix2=-birmingham
+		--birmingham )			suffix2=("-birmingham")
+								;;
+		--stlouis )				suffix2=("-stlouis")
+								;;
+		--common )				suffix2=("-only-sunday-common")
+								;;
+		--all )					suffix2=("-only-sunday-common" "-stlouis" "-birmingham" "-letter" "")
 								;;
 		-f | --force )			force=1
 								latexmkopts=-g
@@ -40,15 +49,19 @@ done
 
 ./ly-build.sh $lyopts
 
-cp -fu $filename$suffix$suffix2.pdf $filename$suffix$suffix2-old.pdf
+for suf2 in "${suffix2[@]}"
+do
+	cp -fu ${filename}${suffix}${suf2}.pdf ${filename}${suf2}-old.pdf
 
-latexmk $filename$suffix$suffix2.tex $latexmkopts
-if [ "$?" -eq "0" ] || [ "$force" = "1" ] || [ "$suffix2" != ""]; then
-	if test `find "$filename$suffix$suffix2.pdf" -mmin -1` || ! [ -f $filename$suffix2.pdf ] || [ "$force" = "1" ]; then
-		cp -fu $filename$suffix2.pdf $filename$suffix2-old.pdf
-		gswin64c -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dEmbedAllFonts=true -dSubsetFonts=true -sOutputFile=$filename$suffix2.pdf $filename$suffix$suffix2.pdf &
-	fi
-fi
+	latexmk ${filename}${suffix}${suf2}.tex $latexmkopts
+	pdfcrop ${filename}${suffix}${suf2}.pdf ${filename}${suf2}-crop.pdf
+done
+# if [ "$?" -eq "0" ] || [ "$force" = "1" ] || [ "$suffix2" != ""]; then
+# 	if test `find "$filename$suffix$suffix2.pdf" -mmin -1` || ! [ -f $filename$suffix2.pdf ] || [ "$force" = "1" ]; then
+# 		cp -fu $filename$suffix2.pdf $filename$suffix2-old.pdf
+# 		gswin64c -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dEmbedAllFonts=true -dSubsetFonts=true -sOutputFile=$filename$suffix2.pdf $filename$suffix$suffix2.pdf &
+# 	fi
+# fi
 
 # | tail -n 1
 

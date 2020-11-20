@@ -35,7 +35,7 @@ do
       then
         echo ${fname}
         if [ "${fname}.pdf" -ot "${fname}.ly" ] || [ "$force" = "1" ]; then
-            lilypond -dno-point-and-click -dgui --pspdfopt=size "${fname}.ly"
+            lilypond -dno-point-and-click -dgui --pspdfopt=TeX "${fname}.ly"
         fi
       fi
   done

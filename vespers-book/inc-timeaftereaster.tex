@@ -41,29 +41,31 @@
             \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
         }
     }
-    \newcommand{\printsundaysaftereaster}[1][1]{%
+    \newcommand{\printsundaysaftereaster}[2][1]{%
+        % 1- 1 to include sunday after ascension (chapter), 0 to not
+        % 2- chapter or mag
         \def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}%
         \vspace{-0.5\baselineskip}
         \begin{multicols}{2}%
-        \noindent\emph{Low Sunday}\dotting p.~\pageref{easter1}\\
-        \noindent\emph{\nth{2} Sunday after Easter},\dotting p.~\pageref{easter2}\\
-        \emph{\nth{3} Sunday after Easter}\dotting p.~\pageref{easter3}\\
-        \emph{\nth{4} Sunday after Easter}\dotting p.~\pageref{easter4}\\
-        \emph{\nth{5} Sunday after Easter}\dotting p.~\pageref{easter5}\\
-        \ifnum#1=1\emph{Sunday after the Ascension}\dotting p.~\pageref{easter6}\fi
+        \noindent\emph{Low Sunday}\dotting p.~\pageref{easter1-#2}\\
+        \noindent\emph{\nth{2} Sunday after Easter},\dotting p.~\pageref{easter2-#2}\\
+        \emph{\nth{3} Sunday after Easter}\dotting p.~\pageref{easter3-#2}\\
+        \emph{\nth{4} Sunday after Easter}\dotting p.~\pageref{easter4-#2}\\
+        \emph{\nth{5} Sunday after Easter}\dotting p.~\pageref{easter5-#2}\\
+        \ifnum#1=1\emph{Sunday after the Ascension}\dotting p.~\pageref{easter6-#2}\fi
         \end{multicols}
     }
     \newcommand{\chapterreplacement}{
         \bigskip
         {\centering\emph{Chapter of the Sunday.}\par}%
-        \printsundaysaftereaster{}
+        \printsundaysaftereaster{chapter}
     }
     \newcommand{\prehymn}{\needspace{24\baselineskip}}
     \newcommand{\magreplacement}{
         \oldneedspace{10\baselineskip}
         \bigskip
         {\centering\emph{Magnificat \& Collect of the Sunday.}\par}%
-        \printsundaysaftereaster[0]
+        \printsundaysaftereaster[0]{mag}
         \benedicamusdominoreference{easter}
     }
     \newcommand{\collectreplacement}{\bigskip}
@@ -90,10 +92,12 @@
 \section{Low Sunday}
 \label{easter1}
 \printcommonvespers[1]
+\def\postchaptertitle{\label{easter1-chapter}}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
+\def\postmagtitle{\label{easter1-mag}}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster1}
 
-\def\commemorations{If the Feast of the Annunciation has been transferred to the Monday following Low Sunday, \emph{First Vespers} is commemorated as on page \pageref{annunciation-commem}.  If today is April 30, May 1, or May 2, \emph{First Vespers of St Joseph the Worker} is commemorated as follows.}
+\def\commemorations{If the Feast of the Annunciation has been transferred to the Monday following Low Sunday, \emph{First Vespers} is commemorated as on page \pageref{annunciation-commem}.  If today is 30 April, 1 May, or 2 May, \emph{First Vespers of St Joseph the Worker} is commemorated as follows.}
 \printcommemnote{}
 }
 
@@ -114,6 +118,7 @@
 \section{\nth{2} Sunday after Easter}
 \label{easter2}
 \printcommonvespers{}
+\def\postchaptertitle{\label{easter2-chapter}}
 \def\precollect{\printvrmanenobiscum}
 \def\postmagtitle{\label{easter2-mag}}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster2}
@@ -123,6 +128,7 @@
 \section{\nth{3} Sunday after Easter}
 \label{easter3}
 \printcommonvespers{}
+\def\postchaptertitle{\label{easter3-chapter}}
 \def\begincollectcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 \def\precollect{\printvrmanenobiscum}
 \def\postmagtitle{\label{easter3-mag}}
@@ -135,6 +141,7 @@
 \label{easter4}
 \printcommonvespers{}
 %\def\premagnificat{\oldneedspace{10\baselineskip}}
+\def\postchaptertitle{\label{easter4-chapter}}
 \def\precollect{\printvrmanenobiscum}
 \def\postmagtitle{\label{easter4-mag}}
 \printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster4}
@@ -145,6 +152,7 @@
 \section{\nth{5} Sunday after Easter}
 \label{easter5}
 \printcommonvespers{}
+\def\postchaptertitle{\label{easter5-chapter}}
 \def\premagverses{\oldneedspace{12\baselineskip}}
 \def\precollect{\printvrmanenobiscum}
 \def\postmagtitle{\label{easter5-mag}}
@@ -190,7 +198,7 @@
 \bigskip}
 \printvespers[../Ascension]{inc-Ascension}
 
-\def\commemorations{If today is April 30 or May 1, \emph{First Vespers of St Joseph the Worker} is commemorated as on page \pageref{stjoseph-worker-commem}.}
+\def\commemorations{If today is 30 April or 1 May, \emph{First Vespers of St Joseph the Worker} is commemorated as on page \pageref{stjoseph-worker-commem}.}
 \printcommemnote[1]{}
 \bigskip
 \hrule
@@ -209,6 +217,7 @@
     \label{vr-sundayafterascension}
     \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
 }
+\def\postchaptertitle{\label{easter6-chapter}\label{sundayafterascension-chapter}}
 \def\precollect{\printvrdominusincaelo}
 \def\premagtitle{\bigskip\bigskip}
 \def\postmagtitle{\label{easter6-mag}\label{sundayafterascension-mag}}
