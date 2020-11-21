@@ -881,6 +881,15 @@
 %\mainmatter
 
 \include{inc-common-vespers}
+\ifthenelse{\boolean{testrun}}{
+	%\input{inc-marian-anthems-appendix}
+	{	\def\postchaptertitle{\label{easter5-chapter}}
+	\def\premagverses{\oldneedspace{12\baselineskip}}
+	\def\precollect{\printvrmanenobiscum}
+	\def\postmagtitle{\label{easter5-mag}}
+	\printvespersmag[../TimeAfterEaster]{inc-VespersMagnificatEaster5}
+	}
+}{
 \ifthenelse{\boolean{birmingham} \or \boolean{onlysundaycommon}}{}{% false
 	\include{inc-benedicamus-domino}
 
@@ -889,11 +898,6 @@
 	\clearpage
 }
 
-\ifthenelse{\boolean{testrun}}{
-	%\input{inc-marian-anthems-appendix}
-	\include{inc-easter}
-	\include{inc-timeaftereaster}
-}{
 \input{inc-vespers-sunday}
 
 \ifthenelse{\boolean{birmingham}}{% true

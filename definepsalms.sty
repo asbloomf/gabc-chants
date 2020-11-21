@@ -847,8 +847,13 @@ five%
 \ifx\maggrassi\undefined\def\maggrassi{F}\fi
 \ifx\magprotodiogenes\undefined\def\magprotodiogenes{F}\fi
 \ifx\magsmc\undefined\def\magsmc{F}\fi
-\StrSubstitute{\magend}{*}{star}[\expandedendmag]
 \StrSubstitute{\magend}{*}{}[\nostarendmag]
+\provideboolean{ignoreasterisk}
+\ifthenelse{\boolean{ignoreasterisk}}{
+  \let\expandedendmag=\nostarendmag
+}{
+  \StrSubstitute{\magend}{*}{star}[\expandedendmag]
+}
 \ifx\magpsalmclef\undefined\else\let\psalmclef=\magpsalmclef\fi
 \ifx\psalmclef\undefined%
 %psalmclef should be something like c3
@@ -999,8 +1004,13 @@ five%
 \ifx\magpsalmclef\undefined\else\let\psalmclef=\magpsalmclef\fi
 \ifx\maggrassi\undefined\def\maggrassi{F}\fi
 \ifx\magprotodiogenes\undefined\def\magprotodiogenes{F}\fi
-\StrSubstitute{\antend}{*}{star}[\expandedend]
+\provideboolean{ignoreasterisk}
 \StrSubstitute{\antend}{*}{}[\nostarend]
+\ifthenelse{\boolean{ignoreasterisk}}{
+  \let\expandedend=\nostarend
+}{
+  \StrSubstitute{\magend}{*}{star}[\expandedend]
+}
 \def\antpost{}
 \if\maggrassi T\def\antpost{_grassi}\fi
 \ifx\magprotodiogenes\undefined\def\magprotodiogenes{F}\fi
