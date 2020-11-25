@@ -19,8 +19,14 @@
     %\def\preantfour{\vspace{-0.8\baselineskip}}
     %\def\prepsalmtitlefour{\vspace{-0.6\baselineskip}}
   }{
-    \def\prepsalmtitlethree{\bigskip}
-    \def\preantfour{\bigskip}
+    \ifthenelse{\boolean{stlouis}}{
+      \def\prepsalmtitleone{\bigskip\bigskip}
+      \def\postpsalmtitleone{\bigskip}
+      \def\prepsalmtitletwo{\bigskip}
+    }{
+      \def\prepsalmtitlethree{\bigskip}
+      \def\preantfour{\bigskip}
+    }
     \def\prepsalmtitlefour{\needspace{14\baselineskip}}
   }
 }
@@ -32,8 +38,13 @@
     \def\preantfive{\needspace{12\baselineskip}}  
   }
   {
-    \def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
-    \def\preantfour{\bigskip}
+    \ifthenelse{\boolean{stlouis}}{
+      \def\prepsalmtitleone{\oldneedspace{10\baselineskip}}
+      \def\prepsalmtitlethree{\vspace{-1\baselineskip}}
+    }{
+      \def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
+      \def\preantfour{\bigskip}
+    }
   }
 }
 \def\vesperspropersnote{At II Vespers:}
@@ -43,6 +54,9 @@
 \hrule
 \medskip
 }
+\ifthenelse{\boolean{stlouis}}{
+  \def\postmagtitle{\vspace{-0.5\baselineskip}}
+}{}
 \def\vesperspsalmslabel{\label{june24-2vespers}}
 \def\prevesperspsalmsalt{\noindent\printnote{II Vespers psalms and antiphons, page \pageref{june24-2vespers}.}\medskip\label{june24-1vespers}}
 \def\prechapter{\label{june24-chapter}}

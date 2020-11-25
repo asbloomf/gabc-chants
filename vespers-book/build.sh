@@ -7,9 +7,9 @@ function usage
 	echo "       -g force ghostscript"
 	echo "       --birmingham build birmingham edition"
 	echo "       --letter build letter size"
-	echo " 	     --stlouis build St Louis edition"
-	echo " 	     --common build only Sunday common edition"
-	echo "		 --all build all editions"
+	echo "       --stlouis build St Louis edition"
+	echo "       --common build only Sunday common edition"
+	echo "       --all build all editions"
 }
 
 force=
@@ -29,7 +29,7 @@ while [ "$1" != "" ]; do
 								;;
 		--common )				suffix2=("-only-sunday-common")
 								;;
-		--all )					suffix2=("-only-sunday-common" "-stlouis" "-birmingham" "-letter" "")
+		--all )					suffix2=("-only-sunday-common" "-stlouis" "-letter" "")
 								;;
 		-f | --force )			force=1
 								latexmkopts=-g

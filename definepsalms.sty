@@ -1121,7 +1121,9 @@ five%
 
     \ifx\preantafter\undefined
     {%\vspace{-1ex}
+    \ifx\prerepeatantiphonmag\undefined\else\let\prerepeatantiphon=\prerepeatantiphonmag\fi%
     \ifx\prerepeatantiphon\undefined\smallskip\else\prerepeatantiphon\fi%
+    \let\prerepeatantiphonmag=\undefined%
     \noindent\emph{Repeat antiphon.}\medskip}
     \else
     {\preantafter

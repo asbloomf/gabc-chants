@@ -8,6 +8,9 @@
 \def\deusinadjutoriumsolemn{T}
 \def\definevesperspropers{\input{\gabcfolder/inc-Annunciation-2Vespers}
   \def\prepsalmfive{\greseteolcustos{manual}}
+  \ifthenelse{\boolean{stlouis}}{
+    \def\prerepeatantiphonmag{}
+  }{}
 }
 \def\definevesperspropersalt{\input{\gabcfolder/inc-Annunciation-1Vespers}}
 \def\vesperspropersnote{At II Vespers:}
@@ -25,6 +28,9 @@
   \def\prepsalmtitlefive{\vspace{-0.5\baselineskip}}
   \def\beginchaptercols{\begin{parcolumns}[rulebetween,colwidths={1=0.43\linewidth}]{2}}
 }
+\ifthenelse{\boolean{stlouis}}{
+  \def\precollect{\oldneedspace{20\baselineskip}}
+}{}
 \def\prepsalmtitleone{\needspace{10\baselineskip}}
 \def\prepsalmtitletwo{\vspace{-0.5\baselineskip}}
 \def\premagverses{\greseteolcustos{manual}}

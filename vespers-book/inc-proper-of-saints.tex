@@ -53,9 +53,10 @@
 	\input{inc-may1}
 }{}
 
-%May 26: St Philip Neri (1)
-\input{inc-may26}
-}
+\ifthenelse{\boolean{includemay26}}{
+	%May 26: St Philip Neri (1)
+	\input{inc-may26}
+}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifthenelse{\boolean{testrun}}{}{
