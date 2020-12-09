@@ -1,0 +1,100 @@
+terce
+
+page 235 sunday at terce
+	hymn - ordinary sundays, on solemn feasts
+	antiphon - during advent, septuagesima, and lent from proper of time, on feast days from proper of feast
+	psalm 118.3, 118.4, 118.5
+	chapter
+	short resp
+	vv
+	in advent, ant & chapter from proper of time; short resp, vv
+	in lent, ant & chapter from proper of time; short resp, vv
+	in passiontide, ant & chapter from proper of time; short resp, vv
+	in paschaltide, chopter from proper of time; ant, short resp, vv
+	after short resp, officiant says V. Dominus vobiscum and the Prayer of the Office.  He then repeats the V Dominus vobiscum and adds Benedicamus Domino... Fidelium animae...
+page 318 advent
+	hymn
+page 318 1st sunday
+	ant Jucundare p323 (2nd ant from vespers), chapter from vespers
+page 327 2nd sunday
+	ant Urbs p332 (2nd ant from vespers), chapter from vespers
+page 334 3rd sunday
+	ant Jerusalem gaude p338 (2nd ant from vespers), chapter from vespers
+page 353 4th sunday
+	ant ecce veniet p357 (2nd ant from vespers), chapter from vespers
+page 358 christmas eve
+	ant, chapter, short resp, vv
+page 407 christmas
+	hymn, ant genuit puerpera regem p396 (2nd ant from lauds), chapter from lauds p400, short resp, vv
+page 433 sunday christmas octave
+	ant same, chapter from vespers p437, short resp & vv same
+page 441 circumcision and octave
+	hymn same, ant quando natus es p443 (2nd ant from vespers), chapter of vespers p444, short resp & vv same
+page 445 holy name
+	hymn same, ant proper, chapter of vespers p452, short resp, vv
+page 458 epiphany
+	hymn, ant venit lumen tuum p463 (2nd ant from 2nd vespers), chapter of vespers p464, short resp, vv
+page 470 holy family
+	hymn from epiphany but with doxology "Jesu tuis obediens" p269, ant Dixit Mater Jesu p474 (2nd ant 2nd vespers), chapter p475 (2nd vespers), short resp, vv
+page 497 septuagesima
+	ant, chapter of vespers p502
+page 504 sexagesima
+	ant, chapter of vespers p509
+page 511 quinquagesima
+	ant, chapter of vespers p516
+page 519 ash wednesday
+	hymn, ant, psalms, chapter, short resp, vv, blessing of ashes
+page 531 lent 1
+	hymn, ant, chapter of vespers p538
+page 545 lent 2
+	ant, chapter of vespers p550
+page 552 lent 3
+	ant, chapter of vespers p557
+page 559 lent 4
+	ant, chapetr of vespers p564
+page 569 passion 1
+	hymn, ant, chapter of vespers p575
+page 579 passion 2
+	ant p582, chapter of vespers p604
+page 777 easter
+	psalms of sunday without antiphon
+	ant haec dies p738
+	prayer Deus qui hodierna die p778
+	tone for psalms on p777
+page 808 low sunday
+	hymn, ant alleluia p 236, chapter of vespers p812
+page 816 easter 2
+	chapter of vespers p820
+page 821 easter 3	
+	chapter of vespers p824
+page 826 easter 4
+	chapter of vespers p829
+page 830 easter 5
+	chapter of vespers p834
+page 846 ascension
+	hymn, ant Cumque p851 (2nd of vespers), chapter of vespers p851, short resp, vv
+page 854 sunday after ascension
+	same hymn, same ant, chapter of vespers p857, same vv
+page 878 pentecost
+	hymn p885 for whole octave
+	ant Spiritus Domini p884 (2nd of vespers)
+	chapter of vespers p885
+	short resp, vv
+page 909 trinity sunday
+	ant Laus et perennis gloria p914 (2nd ant from vespers), chapter from vespers p915
+	short resp, vv
+page 942 corpus christi
+	hymn from christmas p407
+	ant Angelorum esca p940 (2nd ant from lauds)
+	chapter from vespers p957
+	short resp, vv
+page 960 sunday after cc
+	chapter of vespers p964
+	short resp same as feast
+page 969 sacred heart
+	hymn
+	ant Stans Jesus p977 (2nd ant from vespers)
+	chapter from vespers p978
+	short resp, vv
+page 980 sunday after
+	chapter of vespers p985, short resp from feast
