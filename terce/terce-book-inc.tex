@@ -1,0 +1,710 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+% easter can be from march 22 to april 25
+
+\usepackage{../definepsalms}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{titleps}
+\usepackage{letltxmacro}
+\usepackage{changepage} % gives us \ifoddpage use [strict]
+\usepackage[super]{nth}
+\usepackage[savepos]{zref}
+\usepackage{xparse}
+\usepackage{setspace}
+\usepackage{amsfonts}
+\usepackage{refcount}
+\usepackage{metalogo}
+%\nofiles
+%\includeonly{inc-grassi}
+\LetLtxMacro{\oldnth}{\nth}
+\renewcommand{\nth}[1]{{\addfontfeature{Numbers=Lining}\oldnth{#1}}}
+\LetLtxMacro{\oldneedspace}{\needspace}
+\renewcommand{\needspace}[1]{
+	\checkoddpage\ifoddpage\oldneedspace{#1}\else\fi
+}
+\let\gredagger=\dag
+\newcommand*\cleartoleftpage{%
+  \clearpage
+  \ifodd\value{page}\hbox{}\newpage\fi
+}
+\hyphenation{GregoBase}
+
+%\usepackage{hyperref}
+\newcommand{\phantomsection}{}
+
+\setcounter{secnumdepth}{-1}
+
+\ifthenelse{\boolean{lettersize}}{
+	\def\mywidth{8.5in}
+	\def\myheight{11in}
+}{
+	\def\mywidth{6in}
+	\def\myheight{9in}
+}
+
+\input{../inc_header}
+\gresetbarspacing{new}
+%\gresetlastline{justified}
+\setlength\headheight{0.25in+15pt}
+\setlength\headsep{1pc}
+\setlength\topskip{0pc}
+\setlength\footskip{1pc}
+\geometry{outer=0.4in,inner=0.85in,top=0pc+\headheight+\headsep,bottom=0.4in,twoside=true}
+\newpagestyle{main}{
+%\setheadrule{0pt}
+\sethead[\garamond{\thepage}][\garamond{\chaptertitle}][] % even
+{}{\garamond{\sectiontitle}}{\garamond{\thepage}} % odd
+\setfoot[][][] % even
+{}{}{} % odd
+}
+\pagestyle{main}
+
+%\grechangeglyph{Porrectus*}{*}{.alt}
+%\grechangeglyph{TorculusResupinus*}{*}{.alt}
+
+\titleformat
+{\section} % command
+[block] % shape
+{\phantomsection\large\addfontfeature{Numbers=Lining}} % format
+{} % label
+{} % sep
+{
+    % \rule{\textwidth}{1pt}
+    % \vspace{1ex}
+    \centering
+} % before-code
+%[
+% \vspace{-0.5ex}%
+% \rule{\textwidth}{0.3pt}
+%] % after-code
+ 
+ 
+\titleformat{\chapter}[block]
+{\thispagestyle{empty}\phantomsection\Large\scshape\addfontfeature{Numbers=Lining}}
+{}{0.5em}{\centering}
+ 
+\titlespacing{\chapter}{0pt}{6pt-\headheight}{1pc}
+\titlespacing{\section}{0pt}{*2.5}{*1}
+\titleclass{\chapter}{top}
+\newcommand{\chapterbreak}{\clearpage}
+%\titleclass{\section}{top}
+
+\contentsmargin{2pc}
+%\dottedcontents{chapter}[2.3em]{}{2.3em}{1pc}
+\titlecontents{chapter}[2.3em]{}{\contentslabel{2.3em}}{\hspace*{-2.3em}}{}
+\dottedcontents{section}[5.5em]{}{3.2em}{1pc}
+
+\newcommand{\printnote}[1]{
+	{\normalsize \emph{#1}}
+}
+\newcommand{\subtitle}[1]{
+{
+	\centering
+	{\addfontfeature{Numbers=Lining} \normalsize \emph{#1}}\par
+}
+}
+
+\newcommand{\deusinadjutorium}[1][F]{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, p.~\pageref{deusinadjutorium}%
+%if birmingham, both are on the same page so, it doesn't matter if it's solemn
+\ifthenelse{\pageref{deusinadjutorium}=\pageref{deusinadjutoriumsolemn}}{}{\if#1T or \pageref{deusinadjutoriumsolemn}\fi}.}}
+%\newcommand{\deusinadjutoriumsolemn}{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, p.~\pageref{deusinadjutoriumsolemn}.}}
+\newcommand{\printcollect}[2]{
+	\ifx\undefined\begincollectcols\def\begincollectcols{\begin{parcolumns}[rulebetween]{2}}\fi
+	\ifx\printcollectheading\undefined\def\printcollectheading{T}\fi
+	\if\printcollectheading T
+	\oldneedspace{3\baselineskip}
+	\medskip
+	{\centering\large Collect.\par}
+	\smallskip
+	\fi
+	\begincollectcols
+	\sloppy
+	\prayer{#1}{#2}
+	\end{parcolumns}
+	\let\begincollectcols=\undefined
+}
+\newcommand{\benedicamusdominoreference}[1]{%
+	\ifthenelse{\boolean{includebenedicamusdominoreferences}}{
+		\Vbar~\emph{Benedicámus Dómino \IfInteger{#1}{#1}{\csname benedicamusdominoname#1\endcsname}}, page \pageref{benedicamusdomino-#1}.
+	}{}
+}
+\newcommand{\benedicamusdominoreferencelentoreaster}{%
+	\ifthenelse{\boolean{includebenedicamusdominoreferences}}{
+		In Lent, \Vbar~\emph{Benedicámus Dómino \benedicamusdominonamelent}, page \pageref{benedicamusdomino-lent}, or in Easter, \emph{\benedicamusdominonameeaster}, page \pageref{benedicamusdomino-easter}.
+	}{}
+}
+\newcommand{\benedicamusdominomaster}[1]{
+	\ifthenelse{\boolean{includebenedicamusdominoreferences}}{
+		\noindent\printnote{\benedicamusdominoreference{#1}}
+		\ifx\postbenedicamusdomino\undefined\else\postbenedicamusdomino\fi
+	}{}
+	\bigskip
+	\hrule
+}
+\newcommand{\benedicamusdominolentoreaster}{
+	\ifthenelse{\boolean{includebenedicamusdominoreferences}}{
+		\noindent\printnote{\benedicamusdominoreferencelentoreaster}
+		\ifx\postbenedicamusdomino\undefined\else\postbenedicamusdomino\fi
+	}{}
+	\bigskip
+	\hrule
+}
+
+\ifthenelse{\boolean{lettersize}}{
+	\newcommand{\psalmcolsoverride}[1][0]{
+	}	
+}{
+	\newcommand{\psalmcolsoverride}[1][0]{
+		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.45\linewidth}]{2}}
+		\ifnum#1=110
+		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.465\linewidth}]{2}}
+		\fi
+		\ifnum#1=111
+		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
+		\fi
+		%\ifnum#1=112
+		%\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.445\linewidth}]{2}}
+		%\fi
+		\ifnum#1=116
+		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.5655\linewidth}]{2}}
+		\fi
+		\ifnum#1=121
+		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.47\linewidth}]{2}}
+		\fi
+		\ifnum#1=125
+		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.49\linewidth}]{2}}
+		\fi
+		\ifnum#1=129
+		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
+		\fi
+		\ifnum#1=131
+		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.4875\linewidth},distance=1em]{2}}
+		\fi
+		\ifnum#1=137
+		\def\beginpsalmcols{\begin{parcolumns}[rulebetween]{2}}
+		\fi
+		\ifnum#1=147
+		%\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.465\linewidth}]{2}}
+		\def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.475\linewidth}]{2}}
+		\fi
+	}
+}
+\newcommand{\printvrcommem}{
+		{\normalsize
+		\ifx\beginvrcols\undefined\def\beginvrcols{\begin{parcolumns}[rulebetween]{2}}\fi
+		\beginvrcols
+		\colchunk{%
+			\selectlanguage{latin}%
+	    \Vbar{}~\commvlatin{}%
+    }
+		\colchunk{%
+			\selectlanguage{american}%
+	    \Vbar{}~\commvtranslation{}%
+		}%
+		\colplacechunks%
+    \colchunk{%
+			\selectlanguage{latin}%
+	    \Rbar{}~\commrlatin{}%
+		}%
+		\colchunk{%
+			\selectlanguage{american}%
+	    \Rbar{}~\commrtranslation{}%
+		}
+		\end{parcolumns}
+		}
+}
+\newcommand{\printvrdirigatur}{
+	\smallskip{}
+	\oldneedspace{3\baselineskip}
+	\noindent\printnote{If the Sunday is being commemorated:\\}\vspace{-0.5\baselineskip}
+	{
+		\ifthenelse{\boolean{birmingham}}{
+			\def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.53\linewidth}]{2}}
+		}{
+			\def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.51\linewidth}]{2}}
+		}
+		\def\commvlatin{Dirigátur Dómine orátio \textbf{mé}a.}
+		\def\commrlatin{Sicut incénsum in conspéctu \textbf{tú}o.}
+		\def\commvtranslation{\noindent{}Let my prayer be directed, O Lord.}
+		\def\commrtranslation{\noindent{}As incense in Thy sight.}
+		\printvrcommem{}
+	}
+}
+\newcommand{\printvrmanenobiscum}{
+	\smallskip{}
+	\oldneedspace{3\baselineskip}
+	\noindent\printnote{If the Sunday is being commemorated:\\}\vspace{-0.5\baselineskip}
+	{
+		\def\commvlatin{Mane nobíscum Dómine, alle\textbf{lú}ia.}
+		\def\commrlatin{Quóniam advesperáscit, alle\textbf{lú}ia.}
+		\def\commvtranslation{Stay with us O Lord, alleluia.}
+		\def\commrtranslation{Because it is towards evening, alleluia.}
+		\printvrcommem{}
+	}
+}
+\newcommand{\printvrdominusincaelo}{
+	\smallskip{}
+	\oldneedspace{3\baselineskip}
+	\noindent\printnote{If the Sunday is being commemorated:\\}\vspace{-0.5\baselineskip}
+	{
+		\def\commvlatin{Dóminus in cælo, alle\textbf{lú}ia.}
+		\def\commrlatin{Parávit sedem suam, alle\textbf{lú}ia.}
+		\def\commvtranslation{The Lord in heaven, alleluia.}
+		\def\commrtranslation{Has prepared His throne, alleluia.}
+		\printvrcommem{}
+	}
+}
+\newcommand{\printcommemoration}[2][.]{
+	\def\gabcfolder{#1}
+	\input{\gabcfolder/#2}
+	\subtitle{\comheadingtext}
+	\sectionmark{\comheadingtext}
+	{
+	\def\noeuouae{F}
+	%\printgabc{At Magn.}{\oldstylenums{\commagantlinetwo}}{\commagantinitial}{\commaganttex}
+		{%
+			\gresetinitiallines{0}
+			\ifx\gabcfolder\undefined
+		        \gregorioscore{\commaganttex}
+		    \else
+		        \gregorioscore{\gabcfolder/\commaganttex}
+		    \fi
+
+			\greseteolcustos{auto}%
+		}
+	}
+	\translation[]{\englishcommagantiphon}
+
+	\smallskip
+	\ifx\commvlatin\undefined
+		\printvr[\greseteolcustos{manual}]{\commvrtex}{\commvtranslation}{\commrtranslation}
+			\greseteolcustos{auto}
+	\else
+	{
+		\oldneedspace{3\baselineskip}
+		\printvrcommem{}
+	}
+	\fi
+
+	\printcollect{\latincomcollect}{\englishcomcollect}
+}
+\DeclareDocumentCommand{\printbothversions}{ O{\undefined} O{\undefined} m m }{
+% #1 & #2 are the label
+% #3 is what to check for
+% #4 is the body of what to print
+	\ifx#3\undefined
+		\ifx\definevesperspropersalt\undefined\else
+	  {
+			\ifx\vesperspropersaltnote\undefined\else
+		    \oldneedspace{3\baselineskip}
+				\printnote{\vesperspropersaltnote}
+			\fi
+			\definevesperspropersalt
+			\ifx#2\undefined\else\oldneedspace{5\baselineskip}\label{#2}\fi
+	  	#4
+		}
+		\medskip
+		\fi
+		\ifx\definevesperspropers\undefined\else
+	  {
+			\ifx\vesperspropersnote\undefined\else
+	    	\oldneedspace{3\baselineskip}
+				\printnote{\vesperspropersnote}
+			\fi
+			\definevesperspropers
+			\ifx#1\undefined\else\oldneedspace{5\baselineskip}\label{#1}\fi
+	  	#4
+		}
+		\fi
+	\else
+  {
+		\ifx#1\undefined\else\label{#1}\fi
+  	#4
+	}
+	\fi
+}
+\newcommand{\printpsalms}{
+	\printpsalm{1}{\psalmonenum}{\psalmonetone\psalmoneend}{\antonetex}{\antoneinitial}
+	\medskip
+	\needspace{3\baselineskip}
+	\printpsalm{2}{\psalmtwonum}{\psalmtwotone\psalmtwoend}{\anttwotex}{\anttwoinitial}
+	\medskip
+	\needspace{3\baselineskip}
+	\printpsalm{3}{\psalmthreenum}{\psalmthreetone\psalmthreeend}{\antthreetex}{\antthreeinitial}
+	\medskip
+	\needspace{3\baselineskip}
+	\printpsalm{4}{\psalmfournum}{\psalmfourtone\psalmfourend}{\antfourtex}{\antfourinitial}
+	\medskip
+	\ifx\psalmfivenum\undefined{
+		\ifx\antfivetex\undefined{%then it is a different antiphon for each
+			\ifx\definevesperspropersalt\undefined\else{
+				\definevesperspropersalt
+				\ifx\vesperspropersaltnote\undefined\else
+					\oldneedspace{3\baselineskip}
+					\noindent\printnote{\vesperspropersaltnote}
+				\fi
+				\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
+			}\fi
+			\ifx\definevesperspropers\undefined\else{
+				\definevesperspropers
+				\ifx\vesperspropersnote\undefined\else
+					\oldneedspace{3\baselineskip}
+					\noindent\printnote{\vesperspropersnote}
+				\fi
+				\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
+			}\fi
+		}\else{%they share the same antiphon
+			\ifx\definevesperspropersalt\undefined\else{
+				\definevesperspropersalt
+				\ifx\vesperspropersaltnote\undefined\else
+					\let\oldprepsalmtitle=\prepsalmtitlefive
+					\def\prepsalmtitlefive{
+						\smallskip
+						\oldneedspace{3\baselineskip}
+						\noindent\printnote{\vesperspropersaltnote}
+
+						\ifx\oldprepsalmtitle\undefined\else\oldprepsalmtitle\fi
+					}
+				\fi
+				\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
+			}\fi
+			\def\onlyoneant{T}
+			\ifx\definevesperspropers\undefined\else{
+				\definevesperspropers
+				\ifx\vesperspropersnote\undefined\else
+					\oldneedspace{3\baselineskip}
+					\noindent\printnote{\vesperspropersnote}
+				\fi
+				\let\oldprepsalmtitle=\prepsalmtitlefive
+				\def\prepsalmtitlefive{\def\onlyoneant{F}\ifx\oldprepsalmtitle\undefined\else\oldprepsalmtitle\fi}
+				\def\printrepeatantiphon{T}
+				\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
+			}\fi
+		}\fi
+	}\else{
+		\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
+	}\fi
+}
+\newcommand{\printterce}[2][.]{
+	\grechangestaffsize{15}
+	\def\gabcfolder{#1}
+	\input{\gabcfolder/#2}
+	\ifx\prevespers\undefined\else%
+	\prevespers{}
+	\fi
+
+	\ifthenelse{\boolean{onlysundaycommon}}{}{% false
+		\ifx\deusinadjutoriumsolemn\undefined\def\deusinadjutoriumsolemn{F}\fi
+		\deusinadjutorium[\deusinadjutoriumsolemn]
+
+		\ifx\postdeusinadjutorium\undefined\else\postdeusinadjutorium\fi
+		\medskip
+	}
+	\ifx\psalmsreplacement\undefined{
+		\ifx\psalmonenum\undefined{
+			\ifx\definevesperspropersalt\undefined\else{
+				\definevesperspropersalt
+				\ifx\prevesperspsalmsalt\undefined\else\prevesperspsalmsalt{}\fi
+				\ifx\vesperspropersaltnote\undefined\else
+					\oldneedspace{3\baselineskip}
+					\noindent\printnote{\vesperspropersaltnote}
+				\fi
+				\ifx\vesperspsalmsaltlabel\undefined\else\vesperspsalmsaltlabel{}\fi
+				\printpsalms{}
+			}\fi
+			\ifx\definevesperspropers\undefined\else{
+				\definevesperspropers
+				\ifx\prevesperspsalms\undefined\else\prevesperspsalms{}\fi
+				\ifx\vesperspropersnote\undefined\else
+					\oldneedspace{3\baselineskip}
+					\noindent\printnote{\vesperspropersnote}
+				\fi
+				\ifx\vesperspsalmslabel\undefined\else\vesperspsalmslabel{}\fi
+				\printpsalms{}
+			}\fi
+		}\else
+			\printpsalms{}
+		\fi
+	}\else{
+		\psalmsreplacement{}
+	}\fi
+	%\medskip
+	%\vspace{-\baselineskip}
+	%\needspace{3\baselineskip}
+	\ifx\chapterreplacement\undefined{
+		\ifx\chaptertext\undefined
+			\ifx\prechapter\undefined\else\prechapter\fi
+			\def\printchapterheading{F}
+	    \begin{center}{\large\textbf Chapter.}\end{center}
+	    \vspace{-0.3\baselineskip}
+			\ifx\definevesperspropersalt\undefined\else
+			{
+				\ifx\vesperspropersaltnote\undefined\else
+					\oldneedspace{\baselineskip}
+					\printnote{\vesperspropersaltnote}
+				\fi
+				\definevesperspropersalt
+				\printchapter{\chaptertext}{\chaptertranslation}
+			}
+			\medskip
+			\fi
+			\ifx\definevesperspropers\undefined\else
+			{
+				\ifx\vesperspropersnote\undefined\else
+					\oldneedspace{3\baselineskip}
+					\printnote{\vesperspropersnote}
+				\fi
+				\definevesperspropers
+				\printchapter{\chaptertext}{\chaptertranslation}
+			}
+			\fi
+		\else
+			%\vspace{-\baselineskip}
+			\oldneedspace{24pt}
+			\ifx\prechapter\undefined\else\prechapter\fi
+			\printchapter{\chaptertext}{\chaptertranslation}
+		\fi
+	}
+	\else
+	{\chapterreplacement}
+	\fi
+
+	\medskip
+	\ifx\printfullhymn\undefined
+		\ifx\printhymnnote\undefined
+			\ifx\hymninput\undefined\else
+				\input{\hymninput}
+			\fi
+			% \ifx\prehymn\undefined\else
+			% 	\prehymn
+			% \fi
+			\printbothversions{\hymntex}{\printhymn[\hymnlabel]{\oldstylenums{\hymnlinetwo}}{\hymninitial}{\hymntex}{\hymntranslation}}
+		\else
+			\printhymnnote
+		\fi
+		\ifx\prevr\undefined\else\prevr\fi
+		\printbothversions[\vrlabel][\vraltlabel]{\vrtex}{%
+	    \ifx\vrlinebreak\undefined\def\vrlinebreak{T}\fi
+	    \printvr[\if\vrlinebreak T\greseteolcustos{manual}\fi]{\vrtex}{\vtranslation}{\rtranslation}
+	    \greseteolcustos{auto}
+		}
+		\ifx\postvr\undefined\else\postvr\fi
+		\ifx\vrpttex\undefined\else%
+			\smallskip
+			\noindent
+			\printnote{In Paschaltide:}
+			\ifx\vrlinebreak\undefined\def\vrlinebreak{T}\fi
+			\if\vrlinebreak T\greseteolcustos{manual}\fi
+			\gresetinitiallines{0}
+			\gregorioscore{\gabcfolder/\vrpttex}
+			\greseteolcustos{auto}
+		\fi
+	\else
+		\printfullhymn
+	\fi
+
+	\medskip
+
+	\ifx\magreplacement\undefined
+	{
+		\ifx\maganttex\undefined
+		\ifx\definevesperspropersalt\undefined\else{
+			{
+			\ifx\definevesperspropers\undefined\else
+				{
+					\definevesperspropersalt
+					\global\let\magtonealt=\magtone
+					\global\let\magendalt=\magend
+				}
+				{
+					\definevesperspropers
+					\IfStrEq{\magtonealt\magendalt}{\magtone\magend}
+					{\gdef\altmagsame{T}}
+					{\gdef\altmagsame{F}}
+
+				}
+			\fi
+			}
+			\definevesperspropersalt
+	  		\hrule
+	  		\needspace{7\baselineskip}
+				\ifx\premagnificat\undefined\else\premagnificat\fi
+		    \ifx\premagtitle\undefined\else\premagtitle\fi
+		    \begin{center}{\large Magnificat.}\end{center}
+	    	\vspace{-1ex}
+	    	\ifx\postmagtitle\undefined\else\postmagtitle\fi
+
+	    	\ifx\vesperspropersaltnote\undefined\else
+	    		\oldneedspace{2\baselineskip}
+	    		\ifx\premagnificat\undefined\else\premagnificat\fi
+				\printnote{\vesperspropersaltnote\par}
+			\fi
+			\let\anttranslation=\maganttranslation
+			\let\preverses=\premagverses
+		    \let\preanttwo=\premagtwo
+		    \let\preant=\premag
+		    \def\nomagtitle{T}
+		    \if\altmagsame T{
+		    	\printgabc{At Magn.}{Ant.~\magtone{}.~\magend}{\magantinitial}{\maganttex}
+		    	\translation[]{\anttranslation}
+		    	\bigskip
+		    }\else{
+				\printmag{\magtone\magend}{\magantinitial}{\maganttex}
+			}\fi
+		    \hrule
+		    \medskip
+		}\fi
+		\ifx\definevesperspropers\undefined\else
+			\definevesperspropers
+	    	\ifx\vesperspropersnote\undefined\else
+	    		\needspace{6\baselineskip}
+	    		\oldneedspace{4\baselineskip}
+	    		\ifx\premagnificat\undefined\else\premagnificat\fi
+				\printnote{\vesperspropersnote\par}
+			\fi
+			\def\nomagtitle{T}
+		\fi
+		\else\ifx\premagnificat\undefined\else\premagnificat\fi
+		\fi
+		\let\anttranslation=\maganttranslation
+		\let\preverses=\premagverses
+	    \let\preanttwo=\premagtwo
+	    \let\preant=\premag
+		\printmag{\magtone\magend}{\magantinitial}{\maganttex}
+		\global\let\altmagsame\undefined
+		\global\let\magtonealt=\undefined
+		\global\let\magendalt=\undefined
+	}
+	\else
+	{\magreplacement}
+	\fi
+	{\ifx\postmag\undefined\else\postmag\fi}
+
+	\vspace{-\baselineskip}
+%	\ifx\precollect\undefined\else\precollect\fi
+	\ifx\collectreplacement\undefined{
+		\ifx\collect\undefined
+			\def\printcollectheading{F}
+			\needspace{3\baselineskip}
+			\ifx\precollect\undefined\else\precollect\fi
+			\begin{center}{\large Collect.}\end{center}
+
+			\vspace{-0.5\baselineskip plus 0.25\baselineskip}
+			\ifx\definevesperspropersalt\undefined\else
+			{
+				\ifx\vesperspropersaltnote\undefined\else
+					\printnote{\vesperspropersaltnote}
+				\fi
+				\definevesperspropersalt
+				\printcollect{\collect}{\collecttranslation}
+			}
+			\medskip
+			\fi
+			\ifx\definevesperspropers\undefined\else
+			{
+				\ifx\vesperspropersnote\undefined\else
+					\printnote{\vesperspropersnote}
+				\fi
+				\definevesperspropers
+				\printcollect{\collect}{\collecttranslation}
+			}
+			\fi
+		\else
+			\oldneedspace{3\baselineskip}
+			\needspace{5\baselineskip}
+			\ifx\precollect\undefined\else\precollect\fi
+			\printcollect{\collect}{\collecttranslation}
+		\fi
+	}
+	\else
+	{\collectreplacement}
+	\fi
+	\medskip
+}
+
+\sloppy
+%\nofiles
+\begin{document}
+\normalsize
+\grechangestaffsize{15}
+{
+	\thispagestyle{empty}
+	% title page
+	% general
+	\vspace*{5\baselineskip}
+
+	{\centering
+
+	{\Huge
+	Terce with Gregorian Chant
+
+	}
+
+	{\Large\medskip
+	\emph{for}
+
+	\medskip}
+
+	{\Huge
+	Sundays \& Holy Days
+
+	}
+	\vfill}
+	\pagebreak
+	% copyright page
+	\thispagestyle{empty}
+	\noindent{}Terce with Gregorian Chant for Sundays\ifthenelse{\boolean{onlysundaycommon}}{}{ \& Holy Days}: \emph{newly typeset, based on \emph{The Liber Usualis}, edited by the Benedictines of Solesmes (Desclee Company, 1961).}
+
+	\bigskip{}\noindent{}Many thanks to Elie Roux for creating Gregorio, to all the people answering questions on the Gregorio forums, to Olivier Berton for creating GregoBase (http://gregobase.selapa.net) which makes it much easier to find all the chant that Andrew Hinkley and others have contributed to the public domain.  Also many thanks to my brother Benjamin, whose website (http://bbloomf.github.io/jgabc) makes it incredibly easy to typeset the psalms and substantially easier than otherwise to typeset Gregorian chant with Gregorio.
+
+	\begin{flushright}
+	\emph{Albert Bloomfield}\\
+	Cincinnati, Ohio
+	\end{flushright}
+
+	\bigskip{}\noindent{}http://asbloomf.github.io/gabc-chants
+
+	\vfill
+%editions
+	\bigskip{}\noindent{}%
+	First edition, 9 December 2020.
+
+	\hangindent=1em % indent all subsequent lines
+    \bigskip
+
+\makeatletter
+	\noindent{}Typeset using \LuaLaTeX{}\ifthenelse{\boolean{includepolyphony}}{, Lilypond version 2.20.0,}{} and Gregorio version \gre@gregoriotexversion{}
+\makeatother
+
+	\bigskip{}\noindent{}This work is free of known copyright restrictions.
+
+	\bigskip{}\noindent{}%CreateSpace
+	ISBN: \isbn{}
+	%
+  %\noindent{}Lulu ISBN: 978-1-329-59990-1
+}
+%\frontmatter
+%\pagenumbering{roman}
+
+\tableofcontents%
+
+%\pagenumbering{arabic}
+%\mainmatter
+
+\include{inc-common-terce}
+\ifthenelse{\boolean{testrun}}{
+
+}{
+	\include{inc-benedicamus-domino}
+
+	\clearpage
+
+	\input{inc-terce-sunday}
+
+}
+\end{document}
+

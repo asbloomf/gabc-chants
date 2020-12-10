@@ -1,0 +1,112 @@
+\chapter{Common of Festal Vespers}
+
+\sectionmark{Deus in adjutórium}
+\addcontentsline{toc}{section}{Deus in adjutórium}
+
+%\subtitle{Festal Tone}
+\label{deusinadjutorium}
+\printnote{The Festal Tone may be sung on any Sunday or Feast.}
+\printnote{From Septuagesima to Wednesday in Holy Week, the \emph{Laus tibi} is said instead of \emph{Allelúia}.}
+
+\bigskip
+\def\deusinadjutoriumsolemn{F}
+\printdeusinadjutorium{}
+\vfil
+
+%\subtitle{Solemn Tone}
+\printnote{The Solemn Tone may only be sung on Feasts of the First or Second Class.}
+\printnote{From Septuagesima to Wednesday in Holy Week, the \emph{Laus tibi} is said instead of \emph{Allelúia}.}
+
+\bigskip
+{
+  \def\deusinadjutoriumsolemn{T}
+  \ifthenelse{\boolean{birmingham}}{
+    \def\includetranslation{F}
+  }{}
+  \label{deusinadjutoriumsolemn}
+  \printdeusinadjutorium{}
+  \let\deusinadjutoriumsolemn=\undefined
+}
+
+\printnote{Vespers then proceed with the Proper Antiphons, Psalms, Chapter, Hymn, Versicle,
+Magnificat, and Collect given for the respective Sunday or Feast.
+
+For Sundays throughout the year, \emph{p.~\pageref{sundayvespers}}.
+
+For Sundays in Paschaltide, \emph{p.~\pageref{sundayvespers-easter}}.
+}
+
+\bigskip
+
+\newcommand{\printvrwithtranslation}{
+    {\normalsize
+    \ifx\beginvrcols\undefined\def\beginvrcols{\begin{parcolumns}[rulebetween]{2}}\fi
+    \beginvrcols
+    \colchunk{
+      \par\vspace{-\baselineskip}\noindent\selectlanguage{latin}%
+      \Vbar{}~\vlatin{}
+    }
+    \colchunk{%
+      \par\vspace{-\baselineskip}\noindent\selectlanguage{american}%
+      \Vbar{}~\vtranslation{}
+    }%
+    \colplacechunks%
+    \ifx\rlatin\undefined\else
+    \colchunk{
+      \par\vspace{-\baselineskip}\noindent\selectlanguage{latin}%
+      \Rbar{}~\rlatin{}%
+    }
+    \colchunk{%
+      \par\vspace{-\baselineskip}\noindent\selectlanguage{american}%
+      \Rbar{}~\rtranslation{}%
+    }%
+    \colplacechunks%
+    \fi
+    \end{parcolumns}
+    }
+}
+
+{
+  \printnote{All Vespers conclude with the following:}\par
+  \def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.48\linewidth}]{2}}
+  \def\vlatin{Dóminus vobíscum.}
+  \def\rlatin{Et cum spíritu tuo.}
+  \def\vtranslation{The Lord be with you.}
+  \def\rtranslation{And with thy spirit.}
+  \printvrwithtranslation{}
+
+  %\Vbar{}~Dóminus vobíscum.\\%\hspace{5em}
+  %\Rbar{}~Et cum spíritu tuo.
+
+  \ifthenelse{\boolean{birmingham}}{% TRUE is empty
+  }{% False
+    \printnote{Or, in the absence of a priest or deacon:}\par
+    \def\vlatin{Dómine, exáudi oratiónem meam.}
+    \def\rlatin{Et clamor meus ad te véniat.}
+    \def\vtranslation{Lord, hear my prayer.}
+    \def\rtranslation{And let my cry come unto Thee.}
+    \printvrwithtranslation{}
+  }
+
+  %\Vbar{}~Dómine, exáudi oratiónem meam.\\
+  %\Rbar{}~Et clamor meus ad te véniat.
+
+  \bigskip
+
+  \noindent\printnote{The ``Benedicámus Dómino'' is then sung\ifthenelse{\boolean{birmingham}}{}{ in one of the tones on the next pages}.}
+
+  \bigskip
+
+  \let\rlatin\undefined
+  \let\rtranslation\undefined
+  \def\vlatin{Fidélium ánimæ per misericórdiam Dei requiéscant in pace.\\\Rbar~Amen.}
+  %\def\rlatin{Amen.}
+  \def\vtranslation{May the souls of the faithful departed through the mercy of God rest in peace.\hfill\Rbar~Amen.}
+  %\def\rtranslation{Amen.}
+  \printvrwithtranslation{}
+}
+%\noindent\Vbar{}~Fidélium ánimæ per misericóridam Dei requiéscant in pace.\\
+%\Rbar{}~Amen.
+
+\def\noeuouae{T}
+\def\dontrepeatantiphon{T}

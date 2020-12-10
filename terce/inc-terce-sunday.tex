@@ -1,0 +1,102 @@
+{
+	\label{sundayterce}
+	\chapter{Sunday at Terce}
+	\section{Sunday at Terce throughout the year}
+\def\printvrdirigatur{
+	\label{vr-dirigatur}
+  \def\vrlinebreak{T}
+  \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
+}
+\def\printvrdirigaturshort{
+  \def\vrlinebreak{T}
+  \emph{For translation, see page \pageref{vr-dirigatur}.}
+  \bigskip
+
+  \printvr[\greseteolcustos{manual}]{\vrtex}{}{}
+}
+\def\printvrdirigaturnote{
+	\Vbar{}~Dirigátur Dómine orátio mea.
+
+	\Rbar{}~Sicut incénsum in conspéctu tuo.
+
+	\bigskip
+
+	\emph{For translation and chant for the versicle, see page \pageref{vr-dirigatur}.}
+	\bigskip
+}
+
+	\def\printfullhymn{
+	    {
+	    	\oldneedspace{5\baselineskip}
+	    	\label{hymn-luciscreator}
+			\def\annot{\small{Hymn.}}
+			\def\annottwo{\small{\hymnlinetwo}}
+			\alsetinitialspacing{\hymninitial}
+			\normalsize
+			\oldneedspace{5\baselineskip}
+			\gregorioscore{\gabcfolder/\hymntex}
+			\bigskip
+			\printvrdirigaturshort{}
+	        \input{\gabcfolder/inc-hymn-LucisCreatorOptime2}
+			{
+				\def\annot{\small{Hymn.}}
+				\def\annottwo{\small{\hymnlinetwo}}
+				\alsetinitialspacing{\hymninitial}
+				\normalsize
+				\oldneedspace{5\baselineskip}
+				{\centering\addfontfeature{Numbers=Lining}\textbf{2.~Another Chant (ad libitum).}\par}
+				\gregorioscore{\gabcfolder/\hymntex}
+			}
+			\bigskip
+		  	\printvrdirigaturshort{}
+			{
+				\def\annot{\small{Hymn.}}
+				\def\annottwo{\small{\hymntwolinetwo}}
+				\alsetinitialspacing{\hymninitial}
+				\normalsize
+				\oldneedspace{5\baselineskip}
+				{\centering\addfontfeature{Numbers=Lining}\textbf{3.~Another Chant.}\par}
+
+				\gregorioscore{\gabcfolder/\hymntextwo}
+			}
+			\bigskip
+	    	%\printvrdirigaturshort{}
+			\pagebreak
+	    }
+	    
+    {
+    	\normalsize%\vspace{0pt minus 20pt}
+      \selectlanguage{american}\vspace{-\baselineskip}
+      \begin{multicols}{2}
+      \begin{psalmverses}
+      {\hymntranslation}
+      \end{psalmverses}
+      \end{multicols}
+    }
+	\printvrdirigatur{}
+	}
+	\def\vrlinebreak{T}
+	\newcommand{\printsundaysthroughtheyear}{
+		\def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
+		\printnote{Time after Epiphany,\dotting \emph{p.~\pageref{epiphany2} to \pageref{epiphany6}}}
+
+		\printnote{Septuagesima \& Lent,\dotting \emph{p.~\pageref{septuagesima} to \pageref{lent6}}}
+
+		\printnote{Time after Pentecost,\dotting \emph{p.~\pageref{pentecost2} to \pageref{pentecost24}}}
+
+	}
+	\newcommand{\collectreplacement}{\bigskip}
+	\def\postpsalmtitletwo{
+		\bigskip
+	}
+	\def\preantfour{\needspace{10\baselineskip}}
+	%\def\prepsalmfive{\greseteolcustos{manual}}
+	\def\prechapter{\oldneedspace{10\baselineskip}}
+
+	\printterce[SundayAtTerce]{inc-SundayAtTerce}
+	\let\psalmcolsoverrideoverride=\undefined
+	\bigskip
+	\bigskip
+	\hrule
+	\bigskip
+}
