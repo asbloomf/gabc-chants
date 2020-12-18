@@ -15,7 +15,7 @@ function usage
 force=
 latexmkopts=
 lyopts=
-filename=vespers-book
+filename=terce-book
 suffix=-main
 suffix2=("")
 
@@ -54,8 +54,11 @@ do
 	cp -fu ${filename}${suffix}${suf2}.pdf ${filename}${suf2}-old.pdf
 
 	latexmk ${filename}${suffix}${suf2}.tex $latexmkopts
-	pdfcrop ${filename}${suffix}${suf2}.pdf ${filename}${suf2}-crop.pdf
-	cp -f ${filename}${suffix}${suf2}.pdf ${filename}${suf2}.pdf
+	if [ $? -ne 0 ]
+	then
+		pdfcrop ${filename}${suffix}${suf2}.pdf ${filename}${suf2}-crop.pdf
+		cp -f ${filename}${suffix}${suf2}.pdf ${filename}${suf2}.pdf
+	fi
 done
 # if [ "$?" -eq "0" ] || [ "$force" = "1" ] || [ "$suffix2" != ""]; then
 # 	if test `find "$filename$suffix$suffix2.pdf" -mmin -1` || ! [ -f $filename$suffix2.pdf ] || [ "$force" = "1" ]; then

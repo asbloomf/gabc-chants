@@ -20,9 +20,6 @@
 \bigskip
 {
   \def\deusinadjutoriumsolemn{T}
-  \ifthenelse{\boolean{birmingham}}{
-    \def\includetranslation{F}
-  }{}
   \label{deusinadjutoriumsolemn}
   \printdeusinadjutorium{}
   \let\deusinadjutoriumsolemn=\undefined
@@ -78,22 +75,19 @@ For Sundays in Paschaltide, \emph{p.~\pageref{sundayvespers-easter}}.
   %\Vbar{}~Dóminus vobíscum.\\%\hspace{5em}
   %\Rbar{}~Et cum spíritu tuo.
 
-  \ifthenelse{\boolean{birmingham}}{% TRUE is empty
-  }{% False
-    \printnote{Or, in the absence of a priest or deacon:}\par
-    \def\vlatin{Dómine, exáudi oratiónem meam.}
-    \def\rlatin{Et clamor meus ad te véniat.}
-    \def\vtranslation{Lord, hear my prayer.}
-    \def\rtranslation{And let my cry come unto Thee.}
-    \printvrwithtranslation{}
-  }
+  \printnote{Or, in the absence of a priest or deacon:}\par
+  \def\vlatin{Dómine, exáudi oratiónem meam.}
+  \def\rlatin{Et clamor meus ad te véniat.}
+  \def\vtranslation{Lord, hear my prayer.}
+  \def\rtranslation{And let my cry come unto Thee.}
+  \printvrwithtranslation{}
 
   %\Vbar{}~Dómine, exáudi oratiónem meam.\\
   %\Rbar{}~Et clamor meus ad te véniat.
 
   \bigskip
 
-  \noindent\printnote{The ``Benedicámus Dómino'' is then sung\ifthenelse{\boolean{birmingham}}{}{ in one of the tones on the next pages}.}
+  \noindent\printnote{The ``Benedicámus Dómino'' is then sung in one of the tones on the next pages.}
 
   \bigskip
 
