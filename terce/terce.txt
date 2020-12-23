@@ -7,7 +7,7 @@ page 235 sunday at terce
 	chapter
 	short resp
 	vv
-	in advent, ant & chapter from proper of time; short resp, vv
+	in advent, ant & chapter from proper of time; short resp, vv found here
 	in lent, ant & chapter from proper of time; short resp, vv
 	in passiontide, ant & chapter from proper of time; short resp, vv
 	in paschaltide, chopter from proper of time; ant, short resp, vv
@@ -15,7 +15,7 @@ page 235 sunday at terce
 page 318 advent
 	hymn
 page 318 1st sunday
-	ant Jucundare p323 (2nd ant from vespers), chapter from vespers
+	ant Jucundare p323 (2nd ant from vespers), chapter from vespers, collect (always)
 page 327 2nd sunday
 	ant Urbs p332 (2nd ant from vespers), chapter from vespers
 page 334 3rd sunday

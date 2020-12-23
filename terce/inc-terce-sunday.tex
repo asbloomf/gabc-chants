@@ -1,104 +1,316 @@
-{
-	\label{sundayterce}
-	\chapter{Sunday at Terce}
-	\section{Sunday at Terce throughout the year}
-
-
-\def\printvrdirigatur{
-	\label{vr-dirigatur}
-  \def\vrlinebreak{T}
-  \printvr[\greseteolcustos{manual}]{\vrtex}{\vtranslation}{\rtranslation}
+\makeatletter  
+\newcounter{score}
+\newcounter{tabstop}[score]
+\newcommand{\grealign}{%
+  \@bsphack%
+  \ifgre@boxing\else%
+    \kern\gre@dimen@begindifference%
+    \stepcounter{tabstop}%
+    \expandafter\zsavepos{stop-\thescore-\thetabstop}%
+    \kern-\gre@dimen@begindifference%
+  \fi%
+  \@esphack%
 }
-\def\printvrdirigaturshort{
-  \def\vrlinebreak{T}
-  \emph{For translation, see page \pageref{vr-dirigatur}.}
+
+\newcommand{\setstops}{%
+  \gdef\nstabbing@stops{%
+    \checkoddpage
+    \hspace*{-\ifoddpage\oddsidemargin\else\evensidemargin\fi}\hspace{-1in}%
+    \hspace*{\zposx{stop-\thescore-1} sp}\=%
+  }%
+  \count@=\@ne
+  \loop\ifnum\count@<\value{tabstop}%
+    \begingroup\edef\x{\endgroup
+      \noexpand\g@addto@macro\noexpand\nstabbing@stops{%
+        \noexpand\hspace{-\noexpand\zposx{stop-\thescore-\the\count@} sp}%
+        \noexpand\hspace{\noexpand\zposx{stop-\thescore-\the\numexpr\count@+1} sp}\noexpand\=%
+      }%
+    }\x
+    \advance\count@\@ne
+  \repeat
+  \nstabbing@stops\kill
+}
+\makeatother
+
+\newenvironment{nstabbing}
+  {\setlength{\topsep}{0pt}%
+   \setlength{\partopsep}{0pt}%
+   \tabbing%
+   \setstops}
+  {\endtabbing\stepcounter{score}}
+
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween]{2}}
+\def\endpsalmcols{\end{parcolumns}}
+\newcommand{\printpsalmtitle}[1]{%
+    {\addfontfeature{Numbers=Lining}\centering Psalm #1\par}
+  }
+
+\newcommand{\printpsalmwithtranslation}[3]{
+	% #1 psalm number
+	% #2 ending
+	% #3 0 to start on 1st verse, 1 for second
+	\setlength{\columnsep}{18pt}
+	\setlength{\columnseprule}{.4pt}
+	\beginpsalmcols
+	\colchunk{\vspace{-12pt}%
+	\begin{psalmverses}[#3]
+	\vspace{-\baselineskip}%
+	\input{psalms/Psalm#1-#2-verses}
+	\end{psalmverses}
+	}
+
+	\selectlanguage{american}
+	\colchunk{\vspace{-12pt}%
+	\sloppy
+	\begin{psalmverses}
+	\vspace{-\baselineskip}%
+	\input{psalms/Psalm#1-verses-en}
+	\end{psalmverses}
+	}
+	\selectlanguage{latin}
+	\endpsalmcols
+}
+
+\renewcommand{\printpsalm}[3]{
+  % #1 psalm number
+  % #2 ending
+  % #3 0 to start on 1st verse, 1 for second
+  \setlength{\columnsep}{18pt}
+  \setlength{\columnseprule}{.4pt}
+  \begin{multicols}{2}
+  \begin{psalmverses}[#3]
+  \input{psalms/Psalm#1-#2-verses}
+  \end{psalmverses}
+  \end{multicols}
+}
+
+
+
+\newcommand{\printpsalmtranslation}[3]{
+  % #1 psalm number
+  % #2 ending
+  % #3 0 to start on 1st verse, 1 for second
+  \setlength{\columnsep}{18pt}
+  \setlength{\columnseprule}{.4pt}
+  \begin{multicols}{2}
+  \begin{psalmverses}[#3]
+  \input{psalms/Psalm#1-verses-en}
+  \end{psalmverses}
+  \end{multicols}
+}
+
+\def\beginchaptercols{\begin{parcolumns}[rulebetween]{2}}
+\newcommand{\printchapternew}[4]{
+	% #1 ref
+	% #2 latin first words
+	% #3 latin remaining
+	% #4 english text
+	{\noindent\hspace{3em}Chapter.\hfill\emph{#1}\hspace{3em}}
+    \beginchaptercols{}
+    \colchunk{\sloppy\dropcap{latin}{#2} #3\hfill{}\Rbar{}~Deo~grátias.}
+    \colchunk{\sloppy \dropcap{american}{#4}}
+    \end{parcolumns}
+}
+\newcommand{\printvrwithtranslation}{
+    {\normalsize
+    \ifx\beginvrcols\undefined\def\beginvrcols{\begin{parcolumns}[rulebetween]{2}}\fi
+    \beginvrcols
+    \colchunk{
+      \par\vspace{-\baselineskip}\noindent\selectlanguage{latin}%
+      \Vbar{}~\vlatin{}
+    }
+    \colchunk{%
+      \par\vspace{-\baselineskip}\noindent\selectlanguage{american}%
+      \Vbar{}~\vtranslation{}
+    }%
+    \colplacechunks%
+    \ifx\rlatin\undefined\else
+    \colchunk{
+      \par\vspace{-\baselineskip}\noindent\selectlanguage{latin}%
+      \Rbar{}~\rlatin{}%
+    }
+    \colchunk{%
+      \par\vspace{-\baselineskip}\noindent\selectlanguage{american}%
+      \Rbar{}~\rtranslation{}%
+    }%
+    \colplacechunks%
+    \fi
+    \end{parcolumns}
+    }
+}
+\newcommand{\printtercepsalms}[1]{
+  % #1 is psalm tone like 2D
+  \printpsalmtitle{118. III.}
+
+  %print first verse in chant
+  {
+    \gresetinitiallines{0}
+    \grechangedim{interwordspacetext}{0.15 cm plus 0.15 cm minus 0.10 cm}{scalable}%
+    \gregorioscore{psalms/Psalm118.3-#1}
+    \input{../gsp-spaces}
+    \greseteolcustos{auto}
+  }
+
+  \setlength{\columnsep}{18pt}
+  \setlength{\columnseprule}{.4pt}
+  \selectlanguage{latin}
+  \begin{multicols}{2}
+  \begin{psalmverses}[1]
+  \input{psalms/Psalm118.3-#1-verses}
+  \end{psalmverses}
+  \printpsalmtitle{118. IV.}
+  \vspace{-0.8\baselineskip}
+  \begin{psalmverses}
+  \input{psalms/Psalm118.4-#1-verses}
+  \end{psalmverses}
+  \printpsalmtitle{118. V.}
+  \vspace{-0.8\baselineskip}
+  \begin{psalmverses}
+  \input{psalms/Psalm118.5-#1-verses}
+  \end{psalmverses}
+  \end{multicols}
+}
+\newcommand{\printtercepsalmstranslation}{
+  \setlength{\columnsep}{18pt}
+  \setlength{\columnseprule}{.4pt}
+  \selectlanguage{american}
+  \begin{multicols}{2}
+  \printpsalmtitle{118. III.}
+  \vspace{-0.5\baselineskip}
+  \begin{psalmverses}
+  \input{psalms/Psalm118.3-verses-en}
+  \end{psalmverses}
+  \printpsalmtitle{118. IV.}
+  \vspace{-0.5\baselineskip}
+  \begin{psalmverses}
+  \input{psalms/Psalm118.4-verses-en}
+  \end{psalmverses}
+  \printpsalmtitle{118. V.}
+  \vspace{-0.5\baselineskip}
+  \begin{psalmverses}
+  \input{psalms/Psalm118.5-verses-en}
+  \end{psalmverses}
+  \end{multicols}
+}
+
+{
+  \label{advent}
+  \chapter{Sunday at Terce}
+  \section{Sunday at Terce throughout the year}
+
+  \printgabc{\Vbar}{}{D}{deus-in-adjutorium}
+
   \bigskip
 
-  \printvr[\greseteolcustos{manual}]{\vrtex}{}{}
-}
-\def\printvrdirigaturnote{
-	\Vbar{}~Dirigátur Dómine orátio mea.
+  {\centering Hymn.\par}
 
-	\Rbar{}~Sicut incénsum in conspéctu tuo.
+  {\centering 1.~On Ordinary Sundays.\par}
 
-	\bigskip
+  \printgabc{2.}{}{N}{hy--nunc_sancte_nobis_(in_dominicis_per_annum)--solesmes_1961}
 
-	\emph{For translation and chant for the versicle, see page \pageref{vr-dirigatur}.}
-	\bigskip
-}
+  \oldneedspace{10\baselineskip}
+  {\centering 2.~On Solemn Feasts.\par}
 
-	\def\printfullhymn{
-	    {
-	    	\oldneedspace{5\baselineskip}
-	    	\label{hymn-luciscreator}
-			\def\annot{\small{Hymn.}}
-			\def\annottwo{\small{\hymnlinetwo}}
-			\alsetinitialspacing{\hymninitial}
-			\normalsize
-			\oldneedspace{5\baselineskip}
-			\gregorioscore{\gabcfolder/\hymntex}
-			\bigskip
-			\printvrdirigaturshort{}
-	        \input{\gabcfolder/inc-hymn-LucisCreatorOptime2}
-			{
-				\def\annot{\small{Hymn.}}
-				\def\annottwo{\small{\hymnlinetwo}}
-				\alsetinitialspacing{\hymninitial}
-				\normalsize
-				\oldneedspace{5\baselineskip}
-				{\centering\addfontfeature{Numbers=Lining}\textbf{2.~Another Chant (ad libitum).}\par}
-				\gregorioscore{\gabcfolder/\hymntex}
-			}
-			\bigskip
-		  	\printvrdirigaturshort{}
-			{
-				\def\annot{\small{Hymn.}}
-				\def\annottwo{\small{\hymntwolinetwo}}
-				\alsetinitialspacing{\hymninitial}
-				\normalsize
-				\oldneedspace{5\baselineskip}
-				{\centering\addfontfeature{Numbers=Lining}\textbf{3.~Another Chant.}\par}
+  \printgabc{8.}{}{N}{hy--nunc_sancte_nobis_(in_festis)--solesmes_1961}
 
-				\gregorioscore{\gabcfolder/\hymntextwo}
-			}
-			\bigskip
-	    	%\printvrdirigaturshort{}
-			\pagebreak
-	    }
-	    
-    {
-    	\normalsize%\vspace{0pt minus 20pt}
-      \selectlanguage{american}\vspace{-\baselineskip}
-      \begin{multicols}{2}
-      \begin{psalmverses}
-      {\hymntranslation}
-      \end{psalmverses}
-      \end{multicols}
-    }
-	\printvrdirigatur{}
-	}
-	\def\vrlinebreak{T}
-	\newcommand{\printsundaysthroughtheyear}{
-		\def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
-		\printnote{Time after Epiphany,\dotting \emph{p.~\pageref{epiphany2} to \pageref{epiphany6}}}
+  \begin{multicols}{2}
+  \begin{psalmverses}
+\item Come Holy Ghost, who ever One
+Art with the Father and the Son,
+It is the hour, our souls possess
+With thy full flood of holiness.
 
-		\printnote{Septuagesima \& Lent,\dotting \emph{p.~\pageref{septuagesima} to \pageref{lent6}}}
+\item Let flesh and heart and lips and mind
+Sound forth our witness to mankind;
+And love light up our mortal frame,
+Till others catch the living flame.
 
-		\printnote{Time after Pentecost,\dotting \emph{p.~\pageref{pentecost2} to \pageref{pentecost24}}}
+\item Almighty Father, hear our cry,
+Through Jesus Christ, our Lord most High,
+Who, with the Holy Ghost and thee,
+Doth live and reign eternally.
+Amen.
+  \end{psalmverses}
+  \end{multicols}
 
-	}
-	\newcommand{\collectreplacement}{\bigskip}
-	\def\postpsalmtitletwo{
-		\bigskip
-	}
-	\def\preantfour{\needspace{10\baselineskip}}
-	%\def\prepsalmfive{\greseteolcustos{manual}}
-	\def\prechapter{\oldneedspace{10\baselineskip}}
+\bigskip
 
-	%\printterce[SundayAtTerce]{inc-SundayAtTerce}
-	\let\psalmcolsoverrideoverride=\undefined
-	\bigskip
-	\bigskip
-	\hrule
-	\bigskip
+
+
+% print antiphon
+%    \printgabc[\preant]{\antlineone}{\antlinetwo}{\antinitial}{\anttex}
+  \bigskip
+  \printgabc{Ant.}{2. D}{A}{an--alleluia._(sund._at_terce)--solesmes}
+% print translation
+  \translation[]{Alleluia, Lead me into the path of thy commandments, alleluia, alleluia.}
+
+\bigskip
+  \printtercepsalms{2D}
+
+  \bigskip
+  \printtercepsalmstranslation{}
+
+% \printpsalm{118.3}{2D}{1}
+% \printpsalmtitle{118. IV.}
+% \printpsalm{118.4}{2D}{0}
+% \printpsalmtitle{118. V.}
+% \printpsalm{118.5}{2D}{0}
+
+% print antiphon
+%    \printgabc[\preant]{\antlineone}{\antlinetwo}{\antinitial}{\anttex}
+  \printgabc{Ant.}{2. D}{A}{an--alleluia._(sund._at_terce)--solesmes}
+% print translation
+  \translation[]{Alleluia, Lead me into the path of thy commandments, alleluia, alleluia.}
+
+\bigskip
+\printchapternew{1. John 4.}{Deus cáritas}{est~:~\dag{} et qui manet in caritáte, in Deo manet,~* et Deus in eo.}{God is charity: and he that abideth in charity, abideth in God, and God in him.}
+
+\bigskip
+\printgabc{Short}{Resp.}{I}{re--inclina_cor_meum--solesmes}
+
+\translation[]{\Vbar{}~Incline my heart into thy testimonies.
+\Rbar{}~Incline\dots{}
+\Vbar{}~Turn away my eyes that they may not behold vanity: quicken me in thy way.
+\Rbar{}~Into thy testimonies.
+\Vbar{}~Glory be to the Father, and to the Son, and to the Holy Ghost.
+\Vbar{}~Incline\dots{}}
+
+\bigskip
+\gresetinitiallines{0}
+\gregorioscore{vr-ego-dixi}
+\newlength{\myhwidth}
+\settowidth{\myhwidth}{tib}
+\begin{nstabbing}
+\>\Rbar{}~Sana ánimam meam, quia peccávi \>\hspace{-\myhwidth}tibi.\\
+\end{nstabbing}
+
+\translation[]{\Vbar{}~I said: O Lord, be thou merciful to me.\\
+\Rbar{}~Heal my soul, for I have sinned against thee.}
+
+\bigskip
+\def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.48\linewidth}]{2}}
+\def\vlatin{Dóminus vobíscum.}
+\def\rlatin{Et cum spíritu tuo.}
+\def\vtranslation{The Lord be with you.}
+\def\rtranslation{And with thy spirit.}
+{\centering Collect.\par}
+\printvrwithtranslation{}
+
+\bigskip
+\emph{See proper of time.}
+
+\bigskip
+\printvrwithtranslation{}
+\bigskip
+
+\gresetinitiallines{0}
+\gregorioscore{vr-benedicamus-domino}
+\bigskip
+
+\def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
+\def\vlatin{Fidélium ánimæ per misericórdiam Dei requiéscant in pace.\hfill{}Amen.}
+\let\rlatin=\undefined
+\def\vtranslation{May the souls of the faithful departed through the mercy of God rest in peace.\hfill{}Amen.}
+\let\rtranslation=\undefined
+\printvrwithtranslation{} 
 }

@@ -54,7 +54,7 @@ do
 	cp -fu ${filename}${suffix}${suf2}.pdf ${filename}${suf2}-old.pdf
 
 	latexmk ${filename}${suffix}${suf2}.tex $latexmkopts
-	if [ $? -ne 0 ]
+	if [ $? -eq 0 ]
 	then
 		pdfcrop ${filename}${suffix}${suf2}.pdf ${filename}${suf2}-crop.pdf
 		cp -f ${filename}${suffix}${suf2}.pdf ${filename}${suf2}.pdf
