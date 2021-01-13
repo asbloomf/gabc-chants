@@ -3,20 +3,67 @@
 	\chapter{Advent}
 	\section{First Sunday of Advent}
 
-{\centering Hymn.\par}
+  {
+	  \def\printhymn{%
+		{\centering Hymn.\par}\label{hymn-advent}
 
-  \printgabc{1.}{}{N}{hy--nunc_sancte_nobis_(in_adventu)--solesmes_1961}
-  \bigskip
+	  	{\def\gabcfolder{.}
+	  	\printgabc{1.}{}{N}{hy--nunc_sancte_nobis_(in_adventu)--solesmes_1961}}
 
-  {\printterceantchaptercollect[../Advent1]{inc-Advent1}}
+		\bigskip
+	  }
+    \def\printshortresp{%
+    \label{shortresp-advent}%
+    {\def\gabcfolder{.}
+    \printgabc{Short}{Resp.}{V}{re--veni_ad_liberandum--solesmes}}
 
+    \translation[]{\Vbar{}~Come to my rescue O God, Lord of hosts.
+    \Rbar{}~Come\dots{}
+    \Vbar{}~Show us thy face, and we shall be saved.
+    \Rbar{}~O God, Lord of hosts.
+    \Vbar{}~Glory be to the Father, and to the Son, and to the Holy Ghost.
+    \Rbar{}~Come\dots{}
+    }
+
+    \bigskip
+    \gresetinitiallines{0}
+    \gregorioscore{vr-timebunt-gentes}
+    \let\myhwidth\relax
+    \let\myhhwidth\relax
+    \newlength{\myhwidth}
+    \settowidth{\myhwidth}{tu}
+    \newlength{\myhhwidth}
+    \settowidth{\myhhwidth}{n}
+    \addtolength{\myhhwidth}{-\myhwidth}
+    \def\myhspace{\hspace{1.4ex}}
+    \begin{nstabbing}
+    \>\Rbar{}~Et \myhspace{} omnes \myhspace{} reges \myhspace{} terræ \myhspace{} glóriam \>\hspace{\myhhwidth}tuam.
+    \end{nstabbing}
+
+    \translation[]{\Vbar{}~And the Gentiles shall fear thy name, O Lord.\\
+    \Rbar{}~And all the kings of the earth thy glory.}
+
+    \bigskip
+    }
+
+	  \printterce[../Advent1]{inc-Advent1}
+  }
+
+  \def\printhymn{
+  	\noindent\emph{Hymn}, page \pageref{hymn-advent}
+
+  	\medskip
+  }
+  \def\printshortresp{
+    \noindent\emph{Short Resp. \emph{Veni ad liberándum nos}, p.} \pageref{shortresp-advent}, \Vbar{}~Timébunt gentes. 
+  }
   \section{Second Sunday of Advent}
-  {\printterceantchaptercollect[../Advent2]{inc-Advent2-Vespers2}}
+  \printterce[../Advent2]{inc-Advent2-Vespers2}
 
   \section{Third Sunday of Advent}
-  {\printterceantchaptercollect[../Advent3]{inc-Advent3}}
+  \printterce[../Advent3]{inc-Advent3}
 
   \section{Fourth Sunday of Advent}
-  {\printterceantchaptercollect[../Advent4]{inc-Advent4}}
+  \printterce[../Advent4]{inc-Advent4}
 
 }

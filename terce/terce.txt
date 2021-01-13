@@ -22,15 +22,15 @@ page 334 3rd sunday
 	ant Jerusalem gaude p338 (2nd ant from vespers), chapter from vespers
 page 353 4th sunday
 	ant ecce veniet p357 (2nd ant from vespers), chapter from vespers
-page 358 christmas eve
+*page 358 christmas eve
 	ant, chapter, short resp, vv
-page 407 christmas
+*page 407 christmas
 	hymn, ant genuit puerpera regem p396 (2nd ant from lauds), chapter from lauds p400, short resp, vv
-page 433 sunday christmas octave
+*page 433 sunday christmas octave
 	ant same, chapter from vespers p437, short resp & vv same
 page 441 circumcision and octave
 	hymn same, ant quando natus es p443 (2nd ant from vespers), chapter of vespers p444, short resp & vv same
-page 445 holy name
+*page 445 holy name
 	hymn same, ant proper, chapter of vespers p452, short resp, vv
 page 458 epiphany
 	hymn, ant venit lumen tuum p463 (2nd ant from 2nd vespers), chapter of vespers p464, short resp, vv
@@ -42,8 +42,6 @@ page 504 sexagesima
 	ant, chapter of vespers p509
 page 511 quinquagesima
 	ant, chapter of vespers p516
-page 519 ash wednesday
-	hymn, ant, psalms, chapter, short resp, vv, blessing of ashes
 page 531 lent 1
 	hymn, ant, chapter of vespers p538
 page 545 lent 2
@@ -56,7 +54,7 @@ page 569 passion 1
 	hymn, ant, chapter of vespers p575
 page 579 passion 2
 	ant p582, chapter of vespers p604
-page 777 easter
+*page 777 easter
 	psalms of sunday without antiphon
 	ant haec dies p738
 	prayer Deus qui hodierna die p778

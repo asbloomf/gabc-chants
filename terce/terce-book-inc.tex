@@ -395,18 +395,25 @@
 
 		\deusinadjutorium{}
 
-		
+		\ifx\printhymn\undefined\else\printhymn\fi
 
-		\printgabc{Ant.}{\anttwolinetwo}{\anttwoinitial}{\anttwotex}
+		\printgabc{Ant.}{\anttwolinetwo}{\anttwoinitial}{\anttwotex .noEuouae}
 
 		\translation[]{\anttwotranslation}
 
+		% psalms
 
 		\printchapter{\chaptertext}{\chaptertranslation}
 
 		\medskip
 
+		\ifx\printshortresp\undefined\else\printshortresp\fi
+
+		% vr
+
 		\printcollect{\collect}{\collecttranslation}
+
+		% benedicamus domino
 	}
 }
 
