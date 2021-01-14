@@ -1,0 +1,7 @@
+Coil Bound Lilypond version
+142 pages
+cover size: 17.57 x 11.25
+
+Live Area: 8 x 10.5
+Trim Area: 8.5 x 11
+Doc Size: 8.625 x 11.25

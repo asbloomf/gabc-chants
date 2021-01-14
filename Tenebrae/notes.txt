@@ -1,0 +1,133 @@
+COVER
+-----
+
+105 pages
+cream -> * 0.0025
+white -> * 0.002252 = 0.23646
+
+width = 0.125 (bleed) + 8.5 (width) + 0.23646 (spine) + 8.5 + 0.125
+17.25 + 0.23646
+
+total width = 17.48646
+
+height just add two .125 bleeds, so 11 + .25 = 11.25
+
+safe zone is .125 inside the trim
+
+
+center of front page width
+.125 + 8.5 + 0.204932 + (8.5/2)
+=12.875 + 0.231956
+13.106956
+
+thirds
+top third is .125 + (11/6)
+1.9583333333333333333333333333333
+then just add (11/3)
+create
+9.2916666666666666666666666666667
+
+
+-\adjustbox{scale={1.8}{1}}{%
++\adjustbox{scale={1.85}{1},lap=.3pt}{%
+
+\adjustbox{scale={1.15}{1},lap=2pt}{%
+\grehepisemusbridge{j}{}{}%
+\grehepisemus{j}{0}{0}{j}%
+}%
+
+--- first, normalize text sizes
+antiphons large grefactor 17
+psalm text normalsize Latin & english (maybe english small)
+lectiones large latin, english normalsize
+responsories large grefactor 17
+
+change \translation to \translationcolumns for responsory translations and lessons in first nocturns
+
+
+-\adjustbox{scale={1.3}{1},lap=2pt}{%
++\adjustbox{scale={1.3}{1},lap=2.3pt}{%
+
+=\adjustbox{lap=1pt}   % remove a bit from the left
+=\adjustbox{lap=-1pt}  % remove a bit from the right
+
+-\adjustbox{scale={0.85}{1},trim=0.6pt 0pt}{%
++\adjustbox{scale={0.85}{1},trim=0.7pt 0pt}{%
+
+-\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}{%
++\adjustbox{scale={0.75}{1},trim=0.7pt 0pt}{%
+
+-\adjustbox{trim=2pt 0pt}{%
++\adjustbox{trim=2.5pt 0pt}{%
+=\adjustbox{trim=1pt 0pt}{%
+
+-\adjustbox{scale={1.3}{1},lap=4.5pt}{%
++\adjustbox{scale={1.25}{1},lap=5pt}{%
+
+=\adjustbox{lap=2pt}{%
+=\adjustbox{scale={1.8}{1}}{%
+
+-\adjustbox{scale={1.25}{1},lap=2.5pt}{%
++\adjustbox{scale={1.25}{1},lap=3pt}{%
+
+-\adjustbox{scale={1.2}{1},lap=1.5pt}{%
++\adjustbox{scale={1.2}{1},lap=1.7pt}{%
+
+-\adjustbox{scale={1.25}{1},lap=-0.5pt}{%
+
+-\adjustbox{scale={1.12}{1},lap=1.4pt}{%}
++\adjustbox{scale={1.08}{1},lap=1.2pt}{%
+
+-\adjustbox{scale={1.2}{1},lap=2.3pt}{%
++\adjustbox{scale={1.2}{1},lap=2.5pt}{%
+
+-\adjustbox{scale={1.1}{1},lap=1.2pt}{%
++\adjustbox{scale={1.1}{1},lap=1.5pt}{%
+
+
+
+
+maundy thursday 1st nocturn
+psalm 70 verse 8 - no flex in liber
+psalm 70: verse 8: no flex in liber: liber reads: mea semper : * tamquam...
+-in 1st verse this means change the flex to come from 12
+
+2nd nocturn
+psalm 71 punctum cavum in flex directly after accent
+
+3rd nocturn
+psalm 76 verse 3: no flex in liber
+psalm 76: verse 3: liber had no flex (mediant was where flex is)
+  verse 14: lower case r in redemisti
+
+lauds
+psalm 89 punctum cavum in flex directly after accent
+
+***********
+good friday - 2nd nocturn
+psalm 39 v19 - liber has a mistake
+***********
+
+***********
+3rd nocturn - famen is mistake in liber
+psalm 58 -v7,13,16 famem -> famen, v13, iP-SO crosses a line break, decide whether it should be ip-SO or i-PSO
+***********
+
+psalm 93 - v4, Effabuntur, et loquentur -> lose the comma
+           v5, add comma after Domine
+
+holy saturday 1st nocturn
+antiphon 3 - Caro mea has the wrong clef -> should be c3 not c4
+
+psalm 15 - v7 - INtelLEc-tum crosses line break, just bold the c I think
+
+psalm 23 - v7,9 - add some commas and also to the flex in the gabc
+                Attolite portas, principes, vestras, + et elevamini, portae ...
+
+3rd nocturn
+psalm 53 v5 diSPERDE unitalic the s
+
+lauds
+psalm 63 v9 Omnis HOmo - bold OM
+
+canticle of ezechias - verse 5 - add comma praecisa est, velut a ...

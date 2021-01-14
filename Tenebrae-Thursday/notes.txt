@@ -1,0 +1,56 @@
+\adjustbox{scale={1.3}{1},lap=2pt}{%  expand a bit and stretch over the right side
+\adjustbox{scale={1.3}{1},lap=2.3pt}{% expand from one note to stretch over half a diamond
+\adjustbox{scale={1.25}{1},lap=2.5pt}{%  just a little different
+\adjustbox{scale={1.2}{1},lap=2.7pt}{% this was over two notes expanded to two and a half
+\adjustbox{scale={1.2}{1},lap=1.7pt}{% this was to extend over one and a half diamond notes
+
+
+\adjustbox{scale={0.75}{1},trim=0.6pt 0pt}  % make it a bit smaller
+\adjustbox{scale={0.85}{1},trim=0.6pt 0pt}  % same thing but for double horizontal epizemas together
+
+% moving a set of horizontal epizemas over a descending line (only marked with two underscores, but to be over three notes)
+\adjustbox{trim=2pt 0pt}{% 2.7
+\grehepisemusbridge{k}{}{}%
+\grehepisemus{k}{12}{1}{k}%
+}%
+}%
+\greendofglyph{3}%
+\greglyph{\char 19}{h}{i}{6}{}{%
+\adjustbox{trim=1pt 0pt}{% 1.2
+\grehepisemus{k}{12}{0}{k}%
+}%
+
+
+% when above didn't work
+\adjustbox{scale={1.12}{1},lap=1.4pt}{%
+\grehepisemusbridge{k}{}{}%
+\grehepisemus{k}{12}{1}{k}%
+}%
+
+
+\adjustbox{lap=1pt}   % remove a bit from the left
+\adjustbox{lap=-1pt}  % remove a bit from the right
+\adjustbox{trim=2pt 0pt}  % trim off left & right edges
+
+
+3-28-2013
+go through all the psalms and check the flexes!
+nocturn 1 - 68,69,70
+
+nocturn 2 - 71,72,73
+
+nocturn 3 - 74,75,76
+
+lauds     - 50*,89,35,146
+
+page 772 - Thursday begins
+fixes that were applied to Friday
+-headers
+
+resp 3: check horizontal episemas
+        move * to next line with Cujus
+
+resp 4-6: check horizontal episemas
+resp 5-*Denariorum repeat
+
+resp 7: move * to next line with Venite
