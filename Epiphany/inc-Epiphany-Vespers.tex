@@ -22,10 +22,16 @@
 \newcommand{\antfiveinitial}{S}
 \newcommand{\antfivetranslation}{This star shineth as a flame of fire, and pointeth out God, the King of kings: the Wise Men saw it, and offered gifts unto the great King.}
 
-\newcommand{\hymn}{Crudelis Herodes}
 \newcommand{\hymnlinetwo}{3.}
-\newcommand{\hymninitial}{C}
-\newcommand{\hymntex}{hymn-CrudelisHerodes}
+\ifthenelse{\boolean{preurbanhymns}}{
+	\newcommand{\hymn}{Hostis Herodes}
+	\newcommand{\hymninitial}{H}
+	\newcommand{\hymntex}{hy--hostis_herodes--preurban}
+}{
+	\newcommand{\hymn}{Crudelis Herodes}
+	\newcommand{\hymninitial}{C}
+	\newcommand{\hymntex}{hymn-CrudelisHerodes}
+}
 \newcommand{\hymntranslation}{%
 \item Why, impious Herod, vainly fear
 That Christ the Saviour cometh here?

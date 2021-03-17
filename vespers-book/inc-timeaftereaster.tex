@@ -21,7 +21,12 @@
 
 \newcommand{\printhymnnote}{
     \smallskip
-    \noindent\printnote{Hymn.~\emph{Ad Régias Agni Dapes}, page \pageref{hymn-adregiasagnidapes}.
+    \ifthenelse{\boolean{preurbanhymns}}{
+        \def\easterhymntitle{Ad cœnam Agni próvidi}
+    }{
+        \def\easterhymntitle{Ad Régias Agni Dapes}
+    }
+    \noindent\printnote{Hymn.~\emph{\easterhymntitle}, page \pageref{hymn-adregiasagnidapes}.
     \Vbar~\emph{Mane nobíscum}, page \pageref{vr-manenobiscum}.}
 }
 
@@ -160,6 +165,11 @@
 \benedicamusdomino{}
 }
 
+\ifthenelse{\boolean{preurbanhymns}}{
+    \def\ascensionhymntitle{Jesu nostra redémptio}
+}{
+    \def\ascensionhymntitle{Salútis humánæ Sator}
+}
 {
 \section{Ascension of Our Lord}
 \label{ascension}
@@ -211,7 +221,7 @@
 %\let\printhymnnote=\undefined
 \renewcommand{\printhymnnote}{
     \medskip
-    \noindent\printnote{Hymn.~\emph{Salútis humánæ Sator}, page \pageref{hymn-salutishumanaesator}.}
+    \noindent\printnote{Hymn.~\emph{\ascensionhymntitle}, page \pageref{hymn-salutishumanaesator}.}
     \medskip
     \def\vrlinebreak{T}
     \label{vr-sundayafterascension}

@@ -47,7 +47,12 @@
 	{
 	\def\gabcfolder{../Advent}
 	\def\prehymn{\vspace{-0.35\baselineskip}}
-	\printhymn{\oldstylenums{4.}}{C}{hymn-CreatorAlmeSiderum}
+	\ifthenelse{\boolean{preurbanhymns}}{
+		\def\adventhymntex{hy--conditor_alme_siderum--preurban}
+	}{
+		\def\adventhymntex{hymn-CreatorAlmeSiderum}
+	}
+	\printhymn{\oldstylenums{4.}}{C}{\adventhymntex}
 	{\item Creator of the stars of night
 	Thy people's everlasting light,
 	Jesu, Redeemer, save us all,

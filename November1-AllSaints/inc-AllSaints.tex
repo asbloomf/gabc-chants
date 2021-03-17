@@ -28,8 +28,13 @@
 \newcommand{\chaptertranslation}{And I saw another angel ascending from the rising of the sun, having the sign of the living God; and he cried with a loud voice to the four angels, to whom it was given to hurt the earth and the sea, saying: Hurt not the earth, nor the sea, nor the trees, till we sign the servants of our God on their foreheads.}
 
 \newcommand{\hymnlinetwo}{8.}
-\newcommand{\hymntex}{hy--placare_christe_servulis--solesmes}
-\newcommand{\hymninitial}{P}
+\ifthenelse{\boolean{preurbanhymns}}{
+	\newcommand{\hymntex}{hy--christe_redemptor_omnium_conserva--preurban}
+	\newcommand{\hymninitial}{C}
+}{
+	\newcommand{\hymntex}{hy--placare_christe_servulis--solesmes}
+	\newcommand{\hymninitial}{P}
+}
 \newcommand{\hymntranslation}{
 \item O Christ, Thy guilty people spare!
 Lo, kneeling at Thy gracious throne,

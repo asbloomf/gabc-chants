@@ -1,5 +1,9 @@
 \def\hymnlinetwo{\oldstylenums{2.}}
-\def\hymntex{hymn-AudiBenigneConditor}
+\ifthenelse{\boolean{preurbanhymns}}{
+	\def\hymntex{hy--audi_benigne_conditor--preurban}
+}{
+	\def\hymntex{hymn-AudiBenigneConditor}
+}
 \def\hymninitial{A}
 \def\hymntranslation{\item Thou loving Maker of mankind, before thy throne we pray and weep; oh, strengthen us with grace divine, duly this sacred Lent to keep.
 \item Searcher of hearts! thou dost discern our ills, and all our weakness know: again to thee with tears we turn; again to us thy mercy show.

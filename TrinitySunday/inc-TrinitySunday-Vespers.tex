@@ -27,8 +27,13 @@
 \newcommand{\chaptertranslation}{O The depth of the riches of the wisdom and of the knowledge of God!  How incomprehensible are His judgments, and how unsearchable His ways!}
 
 \newcommand{\hymnlinetwo}{8.}
-\newcommand{\hymntex}{Hymn-JamSolReceditIgneus}
-\newcommand{\hymninitial}{J}
+\ifthenelse{\boolean{preurbanhymns}}{
+	\newcommand{\hymntex}{hy--o_lux_beata_trinitas--preurban}
+	\newcommand{\hymninitial}{O}
+}{
+	\newcommand{\hymntex}{Hymn-JamSolReceditIgneus}
+	\newcommand{\hymninitial}{J}
+}
 \newcommand{\hymntranslation}{
 \item Now the fiery sun declines:
 Thou, the everlasting Light,

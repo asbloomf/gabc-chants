@@ -26,9 +26,15 @@
 \newcommand{\chaptertext}{\dropcap{latin}{Vidi civitátem sanctam Jerúsalem} \textbf{no}\-vam,~\dag{} descendéntem de cæ\-\emph{lo a} \textbf{De}\-o,~* parátam sicut sponsam ornátam viro \textbf{su}o.}
 \newcommand{\chaptertranslation}{I saw the holy city, New Jerusalem, coming down from God out of heaven, prepared as a Bride adorned for her husband.}
 
-\newcommand{\hymnlinetwo}{1.}
-\newcommand{\hymntex}{Hymn-CaelestisUrbsJerusalem}
-\newcommand{\hymninitial}{C}
+\ifthenelse{\boolean{preurbanhymns}}{
+	\newcommand{\hymnlinetwo}{4.}
+	\newcommand{\hymntex}{hy--urbs_jerusalem_beata--preurban}
+	\newcommand{\hymninitial}{U}
+}{
+	\newcommand{\hymnlinetwo}{1.}
+	\newcommand{\hymntex}{Hymn-CaelestisUrbsJerusalem}
+	\newcommand{\hymninitial}{C}
+}
 \newcommand{\hymntranslation}{
 \item Thou heavenly, new Jerusalem,
 Vision of peace in prophet's dream!

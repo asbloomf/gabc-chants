@@ -34,7 +34,11 @@
 \newcommand{\chaptertranslation}{Blessed be the God and Father of our Lord Jesus Christ, the Father of mercies and the God of all comfort, who comforteth us in all our tribulation.}
 
 \newcommand{\hymnlinetwo}{8.}
-\newcommand{\hymntex}{hymn-LucisCreatorOptime}
+\ifthenelse{\boolean{preurbanhymns}}{
+	\newcommand{\hymntex}{hy--lucis_creator_optime--preurban}
+}{
+	\newcommand{\hymntex}{hymn-LucisCreatorOptime}
+}
 \newcommand{\hymninitial}{L}
 \newcommand{\hymntranslation}{
 \item O blest Creator of the Light!

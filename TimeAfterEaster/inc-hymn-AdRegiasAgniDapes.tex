@@ -1,5 +1,9 @@
 \def\hymnlinetwo{\oldstylenums{8.}}
-\def\hymntex{hymn-AdRegiasAgniDapes}
+\ifthenelse{\boolean{preurbanhymns}}{
+	\def\hymntex{hy--ad_coenam--preurban}
+}{
+	\def\hymntex{hymn-AdRegiasAgniDapes}
+}
 \def\hymninitial{A}
 \def\hymntranslation{\item At the Lamb's high feast we sing
 praise to our victorious King,

@@ -2,7 +2,11 @@
 \newcommand{\chaptertranslation}{Give ear, ye islands, and hearken, ye people from afar.  The Lord hath called me from the womb, from the bowels of my mother He hath been mindful of my name.}
 
 \newcommand{\hymnlinetwo}{2.}
-\newcommand{\hymntex}{Hymn-UtQueantLaxis}
+\ifthenelse{\boolean{preurbanhymns}}{
+	\newcommand{\hymntex}{hy--ut_queant_laxis--preurban}
+}{
+	\newcommand{\hymntex}{Hymn-UtQueantLaxis}
+}
 \newcommand{\hymninitial}{U}
 \newcommand{\hymntranslation}{
 \item O let thy power, holy John, now loosen

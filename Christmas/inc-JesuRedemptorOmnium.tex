@@ -1,6 +1,11 @@
 \def\hymnlinetwo{\oldstylenums{1.}}
-\def\hymntex{hymn-JesuRedemptorOmnium}
-\def\hymninitial{J}
+\ifthenelse{\boolean{preurbanhymns}}{
+	\def\hymntex{hy--christe_redemptor_omnium_ex_patre--preurban}
+	\def\hymninitial{C}
+}{
+	\def\hymntex{hymn-JesuRedemptorOmnium}
+	\def\hymninitial{J}
+}
 \def\hymntranslation{\item Jesus, Redeemer of the world,
 Begotten ere the dawn of light,
 Wast of the Father's glory born,

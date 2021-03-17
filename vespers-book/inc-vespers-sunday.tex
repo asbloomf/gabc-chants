@@ -42,7 +42,7 @@
 			\normalsize
 			\oldneedspace{5\baselineskip}
 			\gregorioscore{\gabcfolder/\hymntex}
-			\ifthenelse{\boolean{birmingham} \or \boolean{onlysundaycommon}}{}{
+			\ifthenelse{\boolean{birmingham} \or \boolean{onlysundaycommon} \or \boolean{preurbanhymns}}{}{
 				\bigskip
 				\printvrdirigaturshort{}
 		        \input{\gabcfolder/inc-hymn-LucisCreatorOptime2}
@@ -75,11 +75,15 @@
 	    
     {
     	\normalsize%\vspace{0pt minus 20pt}
-		\ifthenelse{\boolean{birmingham}}{
-			%\oldneedspace{20\baselineskip}
-		}{
-    		\oldneedspace{5\baselineskip}
-    	}
+    	\ifthenelse{\boolean{preurbanhymns}}{
+    		\oldneedspace{12\baselineskip}
+    	}{
+			\ifthenelse{\boolean{birmingham}}{
+				%\oldneedspace{20\baselineskip}
+			}{
+	    		\oldneedspace{5\baselineskip}
+	    	}
+	    }
       \selectlanguage{american}\vspace{-\baselineskip}
       \begin{multicols}{2}
       \begin{psalmverses}

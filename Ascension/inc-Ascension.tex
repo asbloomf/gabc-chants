@@ -27,8 +27,13 @@
 \newcommand{\chaptertranslation}{The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, until the day on which, giving commandments by the Holy Ghost to the Apostles whom He had chosen, He was taken up.}
 
 \def\hymnlinetwo{\oldstylenums{4.}}
-\def\hymntex{hymn-SalutisHumanaeSator}
-\def\hymninitial{S}
+\ifthenelse{\boolean{preurbanhymns}}{
+	\def\hymntex{hy--jesu_nostra--preurban}
+	\def\hymninitial{J}
+}{
+	\def\hymntex{hymn-SalutisHumanaeSator}
+	\def\hymninitial{S}
+}
 \def\hymntranslation{\item O Thou pure Light of souls that love!
 True joy of every human breast!
 Sower of life's immortal seed!
