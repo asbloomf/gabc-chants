@@ -78,11 +78,14 @@
   \else
     \setcounter{mydccounter}{\mypos - 1}
   \fi
-  \lettrine{\StrLeft{#2}{1}}%
-     {\StrMid{#2}{2}{\themydccounter}}%
+  \StrLeft{#2}{1}[\asbdropcapletter]
+  \StrMid{#2}{2}{\themydccounter}[\asbdropcapword]
+  \StrGobbleLeft{#2}{\mypos}[\asbdropcappar]
+  \lettrine{\asbdropcapletter}%
+     {\asbdropcapword}%
   {%
     \selectlanguage{#1}
-    \StrGobbleLeft{#2}{\mypos} #3
+    \asbdropcappar #3
   }%
 }
 \newcommand{\tenebraelesson}[4][\columnratio{0.56}]{%
@@ -169,8 +172,8 @@
     \ifnum#1=72
       \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.42\linewidth}]{2}}
     \fi
-    \ifnum#1=73
-      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.431\linewidth}]{2}}
+    \ifnum#1=73 % was 0.431
+      \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.43\linewidth}]{2}}
     \fi
     \ifnum#1=74
       \def\beginpsalmcols{\begin{parcolumns}[rulebetween,colwidths={1=0.4525\linewidth}]{2}}
@@ -226,13 +229,13 @@
 
 \ifbook{
 \cfoot{}
-\lfoot[\thepage]{}
-\rfoot[]{\thepage}
+\lfoot[\garamond{\thepage}]{}
+\rfoot[]{\garamond{\thepage}}
 }
 \ifnotbook{
 \cfoot{%
   \ifnum\thepage>1
-    \thepage
+    \garamond{\thepage}
   \fi
 }
 }
