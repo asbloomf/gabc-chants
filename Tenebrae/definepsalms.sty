@@ -267,6 +267,19 @@ five%
 
 \def\prepsalmverses{\medskip}
 
+\newcommand{\printpsalmrecto}[1]{
+  % 1 psalm num
+  {\large \hfill Psalm #1, \emph{recto tono}\hfill}
+
+  \selectlanguage{latin}
+  \begin{multicols}{2}%
+  \begin{psalmverses}
+  \vspace{-\baselineskip}%
+  \input{../psalms/no-gloria-patri/psalm#1-verses-la}
+  \end{psalmverses}
+  \end{multicols}
+}
+
 \newcommand{\printpsalm}[5]{
 % TODO: split this into separate commands for antiphon and psalm
 % top line either (1-5). Ant. or At Bened. or At Magn.

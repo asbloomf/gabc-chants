@@ -8,6 +8,10 @@
 
 \hyphenation{mi-se-ri-cór-dia}
 
+\newcommand*\cleartoleftpage{%
+  \clearpage
+  \ifodd\value{page}\hbox{}\newpage\fi
+}
 
 %\let\oldVbar=\Vbar{}%\def\Vbar{\oldVbar\hspace*{-2pt}}
 %\let\oldRbar=\Rbar
@@ -285,7 +289,8 @@
 \cleardoublepage
 \thispagestyle{empty}
 \gdef\heading{#2 At \officehour}
-\begin{center}{\addfontfeature{Numbers=Lining}%
+%\begin{center}
+{\addfontfeature{Numbers=Lining}%
 \thispagestyle{empty}
 \vspace*{\stretch{1}}
 \Huge \textsc{#2}
@@ -295,8 +300,12 @@
 \pagebreak
 \thispagestyle{empty}
 \vspace*{-25pt}
-\large\textsc{At Matins}
-}\end{center}
+\large\noindent\hfil\textsc{At Matins}\hfil
+
+\vspace{-4pt}\noindent{Pater noster. Ave Maria. Credo. \emph{in silence.}}
+
+\vspace{4pt}\noindent\hfil\textsc{In the 1st Nocturn}\hfil
+}%\end{center}
 %\vspace{-2ex}
 %\bigskip
 
@@ -304,7 +313,6 @@
 
 \gdef\officehour{Matins}
 \gdef\matinsnocturn{1st Nocturn}
-\writeheading[#1]{In the 1st Nocturn}
 }
 
 \def\nogloriapatri{T}
