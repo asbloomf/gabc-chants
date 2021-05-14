@@ -2,7 +2,9 @@
 	\label{advent}
 	\chapter{Advent}
 	\section{First Sunday of Advent}
-
+  \def\printbenedicamusdomino{
+    \noindent\emph{Benedicamus Domino}, p. \pageref{benedicamus-domino-sunday}.
+  }
   {
 	  \def\printhymn{%
 		{\centering Hymn.\par}\label{hymn-advent}
@@ -26,7 +28,7 @@
     }
 
     \bigskip
-    \gresetinitiallines{0}
+    \gresetinitiallines{0}\label{vr-advent}
     \gregorioscore{vr-timebunt-gentes}
     \let\myhwidth\relax
     \let\myhhwidth\relax
@@ -46,6 +48,18 @@
     \bigskip
     }
 
+    \def\printcollectrefs{%
+      \def\dotting{\hfill%\leaders\hbox to 1em{\hfil.\hfil}\hfill
+        }%
+      \begin{multicols}{2}%
+      \noindent{}1st Sunday of Advent,\dotting \emph{below}\\
+      2nd Sunday of Advent,\dotting \emph{p.~\pageref{advent2-collect}}\\
+      3rd Sunday of Advent,\dotting \emph{p.~\pageref{advent3-collect}}\\
+      4th Sunday of Advent,\dotting \emph{p.~\pageref{advent4-collect}}
+      \end{multicols}%
+      \smallskip
+    }
+
 	  \printterce[../Advent1]{inc-Advent1}
   }
 
@@ -55,15 +69,18 @@
   	\medskip
   }
   \def\printshortresp{
-    \noindent\emph{Short Resp. \emph{Veni ad liberándum nos}, p.} \pageref{shortresp-advent}, \Vbar{}~Timébunt gentes. 
+    \noindent\emph{Short Resp. \emph{Veni ad liberándum nos}}, p. \pageref{shortresp-advent}, \Vbar{}~Timébunt gentes, p. \pageref{vr-advent}.
   }
   \section{Second Sunday of Advent}
+  \def\collectlabel{\label{advent2-collect}}
   \printterce[../Advent2]{inc-Advent2-Vespers2}
 
   \section{Third Sunday of Advent}
+  \def\collectlabel{\label{advent3-collect}}
   \printterce[../Advent3]{inc-Advent3}
 
   \section{Fourth Sunday of Advent}
+  \def\collectlabel{\label{advent4-collect}}
   \printterce[../Advent4]{inc-Advent4}
 
 }

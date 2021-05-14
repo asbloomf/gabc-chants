@@ -42,8 +42,8 @@
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween]{2}}
 \def\endpsalmcols{\end{parcolumns}}
 \newcommand{\printpsalmtitle}[1]{%
-    {\addfontfeature{Numbers=Lining}\centering Psalm #1\par}
-  }
+  {\addfontfeature{Numbers=Lining}\centering Psalm #1\\}%
+}
 
 \newcommand{\printpsalmwithtranslation}[3]{
 	% #1 psalm number
@@ -151,6 +151,7 @@
     \greseteolcustos{auto}
   }
 
+  \vspace{-\baselineskip}
   \setlength{\columnsep}{18pt}
   \setlength{\columnseprule}{.4pt}
   \selectlanguage{latin}
@@ -158,16 +159,19 @@
   \begin{psalmverses}[1]
   \input{psalms/Psalm118.3-#1-verses}
   \end{psalmverses}
+  %\medskip
   \printpsalmtitle{118. IV.}
-  \vspace{-0.8\baselineskip}
   \begin{psalmverses}
   \input{psalms/Psalm118.4-#1-verses}
   \end{psalmverses}
+  %\medskip
   \printpsalmtitle{118. V.}
-  \vspace{-0.8\baselineskip}
   \begin{psalmverses}
   \input{psalms/Psalm118.5-#1-verses}
   \end{psalmverses}
+  \setlength{\parindent}{6ex}
+
+  \emph{Repeat antiphon}
   \end{multicols}
 }
 \newcommand{\printtercepsalmstranslation}{
@@ -176,17 +180,16 @@
   \selectlanguage{american}
   \begin{multicols}{2}
   \printpsalmtitle{118. III.}
-  \vspace{-0.5\baselineskip}
   \begin{psalmverses}
   \input{psalms/Psalm118.3-verses-en}
   \end{psalmverses}
+  \medskip
   \printpsalmtitle{118. IV.}
-  \vspace{-0.5\baselineskip}
   \begin{psalmverses}
   \input{psalms/Psalm118.4-verses-en}
   \end{psalmverses}
+  \medskip
   \printpsalmtitle{118. V.}
-  \vspace{-0.5\baselineskip}
   \begin{psalmverses}
   \input{psalms/Psalm118.5-verses-en}
   \end{psalmverses}
@@ -194,7 +197,7 @@
 }
 
 {
-  \label{advent}
+  \label{sunday}
   \chapter{Sunday at Terce}
   \section{Sunday at Terce throughout the year}
 
@@ -203,6 +206,8 @@
   \bigskip
 
   {\centering Hymn.\par}
+
+  {\emph{In Advent,} p. \pageref{hymn-advent}\par}
 
   {\centering 1.~On Ordinary Sundays.\par}
 
@@ -258,9 +263,10 @@ Amen.
 
 % print antiphon
 %    \printgabc[\preant]{\antlineone}{\antlinetwo}{\antinitial}{\anttex}
+  \pagebreak
   \printgabc{Ant.}{2. D}{A}{an--alleluia._(sund._at_terce)--solesmes}
 % print translation
-  \translation[]{Alleluia, Lead me into the path of thy commandments, alleluia, alleluia.}
+  %\translation[]{Alleluia, Lead me into the path of thy commandments, alleluia, alleluia.}
 
 \bigskip
 \printchapternew{1. John 4.}{Deus cáritas}{est~:~\dag{} et qui manet in caritáte, in Deo manet,~* et Deus in eo.}{God is charity: and he that abideth in charity, abideth in God, and God in him.}
@@ -303,7 +309,7 @@ Amen.
 \printvrwithtranslation{}
 \bigskip
 
-\gresetinitiallines{0}
+\gresetinitiallines{0}\label{benedicamus-domino-sunday}
 \gregorioscore{vr-benedicamus-domino}
 \bigskip
 

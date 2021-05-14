@@ -18,6 +18,7 @@
 \usepackage{amsfonts}
 \usepackage{refcount}
 \usepackage{metalogo}
+\usepackage{enumitem}
 %\nofiles
 %\includeonly{inc-grassi}
 \LetLtxMacro{\oldnth}{\nth}
@@ -115,10 +116,11 @@
 	\ifx\printcollectheading\undefined\def\printcollectheading{T}\fi
 	\if\printcollectheading T
 	\oldneedspace{3\baselineskip}
-	\medskip
+	%\smallskip
 	{\centering\large Collect.\par}
-	\smallskip
+	%\smallskip
 	\fi
+	\ifx\printcollectrefs\undefined\else\printcollectrefs\fi
 	\begincollectcols
 	\sloppy
 	\prayer{#1}{#2}
@@ -401,7 +403,7 @@
 
 		\translation[]{\anttwotranslation}
 
-		% psalms
+		\printtercepsalms{\anttwotoneendexpanded}
 
 		\printchapter{\chaptertext}{\chaptertranslation}
 
@@ -411,9 +413,12 @@
 
 		% vr
 
+		\ifx\collectlabel\undefined\else\collectlabel\fi
 		\printcollect{\collect}{\collecttranslation}
 
-		% benedicamus domino
+		\medskip
+
+		\ifx\printbenedicamusdomino\undefined\else\printbenedicamusdomino\fi
 	}
 }
 
