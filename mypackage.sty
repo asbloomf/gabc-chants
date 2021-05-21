@@ -311,16 +311,20 @@
 \newcounter{vcounter}
 \newenvironment{psalmverses}[1][0]{
 % 1 - number to start on
+\setlist{nosep}
 \begin{list}{\arabic{vcounter}.}{%
 %\setlength\baselineskip{0pt}
 \setlength\itemsep{1pt}%
 \usecounter{vcounter}%
 \setlength\parsep{0pt}%
+\setlength\topsep{0pt}%
+\setlength\partopsep{0pt}%
+%\setlength\parskip{0pt}%
 \setlength\labelwidth{50pt}\setlength\leftmargin{0pt}\setlength\itemindent{6ex}}%
-\setlength{\parfillskip}{0pt plus\dimexpr\linewidth-2\parindent}
+%\setlength{\parfillskip}{0pt plus\dimexpr\linewidth-2\parindent}
 \setcounter{vcounter}{#1}%
 }{\ifx\undefined\useparacol%
-\vspace{-12pt}%
+%\vspace{-12pt}%
 \fi%
 \end{list}}
 

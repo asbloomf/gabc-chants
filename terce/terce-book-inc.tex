@@ -397,14 +397,19 @@
 
 		\deusinadjutorium{}
 
-		\ifx\printhymn\undefined\else\printhymn\fi
+		\ifx\printhymn\undefined%
+	      \noindent\emph{Hymn}, page \pageref{hymn-sunday}
+
+    	  \medskip
+		\else%
+		  \printhymn
+		\fi
 
 		\printgabc{Ant.}{\anttwolinetwo}{\anttwoinitial}{\anttwotex .noEuouae}
 
 		\translation[]{\anttwotranslation}
 
 		\printtercepsalms{\anttwotoneendexpanded}
-
 		\printchapter{\chaptertext}{\chaptertranslation}
 
 		\medskip
@@ -412,8 +417,9 @@
 		\ifx\printshortresp\undefined\else\printshortresp\fi
 
 		% vr
+		\medskip
 
-		\ifx\collectlabel\undefined\else\collectlabel\fi
+		\ifx\collectlabel\undefined\else\collectlabel\let\collectlabel=\undefined\fi
 		\printcollect{\collect}{\collecttranslation}
 
 		\medskip

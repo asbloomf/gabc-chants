@@ -150,6 +150,7 @@ five%
 \expandafter\edef\csname psalmpart\antnum\endcsname{\ifx#1\undefined\else .#1\fi}
 \expandafter\edef\csname psalm\antnum texbeg\endcsname{../psalms/Psalm#3-\csname psalm\antnum tone\endcsname}
 %\errmessage{\csname psalm\antnum texbeg\endcsname}
+\expandafter\edef\csname ant\antnum toneendexpanded\endcsname{\csname psalm\antnum tone\endcsname\expandedend}
 \expandafter\edef\csname psalm\antnum tex\endcsname{\csname psalm\antnum texbeg\endcsname\expandedend\ifx\psalmbeginversetwo\undefined\else\if\psalmbeginversetwo T-verse2\fi\fi\altclef}
 \expandafter\edef\csname psalm\antnum versestex\endcsname{%
 \csname psalm\antnum texbeg\endcsname\nostarend-verses\ifx\psalmbeginversetwo\undefined\else\if\psalmbeginversetwo T2\fi\fi
