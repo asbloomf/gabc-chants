@@ -22,6 +22,9 @@ page 334 3rd sunday
 	ant Jerusalem gaude p338 (2nd ant from vespers), chapter from vespers
 page 353 4th sunday
 	ant ecce veniet p357 (2nd ant from vespers), chapter from vespers
+
+***
+Christmas season
 *page 358 christmas eve
 	ant, chapter, short resp, vv
 *page 407 christmas
@@ -36,6 +39,11 @@ page 458 epiphany
 	hymn, ant venit lumen tuum p463 (2nd ant from 2nd vespers), chapter of vespers p464, short resp, vv
 page 470 holy family
 	hymn from epiphany but with doxology "Jesu tuis obediens" p269, ant Dixit Mater Jesu p474 (2nd ant 2nd vespers), chapter p475 (2nd vespers), short resp, vv
+
+Sundays after Epiphany
+just collect
+
+Lent
 page 497 septuagesima
 	ant, chapter of vespers p502
 page 504 sexagesima
@@ -49,11 +57,13 @@ page 545 lent 2
 page 552 lent 3
 	ant, chapter of vespers p557
 page 559 lent 4
-	ant, chapetr of vespers p564
+	ant, chapter of vespers p564
 page 569 passion 1
 	hymn, ant, chapter of vespers p575
 page 579 passion 2
 	ant p582, chapter of vespers p604
+	
+Easter
 *page 777 easter
 	psalms of sunday without antiphon
 	ant haec dies p738
@@ -73,6 +83,9 @@ page 846 ascension
 	hymn, ant Cumque p851 (2nd of vespers), chapter of vespers p851, short resp, vv
 page 854 sunday after ascension
 	same hymn, same ant, chapter of vespers p857, same vv
+
+***
+Pentecost
 page 878 pentecost
 	hymn p885 for whole octave
 	ant Spiritus Domini p884 (2nd of vespers)
@@ -96,3 +109,7 @@ page 969 sacred heart
 	short resp, vv
 page 980 sunday after
 	chapter of vespers p985, short resp from feast
+
+***
+Time after pentecost
+just collect

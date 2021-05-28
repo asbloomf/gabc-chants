@@ -170,8 +170,10 @@
   \input{psalms/Psalm118.5-#1-verses}
   \end{psalmverses}
   \setlength{\parindent}{6ex}
+  \IfStrEq{#1}{no-tone}{}{%if not no-tone
 
-  \emph{Repeat antiphon}
+    \emph{Repeat antiphon.}%
+  }
   \end{multicols}
 }
 \newcommand{\printtercepsalmstranslation}{
@@ -207,7 +209,20 @@
 
   {\centering Hymn.\par}\label{hymn-sunday}
 
-  {\emph{In Advent,} p. \pageref{hymn-advent}\par}
+  \def\dotting{\hfill%\leaders\hbox to 1em{\hfil.\hfil}\hfill
+    }%
+  \begin{multicols}{2}%
+  \noindent{}In Advent,\dotting \emph{p.~\pageref{hymn-advent}}\\
+  Christmas,\dotting \emph{p.~\pageref{hymn-christmas}}\\
+  Epiphany,\dotting \emph{p.~\pageref{hymn-epiphany}}\\
+  In Lent,\dotting \emph{p.~\pageref{hymn-lent}}\\
+  In Passiontide,\dotting \emph{p.~\pageref{hymn-passiontide}}\\
+  In Paschaltide,\dotting \emph{p.~\pageref{hymn-paschaltide}}\\
+  Ascension,\dotting \emph{p.~\pageref{hymn-ascension}}\\
+  Pentecost,\dotting \emph{p.~\pageref{hymn-pentecost}}\\
+  Corpus Christi,\dotting \emph{p.~\pageref{hymn-corpus-christi}}\\
+  Sacred Heart,\dotting \emph{p.~\pageref{hymn-sacred-heart}}
+  \end{multicols}%
 
   {\centering 1.~On Ordinary Sundays.\par}
 
@@ -271,7 +286,7 @@ Amen.
 \bigskip
 \printchapternew{1. John 4.}{Deus cáritas}{est~:~\dag{} et qui manet in caritáte, in Deo manet,~* et Deus in eo.}{God is charity: and he that abideth in charity, abideth in God, and God in him.}
 
-\bigskip
+\bigskip\label{shortresp-sunday}
 \printgabc{Short}{Resp.}{I}{re--inclina_cor_meum--solesmes}
 
 \translation[]{\Vbar{}~Incline my heart into thy testimonies.
@@ -281,7 +296,7 @@ Amen.
 \Vbar{}~Glory be to the Father, and to the Son, and to the Holy Ghost.
 \Vbar{}~Incline\dots{}}
 
-\bigskip
+\bigskip\label{vr-sunday}
 \gresetinitiallines{0}
 \gregorioscore{vr-ego-dixi}
 \newlength{\myhwidth}
@@ -303,7 +318,18 @@ Amen.
 \printvrwithtranslation{}
 
 \bigskip
-\emph{See proper of time.}
+    \def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
+    \printnote{Advent,\dotting \emph{p.~\pageref{advent1-collect} to \pageref{advent4-collect}}}
+
+    \printnote{Christmas,\dotting \emph{p.~\pageref{christmas-eve-collect} to \pageref{holy-family-collect}}}
+
+    \printnote{Time after Epiphany,\dotting \emph{p.~\pageref{epiphany2-collect} to \pageref{epiphany6-collect}}}
+
+    \printnote{Septuagesima \& Lent,\dotting \emph{p.~\pageref{septuagesima-collect} to \pageref{passion2-collect}}}
+
+    \printnote{Easter to Pentecost,\dotting \emph{p.~\pageref{easter1-collect} to \pageref{pentecost-collect}}}
+
+    \printnote{Time after Pentecost,\dotting \emph{p.~\pageref{pentecost2-collect} to \pageref{pentecost24-collect}}}
 
 \bigskip
 \printvrwithtranslation{}

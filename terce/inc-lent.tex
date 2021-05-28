@@ -1,0 +1,168 @@
+{
+	\label{septuagesima}
+	\chapter{Septuagesima \& Lent}
+  \def\printbenedicamusdomino{
+    \noindent\emph{Benedicamus Domino}, p. \pageref{benedicamus-domino-sunday}.
+  }
+  \section{Septuagesima}
+  \printterce{inc-septuagesima}{septuagesima}
+
+  \section{Sexagesima}
+  \printterce{inc-sexagesima}{sexagesima}
+
+  \section{Quinquagesima}
+  \printterce{inc-quinquagesima}{quinquagesima}
+
+  {
+    \newcommand{\printrefs}[1]{%
+      \def\dotting{\hfill%\leaders\hbox to 1em{\hfil.\hfil}\hfill
+        }%
+      \begin{multicols}{2}%
+      \noindent{}1st Sunday of Lent,\dotting \emph{below}\\
+      2nd Sunday of Lent,\dotting \emph{p.~\pageref{lent2-#1}}\\
+      3rd Sunday of Lent,\dotting \emph{p.~\pageref{lent3-#1}}\\
+      4th Sunday of Lent,\dotting \emph{p.~\pageref{lent4-#1}}
+      \end{multicols}%
+      \smallskip
+    }
+
+	  \def\printhymn{
+
+		  {\centering Hymn.\par}\label{hymn-lent}
+
+	  	{\def\gabcfolder{.}
+	  	\printgabc{1.}{}{N}{hy--nunc_sancte_nobis_(in_quadragesima)--solesmes_1961}}
+
+      \printrefs{ant}
+		  \bigskip
+	  }
+
+    \def\printshortresp{%
+    \label{shortresp-lent}%
+    {\def\gabcfolder{.}
+    \printgabc{Short}{Resp.}{I}{re--ipse_liberavit--solesmes}}
+
+    \translation[]{\Vbar{}~For he hath delivered me from the snare of the hunters.
+    \Rbar{}~For he hath\dots{}
+    \Vbar{}~And from the sharp word.
+    \Rbar{}~From the snare of the hunters.
+    \Vbar{}~Glory be to the Father, and to the Son, and to the Holy Ghost.
+    \Rbar{}~For he hath\dots{}
+    }
+
+    \bigskip
+    \gresetinitiallines{0}\label{vr-lent}
+    \gregorioscore{vr-scapulis-suis}
+    \let\myhwidth\relax
+    \let\myhhwidth\relax
+    \newlength{\myhwidth}
+    \settowidth{\myhwidth}{speráb} % text in last word before last vowel of response
+    \newlength{\myhhwidth}
+    \settowidth{\myhhwidth}{b} % text in last syllable before vowel of versicle
+    \addtolength{\myhhwidth}{-\myhwidth}
+    \def\myhspace{\hspace{1ex}}
+    \begin{nstabbing}
+    %\>\Rbar{}~Et \myhspace{} omnes \myhspace{} reges \myhspace{} terræ \myhspace{} glóriam \>\hspace{\myhhwidth}tuam.
+    \>\Rbar{}~Et \myhspace{} sub \myhspace{} pennis \myhspace{} ejus \>\hspace{\myhhwidth}sperábis.
+    \end{nstabbing}
+
+    \translation[]{\Vbar{}~He will overshadow thee with his shoulders.\\
+    \Rbar{}~And under his wings thou shalt trust.}
+
+    \printrefs{collect}
+    \bigskip
+    }
+
+    \section{First Sunday of Lent}
+	  \printterce{inc-Lent1}{lent1}
+  }
+
+  \def\printhymn{%
+  	, \emph{Hymn}, page \pageref{hymn-lent}
+
+  	\medskip
+  }
+  \def\printshortresp{
+    \noindent\emph{Short Resp. \emph{Ipse liberavit me}}, p. \pageref{shortresp-lent}, \Vbar{}~Scapulis suis, p. \pageref{vr-lent}.
+  }
+  \section{Second Sunday of Lent}
+  \printterce{inc-Lent2}{lent2}
+
+  \section{Third Sunday of Lent}
+  \printterce{inc-Lent3}{lent3}
+
+  \section{Fourth Sunday of Lent}
+  \printterce{inc-Lent4}{lent4}
+
+  {
+    \newcommand{\printrefs}[1]{%
+      \def\dotting{\hfill%\leaders\hbox to 1em{\hfil.\hfil}\hfill
+        }%
+      \begin{multicols}{2}%
+      \noindent{}1st Sunday of the Passion,\dotting \emph{below}\\
+      2nd Sunday of the Passion,\dotting \emph{p.~\pageref{passion2-#1}}
+      \end{multicols}%
+      \smallskip
+    }
+
+    \def\printhymn{
+
+      {\centering Hymn.\par}\label{hymn-passiontide}
+
+      {\def\gabcfolder{.}
+      \printgabc{2.}{}{N}{hy--nunc_sancte_nobis_(in_tempore_passionis)--solesmes_1961}}
+
+      \printrefs{ant}
+      \bigskip
+    }
+
+    \def\printshortresp{%
+    \label{shortresp-passiontide}%
+    {\def\gabcfolder{.}
+    \printgabc{Short}{Resp.}{E}{re--erue_a_frama--solesmes}}
+
+    \translation[]{\Vbar{}~Deliver from the sword, O God, my soul.
+    \Rbar{}~Deliver\dots{}
+    \Vbar{}~My only one from the hand of the dog.
+    \Rbar{}~O God, my soul.
+    \Rbar{}~Deliver, * O God, my soul from the sword.For he hath delivered me from the snare of the hunters.
+    }
+
+    \bigskip
+    \gresetinitiallines{0}\label{vr-passiontide}
+    \gregorioscore{vr-de-ore-leonis}
+    \let\myhwidth\relax
+    \let\myhhwidth\relax
+    \newlength{\myhwidth}
+    \settowidth{\myhwidth}{me} % text in last word before last vowel of response
+    \newlength{\myhhwidth}
+    \settowidth{\myhhwidth}{n} % text in last syllable before vowel of versicle
+    \addtolength{\myhhwidth}{-\myhwidth}
+    \def\myhspace{\hspace{1.4ex}}
+    \begin{nstabbing}
+    %\>\Rbar{}~Et \myhspace{} omnes \myhspace{} reges \myhspace{} terræ \myhspace{} glóriam \>\hspace{\myhhwidth}tuam.
+    \>\Rbar{}~Et a córnibus unicórnium humilitátem \>\hspace{\myhhwidth}meam.
+    \end{nstabbing}
+
+    \translation[]{\Vbar{}~From the lion's mouth, O Lord, save me.
+    \Rbar{}~And my lowness from the horns of the unicorns.}
+
+    \printrefs{collect}
+    \bigskip
+    }
+
+    \section{First Sunday of the Passion}
+    \printterce{inc-Passion1}{passion1}
+  }
+ 
+  \def\printhymn{%
+    , \emph{Hymn}, page \pageref{hymn-passiontide}
+
+    \medskip
+  }
+  \def\printshortresp{
+    \noindent\emph{Short Resp. \emph{Erue a framea}}, p. \pageref{shortresp-passiontide}, \Vbar{}~De ore leonis, p. \pageref{vr-passiontide}.
+  }
+  \section{Second Sunday of the Passion}
+  \printterce{inc-Passion2}{passion2}
+}

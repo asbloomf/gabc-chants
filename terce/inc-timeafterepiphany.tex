@@ -1,0 +1,20 @@
+{
+	\chapter{Time after Epiphany}
+  \def\deusinadjutorium{%
+    \noindent\printnote{All from \emph{Sunday at Terce throughout the year}, p.~\pageref{deusinadjutorium}}
+  }
+  \def\printhymn{\medskip}
+  \def\printbenedicamusdomino{
+    \noindent\emph{Benedicamus Domino}, p. \pageref{benedicamus-domino-sunday}.
+  }
+  \newcommand{\printterceafterepiphany}[1]{
+    \section{\nth{#1} Sunday after Epiphany}
+    \printterce[../TimeAfterEpiphany]{inc-VespersMagnificatEpiphany#1}{epiphany#1}
+  }
+%\tracingmacros=1
+  \printterceafterepiphany{2}
+  \printterceafterepiphany{3}
+  \printterceafterepiphany{4}
+  \printterceafterepiphany{5}
+  \printterceafterepiphany{6}
+}
