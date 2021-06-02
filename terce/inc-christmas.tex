@@ -1,0 +1,296 @@
+{
+	\label{christmas}
+	\chapter{Christmas}
+	\section{Christmas Eve}
+  \def\printbenedicamusdomino{
+    \noindent\emph{Benedicamus Domino}, p. \pageref{benedicamus-domino-sunday}.
+  }
+  {
+    \def\printhymn{%
+    	, \emph{Hymn}, page \pageref{hymn-advent}
+
+    	\medskip
+    }
+    \def\printshortresp{%
+      \label{shortresp-christmas-eve}%
+      {\def\gabcfolder{.}
+      \printgabc{Short}{Resp.}{H}{re--hodie_scietis--solesmes_1961}}
+
+      \translation[]{\Vbar{}~This day ye shall know that the Lord cometh.
+      \Rbar{}~This\dots{}
+      \Vbar{}~And in the morning, then ye shall see His glory.
+      \Rbar{}~That the Lord cometh.
+      \Vbar{}~Glory be to the Father, and to the Son, and to the Holy Ghost.
+      \Rbar{}~This\dots{}
+      }
+
+      \bigskip
+      \gresetinitiallines{0}\label{vr-christmas-eve}
+      \gregorioscore{vr-constantes-estote}
+      \let\myhwidth\relax
+      \let\myhhwidth\relax
+      \newlength{\myhwidth}
+      \settowidth{\myhwidth}{v} %this is what precedes the last vowel in the response
+      \newlength{\myhhwidth}
+      \settowidth{\myhhwidth}{t} %this is what preceded the last vowel in the verse
+      \addtolength{\myhhwidth}{-\myhwidth}
+      \def\myhspace{\hspace{1.4ex}}
+      \begin{nstabbing}
+      \>\Rbar{}~Vidébitis auxílium Dómini super \>\hspace{\myhhwidth}vos.
+      \end{nstabbing}
+
+      \translation[]{\Vbar{}~Stand ye still.\\
+      \Rbar{}~And ye shall see the salvation of the Lord with you.}
+
+      \bigskip
+    }
+    \printterce{inc-christmas-eve}{christmas-eve}
+  }
+  {
+    \newcommand{\printrefshymn}[1]{%
+      \def\dotting{\hfill%\leaders\hbox to 1em{\hfil.\hfil}\hfill
+        }%
+      \begin{multicols}{2}%
+      \noindent{}Christmas \& Sunday,\dotting \emph{below}\\
+      Circumcision,\dotting \emph{p.~\pageref{circumcision-#1}}\\
+      Holy Name,\dotting \emph{p.~\pageref{holyname-#1}}
+      \end{multicols}%
+      \smallskip
+    }
+    \def\printhymn{
+
+      {\centering Hymn.\par}\label{hymn-christmas}
+
+      {\def\gabcfolder{.}
+       \printgabc{8.}{}{N}{hy--nunc_sancte_nobis_(in_nativitate_domini)--solesmes_1961}
+      }
+
+      \printrefshymn{ant}
+      \bigskip
+    }
+    \newcommand{\printrefs}[1]{%
+      \def\dotting{\hfill%\leaders\hbox to 1em{\hfil.\hfil}\hfill
+        }%
+      \begin{multicols}{2}%
+      \noindent{}Christmas,\dotting \emph{below}\\
+      Sunday within the octave,\dotting \emph{p.~\pageref{christmas-sunday-#1}}
+      \end{multicols}%
+      \smallskip
+    }
+    \newcommand{\anttwotex}{an--genuit_puerpera_regem--solesmes_1961}
+    \newcommand{\anttwoinitial}{G}
+    \newcommand{\anttwotranslation}{The Mother brought forth the King, Whose name is called The Eternal; the joy of a Mother was hers, remaining a Virgin unsullied; neither before nor henceforth hath there been or shall be such another, alleluia.}
+    \definepsalm{2}{109}{2}{D}
+
+    \def\printshortresp{%
+      \label{shortresp-christmas}%
+      {\def\gabcfolder{.}
+      \printgabc{Short}{Resp.}{V}{rb--verbum_caro_factum_est--solesmes_1961}}
+
+      \translation[]{\Vbar{}~The Word was made flesh. Alleluia, Alleluia.
+      \Rbar{}~The Word\dots{}
+      \Vbar{}~And dwelt among us.
+      \Rbar{}~Alleluia, Alleluia.
+      \Vbar{}~Glory be to the Father, and to the Son, and to the Holy Ghost.
+      \Rbar{}~The Word\dots{}
+      }
+
+      \bigskip
+      \gresetinitiallines{0}\label{vr-christmas}
+      \gregorioscore{vr-ipse-invocabit}
+      \let\myhwidth\relax
+      \let\myhhwidth\relax
+      \newlength{\myhwidth}
+      \settowidth{\myhwidth}{allelui} %this is what precedes the last vowel in the response
+      \newlength{\myhhwidth}
+      \settowidth{\myhhwidth}{i} %this is what preceded the last vowel in the verse
+      \addtolength{\myhhwidth}{-\myhwidth}
+      \def\myhspace{\hspace{0.3ex}}
+      \begin{nstabbing}
+      \>\Rbar{}~Pater \myhspace{} meus \myhspace{} es \myhspace{} tu, \>\hspace{\myhhwidth}allelúia.
+      \end{nstabbing}
+
+      \translation[]{\Vbar{}~He shall cry unto Me, Alleluia.\\
+      \Rbar{}~Thou art My Father, Alleluia.}
+
+      \bigskip
+    }
+    \def\prechapter{\printrefs{chapter}}
+    \section{Christmas}
+    \printterce{../Christmas/inc-Christmas-Vespers2}{christmas}
+  }
+
+  \def\printshortresp{
+    \noindent\emph{Short Resp. \emph{Verbum caro}}, p. \pageref{shortresp-christmas}, \Vbar{}~Ipse invocabit, p. \pageref{vr-christmas}.
+  }
+  {
+    \def\printhymn{%
+      , \emph{Hymn}, page \pageref{hymn-sunday}%
+      , Ant. \emph{Genuit puerpera Regem}, \pageref{christmas-ant}
+
+      \medskip
+    }
+
+    \section{Sunday within the octave}
+    \printterce{../Christmas/inc-SundayWithinOctaveOfChristmas-Vespers2}{christmas-sunday}
+  }
+  \def\printhymn{%
+    , \emph{Hymn}, page \pageref{hymn-christmas}%
+
+    \medskip
+  }
+  {
+    \section{Octave of the Nativity}
+    \printterce[../ChristmasOctave-Circumcision]{inc-Circumcision-Vespers-common}{circumcision}
+  }
+  {
+    % holy name
+    % proper ant, chapter from vespers, short resp
+    \input{../HolyName/inc-HolyName-common}
+    \renewcommand{\anttwotex}{an--scitote_quia_dominus--solesmes_1961}
+    \renewcommand{\anttwoinitial}{S}
+    \renewcommand{\anttwotranslation}{}
+    \definepsalm{2}{109}{3}{a}
+
+    \def\printshortresp{%
+      \label{shortresp-holyname}%
+      {\def\gabcfolder{.}
+      \printgabc{Short}{Resp.}{S}{rb--sit_nomen--solesmes}}
+
+      \translation[]{\Vbar{}~Blessed be the Name of the Lord, Alleluia, alleluia.
+        \Rbar{}~Blessed\dots{}
+        \Vbar{}~From this time forth, and for evermore.
+        \Rbar{}~Alleluia, alleluia.
+        \Vbar{}~Glory be to the Father, and to the Son, and to the Holy Ghost.
+        \Rbar{}~Blessed\dots{}
+      }
+
+      \bigskip
+      \gresetinitiallines{0}\label{vr-holyname}
+      \gregorioscore{vr-afferte-domino}
+      \let\myhwidth\relax
+      \let\myhhwidth\relax
+      \newlength{\myhwidth}
+      \settowidth{\myhwidth}{allelui} %this is what precedes the last vowel in the response
+      \newlength{\myhhwidth}
+      \settowidth{\myhhwidth}{i} %this is what preceded the last vowel in the verse
+      \addtolength{\myhhwidth}{-\myhwidth}
+      \def\myhspace{\hspace{0.5ex}}
+      \begin{nstabbing}
+      %\>\Rbar{}~Pater \myhspace{} meus \myhspace{} es \myhspace{} tu, \>\hspace{\myhhwidth}allelúia.
+      \>\Rbar{}~Afférte \myhspace{}Dómino\myhspace{} glóriam\myhspace{} nómini\myhspace{} ejus, \>\hspace{\myhhwidth}allelúia.
+      \end{nstabbing}
+
+      \translation[]{\Vbar{}~Give unto the Lord glory and honour, alleluia.\\
+        \Rbar{}~Give unto the Lord the glory due unto His Name, alleluia.}
+
+      \bigskip
+    }
+    \section{Holy Name}
+    \def\gabcfolder{.}
+    \printterce{}{holyname}
+  }
+  {
+    % epiphany
+    % proper hymn, ant & chapter from vespers, short resp
+    \def\printhymn{
+
+      {\centering Hymn.\par}\label{hymn-epiphany}
+
+      {\def\gabcfolder{.}
+       \printgabc{8.}{}{N}{hy--nunc_sancte_nobis_(in_epiphania_domini)--solesmes_1961}
+      }
+
+      %\printrefshymn{ant}
+      \bigskip
+    }
+    \def\printshortresp{%
+      \label{shortresp-epiphany}%
+      {\def\gabcfolder{.}
+      \printgabc{Short}{Resp.}{R}{re--reges_tharsis--solesmes_1961}}
+
+      \translation[]{\Vbar{}~The kings of Tarshish and of the isles shall bring presents. Alleluia, Alleluia.
+        \Rbar{}~The kings\dots{}
+        \Vbar{}~The kings of Arabia and Saba shall offer gifts.
+        \Rbar{}~Alleluia, Alleluia.
+        \Vbar{}~Glory be to the Father, and to the Son, and to the Holy Ghost.
+        \Rbar{}~The kings\dots{}
+      }
+
+      \bigskip
+      \gresetinitiallines{0}\label{vr-epiphany}
+      \gregorioscore{vr-omnes-de-saba}
+      \let\myhwidth\relax
+      \let\myhhwidth\relax
+      \newlength{\myhwidth}
+      \settowidth{\myhwidth}{allelui} %this is what precedes the last vowel in the response
+      \newlength{\myhhwidth}
+      \settowidth{\myhhwidth}{i} %this is what preceded the last vowel in the verse
+      \addtolength{\myhhwidth}{-\myhwidth}
+      \def\myhspace{\hspace{0.1ex}}
+      \begin{nstabbing}
+      %\>\Rbar{}~Pater \myhspace{} meus \myhspace{} es \myhspace{} tu, \>\hspace{\myhhwidth}allelúia.
+      \>\Rbar{}~Aurum et thus deferéntes, \>\hspace{\myhhwidth}allelúia.
+      \end{nstabbing}
+
+      \translation[]{\Vbar{}~All they from Saba shall come. Alleluia.\\
+        \Rbar{}~They shall bring gold and incense. Alleluia.}
+
+      \bigskip
+    }
+    \section{Epiphany}
+    \printterce[../Epiphany]{inc-Epiphany-vespers}{epiphany}
+  }
+  {
+    % holy family
+    % ant & chapter from vespers, proper short resp
+    % slightly proper hymn (rest from epiphany)
+    \def\printhymn{
+
+      {\centering Hymn.\par}\label{hymn-holyfamily}
+
+      {\def\gabcfolder{.} %TODO: this has the correct verse 3 but first 2 verses are wrong!
+       \printgabc{8.}{}{N}{hy--te_lucis_ante_terminum_(holy_family)--solesmes_1961}
+      }
+
+      %\printrefshymn{ant}
+      \bigskip
+    }
+    \def\printshortresp{%
+      \label{shortresp-holyfamily}%
+      {\def\gabcfolder{.}
+      \printgabc{Short}{Resp.}{P}{re--propter_nos--solesmes_1961}}
+
+      \translation[]{\Vbar{}~For our sake he became poor, Being rich.
+        \Rbar{}~For our sake\dots{}
+        \Vbar{}~That through his poverty we might be rich.
+        \Rbar{}~Being rich.
+        \Vbar{}~Glory be to the Father, and to the Son, and to the Holy Ghost.
+        \Rbar{}~For our sake\dots{}
+      }
+
+      \bigskip
+      \gresetinitiallines{0}\label{vr-holyfamily}
+      \gregorioscore{vr-dominus-vias-suas}
+      \let\myhwidth\relax
+      \let\myhhwidth\relax
+      \newlength{\myhwidth}
+      \settowidth{\myhwidth}{ej} %this is what precedes the last vowel in the response
+      \newlength{\myhhwidth}
+      \settowidth{\myhhwidth}{n} %this is what preceded the last vowel in the verse
+      \addtolength{\myhhwidth}{-\myhwidth}
+      \def\myhspace{\hspace{0.1ex}}
+      \begin{nstabbing}
+      %\>\Rbar{}~Pater \myhspace{} meus \myhspace{} es \myhspace{} tu, \>\hspace{\myhhwidth}allelúia.
+      \>\Rbar{}~Et \myhspace{} ambulábimus \myhspace{} in \myhspace{} sémitis \>\hspace{\myhhwidth}ejus.
+      \end{nstabbing}
+
+      \translation[]{\Vbar{}~The Lord will teach us his ways.\\
+        \Rbar{}~And we will walk in his paths.}
+
+      \bigskip
+    }
+    \section{Holy Family}
+    \printterce[../HolyFamily]{inc-HolyFamily-Vespers2}{holyfamily}
+  }
+}

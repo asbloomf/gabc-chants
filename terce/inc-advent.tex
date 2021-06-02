@@ -13,7 +13,9 @@
       \noindent{}1st Sunday of Advent,\dotting \emph{below}\\
       2nd Sunday of Advent,\dotting \emph{p.~\pageref{advent2-#1}}\\
       3rd Sunday of Advent,\dotting \emph{p.~\pageref{advent3-#1}}\\
-      4th Sunday of Advent,\dotting \emph{p.~\pageref{advent4-#1}}
+      4th Sunday of Advent,\dotting \emph{p.~\pageref{advent4-#1}}%
+      %\\
+      %Christmas Eve,\dotting \emph{p.~\pageref{christmas-eve-#1}}
       \end{multicols}%
       \smallskip
     }
@@ -82,42 +84,4 @@
 
   \section{Fourth Sunday of Advent}
   \printterce[../Advent4]{inc-Advent4}{advent4}
-
-  %\let\printhymn=\undefined
-  \section{Christmas Eve}
-  \def\printshortresp{%
-    \label{shortresp-christmas-eve}%
-    {\def\gabcfolder{.}
-    \printgabc{Short}{Resp.}{V}{re--hodie_scietis--solesmes_1961}}
-
-    \translation[]{\Vbar{}~This day ye shall know that the Lord cometh.
-    \Rbar{}~This\dots{}
-    \Vbar{}~And in the morning, then ye shall see His glory.
-    \Rbar{}~That the Lord cometh.
-    \Vbar{}~Glory be to the Father, and to the Son, and to the Holy Ghost.
-    \Rbar{}~This\dots{}
-    }
-
-    \bigskip
-    \gresetinitiallines{0}\label{vr-christmas-eve}
-    \gregorioscore{vr-constantes-estote}
-    \let\myhwidth\relax
-    \let\myhhwidth\relax
-    \newlength{\myhwidth}
-    \settowidth{\myhwidth}{v} %this is what precedes the last vowel in the response
-    \newlength{\myhhwidth}
-    \settowidth{\myhhwidth}{t} %this is what preceded the last vowel in the verse
-    \addtolength{\myhhwidth}{-\myhwidth}
-    \def\myhspace{\hspace{1.4ex}}
-    \begin{nstabbing}
-    \>\Rbar{}~Vidébitis auxílium Dómini super \>\hspace{\myhhwidth}vos.
-    \end{nstabbing}
-
-    \translation[]{\Vbar{}~Stand ye still.\\
-    \Rbar{}~And ye shall see the salvation of the Lord with you.}
-
-    \bigskip
-  }
-  \printterce{inc-christmas-eve}{christmas-eve}
-
 }
