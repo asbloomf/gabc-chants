@@ -1,0 +1,139 @@
+{
+	\label{pentecost}
+  \def\printbenedicamusdomino{
+    \noindent\emph{Benedicamus Domino}, p. \pageref{benedicamus-domino-sunday}.
+  }
+  \chapter{Proper of the Time -- Pentecost Octave}
+  \section{Pentecost Sunday}
+  {
+    \def\printhymn{
+
+      {\centering Hymn.\par}\label{hymn-pentecost}
+
+      {\def\gabcfolder{../Pentecost}
+        \printgabc{Hymn}{8.}{V}{Hymn-VeniCreatorSpiritus}
+
+        \renewcommand{\hymntranslation}{
+          \item Thou, Holy Ghost, Creater, come,
+          and make Thy people's souls Thy home:
+          with grace celestial animate
+          the hearts Thou didst Thyself create.
+
+          \item The Paraclete from God above,
+          Thou art His gift, Thou art His love:
+          the fount of life and burning zeal
+          and of our souls th'anointing seal.
+
+          \item As sevenfold Thy gifts expand,
+          the finger Thou of God's right hand:
+          the Father's promise well fulfilled,
+          Thy truths in us Thou hast instilled.
+
+          \item Our minds enkindle with Thy light,
+          within our hearts Thy love excite:
+          do Thou endue our members frail
+          with strength of Thine that ne'er can fail.
+
+          \item Far keep from us our ancient foe,
+          without delay Thy peace bestow:
+          be Thou our guide: do Thou forestall
+          the many ills our path entrall.
+
+          \item Through Thee may we the Father know,
+          the Son's effulgence deign to show:
+          in blessing Thee from either sent,
+          may our eternal years be spent!
+
+          \item To God the Father, to God the Son,
+          Who over death the vistory won,
+          to both and to the Paraclete,
+          we raise our hearts with thanks replete.
+          Amen.%\grechangestaffsize{15}
+        }
+
+        \selectlanguage{american}\vspace{-0.5\baselineskip}
+        \begin{multicols}{2}
+        \begin{psalmverses}
+        {\hymntranslation}
+        \end{psalmverses}
+        \end{multicols}
+
+      }
+
+      %\printrefshymn{ant}
+      \bigskip
+    }
+    \def\printshortresp{%
+      \label{shortresp-pentecost}%
+      {\def\gabcfolder{.}
+      \printgabc{Short}{Resp.}{S}{re--spiritus_domini--solesmes_1961.gabc}}
+
+      \translation[]{\Vbar{}~The Spirit of the Lord filleth the world. Alleluia, Alleluia.
+        \Rbar{}~The Spirit\dots{}
+        \Vbar{}~And That Which containeth all things hath knowledge of the voice.
+        \Rbar{}~Alleluia, alleluia.
+        \Vbar{}~Glory be to the Father, and to the Son, and to the Holy Ghost.
+        \Rbar{}~The Spirit\dots{}
+      }
+
+      \bigskip
+      \gresetinitiallines{0}\label{vr-pentecost}
+      \gregorioscore{vr-spiritus-paraclitus}
+      \let\myhwidth\relax
+      \let\myhhwidth\relax
+      \newlength{\myhwidth}
+      \settowidth{\myhwidth}{allelui} %this is what precedes the last vowel in the response
+      \newlength{\myhhwidth}
+      \settowidth{\myhhwidth}{i} %this is what preceded the last vowel in the verse
+      \addtolength{\myhhwidth}{-\myhwidth}
+      \def\myhspace{\hspace{1.4ex}}
+      \begin{nstabbing}
+      \>\Rbar{}~Docébit vos ómnia, \>\hspace{\myhhwidth}allelúia.
+      \end{nstabbing}
+
+      \translation[]{\Vbar{}~The Comforter, Which is the Holy Ghost, alleluia.\\
+        \Rbar{}~Shall teach you all things, alleluia.}
+
+      \bigskip
+    }
+    \printterce[../Pentecost]{inc-PentecostVespers}{pentecost}
+  }
+  {
+    \def\printshortresp{%
+      \label{shortresp-trinity}%
+      {\def\gabcfolder{.}
+      \printgabc{Short}{Resp.}{B}{re--benedicamus_patrem--solesmes_1961.gabc}}
+
+      \translation[]{\Vbar{}~Bless we the Father, and the Son, and the Holy Ghost.
+        \Rbar{}~Bless\dots{}
+        \Vbar{}~Let us praise and exalt Him above all for ever.
+        \Rbar{}~And the Holy Ghost.
+        \Vbar{}~Glory be to the Father, and to the Son, and to the Holy Ghost.
+        \Rbar{}~Bless\dots{}
+      }
+
+      \bigskip
+      \gresetinitiallines{0}\label{vr-trinity}
+      \gregorioscore{vr-benedictus-es}
+      \let\myhwidth\relax
+      \let\myhhwidth\relax
+      \newlength{\myhwidth}
+      \settowidth{\myhwidth}{sǽcul} %this is what precedes the last vowel in the response
+      \newlength{\myhhwidth}
+      \settowidth{\myhhwidth}{t} %this is what preceded the last vowel in the verse
+      \addtolength{\myhhwidth}{-\myhwidth}
+      \def\myhspace{\hspace{2.4ex}}
+      \begin{nstabbing}
+      \>\Rbar{}~Et\myhspace{} laudábilis\myhspace{} et\myhspace{} gloriósus\myhspace{} in \>\hspace{\myhhwidth}sǽcula.
+      \end{nstabbing}
+
+      \translation[]{\Vbar{}~Blessed art Thou, O Lord, in the firmament of heaven.\\
+        \Rbar{}~And to be praised and glorified for ever.}
+
+      \bigskip
+    }
+    \section{Trinity Sunday}
+    \printterce[../TrinitySunday]{inc-TrinitySunday-Vespers}{trinity}
+  }
+
+}
