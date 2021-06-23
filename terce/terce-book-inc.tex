@@ -127,6 +127,7 @@
 	{\centering\large Collect.\par}
 	%\smallskip
 	\fi
+	\ifx\precollect\undefined\else\precollect\fi
 	\begincollectcols
 	\sloppy
 	\prayer{#1}{#2}
@@ -434,11 +435,9 @@
 		\fi
 
 		\ifx\printshortresp\undefined%
-			%\noindent\emph{Short Resp. \emph{Inclina cor meum}}, p. \pageref{shortresp-sunday}, \Vbar{}~Ego dixi, p. \pageref{vr-sunday}.
+			\noindent\emph{Short Resp. \emph{Inclina cor meum}}, p. \pageref{shortresp-sunday}, \Vbar{}~Ego dixi, p. \pageref{vr-sunday}.
 		\else
 			\printshortresp
-
-			\medskip
 		\fi
 
 		\ifx\collect\undefined%

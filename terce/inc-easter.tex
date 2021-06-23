@@ -42,13 +42,13 @@
       \def\dotting{\hfill%\leaders\hbox to 1em{\hfil.\hfil}\hfill
         }%
       \begin{multicols}{2}%
-      \noindent{}Low Sunday,\dotting \emph{below}\\
-      2nd Sunday after Easter,\dotting \emph{p.~\pageref{easter2-#1}}\\
-      3rd Sunday after Easter,\dotting \emph{p.~\pageref{easter3-#1}}\\
-      4th Sunday after Easter,\dotting \emph{p.~\pageref{easter4-#1}}\\
-      5th Sunday after Easter,\dotting \emph{p.~\pageref{easter5-#1}}
+      \noindent{}\emph{Low Sunday},\dotting below\\
+      \emph{2nd Sunday after Easter},\dotting p.~\pageref{easter2-#1}\\
+      \emph{3rd Sunday after Easter},\dotting p.~\pageref{easter3-#1}\\
+      \emph{4th Sunday after Easter},\dotting p.~\pageref{easter4-#1}\\
+      \emph{5th Sunday after Easter},\dotting p.~\pageref{easter5-#1}
       \end{multicols}%
-      \smallskip
+      \medskip
     }
 
     \def\printhymn{
@@ -58,6 +58,7 @@
       {\def\gabcfolder{.}
       \printgabc{8.}{}{N}{hy--nunc_sancte_nobis_(in_tempore_paschali))--solesmes_1961}
 
+      \bigskip
       {\centering Another Chant.}
 
       \printgabc{1.}{}{N}{hy--nunc_sancte_nobis_(in_tempore_paschali)_(melodia_altera)--solesmes_1961}}
@@ -66,44 +67,44 @@
     }
 
     \def\printshortresp{%
-    \label{shortresp-paschaltide}%
-    {\def\gabcfolder{.}
-    \printgabc{Short}{Resp.}{S}{re--surrexit_dominus_de_sepulcro_(resp._br.)--solesmes_1961}}
+      \label{shortresp-paschaltide}%
+      {\def\gabcfolder{.}
+      \printgabc{Short}{Resp.}{S}{re--surrexit_dominus_de_sepulcro_(resp._br.)--solesmes_1961}}
 
-    \translation[]{\Vbar{}~The Lord is risen from the sepulchre, alleluia, alleluia.
-    \Rbar{}~The Lord\dots{}
-    \Vbar{}~Who for us was hanged on the tree.
-    \Rbar{}~Alleluia, alleluia.
-    \Vbar{}~Glory be to the Father, and to the Son, and to the Holy Ghost.
-    \Rbar{}~The Lord\dots{}
+      \translation[]{\Vbar{}~The Lord is risen from the sepulchre, alleluia, alleluia.
+      \Rbar{}~The Lord\dots{}
+      \Vbar{}~Who for us was hanged on the tree.
+      \Rbar{}~Alleluia, alleluia.
+      \Vbar{}~Glory be\dots{}
+      \Rbar{}~The Lord\dots{}
+      }
+
+      \bigskip
+      \gresetinitiallines{0}\label{vr-paschaltide}
+      \gregorioscore{vr-surrexit-dominus}
+      \let\myhwidth\relax
+      \let\myhhwidth\relax
+      \newlength{\myhwidth}
+      \settowidth{\myhwidth}{allelui} % text in last word before last vowel of response
+      \newlength{\myhhwidth}
+      \settowidth{\myhhwidth}{i} % text in last syllable before vowel of versicle
+      \addtolength{\myhhwidth}{-\myhwidth}
+      \def\myhspace{\hspace{1ex}}
+      \begin{nstabbing}
+      %\>\Rbar{}~Et \myhspace{} omnes \myhspace{} reges \myhspace{} terræ \myhspace{} glóriam \>\hspace{\myhhwidth}tuam.
+      \>\Rbar{}~Et \myhspace{} appáruit \myhspace{} Simóni, \>\hspace{\myhhwidth}allelúia.
+      \end{nstabbing}
+
+      \translation[]{\Vbar{}~The Lord is risen indeed, alleluia.\\
+      \Rbar{}~And hath appeared to Simon, alleluia.}
+
+      \bigskip
     }
-
-    \bigskip
-    \gresetinitiallines{0}\label{vr-paschaltide}
-    \gregorioscore{vr-surrexit-dominus}
-    \let\myhwidth\relax
-    \let\myhhwidth\relax
-    \newlength{\myhwidth}
-    \settowidth{\myhwidth}{allelui} % text in last word before last vowel of response
-    \newlength{\myhhwidth}
-    \settowidth{\myhhwidth}{i} % text in last syllable before vowel of versicle
-    \addtolength{\myhhwidth}{-\myhwidth}
-    \def\myhspace{\hspace{1ex}}
-    \begin{nstabbing}
-    %\>\Rbar{}~Et \myhspace{} omnes \myhspace{} reges \myhspace{} terræ \myhspace{} glóriam \>\hspace{\myhhwidth}tuam.
-    \>\Rbar{}~Et \myhspace{} appáruit \myhspace{} Simóni, \>\hspace{\myhhwidth}allelúia.
-    \end{nstabbing}
-
-    \translation[]{\Vbar{}~The Lord is risen indeed, alleluia.\\
-    \Rbar{}~And hath appeared to Simon, alleluia.}
-
-    \printrefs{collect}
-    \bigskip
-    }
+    \def\precollect{\printrefs{collect}}
     \newcommand{\anttwotex}{an--alleluia._(sund._p._t._at_terce)--solesmes}
     \newcommand{\anttwoinitial}{A}
     \definepsalm{2}{109}{8}{G}
-    \def\prechapter{\printrefs{chapter}}
+    \def\postchaptertitle{\printrefs{chapter}}
 
     \section{Low Sunday}
     \printterce{../TimeAfterEaster/inc-VespersMagnificatEaster1}{easter1}
@@ -115,7 +116,7 @@
     \medskip
   }
   \def\printshortresp{
-    \noindent\emph{Short Resp. \emph{Surrexit Dominus}}, p. \pageref{shortresp-paschaltide}, \Vbar{}~Surrexit Dominus, p. \pageref{vr-paschaltide}.
+    \noindent{}Short Resp. \emph{Surrexit Dominus}, p. \pageref{shortresp-paschaltide}, \Vbar{}~\emph{Surrexit Dominus}, p. \pageref{vr-paschaltide}.
   }
   \section{Second Sunday after Easter}
   \printterce{../TimeAfterEaster/inc-VespersMagnificatEaster2}{easter2}
@@ -137,7 +138,7 @@
       \noindent{}Ascension,\dotting \emph{below}\\
       Sunday after the Ascension,\dotting \emph{p.~\pageref{easter6-#1}}
       \end{multicols}%
-      \smallskip
+      \medskip
     }
 
     \def\printhymn{
@@ -159,7 +160,7 @@
       \Rbar{}~God is\dots{}
       \Vbar{}~And the Lord with the sound of trumpet.
       \Rbar{}~Alleluia, alleluia.
-      \Vbar{}~Glory be to the Father, and to the Son, and to the Holy Ghost.
+      \Vbar{}~Glory be\dots{}
       \Rbar{}~God is\dots{}
       }
 
@@ -183,7 +184,7 @@
       \Rbar{}~He led captivity captive, alleluia.}
 
       %\printrefs{collect}
-      \bigskip
+      \medskip
     }
 
     %\section{Ascension}
@@ -217,7 +218,7 @@
  %    \medskip
  %  }
  %  \def\printshortresp{
- %    \noindent\emph{Short Resp. \emph{Ascendit Deus}}, p. \pageref{shortresp-ascension}, \Vbar{}~Ascendens Christus, p. \pageref{vr-ascension}.
+ %    \noindent{}Short Resp. \emph{Ascendit Deus}, p. \pageref{shortresp-ascension}, \Vbar{}~\emph{Ascendens Christus}, p. \pageref{vr-ascension}.
  %  }
 
  % \section{Sunday after the Ascension}

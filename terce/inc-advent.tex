@@ -10,14 +10,16 @@
       \def\dotting{\hfill%\leaders\hbox to 1em{\hfil.\hfil}\hfill
         }%
       \begin{multicols}{2}%
-      \noindent{}1st Sunday of Advent,\dotting \emph{below}\\
-      2nd Sunday of Advent,\dotting \emph{p.~\pageref{advent2-#1}}\\
-      3rd Sunday of Advent,\dotting \emph{p.~\pageref{advent3-#1}}\\
-      4th Sunday of Advent,\dotting \emph{p.~\pageref{advent4-#1}}%
-      %\\
-      %Christmas Eve,\dotting \emph{p.~\pageref{christmas-eve-#1}}
+      \noindent{}\emph{1st Sunday of Advent},\dotting below\\
+      \emph{2nd Sunday of Advent},\dotting p.~\pageref{advent2-#1}\\
+      \emph{3rd Sunday of Advent},\dotting p.~\pageref{advent3-#1}\\
+      \emph{4th Sunday of Advent},\dotting p.~\pageref{advent4-#1}%
+      \IfEq{#1}{ant}{% only if ant
+        \\
+        \emph{Christmas Eve},\dotting p.~\pageref{christmas-eve-#1}%
+      }{}
       \end{multicols}%
-      \smallskip
+      \medskip
     }
 
 	  \def\printhymn{
@@ -31,16 +33,16 @@
 		  \bigskip
 	  }
     \def\printshortresp{%
-    \label{shortresp-advent}%
-    {\def\gabcfolder{.}
-    \printgabc{Short}{Resp.}{V}{re--veni_ad_liberandum--solesmes}}
+      \label{shortresp-advent}%
+      {\def\gabcfolder{.}
+      \printgabc{Short}{Resp.}{V}{re--veni_ad_liberandum--solesmes}}
 
-    \translation[]{\Vbar{}~Come to my rescue O God, Lord of hosts.
-    \Rbar{}~Come\dots{}
-    \Vbar{}~Show us thy face, and we shall be saved.
-    \Rbar{}~O God, Lord of hosts.
-    \Vbar{}~Glory be to the Father, and to the Son, and to the Holy Ghost.
-    \Rbar{}~Come\dots{}
+      \translation[]{\Vbar{}~Come to my rescue O God, Lord of hosts.
+      \Rbar{}~Come\dots{}
+      \Vbar{}~Show us thy face, and we shall be saved.
+      \Rbar{}~O God, Lord of hosts.
+      \Vbar{}~Glory be\dots{}
+      \Rbar{}~Come\dots{}
     }
 
     \bigskip
@@ -61,9 +63,9 @@
     \translation[]{\Vbar{}~And the Gentiles shall fear thy name, O Lord.\\
     \Rbar{}~And all the kings of the earth thy glory.}
 
-    \printrefs{collect}
     \bigskip
     }
+    \def\precollect{\printrefs{collect}}
 
     \printterce[../Advent1]{inc-Advent1}{advent1}
   }
@@ -74,7 +76,7 @@
   	\medskip
   }
   \def\printshortresp{
-    \noindent\emph{Short Resp. \emph{Veni ad liberándum nos}}, p. \pageref{shortresp-advent}, \Vbar{}~Timébunt gentes, p. \pageref{vr-advent}.
+    \noindent{}Short Resp. \emph{Veni ad liberándum nos}, p. \pageref{shortresp-advent}, \Vbar{}~\emph{Timébunt gentes}, p. \pageref{vr-advent}.
   }
   \section{Second Sunday of Advent}
   \printterce[../Advent2]{inc-Advent2-Vespers2}{advent2}
@@ -84,4 +86,51 @@
 
   \section{Fourth Sunday of Advent}
   \printterce[../Advent4]{inc-Advent4}{advent4}
+}
+{
+  \section{24 December: Christmas Eve}
+  \def\printbenedicamusdomino{
+    \noindent\emph{Benedicamus Domino}, p. \pageref{benedicamus-domino-sunday}.
+  }
+  {
+    \def\printhymn{%
+      , \emph{Hymn}, page \pageref{hymn-advent}
+
+      \medskip
+    }
+    \def\printshortresp{%
+      \label{shortresp-christmas-eve}%
+      {\def\gabcfolder{.}
+      \printgabc{Short}{Resp.}{H}{re--hodie_scietis--solesmes_1961}}
+
+      \translation[]{\Vbar{}~This day ye shall know that the Lord cometh.
+      \Rbar{}~This\dots{}
+      \Vbar{}~And in the morning, then ye shall see His glory.
+      \Rbar{}~That the Lord cometh.
+      \Vbar{}~Glory be\dots{}
+      \Rbar{}~This\dots{}
+      }
+
+      \bigskip
+      \gresetinitiallines{0}\label{vr-christmas-eve}
+      \gregorioscore{vr-constantes-estote}
+      \let\myhwidth\relax
+      \let\myhhwidth\relax
+      \newlength{\myhwidth}
+      \settowidth{\myhwidth}{v} %this is what precedes the last vowel in the response
+      \newlength{\myhhwidth}
+      \settowidth{\myhhwidth}{t} %this is what preceded the last vowel in the verse
+      \addtolength{\myhhwidth}{-\myhwidth}
+      \def\myhspace{\hspace{1.4ex}}
+      \begin{nstabbing}
+      \>\Rbar{}~Vidébitis auxílium Dómini super \>\hspace{\myhhwidth}vos.
+      \end{nstabbing}
+
+      \translation[]{\Vbar{}~Stand ye still.\\
+      \Rbar{}~And ye shall see the salvation of the Lord with you.}
+
+      \bigskip
+    }
+    \printterce{inc-christmas-eve}{christmas-eve}
+  }
 }

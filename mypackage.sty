@@ -30,6 +30,27 @@
 % choose the language of the document here
 \usepackage[latin,american]{babel}
 
+\AtBeginDocument{\@ifpackageloaded{enumitem}
+  {%
+    \newcommand{\mylistsetup}{%
+      \setlength\topsep{0pt}%
+      \setlength\partopsep{0pt}%
+    }%
+    \newcommand{\myendlist}{}
+  }
+  {%
+    \newcommand{\setlist}[1]{}%
+    \newcommand{\mylistsetup}{%
+      \setlength{\parfillskip}{0pt plus\dimexpr\linewidth-2\parindent}
+    }%
+    \newcommand{\myendlist}{%
+      \ifx\undefined\useparacol%
+        \vspace{-12pt}%
+      \fi%
+    }
+  }
+}
+
 \ifthenelse{\boolean{libertine}}
 {
 \usepackage[T1]{fontenc}
@@ -313,19 +334,13 @@
 % 1 - number to start on
 \setlist{nosep}
 \begin{list}{\arabic{vcounter}.}{%
-%\setlength\baselineskip{0pt}
 \setlength\itemsep{1pt}%
 \usecounter{vcounter}%
 \setlength\parsep{0pt}%
-\setlength\topsep{0pt}%
-\setlength\partopsep{0pt}%
-%\setlength\parskip{0pt}%
+\mylistsetup{}
 \setlength\labelwidth{50pt}\setlength\leftmargin{0pt}\setlength\itemindent{6ex}}%
-%\setlength{\parfillskip}{0pt plus\dimexpr\linewidth-2\parindent}
 \setcounter{vcounter}{#1}%
-}{\ifx\undefined\useparacol%
-%\vspace{-12pt}%
-\fi%
+}{\myendlist{}
 \end{list}}
 
 \newcounter{vrcounter}
@@ -337,9 +352,8 @@
     \setlength\labelwidth{50pt}\setlength\leftmargin{0pt}\setlength\itemindent{6ex}
   }%
   \setcounter{vrcounter}{0}%
-}{\ifx\undefined\useparacol%
-  \vspace{-12pt}%
-  \fi%
+}{%
+  \myendlist{}
   \end{list}
 }
 
@@ -375,10 +389,13 @@
 % 2 - name of magnificat to include
 \gresetinitiallines{0}
 \gregorioscore{#2}
+%\vspace{-0.6\baselineskip}
 \normalsize\smallskip\ifx\premagtexverses\undefined\else\premagtexverses\fi
+%\begin{multicols}{2}%
 \begin{psalmverses}[#1]
 \vspace{-0.85\baselineskip plus 0.25\baselineskip}
-}{\end{psalmverses}}
+}{\end{psalmverses}%\end{multicols}\vspace{-0.7\baselineskip}
+}
 
 \newenvironment{boldnummagnificat}[2][2]{
 % 1 - number to start on

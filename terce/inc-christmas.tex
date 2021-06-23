@@ -1,59 +1,14 @@
 {
 	\label{christmas}
 	\chapter{Proper of the Time -- Christmas Season}
-	\section{24 December: Christmas Eve}
-  \def\printbenedicamusdomino{
-    \noindent\emph{Benedicamus Domino}, p. \pageref{benedicamus-domino-sunday}.
-  }
-  {
-    \def\printhymn{%
-    	, \emph{Hymn}, page \pageref{hymn-advent}
-
-    	\medskip
-    }
-    \def\printshortresp{%
-      \label{shortresp-christmas-eve}%
-      {\def\gabcfolder{.}
-      \printgabc{Short}{Resp.}{H}{re--hodie_scietis--solesmes_1961}}
-
-      \translation[]{\Vbar{}~This day ye shall know that the Lord cometh.
-      \Rbar{}~This\dots{}
-      \Vbar{}~And in the morning, then ye shall see His glory.
-      \Rbar{}~That the Lord cometh.
-      \Vbar{}~Glory be to the Father, and to the Son, and to the Holy Ghost.
-      \Rbar{}~This\dots{}
-      }
-
-      \bigskip
-      \gresetinitiallines{0}\label{vr-christmas-eve}
-      \gregorioscore{vr-constantes-estote}
-      \let\myhwidth\relax
-      \let\myhhwidth\relax
-      \newlength{\myhwidth}
-      \settowidth{\myhwidth}{v} %this is what precedes the last vowel in the response
-      \newlength{\myhhwidth}
-      \settowidth{\myhhwidth}{t} %this is what preceded the last vowel in the verse
-      \addtolength{\myhhwidth}{-\myhwidth}
-      \def\myhspace{\hspace{1.4ex}}
-      \begin{nstabbing}
-      \>\Rbar{}~Vidébitis auxílium Dómini super \>\hspace{\myhhwidth}vos.
-      \end{nstabbing}
-
-      \translation[]{\Vbar{}~Stand ye still.\\
-      \Rbar{}~And ye shall see the salvation of the Lord with you.}
-
-      \bigskip
-    }
-    \printterce{inc-christmas-eve}{christmas-eve}
-  }
   {
     \newcommand{\printrefshymn}[1]{%
       \def\dotting{\hfill%\leaders\hbox to 1em{\hfil.\hfil}\hfill
         }%
       \begin{multicols}{2}%
-      \noindent{}Christmas \& Sunday,\dotting \emph{below}\\
-      Circumcision,\dotting \emph{p.~\pageref{circumcision-#1}}\\
-      Holy Name,\dotting \emph{p.~\pageref{holyname-#1}}
+      \noindent{}\emph{Christmas \& Sunday},\dotting below\\
+      \emph{Circumcision},\dotting p.~\pageref{circumcision-#1}\\
+      \emph{Holy Name},\dotting p.~\pageref{holyname-#1}
       \end{multicols}%
       \smallskip
     }
@@ -72,10 +27,10 @@
       \def\dotting{\hfill%\leaders\hbox to 1em{\hfil.\hfil}\hfill
         }%
       \begin{multicols}{2}%
-      \noindent{}Christmas,\dotting \emph{below}\\
-      Sunday within the octave,\dotting \emph{p.~\pageref{christmas-sunday-#1}}
+      \noindent{}\emph{Christmas},\dotting below\\
+      \emph{Sunday within the octave},\dotting p.~\pageref{christmas-sunday-#1}
       \end{multicols}%
-      \smallskip
+      \medskip
     }
     \newcommand{\anttwotex}{an--genuit_puerpera_regem--solesmes_1961}
     \newcommand{\anttwoinitial}{G}
@@ -91,7 +46,7 @@
       \Rbar{}~The Word\dots{}
       \Vbar{}~And dwelt among us.
       \Rbar{}~Alleluia, Alleluia.
-      \Vbar{}~Glory be to the Father, and to the Son, and to the Holy Ghost.
+      \Vbar{}~Glory be\dots{}
       \Rbar{}~The Word\dots{}
       }
 
@@ -115,13 +70,13 @@
 
       \bigskip
     }
-    \def\prechapter{\printrefs{chapter}}
+    \def\postchaptertitle{\printrefs{chapter}}
     \section{25 December: Christmas}
     \printterce{../Christmas/inc-Christmas-Vespers2}{christmas}
   }
 
   \def\printshortresp{
-    \noindent\emph{Short Resp. \emph{Verbum caro}}, p. \pageref{shortresp-christmas}, \Vbar{}~Ipse invocabit, p. \pageref{vr-christmas}.
+    \noindent{}Short Resp. \emph{Verbum caro}, p. \pageref{shortresp-christmas}, \Vbar{}~\emph{Ipse invocabit}, p. \pageref{vr-christmas}.
   }
   {
     \def\printhymn{%
@@ -161,7 +116,7 @@
         \Rbar{}~Blessed\dots{}
         \Vbar{}~From this time forth, and for evermore.
         \Rbar{}~Alleluia, alleluia.
-        \Vbar{}~Glory be to the Father, and to the Son, and to the Holy Ghost.
+        \Vbar{}~Glory be\dots{}
         \Rbar{}~Blessed\dots{}
       }
 
@@ -213,7 +168,7 @@
         \Rbar{}~The kings\dots{}
         \Vbar{}~The kings of Arabia and Saba shall offer gifts.
         \Rbar{}~Alleluia, Alleluia.
-        \Vbar{}~Glory be to the Father, and to the Son, and to the Holy Ghost.
+        \Vbar{}~Glory be\dots{}
         \Rbar{}~The kings\dots{}
       }
 
@@ -250,8 +205,8 @@
 
       {\centering Hymn.\par}\label{hymn-holyfamily}
 
-      {\def\gabcfolder{.} %TODO: this has the correct verse 3 but first 2 verses are wrong!
-       \printgabc{8.}{}{N}{hy--te_lucis_ante_terminum_(holy_family)--solesmes_1961}
+      {\def\gabcfolder{.}%
+       \printgabc{8.}{}{N}{hy--nunc_sancte_nobis_(holy_family)--solesmes_1961}
       }
 
       %\printrefshymn{ant}
@@ -266,7 +221,7 @@
         \Rbar{}~For our sake\dots{}
         \Vbar{}~That through his poverty we might be rich.
         \Rbar{}~Being rich.
-        \Vbar{}~Glory be to the Father, and to the Son, and to the Holy Ghost.
+        \Vbar{}~Glory be\dots{}
         \Rbar{}~For our sake\dots{}
       }
 
