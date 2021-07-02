@@ -1,0 +1,48 @@
+{
+  \section{1 November: All Saints}
+  \def\printshortresp{%
+    \label{shortresp-nov1}%
+    {\def\gabcfolder{.}
+      \printgabc{Short}{Resp.}{L}{rb--laetamini_in_domino--solesmes_1961}
+    
+      \translation[]{\Vbar{}~Be glad in the Lord, and rejoice, ye righteous.
+        \Rbar{}~Be glad\dots{}
+        \Vbar{}~And shout for joy, all ye that are upright in heart.
+        \Rbar{}~And rejoice, ye righteous.
+        \Vbar{}~Glory be\dots{}
+        \Rbar{}~Be glad\dots{}
+      }
+    }
+
+    \bigskip
+    \gresetinitiallines{0}\label{vr-nov1}
+    \gregorioscore{vr-exsultent}
+    \let\myhwidth\relax
+    \let\myhhwidth\relax
+    \newlength{\myhwidth}
+    \settowidth{\myhwidth}{lætíti} % portion of word in response before last vowel
+    \newlength{\myhhwidth}
+    \settowidth{\myhhwidth}{} % portion of last syllable in versicle before vowel
+    \addtolength{\myhhwidth}{-\myhwidth}
+    \def\myhspace{\hspace{3.5ex}}
+    \begin{nstabbing}
+    %\>\Rbar{}~Et\myhspace{} omnes\myhspace{} reges\myhspace{} terræ\myhspace{} glóriam \>\hspace{\myhhwidth}tuam.
+    \>\Rbar{}~Et\myhspace{} delecténtur\myhspace{} in \>\hspace{\myhhwidth}lætítia.
+    \end{nstabbing}
+
+    \translation[]{\Vbar{}~Let the righteous rejoice before God.\\
+      \Rbar{}~Yea, let them exceedingly rejoice.}
+
+    \bigskip
+  }
+  % \newcommand{\anttwotex}{an--dedit_ei_dominus_potestatem--solesmes_1961}
+  % \newcommand{\anttwoinitial}{D}
+  % \newcommand{\anttwotranslation}{The Lord gave him power and glory, and a kingdom; and all peoples, tribes and tongues shall serve him.}
+  % \definepsalm{2}{109}{1}{f}
+  % \newcommand{\chaptertext}{\dropcap{latin}{Fratres~: Grátias ágimus Deo Patri, qui dignos nos fecit in partem sortis sanctórum in} \textbf{lú}\-mi\-ne~:~\gredagger{} qui erípuit nos de potestáte \emph{te\-ne}\-\textbf{brá}\-rum,~* et tránstulit in regnum Fílii dilectiónis \textbf{su}\-æ.}
+  % \newcommand{\chaptertranslation}{Brethren: We give thanks to God the Father, who hath made us worthy to be partakers of the lot of the saints in light, who hath delivered us from the power of darkness, and hath translated us into the kingdom of the Son of His love.}
+  % \newcommand{\collect}{Omnípotens sempitérne Deus, qui in dilécto Fílio tuo, universórum Rege, ómnia instauráre voluísti~:~† concéde propítius; ut cunctæ famíliæ Géntium, peccáti vúlnere disgregátæ,~* ejus suavíssimo subdántur império~: Qui tecum vivit et regnat.}
+  % \newcommand{\collecttranslation}{Almighty and eternal God, who in Thy beloved Son, the King of the whole world, hast willed to restore all things, mercifully grant that all the families of nations now kept apart by the wound of sin, may be brought under the sweet yoke of His rule: Who with Thee liveth and reigneth.}
+
+  \printterce[../November1-AllSaints]{inc-AllSaints}{nov1}
+}

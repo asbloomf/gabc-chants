@@ -1,0 +1,56 @@
+{
+	\label{appendix}
+  \cleardoublepage  
+  \chapter{Appendix}
+  \section{Common of the Dedication of a Church}
+  \label{commondedicationofchurch}
+  {
+    \def\printshortresp{%
+      \label{shortresp-dedication}%
+      {\def\gabcfolder{.}
+      \printgabc{Short}{Resp.}{D}{rb--domum_tuam--solesmes_1961}
+      \translation[]{\Vbar{}~Holiness becometh thine house, O Lord.
+        \Rbar{}~Holiness\dots{}
+        \Vbar{}~For ever.
+        \Rbar{}~Holiness becometh.
+        \Vbar{}~Glory be\dots{}
+        \Rbar{}~Holiness\dots{}
+      }
+      \medskip
+      {\centering In Paschal Time.\par}
+      \printgabc{Short}{Resp.}{D}{rb--domum_tuam_(paschal_time)--solesmes_1961}
+      }
+
+      \bigskip
+      \gresetinitiallines{0}\label{vr-dedication}
+      \gregorioscore{vr-locus-iste}
+      \let\myhwidth\relax
+      \let\myhhwidth\relax
+      \let\myhwidthb\relax
+      \let\myhhwidthb\relax
+      \newlength{\myhwidth}
+      \settowidth{\myhwidth}{pópul}
+      \newlength{\myhhwidth}
+      \settowidth{\myhhwidth}{do}
+      \addtolength{\myhhwidth}{-\myhwidth}
+      \newlength{\myhwidthb}
+      \settowidth{\myhwidthb}{\emph{T. P.} Allelui}
+      \newlength{\myhhwidthb}
+      \settowidth{\myhhwidthb}{i}
+      \addtolength{\myhhwidthb}{-\myhwidthb}
+      \def\myhspace{\hspace{3.5ex}}
+      \begin{nstabbing}
+      %\>\Rbar{}~Et \myhspace{} omnes \myhspace{} reges \myhspace{} terræ \myhspace{} glóriam \>\hspace{\myhhwidth}tuam.
+      \>\Rbar{}~Pro\myhspace{} delíctis\myhspace{} et\myhspace{} peccátis \>\hspace{\myhhwidth}pópuli. \>\hspace{\myhhwidthb}\emph{T. P.} Alleluia.
+      \end{nstabbing}
+
+      \translation[]{\Vbar{}~This place is holy, wherein the Priest prayeth.\\
+      \Rbar{}~For the pardon of the transgressions and offences of the people.}
+
+      \bigskip
+    }
+
+    \printterce[../CommonOfDedicationOfChurch]{inc-DedicationOfChurch}{dedication}
+  }
+
+}

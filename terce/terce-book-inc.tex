@@ -115,6 +115,48 @@
 	{\addfontfeature{Numbers=Lining} \normalsize \emph{#1}}\par
 }
 }
+\makeatletter  
+\newcounter{score}
+\newcounter{tabstop}[score]
+\newcommand{\grealign}{%
+  \@bsphack%
+  \ifgre@boxing\else%
+    \kern\gre@dimen@begindifference%
+    \stepcounter{tabstop}%
+    \expandafter\zsavepos{stop-\thescore-\thetabstop}%
+    \kern-\gre@dimen@begindifference%
+  \fi%
+  \@esphack%
+}
+\newcommand{\setstops}{%
+  \gdef\nstabbing@stops{%
+    \checkoddpage
+    \hspace*{-\ifoddpage\oddsidemargin\else\evensidemargin\fi}\hspace{-1in}%
+    \hspace*{\zposx{stop-\thescore-1} sp}\=%
+  }%
+  \count@=\@ne
+  \loop\ifnum\count@<\value{tabstop}%
+    \begingroup\edef\x{\endgroup
+      \noexpand\g@addto@macro\noexpand\nstabbing@stops{%
+        \noexpand\hspace{-\noexpand\zposx{stop-\thescore-\the\count@} sp}%
+        \noexpand\hspace{\noexpand\zposx{stop-\thescore-\the\numexpr\count@+1} sp}\noexpand\=%
+      }%
+    }\x
+    \advance\count@\@ne
+  \repeat
+  \nstabbing@stops\kill
+}
+\makeatother
+
+\newenvironment{nstabbing}
+  {\setlength{\topsep}{0pt}%
+   \setlength{\partopsep}{0pt}%
+   \tabbing%
+   \setstops}
+  {\endtabbing\stepcounter{score}}
+
+\def\beginpsalmcols{\begin{parcolumns}[rulebetween]{2}}
+\def\endpsalmcols{\end{parcolumns}}
 
 \newcommand{\deusinadjutorium}{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, p.~\pageref{deusinadjutorium}}}
 %\newcommand{\deusinadjutoriumsolemn}{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, p.~\pageref{deusinadjutoriumsolemn}.}}
@@ -200,105 +242,6 @@
 		\fi
 	}
 }
-\newcommand{\printvrcommem}{
-		{\normalsize
-		\ifx\beginvrcols\undefined\def\beginvrcols{\begin{parcolumns}[rulebetween]{2}}\fi
-		\beginvrcols
-		\colchunk{%
-			\selectlanguage{latin}%
-	    \Vbar{}~\commvlatin{}%
-    }
-		\colchunk{%
-			\selectlanguage{american}%
-	    \Vbar{}~\commvtranslation{}%
-		}%
-		\colplacechunks%
-    \colchunk{%
-			\selectlanguage{latin}%
-	    \Rbar{}~\commrlatin{}%
-		}%
-		\colchunk{%
-			\selectlanguage{american}%
-	    \Rbar{}~\commrtranslation{}%
-		}
-		\end{parcolumns}
-		}
-}
-\newcommand{\printvrdirigatur}{
-	\smallskip{}
-	\oldneedspace{3\baselineskip}
-	\noindent\printnote{If the Sunday is being commemorated:\\}\vspace{-0.5\baselineskip}
-	{
-		\ifthenelse{\boolean{birmingham}}{
-			\def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.53\linewidth}]{2}}
-		}{
-			\def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.51\linewidth}]{2}}
-		}
-		\def\commvlatin{Dirigátur Dómine orátio \textbf{mé}a.}
-		\def\commrlatin{Sicut incénsum in conspéctu \textbf{tú}o.}
-		\def\commvtranslation{\noindent{}Let my prayer be directed, O Lord.}
-		\def\commrtranslation{\noindent{}As incense in Thy sight.}
-		\printvrcommem{}
-	}
-}
-\newcommand{\printvrmanenobiscum}{
-	\smallskip{}
-	\oldneedspace{3\baselineskip}
-	\noindent\printnote{If the Sunday is being commemorated:\\}\vspace{-0.5\baselineskip}
-	{
-		\def\commvlatin{Mane nobíscum Dómine, alle\textbf{lú}ia.}
-		\def\commrlatin{Quóniam advesperáscit, alle\textbf{lú}ia.}
-		\def\commvtranslation{Stay with us O Lord, alleluia.}
-		\def\commrtranslation{Because it is towards evening, alleluia.}
-		\printvrcommem{}
-	}
-}
-\newcommand{\printvrdominusincaelo}{
-	\smallskip{}
-	\oldneedspace{3\baselineskip}
-	\noindent\printnote{If the Sunday is being commemorated:\\}\vspace{-0.5\baselineskip}
-	{
-		\def\commvlatin{Dóminus in cælo, alle\textbf{lú}ia.}
-		\def\commrlatin{Parávit sedem suam, alle\textbf{lú}ia.}
-		\def\commvtranslation{The Lord in heaven, alleluia.}
-		\def\commrtranslation{Has prepared His throne, alleluia.}
-		\printvrcommem{}
-	}
-}
-\newcommand{\printcommemoration}[2][.]{
-	\def\gabcfolder{#1}
-	\input{\gabcfolder/#2}
-	\subtitle{\comheadingtext}
-	\sectionmark{\comheadingtext}
-	{
-	\def\noeuouae{F}
-	%\printgabc{At Magn.}{\oldstylenums{\commagantlinetwo}}{\commagantinitial}{\commaganttex}
-		{%
-			\gresetinitiallines{0}
-			\ifx\gabcfolder\undefined
-		        \gregorioscore{\commaganttex}
-		    \else
-		        \gregorioscore{\gabcfolder/\commaganttex}
-		    \fi
-
-			\greseteolcustos{auto}%
-		}
-	}
-	\translation[]{\englishcommagantiphon}
-
-	\smallskip
-	\ifx\commvlatin\undefined
-		\printvr[\greseteolcustos{manual}]{\commvrtex}{\commvtranslation}{\commrtranslation}
-			\greseteolcustos{auto}
-	\else
-	{
-		\oldneedspace{3\baselineskip}
-		\printvrcommem{}
-	}
-	\fi
-
-	\printcollect{\latincomcollect}{\englishcomcollect}
-}
 \DeclareDocumentCommand{\printbothversions}{ O{\undefined} O{\undefined} m m }{
 % #1 & #2 are the label
 % #3 is what to check for
@@ -334,69 +277,79 @@
 	}
 	\fi
 }
-\newcommand{\printpsalms}{
-	\printpsalm{1}{\psalmonenum}{\psalmonetone\psalmoneend}{\antonetex}{\antoneinitial}
-	\medskip
-	\needspace{3\baselineskip}
-	\printpsalm{2}{\psalmtwonum}{\psalmtwotone\psalmtwoend}{\anttwotex}{\anttwoinitial}
-	\medskip
-	\needspace{3\baselineskip}
-	\printpsalm{3}{\psalmthreenum}{\psalmthreetone\psalmthreeend}{\antthreetex}{\antthreeinitial}
-	\medskip
-	\needspace{3\baselineskip}
-	\printpsalm{4}{\psalmfournum}{\psalmfourtone\psalmfourend}{\antfourtex}{\antfourinitial}
-	\medskip
-	\ifx\psalmfivenum\undefined{
-		\ifx\antfivetex\undefined{%then it is a different antiphon for each
-			\ifx\definevesperspropersalt\undefined\else{
-				\definevesperspropersalt
-				\ifx\vesperspropersaltnote\undefined\else
-					\oldneedspace{3\baselineskip}
-					\noindent\printnote{\vesperspropersaltnote}
-				\fi
-				\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
-			}\fi
-			\ifx\definevesperspropers\undefined\else{
-				\definevesperspropers
-				\ifx\vesperspropersnote\undefined\else
-					\oldneedspace{3\baselineskip}
-					\noindent\printnote{\vesperspropersnote}
-				\fi
-				\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
-			}\fi
-		}\else{%they share the same antiphon
-			\ifx\definevesperspropersalt\undefined\else{
-				\definevesperspropersalt
-				\ifx\vesperspropersaltnote\undefined\else
-					\let\oldprepsalmtitle=\prepsalmtitlefive
-					\def\prepsalmtitlefive{
-						\smallskip
-						\oldneedspace{3\baselineskip}
-						\noindent\printnote{\vesperspropersaltnote}
-
-						\ifx\oldprepsalmtitle\undefined\else\oldprepsalmtitle\fi
-					}
-				\fi
-				\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
-			}\fi
-			\def\onlyoneant{T}
-			\ifx\definevesperspropers\undefined\else{
-				\definevesperspropers
-				\ifx\vesperspropersnote\undefined\else
-					\oldneedspace{3\baselineskip}
-					\noindent\printnote{\vesperspropersnote}
-				\fi
-				\let\oldprepsalmtitle=\prepsalmtitlefive
-				\def\prepsalmtitlefive{\def\onlyoneant{F}\ifx\oldprepsalmtitle\undefined\else\oldprepsalmtitle\fi}
-				\def\printrepeatantiphon{T}
-				\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
-			}\fi
-		}\fi
-	}\else{
-		\printpsalm{5}{\psalmfivenum}{\psalmfivetone\psalmfiveend}{\antfivetex}{\antfiveinitial}
-	}\fi
-}
 \let\printhymn=\undefined
+\newcommand{\printpsalmtitle}[1]{%
+  {\addfontfeature{Numbers=Lining}\centering Psalm #1\\}%
+}
+\newcommand{\printtercepsalms}[1]{
+  % #1 is psalm tone like 2D
+  \printpsalmtitle{118. III.}
+
+  %print first verse in chant
+  {
+    \gresetinitiallines{0}
+    \grechangedim{interwordspacetext}{0.15 cm plus 0.15 cm minus 0.10 cm}{scalable}%
+    \gregorioscore{psalms/Psalm118.3-#1}
+    \input{../gsp-spaces}
+    \greseteolcustos{auto}
+  }
+  \vspace{0pt plus 4pt minus 8pt}
+  \setlength\parsep{0pt}%
+  \setlength\topsep{0pt}%
+  \setlength\partopsep{0pt}%
+  \setlength\multicolsep{0pt}%
+  \setlength{\columnsep}{18pt}
+  \setlength{\columnseprule}{.4pt}
+  \selectlanguage{latin}
+  \begin{multicols}{2}
+  \begin{psalmverses}[1]
+  \input{psalms/Psalm118.3-#1-verses}
+  \end{psalmverses}
+  %\medskip
+  \printpsalmtitle{118. IV.}
+  \begin{psalmverses}
+  \input{psalms/Psalm118.4-#1-verses}
+  \end{psalmverses}
+  %\medskip
+  \printpsalmtitle{118. V.}
+  \begin{psalmverses}
+  \input{psalms/Psalm118.5-#1-verses}
+  \end{psalmverses}
+  \setlength{\parindent}{6ex}
+  \IfStrEq{#1}{no-tone}{}{%if not no-tone
+
+    \emph{Repeat antiphon.}%
+  }
+  \end{multicols}
+}
+\newcommand{\printtercepsalmstranslation}{
+  \setlength\parsep{0pt}%
+  \setlength\topsep{0pt}%
+  \setlength\partopsep{0pt}%
+  \setlength\multicolsep{0pt}%
+  \setlength{\columnsep}{18pt}
+  \setlength{\columnseprule}{.4pt}
+  \selectlanguage{american}
+  \begin{multicols}{2}
+  \printpsalmtitle{118. III.}
+  \begin{psalmverses}
+  \input{psalms/Psalm118.3-verses-en}
+  \end{psalmverses}
+  \medskip
+  \printpsalmtitle{118. IV.}
+  \begin{psalmverses}
+  \input{psalms/Psalm118.4-verses-en}
+  \end{psalmverses}
+  \medskip
+  \printpsalmtitle{118. V.}
+  \begin{psalmverses}
+  \input{psalms/Psalm118.5-verses-en}
+  \end{psalmverses}
+  \end{multicols}
+}
+\def\printbenedicamusdomino{
+  \noindent\emph{Benedicamus Domino}, p. \pageref{benedicamus-domino-sunday}.
+}
 \newcommand{\printterce}[3][.]{
 	{
 		\grechangestaffsize{15}
@@ -407,7 +360,7 @@
 
 		\deusinadjutorium{}%
 		\ifx\printhymn\undefined%
-	      , \emph{Hymn}, page \pageref{hymn-sunday}
+	      , \emph{Hymn}, page \pageref{hymn-sunday}.
 
     	  \medskip
 		\else%
@@ -486,7 +439,9 @@
 	\thispagestyle{empty}
 	\noindent{}Terce with Gregorian Chant for Sundays \& Holy Days: \emph{newly typeset, based on \emph{The Liber Usualis}, edited by the Benedictines of Solesmes (Desclee Company, 1961).}
 
-	\bigskip{}\noindent{}Many thanks to Elie Roux for creating Gregorio, to all the people answering questions on the Gregorio forums, to Olivier Berton for creating GregoBase (http://gregobase.selapa.net) which makes it much easier to find all the chant that Andrew Hinkley and others have contributed to the public domain.  Also many thanks to my brother Benjamin, whose website (http://bbloomf.github.io/jgabc) makes it incredibly easy to typeset the psalms and substantially easier than otherwise to typeset Gregorian chant with Gregorio.
+	\bigskip{}
+	\noindent{}%
+	Elie Roux's Gregorio (https://gregorio-project.github.io), Olivier Berton's GregoBase (http://gregobase.selapa.net), and my brother Benjamin's chant tools (http://bbloomf.github.io/jgabc) were indispensible in the creation of this book.
 
 	\begin{flushright}
 	\emph{Albert Bloomfield}\\
@@ -498,7 +453,7 @@
 	\vfill
 %editions
 	\bigskip{}\noindent{}%
-	First edition, 9 December 2020.
+	First edition, 23 June 2021.
 
 	\hangindent=1em % indent all subsequent lines
     \bigskip
@@ -531,7 +486,7 @@
 
 %\include{inc-common-terce}
 \ifthenelse{\boolean{testrun}}{
-
+	\input{inc-proper-of-saints}
 }{
 
 	\clearpage
@@ -551,6 +506,10 @@
 	\input{inc-pentecost}
 
 	\input{inc-timeafterpentecost}
+
+	\input{inc-proper-of-saints}
+
+	\input{inc-appendix}
 
 }
 \end{document}

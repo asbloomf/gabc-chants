@@ -1,0 +1,40 @@
+{
+  \section{29 June: Ss Peter \& Paul}
+  \def\printshortresp{%
+    \label{shortresp-jun29}%
+    {\def\gabcfolder{.}
+      \printgabc{Short}{Resp.}{I}{rb--in_omnem_terram--solesmes}
+    
+      \translation[]{\Vbar{}~Into all the earth * hath gone forth their sound.
+        \Rbar{}~Into\dots
+        \Vbar{}~And their words unto the ends of the world.
+        \Rbar{}~hath gone forth their sound.
+        \Vbar{}~Glory be\dots{}
+        \Rbar{}~Into\dots{}
+      }
+    }
+
+    \bigskip
+    \gresetinitiallines{0}\label{vr-jun29}
+    \gregorioscore{vr-constitues}
+    \let\myhwidth\relax
+    \let\myhhwidth\relax
+    \newlength{\myhwidth}
+    \settowidth{\myhwidth}{Dómin}
+    \newlength{\myhhwidth}
+    \settowidth{\myhhwidth}{rr}
+    \addtolength{\myhhwidth}{-\myhwidth}
+    \def\myhspace{\hspace{2.5ex}}
+    \begin{nstabbing}
+    %\>\Rbar{}~Et\myhspace{} omnes\myhspace{} reges\myhspace{} terræ\myhspace{} glóriam \>\hspace{\myhhwidth}tuam.
+    \>\Rbar{}~Mémores\myhspace{} erunt\myhspace{} nóminis\myhspace{} tui, \>\hspace{\myhhwidth}Dómine.
+    \end{nstabbing}
+
+    \translation[]{\Vbar{}~Thou shalt make them princes over all the earth.\\
+      \Rbar{}~They shall remember thy name, O Lord.}
+
+    \bigskip
+  }
+  \input{../June29-StsPeterAndPaul/inc-StsPeterAndPaul}
+  \printterce[../June29-StsPeterAndPaul]{inc-StsPeterAndPaul-1Vespers}{jun29}
+}

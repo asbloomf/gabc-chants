@@ -1,0 +1,40 @@
+{
+  \section{1 May: St Joseph the Worker}
+  \def\printshortresp{%
+    \label{shortresp-may1}%
+    {\def\gabcfolder{.}
+      \printgabc{Short}{Resp.}{G}{rb--gloria_et_exemplar--solesmes_1961}
+    
+      \translation[]{\Vbar{}~Glory and example of workers, holy Joseph. Alleluia, Alleluia.
+        \Rbar{}~Glory\dots{}
+        \Vbar{}~Whom the Son of God willed to obey.
+        \Rbar{}~Alleluia, alleluia.
+        \Vbar{}~Glory be\dots{}
+        \Rbar{}~Glory\dots{}
+      }
+    }
+
+    \bigskip
+    \gresetinitiallines{0}\label{vr-may1}
+    \gregorioscore{vr-o-magnum}
+    \let\myhwidth\relax
+    \let\myhhwidth\relax
+    \newlength{\myhwidth}
+    \settowidth{\myhwidth}{allelui}
+    \newlength{\myhhwidth}
+    \settowidth{\myhhwidth}{i}
+    \addtolength{\myhhwidth}{-\myhwidth}
+    \def\myhspace{\hspace{1ex}}
+    \begin{nstabbing}
+    %\>\Rbar{}~Et\myhspace{} omnes\myhspace{} reges\myhspace{} terræ\myhspace{} glóriam \>\hspace{\myhhwidth}tuam.
+    \>\Rbar{}~Quem\myhspace{} Christus\myhspace{} sanctificávit, \>\hspace{\myhhwidth}allelúia.
+    \end{nstabbing}
+
+    \translation[]{\Vbar{}~O great dignity of labour, alleluia.\\
+      \Rbar{}~Which Christ did sanctify, alleluia.}
+
+    \bigskip
+  }
+
+  \printterce[../May1-StJosephWorker]{inc-StJosephWorker}{may1}
+}

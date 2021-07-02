@@ -1,0 +1,55 @@
+{
+  \section{2 February: Purification of Our Lady}
+  \def\printhymn{
+    , \emph{Hymn 3}, page \pageref{hymn-bvm}.
+
+    \medskip
+  }
+  \def\printshortresp{%
+    \label{shortresp-bvm}%
+    {\def\gabcfolder{.}
+      \printgabc{Short}{Resp.}{S}{rb--specie_tua--solesmes_1961}
+    
+      \translation[]{\Vbar{}~In thy comeliness and in thy beauty.
+        \Rbar{}~In thy\dots{}
+        \Vbar{}~Go forward, fare prosperously, and reign.
+        \Rbar{}~In thy beauty.
+        \Vbar{}~Glory be\dots{}
+        \Rbar{}~In thy\dots{}
+      }
+      \medskip
+      {\centering In Paschal Time.\par}
+      \printgabc{Short}{Resp.}{S}{rb--specie_tua_(paschal_time)--solesmes_1961}
+    }
+
+    \bigskip
+    \gresetinitiallines{0}\label{vr-bvm}
+    \gregorioscore{vr-adjuvabit-eam}
+    \let\myhwidth\relax
+    \let\myhhwidth\relax
+    \let\myhwidthb\relax
+    \let\myhhwidthb\relax
+    \newlength{\myhwidth}
+    \settowidth{\myhwidth}{commovébit}
+    \newlength{\myhhwidth}
+    \settowidth{\myhhwidth}{}
+    \addtolength{\myhhwidth}{-\myhwidth}
+    \newlength{\myhwidthb}
+    \settowidth{\myhwidthb}{\emph{T. P.} Allelui}
+    \newlength{\myhhwidthb}
+    \settowidth{\myhhwidthb}{i}
+    \addtolength{\myhhwidthb}{-\myhwidthb}
+    \def\myhspace{\hspace{3.5ex}}
+    \begin{nstabbing}
+    %\>\Rbar{}~Et \myhspace{} omnes \myhspace{} reges \myhspace{} terræ \myhspace{} glóriam \>\hspace{\myhhwidth}tuam.
+    \>\Rbar{}~Deus in médio ejus, non \>\hspace{\myhhwidth}commovébitur. \>\hspace{\myhhwidthb}\emph{T. P.} Alleluia.
+    \end{nstabbing}
+
+    \translation[]{\Vbar{}~God shall help her with His countenance.\\
+      \Rbar{}~God is in the midst of her, she shall not be moved.}
+
+    \bigskip
+  }
+
+  \printterce[../February2-PurificationOfBlessedVirginMary]{inc-purification}{feb2}
+}

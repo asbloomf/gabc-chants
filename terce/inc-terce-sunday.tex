@@ -1,50 +1,3 @@
-\makeatletter  
-\newcounter{score}
-\newcounter{tabstop}[score]
-\newcommand{\grealign}{%
-  \@bsphack%
-  \ifgre@boxing\else%
-    \kern\gre@dimen@begindifference%
-    \stepcounter{tabstop}%
-    \expandafter\zsavepos{stop-\thescore-\thetabstop}%
-    \kern-\gre@dimen@begindifference%
-  \fi%
-  \@esphack%
-}
-
-\newcommand{\setstops}{%
-  \gdef\nstabbing@stops{%
-    \checkoddpage
-    \hspace*{-\ifoddpage\oddsidemargin\else\evensidemargin\fi}\hspace{-1in}%
-    \hspace*{\zposx{stop-\thescore-1} sp}\=%
-  }%
-  \count@=\@ne
-  \loop\ifnum\count@<\value{tabstop}%
-    \begingroup\edef\x{\endgroup
-      \noexpand\g@addto@macro\noexpand\nstabbing@stops{%
-        \noexpand\hspace{-\noexpand\zposx{stop-\thescore-\the\count@} sp}%
-        \noexpand\hspace{\noexpand\zposx{stop-\thescore-\the\numexpr\count@+1} sp}\noexpand\=%
-      }%
-    }\x
-    \advance\count@\@ne
-  \repeat
-  \nstabbing@stops\kill
-}
-\makeatother
-
-\newenvironment{nstabbing}
-  {\setlength{\topsep}{0pt}%
-   \setlength{\partopsep}{0pt}%
-   \tabbing%
-   \setstops}
-  {\endtabbing\stepcounter{score}}
-
-\def\beginpsalmcols{\begin{parcolumns}[rulebetween]{2}}
-\def\endpsalmcols{\end{parcolumns}}
-\newcommand{\printpsalmtitle}[1]{%
-  {\addfontfeature{Numbers=Lining}\centering Psalm #1\\}%
-}
-
 \newcommand{\printpsalmwithtranslation}[3]{
 	% #1 psalm number
 	% #2 ending
@@ -140,73 +93,6 @@
     \end{parcolumns}
     }
 }
-\newcommand{\printtercepsalms}[1]{
-  % #1 is psalm tone like 2D
-  \printpsalmtitle{118. III.}
-
-  %print first verse in chant
-  {
-    \gresetinitiallines{0}
-    \grechangedim{interwordspacetext}{0.15 cm plus 0.15 cm minus 0.10 cm}{scalable}%
-    \gregorioscore{psalms/Psalm118.3-#1}
-    \input{../gsp-spaces}
-    \greseteolcustos{auto}
-  }
-  \vspace{0pt plus 4pt minus 8pt}
-  \setlength\parsep{0pt}%
-  \setlength\topsep{0pt}%
-  \setlength\partopsep{0pt}%
-  \setlength\multicolsep{0pt}%
-  \setlength{\columnsep}{18pt}
-  \setlength{\columnseprule}{.4pt}
-  \selectlanguage{latin}
-  \begin{multicols}{2}
-  \begin{psalmverses}[1]
-  \input{psalms/Psalm118.3-#1-verses}
-  \end{psalmverses}
-  %\medskip
-  \printpsalmtitle{118. IV.}
-  \begin{psalmverses}
-  \input{psalms/Psalm118.4-#1-verses}
-  \end{psalmverses}
-  %\medskip
-  \printpsalmtitle{118. V.}
-  \begin{psalmverses}
-  \input{psalms/Psalm118.5-#1-verses}
-  \end{psalmverses}
-  \setlength{\parindent}{6ex}
-  \IfStrEq{#1}{no-tone}{}{%if not no-tone
-
-    \emph{Repeat antiphon.}%
-  }
-  \end{multicols}
-}
-\newcommand{\printtercepsalmstranslation}{
-  \setlength\parsep{0pt}%
-  \setlength\topsep{0pt}%
-  \setlength\partopsep{0pt}%
-  \setlength\multicolsep{0pt}%
-  \setlength{\columnsep}{18pt}
-  \setlength{\columnseprule}{.4pt}
-  \selectlanguage{american}
-  \begin{multicols}{2}
-  \printpsalmtitle{118. III.}
-  \begin{psalmverses}
-  \input{psalms/Psalm118.3-verses-en}
-  \end{psalmverses}
-  \medskip
-  \printpsalmtitle{118. IV.}
-  \begin{psalmverses}
-  \input{psalms/Psalm118.4-verses-en}
-  \end{psalmverses}
-  \medskip
-  \printpsalmtitle{118. V.}
-  \begin{psalmverses}
-  \input{psalms/Psalm118.5-verses-en}
-  \end{psalmverses}
-  \end{multicols}
-}
-
 {
   \label{sunday}
   \chapter{Sunday at Terce}
@@ -266,13 +152,18 @@ this Hour to Thee.}
 
   {\centering 1.~On Ordinary Sundays.\par}
 
-  \printgabc{2.}{}{N}{hy--nunc_sancte_nobis_(in_dominicis_per_annum)--solesmes_1961}
+  \printgabc{Hymn.}{2.}{N}{hy--nunc_sancte_nobis_(in_dominicis_per_annum)--solesmes_1961}
   \bigskip
 
-  \oldneedspace{10\baselineskip}
+  %\oldneedspace{10\baselineskip}
   {\centering 2.~On Solemn Feasts.\par}
 
-  \printgabc{8.}{}{N}{hy--nunc_sancte_nobis_(in_festis)--solesmes_1961}
+  \printgabc{Hymn.}{8.}{N}{hy--nunc_sancte_nobis_(in_festis)--solesmes_1961}
+  \bigskip
+
+  {\centering 3.~On Feasts of the Blessed Virgin Mary.\par}\label{hymn-bvm}
+
+  \printgabc{Hymn.}{2.}{N}{hy--nunc_sancte_nobis_(in_festis_bmv)--solesmes_1961}
 
   \begin{multicols}{2}
   \begin{psalmverses}

@@ -1,0 +1,57 @@
+{
+  \section{Last Sunday in October: Jesus Christ, King}
+  \def\gabcfolder{.}
+  \def\printhymn{
+
+    {\centering Hymn.\par}
+
+    \printgabc{1.}{}{N}{hy--nunc_sancte_nobis_(in_festo_christi_regis)--solesmes_1961}
+
+    \bigskip
+  }
+  \def\printshortresp{%
+    \label{shortresp-oct-last-sunday}%
+    {\def\gabcfolder{.}
+      \printgabc{Short}{Resp.}{D}{rb--data_est_mihi--solesmes_1961}
+    
+      \translation[]{\Vbar{}~Given to me is All power.
+        \Rbar{}~Given to me\dots{}
+        \Vbar{}~In heaven and in earth.
+        \Rbar{}~All power.
+        \Vbar{}~Glory be\dots{}
+        \Rbar{}~Given to me\dots{}
+      }
+    }
+
+    \bigskip
+    \gresetinitiallines{0}\label{vr-oct-last-sunday}
+    \gregorioscore{vr-afferte-domino-familiae}
+    \let\myhwidth\relax
+    \let\myhhwidth\relax
+    \newlength{\myhwidth}
+    \settowidth{\myhwidth}{impéri} % portion of word in response before last vowel
+    \newlength{\myhhwidth}
+    \settowidth{\myhhwidth}{r} % portion of last syllable in versicle before vowel
+    \addtolength{\myhhwidth}{-\myhwidth}
+    \def\myhspace{\hspace{0.3ex}}
+    \begin{nstabbing}
+    %\>\Rbar{}~Et\myhspace{} omnes\myhspace{} reges\myhspace{} terræ\myhspace{} glóriam \>\hspace{\myhhwidth}tuam.
+    \>\Rbar{}~Afférte\myhspace{} Dómino\myhspace{} glóriam\myhspace{} et \>\hspace{\myhhwidth}impérium.
+    \end{nstabbing}
+
+    \translation[]{\Vbar{}~Bring ye to the Lord, O ye families of the nations.\\
+      \Rbar{}~Bring ye to the Lord glory and empire.}
+
+    \bigskip
+  }
+  \newcommand{\anttwotex}{an--dedit_ei_dominus_potestatem--solesmes_1961}
+  \newcommand{\anttwoinitial}{D}
+  \newcommand{\anttwotranslation}{The Lord gave him power and glory, and a kingdom; and all peoples, tribes and tongues shall serve him.}
+  \definepsalm{2}{109}{1}{f}
+  \newcommand{\chaptertext}{\dropcap{latin}{Fratres~: Grátias ágimus Deo Patri, qui dignos nos fecit in partem sortis sanctórum in} \textbf{lú}\-mi\-ne~:~\gredagger{} qui erípuit nos de potestáte \emph{te\-ne}\-\textbf{brá}\-rum,~* et tránstulit in regnum Fílii dilectiónis \textbf{su}\-æ.}
+  \newcommand{\chaptertranslation}{Brethren: We give thanks to God the Father, who hath made us worthy to be partakers of the lot of the saints in light, who hath delivered us from the power of darkness, and hath translated us into the kingdom of the Son of His love.}
+  \newcommand{\collect}{Omnípotens sempitérne Deus, qui in dilécto Fílio tuo, universórum Rege, ómnia instauráre voluísti~:~† concéde propítius; ut cunctæ famíliæ Géntium, peccáti vúlnere disgregátæ,~* ejus suavíssimo subdántur império~: Qui tecum vivit et regnat.}
+  \newcommand{\collecttranslation}{Almighty and eternal God, who in Thy beloved Son, the King of the whole world, hast willed to restore all things, mercifully grant that all the families of nations now kept apart by the wound of sin, may be brought under the sweet yoke of His rule: Who with Thee liveth and reigneth.}
+
+  \printterce{}{oct-last-sunday}
+}

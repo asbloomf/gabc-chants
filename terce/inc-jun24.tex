@@ -1,0 +1,40 @@
+{
+  \section{24 June: Nativity of St John the Baptist}
+  \def\printshortresp{%
+    \label{shortresp-jun24}%
+    {\def\gabcfolder{.}
+      \printgabc{Short}{Resp.}{F}{rb--fuit_homo_missus--solesmes}
+    
+      \translation[]{\Vbar{}~There was a man sent from God.
+        \Rbar{}~There was\dots{}
+        \Vbar{}~Whose name was John.
+        \Rbar{}~Sent from God.
+        \Vbar{}~Glory be\dots{}
+        \Rbar{}~There was\dots{}
+      }
+    }
+
+    \bigskip
+    \gresetinitiallines{0}\label{vr-jun24}
+    \gregorioscore{vr-inter-natos}
+    \let\myhwidth\relax
+    \let\myhhwidth\relax
+    \newlength{\myhwidth}
+    \settowidth{\myhwidth}{Baptíst}
+    \newlength{\myhhwidth}
+    \settowidth{\myhhwidth}{j}
+    \addtolength{\myhhwidth}{-\myhwidth}
+    \def\myhspace{\hspace{1ex}}
+    \begin{nstabbing}
+    %\>\Rbar{}~Et\myhspace{} omnes\myhspace{} reges\myhspace{} terræ\myhspace{} glóriam \>\hspace{\myhhwidth}tuam.
+    \>\Rbar{}~Joánne \>\hspace{\myhhwidth}Baptísta.
+    \end{nstabbing}
+
+    \translation[]{\Vbar{}~Among them that are born of women there hath not risen a greater.\\
+      \Rbar{}~Than John the Baptist.}
+
+    \bigskip
+  }
+  \input{../June24-BirthOfJohnTheBaptist/inc-BirthOfJohnTheBaptist-2Vespers}
+  \printterce[../June24-BirthOfJohnTheBaptist]{inc-BirthOfJohnTheBaptist}{jun24}
+}

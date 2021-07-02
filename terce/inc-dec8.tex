@@ -1,0 +1,45 @@
+{
+  \section{8 December: Immaculate Conception}
+  \label{immaculateconception}
+  \def\printhymn{
+    , \emph{Hymn 3}, page \pageref{hymn-bvm}.
+
+    \medskip
+  }
+  \def\printshortresp{%
+    \label{shortresp-dec8}%
+    {\def\gabcfolder{.}
+      \printgabc{Short}{Resp.}{D}{rb--deus_omnipotens--solesmes_1961}
+    }
+    \translation[]{\Vbar{}~It is Almighty God That girdeth me with strength.
+      \Rbar{}~It is\dots{}
+      \Vbar{}~And maketh my way perfect.
+      \Rbar{}~That girdeth me with strength.
+      \Vbar{}~Glory be\dots{}
+      \Rbar{}~It is\dots{}
+    }
+
+    \bigskip
+    \gresetinitiallines{0}\label{vr-dec8}
+    \gregorioscore{vr-in-hoc-cognovi}
+    \let\myhwidth\relax
+    \let\myhhwidth\relax
+    \newlength{\myhwidth}
+    \settowidth{\myhwidth}{m}
+    \newlength{\myhhwidth}
+    \settowidth{\myhhwidth}{m}
+    \addtolength{\myhhwidth}{-\myhwidth}
+    \def\myhspace{\hspace{3.5ex}}
+    \begin{nstabbing}
+    %\>\Rbar{}~Et \myhspace{} omnes \myhspace{} reges \myhspace{} terræ \myhspace{} glóriam \>\hspace{\myhhwidth}tuam.
+    \>\Rbar{}~Quóniam non gaudébit inimícus meus super \>\hspace{\myhhwidth}me.
+    \end{nstabbing}
+
+    \translation[]{\Vbar{}~By this I know that Thou favourest me.\\
+      \Rbar{}~Because mine enemy shall not triumph over me.}
+
+    \bigskip
+  }
+
+  \printterce[../December8-ImmaculateConception]{inc-ImmaculateConceptionVespers}{dec8}
+}
