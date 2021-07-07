@@ -163,3 +163,18 @@ p1724, short resp from common of two or more martyrs, p1154
 9 nov
 from common of dedication
 p1244
+
+
+hymns
+7 - sunday & feasts
+8 - feasts of bvm
+15 - advent
+32 - christmas
+44 - epiphany
+*47 - holy family
+62 - lent
+75 - passion
+86 - eastertide
+92 - ascensiontide
+97 - pentecost
+*156 - christ the king

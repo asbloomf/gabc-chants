@@ -158,7 +158,7 @@
 \def\beginpsalmcols{\begin{parcolumns}[rulebetween]{2}}
 \def\endpsalmcols{\end{parcolumns}}
 
-\newcommand{\deusinadjutorium}{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, p.~\pageref{deusinadjutorium}}}
+\newcommand{\deusinadjutorium}{\noindent\printnote{\emph{\Vbar~Deus in adjutórium, p.~\pageref{deusinadjutorium}}}}
 %\newcommand{\deusinadjutoriumsolemn}{\noindent\printnote{\Vbar~\emph{Deus in adjutórium}, p.~\pageref{deusinadjutoriumsolemn}.}}
 \newcommand{\printcollect}[2]{
 	\ifx\undefined\begincollectcols\def\begincollectcols{\begin{parcolumns}[rulebetween]{2}}\fi
@@ -178,12 +178,12 @@
 }
 \newcommand{\benedicamusdominoreference}[1]{%
 	\ifthenelse{\boolean{includebenedicamusdominoreferences}}{
-		\Vbar~\emph{Benedicámus Dómino \IfInteger{#1}{#1}{\csname benedicamusdominoname#1\endcsname}}, page \pageref{benedicamusdomino-#1}.
+		\Vbar~\emph{Benedicámus Dómino \IfInteger{#1}{#1}{\csname benedicamusdominoname#1\endcsname}}, p.~\pageref{benedicamusdomino-#1}.
 	}{}
 }
 \newcommand{\benedicamusdominoreferencelentoreaster}{%
 	\ifthenelse{\boolean{includebenedicamusdominoreferences}}{
-		In Lent, \Vbar~\emph{Benedicámus Dómino \benedicamusdominonamelent}, page \pageref{benedicamusdomino-lent}, or in Easter, \emph{\benedicamusdominonameeaster}, page \pageref{benedicamusdomino-easter}.
+		In Lent, \Vbar~\emph{Benedicámus Dómino \benedicamusdominonamelent}, p.~\pageref{benedicamusdomino-lent}, or in Easter, \emph{\benedicamusdominonameeaster}, page \pageref{benedicamusdomino-easter}.
 	}{}
 }
 \newcommand{\benedicamusdominomaster}[1]{
@@ -316,10 +316,15 @@
   \input{psalms/Psalm118.5-#1-verses}
   \end{psalmverses}
   \setlength{\parindent}{6ex}
-  \IfStrEq{#1}{no-tone}{}{%if not no-tone
+  \ifx\printrepeatantiphon\undefined
+	  \IfStrEq{#1}{no-tone}{}{%if not no-tone
 
-    \emph{Repeat antiphon.}%
-  }
+	    \emph{Repeat antiphon.}%
+	  }
+	\else
+	
+		\printrepeatantiphon
+	\fi
   \end{multicols}
 }
 \newcommand{\printtercepsalmstranslation}{
@@ -333,22 +338,22 @@
   \begin{multicols}{2}
   \printpsalmtitle{118. III.}
   \begin{psalmverses}
-  \input{psalms/Psalm118.3-verses-en}
+  \emph{\input{psalms/Psalm118.3-verses-en}}
   \end{psalmverses}
   \medskip
   \printpsalmtitle{118. IV.}
   \begin{psalmverses}
-  \input{psalms/Psalm118.4-verses-en}
+  \emph{\input{psalms/Psalm118.4-verses-en}}
   \end{psalmverses}
   \medskip
   \printpsalmtitle{118. V.}
   \begin{psalmverses}
-  \input{psalms/Psalm118.5-verses-en}
+  \emph{\input{psalms/Psalm118.5-verses-en}}
   \end{psalmverses}
   \end{multicols}
 }
 \def\printbenedicamusdomino{
-  \noindent\emph{Benedicamus Domino}, p. \pageref{benedicamus-domino-sunday}.
+  \noindent\emph{Benedicamus Domino}, p.~\pageref{benedicamus-domino-sunday}.
 }
 \newcommand{\printterce}[3][.]{
 	{
@@ -360,7 +365,7 @@
 
 		\deusinadjutorium{}%
 		\ifx\printhymn\undefined%
-	      , \emph{Hymn}, page \pageref{hymn-sunday}.
+	      , \emph{Hymn 1}, p.~\pageref{hymn-sunday}.
 
     	  \medskip
 		\else%
@@ -486,7 +491,7 @@
 
 %\include{inc-common-terce}
 \ifthenelse{\boolean{testrun}}{
-	\input{inc-proper-of-saints}
+	\input{inc-terce-sunday}
 }{
 
 	\clearpage

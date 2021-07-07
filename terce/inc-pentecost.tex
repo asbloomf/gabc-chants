@@ -4,9 +4,7 @@
   \section{Pentecost Sunday}
   {
     \def\printhymn{
-
-      {\centering Hymn.\par}\label{hymn-pentecost}
-
+      \label{hymn-pentecost}
       {\def\gabcfolder{../Pentecost}
         \printgabc{Hymn}{8.}{V}{Hymn-VeniCreatorSpiritus}
 
@@ -96,6 +94,11 @@
     \printterce[../Pentecost]{inc-PentecostVespers}{pentecost}
   }
   {
+    \def\printhymn{%
+      , \emph{Hymn 2}, p.~\pageref{hymn-feast}.
+
+      \medskip
+    }
     \def\printshortresp{%
       \label{shortresp-trinity}%
       {\def\gabcfolder{.}

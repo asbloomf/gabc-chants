@@ -96,7 +96,9 @@
 {
   \label{sunday}
   \chapter{Sunday at Terce}
-  \section{Sunday at Terce throughout the year}
+  \phantomsection
+  \sectionmark{Sunday at Terce throughout the year}
+  \addcontentsline{toc}{section}{Sunday at Terce throughout the year}
 
   {\centering Oratio ante officium.\par}
   {\centering \emph{Aperi. Pater. Ave.}\par}
@@ -129,34 +131,36 @@ this Hour to Thee.}
   \printgabc{\Vbar}{}{D}{deus-in-adjutorium}\label{deusinadjutorium}
 
   \medskip
-  {\centering Hymn.\par}\label{hymn-sunday}%
+  {\centering Hymn.\par}%
 
-  \def\dotting{\hfill%\leaders\hbox to 1em{\hfil.\hfil}\hfill
-    }%
+  \def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
+  %\def\dotting{\hfill}
   \setlength\parsep{0pt}%
   \setlength\topsep{0pt}%
   \setlength\partopsep{0pt}%
   \setlength\multicolsep{0pt}%
   \begin{multicols}{2}%
-  \noindent{}In Advent,\dotting \emph{p.~\pageref{hymn-advent}}\\
-  Christmas,\dotting \emph{p.~\pageref{hymn-christmas}}\\
-  Epiphany,\dotting \emph{p.~\pageref{hymn-epiphany}}\\
-  In Lent,\dotting \emph{p.~\pageref{hymn-lent}}\\
-  In Passiontide,\dotting \emph{p.~\pageref{hymn-passiontide}}\\
-  In Paschaltide,\dotting \emph{p.~\pageref{hymn-paschaltide}}\\
-  Ascension,\dotting \emph{p.~\pageref{hymn-ascension}}\\
-  Pentecost,\dotting \emph{p.~\pageref{hymn-pentecost}}%\\
-  %Corpus Christi,\dotting \emph{p.~\pageref{hymn-corpus-christi}}\\
-  %Sacred Heart,\dotting \emph{p.~\pageref{hymn-sacred-heart}}
+  \noindent{}\emph{In Advent},\dotting p.~\pageref{hymn-advent}\\
+  \emph{Christmas},\dotting p.~\pageref{hymn-christmas}\\
+  \emph{Epiphany},\dotting p.~\pageref{hymn-epiphany}\\
+  \emph{Holy Family},\dotting p.~\pageref{hymn-holyfamily}\\
+  \emph{In Lent},\dotting p.~\pageref{hymn-lent}\\
+  \emph{In Passiontide},\dotting p.~\pageref{hymn-passiontide}\\
+  \emph{In Paschaltide},\dotting p.~\pageref{hymn-paschaltide}\\
+  \emph{Ascension},\dotting p.~\pageref{hymn-ascension}\\
+  \emph{Pentecost},\dotting p.~\pageref{hymn-pentecost}\\
+  \emph{Christ the King},\dotting p.~\pageref{hymn-oct-last-sunday}%\\
+  %\emph{Corpus Christi},\dotting p.~\pageref{hymn-corpus-christi}\\
+  %\emph{Sacred Heart},\dotting p.~\pageref{hymn-sacred-heart}
   \end{multicols}%
 
-  {\centering 1.~On Ordinary Sundays.\par}
+  {\centering 1.~On Ordinary Sundays.\par}\label{hymn-sunday}
 
   \printgabc{Hymn.}{2.}{N}{hy--nunc_sancte_nobis_(in_dominicis_per_annum)--solesmes_1961}
   \bigskip
 
   %\oldneedspace{10\baselineskip}
-  {\centering 2.~On Solemn Feasts.\par}
+  {\centering 2.~On Solemn Feasts.\par}\label{hymn-feast}
 
   \printgabc{Hymn.}{8.}{N}{hy--nunc_sancte_nobis_(in_festis)--solesmes_1961}
   \bigskip
@@ -193,7 +197,9 @@ Amen.
 % print translation
   \translation[]{Alleluia, Lead me into the path of thy commandments, alleluia, alleluia.}
 
-  \printtercepsalms{2D}%
+  { \def\printrepeatantiphon{\emph{Repeat antiphon, \emph{p.~\pageref{ant2-sunday}.}}}
+    \printtercepsalms{2D}%
+  }
 
   \printtercepsalmstranslation{}
 
@@ -205,12 +211,12 @@ Amen.
 
 % print antiphon
 %    \printgabc[\preant]{\antlineone}{\antlinetwo}{\antinitial}{\anttex}
-  \medskip
+  \medskip\oldneedspace{8\baselineskip}\label{ant2-sunday}
   \printgabc{Ant.}{2. D}{A}{an--alleluia._(sund._at_terce)--solesmes}
 % print translation
   %\translation[]{Alleluia, Lead me into the path of thy commandments, alleluia, alleluia.}
 
-\medskip
+\medskip\oldneedspace{6\baselineskip}
 \printchapternew{1. John 4.}{Deus cáritas}{est~:~\dag{} et qui manet in caritáte, in Deo manet,~* et Deus in eo.}{God is charity: and he that abideth in charity, abideth in God, and God in him.}
 
 \medskip\label{shortresp-sunday}
@@ -246,17 +252,16 @@ Amen.
 
 \bigskip
     \def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
+    \begin{multicols}{2}%
     %\printnote{Advent,\dotting \emph{p.~\pageref{advent1-collect} to \pageref{advent4-collect}}}
 
     %\printnote{Christmas,\dotting \emph{p.~\pageref{christmas-eve-collect} to \pageref{holyfamily-collect}}}
 
-    \printnote{Time after Epiphany,\dotting \emph{p.~\pageref{epiphany2-collect} to \pageref{epiphany6-collect}}}
-
-    \printnote{Septuagesima,\dotting \emph{p.~\pageref{septuagesima-collect} to \pageref{quinquagesima-collect}}}
-
-    %\printnote{Easter to Pentecost,\dotting \emph{p.~\pageref{easter1-collect} to \pageref{pentecost-collect}}}
-
-    \printnote{Time after Pentecost,\dotting \emph{p.~\pageref{pentecost2-collect} to \pageref{pentecost24-collect}}}
+    \noindent\emph{Time after Epiphany},\dotting p.~\pageref{epiphany2-collect} to \pageref{epiphany6-collect}\\
+    \emph{Septuagesima},\dotting p.~\pageref{septuagesima-collect} to \pageref{quinquagesima-collect}\\
+    %\emph{Easter to Pentecost},\dotting p.~\pageref{easter1-collect} to \pageref{pentecost-collect}\\
+    \emph{Time after Pentecost},\dotting p.~\pageref{pentecost2-collect} to \pageref{pentecost24-collect}
+    \end{multicols}
 
 \bigskip
 \printvrwithtranslation{}
