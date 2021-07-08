@@ -171,10 +171,14 @@ hymns
 15 - advent
 32 - christmas
 44 - epiphany
-*47 - holy family
+47 - holy family
 62 - lent
 75 - passion
 86 - eastertide
 92 - ascensiontide
 97 - pentecost
-*156 - christ the king
+156 - christ the king
+
+
+need festal tone deus in adjutorium for before pontifical mass
+need benedicamus for lauds before pontifical mass and omit fidelium animae

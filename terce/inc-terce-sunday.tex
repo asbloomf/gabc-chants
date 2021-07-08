@@ -128,11 +128,22 @@ this Hour to Thee.}
   \end{columns}
   \medskip
 
+  %\oldneedspace{6\baselineskip}
+  \emph{The Ferial Tone is used except before Pontifical Mass.}
+
   \printgabc{\Vbar}{}{D}{deus-in-adjutorium}\label{deusinadjutorium}
-
   \medskip
-  {\centering Hymn.\par}%
 
+  %\oldneedspace{6\baselineskip}
+  \emph{The Festal Tone is used only before Pontifical Mass.}
+
+  {\def\gabcfolder{..}
+    \printgabc{\Vbar}{}{D}{DeusInAdjutorium_laustibi}\label{deusinadjutorium-festal}
+  }
+
+  \medskip\vfil
+  {\centering Hymn.\par}%
+  %\vspace{-0.5\baselineskip}
   \def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
   %\def\dotting{\hfill}
   \setlength\parsep{0pt}%
@@ -154,17 +165,20 @@ this Hour to Thee.}
   %\emph{Sacred Heart},\dotting p.~\pageref{hymn-sacred-heart}
   \end{multicols}%
 
+  \bigskip
+  %\oldneedspace{4\baselineskip}
   {\centering 1.~On Ordinary Sundays.\par}\label{hymn-sunday}
 
   \printgabc{Hymn.}{2.}{N}{hy--nunc_sancte_nobis_(in_dominicis_per_annum)--solesmes_1961}
   \bigskip
 
-  %\oldneedspace{10\baselineskip}
+  \oldneedspace{4\baselineskip}
   {\centering 2.~On Solemn Feasts.\par}\label{hymn-feast}
 
   \printgabc{Hymn.}{8.}{N}{hy--nunc_sancte_nobis_(in_festis)--solesmes_1961}
   \bigskip
 
+  \oldneedspace{4\baselineskip}\vfil
   {\centering 3.~On Feasts of the Blessed Virgin Mary.\par}\label{hymn-bvm}
 
   \printgabc{Hymn.}{2.}{N}{hy--nunc_sancte_nobis_(in_festis_bmv)--solesmes_1961}
@@ -189,7 +203,7 @@ Amen.
   \end{psalmverses}
   \end{multicols}
 
-\medskip
+\bigskip
 
 % print antiphon
 %    \printgabc[\preant]{\antlineone}{\antlinetwo}{\antinitial}{\anttex}
@@ -211,7 +225,7 @@ Amen.
 
 % print antiphon
 %    \printgabc[\preant]{\antlineone}{\antlinetwo}{\antinitial}{\anttex}
-  \medskip\oldneedspace{8\baselineskip}\label{ant2-sunday}
+  \bigskip\oldneedspace{8\baselineskip}\label{ant2-sunday}
   \printgabc{Ant.}{2. D}{A}{an--alleluia._(sund._at_terce)--solesmes}
 % print translation
   %\translation[]{Alleluia, Lead me into the path of thy commandments, alleluia, alleluia.}
@@ -242,7 +256,7 @@ Amen.
 \Rbar{}~Heal my soul, for I have sinned against thee.}
 
 \bigskip
-\def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.48\linewidth}]{2}}
+%\def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.48\linewidth}]{2}}
 \def\vlatin{Dóminus vobíscum.}
 \def\rlatin{Et cum spíritu tuo.}
 \def\vtranslation{The Lord be with you.}
@@ -251,7 +265,8 @@ Amen.
 \printvrwithtranslation{}
 
 \bigskip
-    \def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
+    %\def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
+    \def\dotting{\hfill}
     \begin{multicols}{2}%
     %\printnote{Advent,\dotting \emph{p.~\pageref{advent1-collect} to \pageref{advent4-collect}}}
 
@@ -267,14 +282,22 @@ Amen.
 \printvrwithtranslation{}
 \bigskip
 
+\printnote{Except before Pontifical Mass, the Officiant chants the \emph{\Vbar{}~Benedicamus Domino} to the following tone.}
+\medskip
 \gresetinitiallines{0}\label{benedicamus-domino-sunday}
 \gregorioscore{vr-benedicamus-domino}
 \bigskip
 
-\def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
+%\def\beginvrcols{\begin{parcolumns}[rulebetween,colwidths={1=0.44\linewidth}]{2}}
 \def\vlatin{Fidélium ánimæ per misericórdiam Dei requiéscant in pace.\hfill{}Amen.}
 \let\rlatin=\undefined
 \def\vtranslation{May the souls of the faithful departed through the mercy of God rest in peace.\hfill{}Amen.}
 \let\rtranslation=\undefined
-\printvrwithtranslation{} 
+\printvrwithtranslation{}
+
+\bigskip
+\printnote{If Pontifical Mass is to follow, the \emph{\Vbar{}~Benedicamus Domino} is sung by the Cantors in one of the following tones; and the \emph{\Vbar{}~Fidelium} is not said.}
+\medskip
+\input{inc-benedicamus-domino}
+
 }

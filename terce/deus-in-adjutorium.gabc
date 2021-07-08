@@ -9,8 +9,14 @@ centering-scheme: english;
 %spacing: vichi;
 %height: 11;
 %%
-(c3)DE(h)us(h'_) (,) in(h) ad(h)ju(h)tó(i)ri(h)um(h) me(h)um(h'_) in(h)tén(g)de.(h.) (::)
+(c3)DE(h)us(h'_) <v>\ifdefined\maltese\maltese\fi</v>(,) in(h) ad(h)ju(h)tó(i)ri(h)um(h) me(h)um(h'_) in(h)tén(g)de.(h.) (::)
+
 <sp>R/</sp>~Do(h)mi(h)ne(h'_) (,) ad(h) ad(h)ju(h)ván(h)dum(h) me(h'_) fe(h)stí(g)na.(h.) (:)
+
 Gló(h)ri(h)a(h) Pa(h)tri,(h) et(h) Fí(h)li(h)o(h'_) (,) et(h) Spi(h)rí(h)tu(h)i(h) San(g)cto.(h.) (:)
+
 Si(h)cut(h) e(h)rat(h) in(h) prin(h)cí(h)pi(h)o,(h) et(h) nunc,(h) et(h) sem(h)per(h.) (,) et(h) in(h) saé(h)cu(h)la(h) sæ(h)cu(h)ló(h)rum.(h) A(g)men.(h.) (;)
-Al(h)le(i)lú(hg~)ia.(g.) (::) <i>Or~:</i>~L{au}s(h) ti(h)bi(h) Dó(h)mi(h)ne(h'_) Rex(h) æ(h)tér(h)næ(i) gló(h')ri(h)æ.(g.) (::)
+
++ {A}l(h)le(i)lú(hg~)ia.(g.) (::)
+<i>or</i> +
+L{au}s(h) ti(h)bi(h) Dó(h)mi(h)ne(h'_) Rex(h) æ(h)tér(h)næ(i) gló(h')ri(h)æ.(g.) (::)

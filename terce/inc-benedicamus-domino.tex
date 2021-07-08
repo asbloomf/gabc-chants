@@ -1,0 +1,70 @@
+{
+\newcommand{\printbenedicamusdomino}[2]{
+	\greseteolcustos{manual}
+	\gresetinitiallines{1}
+	\def\annot{\small{#1}}
+	\alsetinitialspacing{B}
+	\gregorioscore{#2}
+  \greseteolcustos{auto}
+}
+
+\vfil
+\grechangestaffsize{15}
+\oldneedspace{4\baselineskip}\label{benedicamusdomino-1}
+{{\centering \bfseries 1.~On feasts of the I class.\\}
+\smallskip
+\def\breakbeforeresp{T}
+\printbenedicamusdomino{5.}{../BenedicamusDomino/or--benedicamus_(in_festis_i_classis_ad_laudes)--solesmes}
+\vfil
+}
+\oldneedspace{4\baselineskip}\label{benedicamusdomino-2}
+{{\centering \bfseries 2.~On feasts of the II class.\\}
+\smallskip
+{\def\breakbeforeresp{T}
+\printbenedicamusdomino{2.}{../BenedicamusDomino/or--benedicamus_domino_laudes_--solesmes_1961}
+}
+}
+\vfil
+
+\oldneedspace{4\baselineskip}\label{benedicamusdomino-mary}
+\gdef\benedicamusdominonamemary{3}
+{{\centering \bfseries 3.~On feasts of the Blessed Virgin.\\}
+\smallskip
+%\def\breakbeforeresp{T}
+\printbenedicamusdomino{1.}{../BenedicamusDomino/BenedicamusDomino_blessedVirgin}}
+\vfil
+
+\needspace{6\baselineskip}
+\label{benedicamusdomino-sunday}
+\gdef\benedicamusdominonamesunday{4}
+{{\centering \bfseries 4.~On Sundays during the Year\\and Septuagesima, Sexagesima, and Quinquagesima.\\}
+\smallskip
+%\def\breakbeforeresp{T}
+\printbenedicamusdomino{1.}{../BenedicamusDomino/BenedicamusDomino_Sundays}}
+
+\vfil
+\label{benedicamusdomino-lent}\label{benedicamusdomino-advent}
+\gdef\benedicamusdominonamelent{5}
+\gdef\benedicamusdominonameadvent{\benedicamusdominonamelent}
+{{\centering \bfseries 5.~On Sundays of Advent and Lent.\\}
+\smallskip
+%\def\breakbeforeresp{T}
+\printbenedicamusdomino{6.}{../BenedicamusDomino/BenedicamusDomino_SundaysOfAdventAndLent}
+\ifthenelse{\boolean{birmingham}}{
+	\medskip
+	\emph{\normalsize or from \emph{Mass XVII}:}
+
+	\smallskip
+	\printbenedicamusdomino{6.}{../BenedicamusDomino/ky--benedicamus_xviia--solesmes}
+}{}
+}
+\vfil
+
+\label{benedicamusdomino-easter}
+\gdef\benedicamusdominonameeaster{6}
+{{\centering \bfseries 6.~On Sundays of Paschal Time.\\}
+\smallskip
+%\def\breakbeforeresp{T}
+\printbenedicamusdomino{7.}{../BenedicamusDomino/BenedicamusDomino_SundaysOfPaschalTime}}
+
+}

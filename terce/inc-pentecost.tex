@@ -94,11 +94,7 @@
     \printterce[../Pentecost]{inc-PentecostVespers}{pentecost}
   }
   {
-    \def\printhymn{%
-      , \emph{Hymn 2}, p.~\pageref{hymn-feast}.
-
-      \medskip
-    }
+    \let\printhymn=\printhymnfeastref
     \def\printshortresp{%
       \label{shortresp-trinity}%
       {\def\gabcfolder{.}
