@@ -164,10 +164,11 @@
 	\ifx\undefined\begincollectcols\def\begincollectcols{\begin{parcolumns}[rulebetween]{2}}\fi
 	\ifx\printcollectheading\undefined\def\printcollectheading{T}\fi
 	\if\printcollectheading T
-	\oldneedspace{3\baselineskip}
-	%\smallskip
-	{\centering\large Collect.\par}
-	%\smallskip
+		\oldneedspace{36pt}
+		%\penalty -100% this is to try to replace the oldneedspace
+		\medskip
+		{\centering\large Collect.\par}
+		%\smallskip
 	\fi
 	\ifx\precollect\undefined\else\precollect\fi
 	\begincollectcols
@@ -353,7 +354,7 @@
   \end{multicols}
 }
 \def\printbenedicamusdominoref{%
-  \noindent\emph{Benedicamus Domino}, p.~\pageref{benedicamus-domino-sunday}.
+  \noindent{\Vbar{}~Benedicámus Dómino, p.~\pageref{benedicamus-domino-sunday}.}
 }
 \def\printhymnsundayrefnospace{%
   \emph{Hymn 1}, p.~\pageref{hymn-sunday}%
@@ -474,7 +475,7 @@
 	\vfill
 %editions
 	\bigskip{}\noindent{}%
-	First edition, 23 June 2021.
+	First edition, 13 July 2021.
 
 	\hangindent=1em % indent all subsequent lines
     \bigskip
@@ -509,6 +510,7 @@
 \ifthenelse{\boolean{testrun}}{
 	\input{inc-terce-sunday}
 
+	\input{inc-timeafterpentecost}
 	%\input{inc-proper-of-saints}
 }{
 

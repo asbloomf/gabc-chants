@@ -31,11 +31,11 @@
   \setlength{\columnsep}{18pt}
   \setlength{\columnseprule}{.4pt}
   \setlength\multicolsep{0pt}%
-  \begin{multicols}{2}
+  \begin{multicols*}{2}
   \begin{psalmverses}[#3]
   \input{psalms/Psalm#1-#2-verses}
   \end{psalmverses}
-  \end{multicols}
+  \end{multicols*}
 }
 
 
@@ -47,11 +47,11 @@
   \setlength{\columnsep}{18pt}
   \setlength{\columnseprule}{.4pt}
   \setlength\multicolsep{0pt}%
-  \begin{multicols}{2}
+  \begin{multicols*}{2}
   \begin{psalmverses}[#3]
   \input{psalms/Psalm#1-verses-en}
   \end{psalmverses}
-  \end{multicols}
+  \end{multicols*}
 }
 
 \def\beginchaptercols{\begin{parcolumns}[rulebetween]{2}}
@@ -141,7 +141,7 @@ this Hour to Thee.}
     \printgabc{\Vbar}{}{D}{DeusInAdjutorium_laustibi}\label{deusinadjutorium-festal}
   }
 
-  \medskip\vfil
+  \medskip\vfill
   {\centering Hymn.\par}%
   %\vspace{-0.5\baselineskip}
   \def\dotting{\leaders\hbox to 1em{\hfil.\hfil}\hfill}
@@ -178,7 +178,7 @@ this Hour to Thee.}
   \printgabc{Hymn.}{8.}{N}{hy--nunc_sancte_nobis_(in_festis)--solesmes_1961}
   \bigskip
 
-  \oldneedspace{4\baselineskip}\vfil
+  \oldneedspace{4\baselineskip}\vfill
   {\centering 3.~On Feasts of the Blessed Virgin Mary.\par}\label{hymn-bvm}
 
   \printgabc{Hymn.}{2.}{N}{hy--nunc_sancte_nobis_(in_festis_bmv)--solesmes_1961}
@@ -282,7 +282,7 @@ Amen.
 \printvrwithtranslation{}
 \bigskip
 
-\printnote{Except before Pontifical Mass, the Officiant chants the \emph{\Vbar{}~Benedicamus Domino} to the following tone.}
+\printnote{Except before Pontifical Mass, the Officiant chants the \emph{\Vbar{}~Benedicámus Dómino} to the following tone.}
 \medskip
 \gresetinitiallines{0}\label{benedicamus-domino-sunday}
 \gregorioscore{vr-benedicamus-domino}
@@ -296,7 +296,7 @@ Amen.
 \printvrwithtranslation{}
 
 \bigskip
-\printnote{If Pontifical Mass is to follow, the \emph{\Vbar{}~Benedicamus Domino} is sung by the Cantors in one of the following tones; and the \emph{\Vbar{}~Fidelium} is not said.}
+\printnote{If Pontifical Mass is to follow, the \emph{\Vbar{}~Benedicámus Dómino} is sung by the Cantors in one of the following tones; and the \emph{\Vbar{}~Fidelium} is not said.}
 \medskip
 \input{inc-benedicamus-domino}
 
