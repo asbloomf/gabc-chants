@@ -12,7 +12,7 @@
       \end{multicols}%
       \smallskip
     }
-    \def\printhymn{
+    \def\printhymn{.
       \label{hymn-christmas}
       {\def\gabcfolder{.}
        \printgabc{Hymn.}{8.}{N}{hy--nunc_sancte_nobis_(in_nativitate_domini)--solesmes_1961}
@@ -78,7 +78,7 @@
   }
   {
     \def\printhymn{%
-      \printhymnsundayrefnospace{}%
+      , \printhymnsundayrefnospace{}%
       , Ant. \emph{Genuit puerpera Regem}, \pageref{christmas-ant}
 
       \medskip
@@ -88,7 +88,7 @@
     \printterce{../Christmas/inc-SundayWithinOctaveOfChristmas-Vespers2}{christmas-sunday}
   }
   \def\printhymn{%
-    , \emph{Hymn}, p.~\pageref{hymn-christmas}%
+    , \emph{Hymn}, p.~\pageref{hymn-christmas}.%
 
     \medskip
   }
@@ -146,7 +146,7 @@
   {
     % epiphany
     % proper hymn, ant & chapter from vespers, short resp
-    \def\printhymn{
+    \def\printhymn{.
       \label{hymn-epiphany}
       {\def\gabcfolder{.}
        \printgabc{Hymn.}{8.}{N}{hy--nunc_sancte_nobis_(in_epiphania_domini)--solesmes_1961}
@@ -197,7 +197,7 @@
     % holy family
     % ant & chapter from vespers, proper short resp
     % slightly proper hymn (rest from epiphany)
-    \def\printhymn{
+    \def\printhymn{.
       \label{hymn-holyfamily}
       {\def\gabcfolder{.}%
        \printgabc{Hymn.}{8.}{N}{hy--nunc_sancte_nobis_(holy_family)--solesmes_1961}
