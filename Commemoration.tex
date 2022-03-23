@@ -96,6 +96,31 @@
 \bigskip
 \hrule
 \bigskip\bigskip
+\ifx\undefined\commvrtex%
+{
+    {%\normalsize
+        \ifx\beginvrcols\undefined\def\beginvrcols{\begin{parcolumns}[rulebetween]{2}}\fi
+        \beginvrcols
+        \colchunk{%
+            \selectlanguage{latin}%
+            \Vbar{}~\commvlatin{}%
+        }
+        \colchunk{%
+            \selectlanguage{american}%
+            \Vbar{}~\commvtranslation{}%
+        }%
+        \colplacechunks%
+        \colchunk{%
+            \selectlanguage{latin}%
+            \Rbar{}~\commrlatin{}%
+        }%
+        \colchunk{%
+            \selectlanguage{american}%
+            \Rbar{}~\commrtranslation{}%
+        }
+        \end{parcolumns}
+    }
+}\else%
 {
 \gresetinitiallines{0}
 \large\greseteolcustos{manual}\gregorioscore{\commvrtex}}
@@ -103,7 +128,7 @@
 \translation[]{
 \Vbar{}~\commvtranslation{}\\
 \Rbar{}~\commrtranslation{}%
-}%
+}\fi%
 %\smallskip
 %\vspace{-2ex}
 \bigskip
