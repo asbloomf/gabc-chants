@@ -33,6 +33,7 @@ process_file tenebrae_friday tenebrae_friday_original
 process_file tenebrae_saturday tenebrae_saturday_original
 
 latexmk tenebrae_prophecyTone.tex
+latexmk tenebrae_orationes.tex
 
 printf "$error_message"
 exit 0

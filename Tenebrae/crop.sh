@@ -13,8 +13,8 @@ process_file()
 	temp=$1-temp.pdf
 	oname=$2-crop.pdf
 
-	pdfcrop $fname $temp
-	gswin64c -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dCompatibilityLevel=1.3 -dEmbedAllFonts=true -dSubsetFonts=true -sOutputFile=$oname $temp &
+	pdfcrop $fname $oname
+	#gswin64c -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dCompatibilityLevel=1.3 -dEmbedAllFonts=true -dSubsetFonts=true -sOutputFile=$oname $temp &
 }
 
 # process_file tenebrae_full tenebrae_full
@@ -24,6 +24,7 @@ process_file()
 # process_file tenebrae_thursday tenebrae_thursday
 
 process_file tenebrae_prophecyTone tenebrae_prophecyTone
+process_file tenebrae_orationes tenebrae_orationes
 process_file tenebrae_original tenebrae_full
 process_file tenebrae_thursday_original tenebrae_thursday
 process_file tenebrae_friday_original tenebrae_friday
