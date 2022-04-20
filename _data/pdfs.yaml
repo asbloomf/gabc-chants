@@ -56,6 +56,8 @@ Tenebræ:
     url: pdfs/Tenebrae/tenebrae_prophecyTone-crop.pdf
   - name: Orationes ante et post divinum officium
     url: pdfs/Tenebrae/tenebrae_orationes.pdf
+  - name: Orationes ante et post divinum officium (no margins)
+    url: pdfs/Tenebrae/tenebrae_orationes-crop.pdf
 Christmas Matins:
   - name: Download PDF
     url: pdfs/christmas-matins/christmas-matins.pdf
