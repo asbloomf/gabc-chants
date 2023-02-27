@@ -1,0 +1,27 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+
+\newcommand{\comheadingtext}{Commemoration of 4th Sunday after Easter}
+
+\newcommand{\definemag}[2]{}
+
+\input{inc-VespersMagnificatEaster4}
+
+\let\latincomcollect=\latincollect
+\let\englishcomcollect=\englishcollect
+
+\let\englishcommagantiphon=\englishmagantiphon
+
+\newcommand{\commagantlinetwo}{Ant. 2. D}
+\edef\commaganttex{../TimeAfterEaster/\maganttex.noEuouae}
+\let\commagantinitial=\magantinitial
+%\newcommand{\commagantinitialsize}{35}
+
+\newcommand{\commvrtex}{../TimeAfterEaster/vrManeNobiscum-commemoration}
+\newcommand{\commvtranslation}{Stay with us O Lord, alleluia.}
+\newcommand{\commrtranslation}{Because it is towards evening, alleluia.}
+
+\grechangestaffsize{17}
