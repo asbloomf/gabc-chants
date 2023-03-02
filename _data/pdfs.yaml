@@ -21,14 +21,8 @@ Vespers for Sundays & Holy Days:
     url: pdfs/vespers-book/vespers-book-letter-crop.pdf
   - name: Purchase on Amazon
     url: https://www.amazon.com/Vespers-Gregorian-Chant-Sundays-Holy/dp/1507878818/
-  - name: Contact me via email < abloomfield @ gmail DOT com > for bulk/discount pricing
-  - name: $18 - 1
-  - name: $15 - 2-9
-  - name: $14 - 10-19
-  - name: $13 - 20-29
-  - name: $12 - 30-39
-  - name: $11 - 40-49
-  - name: $10 - 50+
+  - name: Purchase 10+ on Stripe to save
+    url: https://buy.stripe.com/fZe8z5ehrd5518c6oq
   - name: Purchase 8.5 x 11" Sprial Bound on Lulu
     url: http://www.lulu.com/content/paperback-book/vespers-book/22308048
 Tenebræ:
@@ -40,6 +34,8 @@ Tenebræ:
     url: https://www.amazon.com/Tenebrae-Albert-S-Bloomfield/dp/1495364496/
   - name: Purchase on Lulu
     url: https://www.lulu.com/en/us/shop/albert-bloomfield/tenebrae/paperback/product-1665yknk.html?page=1&pageSize=4
+  - name: Purchase 10+ on Stripe to save
+    url: https://buy.stripe.com/5kA7v1ehr4yz3gk7st
   - name: Thursday
     url: pdfs/Tenebrae/tenebrae_thursday.pdf
   - name: Thursday (no margins)
